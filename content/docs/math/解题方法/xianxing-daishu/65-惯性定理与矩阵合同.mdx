@@ -718,7 +718,7 @@ $$
 设
 
 $$
-A=\begin{pmatrix}a&b\b&c\end{pmatrix}.
+A=\begin{pmatrix}a&b\\b&c\end{pmatrix}.
 $$
 
 则
@@ -954,7 +954,7 @@ $$
 将变量分块为
 
 $$
-x=\begin{pmatrix}u\v\end{pmatrix}.
+x=\begin{pmatrix}u\\v\end{pmatrix}.
 $$
 
 那么
@@ -2454,7 +2454,7 @@ $$
 令
 
 $$
-X=\begin{pmatrix}u\t\end{pmatrix},
+X=\begin{pmatrix}u\\t\end{pmatrix},
 \qquad u\in\mathbb R^2.
 $$
 
@@ -3244,7 +3244,7 @@ $$
 | $A^TA$ 或 $AA^T$    | 半正定且秩不变   | Gram矩阵       |
 | 若干线性式的平方和          | 检查线性式是否独立 | 矩阵秩、配方       |
 | 分块矩阵               | 寻找可配方结构   | Schur补       |
-| $A^\*$、$A^{-1}$    | 特征值如何变换   | 谱映射          |
+| $A^{*}$、$A^{-1}$    | 特征值如何变换   | 谱映射          |
 | 两个二次型同时化简          | 是否一个正定    | 广义特征值        |
 
 有两个需要特别补充的专题。
@@ -3254,7 +3254,7 @@ $$
 若实对称矩阵 $A$ 可逆，则
 
 $$
-A^\*=|A|A^{-1}.
+A^{*}=|A|A^{-1}.
 $$
 
 设 $A$ 的特征值为
@@ -3292,7 +3292,7 @@ $$
 如果 $A$ 奇异，就不能使用
 
 $$
-A^\*=|A|A^{-1}.
+A^{*}=|A|A^{-1}.
 $$
 
 此时应从伴随矩阵定义或秩的性质重新分析。
@@ -3722,7 +3722,7 @@ flowchart TD
 | 规范形            | (\operatorname{diag}$I_p,-I_q,0$)                    |
 | 秩与惯性           | (r$A$=p+q)                                           |
 | 行列式关系          | $\|B\|=\|P\|^2\|A\|$                                 |
-| 二阶异号判别         | $|A|<0\Rightarrow(p,q)=(1,1)$                      |
+| 二阶异号判别         | $\lvert A\rvert<0\Rightarrow(p,q)=(1,1)$                      |
 | Gram矩阵         | (p$A^TA$=r$A$,\ q$A^TA$=0)                           |
 | 秩一扰动           | $\alpha I+\beta uu^T$ 的谱为 $\alpha+\beta u^Tu,\alpha$ |
 | Schur补         | (M\simeq_c\operatorname{diag}$H,D-K^TH^{-1}K$)       |
