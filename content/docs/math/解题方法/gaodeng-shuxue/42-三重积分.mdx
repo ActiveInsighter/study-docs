@@ -36,7 +36,7 @@ description: "考研数学一 · 高等数学｜第九模块第2节 · 三重积
 
 记住以下总体原则：
 
-> <Callout type="idea" title="三重积分的选法原则">
+<Callout type="idea" title="三重积分的选法原则">
 
 先看区域，再看函数；先用对称，再选坐标；先找边界交线，再写积分限。
 
@@ -328,8 +328,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：观察积分区域
 
 $\Omega_1$ 是上半球，$\Omega_2$ 是上半球在第一卦限内的部分。
@@ -342,10 +341,8 @@ $\Omega_1$ 是上半球，$\Omega_2$ 是上半球在第一卦限内的部分。
 
 必须检查被积函数在空间反射下是否发生变化。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：分别判断函数的奇偶性
 
 对于 $x$：
@@ -378,8 +375,7 @@ $$
 
 答案：C。
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 从这道题提炼出的通用技巧
@@ -437,8 +433,7 @@ $$
 
 <Tabs items={["球面坐标与对称", "水平截面"]} defaultIndex={0}>
 
-  <Tab value="球面坐标与对称">
-
+<Tab value="球面坐标与对称">
 #### 方法一：对称性与球面坐标
 
 因为球域关于三个坐标方向完全对称，所以
@@ -465,10 +460,8 @@ $$
 \boxed{I=\frac{4\pi}{15}}.
 $$
 
-  </Tab>
-
-  <Tab value="水平截面">
-
+</Tab>
+<Tab value="水平截面">
 #### 方法二：水平截面法
 
 在固定高度 $z$ 处，球体的截面为
@@ -491,8 +484,7 @@ $$
 
 两个方法得到相同答案。
 
-  </Tab>
-
+</Tab>
 </Tabs>
 
 #### 这类题的真正母题公式
@@ -553,8 +545,7 @@ $$
 
 <Tabs items={["直接积分", "形心公式"]} defaultIndex={0}>
 
-  <Tab value="直接积分">
-
+<Tab value="直接积分">
 #### 方法一：传统三重积分
 
 由区域条件：
@@ -579,10 +570,8 @@ $$
 
 直接积分当然可以，但计算较繁。
 
-  </Tab>
-
-  <Tab value="形心公式">
-
+</Tab>
+<Tab value="形心公式">
 #### 方法二：形心公式
 
 这个立体是一个四面体。
@@ -627,8 +616,7 @@ $$
 \begin{aligned} I &=\frac16\left( \frac14+\frac24+\frac34 \right)\\ &=\boxed{\frac14}. \end{aligned}
 $$
 
-  </Tab>
-
+</Tab>
 </Tabs>
 
 #### 为什么这个公式成立？
@@ -727,8 +715,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：看清两个曲面
 
 第一个是上圆锥面：
@@ -745,10 +732,8 @@ $$
 
 题目区域是球面下方、圆锥上方的那部分立体。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：求两个曲面的交圈
 
 令
@@ -785,10 +770,8 @@ $$
 
 这是求解本题最关键的一步。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：利用对称性
 
 由于区域关于 $x=0$ 对称，
@@ -803,10 +786,8 @@ $$
 I=\iiint_\Omega z\,\mathrm dV.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第四步：柱面坐标计算
 
 $$
@@ -825,10 +806,8 @@ $$
 \boxed{I=\frac\pi8}.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第五步：换用球面坐标理解
 
 这道题实际上还可以更加简单。
@@ -863,8 +842,7 @@ $$
 \begin{aligned} I &=\iiint_\Omega z\,\mathrm dV\\ &=2\pi \int_0^{\pi/4}\sin\varphi\cos\varphi\,\mathrm d\varphi \int_0^1\rho^3\,\mathrm d\rho\\ &=2\pi\cdot\frac14\cdot\frac14\\ &=\boxed{\frac\pi8}. \end{aligned}
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 这一题最值得学习的内容
@@ -931,8 +909,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：建立旋转曲面方程
 
 原曲线在 $yOz$ 平面内。
@@ -959,10 +936,8 @@ $$
 
 这是一张开口向上的旋转抛物面。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：选择最简单的积分顺序
 
 按高度 $z$ 分层。
@@ -987,10 +962,8 @@ $$
 0\le z\le4,\quad 0\le r\le\sqrt{2z},\quad 0\le\theta\le2\pi.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：计算
 
 $$
@@ -1003,8 +976,7 @@ $$
 \boxed{I=\frac{256\pi}{3}}.
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 从这题总结的通用方法
@@ -1053,8 +1025,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：先求截面积
 
 固定高度 $z$，有
@@ -1075,20 +1046,16 @@ $$
 A(z)=\pi z.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：计算体积
 
 $$
 V=\int_0^1 A(z)\,\mathrm dz =\pi\int_0^1z\,\mathrm dz =\frac\pi2.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：计算关于 $xOy$ 平面的静矩
 
 $$
@@ -1101,8 +1068,7 @@ $$
 \boxed{ \bar z=\frac{M_{xy}}V=\frac23 }
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 核心公式：截面积法求形心
@@ -1163,8 +1129,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：正确认识水平截面
 
 固定 $z$ 后：
@@ -1201,20 +1166,16 @@ $$
 
 随着高度 $z$ 增加，截面圆心也在移动。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：求总体积
 
 $$
 V=\pi\int_0^1(1-z)^2\,\mathrm dz =\frac\pi3.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：求三个坐标的形心
 
 由于截面关于 $x=0$ 对称，
@@ -1255,8 +1216,7 @@ $$
 \boxed{ (\bar x,\bar y,\bar z) = \left(0,\frac14,\frac14\right) }
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 这道题蕴含的重要推广
@@ -1419,8 +1379,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：固定高度 $z$
 
 第一个球体给出
@@ -1445,10 +1404,8 @@ $$
 
 这是关键。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：找到分界高度
 
 两个表达式相等：
@@ -1475,10 +1432,8 @@ $$
 A(z)= \begin{cases} \pi(2Rz-z^2),&0\le z\le R/2,\\[4pt] \pi(R^2-z^2),&R/2\le z\le R. \end{cases}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：截面法计算
 
 由于被积函数只含 $z$，
@@ -1509,8 +1464,7 @@ $$
 \boxed{ I=\frac{59\pi R^5}{480} }
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 这一题的母题规律
@@ -1555,8 +1509,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：注意旋转轴不是 $z$ 轴
 
 因为是绕 $x$ 轴旋转，所以应使用
@@ -1571,10 +1524,8 @@ $$
 r^2=2x.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：建立以 $x$ 轴为轴线的柱面坐标
 
 令
@@ -1595,10 +1546,8 @@ $$
 1\le x\le2, \qquad0\le r\le\sqrt{2x}, \qquad0\le\theta\le2\pi.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：直接积分
 
 $$
@@ -1629,8 +1578,7 @@ $$
 \boxed{ I=3\pi\ln\frac43 }
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 这道题应掌握的三点
@@ -1667,8 +1615,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：变为柱面坐标
 
 令
@@ -1683,10 +1630,8 @@ $$
 I= 2\pi\int_0^{\sqrt2}r\,\mathrm dr \int_0^1|z-r|\,\mathrm dz.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：找到绝对值的变号位置
 
 $$
@@ -1721,10 +1666,8 @@ $$
 \begin{aligned} \frac I{2\pi} ={}&\int_0^1r\left[ \int_0^r(r-z)\,\mathrm dz +\int_r^1(z-r)\,\mathrm dz \right]\mathrm dr\\ &+\int_1^{\sqrt2}r \int_0^1(r-z)\,\mathrm dz\,\mathrm dr. \end{aligned}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：计算
 
 前两个内部积分分别为
@@ -1751,8 +1694,7 @@ $$
 \boxed{ I=\frac{\pi(8\sqrt2-5)}6 }
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 通用方法
@@ -1889,8 +1831,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：建立合适的坐标系
 
 令球心为原点，取
@@ -1913,10 +1854,8 @@ $$
 
 其中 $k>0$。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：通过对称性判断重心方向
 
 区域关于三个坐标平面对称。
@@ -1931,10 +1870,8 @@ $$
 
 只需计算 $\bar x$。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：求总质量
 
 质量定义：
@@ -1973,10 +1910,8 @@ $$
 \begin{aligned} M &=k\left( \frac{4\pi R^5}{5} +R^2\frac{4\pi R^3}{3} \right)\\ &=\boxed{\frac{32\pi kR^5}{15}}. \end{aligned}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第四步：计算 $x$ 方向静矩
 
 $$
@@ -2015,8 +1950,7 @@ $$
 \boxed{ (\bar x,\bar y,\bar z) = \left(-\frac R4,0,0\right) }
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 物理直观
@@ -2085,8 +2019,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：发现共同结构
 
 这里有三个积分：
@@ -2147,10 +2080,8 @@ $$
 
 复杂的三重积分问题已经转化成一维函数问题。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：证明单调性
 
 利用微积分基本定理：
@@ -2205,10 +2136,8 @@ $$
 \boxed{F(t)\text{ 在 }(0,+\infty)\text{ 上严格单调递增}}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：证明积分不等式
 
 需要证明
@@ -2269,8 +2198,7 @@ $$
 
 原不等式得证。
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 这道题真正需要学会什么？
@@ -2335,8 +2263,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：旋转椭球面
 
 绕 $x$ 轴旋转时
@@ -2351,10 +2278,8 @@ $$
 \boxed{ S_1: \frac{x^2}{4}+\frac{y^2+z^2}{3}=1 }
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：求切线
 
 设经过 $(4,0)$ 的切线为
@@ -2395,10 +2320,8 @@ $$
 r=\frac32.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：把复杂立体拆成两个熟悉立体
 
 从 $x=1$ 到 $x=4$，圆锥对应的完整立体，其高为3，底面半径为 $3/2$。
@@ -2429,8 +2352,7 @@ $$
 \boxed{ V=V_{\text{锥}}-V_{\text{帽}}=\pi }
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 核心思维
@@ -2521,8 +2443,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：展开并使用对称性
 
 $$
@@ -2561,10 +2482,8 @@ $$
 I=5\iiint_\Omega x^2\,\mathrm dV +\iiint_\Omega z^2\,\mathrm dV.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：计算二次矩
 
 固定高度 $z$：
@@ -2591,8 +2510,7 @@ $$
 \boxed{ I=5\cdot\frac{2\pi}{3}+4\pi =\frac{22\pi}{3} }
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 这道题的推广
@@ -2637,8 +2555,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：识别偏心球
 
 球心为
@@ -2671,10 +2588,8 @@ $$
 \rho\le2\cos\varphi.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：引入平面条件
 
 由 $z\ge1$，得到
@@ -2727,10 +2642,8 @@ $$
 \frac1{\cos\varphi}\le\rho\le2\cos\varphi.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：计算
 
 $$
@@ -2755,8 +2668,7 @@ $$
 \boxed{ I=\frac{2\pi}{3}(7-4\sqrt2) }
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 最重要的迁移思路
@@ -2803,8 +2715,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：提取函数的局部主要项
 
 由导数定义，
@@ -2815,10 +2726,8 @@ $$
 
 这是本题的核心突破。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：写出球面坐标积分域
 
 圆锥条件为
@@ -2839,10 +2748,8 @@ $$
 0\le\rho\le r,\qquad 0\le\theta\le2\pi.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：计算径向主要项
 
 $$
@@ -2855,8 +2762,7 @@ $$
 \boxed{ \lim_{r\to0^+} \frac1{r^4} \iiint_{\Omega_r}f(\rho)\,\mathrm dV = \frac{\pi(2-\sqrt3)}4 }
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 为什么这是重要的创新题型？
@@ -3318,8 +3224,7 @@ $$
 
 <Accordions>
 
-  <Accordion title="展开易错点与纠正方法对照表">
-
+<Accordion title="展开易错点与纠正方法对照表">
 | 常见错误                           | 正确处理                             |
 | ------------------------------ | -------------------------------- |
 | 只看体积对称，不看函数奇偶性                 | 区域与函数一起判断                        |
@@ -3333,8 +3238,7 @@ $$
 | 遇到奇点直接判断发散                     | 先结合体积元分析局部可积性                    |
 | 不检验答案的量纲或符号                    | 利用尺度、正负性检查                       |
 
-  </Accordion>
-
+</Accordion>
 </Accordions>
 
 ## 十二、精选强化练习：检验是否真正掌握
@@ -3347,8 +3251,7 @@ $$
 
 <Tabs items={["先做题", "查看答案"]} defaultIndex={0}>
 
-  <Tab value="先做题">
-
+<Tab value="先做题">
 | 题目 | 题干 |
 | --- | --- |
 | 1 | $\displaystyle\iiint_{x^2+y^2+z^2\le4}(x^2+2y^2+3z^2)\,\mathrm dV$ |
@@ -3356,10 +3259,8 @@ $$
 | 3 | 求圆锥体 $0\le z\le3,\ x^2+y^2\le z^2$ 的体积 |
 | 4 | 求均匀立体 $x^2+y^2\le z\le4$ 的形心高度 |
 
-  </Tab>
-
-  <Tab value="查看答案">
-
+</Tab>
+<Tab value="查看答案">
 | 题目 | 答案 |
 | --- | --- |
 | 1 | $\displaystyle\frac{256\pi}{5}$ |
@@ -3367,8 +3268,7 @@ $$
 | 3 | $9\pi$ |
 | 4 | $\displaystyle\frac83$ |
 
-  </Tab>
-
+</Tab>
 </Tabs>
 
 训练重点： 对称性、球体积分矩、水平截面积分。
@@ -3377,8 +3277,7 @@ $$
 
 <Tabs items={["先做题", "查看答案"]} defaultIndex={0}>
 
-  <Tab value="先做题">
-
+<Tab value="先做题">
 | 题目 | 题干 |
 | --- | --- |
 | 5 | 求 $x^2+y^2+z^2\le4,\ z\ge\sqrt{x^2+y^2}$ 的体积 |
@@ -3386,10 +3285,8 @@ $$
 | 7 | 求 $\displaystyle\iiint_{x^2+y^2\le z\le1}(x^2+y^2)\,\mathrm dV$ |
 | 8 | 求单位球第一卦限部分上的 $\displaystyle\iiint xyz\,\mathrm dV$ |
 
-  </Tab>
-
-  <Tab value="查看答案">
-
+</Tab>
+<Tab value="查看答案">
 | 题目 | 答案 |
 | --- | --- |
 | 5 | $\displaystyle\frac{16\pi}{3}\left(1-\frac1{\sqrt2}\right)$ |
@@ -3397,8 +3294,7 @@ $$
 | 7 | $\displaystyle\frac\pi6$ |
 | 8 | $\displaystyle\frac1{48}$ |
 
-  </Tab>
-
+</Tab>
 </Tabs>
 
 训练重点： 球锥交域、线性变换、旋转体、球面坐标。
@@ -3407,8 +3303,7 @@ $$
 
 <Tabs items={["先做题", "查看答案"]} defaultIndex={0}>
 
-  <Tab value="先做题">
-
+<Tab value="先做题">
 | 题目 | 题干 |
 | --- | --- |
 | 9 | 上半球 $x^2+y^2+z^2\le R^2,z\ge0$，密度 $\rho=z$，求重心高度 |
@@ -3416,10 +3311,8 @@ $$
 | 11 | 求 $\displaystyle\lim_{t\to0^+}\frac1{t^5}\iiint_{x^2+y^2+z^2\le t^2}(x^2+y^2+z^2)\,\mathrm dV$ |
 | 12 | 圆锥 $0\le z\le1,\ x^2+y^2\le z^2$，求 $\displaystyle\iiint(x+y+z)^2\,\mathrm dV$ |
 
-  </Tab>
-
-  <Tab value="查看答案">
-
+</Tab>
+<Tab value="查看答案">
 | 题目 | 答案 |
 | --- | --- |
 | 9 | $\displaystyle\frac{8R}{15}$ |
@@ -3427,8 +3320,7 @@ $$
 | 11 | $\displaystyle\frac{4\pi}{5}$ |
 | 12 | $\displaystyle\frac{3\pi}{10}$ |
 
-  </Tab>
-
+</Tab>
 </Tabs>
 
 训练重点： 变密度、平移球体、尺度变换、对称消项。

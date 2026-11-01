@@ -240,8 +240,7 @@ $$
 
 <Tabs items={["径向微分", "角度微分"]} defaultIndex={0}>
 
-  <Tab value="径向微分">
-
+<Tab value="径向微分">
 **第一类：径向微分。**
 
 $$
@@ -260,10 +259,8 @@ $$
 \boxed{ \frac{x\,\mathrm dx+y\,\mathrm dy}{x^2+y^2} =\mathrm d\ln\sqrt{x^2+y^2} }
 $$
 
-  </Tab>
-
-  <Tab value="角度微分">
-
+</Tab>
+<Tab value="角度微分">
 **第二类：角度微分。**
 
 令
@@ -298,8 +295,7 @@ $$
 
 后面讲到奇点和路径无关时，我们会把这两个结构彻底区分。
 
-  </Tab>
-
+</Tab>
 </Tabs>
 
 ## 四、第一大题型：开弧积分、参数化与方向判断
@@ -332,8 +328,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 #### 第一步：注意曲线上的约束。
 
 沿着整条曲线，
@@ -366,28 +361,23 @@ $$
 I_2=y_N-y_M<0.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第二步：处理第一类曲线积分。
 
 $$
 I_3=\int_\Gamma\mathrm ds =\operatorname{Length}(\Gamma)>0.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第三步：识别全微分。
 
 $$
 I_4=\int_\Gamma\mathrm df =f(N)-f(M)=1-1=0.
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 最终得到
@@ -434,8 +424,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 #### 第一步：识别参数。
 
 曲线直接给出 $y=\sin x$，使用 $x$ 作为参数最自然。
@@ -446,20 +435,16 @@ $$
 
 方向为 $x:0\to\pi$。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第二步：代入并整理。
 
 $$
 \begin{aligned} I &=\int_0^\pi \left[ \sin2x +2(x^2-1)\sin x\cos x \right]\mathrm dx\\ &=\int_0^\pi \left[ \sin2x+(x^2-1)\sin2x \right]\mathrm dx\\ &=\int_0^\pi x^2\sin2x\,\mathrm dx. \end{aligned}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第三步：分部积分。
 
 $$
@@ -478,8 +463,7 @@ $$
 \boxed{I=-\frac{\pi^2}{2}}.
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 方法迁移：
@@ -536,8 +520,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 #### 第一步：不要急着参数化。
 
 观察到
@@ -576,10 +559,8 @@ $$
 
 原本复杂的多项式积分已经大幅简化。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第二步：分别处理两段圆弧。
 
 对于第一段，
@@ -624,10 +605,8 @@ $$
 \begin{aligned} \int_{L_2}x\,\mathrm dy &=\int_0^{\pi/2}4\cos^2t\,\mathrm dt\\ &=\pi. \end{aligned}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第三步：合并结果。
 
 $$
@@ -640,8 +619,7 @@ $$
 \boxed{I=\frac\pi2-4}.
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 这道题体现了一种非常重要的思维顺序：
@@ -988,8 +966,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 #### 第一步：消去全微分。
 
 注意
@@ -1006,10 +983,8 @@ $$
 I=\int_L-x^2y\,\mathrm dx+xy^2\,\mathrm dy.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第二步：补上 $x$ 轴线段。
 
 从 $(1,0)$ 返回 $(-1,0)$。
@@ -1024,10 +999,8 @@ $$
 
 原抛物线从左到右，补线后构成顺时针闭曲线。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第三步：使用负向格林公式。
 
 设
@@ -1054,10 +1027,8 @@ $$
 D=\{(x,y):-1\le x\le1,\ 0\le y\le1-x^2\}.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第四步：计算二重积分。
 
 $$
@@ -1078,8 +1049,7 @@ $$
 
 此方法非常适合未来的综合计算题。
 
-  </Step>
-
+</Step>
 </Steps>
 
 ## 六、第三大题型：格林公式与积分最值、区域比较
@@ -1138,8 +1108,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 #### 第一步：判断密度正负。
 
 令
@@ -1162,10 +1131,8 @@ $$
 \boxed{ D_1:x^2+y^2\le4 }
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第二步：计算最大值。
 
 使用极坐标：
@@ -1226,8 +1193,7 @@ $$
 \boxed{J=-\pi}.
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 这道题的第一问属于区域最值，第二问属于奇点与绕数。
@@ -1429,8 +1395,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 #### 第一步：识别系数。
 
 $$
@@ -1473,10 +1438,8 @@ $$
 \boxed{\varphi(x)=x^2}.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第二步：构造势函数。
 
 原积分变为
@@ -1497,10 +1460,8 @@ $$
 U(x,y)=\frac12x^2y^2.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第三步：计算端点差。
 
 $$
@@ -1513,8 +1474,7 @@ $$
 \boxed{I=\frac12}.
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 这道题是所有“路径无关确定参数或未知函数”题目的基础母题。
@@ -1539,8 +1499,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 #### 第一步：整理微分形式。
 
 将系数展开：
@@ -1573,10 +1532,8 @@ $$
 \boxed{ P\,\mathrm dx+Q\,\mathrm dy = \mathrm d\left(\frac xy\right) +f(xy)\,\mathrm d(xy) }
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第二步：构造势函数。
 
 设 $F'=f$，那么
@@ -1595,10 +1552,8 @@ $$
 
 这直接证明积分与路径无关。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第三步：计算端点差。
 
 $$
@@ -1619,8 +1574,7 @@ $$
 \boxed{ I=\frac cd-\frac ab }.
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 本题的方法升级：
@@ -1737,8 +1691,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 #### 第一步：建立交叉偏导关系。
 
 $$
@@ -1771,10 +1724,8 @@ $$
 \boxed{ x\varphi'(x)+\varphi(x)=\sin x }
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第二步：识别乘积求导。
 
 左侧就是
@@ -1819,10 +1770,8 @@ $$
 \boxed{ \varphi(x)=\frac{\pi-1-\cos x}{x} }
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第三步：寻找势函数。
 
 由微分方程可知
@@ -1867,8 +1816,7 @@ $$
 \boxed{I=1+\cos1}.
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 为什么这类题值得重视？
@@ -2082,8 +2030,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 #### 第一步：确定奇点位置。
 
 分母
@@ -2096,10 +2043,8 @@ $$
 
 由于圆心到原点的距离为1，而 $R>1$，原点位于圆内部。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第二步：线性变换。
 
 取
@@ -2134,8 +2079,7 @@ $$
 \boxed{I=\pi}.
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 这道题总结出一种重要方法：
@@ -2612,8 +2556,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 #### 第一步：选取积分曲面。
 
 取平面
@@ -2630,10 +2573,8 @@ $$
 D:(x-1)^2+y^2\le1.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第二步：计算旋度。
 
 设
@@ -2648,10 +2589,8 @@ $$
 \nabla\times\boldsymbol F =(-1,-1,-2y).
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第三步：确定有向面积元。
 
 由于
@@ -2672,10 +2611,8 @@ $$
 \boldsymbol n\,\mathrm dS =(-2,1,1)\,\mathrm dx\,\mathrm dy.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 #### 第四步：应用斯托克斯公式。
 
 $$
@@ -2694,8 +2631,7 @@ $$
 \boxed{I=\pi}.
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 这道题说明，空间曲线虽然可能很复杂，但如果能找到简单的张成曲面，其计算甚至可能比直接参数化更短。
@@ -2762,8 +2698,7 @@ $$
 
 <Accordions>
 
-  <Accordion title="展开七类高频错误与正确处理方法">
-
+<Accordion title="展开七类高频错误与正确处理方法">
 | 常见错误                                              | 为什么错               | 正确做法                                      |
 | ------------------------------------------------- | ------------------ | ----------------------------------------- |
 | 把 $\mathrm dx,\mathrm dy$ 当作 $\mathrm ds$ | 第二类积分依赖方向          | 参数导数必须保留符号                                |
@@ -2774,8 +2709,7 @@ $$
 | 分母存在奇点仍直接套格林公式                                    | 格林公式的光滑性前提不满足      | 挖去奇点或使用绕数                                 |
 | 对 $U_x=P$ 积分时只加常数                             | 积分“常数”可能依赖 $y$ | 写为 $U=\int P\,\mathrm dx+\varphi(y)$ |
 
-  </Accordion>
-
+</Accordion>
 </Accordions>
 
 其中最需要警惕的是第五、六项。

@@ -432,8 +432,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：观察分母之间的关系
 
 分母有两个部分：
@@ -470,10 +469,8 @@ $$
 1+t^2 =1+\frac{x^2}{1+x^2} =\frac{1+2x^2}{1+x^2}.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：把整个被积式转化
 
 由
@@ -500,8 +497,7 @@ $$
 \boxed{ I=\arctan\frac{x}{\sqrt{1+x^2}}+C }.
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 #### 方法总结
 
@@ -570,8 +566,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：观察特殊导数
 
 注意：
@@ -598,10 +593,8 @@ $$
 I=2x\sqrt{e^x-1} -2\int\sqrt{e^x-1}\,dx.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：处理剩余积分
 
 令
@@ -626,10 +619,8 @@ $$
 \begin{aligned} \int\sqrt{e^x-1}\,dx &=2\int\frac{t^2}{1+t^2}\,dt\\ &=2\int\left(1-\frac1{1+t^2}\right)dt\\ &=2t-2\arctan t+C. \end{aligned}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：代回
 
 得到
@@ -640,8 +631,7 @@ $$
 
 实数计算区间为 $x>0$。
 
-  </Step>
-
+</Step>
 </Steps>
 #### 真正要学到的方法
 
@@ -671,8 +661,7 @@ $$
 
 <Tabs items={["分部积分 → 换元", "整体换元 → 分部积分"]} defaultIndex={0}>
 
-  <Tab value="分部积分 → 换元">
-
+<Tab value="分部积分 → 换元">
 **方法一：先分部积分，再换元**
 
 设
@@ -733,10 +722,8 @@ $$
 \boxed{ \begin{aligned} I={}&\frac12e^{2x}\arctan\sqrt{e^x-1}\\ &-\frac12\sqrt{e^x-1}\\ &-\frac16(e^x-1)^{3/2}+C. \end{aligned} }
 $$
 
-  </Tab>
-
-  <Tab value="整体换元 → 分部积分">
-
+</Tab>
+<Tab value="整体换元 → 分部积分">
 **方法二：先整体换元，再分部积分**
 
 同样令
@@ -779,8 +766,7 @@ $$
 
 立即得到与方法一相同的结果。
 
-  </Tab>
-
+</Tab>
 </Tabs>
 
 #### 两种方法怎样选择？
@@ -905,8 +891,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：设部分分式形式
 
 因为分母包含：
@@ -939,10 +924,8 @@ $$
 I=\int\left[ -\frac2{x-1} +\frac3{(x-1)^2} +\frac{2x+1}{x^2+x+1} \right]dx.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：逐项积分
 
 前两项：
@@ -967,18 +950,15 @@ $$
 \int\frac{2x+1}{x^2+x+1}\,dx =\ln(x^2+x+1).
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：整理结果
 
 $$
 \boxed{ I=\ln(x^2+x+1) -2\ln|x-1| -\frac3{x-1}+C }.
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 #### 本题最重要的陷阱
 
@@ -1178,8 +1158,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：分别积分
 
 当 $x<1$：
@@ -1200,10 +1179,8 @@ $$
 F(x)= \begin{cases} (x-1)^2+C_1,&x<1,\\ x\ln x-x+C_2,&x\ge1. \end{cases}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：原函数必须连续
 
 在 $x=1$ 处，左极限：
@@ -1238,10 +1215,8 @@ $$
 F(x)= \begin{cases} (x-1)^2,&x<1,\\ x\ln x-x+1,&x\ge1. \end{cases}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：检查接点可导
 
 左导数：
@@ -1274,8 +1249,7 @@ $$
 \boxed{ F(x)= \begin{cases} (x-1)^2,&x<1,\\ x\ln x-x+1,&x\ge1. \end{cases} }
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 ### 分段题的统一解题模板
 
@@ -1455,8 +1429,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：利用原函数关系
 
 因为：
@@ -1483,10 +1456,8 @@ $$
 [F^2(x)]' = \frac{2\ln(\tan x)} {\sin x\cos x}.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：识别右边的导数
 
 因为：
@@ -1525,10 +1496,8 @@ $$
 F^2(x)=\ln^2(\tan x).
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：利用符号条件
 
 在：
@@ -1567,8 +1536,7 @@ $$
 \boxed{ f(x)=F'(x)=\frac1{\sin x\cos x} }.
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 #### 最大陷阱
 
@@ -2000,8 +1968,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：对称替换
 
 因为题目中同时出现：
@@ -2028,10 +1995,8 @@ $$
 (1-x)f(1-x)+f(x)=(1-x)^2.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：联立消元
 
 原式：
@@ -2064,10 +2029,8 @@ $$
 f(x)=x+1-\frac{2x}{x^2-x+1}.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：把积分分子凑成分母导数
 
 记：
@@ -2114,8 +2077,7 @@ $$
 \boxed{ \begin{aligned} \int f(x)\,dx ={}&\frac{x^2}{2}+x -\ln(x^2-x+1)\\ &-\frac2{\sqrt3} \arctan\frac{2x-1}{\sqrt3}+C. \end{aligned} }
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 ### 这类题应该怎样举一反三？
 
@@ -2657,8 +2619,7 @@ $$
 $$
 
 <Accordions>
-  <Accordion title="参考答案与方法提示（尝试后展开）">
-
+<Accordion title="参考答案与方法提示（尝试后展开）">
 答案：
 
 $$
@@ -2667,7 +2628,7 @@ $$
 
 关键在于令 $u=x^2$。
 
-  </Accordion>
+</Accordion>
 </Accordions>
 
 
@@ -2678,8 +2639,7 @@ $$
 $$
 
 <Accordions>
-  <Accordion title="参考答案与方法提示（尝试后展开）">
-
+<Accordion title="参考答案与方法提示（尝试后展开）">
 答案：
 
 $$
@@ -2688,7 +2648,7 @@ $$
 
 关键是先令 $u=e^x$，再把有理式拆开。
 
-  </Accordion>
+</Accordion>
 </Accordions>
 
 
@@ -2699,15 +2659,14 @@ $$
 $$
 
 <Accordions>
-  <Accordion title="参考答案与方法提示（尝试后展开）">
-
+<Accordion title="参考答案与方法提示（尝试后展开）">
 答案：
 
 $$
 \boxed{ \frac12\ln[1+(\ln x)^2]+C }.
 $$
 
-  </Accordion>
+</Accordion>
 </Accordions>
 
 ### 提高题
@@ -2720,8 +2679,7 @@ $$
 $$
 
 <Accordions>
-  <Accordion title="参考答案与方法提示（尝试后展开）">
-
+<Accordion title="参考答案与方法提示（尝试后展开）">
 答案：
 
 $$
@@ -2730,7 +2688,7 @@ $$
 
 关键是分部积分。
 
-  </Accordion>
+</Accordion>
 </Accordions>
 
 
@@ -2741,8 +2699,7 @@ $$
 $$
 
 <Accordions>
-  <Accordion title="参考答案与方法提示（尝试后展开）">
-
+<Accordion title="参考答案与方法提示（尝试后展开）">
 答案：
 
 $$
@@ -2751,7 +2708,7 @@ $$
 
 关键是令 $u=1+x^2$，再拆分有理式。
 
-  </Accordion>
+</Accordion>
 </Accordions>
 
 
@@ -2762,8 +2719,7 @@ $$
 $$
 
 <Accordions>
-  <Accordion title="参考答案与方法提示（尝试后展开）">
-
+<Accordion title="参考答案与方法提示（尝试后展开）">
 答案：
 
 $$
@@ -2772,7 +2728,7 @@ $$
 
 关键是逆向识别乘积求导，而不是机械分部积分。
 
-  </Accordion>
+</Accordion>
 </Accordions>
 
 
@@ -2783,8 +2739,7 @@ $$
 $$
 
 <Accordions>
-  <Accordion title="参考答案与方法提示（尝试后展开）">
-
+<Accordion title="参考答案与方法提示（尝试后展开）">
 答案：
 
 $$
@@ -2793,7 +2748,7 @@ $$
 
 关键是令 $t=\sqrt{x}$。
 
-  </Accordion>
+</Accordion>
 </Accordions>
 
 ### 综合题
@@ -2816,8 +2771,7 @@ $$
 求 $f(x)$。
 
 <Accordions>
-  <Accordion title="参考答案与方法提示（尝试后展开）">
-
+<Accordion title="参考答案与方法提示（尝试后展开）">
 答案：
 
 令 $t=e^x$，得到：
@@ -2832,7 +2786,7 @@ $$
 \boxed{ f(x)=\frac13(\ln x)^3+2,\qquad x>0 }.
 $$
 
-  </Accordion>
+</Accordion>
 </Accordions>
 
 
@@ -2845,8 +2799,7 @@ $$
 $$
 
 <Accordions>
-  <Accordion title="参考答案与方法提示（尝试后展开）">
-
+<Accordion title="参考答案与方法提示（尝试后展开）">
 答案：
 
 $$
@@ -2855,7 +2808,7 @@ $$
 
 这是一道要求快速识别的抽象函数结构题。
 
-  </Accordion>
+</Accordion>
 </Accordions>
 
 
@@ -2868,8 +2821,7 @@ I=\int\frac{2x+1}{(x^2+x+1)^2}\,dx.
 $$
 
 <Accordions>
-  <Accordion title="参考答案与方法提示（尝试后展开）">
-
+<Accordion title="参考答案与方法提示（尝试后展开）">
 答案：
 
 $$
@@ -2878,7 +2830,7 @@ $$
 
 如果还要进行部分分式分解，说明优先识别导数结构的习惯仍需加强。
 
-  </Accordion>
+</Accordion>
 </Accordions>
 
 ## 二十一、训练顺序与原资料对应关系

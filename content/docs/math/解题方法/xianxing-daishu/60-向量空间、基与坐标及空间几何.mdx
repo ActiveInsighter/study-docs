@@ -27,21 +27,18 @@ noobdream.com+2
 本节看起来包含许多零散知识点，实际上可以统一到三个问题：
 
 <Cards>
-  <Card title="① 向量空间与维数">
-
+<Card title="① 向量空间与维数">
   一个向量空间有多少个独立方向？
 
-  </Card>
-  <Card title="② 坐标变换与过渡矩阵">
-
+</Card>
+<Card title="② 坐标变换与过渡矩阵">
   同一个向量换一组基以后，坐标如何变化？
 
-  </Card>
-  <Card title="③ 线性方程组与几何">
-
+</Card>
+<Card title="③ 线性方程组与几何">
   一个线性方程组的解集在几何上是什么？
 
-  </Card>
+</Card>
 </Cards>
 
 它们共同依赖于矩阵的秩、线性表示和线性方程组。
@@ -306,8 +303,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：把问题翻译成线性表示
 
 设
@@ -322,10 +318,8 @@ $$
 \begin{pmatrix} 1&1&0\\ 1&0&1\\ 0&1&1 \end{pmatrix} \begin{pmatrix} x_1\\x_2\\x_3 \end{pmatrix} = \begin{pmatrix} 2\\0\\0 \end{pmatrix}.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：建立方程组
 
 $$
@@ -356,10 +350,8 @@ $$
 \boxed{ [\beta]_\alpha= \begin{pmatrix} 1\\1\\-1 \end{pmatrix} }
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：检验
 
 $$
@@ -368,8 +360,7 @@ $$
 
 结果正确。
 
-  </Step>
-
+</Step>
 </Steps>
 
 ### 这道题真正考什么？
@@ -410,8 +401,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：把维数转化为秩
 
 由题意：
@@ -434,10 +424,8 @@ $$
 \alpha_3=s\alpha_1+t\alpha_2.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：比较分量
 
 $$
@@ -468,10 +456,8 @@ $$
 \boxed{a=6}.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：验证
 
 当 $a=6$ 时，
@@ -482,8 +468,7 @@ $$
 
 而 $\alpha_1,\alpha_2$ 本来线性无关，因此整个向量组的秩确实为2。
 
-  </Step>
-
+</Step>
 </Steps>
 
 ### 母题总结
@@ -588,8 +573,7 @@ $$
 
 <Tabs items={["逐列表示法", "矩阵公式法"]} defaultIndex={0}>
 
-  <Tab value="逐列表示法">
-
+<Tab value="逐列表示法">
 **方法一：利用定义逐列表示**
 
 设
@@ -634,10 +618,8 @@ $$
 \boxed{ P= \begin{pmatrix} 2&3\\ -1&-2 \end{pmatrix} }
 $$
 
-  </Tab>
-
-  <Tab value="矩阵公式法">
-
+</Tab>
+<Tab value="矩阵公式法">
 **方法二：直接使用矩阵公式**
 
 $$
@@ -664,8 +646,7 @@ $$
 
 两种方法一致。
 
-  </Tab>
-
+</Tab>
 </Tabs>
 
 ### 怎样判断用哪种方法？
@@ -702,8 +683,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：重新命名旧基
 
 记
@@ -718,28 +698,23 @@ $$
 \alpha_1=e_1,\qquad \alpha_2=2e_2,\qquad \alpha_3=3e_3.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：逐个表示新基向量
 
 $$
 \begin{aligned} \beta_1&=\alpha_1+\alpha_2=e_1+2e_2,\\ \beta_2&=\alpha_2+\alpha_3=2e_2+3e_3,\\ \beta_3&=\alpha_3+\alpha_1=e_1+3e_3. \end{aligned}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：按照列排列
 
 $$
 \boxed{ P= \begin{pmatrix} 1&0&1\\ 2&2&0\\ 0&3&3 \end{pmatrix} }
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 ### 这道题的通用技巧
@@ -1779,8 +1754,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：确定解空间维数
 
 矩阵 $B$ 有4列，因此未知量有4个。
@@ -1805,10 +1779,8 @@ $$
 
 这意味着只需要找两个线性无关的解向量。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：选取解空间的一组基
 
 $\alpha_1,\alpha_2$ 不成比例，因此线性无关。
@@ -1829,10 +1801,8 @@ $$
 
 没有提供新的独立方向。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：施密特正交化
 
 取
@@ -1885,10 +1855,8 @@ $$
 
 确实正交。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第四步：单位化
 
 首先：
@@ -1913,8 +1881,7 @@ $$
 \boxed{ q_2=\frac1{\sqrt{39}} \begin{pmatrix} -2\\1\\5\\-3 \end{pmatrix} }
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 ### 10.4 这一类题的标准流程
@@ -2183,8 +2150,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：判断是否有解
 
 因为
@@ -2195,10 +2161,8 @@ $$
 
 所以方程组有解。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：判断解集维数
 
 未知数有三个，系数矩阵秩为2，因此
@@ -2219,8 +2183,7 @@ $$
 
 因为一个公共点对应的是唯一解，即秩为3。
 
-  </Step>
-
+</Step>
 </Steps>
 
 ### 12.4 2019年数学一真题：两两相交但没有公共点
@@ -2239,8 +2202,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：由两两相交判断系数矩阵的秩
 
 两张不同平面相交于直线，说明它们的法向量线性无关。
@@ -2267,10 +2229,8 @@ $$
 \boxed{r(A)=2}.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：判断增广矩阵秩
 
 题目中的三条不同平行交线没有公共点。
@@ -2295,8 +2255,7 @@ $$
 \boxed{ r(A)=2,\qquad r(\overline A)=3 }.
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 ### 这道题最重要的教训
@@ -2644,8 +2603,7 @@ $$
 
 <Accordions>
 
-  <Accordion title="陷阱一：非零相同坐标向量不可能只有一个">
-
+<Accordion title="陷阱一：非零相同坐标向量不可能只有一个">
 因为
 
 $$
@@ -2670,10 +2628,8 @@ $$
 
 所以在实向量空间中，只要存在一个非零相同坐标向量，就必定存在无穷多个。
 
-  </Accordion>
-
-  <Accordion title="陷阱二：过渡矩阵可逆，不代表 P−I 可逆">
-
+</Accordion>
+<Accordion title="陷阱二：过渡矩阵可逆，不代表 P−I 可逆">
 例如2015年真题中：
 
 $$
@@ -2692,8 +2648,7 @@ $$
 
 一个矩阵可逆与它减去单位矩阵后是否可逆，是两个不同的问题。
 
-  </Accordion>
-
+</Accordion>
 </Accordions>
 
 ## 十六、高质量综合训练题

@@ -583,8 +583,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：识别题型
 
 题目有三个特征：
@@ -599,10 +598,8 @@ $$
 U,V\text{ 不相关} \iff \operatorname{Cov}(U,V)=0.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：展开协方差
 
 $$
@@ -627,10 +624,8 @@ $$
 \boxed{ E(X^2)-(EX)^2 = E(Y^2)-(EY)^2 }
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：思考正态条件有什么作用
 
 刚才的求解过程并没有使用正态性。
@@ -659,8 +654,7 @@ $$
 
 如果只知道 $X,Y$ 独立同分布，但不是正态分布，则通常只能得到不相关，不能直接得到独立。
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 母题推广1：和差型相关系数
@@ -787,8 +781,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：识别核心条件
 
 看到：
@@ -805,10 +798,8 @@ $$
 
 这是比协方差展开更快的方法。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：代入期望和方差
 
 题目中：
@@ -839,10 +830,8 @@ $$
 \boxed{P(Y=2X+1)=1}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：理解为什么不是其他关系
 
 完全相关的直线：
@@ -873,8 +862,7 @@ $$
 
 仅在 $\rho_{XY}=\pm1$ 时作为几乎必然成立的关系使用。
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 母题推广：完全负相关
@@ -968,8 +956,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：利用对称性计算期望
 
 密度函数满足：
@@ -1002,10 +989,8 @@ $$
 \boxed{DX=2}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：求协方差
 
 $$
@@ -1058,10 +1043,8 @@ $$
 \boxed{X\text{ 与 }|X|\text{ 不相关}}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：判断是否独立
 
 这里最容易产生错误：
@@ -1112,8 +1095,7 @@ $$
 \boxed{X\text{ 与 }|X|\text{ 不独立}}
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 母题总结
@@ -1210,8 +1192,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：将相关系数转化为协方差
 
 $$
@@ -1224,10 +1205,8 @@ $$
 \operatorname{Cov}(X,Y) = -\frac12\sqrt{9\cdot16} =-6.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：求 $Z$ 的数学期望
 
 $$
@@ -1240,10 +1219,8 @@ $$
 \boxed{EZ=\frac13}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：计算方差
 
 $$
@@ -1262,10 +1239,8 @@ $$
 \boxed{DZ=3}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第四步：求相关系数
 
 先求：
@@ -1280,10 +1255,8 @@ $$
 \boxed{\rho_{XZ}=0}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第五步：判断独立性
 
 由于：
@@ -1316,8 +1289,7 @@ $$
 \boxed{X\perp Z}
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 从这道真题提炼通法
@@ -1443,8 +1415,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：先识别随机变量之间的关系
 
 这是一个容易误判的问题。
@@ -1457,10 +1428,8 @@ $$
 
 这意味着两个计数之间存在负向关联。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：建立示性变量
 
 对第 $i$ 次试验，定义：
@@ -1507,10 +1476,8 @@ $$
 \operatorname{Cov}(I_i,J_i) = 0-\frac13\cdot\frac13 =-\frac19.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：求总协方差
 
 由不同次试验相互独立：
@@ -1525,10 +1492,8 @@ $$
 \begin{aligned} \operatorname{Cov}(X,Y) &=\operatorname{Cov}(I_1+I_2,J_1+J_2)\\ &=\operatorname{Cov}(I_1,J_1) +\operatorname{Cov}(I_2,J_2)\\ &=-\frac29. \end{aligned}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第四步：求方差
 
 显然：
@@ -1555,8 +1520,7 @@ $$
 \boxed{\rho_{XY}=-\frac12}
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 从真题推广到多项分布
@@ -1625,8 +1589,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：求边缘概率
 
 第一次取红球的概率：
@@ -1667,10 +1630,8 @@ $$
 EY=\frac12,\qquad DY=\frac14.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：计算交叉期望
 
 由于 $X,Y$ 都只取0或1：
@@ -1693,10 +1654,8 @@ $$
 E(XY) = P(X=1)P(Y=1\mid X=1) =\frac12\cdot\frac35 =\frac3{10}.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：求协方差与相关系数
 
 $$
@@ -1715,8 +1674,7 @@ $$
 \boxed{\rho_{XY}=\frac15}
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 母题总结：二值随机变量求协方差的捷径
@@ -2077,8 +2035,7 @@ $$
 
 <Tabs items={["初等方法 · 基本不等式", "矩阵方法 · 特征值"]} defaultIndex={0}>
 
-  <Tab value="初等方法 · 基本不等式">
-
+<Tab value="初等方法 · 基本不等式">
 #### 方法一：基本不等式
 
 由方差公式：
@@ -2155,10 +2112,8 @@ $$
 \boxed{ \min D(aX+bY)=1-|\rho| }
 $$
 
-  </Tab>
-
-  <Tab value="矩阵方法 · 特征值">
-
+</Tab>
+<Tab value="矩阵方法 · 特征值">
 #### 方法二：协方差矩阵
 
 引入协方差矩阵：
@@ -2229,8 +2184,7 @@ $$
 
 与第一种方法完全一致。
 
-  </Tab>
-
+</Tab>
 </Tabs>
 
 #### 母题推广：一般二维协方差矩阵
@@ -2337,8 +2291,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：识别共享项
 
 注意，$\overline X$ 包含 $X_1$。
@@ -2347,10 +2300,8 @@ $$
 
 不能直接令协方差等于零。
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：展开
 
 $$
@@ -2375,10 +2326,8 @@ $$
 \boxed{ \operatorname{Cov}(X_1,\overline X) =\frac{\sigma^2}{n} }
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：求相关系数
 
 $$
@@ -2401,8 +2350,7 @@ $$
 
 它不要求总体正态。
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 母题推广1：样本离均差
@@ -2613,8 +2561,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：观察对称性
 
 由于均匀分布区间关于原点对称：
@@ -2635,10 +2582,8 @@ $$
 \operatorname{Cov}(X,\sin X) = E(X\sin X).
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：正确判断乘积的奇偶性
 
 注意：
@@ -2673,8 +2618,7 @@ $$
 \boxed{ \operatorname{Cov}(X,\sin X)=\frac2\pi }
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 这一类题的通用思路
@@ -2761,8 +2705,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：分离均值误差和随机波动
 
 根据方差定义：
@@ -2795,10 +2738,8 @@ $$
 \begin{aligned} G(a,b) ={}&DY+b^2DX-2b\operatorname{Cov}(X,Y)\\ &+(EY-a-bEX)^2. \end{aligned}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：先确定最优截距
 
 对于固定的 $b$，显然：
@@ -2821,10 +2762,8 @@ $$
 \boxed{a^*=EY-bEX}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：确定最优斜率
 
 剩下：
@@ -2851,10 +2790,8 @@ $$
 \boxed{ a^*=EY- \frac{\operatorname{Cov}(X,Y)}{DX}EX }
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第四步：求最小误差
 
 $$
@@ -2873,8 +2810,7 @@ $$
 \boxed{ G_{\min}=DY(1-\rho_{XY}^2) }
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 深层理解
@@ -2975,8 +2911,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：把相关系数转化为协方差
 
 因为：
@@ -2991,10 +2926,8 @@ $$
 \operatorname{Cov}(X_i,X_j)=\rho.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：求 $U,V$ 的协方差
 
 展开：
@@ -3019,10 +2952,8 @@ $$
 \boxed{ \operatorname{Cov}(U,V)=n^2\rho }
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：求方差
 
 $$
@@ -3047,10 +2978,8 @@ $$
 DV=n+n(n-1)\rho.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第四步：求相关系数
 
 $$
@@ -3063,8 +2992,7 @@ $$
 \boxed{ \rho_{UV} = \frac{n\rho}{1+(n-1)\rho} }
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 本题最重要的陷阱
@@ -3167,8 +3095,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：求基础矩
 
 $$
@@ -3197,10 +3124,8 @@ $$
 E(Y^2)=DY+(EY)^2=\frac32.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：求乘积变量的方差
 
 因为 $X,Y$ 独立：
@@ -3215,10 +3140,8 @@ $$
 \begin{aligned} D(XY) &=E(X^2Y^2)-[E(XY)]^2\\ &=E(X^2)E(Y^2)\\ &=\frac32. \end{aligned}
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：求协方差
 
 $$
@@ -3253,10 +3176,8 @@ $$
 \boxed{ \operatorname{Cov}(XY,X+Y)=1 }
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第四步：求相关系数
 
 $$
@@ -3275,8 +3196,7 @@ $$
 \boxed{\rho_{XY,X+Y}=\frac23}
 $$
 
-  </Step>
-
+</Step>
 </Steps>
 
 #### 这一类题的母题公式
@@ -3409,8 +3329,7 @@ $$
 
 <Steps>
 
-  <Step>
-
+<Step>
 ### 第一步：概率积分变换
 
 当 $F$ 连续时：
@@ -3425,10 +3344,8 @@ $$
 E[F(X)]=\frac12.
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第二步：引入独立同分布的 $Y$
 
 由条件概率：
@@ -3455,10 +3372,8 @@ $$
 E[XF(X)] = \frac12E[\max(X,Y)].
 $$
 
-  </Step>
-
-  <Step>
-
+</Step>
+<Step>
 ### 第三步：使用最大值恒等式
 
 $$
@@ -3507,8 +3422,7 @@ $$
 
 这说明：高质量创新题不一定要求复杂积分，有时关键在于找到合适的恒等式，将陌生问题转化为已知的数字特征。
 
-  </Step>
-
+</Step>
 </Steps>
 
 ## 第五部分：题型识别与标准解题方法
@@ -3649,8 +3563,7 @@ $$
 
 <Accordions>
 
-  <Accordion title="展开参考解答与方法提示">
-
+<Accordion title="展开参考解答与方法提示">
 计算：
 
 $$
@@ -3667,8 +3580,7 @@ $$
 \boxed{\rho_{UV}=-\frac1{\sqrt{10}}}
 $$
 
-  </Accordion>
-
+</Accordion>
 </Accordions>
 
 #### 练习2：不相关与独立
@@ -3687,8 +3599,7 @@ $$
 
 <Accordions>
 
-  <Accordion title="展开参考解答与方法提示">
-
+<Accordion title="展开参考解答与方法提示">
 答案：
 
 $$
@@ -3703,8 +3614,7 @@ $$
 
 因为 $Y$ 是 $X$ 的非恒定确定函数。
 
-  </Accordion>
-
+</Accordion>
 </Accordions>
 
 #### 练习3：伯努利相关
@@ -3731,8 +3641,7 @@ $$
 
 <Accordions>
 
-  <Accordion title="展开参考解答与方法提示">
-
+<Accordion title="展开参考解答与方法提示">
 直接使用：
 
 $$
@@ -3745,8 +3654,7 @@ $$
 \boxed{\operatorname{Cov}(X,Y)=0.03}
 $$
 
-  </Accordion>
-
+</Accordion>
 </Accordions>
 
 ### 二十七、中等综合
@@ -3767,8 +3675,7 @@ $$
 
 <Accordions>
 
-  <Accordion title="展开参考解答与方法提示">
-
+<Accordion title="展开参考解答与方法提示">
 答案：
 
 $$
@@ -3781,8 +3688,7 @@ $$
 \boxed{12}
 $$
 
-  </Accordion>
-
+</Accordion>
 </Accordions>
 
 #### 练习5：协方差矩阵参数范围
@@ -3799,8 +3705,7 @@ $$
 
 <Accordions>
 
-  <Accordion title="展开参考解答与方法提示">
-
+<Accordion title="展开参考解答与方法提示">
 答案：
 
 由于协方差矩阵必须半正定：
@@ -3815,8 +3720,7 @@ $$
 \boxed{ -\sqrt6\le t\le\sqrt6 }
 $$
 
-  </Accordion>
-
+</Accordion>
 </Accordions>
 
 #### 练习6：样本重叠
@@ -3843,8 +3747,7 @@ $$
 
 <Accordions>
 
-  <Accordion title="展开参考解答与方法提示">
-
+<Accordion title="展开参考解答与方法提示">
 答案：
 
 两个和分别包含10项，共同包含5项。
@@ -3855,8 +3758,7 @@ $$
 \boxed{\rho_{UV}=\frac5{10}=\frac12}
 $$
 
-  </Accordion>
-
+</Accordion>
 </Accordions>
 
 ### 二十八、提高与创新
@@ -3883,8 +3785,7 @@ $$
 
 <Accordions>
 
-  <Accordion title="展开参考解答与方法提示">
-
+<Accordion title="展开参考解答与方法提示">
 解题提示： 使用全方差公式，而不是求联合密度后二重积分。
 
 因为：
@@ -3925,8 +3826,7 @@ $$
 
 这道题综合了条件期望、全方差和相关系数的标准化计算。
 
-  </Accordion>
-
+</Accordion>
 </Accordions>
 
 #### 练习8：最优线性预测
@@ -3953,8 +3853,7 @@ $$
 
 <Accordions>
 
-  <Accordion title="展开参考解答与方法提示">
-
+<Accordion title="展开参考解答与方法提示">
 利用最优预测公式：
 
 $$
@@ -3973,8 +3872,7 @@ $$
 \boxed{ G_{\min}=\frac{27}{4} }
 $$
 
-  </Accordion>
-
+</Accordion>
 </Accordions>
 
 #### 练习9：共同随机因素
@@ -4005,8 +3903,7 @@ $$
 
 <Accordions>
 
-  <Accordion title="展开参考解答与方法提示">
-
+<Accordion title="展开参考解答与方法提示">
 因为：
 
 $$
@@ -4029,8 +3926,7 @@ $$
 
 这道题的关键在于识别共同的随机因素 $Z$。
 
-  </Accordion>
-
+</Accordion>
 </Accordions>
 
 #### 练习10：独立差变量
@@ -4057,8 +3953,7 @@ $$
 
 <Accordions>
 
-  <Accordion title="展开参考解答与方法提示">
-
+<Accordion title="展开参考解答与方法提示">
 令：
 
 $$
@@ -4125,8 +4020,7 @@ $$
 
 必须先转换变量，再使用独立性。
 
-  </Accordion>
-
+</Accordion>
 </Accordions>
 
 ## 第八部分：面向未来考研数学一的命题预测与综合训练方向
