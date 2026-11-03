@@ -1,4 +1,4 @@
-import { StudyHome } from '@/components/study-home';
+import { StudyHome } from '@/components/home/study-home';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

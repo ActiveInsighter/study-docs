@@ -1,0 +1,11 @@
+@import './tokens/home.css';
+
+/*
+ * Shared by every route under app/(home): the home page and the blog. The
+ * home page adds its own notebook palette on top
+ * (components/home/home.module.css).
+ */
+.study-home-layout {
+  background: var(--home-background);
+  color: var(--home-foreground);
+}

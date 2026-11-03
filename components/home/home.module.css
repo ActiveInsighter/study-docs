@@ -1,0 +1,199 @@
+/*
+ * Home page tokens and shared pieces. The visual language is a study notebook:
+ * dot-grid paper, a mind map in the hero and one highlighter colour per study
+ * module. Names are prefixed (--h-*, --tone-*) so they never shadow the global
+ * diagram palette (--paper, --ink, ...) in styles/tokens/palette.css.
+ */
+
+.page {
+  --h-paper: #fff;
+  --h-sunk: #f6f7f9;
+  --h-ink: #1d2026;
+  --h-soft: #474d57;
+  --h-muted: #69707a;
+  --h-rule: #e5e7eb;
+  --h-dot: #d5d9df;
+  --h-focus: #2f6fd6;
+
+  --h-display: var(--font-inter), 'PingFang SC', 'HarmonyOS Sans SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif;
+  --h-body: var(--font-inter), 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif;
+  --h-mono: ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Menlo, Consolas, monospace;
+  --h-width: 1240px;
+  --h-gutter: 24px;
+
+  width: 100%;
+  max-width: var(--h-width);
+  margin-inline: auto;
+  padding-inline: var(--h-gutter);
+  color: var(--h-ink);
+  font-family: var(--h-body);
+}
+
+/* The page sits on the (home) layout background, so paper matches it. */
+:global(.dark) .page {
+  --h-paper: #0a0a0a;
+  --h-sunk: #131416;
+  --h-ink: #ececef;
+  --h-soft: #c3c6cc;
+  --h-muted: #989ca4;
+  --h-rule: #26282d;
+  --h-dot: #2b2e34;
+  --h-focus: #8fc0ff;
+}
+
+/*
+ * Highlighter tones. Each coloured element carries `.tone` and a data-tone;
+ * hl = marker fill (dark text sits on it in both themes), line = strokes,
+ * ink = readable text, wash = quiet background.
+ */
+.tone[data-tone='pink'] { --tone-hl: #ffb3cf; --tone-line: #ef5f92; --tone-ink: #ad1457; --tone-wash: #fff0f5; }
+.tone[data-tone='blue'] { --tone-hl: #a8dcff; --tone-line: #3fa5ec; --tone-ink: #0d5fa3; --tone-wash: #eef8ff; }
+.tone[data-tone='yellow'] { --tone-hl: #ffe766; --tone-line: #e0b400; --tone-ink: #7a5c00; --tone-wash: #fffadb; }
+.tone[data-tone='green'] { --tone-hl: #a6ecb4; --tone-line: #36b75a; --tone-ink: #1b6e34; --tone-wash: #ecfbef; }
+.tone[data-tone='violet'] { --tone-hl: #d3c4ff; --tone-line: #8c6cf0; --tone-ink: #5532c2; --tone-wash: #f4f0ff; }
+.tone[data-tone='orange'] { --tone-hl: #ffcc99; --tone-line: #f08a2c; --tone-ink: #9a4a06; --tone-wash: #fff3e6; }
+
+:global(.dark) .tone[data-tone='pink'] { --tone-hl: #ff9fc3; --tone-line: #ff7aa8; --tone-ink: #ffadc9; --tone-wash: rgb(255 122 168 / 0.12); }
+:global(.dark) .tone[data-tone='blue'] { --tone-hl: #8fd0ff; --tone-line: #5cb6ff; --tone-ink: #a8d8ff; --tone-wash: rgb(92 182 255 / 0.12); }
+:global(.dark) .tone[data-tone='yellow'] { --tone-hl: #ffe14d; --tone-line: #f5cc1c; --tone-ink: #ffe680; --tone-wash: rgb(245 204 28 / 0.11); }
+:global(.dark) .tone[data-tone='green'] { --tone-hl: #8ee8a6; --tone-line: #5fd481; --tone-ink: #a4f0b8; --tone-wash: rgb(95 212 129 / 0.11); }
+:global(.dark) .tone[data-tone='violet'] { --tone-hl: #c4b2ff; --tone-line: #a58cff; --tone-ink: #cdbfff; --tone-wash: rgb(165 140 255 / 0.13); }
+:global(.dark) .tone[data-tone='orange'] { --tone-hl: #ffc48a; --tone-line: #ff9d4a; --tone-ink: #ffc896; --tone-wash: rgb(255 157 74 / 0.12); }
+
+.page :where(h1, h2, h3, p, ol, ul, dl, dd, figure) {
+  margin: 0;
+}
+
+.page :where(a) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page :where(a, button, summary, input):focus-visible {
+  outline: 2px solid var(--h-focus);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.page :where(svg) {
+  flex-shrink: 0;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px 48px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  font-family: var(--h-display);
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.sectionNote {
+  max-width: 32em;
+  color: var(--h-muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 22px;
+  border: 1.5px solid var(--h-ink);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--h-ink);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 160ms,
+    color 160ms,
+    box-shadow 160ms;
+}
+
+.button svg {
+  width: 17px;
+  height: 17px;
+}
+
+.buttonPrimary {
+  background: var(--h-ink);
+  color: var(--h-paper);
+}
+
+.buttonPrimary:hover {
+  box-shadow: 0 0 0 4px var(--h-dot);
+}
+
+.buttonGhost:hover {
+  background: var(--h-sunk);
+}
+
+.kbd {
+  padding: 1px 7px;
+  border: 1px solid var(--h-rule);
+  border-radius: 6px;
+  color: var(--h-muted);
+  font-family: var(--h-mono);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Keyboard shortcuts mean nothing on touch screens. */
+@media (pointer: coarse) {
+  .kbd {
+    display: none;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 32px;
+  padding-block: 28px 36px;
+  border-top: 1px solid var(--h-rule);
+  color: var(--h-muted);
+  font-size: 13px;
+}
+
+.footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.footer a:hover {
+  color: var(--h-ink);
+}
+
+.footerBrand {
+  color: var(--h-ink);
+  font-family: var(--h-display);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+@media (max-width: 640px) {
+  .page {
+    --h-gutter: 16px;
+  }
+
+  .sectionNote {
+    font-size: 14px;
+  }
+}

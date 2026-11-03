@@ -1,0 +1,277 @@
+/*
+ * Mind map: SVG branches stretched to the box, HTML labels on top at the
+ * same coordinates (x in %, y in px). Labels carry an opaque fill so branch
+ * ends tuck neatly underneath them.
+ */
+
+.map {
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+}
+
+.edges {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke-linecap: round;
+  animation: grow 1100ms cubic-bezier(0.22, 0.8, 0.3, 1) both;
+}
+
+/* Branches grow outwards from the root. */
+@keyframes grow {
+  from {
+    clip-path: inset(0 50% 0 50%);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.branch {
+  stroke: var(--tone-line);
+  transition: opacity 200ms;
+}
+
+.trunk {
+  stroke-width: 5;
+}
+
+.twig {
+  stroke-width: 2;
+}
+
+.branch[data-dim],
+.module[data-dim],
+.leaf[data-dim] {
+  opacity: 0.16;
+}
+
+.root,
+.module,
+.leaf {
+  position: absolute;
+  white-space: nowrap;
+}
+
+.root {
+  z-index: 2;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: var(--h-ink);
+  color: var(--h-paper);
+  font-family: var(--h-display);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 6px var(--h-paper);
+}
+
+.module,
+.leaf {
+  animation: appear 420ms ease-out var(--delay, 0ms) both;
+  transition: opacity 200ms;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.92;
+  }
+}
+
+.module {
+  z-index: 1;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--tone-hl);
+  color: #1d2026;
+  font-size: 16px;
+  font-weight: 700;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 4px var(--h-paper);
+}
+
+.module .count {
+  color: rgb(29 32 38 / 0.62);
+}
+
+.module:hover {
+  box-shadow:
+    0 0 0 4px var(--h-paper),
+    0 0 0 6px var(--tone-line);
+}
+
+.leaf {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 19%;
+  padding: 3px 4px;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.leaf::before {
+  content: '';
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--tone-line);
+  border-radius: 50%;
+  background: var(--h-paper);
+}
+
+.leaf[data-side='right'] {
+  transform: translate(-8px, -50%);
+}
+
+.leaf[data-side='left'] {
+  flex-direction: row-reverse;
+  transform: translate(calc(-100% + 8px), -50%);
+}
+
+.label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Highlighter stroke that sweeps under the label on hover. */
+  background: linear-gradient(var(--tone-hl), var(--tone-hl)) 0 88% / 0 42% no-repeat;
+  transition: background-size 240ms ease-out;
+}
+
+.leaf[data-side='left'] .label {
+  order: 2;
+  background-position: 100% 88%;
+}
+
+/* Mirrored row: label, count, then the dot on the branch end. */
+.leaf[data-side='left'] .count {
+  order: 1;
+}
+
+.leaf:hover .label,
+.leaf:focus-visible .label {
+  background-size: 100% 42%;
+}
+
+.leaf[data-more] {
+  color: var(--h-muted);
+}
+
+.leaf[data-more]::before {
+  border-style: dashed;
+}
+
+.count {
+  flex-shrink: 0;
+  color: var(--h-muted);
+  font-size: 12px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Outline view: shown instead of the drawn map on narrow screens. */
+.outline {
+  display: none;
+  padding: 20px 16px 8px;
+}
+
+.outlineRoot {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--h-ink);
+  color: var(--h-paper);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.outlineModules {
+  display: grid;
+  gap: 4px;
+  margin-top: 4px !important;
+  margin-left: 18px !important;
+  padding: 8px 0 0 !important;
+  border-left: 2px solid var(--h-rule);
+  list-style: none;
+}
+
+.outlineModules > li {
+  position: relative;
+  padding: 10px 0 10px 18px;
+}
+
+.outlineModules > li::before {
+  content: '';
+  position: absolute;
+  top: 26px;
+  left: 0;
+  width: 14px;
+  border-top: 2px solid var(--h-rule);
+}
+
+.outlineModule {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--tone-hl);
+  color: #1d2026;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.outlineModule .count {
+  color: rgb(29 32 38 / 0.62);
+}
+
+.outlineLeaves {
+  display: grid;
+  margin-top: 6px !important;
+  margin-left: 14px !important;
+  padding: 0 0 0 14px !important;
+  border-left: 2px solid var(--tone-line);
+  list-style: none;
+}
+
+.outlineLeaf {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  font-size: 14px;
+}
+
+.outlineLeaf[data-more] {
+  color: var(--h-muted);
+}
+
+@media (max-width: 900px) {
+  .map {
+    display: none;
+  }
+
+  .outline {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .edges,
+  .module,
+  .leaf {
+    animation: none;
+  }
+}
