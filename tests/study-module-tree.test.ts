@@ -56,6 +56,7 @@ describe('study module metadata structure', () => {
       'visualizations',
       '题目分析',
       '解题方法',
+      '考前21记',
     ]);
   });
 
