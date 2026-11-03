@@ -35,7 +35,19 @@ async function homepage(page, base) {
 function homeLink(href) {
   return async (page, base) => {
     await page.goto(base + '/', { waitUntil: 'networkidle2', timeout: 120000 });
-    await page.click(`a[href="${href}"]`);
+    // The home page renders the module directory twice (mind map on wide
+    // screens, outline on narrow ones) and hides one with CSS, so click the
+    // first link that is actually laid out rather than the first in the DOM.
+    const link = await page.evaluateHandle(
+      (target) =>
+        Array.from(document.querySelectorAll(`a[href="${target}"]`)).find(
+          (element) => element.getClientRects().length > 0 && getComputedStyle(element).visibility !== 'hidden',
+        ) ?? null,
+      href,
+    );
+    const element = link.asElement();
+    if (!element) throw new Error('Homepage has no visible link to ' + href);
+    await element.click();
     await page.waitForFunction(
       (expected, notFound) => location.pathname === expected || document.body.innerText.includes(notFound),
       { timeout: 120000 },
