@@ -1,0 +1,586 @@
+.section {
+  padding-block: 16px 96px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--h-rule);
+  border-radius: 18px;
+  background: var(--h-paper);
+}
+
+.tile[data-area='math'] {
+  grid-column: span 7;
+}
+
+.tile[data-area='english'] {
+  grid-column: span 5;
+}
+
+.tile[data-area='politics'] {
+  grid-column: span 5;
+}
+
+.tile[data-area='algorithm'] {
+  grid-column: span 7;
+}
+
+.tileHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+.tag {
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--tone-hl);
+  color: #1d2026;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tileTitle {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.tileBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.tileFoot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--h-rule);
+}
+
+.tileLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 32px;
+  color: var(--tone-ink);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tileLink svg {
+  width: 15px;
+  height: 15px;
+  transition: transform 160ms;
+}
+
+.tileLink:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.textButton,
+.stepButton {
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--h-rule);
+  border-radius: 999px;
+  background: var(--h-paper);
+  color: var(--h-ink);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.textButton:hover:not(:disabled) {
+  background: var(--h-sunk);
+}
+
+.stepButton {
+  border-color: transparent;
+  background: var(--h-ink);
+  color: var(--h-paper);
+}
+
+.textButton:disabled,
+.stepButton:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+/* ---- Maths: formula + plot -------------------------------------------- */
+
+.taylor {
+  display: grid;
+  gap: 14px;
+}
+
+.formula {
+  overflow-x: auto;
+  padding: 4px 0;
+}
+
+.formula :global(.katex-display) {
+  margin: 0;
+}
+
+.plot {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 240px;
+  border-radius: 10px;
+  background: var(--h-sunk);
+}
+
+.gridLine {
+  stroke: var(--h-rule);
+  stroke-width: 1;
+}
+
+.axis {
+  stroke: var(--h-muted);
+  stroke-width: 1;
+}
+
+.curveExact,
+.curveApprox {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.curveExact {
+  stroke: var(--h-ink);
+  stroke-width: 2;
+}
+
+.curveApprox {
+  stroke: var(--tone-line);
+  stroke-width: 3;
+  transition: d 220ms ease-out;
+}
+
+.plotLabel,
+.plotLabelTone {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.plotLabel {
+  fill: var(--h-ink);
+}
+
+.plotLabelTone {
+  fill: var(--tone-ink);
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+}
+
+.slider input {
+  width: 100%;
+  accent-color: var(--tone-line);
+}
+
+.sliderNote {
+  color: var(--h-muted);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- English: flip cards ---------------------------------------------- */
+
+.deck {
+  display: grid;
+  gap: 14px;
+}
+
+.card {
+  display: block;
+  width: 100%;
+  height: 250px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.cardInner {
+  position: relative;
+  display: block;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 520ms cubic-bezier(0.3, 0.7, 0.2, 1);
+}
+
+.card[data-flipped] .cardInner {
+  transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 22px;
+  border: 1px solid var(--h-rule);
+  border-radius: 14px;
+  background: var(--h-paper);
+  box-shadow: 0 10px 0 -4px var(--tone-wash), 0 10px 0 -3px var(--h-rule);
+  backface-visibility: hidden;
+}
+
+.cardFront {
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.cardBack {
+  gap: 14px;
+  overflow: auto;
+  transform: rotateY(180deg);
+}
+
+.cardLabel {
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  color: var(--tone-ink);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.cardWord {
+  font-family: var(--font-source-serif), Georgia, serif;
+  font-size: 44px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.cardPhonetic {
+  color: var(--h-muted);
+  font-size: 15px;
+}
+
+.cardHint {
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--h-muted);
+  font-size: 12px;
+}
+
+.cardHint svg {
+  width: 13px;
+  height: 13px;
+}
+
+.cardMeanings {
+  display: grid;
+  gap: 6px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.cardMeanings i {
+  margin-right: 8px;
+  color: var(--tone-ink);
+  font-weight: 600;
+}
+
+.cardExample {
+  display: grid;
+  gap: 4px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--h-rule);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.cardExample span:first-child {
+  font-family: var(--font-source-serif), Georgia, serif;
+  font-size: 15px;
+}
+
+.cardExample span:last-child {
+  color: var(--h-muted);
+}
+
+.deckBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.deckCount {
+  color: var(--h-muted);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Politics: cover and reveal --------------------------------------- */
+
+.recall {
+  display: grid;
+  justify-items: start;
+  gap: 16px;
+}
+
+.recallList {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  padding-left: 1.4em;
+  list-style: decimal;
+}
+
+.recallList li::marker {
+  color: var(--tone-ink);
+  font-weight: 700;
+}
+
+.recallPrompt {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.recallAnswer {
+  margin-top: 6px;
+  padding: 2px 8px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--tone-hl);
+  color: transparent;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color 220ms,
+    color 220ms;
+}
+
+.recallAnswer:not([data-open]):hover {
+  filter: saturate(1.25);
+}
+
+.recallAnswer[data-open] {
+  background: var(--tone-wash);
+  color: var(--tone-ink);
+}
+
+/* ---- Algorithm: binary search ----------------------------------------- */
+
+.search {
+  display: grid;
+  gap: 14px;
+}
+
+.track {
+  --cell: calc(100% / var(--count));
+}
+
+.pointers {
+  position: relative;
+  height: 24px;
+}
+
+.pointer,
+.pointerMid {
+  position: absolute;
+  bottom: 2px;
+  left: calc(var(--cell) * var(--at) + var(--cell) / 2);
+  color: var(--h-muted);
+  font-family: var(--h-mono);
+  font-size: 12px;
+  transform: translateX(-50%);
+  transition: left 300ms cubic-bezier(0.3, 0.7, 0.2, 1);
+}
+
+.pointerMid {
+  bottom: auto;
+  top: -16px;
+  color: var(--tone-ink);
+  font-weight: 700;
+}
+
+.cells {
+  display: grid;
+  grid-template-columns: repeat(var(--count), minmax(0, 1fr));
+  gap: 6px;
+  padding: 0;
+  list-style: none;
+}
+
+.cellItem {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  transition: opacity 260ms;
+}
+
+.cellItem[data-out] {
+  opacity: 0.28;
+}
+
+.cellValue {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 44px;
+  border: 1.5px solid var(--h-rule);
+  border-radius: 10px;
+  background: var(--h-paper);
+  font-family: var(--h-mono);
+  font-size: 16px;
+  font-weight: 600;
+  transition:
+    background-color 260ms,
+    border-color 260ms;
+}
+
+.cellItem[data-mid] .cellValue {
+  border-color: var(--tone-line);
+  background: var(--tone-hl);
+  color: #1d2026;
+}
+
+.cellItem[data-found] .cellValue {
+  box-shadow: 0 0 0 3px var(--tone-wash), 0 0 0 5px var(--tone-line);
+}
+
+.cellIndex {
+  color: var(--h-muted);
+  font-family: var(--h-mono);
+  font-size: 11px;
+}
+
+.code {
+  display: grid;
+  margin: 0;
+  padding: 12px 0;
+  overflow-x: auto;
+  border-radius: 10px;
+  background: var(--h-sunk);
+  font-family: var(--h-mono);
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+
+.code span {
+  padding-inline: 14px;
+  white-space: pre;
+  transition: background-color 200ms;
+}
+
+.code span[data-active] {
+  background: var(--tone-wash);
+  box-shadow: inset 3px 0 0 var(--tone-line);
+}
+
+.searchNote {
+  min-height: 3.4em;
+  color: var(--h-soft);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.searchBar {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 960px) {
+  .tile[data-area] {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding-bottom: 64px;
+  }
+
+  .grid {
+    gap: 14px;
+  }
+
+  .tile {
+    padding: 18px 16px;
+    border-radius: 14px;
+  }
+
+  .slider {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .sliderNote {
+    grid-column: 1 / -1;
+  }
+
+  .cells {
+    gap: 3px;
+  }
+
+  .cellValue {
+    height: 38px;
+    border-radius: 7px;
+    font-size: 14px;
+  }
+
+  .cardWord {
+    font-size: 38px;
+  }
+
+  /* KaTeX sets 1.21em; the full expansion must fit a phone-width tile. */
+  .formula :global(.katex) {
+    font-size: 0.95em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cardInner,
+  .pointer,
+  .pointerMid,
+  .curveApprox {
+    transition: none;
+  }
+}
