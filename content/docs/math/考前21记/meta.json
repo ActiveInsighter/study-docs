@@ -1,6 +1,5 @@
 {
   "title": "考前21记",
-  "description": "2027 周洋鑫《考前21记》逐记复习与配套题解析",
   "pages": [
     "index",
     "---高等数学---",
@@ -26,9 +25,8 @@
     "18-univariate-random-variables",
     "19-bivariate-random-variables",
     "20-moments-limit-theorems",
-    "21-sampling-parameter-estimation",
-    "---数学一附表---",
-    "appendix-math-i-integrals"
+    "21-sampling-parameter-estimation"
   ],
+  "description": "数学考前21记优化版：21 记核心知识与 213 道配套题解析",
   "defaultOpen": false
 }
