@@ -1,0 +1,1231 @@
+---
+title: "第 21 记｜数理统计：抽样分布与参数估计（数学一、数学三）"
+description: "2027 周洋鑫《考前21记》第 21 记：数理统计：抽样分布与参数估计（数学一、数学三）。含知识梳理、适用条件与 18 道配套题及解析。"
+---
+
+<Callout type="info" title="本记来源、覆盖范围与新增内容的边界">
+
+本记对应原资料 **第 106—109 页**，依原书顺序完整整理 **必记 1—6**：重要统计量及其数字特征，$\chi^2$、$t$、$F$ 三大分布，一个与两个正态总体的抽样分布，矩估计和最大似然估计，估计量的评价标准，区间估计与假设检验。第 106 页手写绿色汇总框中的结论也已并入正文。
+
+**来源边界**：原书“必记 6”只有复习提示，没有展开区间估计、假设检验的具体公式；本记为方便考前使用，**单独标明补充**常用统计推断框架和原创训练，不将补充内容冒称为原书原题。原书该记没有完整、独立的真题题干，因此下方自测均标为**原创巩固题**。
+
+**记号约定**：$X_1,\ldots,X_n$ 为来自总体 $X$ 的独立同分布样本，$n\ge2$，$\bar X$ 为样本均值，$S^2$ 为以 $n-1$ 为分母的无偏样本方差；$N(\mu,\sigma^2)$ 的第二个参数是**方差**，不是标准差。
+
+</Callout>
+
+<Cards>
+  <Card title="必记 1｜统计量与数字特征">样本均值、样本方差、原点矩与中心矩，辨认无偏性和独立性前提。</Card>
+  <Card title="必记 2｜三大抽样分布">卡方、$t$、$F$ 的构造、自由度、上侧分位点及相互转换。</Card>
+  <Card title="必记 3｜正态总体抽样">单总体四条公式、双总体四条公式与合并方差。</Card>
+  <Card title="必记 4｜点估计">矩估计、似然函数、对数似然、边界最大值。</Card>
+  <Card title="必记 5｜估计量评价">无偏性、有效性、一致性：判定对象和适用条件。</Card>
+  <Card title="必记 6｜区间估计与检验">原书提纲，附可用于复习的常用枢轴量与检验程序。</Card>
+</Cards>
+
+## 必记 1｜重要统计量及其数字特征
+
+### 1. 五个定义必须区分
+
+| 统计量 | 定义 | 重点 |
+| --- | --- | --- |
+| 样本均值 | $\displaystyle\bar X=\frac1n\sum_{i=1}^nX_i$ | 随机变量；期望和方差易算 |
+| 样本方差 | $\displaystyle S^2=\frac1{n-1}\sum_{i=1}^n(X_i-\bar X)^2$ | 分母为 $n-1$；在总体方差有限时无偏 |
+| 样本标准差 | $\displaystyle S=\sqrt{\frac1{n-1}\sum_{i=1}^n(X_i-\bar X)^2}$ | 一般**不**满足 $E(S)=\sigma$ |
+| $k$ 阶样本原点矩 | $\displaystyle A_k=\frac1n\sum_{i=1}^nX_i^k$ | $A_1=\bar X$，$A_2=\frac1n\sum X_i^2$ |
+| $k$ 阶样本中心矩 | $\displaystyle B_k=\frac1n\sum_{i=1}^n(X_i-\bar X)^k$ | $B_1=0$，$B_2=\frac{n-1}{n}S^2$ |
+
+<Callout type="warn" title="样本方差与样本二阶中心矩不是同一个统计量">
+
+原书同时使用 $S^2$ 与 $B_k$ 两套定义。由于分母不同，必须明确
+
+$$
+\boxed{B_2=\frac{n-1}{n}S^2,\qquad S^2=\frac{n}{n-1}B_2.}
+$$
+
+在总体方差 $\sigma^2$ 有限的条件下，$E(S^2)=\sigma^2$，但 $E(B_2)=\frac{n-1}{n}\sigma^2$。**不要把 $S^2$ 和 $S$ 的无偏性混为一谈**。
+
+</Callout>
+
+### 2. 单个样本与常见统计量的期望、方差
+
+由独立同分布（独立性用于求和方差），若 $E(X)=\mu$，$D(X)=\sigma^2<\infty$，则
+
+$$
+\boxed{E(\bar X)=\mu,\qquad D(\bar X)=\frac{\sigma^2}{n},\qquad E(\bar X^2)=\mu^2+\frac{\sigma^2}{n}.}
+$$
+
+原书绿色框中的“单个样本”式可准确写为：在相应矩存在时，
+
+$$
+E(X_1^k)=\cdots=E(X_n^k)=E(X^k),
+$$
+
+$$
+D(X_1^k)=\cdots=D(X_n^k)=D(X^k).
+$$
+
+这里 **$D(X_i^k)$ 是 $X_i^k$ 的方差**，不是 $[D(X_i)]^k$；后者通常不等于前者。当 $k$ 阶矩存在时，还有 $E(A_k)=E(X^k)$；若 $E|X|^k<\infty$，由大数定律 $A_k\xrightarrow{P}E(X^k)$。
+
+样本方差满足恒等式
+
+$$
+\sum_{i=1}^n(X_i-\bar X)^2
+=\sum_{i=1}^n(X_i-\mu)^2-n(\bar X-\mu)^2.
+$$
+
+两边取期望得到
+
+$$
+E\left[\sum_{i=1}^n(X_i-\bar X)^2\right]
+=n\sigma^2-n\frac{\sigma^2}{n}=(n-1)\sigma^2,
+$$
+
+于是
+
+$$
+\boxed{E(S^2)=\sigma^2,\qquad E\left[\sum_{i=1}^n(X_i-\bar X)^2\right]=(n-1)\sigma^2.}
+$$
+
+<Accordions>
+  <Accordion title="推导：为什么分母用 n−1？">
+
+  使用恒等式 $\sum(X_i-\bar X)^2=\sum(X_i-\mu)^2-n(\bar X-\mu)^2$。右边两项期望分别为 $n\sigma^2$ 和 $\sigma^2$，差为 $(n-1)\sigma^2$；要使样本方差的期望等于总体方差，分母因此选 $n-1$。
+
+  </Accordion>
+  <Accordion title="纠错：$E(S^2)=\sigma^2$ 是否要求总体正态？">
+
+  **不要求**。只要独立同分布且总体方差有限，此无偏性就成立；但 $\bar X$ 与 $S^2$ 独立、$(n-1)S^2/\sigma^2$ 服从卡方分布，一般需要**正态总体**。
+
+  </Accordion>
+</Accordions>
+
+### 3. 正态样本的两条高频方差公式（原书手写框）
+
+设样本来自 $N(\mu,\sigma^2)$，$\sigma^2>0$。
+
+- 当 $\mu=0$ 时，$\bar X\sim N(0,\sigma^2/n)$，因此 $n\bar X^2/\sigma^2\sim\chi^2(1)$。由卡方分布方差为 $2$ 可得
+
+$$
+\boxed{D(\bar X^2)=\frac{2\sigma^4}{n^2}\qquad(\mu=0).}
+$$
+
+- 不论 $\mu$ 取何值，$(n-1)S^2/\sigma^2\sim\chi^2(n-1)$，因此
+
+$$
+\boxed{D(S^2)=\frac{2\sigma^4}{n-1}.}
+$$
+
+<Tabs items={['零均值与非零均值', '均值方差与方差的方差']}>
+  <Tab value="零均值与非零均值">
+
+  原书 $D(\bar X^2)=2\sigma^4/n^2$ 有**总体均值为零**的前提。若 $\mu\ne0$，则 $\bar X\sim N(\mu,\sigma^2/n)$，应为
+
+  $$
+  D(\bar X^2)=\frac{2\sigma^4}{n^2}+\frac{4\mu^2\sigma^2}{n}.
+  $$
+
+  因为非中心正态变量的平方不再是中心卡方的常数倍。
+
+  </Tab>
+  <Tab value="均值方差与方差的方差">
+
+  $$
+  \underbrace{D(\bar X)}_{\text{样本均值的方差}}=\frac{\sigma^2}{n},\qquad
+  \underbrace{D(S^2)}_{\text{样本方差这一随机变量的方差}}=\frac{2\sigma^4}{n-1}.
+  $$
+
+  二者概念不同，不能把 $D(S^2)$ 错写为 $[D(S)]^2$。
+
+  </Tab>
+</Tabs>
+
+## 必记 2｜三大分布：$\chi^2$、$t$、$F$
+
+### 1. 卡方分布：独立标准正态变量平方和
+
+若 $Z_1,\ldots,Z_r$ **相互独立**且都服从 $N(0,1)$，定义
+
+$$
+\boxed{U=\sum_{i=1}^rZ_i^2\sim\chi^2(r)},\qquad E(U)=r,\quad D(U)=2r.
+$$
+
+自由度为正整数 $r$。若 $U\sim\chi^2(r_1)$、$V\sim\chi^2(r_2)$ 且二者独立，才可使用可加性：
+
+$$
+\boxed{U+V\sim\chi^2(r_1+r_2).}
+$$
+
+例如 $Z^2\sim\chi^2(1)$，$\sum_{i=1}^nZ_i^2\sim\chi^2(n)$；但 $Z_1^2+Z_2^2$ 是否服从 $\chi^2(2)$，不能不检查 $Z_1,Z_2$ 的独立性。
+
+### 2. $t$ 分布：标准正态比上独立卡方的平方根
+
+若 $Z\sim N(0,1)$、$U\sim\chi^2(r)$ 且 **$Z\perp U$**，则
+
+$$
+\boxed{T=\frac{Z}{\sqrt{U/r}}\sim t(r).}
+$$
+
+其密度关于原点对称；令 $F_r$ 表示 $t(r)$ 的分布函数，则
+
+$$
+F_r(-x)=1-F_r(x),\qquad F_r(0)=\frac12,
+$$
+
+并且对 $x\ge0$，
+
+$$
+P(|T|\le x)=2F_r(x)-1.
+$$
+
+自由度 $r$ 较大时，$t(r)$ 分布趋近标准正态；这仍是**分布趋近**，不是有限 $r$ 时精确相等。
+
+### 3. $F$ 分布：两个独立卡方变量各除以自由度后的比
+
+若 $U\sim\chi^2(r_1)$、$V\sim\chi^2(r_2)$ 且 **$U\perp V$**，则
+
+$$
+\boxed{F=\frac{U/r_1}{V/r_2}\sim F(r_1,r_2).}
+$$
+
+分子自由度与分母自由度不能写反；关键对称性质为
+
+$$
+\boxed{F\sim F(r_1,r_2)\ \Longrightarrow\ \frac1F\sim F(r_2,r_1).}
+$$
+
+对于 $r_2>2$ 才有 $E(F)=r_2/(r_2-2)$；不要把 $E(F)$ 不加条件地记成 $1$。原书未要求这条期望公式，仅作为补充辨析。
+
+### 4. 三种分布的“上 $\alpha$ 分位点”
+
+设 $0<\alpha<1$，本记统一使用**右尾（上侧）概率为 $\alpha$** 的记号：
+
+$$
+\begin{aligned}
+P\{U>\chi^2_{\alpha}(r)\}&=\alpha,&&U\sim\chi^2(r),\\
+P\{T>t_{\alpha}(r)\}&=\alpha,&&T\sim t(r),\\
+P\{F>F_{\alpha}(r_1,r_2)\}&=\alpha,&&F\sim F(r_1,r_2).
+\end{aligned}
+$$
+
+<Callout type="warn" title="上侧分位点不是左侧累计概率为 $\alpha$ 的点">
+
+若 $q_\alpha$ 是“上 $\alpha$ 分位点”，则 $P(W\le q_\alpha)=1-\alpha$（连续型分布）。$t$ 分布关于 $0$ 对称，因此 $t_{1-\alpha}(r)=-t_\alpha(r)$；$F$ 分布满足
+
+$$
+\boxed{F_\alpha(r_1,r_2)=\frac{1}{F_{1-\alpha}(r_2,r_1)}}.
+$$
+
+不同统计表或软件可能使用不同的分位点定义，考试时务必以题干或教材约定为准。
+
+</Callout>
+
+<Steps>
+  <Step>
+
+  ### 识别平方和
+
+  若看到互相独立的标准正态变量平方和，立即想到 $\chi^2$，同时清点自由度。
+
+  </Step>
+  <Step>
+
+  ### 识别一个标准正态与一个卡方
+
+  若分母形式是 $\sqrt{U/r}$，且与分子标准正态独立，则为 $t(r)$。
+
+  </Step>
+  <Step>
+
+  ### 识别两个卡方的比值
+
+  两者都先各自除以自由度，再取比值，得到 $F(r_1,r_2)$；倒数时自由度交换。
+
+  </Step>
+</Steps>
+
+## 必记 3｜正态总体抽样分布（本记五星级重点）
+
+### 1. 一个正态总体：四条必须掌握的结论
+
+设 $X_1,\ldots,X_n$ 为来自 $N(\mu,\sigma^2)$ 的独立样本，其中 $\sigma^2>0$、$n\ge2$。
+
+| 类型 | **精确分布** | 自由度 / 注意点 |
+| --- | --- | --- |
+| 样本均值 | $\displaystyle\bar X\sim N\!\left(\mu,\frac{\sigma^2}{n}\right)$ | 标准化后为 $N(0,1)$ |
+| 样本均值与方差 | $\displaystyle\bar X\perp S^2$ | **正态总体**的关键性质 |
+| 样本方差 | $\displaystyle\frac{(n-1)S^2}{\sigma^2}\sim\chi^2(n-1)$ | 自由度为 $n-1$ |
+| 未知方差的均值统计量 | $\displaystyle\frac{\bar X-\mu}{S/\sqrt n}\sim t(n-1)$ | $S$ 必须带平方根 |
+| 围绕真均值的平方和 | $\displaystyle\sum_{i=1}^n\frac{(X_i-\mu)^2}{\sigma^2}\sim\chi^2(n)$ | 真均值已知、未估计，故自由度为 $n$ |
+
+核心标准化式为
+
+$$
+\boxed{Z=\frac{\bar X-\mu}{\sigma/\sqrt n}\sim N(0,1),\quad
+U=\frac{(n-1)S^2}{\sigma^2}\sim\chi^2(n-1),\quad Z\perp U.}
+$$
+
+因此
+
+$$
+\frac{\bar X-\mu}{S/\sqrt n}=\frac{Z}{\sqrt{U/(n-1)}}\sim t(n-1).
+$$
+
+另一条关系来自平方和分解：
+
+$$
+\boxed{\sum_{i=1}^n\frac{(X_i-\mu)^2}{\sigma^2}
+=\frac{(n-1)S^2}{\sigma^2}
++\frac{n(\bar X-\mu)^2}{\sigma^2}.}
+$$
+
+左边服从 $\chi^2(n)$；右边两项独立，分别服从 $\chi^2(n-1)$、$\chi^2(1)$，正好构成自由度拆分。
+
+<Callout type="idea" title="自由度速记：是否用样本估计了均值？">
+
+围绕已知的总体均值 $\mu$ 作平方和，得到 $n$；围绕样本均值 $\bar X$ 作平方和，损失一个自由度，得到 $n-1$。若用 $S$ 替换未知的 $\sigma$，把均值统计量从标准正态转成 $t(n-1)$。
+
+</Callout>
+
+### 2. 两个独立正态总体：四条核心结论
+
+设 $X_1,\ldots,X_m$ 独立同分布于 $N(\mu_1,\sigma_1^2)$，$Y_1,\ldots,Y_n$ 独立同分布于 $N(\mu_2,\sigma_2^2)$；**两组样本相互独立**，$m,n\ge2$。分别记样本方差为 $S_X^2,S_Y^2$。
+
+**结论一：两个均值之差精确正态。**
+
+$$
+\boxed{\bar X-\bar Y\sim N\left(\mu_1-\mu_2,\frac{\sigma_1^2}{m}+\frac{\sigma_2^2}{n}\right),}
+$$
+
+$$
+\frac{(\bar X-\bar Y)-(\mu_1-\mu_2)}{\sqrt{\sigma_1^2/m+\sigma_2^2/n}}\sim N(0,1).
+$$
+
+**结论二：两个独立样本方差的标准化比值为 $F$ 分布。**
+
+$$
+\boxed{\frac{S_X^2/\sigma_1^2}{S_Y^2/\sigma_2^2}\sim F(m-1,n-1).}
+$$
+
+此式**不要求 $\sigma_1^2=\sigma_2^2$**，但要求两组均为正态总体且样本间独立。若方差相等，进一步简化为 $S_X^2/S_Y^2\sim F(m-1,n-1)$。
+
+**结论三：两个独立卡方统计量相加。**
+
+$$
+\boxed{\frac{(m-1)S_X^2}{\sigma_1^2}
++\frac{(n-1)S_Y^2}{\sigma_2^2}\sim\chi^2(m+n-2).}
+$$
+
+**结论四：两总体方差相等时的合并方差与双样本 $t$ 统计量。**
+
+若 $\sigma_1^2=\sigma_2^2=\sigma^2$，定义
+
+$$
+S_W^2=\frac{(m-1)S_X^2+(n-1)S_Y^2}{m+n-2}.
+$$
+
+则
+
+$$
+\boxed{\frac{(m+n-2)S_W^2}{\sigma^2}\sim\chi^2(m+n-2),}
+$$
+
+$$
+\boxed{T=\frac{(\bar X-\bar Y)-(\mu_1-\mu_2)}{S_W\sqrt{1/m+1/n}}\sim t(m+n-2).}
+$$
+
+<Callout type="warn" title="方差不齐时禁止直接使用合并方差 t 公式">
+
+若题目没有“两个正态总体方差相等”这一条件，不能凭直觉合并方差。可在总体方差已知时使用前面的标准正态式；总体方差未知且不等时，需要采用另外的近似方法（例如 Welch 方法），但**不能**把上式当作精确 $t(m+n-2)$ 结论。
+
+</Callout>
+
+### 3. 原书四组公式的对照表
+
+| 题干关键词 | 构造量 | 精确分布 |
+| --- | --- | --- |
+| 单个正态总体，$\sigma$ 已知 | $(\bar X-\mu)/(\sigma/\sqrt n)$ | $N(0,1)$ |
+| 单个正态总体，$\sigma$ 未知 | $(\bar X-\mu)/(S/\sqrt n)$ | $t(n-1)$ |
+| 单个正态总体，样本方差 | $(n-1)S^2/\sigma^2$ | $\chi^2(n-1)$ |
+| 两个独立正态总体，各自方差标准化后取比 | $(S_X^2/\sigma_1^2)/(S_Y^2/\sigma_2^2)$ | $F(m-1,n-1)$ |
+| 两个独立正态总体，方差相同且未知 | $(\bar X-\bar Y-\mu_1+\mu_2)/(S_W\sqrt{1/m+1/n})$ | $t(m+n-2)$ |
+
+## 必记 4｜矩估计与最大似然估计
+
+### 1. 矩估计：用样本矩匹配总体矩
+
+原书核心形式是
+
+$$
+\boxed{A_k=\frac1n\sum_{i=1}^nX_i^k\ \text{对应}\ E_\theta(X^k).}
+$$
+
+需要特别注意：这里是**建立方程** $A_k=E_\theta(X^k)$ 来求参数估计，而不是说随机的 $A_k$ 对每一次抽样都天然等于确定的 $E_\theta(X^k)$。
+
+<Steps>
+  <Step>
+
+  ### 写出总体矩
+
+  按总体分布计算 $E_\theta(X)$、$E_\theta(X^2)$ 等与待估参数数量相匹配的理论矩。
+
+  </Step>
+  <Step>
+
+  ### 以样本矩代替总体矩
+
+  建立 $\frac1n\sum X_i^k=E_\theta(X^k)$ 等方程，方程个数通常与未知参数个数相同。
+
+  </Step>
+  <Step>
+
+  ### 解方程并检查参数空间
+
+  求出 $\hat\theta_{\mathrm{MM}}$，再检查解是否满足题设的参数限制（正值、区间、概率范围等）。
+
+  </Step>
+</Steps>
+
+**原创示例｜均匀分布参数的矩估计。** 若 $X_1,\ldots,X_n\sim U(0,\theta)$，$\theta>0$，则 $E_\theta(X)=\theta/2$。由 $\bar X=\theta/2$ 得
+
+$$
+\boxed{\hat\theta_{\mathrm{MM}}=2\bar X.}
+$$
+
+### 2. 最大似然估计：完整四步，含边界讨论
+
+若给定样本观测值 $x_1,\ldots,x_n$，对离散分布律 $p(x;\theta)$ 或连续密度 $f(x;\theta)$，似然函数统一写为
+
+$$
+L(\theta;\boldsymbol x)=\begin{cases}
+\displaystyle\prod_{i=1}^np(x_i;\theta),&\text{离散型},\\[4pt]
+\displaystyle\prod_{i=1}^nf(x_i;\theta),&\text{连续型}.
+\end{cases}
+$$
+
+<Steps>
+  <Step>
+
+  ### 写出似然函数和参数取值范围
+
+  **先处理分布的支持集及参数限制**。若密度包含 $\mathbf1_{\{0<x_i<\theta\}}$ 等限制，不可在求导时删掉。
+
+  </Step>
+  <Step>
+
+  ### 在 $L(\theta)>0$ 处取对数
+
+  设 $\ell(\theta)=\ln L(\theta)$。利用对数把乘积化为和，但 $L=0$ 的边界需要单独考虑。
+
+  </Step>
+  <Step>
+
+  ### 寻找内部驻点并验证极大性
+
+  解 $\ell'(\theta)=0$，**必须**再检查二阶导、单调性或全局比较；“有唯一驻点”本身不一定保证是极大值。
+
+  </Step>
+  <Step>
+
+  ### 若无驻点，检查边界与端点能否取到
+
+  对参数空间开端点、闭端点、样本最大/最小值约束分别检查。似然上确界不一定在参数空间内达到；若未取到最大值，不能随意写成最大似然估计。
+
+  </Step>
+</Steps>
+
+<Tabs items={['例 A｜伯努利参数', '例 B｜指数分布参数', '例 C｜均匀分布边界']}>
+  <Tab value="例 A｜伯努利参数">
+
+  设 $X_i\sim B(1,p)$、$0\le p\le1$。记 $s=\sum X_i$，则
+
+  $$
+  L(p)=p^s(1-p)^{n-s},\qquad
+  \ell(p)=s\ln p+(n-s)\ln(1-p).
+  $$
+
+  当 $0<s<n$，$\ell'(p)=s/p-(n-s)/(1-p)=0$ 得 $\hat p=s/n=\bar X$，二阶导严格负。$s=0$、$s=n$ 时分别在边界 $p=0$、$p=1$ 达到最大值。因此
+
+  $$
+  \boxed{\hat p_{\mathrm{MLE}}=\bar X.}
+  $$
+
+  </Tab>
+  <Tab value="例 B｜指数分布参数">
+
+  若 $f(x;\lambda)=\lambda e^{-\lambda x}$（$x>0$，$\lambda>0$），则
+
+  $$
+  \ell(\lambda)=n\ln\lambda-\lambda\sum_{i=1}^nx_i,\qquad
+  \ell'(\lambda)=\frac n\lambda-\sum x_i.
+  $$
+
+  因为 $\ell''(\lambda)=-n/\lambda^2<0$，故
+
+  $$
+  \boxed{\hat\lambda_{\mathrm{MLE}}=\frac n{\sum x_i}=\frac1{\bar X}.}
+  $$
+
+  **注意**：这里 $\lambda$ 是“率参数”；如果题目将 $\theta$ 定义为均值，则估计量为 $\bar X$。
+
+  </Tab>
+  <Tab value="例 C｜均匀分布边界">
+
+  若 $X_i\sim U(0,\theta)$、$\theta>0$，记 $M=\max_iX_i$，连续总体样本下几乎必有 $M>0$，则
+
+  $$
+  L(\theta)=\theta^{-n}\mathbf1_{\{\theta\ge M\}}
+  $$
+
+  （端点等号采用不影响分布的密度版本约定）。在 $\theta\ge M$ 上，$\theta^{-n}$ 随 $\theta$ 增大而减小，因此
+
+  $$
+  \boxed{\hat\theta_{\mathrm{MLE}}=M=\max_iX_i.}
+  $$
+
+  此例不能机械地用 $\ell'(\theta)=0$，因为**最大值在支持集边界**。
+
+  </Tab>
+</Tabs>
+
+<Callout type="idea" title="两个及以上参数：方法相同，步骤不能减少">
+
+原书指出多参数似然估计也有类似处理过程。对 $\boldsymbol\theta=(\theta_1,\theta_2)$，在参数空间内部通常解梯度方程 $\partial\ell/\partial\theta_1=\partial\ell/\partial\theta_2=0$，但还必须检验约束条件、边界、驻点是否对应全局最大值。
+
+</Callout>
+
+## 必记 5｜估计量的三个评价标准（数学一）
+
+| 标准 | 数学定义 | 核心问题 |
+| --- | --- | --- |
+| 无偏性 | $E_\theta(\hat\theta)=\theta$，对参数空间内各 $\theta$ 成立 | 平均意义下是否正确？ |
+| 有效性（方差比较） | 两个估计量均无偏且方差有限时，若 $D_\theta(\hat\theta_1)\le D_\theta(\hat\theta_2)$，则前者方差不大于后者 | 相同无偏条件下谁更稳定？ |
+| 一致性（相合性） | $\hat\theta_n\xrightarrow{P}\theta$（$n\to\infty$） | 样本足够大时是否趋近真参数？ |
+
+“有效性”比较应明确在所研究的参数取值范围内是否一致成立；若要求“严格更有效”，通常需要严格小于而非仅等于。**无偏不一定有效，无偏不一定自动一致，一致也不一定无偏**。
+
+### 例：$U(0,\theta)$ 的两种估计量
+
+记 $M=X_{(n)}=\max\{X_1,\ldots,X_n\}$。由次序统计量可得
+
+$$
+E(M)=\frac n{n+1}\theta,\qquad D(M)=\frac{n\theta^2}{(n+1)^2(n+2)}.
+$$
+
+因此最大似然估计 $M$ **有偏**，但 $M\xrightarrow{P}\theta$，是一致估计量；其无偏修正为
+
+$$
+\boxed{\tilde\theta=\frac{n+1}{n}M},\qquad E(\tilde\theta)=\theta,\qquad
+D(\tilde\theta)=\frac{\theta^2}{n(n+2)}.
+$$
+
+与矩估计 $2\bar X$ 相比，
+
+$$
+D(2\bar X)=\frac{\theta^2}{3n}.
+$$
+
+当 $n>1$ 时 $D(\tilde\theta)<D(2\bar X)$，故在这两个**无偏**估计量之间，$\tilde\theta$ 的方差更小。这里不把“更有效”误解为所有可能估计量中的最优性结论。
+
+## 必记 6｜区间估计与假设检验（原书为复习指引）
+
+原书在第 109 页此项只有标题及“重点复习真题班或强化班最后内容”的提示，**没有给出具体置信区间、拒绝域、检验题或答案**。以下为本整理版的**原创补充知识框架**，用于把前面正态、卡方、$t$、$F$ 的抽样分布落实到常见题型。
+
+### 1. 区间估计：选择枢轴量，再反解参数范围
+
+假设 $X_1,\ldots,X_n$ 来自 $N(\mu,\sigma^2)$，置信水平 $1-\alpha$，采用本记“**上 $\alpha$ 分位点**”记号。
+
+| 估计对象 | 前提 | 双侧置信区间（置信度 $1-\alpha$） |
+| --- | --- | --- |
+| 均值 $\mu$ | $\sigma$ 已知 | $\displaystyle\left[\bar X-z_{\alpha/2}\frac\sigma{\sqrt n},\ \bar X+z_{\alpha/2}\frac\sigma{\sqrt n}\right]$ |
+| 均值 $\mu$ | $\sigma$ 未知、正态总体 | $\displaystyle\left[\bar X-t_{\alpha/2}(n-1)\frac S{\sqrt n},\ \bar X+t_{\alpha/2}(n-1)\frac S{\sqrt n}\right]$ |
+| 方差 $\sigma^2$ | 均值未知、正态总体 | $\displaystyle\left[\frac{(n-1)S^2}{\chi^2_{\alpha/2}(n-1)},\ \frac{(n-1)S^2}{\chi^2_{1-\alpha/2}(n-1)}\right]$ |
+
+这里 $z_\gamma$ 指标准正态分布的上 $\gamma$ 分位点（即 $P(Z>z_\gamma)=\gamma$）；其余符号与必记 2 相同。方差区间左端分母较大、右端分母较小，**顺序不可颠倒**。
+
+<Steps>
+  <Step>
+
+  ### 选统计量
+
+  判断研究的是 $\mu$、$\sigma^2$、两均值差还是方差比，并核对总体是否正态、总体方差是否已知。
+
+  </Step>
+  <Step>
+
+  ### 写双侧概率不等式
+
+  例如总体方差未知时 $P[-t_{\alpha/2}(n-1)\le T\le t_{\alpha/2}(n-1)]=1-\alpha$。
+
+  </Step>
+  <Step>
+
+  ### 反解参数并写出区间
+
+  将已知样本统计量代入区间端点；置信度描述的是**随机区间这一构造方法的覆盖率**，不是观察到区间后参数随机落入其中的概率。
+
+  </Step>
+</Steps>
+
+### 2. 假设检验：六步做完一道题
+
+<Steps>
+  <Step>
+
+  ### 写出 $H_0$ 与 $H_1$
+
+  例如 $H_0:\mu=\mu_0$，$H_1:\mu\ne\mu_0$；按题意明确单侧或双侧。
+
+  </Step>
+  <Step>
+
+  ### 固定显著性水平 $\alpha$
+
+  第Ⅰ类错误是在 $H_0$ 为真时拒绝它；显著性水平控制这一错误概率的上限。
+
+  </Step>
+  <Step>
+
+  ### 在零假设下构造检验统计量
+
+  正态总体且 $\sigma$ 已知，用 $Z=(\bar X-\mu_0)/(\sigma/\sqrt n)$；$\sigma$ 未知，用 $T=(\bar X-\mu_0)/(S/\sqrt n)$，其中 $T\sim t(n-1)$（在 $H_0$ 下）。
+
+  </Step>
+  <Step>
+
+  ### 写出拒绝域
+
+  双侧 $Z$ 检验：$|Z|>z_{\alpha/2}$；双侧 $t$ 检验：$|T|>t_{\alpha/2}(n-1)$。单侧检验根据备择假设方向选择一侧临界值。
+
+  </Step>
+  <Step>
+
+  ### 代入观测样本判断
+
+  计算观测统计量，与临界值比较；也可比较 $p$ 值与显著性水平 $\alpha$。
+
+  </Step>
+  <Step>
+
+  ### 用题目语言作结论
+
+  结论为“在显著性水平 $\alpha$ 下拒绝 $H_0$”或“证据不足以拒绝 $H_0$”，**不能**把“未拒绝”写成“证明 $H_0$ 一定正确”。
+
+  </Step>
+</Steps>
+
+<Callout type="warn" title="本记统计推断最易丢分的四点">
+
+- 三大抽样分布通常要求**正态总体**及有关变量独立，不可直接套在任意总体上。
+- 自由度 $n$ 与 $n-1$ 要看是否用样本均值替代真实均值；两独立样本合并后为 $m+n-2$。
+- 矩估计是**解矩方程**；最大似然估计是**在合法参数空间上最大化似然**，求导为零仅是一个候选步骤。
+- 置信区间与假设检验解决不同问题；随机的是抽样及由它构造的区间/检验统计量，不能混淆参数与样本的角色。
+
+</Callout>
+
+## 原创巩固练习｜第 21 记自测与解析
+
+<Callout type="info" title="题目来源说明">
+
+以下题目为根据本记知识点编写的**原创训练**，并非原 PDF 的原题，也不标称历年真题。题型含单选、多选、判断、填空和解答，已按 MyFumadocs 的 `Question / Option / Blank / Solution` 组织。
+
+</Callout>
+
+<div id="math21-2027-note21-q01">
+
+**题型：单选题**
+
+来源:本记原创自测, 科目:概率论与数理统计, 考点:样本方差, 难度:基础
+
+设 $X_1,\ldots,X_n$ 独立同分布，总体均值为 $\mu$，方差为 $\sigma^2<\infty$。令 $S^2=\frac1{n-1}\sum_{i=1}^n(X_i-\bar X)^2$。下列结论正确的是（ ）。
+
+
+
+**A.** $E(S)=\sigma$ 对任何总体都成立
+
+
+
+
+**B.** $E(S^2)=\frac{n-1}{n}\sigma^2$
+
+
+
+
+**C.** $E(S^2)=\sigma^2$
+
+
+
+
+**D.** 不论总体如何，$\bar X$ 与 $S^2$ 均独立
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** C
+
+由样本方差的无偏性，$E(S^2)=\sigma^2$。$E(S)=\sigma$ 一般不成立；$\frac{n-1}{n}\sigma^2$ 是以 $n$ 为分母的样本二阶中心矩 $B_2$ 的期望；样本均值与样本方差的独立性一般须正态总体。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note21-q02">
+
+**题型：单选题**
+
+来源:本记原创自测, 科目:概率论与数理统计, 考点:卡方自由度, 难度:基础
+
+设 $X_1,\ldots,X_{10}$ 为来自 $N(\mu,\sigma^2)$ 的样本，$S^2$ 为通常的样本方差。统计量 $9S^2/\sigma^2$ 服从（ ）。
+
+
+
+**A.** $\chi^2(10)$
+
+
+
+
+**B.** $\chi^2(9)$
+
+
+
+
+**C.** $t(9)$
+
+
+
+
+**D.** $F(9,9)$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** B
+
+正态总体抽样分布结论为 $(n-1)S^2/\sigma^2\sim\chi^2(n-1)$。这里 $n=10$，因此自由度为 $9$。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note21-q03">
+
+**题型：多选题**
+
+来源:本记原创自测, 科目:概率论与数理统计, 考点:三大分布, 难度:中等
+
+若 $Z\sim N(0,1)$、$U\sim\chi^2(5)$，且 $Z$ 与 $U$ 独立；另外 $V\sim\chi^2(7)$，且 $U,V$ 独立。下列结论正确的有（ ）。
+
+
+
+**A.** $Z^2\sim\chi^2(1)$
+
+
+
+
+**B.** $\dfrac Z{\sqrt{U/5}}\sim t(5)$
+
+
+
+
+**C.** $\dfrac{U/5}{V/7}\sim F(5,7)$
+
+
+
+
+**D.** $U/V\sim F(5,7)$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** A、B、C
+
+平方的标准正态为自由度 $1$ 的卡方；独立标准正态除以独立的卡方均方的平方根为 $t$；独立卡方各除以自由度再相除为 $F$。$U/V$ 缺少自由度标准化，实际上 $\frac{U}{V}=\frac57F_0$，其中 $F_0\sim F(5,7)$，故第四项不正确。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note21-q04">
+
+**题型：填空题**
+
+来源:本记原创自测, 科目:概率论与数理统计, 考点:样本均值方差, 难度:基础
+
+设 $X_1,\ldots,X_{25}$ 独立同分布，$E(X_i)=2$、$D(X_i)=9$。则 $D(\bar X)=$ $\underline{\qquad}$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** $9/25$
+
+$$
+D(\bar X)=\frac{D(X_1)}{25}=\frac9{25}.
+$$
+
+这条结论不要求总体正态，但要求样本独立同分布且方差存在。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note21-q05">
+
+**题型：判断题**
+
+来源:本记原创自测, 科目:概率论与数理统计, 考点:正态样本独立性, 难度:基础
+
+只要样本独立同分布且总体方差有限，样本均值 $\bar X$ 与样本方差 $S^2$ 就必定相互独立。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** 错误
+
+一般错误。对正态总体，这条独立性成立；对一般分布，不能仅由独立同分布和有限方差推出。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note21-q06">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论与数理统计, 考点:样本二阶矩, 难度:中等
+
+设 $X_1,\ldots,X_n$ 独立同分布于 $N(0,\sigma^2)$。求 $D(\bar X^2)$ 和 $D(S^2)$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+由于
+
+$$
+\frac{\bar X^2}{\sigma^2/n}\sim\chi^2(1),\qquad
+\frac{(n-1)S^2}{\sigma^2}\sim\chi^2(n-1),
+$$
+
+利用 $D(\chi^2(r))=2r$，得
+
+$$
+\boxed{D(\bar X^2)=\frac{2\sigma^4}{n^2},\qquad D(S^2)=\frac{2\sigma^4}{n-1}.}
+$$
+
+$\mu=0$ 仅用于第一式；第二式对任意均值的正态总体仍成立。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note21-q07">
+
+**题型：多选题**
+
+来源:本记原创自测, 科目:概率论与数理统计, 考点:双总体抽样分布, 难度:中等
+
+来自 $N(\mu_1,\sigma_1^2)$ 与 $N(\mu_2,\sigma_2^2)$ 的两个样本分别有 $m,n$ 个，组内独立且两组间独立。下列结论正确的有（ ）。
+
+
+
+**A.** $\bar X-\bar Y\sim N(\mu_1-\mu_2,\sigma_1^2/m+\sigma_2^2/n)$
+
+
+
+
+**B.** $\dfrac{S_X^2/\sigma_1^2}{S_Y^2/\sigma_2^2}\sim F(m-1,n-1)$
+
+
+
+
+**C.** $\dfrac{(m-1)S_X^2}{\sigma_1^2}+\dfrac{(n-1)S_Y^2}{\sigma_2^2}\sim\chi^2(m+n-2)$
+
+
+
+
+**D.** 即使 $\sigma_1^2\ne\sigma_2^2$，使用合并方差 $S_W$ 的两样本统计量仍精确服从 $t(m+n-2)$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** A、B、C
+
+前三项均是正态总体的精确抽样分布公式。最后一项错误：合并方差形式的精确两样本 $t$ 分布要求两总体方差相等。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note21-q08">
+
+**题型：单选题**
+
+来源:本记原创自测, 科目:概率论与数理统计, 考点:F分布分位点, 难度:中等
+
+本题上 $\alpha$ 分位点定义为 $P(F>F_\alpha(r_1,r_2))=\alpha$。以下公式正确的是（ ）。
+
+
+
+**A.** $F_\alpha(r_1,r_2)=F_{1-\alpha}(r_2,r_1)$
+
+
+
+
+**B.** $F_\alpha(r_1,r_2)=\dfrac1{F_{1-\alpha}(r_2,r_1)}$
+
+
+
+
+**C.** $F_\alpha(r_1,r_2)=\dfrac1{F_{\alpha}(r_2,r_1)}$
+
+
+
+
+**D.** $F_\alpha(r_1,r_2)=F_{\alpha}(r_2,r_1)$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** B
+
+若 $F\sim F(r_1,r_2)$，则 $1/F\sim F(r_2,r_1)$。将右尾概率转换为左尾概率，得到
+
+$$
+F_\alpha(r_1,r_2)=\frac1{F_{1-\alpha}(r_2,r_1)}.
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note21-q09">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论与数理统计, 考点:双样本t分布, 难度:中等
+
+两个独立正态样本分别来自 $N(\mu_1,\sigma^2)$ 和 $N(\mu_2,\sigma^2)$，样本量为 $m=8$、$n=12$。写出合并方差 $S_W^2$ 及服从 $t$ 分布的统计量，并确定自由度。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+按合并方差的定义，
+
+$$
+S_W^2=\frac{7S_X^2+11S_Y^2}{18}.
+$$
+
+由于两个正态总体方差相等且样本相互独立，
+
+$$
+\boxed{\frac{(\bar X-\bar Y)-(\mu_1-\mu_2)}{S_W\sqrt{1/8+1/12}}\sim t(18).}
+$$
+
+自由度 $m+n-2=8+12-2=18$。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note21-q10">
+
+**题型：填空题**
+
+来源:本记原创自测, 科目:概率论与数理统计, 考点:中心矩与样本方差, 难度:基础
+
+设 $n=6$，$B_2=\frac1n\sum_{i=1}^n(X_i-\bar X)^2$，$S^2=\frac1{n-1}\sum_{i=1}^n(X_i-\bar X)^2$。则 $B_2/S^2=$ $\underline{\qquad}$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** $5/6$
+
+由定义 $B_2=(n-1)S^2/n$，因此 $B_2/S^2=5/6$（这里在 $S^2\ne0$ 时取比值）。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note21-q11">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论与数理统计, 考点:矩估计, 难度:中等
+
+设总体 $X\sim U(0,\theta)$，$\theta>0$，$X_1,\ldots,X_n$ 为独立样本。分别以一阶原点矩和二阶原点矩求 $\theta$ 的矩估计。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+由于 $E(X)=\theta/2$、$E(X^2)=\theta^2/3$：
+
+**一阶矩**：令 $\bar X=\theta/2$，得
+
+$$
+\boxed{\hat\theta_1=2\bar X.}
+$$
+
+**二阶矩**：令 $A_2=\frac1n\sum X_i^2=\theta^2/3$，且 $\theta>0$，得
+
+$$
+\boxed{\hat\theta_2=\sqrt{\frac3n\sum_{i=1}^nX_i^2}.}
+$$
+
+这说明矩估计可以根据选择的矩不同而出现不同表达式；各自性质要另行判断。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note21-q12">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论与数理统计, 考点:最大似然估计, 难度:中等
+
+设 $X_1,\ldots,X_n$ 为来自指数分布 $f(x;\lambda)=\lambda e^{-\lambda x}$（$x>0,\lambda>0$）的样本。求 $\lambda$ 的最大似然估计，并说明为何是极大值。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+给定观测 $x_i>0$，
+
+$$
+L(\lambda)=\lambda^n\exp\left(-\lambda\sum_{i=1}^nx_i\right),\qquad
+\ell(\lambda)=n\ln\lambda-\lambda\sum x_i.
+$$
+
+对数似然导数为
+
+$$
+\ell'(\lambda)=\frac n\lambda-\sum x_i=0
+\quad\Longrightarrow\quad \hat\lambda=\frac n{\sum x_i}.
+$$
+
+而 $\ell''(\lambda)=-n/\lambda^2<0$，因此 $\ell$ 严格凹，驻点为唯一全局最大值点。故
+
+$$
+\boxed{\hat\lambda_{\mathrm{MLE}}=\frac1{\bar X}.}
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note21-q13">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论与数理统计, 考点:均匀分布最大似然, 难度:中等
+
+设 $X_1,\ldots,X_n\sim U(0,\theta)$，$\theta>0$。推导 $\theta$ 的最大似然估计，并说明为什么直接求导等于零行不通。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+记 $M=\max_iX_i$。给定观测时，似然函数随参数变化的合法区间为 $\theta\ge M$，且在该区间上
+
+$$
+L(\theta)=\theta^{-n}.
+$$
+
+它随 $\theta$ 严格递减，因此在约束边界取到最大值：
+
+$$
+\boxed{\hat\theta_{\mathrm{MLE}}=M.}
+$$
+
+这里不存在内部驻点，不能只套 $\ell'(\theta)=0$。若采用密度在端点为零的版本，则可以按“似然上确界”的约定处理边界；常用教材将 $M$ 作为最大似然估计。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note21-q14">
+
+**题型：判断题**
+
+来源:本记原创自测, 科目:概率论与数理统计, 考点:一致性, 难度:基础
+
+如果某估计量对每个样本量 $n$ 都无偏，那么它一定是一致估计量。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** 错误
+
+错误。无偏性只要求 $E_\theta(\hat\theta_n)=\theta$，而一致性要求 $P(|\hat\theta_n-\theta|>\varepsilon)\to0$。例如令每个 $n$ 的估计量恒取第一份样本 $\hat\theta_n=X_1$，它可以对均值 $\mu$ 无偏，却不会随样本量增加而趋近 $\mu$。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note21-q15">
+
+**题型：多选题**
+
+来源:本记原创自测, 科目:概率论与数理统计, 考点:估计量评价, 难度:中等
+
+对于参数 $\theta$ 的一列估计量 $\hat\theta_n$，下列说法正确的有（ ）。
+
+
+
+**A.** 若 $E_\theta(\hat\theta_n)=\theta$，称其对该 $\theta$ 无偏
+
+
+
+
+**B.** 某估计量的方差最小，无须考虑偏差就必然是所有意义下的最优估计
+
+
+
+
+**C.** 若 $\hat\theta_n\xrightarrow{P}\theta$，则它是一致估计量
+
+
+
+
+**D.** 两个估计量都无偏且后者方差更大时，前者的均方误差也更小
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** A、C、D
+
+无偏时 $\operatorname{MSE}(\hat\theta)=D(\hat\theta)$。但若允许有偏估计量，仅比较方差并不足以判断均方误差优劣，因为
+
+$$
+\operatorname{MSE}(\hat\theta)=D(\hat\theta)+[E(\hat\theta)-\theta]^2.
+$$
+
+因此第二项错误，其余正确。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note21-q16">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论与数理统计, 考点:正态均值置信区间, 难度:中等
+
+设 $X_1,\ldots,X_{16}$ 为来自 $N(\mu,\sigma^2)$ 的样本，样本均值为 $\bar x=10$、样本标准差为 $s=4$，总体方差未知。用上侧 $t$ 分位点记号写出 $\mu$ 的置信度为 $0.95$ 的双侧置信区间。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+由于总体正态、$\sigma$ 未知且 $n=16$，使用
+
+$$
+T=\frac{\bar X-\mu}{S/\sqrt{16}}\sim t(15).
+$$
+
+置信度 $0.95$ 对应 $\alpha=0.05$、双侧分位点 $t_{0.025}(15)$。代入 $s/\sqrt n=4/4=1$，得到
+
+$$
+\boxed{\left[10-t_{0.025}(15),\;10+t_{0.025}(15)\right].}
+$$
+
+若查表 $t_{0.025}(15)\approx2.131$，近似为 $[7.869,12.131]$。这里不能用 $\sigma$ 已知时的标准正态临界值代替。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note21-q17">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论与数理统计, 考点:方差区间估计, 难度:中等
+
+正态总体 $N(\mu,\sigma^2)$ 的独立样本容量为 $n=10$，样本方差观测值为 $s^2=4$，$\mu$ 未知。写出 $\sigma^2$ 的置信度为 $0.90$ 的双侧置信区间（使用上侧分位点）。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+由
+
+$$
+U=\frac{9S^2}{\sigma^2}\sim\chi^2(9),
+$$
+
+令 $\alpha=0.10$，得到
+
+$$
+\boxed{\left[\frac{36}{\chi^2_{0.05}(9)},\;\frac{36}{\chi^2_{0.95}(9)}\right].}
+$$
+
+由于 $\chi^2_{0.05}(9)>\chi^2_{0.95}(9)$，区间左端确实小于右端。若使用分位数表，须首先核对表头是否以右尾概率为定义。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note21-q18">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论与数理统计, 考点:双侧Z检验, 难度:中等
+
+某正态总体方差已知为 $16$。抽取 $n=25$ 个样本，样本均值 $\bar x=1.8$。检验 $H_0:\mu=0$ 对 $H_1:\mu\ne0$，显著性水平 $\alpha=0.05$。已知 $z_{0.025}\approx1.96$，作出结论。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+在 $H_0$ 下，
+
+$$
+Z=\frac{\bar X-0}{4/\sqrt{25}}\sim N(0,1).
+$$
+
+其观测值为 $z=1.8/0.8=2.25$。双侧拒绝域为 $|Z|>z_{0.025}\approx1.96$。由于 $2.25>1.96$，所以**在 $0.05$ 显著性水平下拒绝 $H_0$**。结论不是“均值一定不为零”，而是数据对 $H_0$ 提供了显著的反对证据。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 考前速查｜第 21 记的公式、自由度与条件
+
+| 关键词 | 首选识别 | 最重要的条件 / 结果 |
+| --- | --- | --- |
+| 样本均值方差 | 独立样本求和 | $D(\bar X)=\sigma^2/n$ |
+| 无偏样本方差 | 分母是 $n-1$ | $E(S^2)=\sigma^2$，不要求正态 |
+| 样本二阶中心矩 | 分母是 $n$ | $B_2=(n-1)S^2/n$ |
+| 标准正态平方和 | $\chi^2$ 分布 | $\sum_{i=1}^rZ_i^2\sim\chi^2(r)$，变量独立 |
+| 标准正态比卡方平方根 | $t$ 分布 | $Z/\sqrt{U/r}\sim t(r)$，分子分母独立 |
+| 卡方均方之比 | $F$ 分布 | $(U/r_1)/(V/r_2)\sim F(r_1,r_2)$，分子分母独立 |
+| 样本均值与方差独立 | 正态总体 | $\bar X\perp S^2$ |
+| 未知总体均值的卡方 | 用 $\bar X$ 中心化 | $(n-1)S^2/\sigma^2\sim\chi^2(n-1)$ |
+| 未知总体方差的均值推断 | 以 $S$ 替代 $\sigma$ | $(\bar X-\mu)/(S/\sqrt n)\sim t(n-1)$ |
+| 两独立样本方差比 | 双正态总体 | $(S_X^2/\sigma_1^2)/(S_Y^2/\sigma_2^2)\sim F(m-1,n-1)$ |
+| 合并方差 $t$ | 两总体方差相等 | 自由度 $m+n-2$ |
+| 矩估计 | 样本矩等于理论矩的方程 | 解 $A_k=E_\theta(X^k)$ |
+| 最大似然 | 最大化合法似然函数 | 内部驻点、边界、参数域一并检查 |
+| 估计量无偏、有效、相合 | $E$、$D$、依概率收敛 | 三个判据不可互相代替 |
+| 区间估计、假设检验 | 构造枢轴量/拒绝域 | 原书仅给复习指引；具体公式为本节补充 |
+
+<Callout type="success" title="第 21 记整理与核对记录">
+
+- **原书覆盖**：第 **106—109 页**的全部 **必记 1—6**，包括第 106 页手写统计量数字特征汇总、第 107 页三大分布和上侧分位点、第 108 页一总体与两总体抽样分布、第 109 页点估计与评价标准。
+- **识别与公式校准**：将扫描中的 $D(X_i^k)$ 与 $[D(X_i)]^k$ 明确区分；补足 $\bar X\perp S^2$ 的正态前提；区分 $n$、$n-1$、$m+n-2$ 的自由度；确认均值为零时 $D(\bar X^2)=2\sigma^4/n^2$ 的限定条件。
+- **推断内容来源界线**：原书区间估计、假设检验只列标题，因此详细公式与例题单独标为原创补充，没有虚构书内推导或历年真题。
+- **新增练习**：**18 道原创巩固题**，覆盖五种题型，均提供结构化答案或完整参考解答。
+
+</Callout>

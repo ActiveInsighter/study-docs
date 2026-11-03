@@ -1,0 +1,1088 @@
+---
+title: "第 13 记｜初等变换与矩阵的秩"
+description: "2027 周洋鑫《考前21记》第 13 记：初等变换与矩阵的秩。含知识梳理、适用条件与 12 道配套题及解析。"
+---
+
+<Callout type="info" title="阅读范围与本记结构">
+
+对应原书 **第 66—69 页**，完整覆盖 **必记 1「初等矩阵与初等变换」**、**必记 2「矩阵的秩」**及原书 **注 1—6**。原书所列 **2025、2018、2021、2023 年真题**均保留题干、选项并补充逐步解析；另有标注清楚的原创自测。重点核对了初等矩阵的下标方向、秩不等式的维数条件和分块矩阵中的乘法顺序。
+
+</Callout>
+
+<Cards>
+  <Card title="初等矩阵与初等变换">三类初等矩阵；左乘变行、右乘变列；行等价与列等价的判据。</Card>
+  <Card title="秩的定义与计算">子式定义、行阶梯形、行列式判秩、含参数的分情况讨论。</Card>
+  <Card title="秩的十大公式">满秩乘法、加法不等式、分块矩阵、西尔维斯特不等式、伴随矩阵的秩。</Card>
+  <Card title="四道原书真题">2025 年秩等式，2018 年拼接矩阵，2021 年分块矩阵，2023 年三矩阵秩的比较。</Card>
+</Cards>
+
+## 必记 1｜初等矩阵与初等变换
+
+### 1. 三类初等矩阵：定义、记法与作用
+
+设 $I_n$ 为 $n$ 阶单位矩阵。对 $I_n$ **只做一次**初等行变换（等价地，可做相应的一次初等列变换）所得到的矩阵叫做**初等矩阵**。以下采用原书的记号，其中 $i\ne j$，倍乘系数 $k\ne 0$。
+
+| 类型 | 对单位矩阵的操作 | 初等矩阵 | 行列式 | 逆矩阵 | 转置 |
+| --- | --- | --- | --- | --- | --- |
+| 交换型 | $R_i\leftrightarrow R_j$ | $E_{ij}$ | $-1$ | $E_{ij}^{-1}=E_{ij}$ | $E_{ij}^{T}=E_{ij}$ |
+| 倍乘型 | $R_i\leftarrow kR_i$ | $E_i(k)$ | $k$ | $E_i(k)^{-1}=E_i(1/k)$ | $E_i(k)^T=E_i(k)$ |
+| 倍加型 | $R_i\leftarrow R_i+kR_j$ | $E_{ij}(k)$ | $1$ | $E_{ij}(k)^{-1}=E_{ij}(-k)$ | $E_{ij}(k)^T=E_{ji}(k)$ |
+
+以标准基向量 $e_1,\ldots,e_n$ 为例，倍加型可直接写作
+
+$$
+\boxed{E_{ij}(k)=I_n+ke_ie_j^T\qquad(i\ne j).}
+$$
+
+这里的**下标顺序**始终约定：$E_{ij}(k)$ 对应的是**第 $i$ 行加上第 $j$ 行的 $k$ 倍**。这条约定有助于排除转置和右乘时的方向混淆。
+
+<Callout type="warn" title="初等矩阵一定可逆；倍乘型要求 k≠0">
+
+三类初等矩阵的行列式分别为 $-1$、$k$、$1$。倍乘型若取 $k=0$，就把一整行置零，操作不可逆，所得矩阵**不属于初等矩阵**。倍加型中的 $k$ 可以等于零，但此时得到的是单位矩阵，属于平凡操作。
+
+</Callout>
+
+### 2. 「左行右列」——最容易考的方向判定
+
+设 $A$ 是 $m\times n$ 矩阵，$E$ 是相应大小的初等矩阵，则
+
+$$
+\boxed{EA\ \text{对 }A\text{ 做行变换},\qquad AE\ \text{对 }A\text{ 做列变换}.}
+$$
+
+<Tabs items={['左乘：行变换','右乘：列变换']} defaultIndex={0}>
+  <Tab value="左乘：行变换">
+
+  对 $A$ 左乘 $m$ 阶倍加型矩阵 $E_{ij}(k)$，结果是
+
+  $$
+  E_{ij}(k)A:\quad R_i\leftarrow R_i+kR_j.
+  $$
+
+  **改变的是第 $i$ 行**；第 $j$ 行作为被加的来源保持不变。
+
+  例如
+
+  $$
+  \begin{aligned}
+  A&=\begin{pmatrix}1&2\\3&4\end{pmatrix},\\
+  E_{12}(5)A
+   &=\begin{pmatrix}1&5\\0&1\end{pmatrix}
+     \begin{pmatrix}1&2\\3&4\end{pmatrix}
+    =\begin{pmatrix}16&22\\3&4\end{pmatrix}.
+  \end{aligned}
+  $$
+
+  </Tab>
+  <Tab value="右乘：列变换">
+
+  对 $A$ 右乘 $n$ 阶倍加型矩阵 $E_{ij}(k)$，结果是
+
+  $$
+  AE_{ij}(k):\quad C_j\leftarrow C_j+kC_i.
+  $$
+
+  **改变的是第 $j$ 列**；第 $i$ 列作为被加的来源保持不变。注意右乘的目标下标与左乘不同。
+
+  例如
+
+  $$
+  \begin{aligned}
+  A&=\begin{pmatrix}1&2\\3&4\end{pmatrix},\\
+  AE_{12}(5)
+   &=\begin{pmatrix}1&2\\3&4\end{pmatrix}
+     \begin{pmatrix}1&5\\0&1\end{pmatrix}
+    =\begin{pmatrix}1&7\\3&19\end{pmatrix}.
+  \end{aligned}
+  $$
+
+  </Tab>
+</Tabs>
+
+<Accordions>
+  <Accordion title="原书 NB 表中倍加型为何左、右乘的目标行列不同？">
+
+  依据 $E_{ij}(k)=I+ke_ie_j^T$：
+
+  $$
+  E_{ij}(k)A=A+ke_i(e_j^TA),
+  $$
+
+  其中 $e_j^TA$ 取出第 $j$ 行，$e_i$ 将其加进第 $i$ 行；所以左乘是 $R_i\leftarrow R_i+kR_j$。
+
+  $$
+  AE_{ij}(k)=A+k(Ae_i)e_j^T,
+  $$
+
+  其中 $Ae_i$ 取出第 $i$ 列，$e_j^T$ 把它加进第 $j$ 列；所以右乘是 $C_j\leftarrow C_j+kC_i$。
+
+  </Accordion>
+  <Accordion title="怎么求某个初等矩阵的逆，而不必列增广矩阵？">
+
+  只需将所对应的初等操作**倒着做**：交换两次复原；乘 $k$ 后再乘 $1/k$；加 $k$ 倍后再加 $-k$ 倍。于是前表中三条求逆公式直接得到。
+
+  </Accordion>
+</Accordions>
+
+### 3. 初等行等价：六个等价表述
+
+对**同型**矩阵 $A,B\in\mathbb R^{m\times n}$，下列条件相互等价（将「经过若干次初等行变换」记作 $A\sim_r B$）：
+
+1. $A$ 可以经有限次初等**行**变换化为 $B$；
+2. 存在 $m$ 阶可逆矩阵 $P$，使 $B=PA$；
+3. 两矩阵行向量组张成相同的行空间，即行向量组等价；
+4. $\displaystyle r(A)=r(B)=r\begin{pmatrix}A\\B\end{pmatrix}$；
+5. 齐次方程组 $Ax=0$ 与 $Bx=0$ **同解**；
+6. $A$、$B$ 对应的**列向量**具有相同的线性关系：对任意 $x$，$Ax=0\iff Bx=0$。
+
+<Callout type="idea" title="理解“行变换为何保留列向量间的线性关系”">
+
+因为 $B=PA$ 且 $P$ 可逆，所以 $Bx=0\iff PAx=0\iff Ax=0$。列向量的系数 $x_1,\ldots,x_n$ 是否能组合出零向量不受影响；但**每个列向量的数值通常会改变**，并非列向量本身不变。
+
+</Callout>
+
+### 4. 初等列等价：把行、列全部对调
+
+对同型矩阵 $A,B\in\mathbb R^{m\times n}$，以下条件亦相互等价（记作 $A\sim_c B$）：
+
+1. $A$ 可经有限次初等**列**变换化为 $B$；
+2. 存在 $n$ 阶可逆矩阵 $Q$，使 $B=AQ$；
+3. 两矩阵列向量组等价，列空间相同；
+4. $\displaystyle r(A)=r(B)=r(A\ B)$；
+5. 齐次方程组 $A^Tx=0$ 与 $B^Tx=0$ 同解；
+6. $A$、$B$ 的**行向量**具有相同线性关系。
+
+| 比较维度 | 初等行等价 | 初等列等价 |
+| --- | --- | --- |
+| 乘上可逆矩阵 | $B=PA$（左乘） | $B=AQ$（右乘） |
+| 保持不变的空间 | 行空间 | 列空间 |
+| 拼接秩判据 | $r\binom{A}{B}=r(A)=r(B)$ | $r(A\ B)=r(A)=r(B)$ |
+| 同解的齐次方程组 | $Ax=0,\ Bx=0$ | $A^Tx=0,\ B^Tx=0$ |
+| 保持的系数关系 | 列向量间 | 行向量间 |
+
+<Callout type="warn" title="三个术语不能互换">
+
+**行等价**是只做行变换；**列等价**是只做列变换；**矩阵等价**允许两种变换，满足 $B=PAQ$（$P,Q$ 可逆），其判据是 $r(A)=r(B)$。单凭秩相同**不能**断言 $A$ 与 $B$ 行等价或列等价。
+
+</Callout>
+
+## 必记 2｜矩阵的秩
+
+### 1. 秩的定义：从非零子式到线性无关
+
+对于 $A\in\mathbb R^{m\times n}$，若存在非零的 $r$ 阶子式，且所有存在的 $(r+1)$ 阶子式均为零，则 $A$ 的秩为 $r$，记作 $r(A)=r$。约定 $r(O)=0$。等价地，秩就是**最大非零子式的阶数**，也是矩阵的**线性无关行（或列）向量的最大个数**。
+
+由定义立即得到：
+
+$$
+\boxed{0\le r(A)\le\min\{m,n\}.}
+$$
+
+- 若 $A\ne O$，则 $r(A)\ge1$。
+- 若存在两行互不成比例的**非零向量**，则 $r(A)\ge2$；更稳妥的判定是直接检查这两行是否线性无关。
+- 对 $n$ 阶方阵，$|A|\ne0\iff r(A)=n\iff A$ 可逆；$|A|=0\iff r(A)<n$。
+
+<Callout type="warn" title="“两行不成比例”要防止零向量语义陷阱">
+
+某两行只有在**线性无关**时才必能推出秩至少为 $2$。尤其一行是零向量时，无论怎样口头描述“成比例”，它们一定线性相关；不能用来证明 $r(A)\ge 2$。原书的定势思维应按“存在两个线性无关的行向量”理解。
+
+</Callout>
+
+### 2. 求秩的两条主线
+
+<Steps>
+  <Step>
+
+  ### 先看尺寸、零行列与显然的线性相关
+
+  利用 $r(A)\le\min(m,n)$ 得到上界；若看到一阶、二阶非零子式或独立行列，就得到下界。若上下界相同，直接确定秩。
+
+  </Step>
+  <Step>
+
+  ### 用初等行变换化为行阶梯形
+
+  初等行变换不改变秩，**行阶梯形中非零行的行数**就是 $r(A)$。若系数含参数，不能在未经讨论参数是否为零时除以该参数。
+
+  </Step>
+  <Step>
+
+  ### 方阵可先算行列式，再讨论退化情形
+
+  若 $|A|\ne0$，立即有 $r(A)=n$；若 $|A|=0$，只能推出 $r(A)\le n-1$，还须通过子式或行变换确认具体秩。
+
+  </Step>
+</Steps>
+
+**示例（原创）｜含参数的矩阵求秩**：
+
+$$
+A(t)=\begin{pmatrix}
+1&2&1\\
+2&4&2\\
+1&2&t
+\end{pmatrix}.
+$$
+
+用 $R_2\leftarrow R_2-2R_1$、$R_3\leftarrow R_3-R_1$，得到
+
+$$
+A(t)\sim_r\begin{pmatrix}
+1&2&1\\
+0&0&0\\
+0&0&t-1
+\end{pmatrix},
+\qquad
+\boxed{r(A(t))=\begin{cases}1,&t=1,\\2,&t\ne1.\end{cases}}
+$$
+
+这里 $|A(t)|$ **恒为零**，不能只靠行列式区分秩为 $1$ 还是 $2$。
+
+### 3. 矩阵秩的十组重点结论（原书注 1）
+
+<Tabs items={['基础与满秩乘法','加法与拼接','乘积与伴随']} defaultIndex={0}>
+  <Tab value="基础与满秩乘法">
+
+  **① 尺寸上界**：$r(A_{m\times n})\le\min(m,n)$。
+
+  **② 转置与非零数乘**：对 $k\ne0$，
+
+  $$
+  \boxed{r(A^T)=r(A),\qquad r(kA)=r(A).}
+  $$
+
+  **③ 实矩阵的 Gram 型乘积**：
+
+  $$
+  \boxed{r(AA^T)=r(A^TA)=r(A).}
+  $$
+
+  原因是 $\ker(A^TA)=\ker A$：
+
+  $$
+  A^TAx=0\Rightarrow 0=x^TA^TAx=\|Ax\|^2\Rightarrow Ax=0.
+  $$
+
+  对 $AA^T$ 可对 $A^T$ 作同样论证。**此结论在实数域成立**；复矩阵应使用共轭转置 $A^H$。
+
+  **④ 可逆矩阵乘法不改变秩**：若 $P,Q$ 可逆且维数相容，
+
+  $$
+  \boxed{r(PA)=r(AQ)=r(PAQ)=r(A).}
+  $$
+
+  **⑤ 满秩矩形矩阵的单侧乘法**：若 $P$ **列满秩**，则 $r(PA)=r(A)$；若 $P$ **行满秩**，则 $r(AP)=r(A)$（须维数相容）。分别利用**左逆**和**右逆**可证明。
+
+  </Tab>
+  <Tab value="加法与拼接">
+
+  **⑥ 秩的次可加性**：
+
+  $$
+  \boxed{r(A+B)\le r(A)+r(B),\qquad r(A-B)\le r(A)+r(B).}
+  $$
+
+  **⑦ 横向、纵向拼接**：对行数相同的 $A,B$，
+
+  $$
+  \boxed{\max\{r(A),r(B)\}\le r(A\ B)\le r(A)+r(B).}
+  $$
+
+  对列数相同的 $A,B$，
+
+  $$
+  \boxed{\max\{r(A),r(B)\}\le
+  r\begin{pmatrix}A\\B\end{pmatrix}\le r(A)+r(B).}
+  $$
+
+  下界：拼接后的行（或列）空间包含原矩阵对应的空间；上界：最多增加另一部分的秩。还要同时考虑总体行列数上界。
+
+  </Tab>
+  <Tab value="乘积与伴随">
+
+  **⑧ 乘积的秩上界**：
+
+  $$
+  \boxed{r(AB)\le\min\{r(A),r(B)\}.}
+  $$
+
+  这就是原书的**“越乘越小”**原则：乘积秩不会超过任一因子的秩。
+
+  **⑨ 西尔维斯特不等式**：若 $A$ 是 $m\times n$、$B$ 是 $n\times s$，则
+
+  $$
+  \boxed{r(AB)\ge r(A)+r(B)-n.}
+  $$
+
+  两边结合成
+
+  $$
+  \max\{0,r(A)+r(B)-n\}\le r(AB)\le\min\{r(A),r(B)\}.
+  $$
+
+  特别地，若 $AB=O$，必有 $r(A)+r(B)\le n$，其中 $n$ 是**内维数**。
+
+  **⑩ $n\ge2$ 阶方阵的伴随矩阵**：
+
+  $$
+  \boxed{r(A^*)=
+  \begin{cases}
+  n,&r(A)=n,\\
+  1,&r(A)=n-1,\\
+  0,&r(A)\le n-2.
+  \end{cases}}
+  $$
+
+  因为 $AA^*=|A|I$；当 $r(A)=n-1$ 时，至少存在一个非零的 $(n-1)$ 阶子式（故 $A^*\ne O$），但 $AA^*=O$ 又令 $A^*$ 的每列都落在一维的 $\ker A$ 中，因此其秩恰为 $1$。
+
+  </Tab>
+</Tabs>
+
+<Callout type="idea" title="原书注 1 的公式如何迁移成解题路径？">
+
+- 看见 $A^TA$、$AA^T$：先想 **秩与 $A$ 相同**（实矩阵）。
+- 看见可逆矩阵夹乘：先**消掉可逆因子**。
+- 看见横拼 $(A\ B)$ 或竖拼 $\binom AB$：先写**上下界**，再找列空间或行空间的包含关系。
+- 看见 $ABC$ 的秩：先用**乘积上界**和**分次西尔维斯特下界**夹住。
+- 看见 $A^*$：先比较 $r(A)$ 与 $n$，判定对应的三种情形。
+
+</Callout>
+
+### 4. 西尔维斯特不等式的结构证明（方法补充）
+
+设 $A$ 为 $m\times n$、$B$ 为 $n\times s$。把 $B$ 看作线性映射 $\mathbb R^s\to\mathbb R^n$，则
+
+$$
+\begin{aligned}
+r(AB)&=\dim A(\operatorname{Im}B)\\
+&=\dim(\operatorname{Im}B)-\dim(\operatorname{Im}B\cap\ker A)\\
+&\ge r(B)-\dim\ker A\\
+&=r(B)-\bigl(n-r(A)\bigr),
+\end{aligned}
+$$
+
+从而 $r(AB)\ge r(A)+r(B)-n$。这个证明还能解释：若 $AB=O$，则 $\operatorname{Im}B\subseteq\ker A$，所以 $r(B)\le n-r(A)$。
+
+## 原书注 2｜2025 年真题：三矩阵的秩等式
+
+<div id="math21-2027-note13-2025-01">
+
+**题型：单选题**
+
+来源:原书2025年真题, 科目:线性代数, 考点:西尔维斯特不等式, 难度:较难, 高频
+
+设 $n$ 阶矩阵 $A,B,C$ 满足
+
+$$
+r(A)+r(B)+r(C)=r(ABC)+2n.
+$$
+
+判断下列结论：
+
+① $r(ABC)+n=r(AB)+r(C)$；
+
+② $r(AB)+n=r(A)+r(B)$；
+
+③ $r(A)=r(B)=r(C)=n$；
+
+④ $r(AB)=r(BC)=n$。
+
+
+
+**A.** ①②
+
+
+
+
+**B.** ①③
+
+
+
+
+**C.** ②④
+
+
+
+
+**D.** ③④
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** A
+
+**答案：A（①②）。**
+
+**第一步：连续使用西尔维斯特不等式。**
+
+$$
+\begin{aligned}
+r(ABC)&\ge r(AB)+r(C)-n\\
+&\ge r(A)+r(B)+r(C)-2n.
+\end{aligned}
+$$
+
+题设正好给出两端相等：
+
+$$
+r(A)+r(B)+r(C)-2n=r(ABC).
+$$
+
+因此不等式链**每一步都必须取等号**：
+
+$$
+\boxed{r(AB)=r(A)+r(B)-n,}
+$$
+
+$$
+\boxed{r(ABC)=r(AB)+r(C)-n.}
+$$
+
+这正是②和①。
+
+**第二步：排除③④。**
+
+取 $n=2$，$A=\operatorname{diag}(1,0)$，$B=C=I_2$，则
+
+$$
+r(A)+r(B)+r(C)=1+2+2=5,
+\qquad
+r(ABC)+2n=1+4=5.
+$$
+
+题设成立，但 $r(A)=1\ne2$，且 $r(AB)=1\ne2$，故③、④都不是必然结论。
+
+<Callout type="idea" title="考场技巧">
+
+当条件本身恰为某个不等式链的两个端点**相等**时，应立即推出链中每个“$\ge$”都取等号，不必臆测矩阵可逆。
+
+</Callout>
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 原书注 3｜分块矩阵的秩与“横拼右乘、竖拼左乘”
+
+### 1. 对角分块与分块三角阵
+
+只要分块的尺寸使下式有意义（$A,B$ 不必是相同阶数的方阵），就有
+
+$$
+\boxed{
+ r\begin{pmatrix}A&O\\O&B\end{pmatrix}
+ =r\begin{pmatrix}O&A\\B&O\end{pmatrix}
+ =r(A)+r(B).}
+$$
+
+对一般的分块三角形，原书只给出**下界**：
+
+$$
+\boxed{
+\begin{aligned}
+r\begin{pmatrix}A&O\\C&B\end{pmatrix}&\ge r(A)+r(B),\\
+r\begin{pmatrix}A&C\\O&B\end{pmatrix}&\ge r(A)+r(B).
+\end{aligned}}
+$$
+
+**为什么不是恒等号？**非零的非对角块 $C$ 可能进一步提升整块矩阵的秩。例如
+
+$$
+\begin{pmatrix}A&O\\C&B\end{pmatrix}
+=\begin{pmatrix}0&0\\1&0\end{pmatrix},
+\qquad r(A)+r(B)=0,
+\quad r\begin{pmatrix}0&0\\1&0\end{pmatrix}=1.
+$$
+
+这对应所有分块均为 $1\times1$ 矩阵的情形。只有在补充适当条件后才能把不等式改成等式。
+
+### 2. 横拼右乘、竖拼左乘（必须掌握）
+
+$$
+\boxed{
+ r(A)=r(A\ AB)=r\begin{pmatrix}A\\BA\end{pmatrix}.}
+$$
+
+原因分别是
+
+$$
+\operatorname{Col}(AB)\subseteq\operatorname{Col}(A),
+\qquad
+\operatorname{Row}(BA)\subseteq\operatorname{Row}(A).
+$$
+
+<Callout type="warn" title="这两条公式中的乘法顺序不能颠倒">
+
+$r(A\ AB)=r(A)$，但通常 $r(A\ BA)\ne r(A)$；$r\binom A{BA}=r(A)$，但通常 $r\binom A{AB}\ne r(A)$。记住：**横向拼接时让 A 在乘积左侧；纵向拼接时让 A 在乘积右侧。**
+
+</Callout>
+
+## 原书注 4｜2018 年真题：拼接矩阵的秩
+
+<div id="math21-2027-note13-2018-01">
+
+**题型：单选题**
+
+来源:原书2018年真题, 科目:线性代数, 考点:拼接矩阵的秩, 难度:中等, 易错
+
+设 $A,B$ 为 $n$ 阶矩阵，记 $r(X)$ 为矩阵 $X$ 的秩，$(X\ Y)$ 表示横向拼接的分块矩阵，则下列结论正确的是（ ）。
+
+
+
+**A.** $r(A\ AB)=r(A)$。
+
+
+
+
+**B.** $r(A\ BA)=r(A)$。
+
+
+
+
+**C.** $r(A\ B)=\max\{r(A),r(B)\}$。
+
+
+
+
+**D.** $r(A\ B)=r(A^T\ B^T)$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** A
+
+**答案：A。**
+
+- **A 正确。**$AB$ 每一列都是 $A$ 各列的线性组合，因此拼接 $AB$ 不会扩大 $A$ 的列空间，即 $r(A\ AB)=r(A)$。
+- **B 错误。**取 $A=\begin{pmatrix}1&0\\0&0\end{pmatrix}$，$B=\begin{pmatrix}0&0\\1&0\end{pmatrix}$，则 $BA=\begin{pmatrix}0&0\\1&0\end{pmatrix}$。此时 $r(A)=1$，但 $r(A\ BA)=2$。
+- **C 错误。**只存在 $r(A\ B)\ge\max\{r(A),r(B)\}$；例如 $A=\operatorname{diag}(1,0)$、$B=\operatorname{diag}(0,1)$，有 $r(A\ B)=2>1$。
+- **D 错误。**转置后水平拼接一般改变列空间；取 $A=\begin{pmatrix}1&0\\0&0\end{pmatrix}$、$B=\begin{pmatrix}0&1\\0&0\end{pmatrix}$，有 $r(A\ B)=1$，但 $r(A^T\ B^T)=2$。
+
+<Callout type="idea" title="一眼定位答案">
+
+原书注 3 的“**横拼右乘**”就是选项 A 的直接依据。其余三项都缺少将两个空间包含在同一空间中的必要条件。
+
+</Callout>
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 原书注 5｜2021 年真题：分块阵中的秩与乘法顺序
+
+<div id="math21-2027-note13-2021-01">
+
+**题型：单选题**
+
+来源:原书2021年真题, 科目:线性代数, 考点:分块矩阵与秩, 难度:较难, 易错
+
+设 $A,B$ 为 $n$ 阶**实矩阵**。下列结论**不成立**的是（ ）。
+
+
+
+**A.** $\displaystyle r\begin{pmatrix}A&O\\O&A^TA\end{pmatrix}=2r(A)$。
+
+
+
+
+**B.** $\displaystyle r\begin{pmatrix}A&AB\\O&A^T\end{pmatrix}=2r(A)$。
+
+
+
+
+**C.** $\displaystyle r\begin{pmatrix}A&BA\\O&AA^T\end{pmatrix}=2r(A)$。
+
+
+
+
+**D.** $\displaystyle r\begin{pmatrix}A&O\\BA&A^T\end{pmatrix}=2r(A)$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** C
+
+**答案：C。**
+
+**A 正确。**分块对角阵的秩等于两块之和，又因 $r(A^TA)=r(A)$，故
+
+$$
+r\begin{pmatrix}A&O\\O&A^TA\end{pmatrix}=r(A)+r(A^TA)=2r(A).
+$$
+
+**B 正确。**右乘可逆分块初等矩阵以消去右上角的 $AB$：
+
+$$
+\begin{pmatrix}A&AB\\O&A^T\end{pmatrix}
+\begin{pmatrix}I&-B\\O&I\end{pmatrix}
+=\begin{pmatrix}A&O\\O&A^T\end{pmatrix},
+$$
+
+因而其秩为 $r(A)+r(A^T)=2r(A)$。
+
+**D 正确。**左乘可逆分块初等矩阵以消去左下角的 $BA$：
+
+$$
+\begin{pmatrix}I&O\\-B&I\end{pmatrix}
+\begin{pmatrix}A&O\\BA&A^T\end{pmatrix}
+=\begin{pmatrix}A&O\\O&A^T\end{pmatrix},
+$$
+
+其秩亦为 $2r(A)$。
+
+**C 不一定成立。**构造 $n=2$ 的反例：
+
+$$
+A=\begin{pmatrix}1&1\\0&0\end{pmatrix},
+\qquad
+B=\begin{pmatrix}0&0\\1&0\end{pmatrix},
+\qquad r(A)=1.
+$$
+
+于是
+
+$$
+\begin{aligned}
+BA&=\begin{pmatrix}0&0\\1&1\end{pmatrix},
+&AA^T&=\begin{pmatrix}2&0\\0&0\end{pmatrix},\\
+\begin{pmatrix}A&BA\\O&AA^T\end{pmatrix}
+&=\begin{pmatrix}
+1&1&0&0\\
+0&0&1&1\\
+0&0&2&0\\
+0&0&0&0
+\end{pmatrix}.
+\end{aligned}
+$$
+
+右端有 **3 个线性无关的行**，秩为 $3$，而 $2r(A)=2$，矛盾。**特别注意：**原书把它们都写成分块三角阵，但不能仅凭上下对角块的秩相加就断言等号成立。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 原书注 6｜2023 年真题：三种分块矩阵秩的比较
+
+<div id="math21-2027-note13-2023-01">
+
+**题型：单选题**
+
+来源:原书2023年真题, 科目:线性代数, 考点:分块秩与Schur补, 难度:较难, 高频
+
+已知 $n$ 阶矩阵 $A,B,C$ 满足 $ABC=O$，$I$ 是 $n$ 阶单位矩阵。记
+
+$$
+M_1=\begin{pmatrix}O&A\\BC&I\end{pmatrix},
+\quad
+M_2=\begin{pmatrix}AB&C\\O&I\end{pmatrix},
+\quad
+M_3=\begin{pmatrix}I&AB\\AB&O\end{pmatrix}
+$$
+
+的秩分别为 $r_1,r_2,r_3$，则下列结论正确的是（ ）。
+
+
+
+**A.** $r_1\le r_2\le r_3$。
+
+
+
+
+**B.** $r_1\le r_3\le r_2$。
+
+
+
+
+**C.** $r_3\le r_1\le r_2$。
+
+
+
+
+**D.** $r_2\le r_1\le r_3$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** B
+
+**答案：B。**
+
+**第一步：先利用可逆的 $I$ 块把 $M_1$ 化为对角分块。**
+
+由含可逆右下角块 $I$ 的秩公式
+
+$$
+r\begin{pmatrix}X&Y\\Z&I\end{pmatrix}=n+r(X-YZ),
+$$
+
+有
+
+$$
+\boxed{r_1=n+r(O-A\cdot BC)=n+r(ABC)=n.}
+$$
+
+**第二步：$M_2$ 本身是分块上三角，且右下块可逆。**同样消去右上块：
+
+$$
+\boxed{r_2=n+r(AB).}
+$$
+
+**第三步：对 $M_3$ 的左上角单位矩阵作消元。**由
+
+$$
+r\begin{pmatrix}I&X\\Y&Z\end{pmatrix}=n+r(Z-YX),
+$$
+
+得到
+
+$$
+\boxed{r_3=n+r((AB)^2).}
+$$
+
+因为 $0\le r((AB)^2)\le r(AB)$，故
+
+$$
+\boxed{r_1=n\le n+r((AB)^2)=r_3\le n+r(AB)=r_2.}
+$$
+
+**注意：**$ABC=O$ 只用于将 $r_1$ 简化成 $n$，并**不意味着** $(AB)^2=O$。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<Accordions>
+  <Accordion title="方法补充：含 I 的 2×2 分块矩阵为什么能直接写秩公式？">
+
+  设每一分块的维数相容，$I$ 是 $n$ 阶单位矩阵。可逆的分块消元不会改变秩：
+
+  $$
+  \begin{pmatrix}X&Y\\Z&I\end{pmatrix}
+  \sim\begin{pmatrix}X-YZ&O\\Z&I\end{pmatrix}
+  \sim\begin{pmatrix}X-YZ&O\\O&I\end{pmatrix},
+  $$
+
+  因而 $r\begin{pmatrix}X&Y\\Z&I\end{pmatrix}=r(X-YZ)+n$。同理，对 $\begin{pmatrix}I&X\\Y&Z\end{pmatrix}$，得到 $n+r(Z-YX)$。这两条结论又称分块消元或 Schur 补的秩公式。
+
+  </Accordion>
+  <Accordion title="能否从 r(AB)≤r(A) 直接推知 r(AB)=r(A)？">
+
+  不能。取 $A=I_2$、$B=\operatorname{diag}(1,0)$，便有 $r(AB)=1<2=r(A)$。只有附加条件（如 $B$ 为可逆矩阵，或 $B$ 行满秩且右乘尺寸相容）时才能保证秩相等。
+
+  </Accordion>
+</Accordions>
+
+## 强化训练｜本记原创自测（附完整参考解答）
+
+以下为根据本记公式设计的**原创练习**，非原书真题；建议先独立计算，再展开解析。
+
+<div id="math21-2027-note13-q01">
+
+**题型：单选题**
+
+来源:本记原创自测, 科目:线性代数, 考点:初等矩阵右乘, 难度:基础
+
+设 $A=\begin{pmatrix}1&2\\3&4\end{pmatrix}$，$E_{12}(2)=\begin{pmatrix}1&2\\0&1\end{pmatrix}$。则 $AE_{12}(2)$ 等于（ ）。
+
+
+
+**A.** $\begin{pmatrix}1&4\\3&10\end{pmatrix}$
+
+
+
+
+**B.** $\begin{pmatrix}7&10\\3&4\end{pmatrix}$
+
+
+
+
+**C.** $\begin{pmatrix}1&2\\5&8\end{pmatrix}$
+
+
+
+
+**D.** $\begin{pmatrix}3&2\\7&4\end{pmatrix}$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** A
+
+**答案：A。**右乘 $E_{12}(2)$ 使第二列加上第一列的两倍，第一列不变：
+
+$$
+AE_{12}(2)=\begin{pmatrix}1&2+2\cdot1\\3&4+2\cdot3\end{pmatrix}
+=\begin{pmatrix}1&4\\3&10\end{pmatrix}.
+$$
+
+若得到 $\begin{pmatrix}7&10\\3&4\end{pmatrix}$，实际上做的是**左乘**对应的行操作。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note13-q02">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:线性代数, 考点:行等价与列等价, 难度:中等
+
+给定
+
+$$
+A=\begin{pmatrix}1&0\\0&0\end{pmatrix},
+\qquad
+B=\begin{pmatrix}0&1\\0&0\end{pmatrix}.
+$$
+
+判断 $A,B$ 是否行等价、是否列等价，以及是否矩阵等价。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+两矩阵秩都是 $1$，故**矩阵等价**。
+
+两矩阵行空间分别是 $\operatorname{span}\{(1,0)\}$ 与 $\operatorname{span}\{(0,1)\}$，不同，故**不行等价**。
+
+两矩阵列空间均为 $\operatorname{span}\{(1,0)^T\}$，故**列等价**。具体地，令
+
+$$
+Q=\begin{pmatrix}0&1\\1&0\end{pmatrix},
+\qquad B=AQ.
+$$
+
+$Q$ 可逆，印证二者列等价。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note13-q03">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:线性代数, 考点:含参数矩阵求秩, 难度:中等
+
+求矩阵
+
+$$
+A(t)=\begin{pmatrix}1&2&1\\2&4&2\\1&2&t\end{pmatrix}
+$$
+
+的秩，并解释为什么只计算 $|A(t)|$ 不足以完成本题。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+经 $R_2\leftarrow R_2-2R_1$、$R_3\leftarrow R_3-R_1$，
+
+$$
+A(t)\sim_r\begin{pmatrix}1&2&1\\0&0&0\\0&0&t-1\end{pmatrix}.
+$$
+
+若 $t=1$，仅有一非零行，秩为 $1$；若 $t\ne1$，有两非零行，秩为 $2$。
+
+由于第二行永远为第一行的两倍，$|A(t)|\equiv0$，行列式只能说明秩小于 $3$，不能区分 $1$ 和 $2$。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note13-q04">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:线性代数, 考点:乘积秩上下界, 难度:中等
+
+设 $A$ 为 $4\times5$ 矩阵、$B$ 为 $5\times3$ 矩阵，已知 $r(A)=4$、$r(B)=3$。求 $r(AB)$ 的可能范围，并说明端点是否都可达到。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+利用西尔维斯特不等式与乘积上界：
+
+$$
+4+3-5\le r(AB)\le\min(4,3),
+\quad\text{即}\quad\boxed{2\le r(AB)\le3}.
+$$
+
+**下端点可取到：**取 $A=(I_4\ O_{4\times1})$，并令 $B$ 的三列依次是 $e_3,e_4,e_5\in\mathbb R^5$，则 $r(B)=3$ 而 $AB$ 的列为 $e_3,e_4,0\in\mathbb R^4$，秩为 $2$。
+
+**上端点可取到：**保持相同的 $A$，把 $B$ 的三列改成 $e_1,e_2,e_3\in\mathbb R^5$，有 $r(AB)=3$。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note13-q05">
+
+**题型：单选题**
+
+来源:本记原创自测, 科目:线性代数, 考点:伴随矩阵的秩, 难度:基础
+
+若 $A$ 为 $5$ 阶方阵，且 $r(A)=3$，则 $r(A^*)$ 为（ ）。
+
+
+
+**A.** $5$
+
+
+
+
+**B.** $3$
+
+
+
+
+**C.** $1$
+
+
+
+
+**D.** $0$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** D
+
+**答案：D。**此时 $n=5$、$r(A)=3<n-1=4$，所有四阶子式都为零，所以伴随矩阵所有元素都为零，$A^*=O$，故 $r(A^*)=0$。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note13-q06">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:线性代数, 考点:横拼与竖拼矩阵, 难度:中等
+
+设 $A$ 是 $m\times n$ 矩阵，$B$ 是 $n\times n$ 矩阵，$C$ 是 $p\times m$ 矩阵。证明
+
+$$
+r(A\ AB)=r\begin{pmatrix}A\\CA\end{pmatrix}=r(A).
+$$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+因为 $\operatorname{Col}(AB)\subseteq\operatorname{Col}(A)$，故
+
+$$
+r(A\ AB)=r(A).
+$$
+
+又因为 $CA$ 的每行都是 $A$ 的行向量的线性组合，故
+
+$$
+\operatorname{Row}(CA)\subseteq\operatorname{Row}(A),
+$$
+
+因此
+
+$$
+r\begin{pmatrix}A\\CA\end{pmatrix}=r(A).
+$$
+
+**维数检查：**$AB$ 与 $A$ 行数同为 $m$，可水平拼接；$CA$ 与 $A$ 列数同为 $n$，可竖向拼接。这是两个公式成立前必须满足的条件。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note13-q07">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:线性代数, 考点:分块Schur补求秩, 难度:中等
+
+设 $X=\begin{pmatrix}1&0\\0&0\end{pmatrix}$，求
+
+$$
+r\begin{pmatrix}I_2&X\\X&O\end{pmatrix}.
+$$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+对左上角可逆块 $I_2$ 作 Schur 补，得到
+
+$$
+r\begin{pmatrix}I_2&X\\X&O\end{pmatrix}
+=2+r(O-XI_2^{-1}X)=2+r(X^2).
+$$
+
+因 $X^2=X$、$r(X)=1$，故所求秩为 $\boxed{3}$。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note13-q08">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:线性代数, 考点:秩不等式取等, 难度:较难
+
+设 $A,B,C$ 都是 $n$ 阶矩阵，且
+
+$$
+r(ABC)=r(A)+r(B)+r(C)-2n.
+$$
+
+证明 $r(AB)=r(A)+r(B)-n$，并判断是否必有 $A,B,C$ 均可逆。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+由西尔维斯特不等式依次得到
+
+$$
+r(ABC)\ge r(AB)+r(C)-n\ge r(A)+r(B)+r(C)-2n.
+$$
+
+题设令两端相等，所以第二处不等式取等，得到
+
+$$
+\boxed{r(AB)=r(A)+r(B)-n.}
+$$
+
+**不必都可逆。**例如当 $n=2$，$A=\operatorname{diag}(1,0)$，$B=C=I_2$ 时题设成立，但 $A$ 不可逆。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 本记复盘｜从题目关键词到第一步
+
+| 题干中的线索 | 首选方法 | 最易犯的错误 |
+| --- | --- | --- |
+| 初等矩阵左乘或右乘 | 左行右列，分清 $E_{ij}(k)$ 的目标下标 | 把右乘也当作改变第 $i$ 列 |
+| 经过若干次行变换或列变换 | 分别写 $B=PA$ 或 $B=AQ$ | 仅凭秩相同就断言行等价 |
+| $Ax=0$ 与 $Bx=0$ 同解 | $A,B$ 行等价；比较行空间 | 误认为所有对应行元素相等 |
+| 含参数的矩阵求秩 | 消元化阶梯形；必要时分情况 | 未验证参数非零就除它 |
+| $A^TA$ 或 $AA^T$（实矩阵） | $r(A^TA)=r(AA^T)=r(A)$ | 将该公式无条件用于复矩阵的普通转置 |
+| $r(A)+r(B)-n$ | 西尔维斯特不等式的下界 | 把内维数 $n$ 错写成外维数 |
+| $ABC$ 与三个因子秩的等式 | 连续用西尔维斯特不等式，检查取等 | 从取等条件妄推三个矩阵可逆 |
+| $(A\ AB)$ 或 $\binom A{BA}$ | 横拼右乘、竖拼左乘 | 交换成 $BA$ 或 $AB$ 后照搬 |
+| 含单位阵的 $2\times2$ 分块阵 | 消元后用 Schur 补的秩公式 | 在一般分块三角阵上随意写秩相加 |
+| $A^*$ 的秩 | $n,n-1,\le n-2$ 三类分段 | 认为不可逆矩阵的伴随一定为零 |
+
+<Callout type="success" title="第 13 记核对范围">
+
+已对照原 PDF **第 66—69 页**及解析 MD，完整梳理原书 **「必记 1」「必记 2」与注 1—6**，保留并解答 **2025、2018、2021、2023 年四道原书真题**；另增 **8 道原创自测**。对“初等矩阵的下标与方向”“两行不成比例的适用前提”“实矩阵 $AA^T$ 的秩”“分块三角阵的秩下界”作了必要的准确性说明。
+
+</Callout>

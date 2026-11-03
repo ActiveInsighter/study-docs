@@ -1,0 +1,1177 @@
+---
+title: "第 14 记｜向量与方程组"
+description: "2027 周洋鑫《考前21记》第 14 记：向量与方程组。含知识梳理、适用条件与 17 道配套题及解析。"
+---
+
+<Callout type="info" title="阅读范围与复习路线">
+
+对应原书 **第 70—77 页**，逐一整理 **必记 1—10**：向量组线性相关、线性表示、向量组等价、齐次与非齐次线性方程组、矩阵方程、同解、公共解、解的包含关系以及向量空间（数学一）。保留原书所收录的 **9 道历年真题**，另列原创自测；遇到原 PDF 黑块遮挡的两道真题，结合公开真题文本核对并明确标注。原书关于“行／列向量组等价与矩阵拼接方向”的颠倒之处已作数学上的纠正。
+
+</Callout>
+
+<Cards>
+  <Card title="线性相关、线性表出">先数向量个数，再算秩；从可表出转化为增广矩阵的秩。</Card>
+  <Card title="方程组的解与通解">$n-r(A)$ 是齐次自由参数个数；非齐次还必须先检查相容性。</Card>
+  <Card title="同解、公共解、解的包含">分清“零空间相等”“零空间交集”“零空间包含”的三个命题。</Card>
+  <Card title="数一：基与坐标变换">过渡矩阵改变基，逆过渡矩阵改变坐标，勿把方向写反。</Card>
+</Cards>
+
+## 必记 1｜向量组的线性相关性
+
+### 1. 定义判定与秩判定
+
+设 $\alpha_1,\alpha_2,\ldots,\alpha_m$ 为**同维**列向量，组成矩阵 $A=(\alpha_1,\ldots,\alpha_m)$。原书“见到线性相关性，想到定义法和秩”的思路可概括为：
+
+$$
+\boxed{\begin{aligned}
+\alpha_1,\ldots,\alpha_m\text{ 线性相关}
+&\iff \exists\,x\ne 0:\ Ax=0\\
+&\iff r(A)<m;\\
+\alpha_1,\ldots,\alpha_m\text{ 线性无关}
+&\iff Ax=0\text{ 只有零解}\\
+&\iff r(A)=m.
+\end{aligned}}
+$$
+
+“存在不全为零的系数使线性组合为零”与“所有系数必为零”正好对应上述两种情况。$m$ 是**参加比较的向量个数**，不是向量维数。若向量都为 $n$ 维而 $m>n$，则 $r(A)\le n<m$，这组向量必线性相关。
+
+当 $m=n$（$n$ 个 $n$ 维向量）时，才可以增加行列式判据：
+
+$$
+\boxed{\begin{aligned}
+\alpha_1,\ldots,\alpha_n\text{ 线性无关}&\iff |A|\ne0,\\
+\alpha_1,\ldots,\alpha_n\text{ 线性相关}&\iff |A|=0.
+\end{aligned}}
+$$
+
+对于 $m\times n$ 矩阵 $A$，若把它视为**行向量组**，应将 $r(A)$ 与行数 $m$ 比较；若视为**列向量组**，应将 $r(A)$ 与列数 $n$ 比较。
+
+| 讨论对象 | 线性无关 | 线性相关 |
+| --- | --- | --- |
+| $A$ 的 $m$ 个行向量 | $r(A)=m$ | $r(A)<m$ |
+| $A$ 的 $n$ 个列向量 | $r(A)=n$ | $r(A)<n$ |
+
+<Callout type="warn" title="非方阵不要直接用行列式；别把维数与个数混淆">
+
+一个 $3\times4$ 矩阵的 **4 个列向量一定相关**，即使它的 3 个行向量可以无关；对非方阵谈“$|A|=0$ 判相关”没有定义。
+
+</Callout>
+
+<Tabs items={['直接按秩', '转化为齐次方程组']}>
+  <Tab value="直接按秩">
+
+  给出具体坐标时，把向量并列作列阵消元。若向量个数为 $m$，最后比较 $r(A)$ 与 $m$；涉及参数时，应按主元是否为零分情况。
+
+  </Tab>
+  <Tab value="转化为齐次方程组">
+
+  给出抽象关系 $c_1\alpha_1+\cdots+c_m\alpha_m=0$ 时，将系数列向量 $c=(c_1,\ldots,c_m)^T$ 看成 $Ac=0$ 的解。找到一个 $c\ne0$ 即证相关；证明无关则必须推出 $c=0$。
+
+  </Tab>
+</Tabs>
+
+## 必记 2｜线性表示：从一个向量到整个向量组
+
+### 1. 一个向量能否由给定向量组线性表出
+
+设 $A=(\alpha_1,\ldots,\alpha_n)$，$\beta$ 与 $A$ 的列向量同维，则
+
+$$
+\beta=c_1\alpha_1+\cdots+c_n\alpha_n
+\iff Ac=\beta.
+$$
+
+因此“可表出”就是非齐次线性方程组的**相容性**，而“表示唯一”就是解的唯一性：
+
+| 情况 | 秩的判定 | $Ac=\beta$ 的解 |
+| --- | --- | --- |
+| 不能表出 | $r(A)<r(A,\beta)$ | 无解 |
+| 可表出且唯一 | $r(A)=r(A,\beta)=n$ | 唯一解 |
+| 可表出但不唯一 | $r(A)=r(A,\beta)<n$ | 无穷多解 |
+
+其中 $n$ 是**表出向量组的向量个数**，$(A,\beta)$ 表示横向拼接。增广一列后秩至多增加 $1$。
+
+### 2. 向量组的线性表出与矩阵方程
+
+设 $A\in\mathbb R^{m\times n}$、$B=(\beta_1,\ldots,\beta_s)\in\mathbb R^{m\times s}$，求系数矩阵 $X\in\mathbb R^{n\times s}$，使得
+
+$$
+\boxed{AX=B\iff\text{$B$ 的每个列向量均可由 $A$ 的列向量线性表出}.}
+$$
+
+对于 $s\ge1$，有同样的三分法：
+
+$$
+\boxed{\begin{cases}
+ r(A)<r(A,B)&\Longrightarrow \text{无解},\\
+ r(A)=r(A,B)=n&\Longrightarrow \text{唯一解},\\
+ r(A)=r(A,B)<n&\Longrightarrow \text{无穷多解}.
+\end{cases}}
+$$
+
+<Steps>
+  <Step>
+
+  ### 先看能否表出
+
+  检验 $r(A)=r(A,B)$。若不相等，$B$ 至少有一列不在 $A$ 的列空间内，矩阵方程无解。
+
+  </Step>
+  <Step>
+
+  ### 再看系数是否唯一
+
+  若相容，比较 $r(A)$ 与未知系数的行数 $n$。当 $r(A)=n$ 时每个系数列唯一；当 $r(A)<n$ 时齐次方程 $Au=0$ 有非零解，可对系数列加上任意齐次解。
+
+  </Step>
+  <Step>
+
+  ### 最后将矩阵方程按列拆开
+
+  若 $X=(x_1,\ldots,x_s)$，则 $AX=B$ 等价于逐列求解 $Ax_j=\beta_j$。所有列的解拼成 $X$；同一齐次基础解系可以重复使用，但各列自由参数彼此独立。
+
+  </Step>
+</Steps>
+
+## 必记 3｜向量组等价：张成空间相同
+
+设向量组（Ⅰ）为 $\alpha_1,\ldots,\alpha_s$，向量组（Ⅱ）为 $\beta_1,\ldots,\beta_t$，所有向量属于同一个线性空间，记
+
+$$
+A=(\alpha_1,\ldots,\alpha_s),\qquad
+B=(\beta_1,\ldots,\beta_t).
+$$
+
+两组**等价**是指可以互相线性表出，等价于张成的子空间相同：
+
+$$
+\boxed{\operatorname{Col}(A)=\operatorname{Col}(B)
+\iff r(A)=r(B)=r(A,B).}
+$$
+
+<Callout type="error" title="源资料第 71 页有一处拼接方向颠倒，已纠正">
+
+原书“注 1、注 2”关于矩阵**行向量组等价**和**列向量组等价**的秩拼接方向互换了。正确写法是：
+
+- **列向量组等价（行数相同）**：$r(A)=r(B)=r(A,B)$，即**横向拼接**。
+- **行向量组等价（列数相同）**：$r(A)=r(B)=r\!\begin{pmatrix}A\\B\end{pmatrix}$，即**纵向拼接**。
+
+判断方向的原则是：列向量应在相同的 $\mathbb R^m$ 中比较，行向量应在相同的 $\mathbb R^n$ 中比较。不能仅凭 $r(A)=r(B)$ 判断两组等价。
+
+</Callout>
+
+### 易混概念对照
+
+| 概念 | 可核查的等价条件 | 关注的空间 |
+| --- | --- | --- |
+| 列向量组等价 | $r(A)=r(B)=r(A,B)$ | 列空间相同 |
+| 行向量组等价 | $r(A)=r(B)=r\binom AB$ | 行空间相同 |
+| $Ax=0$ 与 $Bx=0$ 同解 | $\ker A=\ker B$ | 零空间相同 |
+| 同解与行向量组等价的联系 | $\ker A=\ker B\iff\operatorname{Row}(A)=\operatorname{Row}(B)$ | 行空间是零空间的正交补（实矩阵） |
+
+## 必记 4｜齐次线性方程组：零解、非零解与基础解系
+
+设 $A\in\mathbb R^{m\times n}$，未知量共有 $n$ 个。齐次方程组 $Ax=0$ **永远有零解**，问题在于是否存在非零解。
+
+$$
+\boxed{\begin{aligned}
+r(A)=n&\iff Ax=0\text{ 只有零解},\\
+r(A)<n&\iff Ax=0\text{ 有非零解}.
+\end{aligned}}
+$$
+
+更进一步，秩—零度定理给出
+
+$$
+\boxed{\dim\ker A=n-r(A).}
+$$
+
+若 $r(A)=r<n$，则通解可写成
+
+$$
+x=k_1\xi_1+\cdots+k_{n-r}\xi_{n-r},
+$$
+
+其中 $\xi_1,\ldots,\xi_{n-r}$ 构成**基础解系**，必须同时满足：（1）均是方程组的解；（2）线性无关；（3）个数恰为 $n-r$。这是原书所说基础解系的“三个要求”。
+
+当 $A$ 为 $n$ 阶方阵时，才可进一步使用
+
+$$
+|A|\ne0\iff Ax=0\text{ 仅有零解},\qquad
+|A|=0\iff Ax=0\text{ 有非零解}.
+$$
+
+<Callout type="idea" title="通解书写模板">
+
+先由消元得到 $r(A)$，确定需要 **$n-r(A)$ 个线性无关的基础解系向量**；再将 $n-r(A)$ 个自由变量依次取标准基值，读出对应基础解系。不要只找到两个解向量就宣布已经构成“基础解系”。
+
+</Callout>
+
+## 必记 5｜非齐次线性方程组：先相容，再谈唯一
+
+设 $A\in\mathbb R^{m\times n}$、$b\in\mathbb R^m$。原书“抽象题先求秩，得到通解结构”的方法可浓缩如下：
+
+| $r(A)$ 与 $r(A,b)$ | 解的情况 | 通解结构 |
+| --- | --- | --- |
+| $r(A)\ne r(A,b)$ | 无解 | 不存在特解 |
+| $r(A)=r(A,b)=n$ | 唯一解 | $x=\eta$ |
+| $r(A)=r(A,b)=r<n$ | 无穷多解 | $x=\eta+\sum_{i=1}^{n-r}k_i\xi_i$ |
+
+这里 $\eta$ 是一个非齐次**特解**，$\xi_i$ 是对应齐次方程的基础解系。若 $A$ 是方阵且 $|A|\ne0$，那么对任意 $b$ 均有唯一解；若 $|A|=0$，则要看 $b$ 才能区分“无解”和“无穷多解”。
+
+### 原书真题 1｜2025 年：列向量关系与非齐次通解
+
+<div id="math21-2027-note14-2025-01">
+
+**题型：解答题**
+
+来源:2025年考研真题, 科目:线性代数, 考点:列向量线性关系与通解, 难度:基础
+
+设 $A=(\alpha_1,\alpha_2,\alpha_3,\alpha_4)$，其中 $\alpha_1,\alpha_2,\alpha_3$ 线性无关，并且
+
+$$
+\alpha_1+\alpha_2=\alpha_3+\alpha_4.
+$$
+
+求方程组 $Ax=\alpha_1+4\alpha_4$ 的通解。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**（1）先找一个特解。**因为
+
+$$
+A\begin{pmatrix}1\\0\\0\\4\end{pmatrix}=\alpha_1+4\alpha_4,
+$$
+
+故 $\eta=(1,0,0,4)^T$ 是特解。
+
+**（2）找齐次基础解系。**题设给出
+
+$$
+\alpha_1+\alpha_2-\alpha_3-\alpha_4=0,
+$$
+
+故 $\xi=(1,1,-1,-1)^T$ 是 $Ax=0$ 的非零解。又 $\alpha_1,\alpha_2,\alpha_3$ 线性无关、$\alpha_4$ 可由它们表出，所以 $r(A)=3$，$\dim\ker A=4-3=1$。因此 $\xi$ 恰为一组基础解系。
+
+**通解为**
+
+$$
+\boxed{x=\begin{pmatrix}1\\0\\0\\4\end{pmatrix}
++k\begin{pmatrix}1\\1\\-1\\-1\end{pmatrix},\quad k\in\mathbb R.}
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+### 原书真题 2｜2021 年：正交矩阵与通解
+
+<div id="math21-2027-note14-2021-01">
+
+**题型：单选题**
+
+来源:2021年考研真题, 科目:线性代数, 考点:正交矩阵与基础解系, 难度:基础
+
+设 $A=(\alpha_1,\alpha_2,\alpha_3,\alpha_4)$ 为 $4$ 阶正交矩阵，
+
+$$
+B=\begin{pmatrix}\alpha_1^T\\\alpha_2^T\\\alpha_3^T\end{pmatrix},
+\qquad \beta=\begin{pmatrix}1\\1\\1\end{pmatrix}.
+$$
+
+$k$ 为任意常数，则线性方程组 $Bx=\beta$ 的通解是（ ）。
+
+
+
+**A.** $\alpha_2+\alpha_3+\alpha_4+k\alpha_1$
+
+
+
+
+**B.** $\alpha_1+\alpha_3+\alpha_4+k\alpha_2$
+
+
+
+
+**C.** $\alpha_1+\alpha_2+\alpha_4+k\alpha_3$
+
+
+
+
+**D.** $\alpha_1+\alpha_2+\alpha_3+k\alpha_4$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** D
+
+**答案：D。**正交矩阵列向量两两正交且模长为 $1$，即 $\alpha_i^T\alpha_j=\delta_{ij}$。因此
+
+$$
+B(\alpha_1+\alpha_2+\alpha_3)=\begin{pmatrix}1\\1\\1\end{pmatrix}=\beta,
+\qquad B\alpha_4=0.
+$$
+
+$B$ 的三行线性无关，$r(B)=3$，未知量有 4 个，齐次解空间一维，故
+
+$$
+\boxed{x=\alpha_1+\alpha_2+\alpha_3+k\alpha_4,\quad k\in\mathbb R.}
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+### 原书真题 3｜2020 年：伴随矩阵的齐次通解
+
+<div id="math21-2027-note14-2020-01">
+
+**题型：单选题**
+
+来源:2020年考研真题, 科目:线性代数, 考点:伴随矩阵与基础解系, 难度:中等
+
+设 $4$ 阶矩阵 $A=(a_{ij})$ 不可逆，元素 $a_{12}$ 的代数余子式 $A_{12}\ne0$，$\alpha_1,\alpha_2,\alpha_3,\alpha_4$ 是 $A$ 的列向量，$A^*$ 为其伴随矩阵。方程组 $A^*x=0$ 的通解为（ ）。
+
+
+
+**A.** $x=k_1\alpha_1+k_2\alpha_2+k_3\alpha_3$
+
+
+
+
+**B.** $x=k_1\alpha_1+k_2\alpha_2+k_3\alpha_4$
+
+
+
+
+**C.** $x=k_1\alpha_1+k_2\alpha_3+k_3\alpha_4$
+
+
+
+
+**D.** $x=k_1\alpha_2+k_2\alpha_3+k_3\alpha_4$
+
+
+
+其中 $k_1,k_2,k_3$ 均为任意常数。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** C
+
+**答案：C。**$A$ 不可逆，且有非零的 3 阶余子式 $A_{12}$，故 $r(A)=3$。于是 $r(A^*)=1$，所以 $A^*x=0$ 的解空间维数为 $4-1=3$。
+
+由 $A^*A=|A|I_4=O$ 可知，$A$ 的每一个列向量都是 $A^*x=0$ 的解。$A_{12}\ne0$ 表明删去第 $1$ 行、第 $2$ 列后的三阶子式不为零，因此原矩阵的第 **1、3、4 列** $\alpha_1,\alpha_3,\alpha_4$ 线性无关。这三列恰好构成基础解系，故
+
+$$
+\boxed{x=k_1\alpha_1+k_2\alpha_3+k_3\alpha_4.}
+$$
+
+<Callout type="info" title="文本校勘">
+
+原书第 73 页该题的希腊字母在 PDF 中显示为黑块，解析 MD 亦有“无法辨认”。此处选项依据 [2020 年数学二真题公开文本](https://noobdream.com/Practice/exam_solution/35119/) 交叉核对补全，数学结论同时由余子式与秩的论证独立核实。
+
+</Callout>
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 必记 6｜矩阵方程 $AX=B$ 的判定与按列求解
+
+虽然必记 2 已建立矩阵方程与线性表示的联系，原书此处进一步强调**实际求解步骤**。写成列块
+
+$$
+A(x_1,x_2,\ldots,x_s)=(\beta_1,\beta_2,\ldots,\beta_s),
+$$
+
+等价于 $s$ 个方程组 $Ax_j=\beta_j$。若 $\eta_j$ 是第 $j$ 列的一个特解，$N=(\xi_1,\ldots,\xi_{n-r})$ 为 $Ax=0$ 的一组基础解系矩阵，则所有解可统一写作
+
+$$
+\boxed{X=X_0+NC,\qquad X_0=(\eta_1,\ldots,\eta_s),\quad C\in\mathbb R^{(n-r)\times s}.}
+$$
+
+这一形式要求先有相容解 $X_0$，且 $r=r(A)$。若 $r(A)=n$，则 $N$ 没有列，$X=X_0$ 唯一。
+
+<Callout type="warn" title="矩阵方程中，齐次解不是只有一组系数">
+
+每个 $x_j$ 都可以加上自己的一组 $n-r(A)$ 个自由参数。因此 $AX=B$（$s$ 列）总的自由参数个数是 $s[n-r(A)]$，不能把各列的齐次系数全部写成同一个 $k$。
+
+</Callout>
+
+## 必记 7｜方程组同解：零空间相同与行空间相同
+
+设 $A\in\mathbb R^{m\times n}$、$B\in\mathbb R^{s\times n}$，两组**齐次**方程组 $Ax=0$、$Bx=0$ 同解当且仅当
+
+$$
+\boxed{\begin{aligned}
+\ker A=\ker B
+&\iff r(A)=r(B)=r\begin{pmatrix}A\\B\end{pmatrix}\\
+&\iff \operatorname{Row}(A)=\operatorname{Row}(B).
+\end{aligned}}
+$$
+
+当 $A,B$ 具有**相同行数和列数**时，这还等价于它们行等价，即存在一个可逆矩阵 $P$，使 $B=PA$。如果 $m\ne s$，行空间仍可相等，但“一个可逆方阵左乘实现 $B=PA$”通常没有意义。
+
+<Callout type="idea" title="同解的统一画法">
+
+$Ax=0$ 与 $Bx=0$ 同解，意味着每一条来自 $A$ 的线性约束均能由 $B$ 的行线性组合得到，反向亦然。因此应**纵向拼接** $\binom AB$；横向拼接 $(A,B)$ 并不是这里的判据。
+
+</Callout>
+
+### 原书真题 4｜2020 年：初等列变换与矩阵方程
+
+<div id="math21-2027-note14-2020-02">
+
+**题型：单选题**
+
+来源:2020年考研真题, 科目:线性代数, 考点:初等列变换, 难度:基础
+
+若矩阵 $A$ 经初等**列**变换化成 $B$，则必有（ ）。
+
+
+
+**A.** 存在矩阵 $P$，使 $PA=B$。
+
+
+
+
+**B.** 存在矩阵 $P$，使 $BP=A$。
+
+
+
+
+**C.** 存在矩阵 $P$，使 $PB=A$。
+
+
+
+
+**D.** 方程组 $Ax=0$ 与 $Bx=0$ 同解。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** B
+
+**答案：B。**初等列变换相当于在右侧连续乘可逆初等矩阵，故存在可逆矩阵 $Q$ 使 $B=AQ$。取 $P=Q^{-1}$，就有
+
+$$
+\boxed{BP=AQQ^{-1}=A.}
+$$
+
+列变换一般改变零空间的坐标表达，不保证 $\ker A=\ker B$；“右乘”也不能直接改为“左乘”。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+### 原书真题 5｜2022 年：同解方程组与分块矩阵
+
+<div id="math21-2027-note14-2022-01">
+
+**题型：单选题**
+
+来源:2022年考研真题, 科目:线性代数, 考点:同解与分块齐次方程组, 难度:较难
+
+设 $A,B$ 为 $n$ 阶矩阵，$I_n$ 为单位矩阵。若 $Ax=0$ 与 $Bx=0$ 同解，以下结论正确的是（ ）。
+
+
+
+**A.** 方程组 $\begin{pmatrix}A&O\\I_n&B\end{pmatrix}y=0$ 只有零解。
+
+
+
+
+**B.** 方程组 $\begin{pmatrix}I_n&A\\O&AB\end{pmatrix}y=0$ 只有零解。
+
+
+
+
+**C.** 方程组 $\begin{pmatrix}A&B\\O&B\end{pmatrix}y=0$ 与 $\begin{pmatrix}B&A\\O&A\end{pmatrix}y=0$ 同解。
+
+
+
+
+**D.** 方程组 $\begin{pmatrix}AB&B\\O&A\end{pmatrix}y=0$ 与 $\begin{pmatrix}BA&A\\O&B\end{pmatrix}y=0$ 同解。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** C
+
+**答案：C。**令 $y=(u^T,v^T)^T$，设共同零空间 $N=\ker A=\ker B$。C 中左侧方程组等价于
+
+$$
+\begin{cases}Au+Bv=0,\\Bv=0,\end{cases}
+\iff \begin{cases}Au=0,\\Bv=0,\end{cases}
+\iff u,v\in N.
+$$
+
+C 中右侧同理等价于 $u,v\in N$，故两者同解。
+
+A、B 不保证只有零解，例如 $A=B=O$ 时均有非零解。D 的上方分别出现 $ABu$ 与 $BAu$，只知道 $\ker A=\ker B$ 并不能保证 $\ker(AB)=\ker(BA)$。例如 $A=\begin{pmatrix}1&0\\0&0\end{pmatrix}$、$B=\begin{pmatrix}0&0\\1&0\end{pmatrix}$，二者零空间均为 $\operatorname{span}\{(0,1)^T\}$，但 $AB=O$、$BA=B$，D 的两组方程解集不同。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+### 原书真题 6｜2025 年：$A^2x=0$ 与 $Ax=0$ 不同解
+
+<div id="math21-2027-note14-2025-02">
+
+**题型：填空题**
+
+来源:2025年考研真题, 科目:线性代数, 考点:零特征值的Jordan结构与秩, 难度:较难
+
+设
+
+$$
+A=\begin{pmatrix}4&2&-3\\a&3&-4\\b&5&-7\end{pmatrix}.
+$$
+
+若 $A^2x=0$ 与 $Ax=0$ 不同解，则 $a-b=$ $\underline{\qquad}$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** $-4$
+
+**答案：$-4$。**对任意方阵均有 $\ker A\subseteq\ker A^2$，故“不同解”在这里表示 $\ker A\subsetneq\ker A^2$。于是 $r(A^2)<r(A)$，这要求零特征值至少有一个长度不小于 $2$ 的 Jordan 链，因此零特征值的代数重数至少为 $2$。
+
+先计算
+
+$$
+|A|=b-a-4.
+$$
+
+零为特征值要求 $b=a+4$。又因 $\operatorname{tr}A=0$，特征多项式为
+
+$$
+\det(\lambda I-A)
+=\lambda^3+(-2a+3b-17)\lambda+(a-b+4).
+$$
+
+将 $b=a+4$ 代入得
+
+$$
+\lambda^3+(a-5)\lambda.
+$$
+
+要使零特征值至少为二重，必须 $a-5=0$，得 $a=5,b=9$。此时直接验算
+
+$$
+ r(A)=2,\qquad A^2=\begin{pmatrix}-1&-1&1\\-1&-1&1\\-2&-2&2\end{pmatrix},\qquad r(A^2)=1,
+$$
+
+确实不同解，所以
+
+$$
+\boxed{a-b=5-9=-4.}
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 必记 8｜方程组公共解：求两个零空间的交集
+
+$Ax=0$ 与 $Bx=0$ 的公共解恰好是 $\ker A\cap\ker B$，原书列出三种求法：
+
+<Tabs items={['方法一：直接联立', '方法二：通解代入方程', '方法三：两份通解联立']}>
+  <Tab value="方法一：直接联立">
+
+  将两组方程合并：
+
+  $$
+  \boxed{\ker A\cap\ker B=\ker\begin{pmatrix}A\\B\end{pmatrix}.}
+  $$
+
+  因此公共非零解存在当且仅当 $r\binom AB<n$；公共解空间的维数为 $n-r\binom AB$。这是最直接也最稳定的方法。
+
+  </Tab>
+  <Tab value="方法二：通解代入方程">
+
+  若已知 $Ax=0$ 的通解为 $x=N_Ac$，代入 $Bx=0$ 得到 $BN_Ac=0$。先解出参数列 $c$，再代回 $x=N_Ac$，即可得到公共解。
+
+  </Tab>
+  <Tab value="方法三：两份通解联立">
+
+  若分别知道 $x=N_Ac$ 与 $x=N_Bd$，则联立 $N_Ac=N_Bd$ 求参数之间的关系，回代任一通解。注意两组参数不必相同，也不应擅自要求 $c=d$。
+
+  </Tab>
+</Tabs>
+
+### 原书真题 7｜2025 年：$r(AB)>r(BA)$ 与公共非零解
+
+<div id="math21-2027-note14-2025-03">
+
+**题型：单选题**
+
+来源:2025年考研真题, 科目:线性代数, 考点:矩阵乘积的秩与公共解, 难度:较难
+
+设 $A,B$ 为 $3$ 阶矩阵，满足 $r(AB)=r(BA)+1$，则下列说法必然成立的是（ ）。
+
+
+
+**A.** $(A+B)x=0$ 只有零解。
+
+
+
+
+**B.** $Ax=0$ 与 $Bx=0$ 均只有零解。
+
+
+
+
+**C.** $Ax=0$ 与 $Bx=0$ 没有公共非零解。
+
+
+
+
+**D.** $ABAx=0$ 与 $BABx=0$ 有公共非零解。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** D
+
+**答案：D。**如果 $A$ 或 $B$ 可逆，则 $AB$ 与 $BA$ 相似（例如 $A$ 可逆时 $BA=A^{-1}(AB)A$），必有 $r(AB)=r(BA)$，矛盾。因此 $A,B$ 均不可逆，$r(AB)\le\min\{r(A),r(B)\}\le2$。结合题设，得到
+
+$$
+\boxed{r(BA)\le1.}
+$$
+
+再利用乘积的秩不大于任一因子的秩：
+
+$$
+r(ABA)\le r(BA)\le1,\qquad
+r(BAB)\le r(BA)\le1.
+$$
+
+于是
+
+$$
+r\begin{pmatrix}ABA\\BAB\end{pmatrix}
+\le r(ABA)+r(BAB)\le2<3.
+$$
+
+该堆叠矩阵有 3 列、秩小于 3，所以存在非零公共解，D 必真。
+
+**排除 C 的反例：**取 $A=E_{12}$、$B=E_{22}$（均为 $3$ 阶标准矩阵），则 $AB=E_{12}$、$BA=O$，但 $Ax=0$ 与 $Bx=0$ 的公共零空间含 $e_1,e_3$ 等非零向量。因此 C 并非必然成立。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 必记 9｜一个方程组的解均为另一个的解
+
+设 $A,B$ 的列数同为 $n$，则
+
+$$
+\boxed{\begin{aligned}
+Ax=0\Longrightarrow Bx=0
+&\iff \ker A\subseteq\ker B\\
+&\iff r(A)=r\begin{pmatrix}A\\B\end{pmatrix}\\
+&\iff \operatorname{Row}(B)\subseteq\operatorname{Row}(A).
+\end{aligned}}
+$$
+
+注意包含方向：**$A$ 的解更少、约束更强，则 $A$ 的行空间更大，能线性表出 $B$ 的各行。**若题设还说“两个方程组不同解”，则以上包含为严格包含，且
+
+$$
+r(A)>r(B).
+$$
+
+<Callout type="warn" title="“同解”“公共解”“解包含”的三重区别">
+
+同解：比较两边零空间是否**相等**；公共解：求两个零空间的**交集**；$Ax=0$ 的解都是 $Bx=0$ 的解：判断 $\ker A\subseteq\ker B$。不能将三者一律写成“$r(A)=r(B)$”。
+
+</Callout>
+
+### 原书真题 8｜2024 年：解包含且不同解
+
+<div id="math21-2027-note14-2024-01">
+
+**题型：解答题**
+
+来源:2024年考研真题, 科目:线性代数, 考点:解空间包含与矩阵秩, 难度:中等
+
+设
+
+$$
+A=\begin{pmatrix}0&a&1\\1&0&1\end{pmatrix},\qquad
+B=\begin{pmatrix}1&1\\1&1\\2&b\end{pmatrix}.
+$$
+
+若 $Ax=0$ 的解均为 $B^Tx=0$ 的解，但这两个齐次方程组不同解，求 $a,b$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+由 $A$ 的两行 $u=(0,a,1)$、$v=(1,0,1)$ 总是线性无关，可知 $r(A)=2$。题设表示
+
+$$
+\operatorname{Row}(B^T)\subsetneq\operatorname{Row}(A),
+$$
+
+从而 $r(B^T)<2$。由于 $B^T$ 的两行是
+
+$$
+(1,1,2),\qquad(1,1,b),
+$$
+
+它至少秩为 $1$，故 $r(B^T)=1$，得到 $b=2$。
+
+此时只需使 $(1,1,2)$ 是 $u,v$ 的线性组合。设
+
+$$
+(1,1,2)=s(0,a,1)+t(1,0,1).
+$$
+
+第一坐标得 $t=1$，第三坐标得 $s=1$，第二坐标得 $a=1$。核查 $r(A)=2>1=r(B^T)$，解包含且不相等。故
+
+$$
+\boxed{a=1,\qquad b=2.}
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+### 原书真题 9｜2021 年：列向量可表出与转置方程组的解包含
+
+<div id="math21-2027-note14-2021-02">
+
+**题型：单选题**
+
+来源:2021年考研真题, 科目:线性代数, 考点:列空间包含与转置零空间, 难度:中等
+
+设 $A=(\alpha_1,\alpha_2,\alpha_3)$、$B=(\beta_1,\beta_2,\beta_3)$ 为 $3$ 阶矩阵。若向量组 $\alpha_1,\alpha_2,\alpha_3$ 可以由向量组 $\beta_1,\beta_2$ 线性表出，则下列结论正确的是（ ）。
+
+
+
+**A.** $Ax=0$ 的解均为 $Bx=0$ 的解。
+
+
+
+
+**B.** $A^Tx=0$ 的解均为 $B^Tx=0$ 的解。
+
+
+
+
+**C.** $Bx=0$ 的解均为 $Ax=0$ 的解。
+
+
+
+
+**D.** $B^Tx=0$ 的解均为 $A^Tx=0$ 的解。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** D
+
+**答案：D。**已知 $A$ 的每个列向量都可由 $\beta_1,\beta_2$ 表出，因此更一般地有
+
+$$
+\operatorname{Col}(A)\subseteq\operatorname{Col}(B).
+$$
+
+可写成 $A=BC$（其中 $C$ 为适当的 $3\times3$ 系数矩阵，**不要求可逆**），于是
+
+$$
+A^T=C^TB^T.
+$$
+
+若 $B^Tx=0$，则 $A^Tx=C^TB^Tx=0$，故选 D。也可从正交补直接看出
+
+$$
+\operatorname{Col}(A)\subseteq\operatorname{Col}(B)
+\Longrightarrow \ker B^T\subseteq\ker A^T.
+$$
+
+<Callout type="info" title="文本校勘">
+
+原书第 76 页题干中的向量下标被原 PDF 黑块遮蔽，解析 MD 无法辨认。此处依据 [2021 年考研真题公开文本（含解析）](https://www.ztbu.edu.cn/uploadfile/files/2023/05/24/20230524103602360.pdf) 核对“$\alpha_1,\alpha_2,\alpha_3$ 可由 $\beta_1,\beta_2$ 线性表出”的条件。即便题干把后者写成 $\beta_1,\beta_2,\beta_3$，上述 D 项的逻辑也相同。
+
+</Callout>
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 必记 10｜向量空间、基与坐标变换（数学一）
+
+### 1. 子空间的维数、基与唯一坐标
+
+向量空间 $V$ 的**基**是一个能张成 $V$ 的线性无关向量组，基的向量个数为 $\dim V$。若 $\{\alpha_1,\ldots,\alpha_r\}$ 是 $V$ 的基，则每一个 $x\in V$ 都能且只能写成
+
+$$
+\boxed{x=k_1\alpha_1+\cdots+k_r\alpha_r.}
+$$
+
+系数列 $(k_1,\ldots,k_r)^T$ 称为向量 $x$ 在该**有序基**下的坐标。有限维空间的任意两组基含有相同数目的向量；对一个张成 $V$ 的向量组，其极大线性无关组正好给出一组基。
+
+### 2. 旧基、新基与过渡矩阵
+
+把旧基和新基按列写为
+
+$$
+E=(\alpha_1,\ldots,\alpha_r),\qquad
+F=(\beta_1,\ldots,\beta_r).
+$$
+
+按原书采用的约定，**从旧基到新基的过渡矩阵** $P$ 满足
+
+$$
+\boxed{F=EP,\qquad P=E^{-1}F}
+$$
+
+（当 $E,F$ 是 $\mathbb R^r$ 的方阵基矩阵时）。$P$ 的第 $j$ 列是新基向量 $\beta_j$ 在旧基下的坐标。一般抽象 $r$ 维子空间的基矩阵不必为方阵，此时只用 $F=EP$ 定义 $P$；不要机械写非方阵 $E^{-1}$。
+
+### 3. 坐标变换：方向恰好相反
+
+若同一向量 $x$ 在旧基、在新基下的坐标分别为 $y,z$，则
+
+$$
+\boxed{x=Ey=Fz=EPz\quad\Longrightarrow\quad y=Pz,\qquad z=P^{-1}y.}
+$$
+
+<Callout type="warn" title="牢记：基变换用 P，旧坐标转新坐标用 P 的逆">
+
+在约定 $F=EP$ 下，**基向量的变化由 $P$ 实现**，而**同一向量的坐标由 $P^{-1}$ 实现**。题目若交换“旧基”和“新基”，过渡矩阵也随之取逆；并非所有教材对“从甲到乙的过渡矩阵”口头命名完全一致，因此必须以题面等式为准。
+
+</Callout>
+
+<Steps>
+  <Step>
+
+  ### 用列向量求过渡矩阵
+
+  把新基 $\beta_j$ 分别用旧基 $\alpha_1,\ldots,\alpha_r$ 线性表示，将表示系数作为 $P$ 的第 $j$ 列。
+
+  </Step>
+  <Step>
+
+  ### 先验证基是否成立
+
+  若向量位于 $\mathbb R^r$，确认 $\det E\ne0$、$\det F\ne0$。新旧基都是基，$P$ 必可逆。
+
+  </Step>
+  <Step>
+
+  ### 由 $y=Pz$ 变换坐标
+
+  已知旧坐标求新坐标，解 $Pz=y$ 或计算 $z=P^{-1}y$；已知新坐标求旧坐标，直接 $y=Pz$。
+
+  </Step>
+</Steps>
+
+### 原书原理配套示例｜两组基的过渡矩阵与坐标（原创）
+
+设旧基为 $\alpha_1=e_1,\alpha_2=e_2$，新基为 $\beta_1=e_1,\beta_2=e_1+e_2$，则
+
+$$
+E=I_2,\qquad F=\begin{pmatrix}1&1\\0&1\end{pmatrix},\qquad
+P=\begin{pmatrix}1&1\\0&1\end{pmatrix}.
+$$
+
+同一个向量在旧基下坐标 $y=(2,3)^T$，新坐标为
+
+$$
+z=P^{-1}y=\begin{pmatrix}1&-1\\0&1\end{pmatrix}\begin{pmatrix}2\\3\end{pmatrix}
+=\boxed{\begin{pmatrix}-1\\3\end{pmatrix}}.
+$$
+
+确有 $-\beta_1+3\beta_2=2e_1+3e_2$。
+
+## 原创巩固自测｜把知识点转化为可操作的题目
+
+以下 8 道均为**本记新增原创练习**，并非原书真题。优先独立判断，再打开解答。
+
+<div id="math21-2027-note14-q01">
+
+**题型：单选题**
+
+来源:本记原创自测, 考点:向量个数与秩, 难度:基础
+
+设 $A$ 为 $3\times5$ 实矩阵，下列结论必然成立的是（ ）。
+
+
+
+**A.** $A$ 的五个列向量线性无关。
+
+
+
+
+**B.** $A$ 的五个列向量线性相关。
+
+
+
+
+**C.** $A$ 的三个行向量线性相关。
+
+
+
+
+**D.** $r(A)=3$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** B
+
+列向量有 5 个、每个只有 3 维，故 $r(A)\le3<5$，必相关。行向量是否相关和矩阵是否满行秩则不能仅由矩阵大小确定。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note14-q02">
+
+**题型：解答题**
+
+来源:本记原创自测, 考点:线性表示与增广矩阵, 难度:中等
+
+设 $\alpha_1=(1,0,1)^T$，$\alpha_2=(0,1,1)^T$，$\beta=(2,3,5)^T$。判定 $\beta$ 能否被前两向量唯一线性表出，并求系数。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+令 $c_1\alpha_1+c_2\alpha_2=\beta$。前两个分量立即给出 $c_1=2,c_2=3$，第三分量检验 $2+3=5$，相容。两向量线性无关，$r(\alpha_1,\alpha_2)=2$，故表示唯一：$\boxed{\beta=2\alpha_1+3\alpha_2}$。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note14-q03">
+
+**题型：单选题**
+
+来源:本记原创自测, 考点:行列空间及等价, 难度:中等
+
+设 $A,B$ 均为 $2\times3$ 矩阵。下列哪个条件恰好刻画其**行向量组等价**？（ ）。
+
+
+
+**A.** $r(A)=r(B)$。
+
+
+
+
+**B.** $r(A)=r(B)=r(A,B)$。
+
+
+
+
+**C.** $r(A)=r(B)=r\begin{pmatrix}A\\B\end{pmatrix}$。
+
+
+
+
+**D.** $\det A=\det B$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** C
+
+行向量属于 $\mathbb R^3$，判断两个行空间是否相等，需要把行向量**纵向拼接**。只知两矩阵同秩只能说明行空间维数相同，不能说明空间相同；非方阵无行列式。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note14-q04">
+
+**题型：解答题**
+
+来源:本记原创自测, 考点:基础解系与零度, 难度:基础
+
+设 $A$ 为 $4\times6$ 矩阵且 $r(A)=3$。求 $Ax=0$ 的基础解系中向量个数，并判断 $Ax=b$ 一旦有解是否唯一。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+未知量 $n=6$，故 $\dim\ker A=6-3=3$，基础解系含 $\boxed{3}$ 个向量。如果 $Ax=b$ 相容，任一特解加上三个自由参数的齐次通解仍是解，所以**必有无穷多解，不可能唯一**。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note14-q05">
+
+**题型：解答题**
+
+来源:本记原创自测, 考点:同解与公共解比较, 难度:中等
+
+设
+
+$$
+A=\begin{pmatrix}1&1&0\\0&0&0\end{pmatrix},\qquad
+B=\begin{pmatrix}2&2&0\\0&0&0\end{pmatrix},\qquad
+C=\begin{pmatrix}0&1&1\end{pmatrix}.
+$$
+
+判断 $Ax=0$ 与 $Bx=0$ 是否同解，并求 $Ax=0$、$Cx=0$ 的全部公共解。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+$B=2A$，所以两个方程组同解，解集均为 $x_1+x_2=0$。与 $Cx=0$ 联立得到
+
+$$
+\begin{cases}x_1+x_2=0,\\x_2+x_3=0.\end{cases}
+$$
+
+取 $x_2=t$，则 $x_1=-t,x_3=-t$，故公共解为
+
+$$
+\boxed{x=t(-1,1,-1)^T,\quad t\in\mathbb R.}
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note14-q06">
+
+**题型：解答题**
+
+来源:本记原创自测, 考点:矩阵方程的全部解, 难度:中等
+
+设
+
+$$
+A=\begin{pmatrix}1&1\\2&2\end{pmatrix},\qquad
+B=\begin{pmatrix}3&4\\6&8\end{pmatrix}.
+$$
+
+求矩阵方程 $AX=B$ 的所有 $2\times2$ 解矩阵 $X$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+逐列解 $A x_1=(3,6)^T$、$Ax_2=(4,8)^T$，即每列分别满足 $x_{11}+x_{21}=3$、$x_{12}+x_{22}=4$。令 $x_{21}=s$、$x_{22}=t$，则
+
+$$
+\boxed{X=\begin{pmatrix}3-s&4-t\\s&t\end{pmatrix},\quad s,t\in\mathbb R.}
+$$
+
+$A$ 秩为 $1$，每列有一个独立自由参数，因此两个参数不能强行合成一个。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note14-q07">
+
+**题型：单选题**
+
+来源:本记原创自测, 考点:解的包含与秩, 难度:中等
+
+若 $A,B$ 均有 $n$ 列，且 $Ax=0$ 的所有解都是 $Bx=0$ 的解，则一定有（ ）。
+
+
+
+**A.** $\operatorname{Col}(A)\subseteq\operatorname{Col}(B)$。
+
+
+
+
+**B.** $r(A)=r(B)$。
+
+
+
+
+**C.** $r\begin{pmatrix}A\\B\end{pmatrix}=r(A)$。
+
+
+
+
+**D.** $B=AP$，其中 $P$ 为可逆方阵。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** C
+
+零空间包含 $\ker A\subseteq\ker B$ 等价于 $B$ 每一行可由 $A$ 的行线性表出，因此竖向拼接不会增秩，即 $r\binom AB=r(A)$。不必有两者同秩，也不要求列空间可比较。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note14-q08">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:线性代数, 考点:基变换与坐标变换, 难度:中等
+
+在 $\mathbb R^2$ 中，旧基为 $\alpha_1=(1,0)^T,\alpha_2=(0,1)^T$，新基为 $\beta_1=(1,1)^T,\beta_2=(1,-1)^T$。求旧基到新基的过渡矩阵 $P$，以及旧坐标 $y=(4,2)^T$ 对应的新坐标 $z$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+按 $F=EP$ 的约定，$E=I_2$，故
+
+$$
+P=F=\begin{pmatrix}1&1\\1&-1\end{pmatrix},\qquad
+P^{-1}=\frac12\begin{pmatrix}1&1\\1&-1\end{pmatrix}.
+$$
+
+因此
+
+$$
+\boxed{z=P^{-1}y=\begin{pmatrix}3\\1\end{pmatrix}.}
+$$
+
+核查 $3\beta_1+\beta_2=3(1,1)^T+(1,-1)^T=(4,2)^T$。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 本记速查｜题目中的关键词与第一步
+
+| 题目关键词 | 优先方法 | 关键条件 / 易错点 |
+| --- | --- | --- |
+| “$m$ 个向量是否线性相关” | 比较 $r(A)$ 与向量个数 $m$ | 不与每个向量的维数直接比较 |
+| “能否由某组向量表出” | 比较 $r(A)$ 与 $r(A,\beta)$ | 相容后再判断是否唯一 |
+| “向量组等价” | 比较两组秩与横拼秩 | 列向量等价需横拼；行向量等价需竖拼 |
+| “齐次方程只有零解” | $r(A)=n$ | $n$ 是未知量个数 |
+| “基础解系的个数” | $n-r(A)$ | 三要件：均为解、线性无关、个数足够 |
+| “非齐次有唯一解” | $r(A)=r(A,b)=n$ | 先排除无解 |
+| “矩阵方程 $AX=B$” | 按列分别解 $Ax_j=\beta_j$ | 自由参数可按列独立选择 |
+| “$Ax=0$ 与 $Bx=0$ 同解” | $r(A)=r(B)=r\binom AB$ | 行等价；若不等行数，不可随意写可逆左乘 |
+| “两个方程组有公共非零解” | $r\binom AB<n$ | 求交集，不是要求同解 |
+| “$Ax=0$ 的解都是 $Bx=0$ 的解” | $r\binom AB=r(A)$ | $B$ 的行空间包含于 $A$ 的行空间 |
+| “基变换与坐标变换” | $F=EP,\ y=Pz$ | $z=P^{-1}y$，方向不能倒置 |
+
+<Callout type="success" title="第 14 记校对与覆盖清单">
+
+- **原书覆盖**：第 70—77 页，**必记 1—10** 全部纳入；原书所列 **9 道真题**逐题整理并配解答，另补充 **8 道明确标记的原创练习**。
+- **严重识别问题**：第 73 页伴随矩阵题、第 76 页向量组题的希腊字母与选项在原 PDF 中呈黑块，已借公开真题文本核对；不把遮挡内容当成可直接从 PDF 辨认的事实。
+- **原资料更正**：第 71 页“行／列向量组等价”的**拼接方向颠倒**已修正；矩阵是否同型、方阵求行列式、基础解系个数和过渡矩阵方向均已补充适用前提。
+
+</Callout>

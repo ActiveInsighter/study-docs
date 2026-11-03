@@ -1,0 +1,1001 @@
+---
+title: "第 7 记｜定积分与反常积分"
+description: "2027 周洋鑫《考前21记》第 7 记：定积分与反常积分。含知识梳理、适用条件与 8 道配套题及解析。"
+---
+
+<Callout type="info" title="本记范围与校订原则">
+
+本记依据《2027 周洋鑫考前 21 记（数一、数二、数三最终版）》**第 33—39 页**，以解析版 Markdown 为底稿，对照原 PDF 核查。依原书顺序完整整理 **5 个“必记”板块**：定积分性质与计算、反常积分计算、比较审敛法、平面图形面积与旋转体体积、数一数二专属的弧长/旋转曲面面积/形心质心。原文公式与重点提醒均覆盖，补齐适用条件及推导。**本记原文没有完整考研真题题干，文末练习均明确标为原创自测，不冒称真题。**
+
+其中原书第 33 页的一组反三角函数大小关系含**原文数学错误**；第 36—37 页的参数面积、旋转体公式也需要补充方向和轴线位置的条件，已在相应位置作精确校订。
+
+</Callout>
+
+<Cards>
+  <Card title="必记 1｜定积分">比较、中值、奇偶、周期、点火公式、面积的对称性。</Card>
+  <Card title="必记 2—3｜反常积分">瑕点拆分、收敛前提、$p$ 型与对数型积分、等价比较。</Card>
+  <Card title="必记 4｜几何应用">直角与极坐标面积、参数方程、旋转体体积及古尔金公式。</Card>
+  <Card title="必记 5｜数一数二">三种弧长元、旋转曲面侧面积、杆/板/体的形心与质心。</Card>
+</Cards>
+
+## 必记 1｜定积分的重要性质与计算
+
+### 1. 定积分比较定理与七组重要不等式
+
+设 $a\le b$，$f,g$ 在 $[a,b]$ 上可积。如果整个区间上 $f(x)\le g(x)$，则
+
+$$
+\int_a^b f(x)\,\mathrm dx\le\int_a^b g(x)\,\mathrm dx.
+$$
+
+若 $a<b$ 且 $f,g$ 连续，同时 $f(x)<g(x)$ 在区间内至少某一点成立，则由于连续性，严格不等式在该点附近的某个小区间成立，从而积分**严格小于**。注意在端点顺序颠倒时，不等式方向也会变。
+
+<Callout type="idea" title="判断积分大小的标准顺序">
+
+先看积分区间是否一致；若一致，设 $h(x)=g(x)-f(x)$，优先判断 $h$ 在区间上的符号；若不能直接判符号，再尝试构造函数、切线与割线不等式。对称区间还应先试奇偶性。
+
+</Callout>
+
+原书第 33 页列出以下七组常用不等式，现按**有效定义域**整理。
+
+| 原书记号 | 可直接使用的正确结论 | 使用前提 |
+| --- | --- | --- |
+| (1) 指数与切线 | $e^x\ge1+x$ | 任意 $x\in\mathbb R$，且仅 $x=0$ 取等号 |
+| (2) 对数与切线 | $\ln(1+x)\le x$ | $x>-1$，且仅 $x=0$ 取等号 |
+| (3) 三角比较 | $\tan x>x>\sin x$ | $0<x<\pi/2$ |
+| (4) 反三角比较 | $\arcsin x>x>\sin x>\arctan x$，且 $\tan x>x$ | $0<x<1$；**不能额外断言 $\tan x>\arcsin x$ 恒成立** |
+| (5) 正弦基本不等式 | $x>\sin x$ | $x>0$ |
+| (6) 对数倒数夹逼 | $\displaystyle\frac1{1+x}<\ln\left(1+\frac1x\right)<\frac1x$ | $x>0$ |
+| (7) 对数双侧夹逼 | $\displaystyle\frac{x}{1+x}<\ln(1+x)<x$ | $x>0$ |
+
+<Callout type="error" title="原书第 33 页需要纠正的一处数学错误（非 OCR 错误）">
+
+原 PDF 中写有“$0<x<1$ 时，$\tan x>\arcsin x>x>\sin x>\arctan x$”。其中 **$\tan x>\arcsin x$ 在整个 $(0,1)$ 上并不成立**。因为
+
+$$
+\lim_{x\to1^-}\tan x=\tan1<\frac\pi2=\lim_{x\to1^-}\arcsin x,
+$$
+
+故在充分靠近 $1$ 的一些点，实际上有 $\tan x<\arcsin x$。其余 $\arcsin x>x>\sin x>\arctan x$ 和 $\tan x>x$ 可放心分别使用。此处按原 PDF 核对后纠错，**不要背诵原文的完整链式不等式**。
+
+</Callout>
+
+<Accordions>
+  <Accordion title="为什么 $e^x\ge1+x$、$\ln(1+x)\le x$？">
+
+  设 $F(x)=e^x-x-1$，则 $F'(x)=e^x-1$，在 $x=0$ 前负、后正，所以 $F(x)\ge F(0)=0$。
+
+  对 $x>-1$，令 $G(x)=x-\ln(1+x)$，则
+
+  $$
+  G'(x)=\frac{x}{1+x}.
+  $$
+
+  同理 $G(x)\ge G(0)=0$。两式是**凸函数与切线**之间大小关系的典型代表。
+
+  </Accordion>
+  <Accordion title="对数的双侧夹逼如何推出？">
+
+  对 $x>0$，由 $t\mapsto1/(1+t)$ 在 $[0,x]$ 上递减，有
+
+  $$
+  \frac1{1+x}<\frac1{1+t}<1\quad(0<t<x).
+  $$
+
+  积分即得
+
+  $$
+  \frac{x}{1+x}<\int_0^x\frac{\mathrm dt}{1+t}=\ln(1+x)<x.
+  $$
+
+  再令 $x$ 换成 $1/x$（其中新的 $x>0$），就得到原书第 (6) 式。
+
+  </Accordion>
+  <Accordion title="怎样证明 $\arcsin x>x>\sin x>\arctan x$？">
+
+  在 $0<x<1$ 时，$\arcsin'(x)=1/\sqrt{1-x^2}>1$，从 $x=0$ 积分得 $\arcsin x>x$。类似地，由 $\sin'(x)=\cos x<1$ 得 $x>\sin x$。
+
+  最后一段比较取 $H(x)=\sin x-\arctan x$，有
+
+  $$
+  H'(x)=\cos x-\frac1{1+x^2}>0.
+  $$
+
+  因为 $\cos x\ge1-\frac{x^2}{2}$，而当 $0<x<1$，
+
+  $$
+  1-\frac{x^2}{2}-\frac1{1+x^2}
+  =\frac{x^2(1-x^2)}{2(1+x^2)}>0.
+  $$
+
+  所以 $H(x)>H(0)=0$。同时 $\tan'(x)=1/\cos^2x>1$ 给出 $\tan x>x$。这些论证不能推出在整个 $(0,1)$ 上 $\tan x>\arcsin x$。
+
+  </Accordion>
+</Accordions>
+
+### 2. 绝对值估计与积分中值定理
+
+**积分三角不等式**：只要 $f$ 可积，就有
+
+$$
+\boxed{\left|\int_a^b f(x)\,\mathrm dx\right|\le\int_a^b|f(x)|\,\mathrm dx}\qquad(a\le b).
+$$
+
+其原理是 $-|f(x)|\le f(x)\le|f(x)|$，积分并夹逼。特别地，若 $|f(x)|\le M$，则
+
+$$
+\left|\int_a^b f(x)\,\mathrm dx\right|\le M(b-a).
+$$
+
+**积分中值定理**：若 $f$ 在 $[a,b]$ 连续且 $a<b$，则存在 $\xi\in(a,b)$，使
+
+$$
+\boxed{\int_a^b f(x)\,\mathrm dx=f(\xi)(b-a).}
+$$
+
+**广义（加权）积分中值定理**：若 $f,g$ 在 $[a,b]$ 连续且 $g$ 不变号，存在 $\xi\in[a,b]$，使
+
+$$
+\boxed{\int_a^b f(x)g(x)\,\mathrm dx=f(\xi)\int_a^b g(x)\,\mathrm dx.}
+$$
+
+这两条定理可**去掉积分号**，也可把积分大小转化为函数值大小。若 $g\equiv0$，任意 $\xi$ 都满足等式；若 $g\not\equiv0$，加权平均值介于 $f$ 的最小值与最大值之间。
+
+**函数在区间上的平均值**（原书第 4 项）为
+
+$$
+\boxed{f_{\mathrm{avg}}=\frac1{b-a}\int_a^bf(x)\,\mathrm dx}\qquad(a<b).
+$$
+
+<Callout type="warn" title="中值点范围不可随意扩大或缩小">
+
+普通积分中值定理在 $a<b$、$f$ 连续时可取 **$\xi\in(a,b)$**；带权版本原书给出 $\xi\in[a,b]$，按这一标准记忆即可。若函数不连续，不可直接套连续函数版本。
+
+</Callout>
+
+### 3. 对称区间的奇偶性、周期性
+
+设 $a>0$，$f$ 可积，则始终有
+
+$$
+\boxed{\int_{-a}^{a}f(x)\,\mathrm dx=\int_0^a[f(x)+f(-x)]\,\mathrm dx.}
+$$
+
+因此，若 $f$ 为奇函数，$\displaystyle\int_{-a}^a f(x)\,\mathrm dx=0$；若 $f$ 为偶函数，$\displaystyle\int_{-a}^a f(x)\,\mathrm dx=2\int_0^a f(x)\,\mathrm dx$。对非纯奇偶函数，可先把它拆成奇部分和偶部分。
+
+设 $f$ 为 $T>0$ 周期的连续函数（可积且周期性质成立时亦可），则对任意实数 $a$，
+
+$$
+\boxed{\int_a^{a+T}f(x)\,\mathrm dx
+=\int_0^Tf(x)\,\mathrm dx
+=\int_{-T/2}^{T/2}f(x)\,\mathrm dx.}
+$$
+
+**证明思路**：将 $[a,a+T]$ 平移并在整数个周期处分割；或对 $H(a)=\int_a^{a+T}f(x)\,\mathrm dx$ 求导，得 $H'(a)=f(a+T)-f(a)=0$。特别注意：**周期函数的积分函数未必周期**，仅当单周期积分为零时才有周期性（与第 6 记相呼应）。
+
+### 4. 点火公式（Wallis 积分）及其延伸
+
+原书称“点火公式一家人”。令
+
+$$
+I_n=\int_0^{\pi/2}\sin^n x\,\mathrm dx
+=\int_0^{\pi/2}\cos^n x\,\mathrm dx,
+\qquad n=0,1,2,\ldots.
+$$
+
+由分部积分得到递推
+
+$$
+\boxed{I_n=\frac{n-1}{n}I_{n-2}\quad(n\ge2),\qquad I_0=\frac\pi2,\ I_1=1.}
+$$
+
+
+<Tabs items={['偶次幂', '奇次幂', '扩展区间']}>
+  <Tab value="偶次幂">
+
+  对 $n=2m\ge2$：
+
+  $$
+  I_{2m}=\frac{2m-1}{2m}\cdot\frac{2m-3}{2m-2}\cdots\frac12\cdot\frac\pi2
+  =\frac{(2m-1)!!}{(2m)!!}\frac\pi2.
+  $$
+
+  例如 $I_2=\pi/4$、$I_4=3\pi/16$。
+
+  </Tab>
+  <Tab value="奇次幂">
+
+  对 $n=2m+1\ge1$：
+
+  $$
+  I_{2m+1}=\frac{2m}{2m+1}\cdot\frac{2m-2}{2m-1}\cdots\frac23\cdot1
+  =\frac{(2m)!!}{(2m+1)!!}.
+  $$
+
+  其中 $I_1=1$、$I_3=2/3$。注意 $n=1$ 是原书“$n>1$ 奇数”的基例，需要单独包含。
+
+  </Tab>
+  <Tab value="扩展区间">
+
+  对任意非负整数 $n$，有
+
+  $$
+  \int_0^\pi\sin^n x\,\mathrm dx=2I_n,
+  $$
+
+  $$
+  \int_0^\pi\cos^n x\,\mathrm dx
+  =\begin{cases}2I_n,&n\text{ 为偶数},\\0,&n\text{ 为奇数},\end{cases}
+  $$
+
+  $$
+  \int_0^{2\pi}\sin^n x\,\mathrm dx
+  =\int_0^{2\pi}\cos^n x\,\mathrm dx
+  =\begin{cases}4I_n,&n\text{ 为偶数},\\0,&n\text{ 为奇数}.\end{cases}
+  $$
+
+  </Tab>
+</Tabs>
+
+<Callout type="idea" title="三步判断点火公式是否适用">
+
+先看积分区间是否为 $[0,\pi/2]$、$[0,\pi]$ 或 $[0,2\pi]$；再看正弦余弦幂次是奇还是偶；最后判断能否利用对称性消去积分，**不要直接对偶次幂也写零**。
+
+</Callout>
+
+### 5. 两个几何积分与两条对称替换公式
+
+原书第 34 页给出两道“画图即可”的积分。设 $a>0$：
+
+$$
+\begin{aligned}
+\int_0^a\sqrt{ax-x^2}\,\mathrm dx
+&=\int_0^a\sqrt{\left(\frac a2\right)^2-\left(x-\frac a2\right)^2}\,\mathrm dx
+=\boxed{\frac{\pi a^2}{8}},\\[4pt]
+\int_0^a\sqrt{a^2-x^2}\,\mathrm dx&=\boxed{\frac{\pi a^2}{4}}.
+\end{aligned}
+$$
+
+前者是半径 $a/2$ 的**上半圆**面积，后者是半径 $a$ 的**第一象限四分之一圆**面积。
+
+另外，若相应复合函数可积，则
+
+$$
+\boxed{\int_0^{\pi/2}f(\sin x)\,\mathrm dx
+=\int_0^{\pi/2}f(\cos x)\,\mathrm dx,}
+$$
+
+$$
+\boxed{\int_0^\pi x f(\sin x)\,\mathrm dx
+=\frac\pi2\int_0^\pi f(\sin x)\,\mathrm dx.}
+$$
+
+第一式作 $x=\pi/2-t$；第二式将 $x$ 与 $\pi-x$ 的积分相加即可得到。
+
+## 必记 2｜反常积分的计算：瑕点拆分、线性运算和 $p$ 积分
+
+### 1. 先把每个“危险点”单独隔开
+
+反常积分有两大风险：**积分区间无穷**与**被积函数在有限点无界（瑕点）**。原书强调“有一个发散，整体就发散”。严格说，如果 $c\in(a,b)$ 是瑕点，则
+
+$$
+\int_a^b f(x)\,\mathrm dx
+:=\lim_{u\to c^-}\int_a^u f(x)\,\mathrm dx
++\lim_{v\to c^+}\int_v^b f(x)\,\mathrm dx,
+$$
+
+这里的两个极限必须**分别存在且有限**，才能说原反常积分收敛；不能把 $c$ 两侧的无穷大“抵消”掉。
+
+<Callout type="error" title="柯西主值为 0，不代表反常积分收敛">
+
+$$
+\mathrm{PV}\int_{-1}^1\frac{\mathrm dx}{x}=0,
+$$
+
+但 $\int_{-1}^0 \frac{\mathrm dx}{x}$ 与 $\int_0^1\frac{\mathrm dx}{x}$ 各自发散，因此通常意义下 $\int_{-1}^1\frac{\mathrm dx}{x}$ **发散**。
+
+</Callout>
+
+<Steps>
+  <Step>
+
+  ### 定位影响敛散性的全部端点
+
+  检查 $-\infty$、$+\infty$、分母为零处、对数及根式导致的无界处，并确认有无多个瑕点。
+
+  </Step>
+  <Step>
+
+  ### 选择普通分割点，逐段定义极限
+
+  尽量让每一段**只含一个**危险点；例如 $\int_0^{+\infty}f(x)\,\mathrm dx$ 应在 $1$ 等普通点处分成 $\int_0^1$ 与 $\int_1^{+\infty}$。
+
+  </Step>
+  <Step>
+
+  ### 分段分别判敛或求值
+
+  每段可用原函数极限、比较审敛法或绝对收敛判别；全部收敛才可相加，任意一段发散则整个反常积分不收敛。
+
+  </Step>
+</Steps>
+
+### 2. 加减法的可拆分条件
+
+原书的等式
+
+$$
+\int_a^{+\infty}[f(x)+g(x)]\,\mathrm dx
+=\int_a^{+\infty}f(x)\,\mathrm dx+\int_a^{+\infty}g(x)\,\mathrm dx
+$$
+
+**只有在右侧两个反常积分都收敛时，才可作为两个有限积分之和使用**。即使 $f+g$ 的积分收敛，也未必能拆分：
+
+$$
+\int_1^{+\infty}\left(\frac1x-\frac1{x+1}\right)\mathrm dx=\ln2,
+$$
+
+但 $\int_1^{+\infty}\frac{\mathrm dx}{x}$ 与 $\int_1^{+\infty}\frac{\mathrm dx}{x+1}$ 都发散。必须先整体化简，再求极限。
+
+### 3. 两类 $p$ 积分：无穷远与零点完全相反
+
+设 $a>0$：
+
+| 模型 | 收敛条件 | 发散条件 |
+| --- | --- | --- |
+| $\displaystyle\int_a^{+\infty}x^{-p}\,\mathrm dx$ | $p>1$ | $p\le1$ |
+| $\displaystyle\int_0^a x^{-p}\,\mathrm dx$ | $p<1$ | $p\ge1$ |
+
+它们来自 $p\ne1$ 时的原函数 $x^{1-p}/(1-p)$；临界值 $p=1$ 时为 $\ln x$，无论在 $0$ 还是无穷远均发散。
+
+<Callout type="warn" title="最常见的方向性错误">
+
+在 $x\to+\infty$ 处，幂次越大衰减越快：$p>1$ 收敛；在 $x\to0^+$ 处，幂次越大奇性越强：$p<1$ 才收敛。**同一个 $p$，不能跨危险点机械套同一条件。**
+
+</Callout>
+
+## 必记 3｜反常积分的比较审敛法
+
+### 1. 先选危险点，再在该方向上做等价比较
+
+原书第 35 页给出的主线：
+
+1. 找到所有无穷限和瑕点，并把积分拆成若干**每段只含一个危险点**的积分。
+2. 对非负函数，在危险点的**对应趋近方向**上寻找等价函数或可比较函数。
+3. 与熟悉的 $p$ 型、指数型、对数型模型比较后分别判敛散性。
+
+若 $f(x),g(x)\ge0$ 且在危险点方向有
+
+$$
+\lim_{x\to c}\frac{f(x)}{g(x)}=L\in(0,+\infty),
+$$
+
+则在该端点附近，$f,g$ 的对应反常积分同敛散。特别地，$f(x)\sim g(x)$（比例极限等于 1）可直接比较。这里 $c$ 可以是 $+\infty$ 或有限瑕点，且必须取对应的单侧极限。
+
+<Callout type="warn" title="等价比较法的使用边界">
+
+原书表格用的都是**非负函数**。对于变号振荡函数，不能不加条件地用“同阶”推断反常积分敛散；必要时可先比较绝对值积分。另有“函数本身的极限与积分收敛”之间不具有简单逆推关系，不要仅以 $f(x)\to0$ 就认定 $\int_a^{\infty}f(x)\,\mathrm dx$ 收敛。
+
+</Callout>
+
+### 2. 原书三类常用模型
+
+设 $a>0$、$\lambda\in\mathbb R$，则
+
+$$
+\begin{aligned}
+\int_a^{+\infty}e^{-\lambda x}\,\mathrm dx\text{ 收敛 }&\iff\lambda>0,\\
+\int_a^{+\infty}e^{-\lambda x}\,\mathrm dx\text{ 发散 }&\iff\lambda\le0.
+\end{aligned}
+$$
+
+设 $a>1$，对任意实数 $p,q$，有
+
+$$
+\int_a^{+\infty}\frac{\mathrm dx}{x^p(\ln x)^q}
+\quad\begin{cases}
+\text{收敛},&p>1,\\
+\text{发散},&p<1,\\
+\text{收敛},&p=1,\ q>1,\\
+\text{发散},&p=1,\ q\le1.
+\end{cases}
+$$
+
+这里 $p$ 优先决定收敛性；只有卡在 $p=1$ 时才轮到 $q$。边界情况通过换元 $t=\ln x$ 得
+
+$$
+\int_a^{+\infty}\frac{\mathrm dx}{x(\ln x)^q}
+=\int_{\ln a}^{+\infty}\frac{\mathrm dt}{t^q}.
+$$
+
+<Callout type="idea" title="额外补充｜零点处含对数的同类模型">
+
+若 $0<a<1$，则
+
+$$
+\int_0^a\frac{\mathrm dx}{x^p\bigl(\ln\frac1x\bigr)^q}
+$$
+
+在 $p<1$ 时收敛，在 $p>1$ 时发散，在 $p=1$ 时当且仅当 $q>1$ 收敛。这个结论**不是原书在该页单独列出的公式**，而是为了便于对照无限远模型补充的结果；同样要先确认 $a<1$、没有额外奇点。
+
+</Callout>
+
+<Tabs items={['比较审敛', '极限比较', '局部等价示例']}>
+  <Tab value="比较审敛">
+
+  对 $0\le f\le g$，若 $\int g$ 收敛，则 $\int f$ 收敛；若 $\int f$ 发散，则 $\int g$ 发散。**反方向均不能随意推。**
+
+  </Tab>
+  <Tab value="极限比较">
+
+  当 $f,g\ge0$，且 $f/g\to L\in(0,+\infty)$ 时，二者同敛散。若 $L=0$，仅可结合非负性证明“$g$ 收敛 $\Rightarrow f$ 收敛”；若 $L=+\infty$，仅可证明“$g$ 发散 $\Rightarrow f$ 发散”。
+
+  </Tab>
+  <Tab value="局部等价示例">
+
+  在 $x\to0^+$ 时，$\ln(1+x)\sim x$；于是
+
+  $$
+  \frac{\ln(1+x)}{x^p}\sim x^{1-p}.
+  $$
+
+  所以 $\displaystyle\int_0^1\frac{\ln(1+x)}{x^p}\,\mathrm dx$ 的收敛条件是 $1-p>-1$，即 $\boxed{p<2}$。这里 $x=1$ 为普通点，不影响敛散性。
+
+  </Tab>
+</Tabs>
+
+## 必记 4｜定积分的几何应用：面积与旋转体体积
+
+### 1. 直角坐标下面积：上减下、右减左
+
+当 $a<b$、$y_2(x)\ge y_1(x)$ 时，两曲线及 $x=a,x=b$ 围成的区域面积为
+
+$$
+\boxed{S=\int_a^b[y_2(x)-y_1(x)]\,\mathrm dx.}
+$$
+
+若区域适合横向切片，且 $c<d$、$x_2(y)\ge x_1(y)$，则
+
+$$
+\boxed{S=\int_c^d[x_2(y)-x_1(y)]\,\mathrm dy.}
+$$
+
+对应原书第 36 页 **$D_1$（竖条）与 $D_2$（横条）** 两幅图。若上下/左右关系在区间内改变，必须依交点**分段**或者改写为 $\int|\text{差}|$。
+
+### 2. 极坐标面积：扇形微元 $\frac12r^2\,\mathrm d\theta$
+
+对于 $\alpha\le\theta\le\beta$、$r(\theta)\ge0$ 的单层极坐标区域，
+
+$$
+\boxed{S=\frac12\int_\alpha^\beta r^2(\theta)\,\mathrm d\theta.}
+$$
+
+在同一角度上由内外两条非负半径曲线 $0\le r_1(\theta)\le r_2(\theta)$ 围成时，
+
+$$
+\boxed{S=\frac12\int_\alpha^\beta\bigl[r_2^2(\theta)-r_1^2(\theta)\bigr] \,\mathrm d\theta.}
+$$
+
+它们对应原书第 36 页 **$D_3$ 与 $D_4$** 两幅图。对双纽线等 $r^2$ 方程，需要先确定允许的 $\theta$ 区间与每一片叶子的覆盖次数。
+
+<Accordions>
+  <Accordion title="原书提醒复习｜心形线的总面积">
+
+  典型心形线 $r=a(1+\cos\theta)$，$a>0$，$0\le\theta\le2\pi$，其围成的总面积为
+
+  $$
+  S=\frac{a^2}{2}\int_0^{2\pi}(1+\cos\theta)^2\,\mathrm d\theta
+  =\boxed{\frac{3\pi a^2}{2}}.
+  $$
+
+  先确认曲线完整转过一周，不要只取半平面的一部分。
+
+  </Accordion>
+  <Accordion title="原书提醒复习｜双纽线的面积">
+
+  对 $r^2=a^2\cos2\theta$（$a>0$），一片叶子对应 $-\pi/4\le\theta\le\pi/4$，因此
+
+  $$
+  S_{\mathrm{一叶}}=\frac{a^2}{2}\int_{-\pi/4}^{\pi/4}\cos2\theta\,\mathrm d\theta
+  =\frac{a^2}{2}.
+  $$
+
+  两叶对称，故总面积为 $\boxed{a^2}$。**不能直接在 $0$ 到 $2\pi$ 上把负的 $r^2$ 当有效半径。**
+
+  </Accordion>
+</Accordions>
+
+### 3. 参数曲线的面积：换元后必须检查方向
+
+当 $y=y(t)\ge0$、$x=x(t)$ 单调增加，且曲线及 $x$ 轴围成一块无重叠区域时，
+
+$$
+S=\int_{x(\alpha)}^{x(\beta)}y\,\mathrm dx
+=\int_\alpha^\beta y(t)x'(t)\,\mathrm dt.
+$$
+
+如果 $x'(t)<0$，右侧是**有向积分**，面积要调整积分方向或取绝对值。对于一般闭曲线的简单封闭区域，可采用
+
+$$
+\boxed{S=\frac12\left|\oint\bigl(x\,\mathrm dy-y\,\mathrm dx\bigr)\right|,}
+$$
+
+并注意闭合、方向和是否自交。原书第 36 页只列 $S=\int y\,\mathrm dx$，默认为适宜该公式的特殊情形。
+
+<Callout type="idea" title="原书特别建议复习的两条参数曲线">
+
+**星形线** $x=a\cos^3t$，$y=a\sin^3t$（$0\le t\le2\pi$）围成面积 $\boxed{3\pi a^2/8}$；**摆线** $x=a(t-\sin t)$，$y=a(1-\cos t)$（$0\le t\le2\pi$）单拱与 $x$ 轴围成面积 $\boxed{3\pi a^2}$。这些计算例子是依据原书“建议复习”的提示另行补全，不是原书在该页已写出的答案。
+
+</Callout>
+
+### 4. 旋转体体积：圆盘/垫片法和柱壳法
+
+对位于第一象限且沿坐标轴旋转时**不会发生重复覆盖**的典型平面区域，原书第 37 页给出四条直接公式：
+
+| 围成的区域及变量 | 绕 $x$ 轴旋转 | 绕 $y$ 轴旋转 |
+| --- | --- | --- |
+| $0\le y\le y(x)$，$a\le x\le b$；$0\le a<b$ | $\displaystyle V_x=\pi\int_a^b y^2(x)\,\mathrm dx$（圆盘） | $\displaystyle V_y=2\pi\int_a^b xy(x)\,\mathrm dx$（柱壳） |
+| $0\le x\le x(y)$，$c\le y\le d$；$0\le c<d$ | $\displaystyle V_x=2\pi\int_c^d yx(y)\,\mathrm dy$（柱壳） | $\displaystyle V_y=\pi\int_c^d x^2(y)\,\mathrm dy$（圆盘） |
+
+<Callout type="warn" title="原书旋转体公式的适用条件必须补足">
+
+第 37 页第二组写“$x=x(y)$（曲线在 $x$ 轴上方）”，此处更关键的几何条件是 **$x(y)\ge0$，区域在 $y$ 轴右侧**；如果用 $2\pi yx(y)$ 绕 $x$ 轴的柱壳公式，还需确保 $y\ge0$，并避免重复旋转覆盖。第一组的 $2\pi xy(x)$ 也默认 $x\ge0$。当区域跨旋转轴，不能仅把 $x$ 或 $y$ 换成绝对值就机械照搬，必须按实际几何截面重新建模。
+
+</Callout>
+
+对上下两条正函数 $0\le y_1(x)\le y_2(x)$ 围成的区域绕 $x$ 轴旋转，用**垫片法**：
+
+$$
+\boxed{V_x=\pi\int_a^b\bigl[y_2^2(x)-y_1^2(x)\bigr]\,\mathrm dx.}
+$$
+
+同一区域若 $x\ge0$，绕 $y$ 轴旋转通常用**柱壳法**：
+
+$$
+\boxed{V_y=2\pi\int_a^b x\bigl[y_2(x)-y_1(x)\bigr]\,\mathrm dx.}
+$$
+
+### 5. 古尔金（Pappus–Guldinus）公式
+
+若平面区域 $D$ 完全位于旋转直线 $L$ 的同一侧，旋转一周而不产生重叠的不同覆盖，则体积可写为
+
+$$
+\boxed{V_L=\iint_D 2\pi\,r(x,y)\,\mathrm dA,}
+$$
+
+其中 $r(x,y)$ 为点 $(x,y)$ 到直线 $L$ 的**非负垂直距离**。如果区域面积为 $A$，形心到该轴距离为 $\bar r$，还能写成 $\boxed{V_L=2\pi\bar r\,A}$。
+
+<Steps>
+  <Step>
+
+  ### 找到轴线方程
+
+  若 $L:Ax+By+C=0$，则点到轴的距离为 $r(x,y)=\dfrac{|Ax+By+C|}{\sqrt{A^2+B^2}}$。
+
+  </Step>
+  <Step>
+
+  ### 写出区域 $D$ 的积分范围
+
+  选择直角坐标、极坐标或换元后的二维区域表达式；必要时把复杂区域拆开。
+
+  </Step>
+  <Step>
+
+  ### 核查“不穿过区域、无重叠”，再积分
+
+  若旋转轴穿过区域内部，$\iint_D2\pi r\,\mathrm dA$ 可能计算的是按重数计的扫掠体积，不一定等于实际几何实体体积，应改用截面法求不重复的体积。
+
+  </Step>
+</Steps>
+
+## 必记 5｜数一、数二专属：弧长、旋转曲面侧面积、质心与形心
+
+<Callout type="info" title="考纲适用范围">
+
+原书明确标注“数一、数二内容（数三不看）”。本板块保留原书全部三组核心题材及公式；数三考生可按所报考年份的正式大纲决定是否跳过。
+
+</Callout>
+
+### 1. 平面曲线弧长：三种弧微分
+
+统一记忆为 **$\mathrm ds=\sqrt{(\mathrm dx)^2+(\mathrm dy)^2}$**，再依曲线表达式换元。
+
+| 曲线形式 | 弧长微元 | 弧长公式（参数按递增方向） |
+| --- | --- | --- |
+| 直角坐标 $y=y(x)$ | $\mathrm ds=\sqrt{1+[y'(x)]^2}\,\mathrm dx$ | $\displaystyle s=\int_a^b\sqrt{1+[y'(x)]^2}\,\mathrm dx$ |
+| 参数方程 $x=x(t)$、$y=y(t)$ | $\mathrm ds=\sqrt{[x'(t)]^2+[y'(t)]^2}\,\mathrm dt$ | $\displaystyle s=\int_\alpha^\beta\sqrt{[x'(t)]^2+[y'(t)]^2}\,\mathrm dt$ |
+| 极坐标 $r=r(\theta)$ | $\mathrm ds=\sqrt{r^2(\theta)+[r'(\theta)]^2}\,\mathrm d\theta$ | $\displaystyle s=\int_\alpha^\beta\sqrt{r^2(\theta)+[r'(\theta)]^2}\,\mathrm d\theta$ |
+
+上述积分写法默认 $a<b$、$\alpha<\beta$；若给出的参数区间方向反向，应交换上下限。严格来说弧长积分是非负弧微分沿参数区间的积分，**不能将带符号 $\mathrm dx$ 误作弧长微元**。
+
+<Accordions>
+  <Accordion title="高频补充｜一拱摆线的弧长">
+
+  对 $x=a(t-\sin t)$、$y=a(1-\cos t)$，$0\le t\le2\pi$，$a>0$，
+
+  $$
+  \begin{aligned}
+  s&=\int_0^{2\pi}a\sqrt{(1-\cos t)^2+\sin^2t}\,\mathrm dt\\
+  &=\int_0^{2\pi}2a\sin\frac t2\,\mathrm dt
+  =\boxed{8a}.
+  \end{aligned}
+  $$
+
+  注意 $0\le t\le2\pi$ 上 $\sin(t/2)\ge0$，因此可去绝对值。
+
+  </Accordion>
+  <Accordion title="补充｜星形线的总弧长">
+
+  对 $x=a\cos^3t$、$y=a\sin^3t$，$0\le t\le2\pi$，$a>0$，
+
+  $$
+  \begin{aligned}
+  s&=\int_0^{2\pi}3a|\sin t\cos t|\,\mathrm dt\\
+  &=4\int_0^{\pi/2}3a\sin t\cos t\,\mathrm dt
+  =\boxed{6a}.
+  \end{aligned}
+  $$
+
+  </Accordion>
+</Accordions>
+
+### 2. 旋转曲面的侧面积：圆周长乘弧长微元
+
+原书第 38 页的破题核心为
+
+$$
+\boxed{\mathrm dS=2\pi|y|\,\mathrm ds}
+$$
+
+这是曲线绕 **$x$ 轴**旋转一周的侧面积微元。若 $y=f(x)\ge0$ 且 $a<b$，则
+
+$$
+\boxed{S=2\pi\int_a^b f(x)\sqrt{1+[f'(x)]^2}\,\mathrm dx.}
+$$
+
+若 $x=x(t)$、$y=y(t)\ge0$、$\alpha<\beta$，则
+
+$$
+\boxed{S=2\pi\int_\alpha^\beta y(t)\sqrt{[x'(t)]^2+[y'(t)]^2}\,\mathrm dt.}
+$$
+
+当曲线在轴下方时，半径应写 $|y|$；绕 $y$ 轴旋转时，半径改为 $|x|$。对于曲线多次描摹而导致曲面重复覆盖的情形，必须考虑实际去重，不能无条件将所有参数段面积相加。
+
+<Callout type="warn" title="体积和侧面积最易混淆的因子">
+
+体积的圆盘微元是 $\mathrm dV=\pi y^2\,\mathrm dx$；侧面积是 $\mathrm dS=2\pi y\,\mathrm ds$。侧面积必须带 **$\mathrm ds$（弧长微元）**，因此直角坐标形式会出现 $\sqrt{1+(y')^2}$。
+
+</Callout>
+
+### 3. 杆、平面薄板、空间物体的形心与质心
+
+形心只由**几何形状**决定，质心需要考虑**密度分布**。形心可以理解为密度恒定时的质心。
+
+**（1）杆状（直线段 $a\le x\le b$）**
+
+$$
+\boxed{\bar x_{\mathrm{形}}=\frac{\int_a^b x\,\mathrm dx}{\int_a^b\mathrm dx}=\frac{a+b}{2}},
+\qquad
+\boxed{\bar x_{\mathrm{质}}=\frac{\int_a^b x\rho(x)\,\mathrm dx}{\int_a^b\rho(x)\,\mathrm dx}}.
+$$
+
+**（2）平面薄板（区域 $D$）**
+
+$$
+\boxed{\bar x_{\mathrm{形}}=\frac{\iint_D x\,\mathrm dA}{\iint_D\mathrm dA},\qquad
+\bar y_{\mathrm{形}}=\frac{\iint_D y\,\mathrm dA}{\iint_D\mathrm dA}},
+$$
+
+$$
+\boxed{\bar x_{\mathrm{质}}=\frac{\iint_D x\rho(x,y)\,\mathrm dA}{\iint_D\rho(x,y)\,\mathrm dA},\qquad
+\bar y_{\mathrm{质}}=\frac{\iint_D y\rho(x,y)\,\mathrm dA}{\iint_D\rho(x,y)\,\mathrm dA}}.
+$$
+
+**（3）空间物体（区域 $\Omega$）**
+
+$$
+\boxed{(\bar x,\bar y,\bar z)_{\mathrm{形}}
+=\frac{1}{\iiint_\Omega\mathrm dV}
+\left(\iiint_\Omega x\,\mathrm dV,\iiint_\Omega y\,\mathrm dV,\iiint_\Omega z\,\mathrm dV\right)},
+$$
+
+$$
+\boxed{(\bar x,\bar y,\bar z)_{\mathrm{质}}
+=\frac{1}{\iiint_\Omega\rho\,\mathrm dV}
+\left(\iiint_\Omega x\rho\,\mathrm dV,\iiint_\Omega y\rho\,\mathrm dV,\iiint_\Omega z\rho\,\mathrm dV\right)}.
+$$
+
+这里积分分母分别为**总长度、面积、体积**（形心）或**总质量**（质心）；密度通常取非负且总质量大于零。原书第 39 页图表中的杆、薄板、实体三行均已转写。
+
+<Callout type="idea" title="两个无需计算即可缩小答案范围的判断">
+
+- **对称轴**：若形状与密度均关于某轴对称，则质心位于该对称轴上；几何形心同理。
+- **均匀密度**：若 $\rho$ 是正常数，就能在分子分母中约去，质心与形心重合；非均匀密度不能直接约去。
+
+</Callout>
+
+## 本记自测｜从积分性质到几何应用
+
+以下题目为**依据本记知识点原创编写的自测**，不属于原书列出的考研真题。涉及数一、数二专属内容的题目已注明。
+
+<div id="math21-2027-note07-q01">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:高等数学, 考点:积分不等式, 难度:基础
+
+设 $a>0$。不计算原函数，比较
+
+$$
+A=\int_0^a\ln(1+x)\,\mathrm dx,\qquad
+B=\int_0^a x\,\mathrm dx
+$$
+
+的大小，并给出理由。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+当 $x>0$，由 $\ln(1+x)<x$，逐点比较可得
+
+$$
+\boxed{A<B}.
+$$
+
+由于不等式在 $(0,a]$ 严格成立，两积分也严格不等。这说明“函数不等式 $\Rightarrow$ 积分不等式”无需先求原函数。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note07-q02">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:高等数学, 考点:对称积分, 难度:中等
+
+设 $f$ 在 $[0,1]$ 连续，证明
+
+$$
+\int_0^\pi x f(\sin x)\,\mathrm dx
+=\frac\pi2\int_0^\pi f(\sin x)\,\mathrm dx.
+$$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+令 $I=\int_0^\pi x f(\sin x)\,\mathrm dx$，作 $x=\pi-t$：
+
+$$
+I=\int_0^\pi(\pi-t)f(\sin t)\,\mathrm dt.
+$$
+
+将它与原式相加，得到
+
+$$
+2I=\pi\int_0^\pi f(\sin x)\,\mathrm dx,
+$$
+
+故命题成立。关键是 $\sin(\pi-x)=\sin x$。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note07-q03">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:高等数学, 考点:反常积分拆分, 难度:基础
+
+判断下列两个积分的敛散性：
+
+$$
+I=\int_{-1}^{1}\frac{\mathrm dx}{x},\qquad
+J=\int_1^{+\infty}\left(\frac1x-\frac1{x+1}\right)\mathrm dx.
+$$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+$I$ 在 $x=0$ 有瑕点，其左右两个反常积分分别发散，故 $\boxed{I\text{ 发散}}$。不能将“对称抵消得到零”作为它收敛的证明。
+
+对 $J$，将被积函数当整体处理：
+
+$$
+\begin{aligned}
+J&=\lim_{R\to\infty}\left[\ln x-\ln(x+1)\right]_1^R\\
+&=\lim_{R\to\infty}\ln\frac R{R+1}+\ln2
+=\boxed{\ln2}.
+\end{aligned}
+$$
+
+虽然两项单独的反常积分发散，但差整体收敛。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note07-q04">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:高等数学, 考点:对数型判敛, 难度:中等
+
+判定下列关于 $p,q$ 的反常积分收敛条件：
+
+$$
+I(p,q)=\int_e^{+\infty}\frac{\mathrm dx}{x^p(\ln x)^q}.
+$$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+$e>1$，符合对数型无穷远比较模型：
+
+$$
+\boxed{I(p,q)\text{ 收敛}\iff p>1\ \text{或}\ (p=1\text{ 且 }q>1).}
+$$
+
+若 $p<1$，任意有限的对数幂次都不能弥补幂次衰减不足；若 $p=1$，作 $t=\ln x$，就变成 $\int_1^\infty t^{-q}\,\mathrm dt$，条件为 $q>1$。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note07-q05">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:高等数学, 考点:极坐标面积, 难度:中等
+
+设 $a>0$，求心形线 $r=a(1+\cos\theta)$ 围成的面积。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+$0\le\theta\le2\pi$ 可完整描画一次，且 $r\ge0$。因此
+
+$$
+\begin{aligned}
+S&=\frac12\int_0^{2\pi}a^2(1+\cos\theta)^2\,\mathrm d\theta\\
+&=\frac{a^2}{2}\left(2\pi+0+\pi\right)
+=\boxed{\frac{3\pi a^2}{2}}.
+\end{aligned}
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note07-q06">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:高等数学, 考点:旋转体体积, 难度:中等
+
+区域 $D$ 由 $y=x$、$y=x^2$（$0\le x\le1$）围成。分别求它绕 $x$ 轴与 $y$ 轴旋转一周所得体积。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+在 $0\le x\le1$ 上，$0\le x^2\le x$。绕 $x$ 轴用垫片法：
+
+$$
+V_x=\pi\int_0^1(x^2-x^4)\,\mathrm dx
+=\pi\left(\frac13-\frac15\right)
+=\boxed{\frac{2\pi}{15}}.
+$$
+
+绕 $y$ 轴用柱壳法，半径为 $x$、高为 $x-x^2$：
+
+$$
+V_y=2\pi\int_0^1x(x-x^2)\,\mathrm dx
+=2\pi\left(\frac13-\frac14\right)
+=\boxed{\frac\pi6}.
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note07-q07">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:高等数学, 考点:弧长与侧面积, 难度:中等
+
+【数一、数二】求直线段 $y=x$（$0\le x\le1$）的弧长，以及该线段绕 $x$ 轴旋转一周产生的**侧面积**。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+$y'=1$。弧长为
+
+$$
+s=\int_0^1\sqrt{1+1^2}\,\mathrm dx=\boxed{\sqrt2}.
+$$
+
+侧面积为
+
+$$
+S=2\pi\int_0^1x\sqrt{1+1^2}\,\mathrm dx
+=2\pi\sqrt2\cdot\frac12
+=\boxed{\pi\sqrt2}.
+$$
+
+这是一圆锥侧面的面积，注意不是 $\pi\int_0^1x^2\,\mathrm dx$（后者是体积）。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note07-q08">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:高等数学, 考点:形心质心, 难度:中等
+
+【数一、数二】求区域 $D=\{(x,y):0\le x\le1,\ 0\le y\le x\}$ 的形心；再求线段 $[0,1]$ 上线密度 $\rho(x)=1+x$ 的细杆质心横坐标。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+区域面积
+
+$$
+A=\int_0^1x\,\mathrm dx=\frac12.
+$$
+
+对 $D$，有
+
+$$
+\bar x=\frac1A\int_0^1\int_0^x x\,\mathrm dy\,\mathrm dx
+=2\int_0^1x^2\,\mathrm dx=\boxed{\frac23},
+$$
+
+$$
+\bar y=\frac1A\int_0^1\int_0^x y\,\mathrm dy\,\mathrm dx
+=2\int_0^1\frac{x^2}{2}\,\mathrm dx=\boxed{\frac13}.
+$$
+
+故形心为 $\boxed{(2/3,1/3)}$。杆的总质量为 $\int_0^1(1+x)\,\mathrm dx=3/2$，其一阶矩为 $\int_0^1x(1+x)\,\mathrm dx=5/6$，于是
+
+$$
+\bar x_{\mathrm{质}}=\frac{5/6}{3/2}=\boxed{\frac59}.
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 本记复盘｜计算决策表
+
+| 看见的题目 | 优先工具 | 最后必查 |
+| --- | --- | --- |
+| 两个定积分比较 | 被积函数作差；指数、对数、三角不等式 | 区间方向、严格不等号条件 |
+| 对称区间积分 | $f(x)+f(-x)$；作 $x\mapsto\pi-x$ | 区间是否对称、复合函数是否可积 |
+| 正余弦高次幂 | 点火公式 $I_n$ 递推 | 奇偶性、$n=0,1$ 的基例 |
+| 反常积分多瑕点 | 先拆分再分别取极限 | 所有部分必须各自收敛 |
+| 反常积分加减 | 先判断是否能分别积分 | 两项发散时不能直接拆分 |
+| $p$ 型/对数型判敛 | 找危险点方向，再用模型 | 零点与无穷远的阈值方向相反 |
+| 平面图形面积 | 直角坐标上减下、极坐标平方差 | 非负、曲线交点、重复覆盖 |
+| 参数曲线面积 | $\int y\,\mathrm dx$ 或闭曲线面积公式 | 是否得到**有向面积** |
+| 旋转体体积 | 垫片 $\pi(R^2-r^2)$ 或柱壳 $2\pi rh$ | 旋转轴是否穿过区域、是否重叠 |
+| 数一数二：弧长/侧面积 | 先求 $\mathrm ds$，再选 $2\pi r\,\mathrm ds$ | $r\ge0$、参数方向、描摹次数 |
+| 数一数二：形心/质心 | 几何/密度加权的一阶矩除总量 | 对称性、质量分母非零 |
+
+<Callout type="success" title="第 7 记整理范围确认">
+
+本记完整整理原书**第 33—39 页、5 个“必记”板块**：七组不等式及比较定理、积分中值与平均值、奇偶周期、点火公式、两个几何积分与对称换元、反常积分拆分及其比较审敛、全部原书面积体积模型、数一数二三种弧长公式、两类旋转曲面侧面积和三类形心质心。**原书第 33 页错误的不等式已核对 PDF 后纠正**，旋转体与参数面积公式的限制也已明确。文末 8 道练习均为原创自测。
+
+</Callout>

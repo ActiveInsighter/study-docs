@@ -1,0 +1,1162 @@
+---
+title: "第 15 记｜特征值与对角化"
+description: "2027 周洋鑫《考前21记》第 15 记：特征值与对角化。含知识梳理、适用条件与 14 道配套题及解析。"
+---
+
+<Callout type="info" title="本记阅读范围与资料说明">
+
+对应原书 **第 78—83 页**，按原有次序完整整理 **必记 1—5**：特征值与特征向量、矩阵相似、相似对角化、实对称矩阵的正交对角化、内积与正交化。原书涉及 **6 道历年真题**（第 79 页 2 道、第 83 页 4 道），均在下文保留并补写推导；额外自测明确标注为**原创**，不与原书真题混淆。原资料图示与公式中未写出的适用条件已补全。
+
+</Callout>
+
+<Cards>
+  <Card title="特征值与特征向量">特征方程、定义法、隐藏特征值、迹与行列式。</Card>
+  <Card title="相似与对角化">相似不变量、相似判定、重特征值的几何重数。</Card>
+  <Card title="实对称矩阵">不同特征值正交，同一特征子空间可正交化。</Card>
+  <Card title="6 道原书真题">2024 年 4 道、2019 年 1 道、2025 年 1 道，逐题补齐解析。</Card>
+</Cards>
+
+## 必记 1｜特征值与特征向量
+
+### 1. 基本定义与数值型矩阵的完整求法
+
+设 $A$ 是 $n$ 阶方阵，存在标量 $\lambda$ 和**非零**向量 $\alpha$，使
+
+$$
+A\alpha=\lambda\alpha,\qquad \alpha\ne 0,
+$$
+
+则 $\lambda$ 为 $A$ 的特征值，$\alpha$ 为其对应的特征向量。等价地，
+
+$$
+(A-\lambda I_n)\alpha=0,
+\qquad\det(\lambda I_n-A)=0.
+$$
+
+<Steps>
+  <Step>
+
+  ### 写出特征多项式并求根
+
+  计算 $p_A(\lambda)=\det(\lambda I_n-A)$，解 $p_A(\lambda)=0$。**重复特征值要按代数重数计数**。
+
+  </Step>
+  <Step>
+
+  ### 对每个不同特征值求齐次方程组
+
+  解 $(A-\lambda_i I_n)x=0$，求出该特征子空间的一组基，而不是只随意取一个向量。
+
+  $$
+  E_{\lambda_i}=\ker(A-\lambda_i I_n),\qquad
+  \dim E_{\lambda_i}=n-r(A-\lambda_i I_n).
+  $$
+
+  </Step>
+  <Step>
+
+  ### 检查非零、线性无关和重数
+
+  某特征值的**几何重数**是 $\dim E_\lambda$；它不超过对应的**代数重数**。需要对角化时，所有特征子空间基向量的总个数必须恰好为 $n$。
+
+  </Step>
+</Steps>
+
+<Callout type="warn" title="零向量不是特征向量">
+
+虽有 $A0=\lambda 0$ 对任意 $\lambda$ 都成立，但**不能**把零向量当作特征向量；特征子空间作为线性空间则包含零向量。
+
+</Callout>
+
+### 2. 抽象型题：定义法与特征值变换表
+
+若 $A\alpha=\lambda\alpha$、$\alpha\ne0$，则对多项式 $f$ 有 $f(A)\alpha=f(\lambda)\alpha$。把原书的“NB 表”整理为带前提的速查表：
+
+| 矩阵 | 对应的特征值 | 可直接确认的特征向量 | 条件 |
+| --- | --- | --- | --- |
+| $A$ | $\lambda$ | $\alpha$ | $A\alpha=\lambda\alpha$ |
+| $kA$ | $k\lambda$ | $\alpha$ | $k$ 为标量 |
+| $A^m$ | $\lambda^m$ | $\alpha$ | $m$ 为正整数；负幂需 $A$ 可逆 |
+| $f(A)$ | $f(\lambda)$ | $\alpha$ | $f$ 为多项式 |
+| $A^{-1}$ | $1/\lambda$ | $\alpha$ | $A$ 可逆，故 $\lambda\ne0$ |
+| $A^*$ | $\det A/\lambda$ | $\alpha$ | **仅直接适用于 $\lambda\ne0$**；见下方说明 |
+| $A^T$ | $\lambda$ 仍为特征值 | **不一定为 $\alpha$** | $A$ 与 $A^T$ 特征多项式相同 |
+| $P^{-1}AP$ | $\lambda$ | $P^{-1}\alpha$ | $P$ 可逆 |
+
+其中 $A^*$ 是**伴随矩阵**。由凯莱—哈密顿定理可将 $A^*$ 写成 $A$ 的多项式，因此 $A$ 的特征向量也必是 $A^*$ 的特征向量；**仅有两矩阵可交换并不足以推出这一点**。当 $A$ 可逆时，$A^*=(\det A)A^{-1}$，直接得到上述 $\det A/\lambda$。当 $\lambda=0$ 时，不能进行除法，须另外讨论；例如 $A=\operatorname{diag}(0,2)$，$A^*=\operatorname{diag}(2,0)$，$0$ 对应的向量 $(1,0)^T$ 在 $A^*$ 中对应特征值 $2$。
+
+<Tabs items={['定义法', '矩阵多项式法', '伴随与转置的陷阱']}>
+  <Tab value="定义法">
+
+  从 $A\alpha=\lambda\alpha$ 出发，连续左乘 $A$ 得 $A^2\alpha=\lambda^2\alpha$、$A^3\alpha=\lambda^3\alpha$。再线性组合得 $f(A)\alpha=f(\lambda)\alpha$。
+
+  </Tab>
+  <Tab value="矩阵多项式法">
+
+  若 $A^2+A-2I=0$，对任一特征值 $\lambda$ 有
+
+  $$
+  (\lambda^2+\lambda-2)\alpha=0
+  \Longrightarrow(\lambda+2)(\lambda-1)=0.
+  $$
+
+  故 $\sigma(A)\subseteq\{-2,1\}$。**并不保证这两个候选值都实际出现**，例如 $A=I$ 只具有特征值 $1$。
+
+  </Tab>
+  <Tab value="伴随与转置的陷阱">
+
+  $A^T$ 与 $A$ 的特征值及其代数重数相同，但一般不能沿用 $A$ 的特征向量。$A^*$ 的简单公式含 $1/\lambda$，只在 $\lambda\ne0$ 时可直接套用。
+
+  </Tab>
+</Tabs>
+
+### 3. “隐藏特征值”的四种抓手
+
+<Accordions>
+  <Accordion title="抓手一：各行元素之和相同">
+
+  若 $A$ 的每行元素之和均为 $a$，则
+
+  $$
+  A\begin{pmatrix}1\\\vdots\\1\end{pmatrix}
+  =a\begin{pmatrix}1\\\vdots\\1\end{pmatrix}.
+  $$
+
+  因此 $a$ 是特征值，全 $1$ 向量是对应特征向量。**列和相同**则先得到 $(1,\ldots,1)A=a(1,\ldots,1)$；这说明 $a$ 也是 $A$ 的特征值，但全 $1$ 列向量不必是 $A$ 的右特征向量。
+
+  </Accordion>
+  <Accordion title="抓手二：齐次方程组有非零解">
+
+  若存在 $\alpha\ne0$ 使 $A\alpha=0$，则 $0$ 是 $A$ 的特征值；反之，$0$ 是特征值等价于 $A$ 不可逆。
+
+  $$
+  0\in\sigma(A)\iff\det A=0\iff r(A)<n.
+  $$
+
+  </Accordion>
+  <Accordion title="抓手三：矩阵满足多项式方程">
+
+  若 $f(A)=0$，则任一特征值必满足 $f(\lambda)=0$，但候选根可能不全部出现；反过来，仅知道 $f(\lambda)=0$ 对全部特征值成立，**不一定**推出 $f(A)=0$（要考虑不可对角化时的 Jordan 块）。
+
+  </Accordion>
+  <Accordion title="抓手四：行列式中含参数">
+
+  $\det(aI-A)=0$ 表明 $a$ 为 $A$ 的特征值。若 $b\ne0$ 且 $\det(aI+bA)=0$，则
+
+  $$
+  \det\left(-\frac ab I-A\right)=0,
+  $$
+
+  因而 $-a/b$ 为特征值。此处 $b=0$ 必须单独判断。
+
+  </Accordion>
+</Accordions>
+
+### 4. 特征多项式、迹与行列式
+
+设 $A$ 在复数范围内按代数重数列出的 $n$ 个特征值为 $\lambda_1,\dots,\lambda_n$，则
+
+$$
+\boxed{\det A=\prod_{i=1}^n\lambda_i,\qquad
+\operatorname{tr}A=\sum_{i=1}^n\lambda_i.}
+$$
+
+另外，$\det(tI-A)=\det(tI-B)$ 等价于 $A,B$ 有**相同的特征值及其代数重数**，但**不等价于** $A\sim B$。例如
+
+$$
+A=\begin{pmatrix}1&0\\0&1\end{pmatrix},\qquad
+B=\begin{pmatrix}1&1\\0&1\end{pmatrix}
+$$
+
+特征多项式同为 $(t-1)^2$，然而 $A$ 可对角化、$B$ 不可对角化，故二者不相似。
+
+### 5. 特征向量的线性组合与线性无关
+
+- 不同特征值对应的非零特征向量**必线性无关**。
+- 同一特征值 $\lambda$ 的特征向量，任意**非零**线性组合仍属于 $\lambda$；若组合恰好为零，则零向量不算特征向量。
+- 若 $\alpha,\beta$ 对应不同特征值，且 $s,t\ne0$，则 $s\alpha+t\beta$ **不是**特征向量。
+- 代数重数为 $k$ 的特征值，其几何重数 $g_\lambda$ 满足 $1\le g_\lambda\le k$。
+
+<Callout type="idea" title="一道推导看清“不能跨特征值相加”">
+
+若 $A\alpha=\lambda\alpha$、$A\beta=\mu\beta$，其中 $\lambda\ne\mu$，而 $s,t\ne0$。若 $s\alpha+t\beta$ 仍是 $\nu$ 的特征向量，则
+
+$$
+(\lambda-\nu)s\alpha+(\mu-\nu)t\beta=0.
+$$
+
+由于 $\alpha,\beta$ 线性无关，必须 $\lambda=\nu=\mu$，与 $\lambda\ne\mu$ 矛盾。
+
+</Callout>
+
+### 原书真题 1｜2024 年：零空间与正交补构造特征值
+
+<div id="math21-2027-note15-2024-01">
+
+**题型：单选题**
+
+来源:2024年考研真题, 科目:线性代数, 考点:特征空间与正交补, 难度:中等
+
+设 $A$ 是秩为 $2$ 的 $3$ 阶实矩阵，$\alpha$ 是满足 $A\alpha=0$ 的非零向量。若对满足 $\beta^T\alpha=0$ 的任意向量 $\beta$，均有 $A\beta=\beta$，则（ ）。
+
+
+
+**A.** $\operatorname{tr}(A^3)=2$。
+
+
+
+
+**B.** $\operatorname{tr}(A^3)=5$。
+
+
+
+
+**C.** $\operatorname{tr}(A^2)=8$。
+
+
+
+
+**D.** $\operatorname{tr}(A^2)=9$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** A
+
+**解题关键：两个互补的不变子空间。** $\alpha\ne0$，因此 $\mathbb R^3=\operatorname{span}\{\alpha\}\oplus\alpha^\perp$，两部分维数分别为 $1,2$。
+
+- $A\alpha=0$：$\alpha$ 对应特征值 $0$。
+- 对每个 $\beta\in\alpha^\perp$ 有 $A\beta=\beta$：二维子空间 $\alpha^\perp$ 中任取一组基，均是特征值 $1$ 的特征向量。
+
+所以 $A$ 有三个线性无关的特征向量，其特征值为 $0,1,1$。进而 $A^2,A^3$ 的特征值仍是 $0,1,1$，因此
+
+$$
+\boxed{\operatorname{tr}(A^3)=\operatorname{tr}(A^2)=2.}
+$$
+
+正确答案是第一项。事实上该矩阵就是到 $\alpha^\perp$ 的正交投影矩阵：
+
+$$
+A=I_3-\frac{\alpha\alpha^T}{\alpha^T\alpha},\qquad A^2=A.
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+### 原书真题 2｜2024 年：秩刻画特征空间，伴随行列式
+
+<div id="math21-2027-note15-2024-02">
+
+**题型：填空题**
+
+来源:2024年考研真题, 科目:线性代数, 考点:特征值重数与伴随矩阵, 难度:中等
+
+设 $A$ 为三阶矩阵，$A^*$ 为其伴随矩阵，$I$ 为单位矩阵，且
+
+$$
+r(2I-A)=1,\qquad r(I+A)=2.
+$$
+
+则 $\det(A^*)=$ $\underline{\qquad}$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** $16$
+
+由 $r(2I-A)=1$ 可知 $\dim\ker(2I-A)=2$，即特征值 $2$ 的特征子空间维数为 $2$。由 $r(I+A)=2$ 可知 $\dim\ker(I+A)=1$，即 $-1$ 是另一特征值。不同特征值的特征向量线性无关，因此恰好凑满三维，$A$ 的特征值按重数为
+
+$$
+2,\quad2,\quad-1.
+$$
+
+于是 $\det A=2\cdot2\cdot(-1)=-4$。对于三阶矩阵，
+
+$$
+\det(A^*)=(\det A)^{3-1}=(-4)^2=\boxed{16}.
+$$
+
+注意：此题不需要求出 $A$ 的具体元素；也不能把秩 $r(2I-A)=1$ 误判成“特征值 $2$ 只出现一次”。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 必记 2｜矩阵的相似
+
+### 1. 定义与原书“五等五相似”
+
+$A,B$ 为同阶方阵。若存在可逆阵 $P$ 使
+
+$$
+B=P^{-1}AP\quad\Longleftrightarrow\quad AP=PB,
+$$
+
+则称 $A$ 与 $B$ **相似**，记为 $A\sim B$。
+
+**五个相似不变量（原书“五等”）：**
+
+| 相似时必相等的量 | 具体结论 |
+| --- | --- |
+| 特征值（含代数重数） | $\sigma(A)=\sigma(B)$ |
+| 行列式 | $\det A=\det B$ |
+| 迹 | $\operatorname{tr}A=\operatorname{tr}B$ |
+| 秩 | $r(A)=r(B)$ |
+| 特征多项式 | $\det(tI-A)=\det(tI-B)$ |
+
+这里“特征值”和“特征多项式”两项实际上有信息重合；**单独任何一项都不是一般的相似充分条件**，即使上述所有量一致，也可能不相似。进一步地，相似还保持各个 $r((A-\lambda I)^k)$（$k\ge1$）。
+
+**五种保相似的运算（原书“五相似”）：** 若 $B=P^{-1}AP$，则
+
+$$
+\begin{aligned}
+B^m&=P^{-1}A^mP\qquad (m\in\mathbb N),\\
+f(B)&=P^{-1}f(A)P\qquad (f\text{ 为多项式}),\\
+B^{-1}&=P^{-1}A^{-1}P\qquad(A,B\text{ 均可逆}),\\
+B^T&=(P^T)A^T(P^T)^{-1},\\
+B^*&=P^{-1}A^*P.
+\end{aligned}
+$$
+
+所以 $A^m\sim B^m$、$f(A)\sim f(B)$、$A^{-1}\sim B^{-1}$（可逆时）、$A^T\sim B^T$、$A^*\sim B^*$。对转置，变换矩阵为 $(P^T)^{-1}$（按 $S^{-1}A^TS$ 书写）；**一般不能仍用同一个 $P$**。
+
+### 2. 如何判断两个矩阵相似：先找反证，再判充分性
+
+原书第 80 页提供“先求特征值，再查是否可对角化”的流程图。整理成可执行判定表：
+
+| 已知信息 | 可下的结论 |
+| --- | --- |
+| 特征多项式不同 | **必不相似** |
+| 特征多项式相同，且 $A,B$ 均可对角化（在同一数域上） | **必相似**，二者都相似于同一对角阵（顺序可调整） |
+| 特征多项式相同，$A$ 可对角化而 $B$ 不可对角化 | **必不相似** |
+| 特征多项式相同，$A,B$ 都不可对角化 | **仅凭这些不能判断**，还需比较 Jordan 结构或核的维数序列 |
+| $A,B$ 都有 $n$ 个互异的实特征值，且特征值相同 | 二者在实数范围内相似 |
+
+<Callout type="warn" title="同特征值不等于相似">
+
+反例 $I_2$ 与 $\begin{pmatrix}1&1\\0&1\end{pmatrix}$ 具有相同迹、行列式、秩和特征多项式，但前者可对角化、后者不可对角化。若存在重根，应先检查**每个重特征值的特征子空间维数**。
+
+</Callout>
+
+<Accordions>
+  <Accordion title="为何 A 与 A 的转置总是相似？">
+
+  任意方阵与其转置具有相同的有理标准形，因此在实数域或复数域上都相似。这是**额外的定理**，不能仅凭两者特征多项式相同来证明。题目若只问 $A$ 与 $A^T$ 是否相似，可直接用此结论。
+
+  </Accordion>
+  <Accordion title="若两矩阵有同一组互异特征值，如何构造相似变换？">
+
+  将 $A$ 的特征向量依照特征值顺序排成 $U$，将 $B$ 对应特征向量按**相同顺序**排成 $V$，使 $A=U\Lambda U^{-1}$、$B=V\Lambda V^{-1}$。则
+
+  $$
+  \boxed{P=UV^{-1},\qquad P^{-1}AP=B.}
+  $$
+
+  此为原书所谓的“搭桥法”。
+
+  </Accordion>
+</Accordions>
+
+## 必记 3｜矩阵的相似对角化
+
+### 1. 对角化的结构与步骤
+
+存在可逆阵 $P$ 使
+
+$$
+\boxed{P^{-1}AP=\Lambda=\operatorname{diag}(\lambda_1,\ldots,\lambda_n)}
+$$
+
+当且仅当 $A$ 有 $n$ 个线性无关的特征向量。列向量 $P=(\alpha_1,\ldots,\alpha_n)$ 必须与 $\Lambda$ 的对角元**逐一对应**：
+
+$$
+A\alpha_i=\lambda_i\alpha_i
+\quad\Longleftrightarrow\quad
+AP=P\Lambda.
+$$
+
+<Steps>
+  <Step>
+
+  ### 求出全部特征值及其代数重数
+
+  解 $\det(\lambda I-A)=0$。若有重根，记录其代数重数 $m_\lambda$。
+
+  </Step>
+  <Step>
+
+  ### 求出每个特征空间的基
+
+  对每个不同 $\lambda$ 消元求 $\ker(A-\lambda I)$；核的维数 $g_\lambda=n-r(A-\lambda I)$。
+
+  </Step>
+  <Step>
+
+  ### 检查 $\sum_\lambda g_\lambda=n$
+
+  若不成立，则不可能对角化。若成立，按指定顺序拼成 $P$，对应排出 $\Lambda$；最后用 $AP=P\Lambda$ 核验。
+
+  </Step>
+</Steps>
+
+### 2. 充要条件与常见充分条件
+
+$$
+\boxed{A\text{ 可对角化}\iff\sum_{\lambda} \dim\ker(A-\lambda I)=n
+\iff\forall\lambda:\ g_\lambda=m_\lambda.}
+$$
+
+- **充分条件一：** 在所讨论数域上有 $n$ 个两两不同的特征值。
+- **充分条件二：** $A$ 是实对称矩阵，则在**实数域**上可正交对角化。
+- **必要但不充分条件：** 特征多项式分裂成一次因式；在实数域上，具有全体实特征值仍可能有 Jordan 块。
+- **重根检查：** $\lambda$ 为 $k$ 重根时，必须有 $r(\lambda I-A)=n-k$，其特征子空间才凑足 $k$ 维。
+
+<Tabs items={['可对角化示例', '不可对角化示例']}>
+  <Tab value="可对角化示例">
+
+  $$
+  A=\begin{pmatrix}2&0\\0&2\end{pmatrix}=2I_2.
+  $$
+
+  虽只有一个特征值 $2$（二重），但 $\ker(A-2I)=\mathbb R^2$ 的维数为 $2$，因此可对角化。
+
+  </Tab>
+  <Tab value="不可对角化示例">
+
+  $$
+  A=\begin{pmatrix}2&1\\0&2\end{pmatrix}.
+  $$
+
+  特征值 $2$ 是二重根，但 $r(A-2I)=1$，特征子空间只有一维，不可能找到两个线性无关的特征向量。
+
+  </Tab>
+</Tabs>
+
+### 3. 秩为一的非零矩阵：一眼判断可否对角化
+
+设 $r(A)=1$，则 $A=uv^T$（其中 $u,v\ne0$），因而
+
+$$
+A^2=u(v^Tu)v^T=(v^Tu)A=(\operatorname{tr}A)A.
+$$
+
+- 若 $\operatorname{tr}A\ne0$，则 $A$ 的特征值为 $\operatorname{tr}A$（一次）与 $0$（$n-1$ 次），$A$ **可对角化**。
+- 若 $\operatorname{tr}A=0$，则 $A^2=0$ 而 $A\ne0$，所以 $A$ **不可对角化**。因为若其能对角化，则全部特征值为零会迫使 $A=0$。
+
+<Callout type="idea" title="高频结构：秩一且迹不为零">
+
+不必展开特征多项式。$A^2=(\operatorname{tr}A)A$ 直接给出特征值候选、幂运算和是否可对角化。秩一且 $\operatorname{tr}A=0$ 是检验“有特征值”不等于“可对角化”的典型反例。
+
+</Callout>
+
+## 必记 4｜实对称矩阵的正交对角化
+
+### 1. 实对称矩阵的三项性质
+
+若 $A=A^T\in\mathbb R^{n\times n}$，则：
+
+1. **全部特征值为实数**；不同特征值对应的特征向量相互正交。
+2. 每个特征值的**几何重数等于代数重数**：若 $\lambda$ 为 $k$ 重根，则 $\dim\ker(A-\lambda I)=k$。
+3. 存在实正交矩阵 $Q$，使
+
+$$
+\boxed{Q^TAQ=Q^{-1}AQ=\Lambda,\qquad Q^TQ=I.}
+$$
+
+对不同特征值 $\lambda\ne\mu$，若 $A\alpha=\lambda\alpha$、$A\beta=\mu\beta$，则
+
+$$
+\lambda\alpha^T\beta=(A\alpha)^T\beta
+=\alpha^TA\beta=\mu\alpha^T\beta
+\quad\Longrightarrow\quad \alpha^T\beta=0.
+$$
+
+### 2. 正交对角化的规范流程
+
+<Steps>
+  <Step>
+
+  ### 求特征值与各个特征空间
+
+  分别解 $\det(\lambda I-A)=0$ 与 $(A-\lambda I)x=0$，可按代数重数检查求出的基向量数。
+
+  </Step>
+  <Step>
+
+  ### 同一特征空间内正交化
+
+  不同特征值的特征向量**天然正交**；只有同一重特征值的特征子空间中选出的基可能不正交，需要施密特正交化或直接挑选互相正交的基。
+
+  </Step>
+  <Step>
+
+  ### 将所有正交特征向量单位化
+
+  每个非零向量 $u_i$ 变成 $q_i=u_i/\|u_i\|$，拼成 $Q=(q_1,\ldots,q_n)$，使 $Q^TQ=I$。
+
+  </Step>
+  <Step>
+
+  ### 排列特征值并验算
+
+  按 $Q$ 列顺序写 $\Lambda=\operatorname{diag}(\lambda_1,\ldots,\lambda_n)$，核对 $AQ=Q\Lambda$，进而 $Q^TAQ=\Lambda$。
+
+  </Step>
+</Steps>
+
+### 3. 含二重特征值的正交化示例
+
+取
+
+$$
+A=\begin{pmatrix}2&0&0\\0&1&1\\0&1&1\end{pmatrix}.
+$$
+
+其特征值为 $2,2,0$。属于 $2$ 的两个线性无关向量可先取
+
+$$
+u_1=\begin{pmatrix}1\\0\\0\end{pmatrix},\qquad
+u_2=\begin{pmatrix}1\\1\\1\end{pmatrix},
+$$
+
+但它们并不正交。令 $v_1=u_1$，按施密特公式得
+
+$$
+v_2=u_2-\frac{u_2^Tu_1}{u_1^Tu_1}u_1
+=\begin{pmatrix}0\\1\\1\end{pmatrix}.
+$$
+
+属于特征值 $0$ 的特征向量可取 $v_3=(0,1,-1)^T$。归一化得到
+
+$$
+Q=\begin{pmatrix}
+1&0&0\\
+0&\frac1{\sqrt2}&\frac1{\sqrt2}\\
+0&\frac1{\sqrt2}&-\frac1{\sqrt2}
+\end{pmatrix},\quad
+\boxed{Q^TAQ=\operatorname{diag}(2,2,0).}
+$$
+
+<Callout type="warn" title="正交化后务必配对特征值">
+
+在同一个特征空间里做线性组合仍保留特征值；但**不能把属于不同特征值的特征向量拿来任意混合做施密特正交化**，否则混合后的向量通常不再是特征向量。
+
+</Callout>
+
+## 必记 5｜向量的内积、长度与正交化
+
+### 1. 内积、模与正交
+
+对 $\alpha=(a_1,\ldots,a_n)^T$、$\beta=(b_1,\ldots,b_n)^T\in\mathbb R^n$，
+
+$$
+(\alpha,\beta)=\alpha^T\beta=\sum_{i=1}^n a_ib_i,
+\qquad
+\|\alpha\|=\sqrt{\alpha^T\alpha}.
+$$
+
+- $\alpha^T\beta=0$：称 $\alpha$ 与 $\beta$ 正交，零向量与所有向量正交。
+- 非零向量的单位化：$e=\alpha/\|\alpha\|$。
+- 一组**非零**两两正交的向量必线性无关；若都是单位向量，则为**标准正交组**。
+- 对实正交矩阵 $Q$ 有 $Q^TQ=I$，其列向量构成一组标准正交基，并保持长度与内积：$\|Qx\|=\|x\|$。
+
+### 2. 施密特正交化：牢记“减去在已有方向上的投影”
+
+若 $\alpha_1,\alpha_2,\alpha_3$ 线性无关，可依次设
+
+$$
+\begin{aligned}
+\beta_1&=\alpha_1,\\
+\beta_2&=\alpha_2-\frac{\alpha_2^T\beta_1}{\beta_1^T\beta_1}\beta_1,\\
+\beta_3&=\alpha_3-\frac{\alpha_3^T\beta_1}{\beta_1^T\beta_1}\beta_1
+               -\frac{\alpha_3^T\beta_2}{\beta_2^T\beta_2}\beta_2.
+\end{aligned}
+$$
+
+最后单位化 $\gamma_i=\beta_i/\|\beta_i\|$。由于原向量线性无关，正交化过程中分母均非零；若输入向量组线性相关，过程可能产生零向量，需要先提取极大线性无关组。
+
+<Tabs items={['速算示例', '易错清单']}>
+  <Tab value="速算示例">
+
+  设 $\alpha_1=(1,1,0)^T$、$\alpha_2=(1,0,1)^T$。先取 $\beta_1=\alpha_1$，再算
+
+  $$
+  \beta_2=\alpha_2-\frac{1}{2}\alpha_1
+  =\frac12(1,-1,2)^T.
+  $$
+
+  故得到一组标准正交向量
+
+  $$
+  \boxed{\gamma_1=\frac1{\sqrt2}(1,1,0)^T,\qquad
+  \gamma_2=\frac1{\sqrt6}(1,-1,2)^T.}
+  $$
+
+  验证：$\gamma_1^T\gamma_2=(1-1+0)/\sqrt{12}=0$，两者模长均为 $1$。
+
+  </Tab>
+  <Tab value="易错清单">
+
+  - 正交化与单位化是**两件事**；$\beta_i$ 彼此正交不代表长度等于 $1$。
+  - 施密特投影分母是**前一个已经正交化的向量**的平方范数，而不一定是原始 $\alpha_i$ 的平方范数。
+  - 实对称阵的不同特征值特征向量已经正交，不必重复计算；仅重特征值所在子空间可能需要正交化。
+
+  </Tab>
+</Tabs>
+
+## 原书综合真题｜对角化、交换矩阵与矩阵多项式
+
+### 原书真题 3｜2024 年：递推数列与矩阵幂
+
+<div id="math21-2027-note15-2024-03">
+
+**题型：解答题**
+
+来源:2024年考研真题, 科目:线性代数, 考点:矩阵幂与数列递推, 难度:较难
+
+已知 $x_0=-1$、$y_0=0$、$z_0=2$，且当 $n\ge1$ 时
+
+$$
+\begin{cases}
+x_n=-2x_{n-1}+2z_{n-1},\\
+y_n=-2y_{n-1}-2z_{n-1},\\
+z_n=-6x_{n-1}-3y_{n-1}+3z_{n-1}.
+\end{cases}
+$$
+
+令 $\alpha_n=(x_n,y_n,z_n)^T$。写出 $\alpha_n=A\alpha_{n-1}$ 的矩阵 $A$，求 $A^n$ 以及 $x_n,y_n,z_n$（$n=1,2,\ldots$）。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**第一步：由递推式直接读出矩阵。**
+
+$$
+\boxed{A=\begin{pmatrix}
+-2&0&2\\0&-2&-2\\-6&-3&3
+\end{pmatrix}},\qquad
+\alpha_n=A^n\alpha_0,\quad\alpha_0=(-1,0,2)^T.
+$$
+
+**第二步：求特征值与特征向量。**
+
+$$
+\det(tI-A)=t(t-1)(t+2).
+$$
+
+三个互异特征值为 $-2,0,1$。可分别取对应特征向量
+
+$$
+\begin{aligned}
+v_{-2}&=(-1,2,0)^T,\\
+v_0&=(1,-1,1)^T,\\
+v_1&=(2,-2,3)^T.
+\end{aligned}
+$$
+
+由此构造
+
+$$
+P=\begin{pmatrix}-1&1&2\\2&-1&-2\\0&1&3\end{pmatrix},
+\quad\det P=-1,\quad
+P^{-1}=\begin{pmatrix}1&1&0\\6&3&-2\\-2&-1&1\end{pmatrix}.
+$$
+
+满足 $A=P\operatorname{diag}(-2,0,1)P^{-1}$。
+
+**第三步：计算矩阵幂。** 对 $n\ge1$，$0^n=0$，所以
+
+$$
+\begin{aligned}
+A^n&=P\operatorname{diag}((-2)^n,0,1)P^{-1}\\
+&=\boxed{\begin{pmatrix}
+-(-2)^n-4&-(-2)^n-2&2\\
+2(-2)^n+4&2(-2)^n+2&-2\\
+-6&-3&3
+\end{pmatrix}}.
+\end{aligned}
+$$
+
+**第四步：代入初值。**
+
+$$
+\begin{aligned}
+\alpha_n&=A^n(-1,0,2)^T\\
+&=\boxed{\begin{pmatrix}(-2)^n+8\\-2(-2)^n-8\\12\end{pmatrix}},\qquad n\ge1.
+\end{aligned}
+$$
+
+检验 $n=1$：$(x_1,y_1,z_1)=(6,-4,12)$，与原递推式一致。**注意 $n=0$ 时 $A^0=I$，上面含 $0^n$ 被删除后的表达式不能直接代入 $n=0$；初值单独给出。**
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+### 原书真题 4｜2019 年：相似矩阵的参数与搭桥法
+
+<div id="math21-2027-note15-2019-01">
+
+**题型：解答题**
+
+来源:2019年考研真题, 科目:线性代数, 考点:相似矩阵构造与搭桥法, 难度:较难
+
+已知
+
+$$
+A=\begin{pmatrix}-2&-2&1\\2&x&-2\\0&0&-2\end{pmatrix},
+\qquad B=\begin{pmatrix}2&1&0\\0&-1&0\\0&0&y\end{pmatrix}
+$$
+
+相似。（1）求 $x,y$；（2）求可逆阵 $P$，使 $P^{-1}AP=B$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**（1）利用迹与行列式求参数。** 由 $A\sim B$ 得
+
+$$
+\begin{cases}
+\operatorname{tr}A=x-4=1+y=\operatorname{tr}B,\\
+\det A=4x-8=-2y=\det B.
+\end{cases}
+$$
+
+即 $x-y=5$、$2x+y=4$，解得
+
+$$
+\boxed{x=3,\qquad y=-2.}
+$$
+
+此时 $A$、$B$ 的特征值都是 $2,-1,-2$，互不相同，故确实相似。
+
+**（2）直接利用 $AP=PB$ 构造。** 将 $P$ 按列记作 $(p_1,p_2,p_3)$，由于
+
+$$
+B=\begin{pmatrix}2&1&0\\0&-1&0\\0&0&-2\end{pmatrix},
+$$
+
+比较 $AP$ 与 $PB$ 的列，得到
+
+$$
+(A-2I)p_1=0,\qquad(A+I)p_2=p_1,\qquad(A+2I)p_3=0.
+$$
+
+可取
+
+$$
+p_1=(2,-4,0)^T,\quad p_2=(0,-1,0)^T,\quad p_3=(-1,2,4)^T.
+$$
+
+于是
+
+$$
+\boxed{P=\begin{pmatrix}2&0&-1\\-4&-1&2\\0&0&4\end{pmatrix}},
+\qquad \det P=-8\ne0.
+$$
+
+逐列检验 $AP=PB$，故 $P^{-1}AP=B$。这里 $B$ **并非对角阵**，不能只把 $A$ 的特征向量直接排成 $P$；必须考虑 $B$ 非对角的 $b_{12}=1$ 所导致的耦合条件。另一种做法是分别把 $A,B$ 对角化到相同的 $\Lambda$，再用 $P=UV^{-1}$ “搭桥”。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+### 原书真题 5｜2024 年：可交换矩阵与可对角化的逻辑关系
+
+<div id="math21-2027-note15-2024-04">
+
+**题型：单选题**
+
+来源:2024年考研真题, 科目:线性代数, 考点:交换矩阵与充分必要条件, 难度:较难
+
+设 $A,B$ 为二阶矩阵，且 $AB=BA$。则“$A$ 有两个不相等的特征值”是“$B$ 可对角化”的（ ）。
+
+
+
+**A.** 充分必要条件
+
+
+
+
+**B.** 充分不必要条件
+
+
+
+
+**C.** 必要不充分条件
+
+
+
+
+**D.** 既不充分也不必要条件
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** B
+
+**证明充分性：** 若 $A$ 有两个互异特征值 $\lambda_1,\lambda_2$，对应特征向量 $\alpha_1,\alpha_2$ 线性无关。由 $AB=BA$ 可知
+
+$$
+A(B\alpha_i)=B(A\alpha_i)=\lambda_i B\alpha_i.
+$$
+
+这说明 $B$ 保持 $A$ 的每个一维特征子空间不变，因此存在标量 $\mu_i$ 使 $B\alpha_i=\mu_i\alpha_i$。同一组基同时对角化 $A,B$，故 $B$ 可对角化。
+
+**否定必要性：** 取 $A=I_2$、$B=\operatorname{diag}(1,2)$，则 $AB=BA$，$B$ 可对角化，但 $A$ 只有特征值 $1$，不是两个互异特征值。
+
+所以命题为**充分不必要条件**，选择第二项。**数域提醒：**该结论按同一数域内的特征值与可对角化理解；例如在复数域上恒成立。在严格要求**实数域**对角化时，若 $A$ 是实矩阵却只有一对非实共轭特征值，不能仅凭其“两个不同复特征值”推出 $B$ 可实对角化，题目需明确讨论数域或实特征值条件。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+### 原书真题 6｜2025 年：矩阵多项式可对角化能否反推原矩阵？
+
+<div id="math21-2027-note15-2025-01">
+
+**题型：单选题**
+
+来源:2025年考研真题, 科目:线性代数, 考点:矩阵多项式与可对角化, 难度:较难
+
+设 $A$ 为三阶矩阵，则“$A^3-A^2$ 可对角化”是“$A$ 可对角化”的（ ）。
+
+
+
+**A.** 充分但不必要条件
+
+
+
+
+**B.** 必要但不充分条件
+
+
+
+
+**C.** 充分必要条件
+
+
+
+
+**D.** 既不充分也不必要条件
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** B
+
+**必要性：** 若 $A=P\Lambda P^{-1}$，则
+
+$$
+A^3-A^2=P(\Lambda^3-\Lambda^2)P^{-1},
+$$
+
+而 $\Lambda^3-\Lambda^2$ 仍为对角阵，所以 $A^3-A^2$ 可对角化。这证明“$A$ 可对角化”$\Rightarrow$“$A^3-A^2$ 可对角化”。
+
+**非充分性：** 取
+
+$$
+A=\begin{pmatrix}0&1&0\\0&0&0\\0&0&0\end{pmatrix}.
+$$
+
+此时 $A\ne0$ 但 $A^2=0$，故 $A^3-A^2=0$ 显然可对角化。另一方面，$A$ 是非零幂零矩阵，全部特征值均为 $0$，若可对角化则必为零矩阵，矛盾。
+
+所以“$A^3-A^2$ 可对角化”是“$A$ 可对角化”的**必要但不充分条件**，选择第二项。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 本记原创自测｜加固 8 个高频陷阱
+
+<Callout type="info" title="来源标识">
+
+下列题目是围绕原书知识点**新编的巩固练习**，并非原书所列真题。可先作答，再展开解析。
+
+</Callout>
+
+<div id="math21-2027-note15-q01">
+
+**题型：单选题**
+
+来源:本记原创自测, 考点:矩阵多项式的特征值, 难度:基础
+
+若 $A\alpha=-2\alpha$，$\alpha\ne0$，则 $A^2+3A+I$ 对应 $\alpha$ 的特征值为（ ）。
+
+
+
+**A.** $-3$
+
+
+
+
+**B.** $-1$
+
+
+
+
+**C.** $3$
+
+
+
+
+**D.** $11$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** B
+
+直接代入多项式 $f(t)=t^2+3t+1$，得 $f(-2)=4-6+1=-1$。因此选择第二项。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note15-q02">
+
+**题型：单选题**
+
+来源:本记原创自测, 考点:特征多项式与相似, 难度:基础
+
+两个二阶矩阵具有相同的特征多项式，则一定（ ）。
+
+
+
+**A.** 相似
+
+
+
+
+**B.** 具有相同的迹和行列式
+
+
+
+
+**C.** 具有完全相同的特征向量
+
+
+
+
+**D.** 均可对角化
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** B
+
+相同的特征多项式意味着相同的代数特征值，因此迹与行列式相同。不能推出相似，反例是 $I_2$ 与 $\begin{pmatrix}1&1\\0&1\end{pmatrix}$。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note15-q03">
+
+**题型：判断题**
+
+来源:本记原创自测, 考点:伴随矩阵与零特征值, 难度:中等
+
+若 $A\alpha=0$、$\alpha\ne0$，则必有 $A^*\alpha=0$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** 错误
+
+此结论错误。例如 $A=\operatorname{diag}(0,2)$、$\alpha=(1,0)^T$，则 $A\alpha=0$，但 $A^*=\operatorname{diag}(2,0)$，所以 $A^*\alpha=2\alpha\ne0$。对 $\lambda=0$ 不能套 $\det A/\lambda$。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note15-q04">
+
+**题型：单选题**
+
+来源:本记原创自测, 考点:秩一矩阵对角化, 难度:中等
+
+非零二阶矩阵 $A=\begin{pmatrix}1&1\\-1&-1\end{pmatrix}$（秩为 $1$）满足（ ）。
+
+
+
+**A.** 可对角化，且两个特征值分别为 $1,-1$
+
+
+
+
+**B.** 可对角化，且两个特征值均为 $0$
+
+
+
+
+**C.** 不可对角化，且 $A^2=0$
+
+
+
+
+**D.** 不可对角化，且 $A$ 可逆
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** C
+
+$\operatorname{tr}A=0$，由秩一矩阵公式 $A^2=(\operatorname{tr}A)A=0$，而 $A\ne0$，故它是非零幂零阵，不能对角化。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note15-q05">
+
+**题型：解答题**
+
+来源:本记原创自测, 考点:重特征值与几何重数, 难度:中等
+
+判断 $A=\begin{pmatrix}3&1\\0&3\end{pmatrix}$ 能否对角化，并说明理由。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+$\det(tI-A)=(t-3)^2$，$3$ 是二重特征值；但
+
+$$
+A-3I=\begin{pmatrix}0&1\\0&0\end{pmatrix},\qquad r(A-3I)=1,
+$$
+
+故 $\dim\ker(A-3I)=2-1=1<2$。只有一个独立特征向量，**不可对角化**。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note15-q06">
+
+**题型：解答题**
+
+来源:本记原创自测, 考点:施密特正交化, 难度:中等
+
+将 $\alpha_1=(1,1,0)^T$、$\alpha_2=(1,0,1)^T$ 化为一组标准正交向量。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+$$
+\beta_1=(1,1,0)^T,\qquad
+\beta_2=\alpha_2-\frac{\alpha_2^T\beta_1}{\beta_1^T\beta_1}\beta_1
+=\frac12(1,-1,2)^T.
+$$
+
+单位化得
+
+$$
+\boxed{\gamma_1=\frac1{\sqrt2}(1,1,0)^T,\qquad
+\gamma_2=\frac1{\sqrt6}(1,-1,2)^T.}
+$$
+
+可验 $\gamma_1^T\gamma_2=0$，$\|\gamma_1\|=\|\gamma_2\|=1$。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note15-q07">
+
+**题型：单选题**
+
+来源:本记原创自测, 考点:实对称矩阵与特征向量, 难度:基础
+
+设 $A$ 为三阶实对称矩阵，特征值分别为 $1,1,3$，则一定有（ ）。
+
+
+
+**A.** $A$ 的迹为 $3$
+
+
+
+
+**B.** $r(A)=2$
+
+
+
+
+**C.** 存在正交矩阵 $Q$，使 $Q^TAQ=\operatorname{diag}(1,1,3)$
+
+
+
+
+**D.** $\dim\ker(A-I)=1$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** C
+
+实对称矩阵总可以正交对角化，重特征值 $1$ 的几何重数等于代数重数 $2$。迹为 $5$，三个特征值均非零，故 $r(A)=3$。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note15-q08">
+
+**题型：解答题**
+
+来源:本记原创自测, 考点:特征值与矩阵幂, 难度:中等
+
+设 $A$ 为二阶可对角化矩阵，特征值分别为 $2$ 和 $-1$。求 $\operatorname{tr}(A^{2026})$、$\det(A^{2026})$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+$A^{2026}$ 的特征值分别为 $2^{2026}$、$(-1)^{2026}=1$，故
+
+$$
+\boxed{\operatorname{tr}(A^{2026})=2^{2026}+1,\qquad
+\det(A^{2026})=2^{2026}.}
+$$
+
+对于迹和行列式，这一结论并不需要原矩阵可对角化；题干给出该条件只是方便从定义理解。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 考前速查｜关键词到第一步
+
+| 题目关键词 | 第一反应 | 适用限制 / 防错提醒 |
+| --- | --- | --- |
+| “求特征值、特征向量” | $\det(tI-A)=0$，再求 $\ker(A-tI)$ | 特征向量不含零向量 |
+| “矩阵每行和都为 $c$” | 特征值 $c$，特征向量全 $1$ 列向量 | 列和相等只给出左特征向量 |
+| “$f(A)=0$” | 任一特征值满足 $f(\lambda)=0$ | 候选根不一定全出现 |
+| “已知迹、行列式、秩” | $\sum\lambda_i$、$\prod\lambda_i$、零特征值 | 重数需按代数重数计 |
+| “判断两个矩阵相似” | 先比较特征多项式，再查可对角化／Jordan 结构 | 相同特征值通常不足够 |
+| “能否对角化” | 比较几何重数与代数重数 | $\sum g_\lambda=n$ 才充要 |
+| “秩为一的非零矩阵” | $A^2=(\operatorname{tr}A)A$ | $\operatorname{tr}A\ne0$ 则可对角化 |
+| “实对称矩阵” | 不同特征值的特征向量相互正交 | 重特征值内再正交化、单位化 |
+| “$P^{-1}AP=\Lambda$” | $AP=P\Lambda$，按列比较 | $P$ 的列与 $\Lambda$ 对角线顺序一致 |
+| “$A\sim B$，求过渡阵” | $AP=PB$ 或 $P=UV^{-1}$ | 若 $B$ 不是对角阵，不能直接只排列 $A$ 的特征向量 |
+| “$f(A)$ 可对角化” | 只可确认 $A$ 可对角化时 $f(A)$ 必可对角化 | 逆命题一般不成立 |
+
+<Callout type="success" title="第 15 记整理与核对记录">
+
+- **知识覆盖**：原资料第 78—83 页的 **必记 1—5** 已依次整理；原书的特征值变换表、隐藏特征值四个方法、“五等五相似”、可对角化判据、秩一矩阵、实对称正交化及施密特公式均已保留与展开。
+- **题目覆盖**：原书 **6 道历年真题**逐题给出解答，另有 **8 道原创自测**；题号 `id` 与此前十四记区分。
+- **准确性校正**：补充 $A^{-1}$、$A^*$ 特征值公式的前提；纠正“同特征值即相似”的误解；强调多项式矩阵的对角化不能一般反推；对 2024 年递推题给出 $n\ge1$ 适用范围；将第 80 页图片流程改写为有条件的判定表。
+
+</Callout>

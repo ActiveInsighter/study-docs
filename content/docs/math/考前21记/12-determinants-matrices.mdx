@@ -1,0 +1,910 @@
+---
+title: "第 12 记｜行列式与重要矩阵"
+description: "2027 周洋鑫《考前21记》第 12 记：行列式与重要矩阵。含知识梳理、适用条件与 9 道配套题及解析。"
+---
+
+<Callout type="info" title="阅读范围与本记结构">
+
+本记对应原书 **第 60—65 页**，涵盖 **必记 1—10**：行列式性质、按行列展开、代数余子式、特殊行列式、抽象行列式、秩为 1 的矩阵、伴随矩阵、逆矩阵、正交矩阵及公式对照。保留原书考点顺序；各节新增的推导与题目标明为“方法补充”或“原创自测”。原资料中的一处秩为 1 对称矩阵表述存在适用条件遗漏，已单独核正。
+
+</Callout>
+
+<Cards>
+  <Card title="行列式与余子式">性质变形、拉普拉斯展开、范德蒙、分块行列式。</Card>
+  <Card title="秩为 1 的矩阵">外积表示、幂、特征值和对角化判定。</Card>
+  <Card title="伴随与逆矩阵">恒等式、秩公式、可逆的等价条件、分块求逆。</Card>
+  <Card title="正交与运算次序">行列式取值、转置/逆/伴随的组合规律。</Card>
+</Cards>
+
+## 必记 1｜行列式的五条基础性质
+
+设 $A=(a_{ij})$ 为 $n$ 阶方阵，$|A|=\det A$。原书五条性质按实际计算方式整理如下。
+
+| 操作 | 行列式变化 | 使用要点 |
+| --- | --- | --- |
+| 转置 $A\mapsto A^T$ | $\vert A^T\vert =\vert A\vert $ | 行变换和列变换地位对称 |
+| 交换两行（或两列） | **变号** | 出现两行相同则为零 |
+| 某一行（列）乘 $k$ | **乘 $k$** | 若整体 $n$ 阶矩阵乘 $k$，则乘 $k^n$ |
+| 将某行的 $k$ 倍加到另一行 | **不变** | 不得把两行同时改变后仍直接套用 |
+| 对某一行（列）拆成两组元素之和 | **拆成两个行列式之和** | 仅对固定一行（列）具有线性性 |
+
+<Callout type="warn" title="区分单行倍乘与整个矩阵倍乘">
+
+对 $n$ 阶矩阵，$|kA|=k^n|A|$，不是 $k|A|$；只有**单独一行或一列**乘 $k$ 时才仅提出一个 $k$。
+
+</Callout>
+
+**倍加与加和拆分的公式**：若 $i\ne j$，以 $R_i$ 表示第 $i$ 行，则
+
+$$
+\begin{aligned}
+\det(R_1,\ldots,R_i+kR_j,\ldots,R_n)
+ &=\det(R_1,\ldots,R_i,\ldots,R_n),\\
+\det(R_1,\ldots,u+v,\ldots,R_n)
+ &=\det(R_1,\ldots,u,\ldots,R_n)
+ +\det(R_1,\ldots,v,\ldots,R_n).
+\end{aligned}
+$$
+
+前式中 $R_j$ 仍位于第 $j$ 行；后式是同一行的线性拆分。
+
+<Accordions>
+  <Accordion title="为什么两行成比例，行列式一定为 0？">
+
+  若 $R_i=kR_j$，用 $R_i\leftarrow R_i-kR_j$ 将第 $i$ 行化为零行而行列式不变；含零行的行列式为零。特别地，$k=1$ 就是两行相同。
+
+  </Accordion>
+  <Accordion title="交换行、倍乘行、倍加行三种初等变换如何记？">
+
+  交换两行：乘 $-1$；某行乘非零数 $k$：乘 $k$；某行加另一行的 $k$ 倍：不变。由此可将行列式化成上三角形，再取对角线元素的乘积并追踪前两类变换的系数。
+
+  </Accordion>
+</Accordions>
+
+## 必记 2｜行列式的展开定理
+
+**代数余子式的定义：**删去第 $i$ 行、第 $j$ 列后得到的 $(n-1)$ 阶行列式记作 $M_{ij}$，则
+
+$$
+A_{ij}=(-1)^{i+j}M_{ij}.
+$$
+
+沿第 $i$ 行或第 $j$ 列展开，分别有
+
+$$
+\boxed{|A|=\sum_{k=1}^n a_{ik}A_{ik}}
+\qquad\text{或}\qquad
+\boxed{|A|=\sum_{k=1}^n a_{kj}A_{kj}}.
+$$
+
+**异行、异列交叉相乘的和为零：**
+
+$$
+\sum_{k=1}^n a_{ik}A_{jk}=0\quad(i\ne j),
+\qquad
+\sum_{k=1}^n a_{ki}A_{kj}=0\quad(i\ne j).
+$$
+
+统一写成
+
+$$
+\boxed{\sum_{k=1}^n a_{ik}A_{jk}=\delta_{ij}|A|},
+\qquad
+\boxed{\sum_{k=1}^n a_{ki}A_{kj}=\delta_{ij}|A|},
+$$
+
+其中 $\delta_{ij}$ 为克罗内克符号。这正是后面 $AA^*=A^*A=|A|I$ 的按元素形式。
+
+<Callout type="idea" title="快算策略：先造零，再展开">
+
+计算具体行列式时，尽量先通过行列倍加制造某行或某列的大量零元素，再沿该行列展开；展开前先观察是否存在公因子、相同列或可合并的列。
+
+</Callout>
+
+## 必记 3｜代数余子式的线性组合与迹
+
+### 1. 余子式线性和：用“换行 / 换列”还原成行列式
+
+设给定系数 $k_1,\ldots,k_n$，且 $A_{ij}$ 是原行列式的代数余子式。则
+
+$$
+\boxed{\sum_{j=1}^n k_jA_{ij}
+=\det\bigl(A\text{ 的第 }i\text{ 行替换为 }(k_1,\ldots,k_n)\bigr)}.
+$$
+
+注意**代数余子式仍由原矩阵计算**：它与第 $i$ 行原来的数值无关，因此替换这一行不会改变其余子式。对于固定第 $j$ 列的组合 $\sum_i k_iA_{ij}$，同理替换第 $j$ 列。
+
+### 2. 主对角线代数余子式之和
+
+设 $A^*$ 表示 **伴随矩阵**，不是共轭转置；$\operatorname{tr}$ 表示迹，则
+
+$$
+\boxed{A_{11}+A_{22}+\cdots+A_{nn}=\operatorname{tr}(A^*)}
+=\sum_{i=1}^n\lambda_i(A^*).
+$$
+
+这里 $\lambda_i(A^*)$ 按代数重数计入。原书将此列为预测考点：除了直接算主余子式，也可利用伴随矩阵的秩或特征值。
+
+<Callout type="info" title="方法补充：迹与特征多项式">
+
+对任意方阵都有
+
+$$
+\det(tI+A)=t^n+(\operatorname{tr}A)t^{n-1}+\cdots
++(\operatorname{tr}A^*)t+\det A.
+$$
+
+所以 **$\operatorname{tr}(A^*)$ 是特征多项式中一次项的系数**（此处采用 $\det(tI+A)$ 的记法）。原书只给出对角余子式之和的恒等式，本式用于理解和拓展。
+
+</Callout>
+
+## 必记 4｜五类特殊行列式
+
+<Tabs items={['方法速览', '重点公式与推导']}>
+  <Tab value="方法速览">
+
+  | 原书记忆类型 | 首选方法 |
+  | --- | --- |
+  | 行（列）元素和相等 | 行列相加提取共同结构；若和为零则存在零特征值 |
+  | 爪型（箭头型）行列式 | 沿稀疏行列展开；可逆对角块时用分块消元 |
+  | 三线（通常是三对角）行列式 | 沿首行 / 末行展开，建立递推 |
+  | 点斜行列式 | 找特殊非零点所在行列，沿点的位置展开 |
+  | 范德蒙行列式 | 根据列变量成对相减因子，直接用乘积公式 |
+
+  </Tab>
+  <Tab value="重点公式与推导">
+
+  **（1）范德蒙行列式：**
+
+  $$
+  D_n=
+  \begin{vmatrix}
+  1&1&\cdots&1\\
+  x_1&x_2&\cdots&x_n\\
+  \vdots&\vdots&&\vdots\\
+  x_1^{n-1}&x_2^{n-1}&\cdots&x_n^{n-1}
+  \end{vmatrix}
+  =\boxed{\prod_{1\le j<i\le n}(x_i-x_j)}.
+  $$
+
+  **注意列顺序与符号。**从第一行的 $0$ 次幂开始；若交换任意两列，两边均变号；若有 $x_i=x_j$，行列式为零。
+
+  **（2）三对角行列式（方法补充）：** 对
+
+  $$
+  T_n=\begin{pmatrix}
+  a_1&b_1&&\\
+  c_1&a_2&\ddots&\\
+  &\ddots&\ddots&b_{n-1}\\
+  &&c_{n-1}&a_n
+  \end{pmatrix},
+  $$
+
+  令 $D_0=1,D_1=a_1$，则
+
+  $$
+  \boxed{D_n=a_nD_{n-1}-b_{n-1}c_{n-1}D_{n-2}\quad(n\ge2)}.
+  $$
+
+  **（3）箭头型（方法补充）：** 若 $D$ 为可逆对角矩阵，则
+
+  $$
+  \det\begin{pmatrix}a&u^T\\v&D\end{pmatrix}
+  =\det(D)\bigl(a-u^TD^{-1}v\bigr).
+  $$
+
+  不可逆时不能直接使用 $D^{-1}$；可改用拉普拉斯展开或直接消元。
+
+  </Tab>
+</Tabs>
+
+<Callout type="warn" title="范德蒙的两项极易写反">
+
+若行是 $1,x_i,x_i^2,\ldots$，**列**对应 $x_1,\ldots,x_n$，则上述规范排列为 $\prod_{j<i}(x_i-x_j)$；写成 $\prod_{j<i}(x_j-x_i)$ 会多出 $(-1)^{n(n-1)/2}$。
+
+</Callout>
+
+## 必记 5｜抽象型行列式与分块行列式
+
+### 1. 六类基础公式
+
+设 $A,B$ 为 $n$ 阶矩阵，$k$ 为数。
+
+$$
+\begin{aligned}
+|A^T|&=|A|,\\
+|AB|&=|A|\,|B|,\\
+|kA|&=k^n|A|,\\
+|A^{-1}|&=\frac1{|A|}\quad(A\text{ 可逆}),\\
+|A^*|&=|A|^{n-1}\quad(n\ge2),\\
+|A|&=\prod_{i=1}^n\lambda_i(A).
+\end{aligned}
+$$
+
+最后一式中，特征值允许为复数，按代数重数计算。特别地，若 $A$ 有一个零特征值，则 $|A|=0$。
+
+<Callout type="warn" title="两个绝不可以随意写的式子">
+
+通常 **$|A+B|\ne|A|+|B|$**。同样，通常不能把块矩阵视作标量二阶行列式：
+
+$$
+\det\begin{pmatrix}A&B\\C&D\end{pmatrix}
+\ne\det(A)\det(D)-\det(B)\det(C).
+$$
+
+某些特殊可交换情形可能成立，但不是一般恒等式；优先判断能否化为分块三角形。
+
+</Callout>
+
+### 2. 拉普拉斯分块行列式
+
+对于方阵 $A\in\mathbb R^{m\times m}$、$B\in\mathbb R^{n\times n}$，以及维数适配的非对角块 $C$，有
+
+$$
+\boxed{\det\begin{pmatrix}A&C\\0&B\end{pmatrix}
+=\det\begin{pmatrix}A&0\\C&B\end{pmatrix}=|A|\,|B|}.
+$$
+
+式中两个 $C$ 分别占据对应大小的不同块位置，未必是同一维度矩阵。
+
+块反对角型（左上块为 $m\times n$，右下块为 $n\times m$）有
+
+$$
+\boxed{\det\begin{pmatrix}0_{m\times n}&A_{m\times m}\\B_{n\times n}&0_{n\times m}\end{pmatrix}
+=(-1)^{mn}|A|\,|B|}.
+$$
+
+将左上零块或右下零块替换成任意大小合适的矩阵，公式**仍成立**，因为另一个零块足以使非零排列项必须分别来自 $A$、$B$。
+
+### 3. 原书三个复习提醒
+
+<Accordions>
+  <Accordion title="已知代数余子式 A_ij = a_ij，怎样写伴随矩阵？">
+
+  原矩阵记为 $A=(a_{ij})$，若对所有 $i,j$ 都有代数余子式 $A_{ij}=a_{ij}$，则 $A^*=A^T$。若 $A_{ij}=-a_{ij}$，则 $A^*=-A^T$。这两个式子源于伴随矩阵是**代数余子式矩阵的转置**，并非说任意矩阵都有这种关系。
+
+  </Accordion>
+  <Accordion title="由 |A+B⁻¹| 推出 |A⁻¹+B|（A、B 均可逆）">
+
+  $$
+  \begin{aligned}
+  |A+B^{-1}|&=|(I+AB)B^{-1}|=\frac{|I+AB|}{|B|},\\
+  |A^{-1}+B|&=|A^{-1}(I+AB)|=\frac{|I+AB|}{|A|}.
+  \end{aligned}
+  $$
+
+  所以
+
+  $$
+  \boxed{|A^{-1}+B|=\frac{|B|}{|A|}\,|A+B^{-1}|}.
+  $$
+
+  即使 $I+AB$ 不可逆，该恒等式仍然正确；分母仅涉及已知可逆的 $A,B$。
+
+  </Accordion>
+  <Accordion title="特征值线索：哪些条件能推出 0 是特征值？">
+
+  - $|aI-A|=0$：$a$ 是 $A$ 的特征值。
+  - $A$ 每行元素之和为 $a$：$A\boldsymbol 1=a\boldsymbol 1$，因此 $a$ 为特征值。
+  - $Ax=0$ 有非零解：$0$ 是特征值，$|A|=0$。
+  - $Ax=0$ 有 $q$ 个线性无关解：$\dim\ker A\ge q$，零特征值的几何重数至少为 $q$。
+  - 对非齐次 $Ax=b$，一般解须是 **$x=x_p+x_h$**；如果所谓“通解”真的恰为 $k\alpha+\lambda\beta$、且所有 $k,\lambda$ 均自由，则代入 $k=\lambda=0$ 得 **$b=0$**，问题退化为齐次方程。不能在 $b\ne0$ 时把非齐次通解误写成过原点的线性组合。
+
+  </Accordion>
+</Accordions>
+
+## 必记 6｜秩为 1 的矩阵：外积、幂、特征值与对角化
+
+这是原书重点强调的部分。以下均讨论 **$n\ge2$ 的实方阵**，$\alpha,\beta$ 为非零 $n$ 维列向量。
+
+### 1. 内积是标量，外积是矩阵
+
+$$
+\underbrace{\alpha^T\beta}_{1\times1\text{ 标量}}
+=\underbrace{\beta^T\alpha}_{1\times1\text{ 标量}},
+\qquad
+\underbrace{\alpha\beta^T}_{n\times n\text{ 矩阵}}
+\ne\underbrace{\beta\alpha^T}_{n\times n\text{ 矩阵}}\quad\text{（一般而言）}.
+$$
+
+若 $A=\alpha\beta^T$，则 $\operatorname{rank}A=1$，并且
+
+$$
+\boxed{\operatorname{tr}(\alpha\beta^T)=\beta^T\alpha=\alpha^T\beta}.
+$$
+
+<Callout type="warn" title="源文适用条件校正：对称的秩 1 矩阵不一定等于 ααᵀ">
+
+原书第 62 页将“秩为 $1$ 且对称”直接写作 $A=\alpha\alpha^T$，**对一般实对称矩阵并不成立**。正确结论是：
+
+$$
+\boxed{A=\lambda uu^T,\quad\lambda\in\mathbb R\setminus\{0\},\quad u^Tu=1}.
+$$
+
+只有当 $A$ **半正定**（唯一非零特征值 $\lambda>0$）时，才可以取 $\alpha=\sqrt\lambda\,u$，写为 $A=\alpha\alpha^T$。反例：$A=\operatorname{diag}(-1,0)$ 对称且秩为 $1$，却不可能等于任何实向量的 $\alpha\alpha^T$，因为后者半正定。
+
+</Callout>
+
+### 2. 秩为 1 的矩阵的幂
+
+由 $A=\alpha\beta^T$，有
+
+$$
+A^2=\alpha(\beta^T\alpha)\beta^T
+=(\operatorname{tr}A)A.
+$$
+
+归纳得到原书核心结论
+
+$$
+\boxed{A^k=(\operatorname{tr}A)^{k-1}A\qquad(k\in\mathbb N^+,\ k\ge1)}.
+$$
+
+当 $\operatorname{tr}A=0$ 时，$A^2=0$，从而 $A^k=0$（$k\ge2$）。这里约定 $k=1$ 时直接读作 $A$，避免形式上讨论 $0^0$。
+
+### 3. 特征值与可对角化判定
+
+设 $s=\operatorname{tr}A$，则秩为 1 的 $n$ 阶矩阵的特征值（含代数重数）为
+
+$$
+\boxed{s,\underbrace{0,\ldots,0}_{n-1\text{ 个}}}.
+$$
+
+证明思路：$A\alpha=\alpha\beta^T\alpha=s\alpha$，所以 $s$ 为特征值；又 $\ker A$ 维数为 $n-1$，其余特征值为零（也可用特征多项式 $t^{n-1}(t-s)$）。
+
+| 迹 | 幂的表现 | 能否相似对角化 | 理由 |
+| --- | --- | --- | --- |
+| $s\ne0$ | $A^k=s^{k-1}A$ | **能** | $A$ 的最小多项式整除 $t(t-s)$，根互异 |
+| $s=0$ | $A^2=0$ 且 $A\ne0$ | **不能** | 非零幂零矩阵不可能相似于对角矩阵 |
+
+当 $\alpha$ 是单位列向量时，$\alpha\alpha^T$ 的唯一非零特征值为 $\alpha^T\alpha=1$，它还是正交投影矩阵，因为 $(\alpha\alpha^T)^2=\alpha\alpha^T$。
+
+<Steps>
+  <Step>
+
+  ### 第一步：看到秩 1，写外积
+
+  设 $A=\alpha\beta^T$；若给定的是具体数字矩阵，也可先算出 $s=\operatorname{tr}A$。
+
+  </Step>
+  <Step>
+
+  ### 第二步：利用 $A^2=sA$
+
+  高次幂、矩阵多项式、指数型表达式都可以降为 $I$ 与 $A$ 的线性组合。
+
+  </Step>
+  <Step>
+
+  ### 第三步：用 $s$ 判特征值和对角化
+
+  非零特征值只有 $s$；若 $s=0$，进一步得 $A^2=0$，并可据此直接证明不能对角化。
+
+  </Step>
+</Steps>
+
+<Callout type="idea" title="方法补充：秩 1 扰动的行列式与逆矩阵">
+
+对列向量 $u,v$，矩阵行列式引理给出
+
+$$
+\boxed{\det(I+uv^T)=1+v^Tu}.
+$$
+
+若 $1+v^Tu\ne0$，则 Sherman–Morrison 型公式为
+
+$$
+\boxed{(I+uv^T)^{-1}=I-\frac{uv^T}{1+v^Tu}}.
+$$
+
+这两个结论**不是原书这一页列出的公式**，但直接利用秩 1 结构，可快速解决相关考研变式。
+
+</Callout>
+
+## 必记 7｜伴随矩阵 $A^*$
+
+### 1. 定义与第一反应
+
+设 $A_{ij}$ 为 $A$ 的第 $i$ 行、第 $j$ 列元素的**代数余子式**，则
+
+$$
+\boxed{A^*=(A_{ji})_{n\times n}}.
+$$
+
+伴随矩阵是代数余子式矩阵的**转置**。碰到伴随矩阵时，首先想到
+
+$$
+\boxed{AA^*=A^*A=|A|I}.
+$$
+
+若 $|A|\ne0$，立即得到
+
+$$
+A^*=|A|A^{-1},\qquad A^{-1}=\frac{A^*}{|A|}.
+$$
+
+### 2. 伴随矩阵的秩公式
+
+对 $n\ge2$，原书给出的完整分类是
+
+$$
+\boxed{
+\operatorname{rank}(A^*)=
+\begin{cases}
+n,&\operatorname{rank}(A)=n,\\
+1,&\operatorname{rank}(A)=n-1,\\
+0,&\operatorname{rank}(A)\le n-2.
+\end{cases}}
+$$
+
+**推导要点：**
+
+- $\operatorname{rank}(A)=n$：$A$ 可逆，$A^*=|A|A^{-1}$ 也可逆。
+- $\operatorname{rank}(A)=n-1$：至少存在一个非零的 $(n-1)$ 阶子式，故 $A^*\ne0$；同时 $AA^*=0$，伴随矩阵的每一列都在一维核空间 $\ker A$ 中，因此秩恰好为 $1$。
+- $\operatorname{rank}(A)\le n-2$：所有 $(n-1)$ 阶子式都为零，故 $A^*=0$。
+
+如果 $|A|=0$，则 $AA^*=A^*A=0$，进而
+
+$$
+\boxed{\operatorname{rank}(A)+\operatorname{rank}(A^*)\le n}.
+$$
+
+且 $A$ 的列向量都属于 $\ker A^*$，$A^*$ 的列向量都属于 $\ker A$。
+
+<Callout type="warn" title="A*=0 与 A 不可逆，并不等价">
+
+$A^*=0$ 等价于 $\operatorname{rank}(A)\le n-2$；而 $A$ 不可逆只要求 $\operatorname{rank}(A)\le n-1$。**秩为 $n-1$ 的奇异矩阵伴随矩阵不为零。**
+
+</Callout>
+
+## 必记 8｜逆矩阵与可逆条件
+
+### 1. 定义和七种等价判据
+
+对于 $n$ 阶方阵 $A$，若存在 $B$ 使 $AB=BA=I$，则称 $A$ 可逆，$B=A^{-1}$。考研常用判据：
+
+$$
+\boxed{A\text{ 可逆}\iff |A|\ne0\iff\operatorname{rank}(A)=n}.
+$$
+
+这些条件又等价于：$A$ 的行向量组线性无关、列向量组线性无关；$Ax=0$ 只有零解；对于**每个** $b\in\mathbb R^n$，$Ax=b$ 都有唯一解；$A$ 的所有特征值均不为零。
+
+<Callout type="warn" title="唯一解的量词要明确">
+
+对于方阵 $A$，只要存在一个 $b$ 使 $Ax=b$ 有唯一解，就足以推出 $A$ 可逆；可逆则任意 $b$ 都唯一可解。考试中不要把“有解”与“唯一解”混淆。
+
+</Callout>
+
+### 2. 逆矩阵的基础公式
+
+$$
+\begin{aligned}
+(A^{-1})^{-1}&=A,\\
+(kA)^{-1}&=\frac1kA^{-1}\quad(k\ne0),\\
+(AB)^{-1}&=B^{-1}A^{-1},\\
+(A^T)^{-1}&=(A^{-1})^T,\\
+|A^{-1}|&=\frac1{|A|}.
+\end{aligned}
+$$
+
+**三个求逆方式**：直接验证 $AB=I$；通过 $A^{-1}=A^*/|A|$（低阶矩阵）；使用初等行变换
+
+$$
+\left(\,A\mid I\,\right)
+\xrightarrow{\text{只做行初等变换}}
+\left(\,I\mid A^{-1}\,\right).
+$$
+
+具体二阶公式为
+
+$$
+\boxed{\begin{pmatrix}a&b\\c&d\end{pmatrix}^{-1}
+=\frac1{ad-bc}\begin{pmatrix}d&-b\\-c&a\end{pmatrix}},
+\quad ad-bc\ne0.
+$$
+
+### 3. 三类分块矩阵的逆
+
+若 $B,C$ 均可逆，则
+
+$$
+\begin{aligned}
+\begin{pmatrix}B&0\\0&C\end{pmatrix}^{-1}
+&=\begin{pmatrix}B^{-1}&0\\0&C^{-1}\end{pmatrix},\\[6pt]
+\begin{pmatrix}0&B\\C&0\end{pmatrix}^{-1}
+&=\begin{pmatrix}0&C^{-1}\\B^{-1}&0\end{pmatrix}.
+\end{aligned}
+$$
+
+对于下三角分块矩阵，若对角块 $A,B$ 均可逆，则
+
+$$
+\boxed{\begin{pmatrix}A&0\\C&B\end{pmatrix}^{-1}
+=\begin{pmatrix}
+A^{-1}&0\\
+-B^{-1}CA^{-1}&B^{-1}
+\end{pmatrix}}.
+$$
+
+<Accordions>
+  <Accordion title="为什么下三角块的负号不能漏？">
+
+  设逆矩阵形如 $\begin{pmatrix}X&0\\Y&Z\end{pmatrix}$。由
+
+  $$
+  \begin{pmatrix}A&0\\C&B\end{pmatrix}
+  \begin{pmatrix}X&0\\Y&Z\end{pmatrix}=I
+  $$
+
+  得 $AX=I$、$BZ=I$、$CX+BY=0$。所以 $X=A^{-1}$、$Z=B^{-1}$，而 $Y=-B^{-1}CA^{-1}$。由于矩阵乘法一般不交换，**$B^{-1}CA^{-1}$ 的顺序必须保留**。
+
+  </Accordion>
+  <Accordion title="何时优先用分块求逆？">
+
+  当矩阵含大面积零块、易识别的可逆三角对角块，或矩阵可按自然分组表示时，优先分块处理；若各块乘法复杂或对角块不可逆，则退回初等变换法，而非强行使用公式。
+
+  </Accordion>
+</Accordions>
+
+## 必记 9｜正交矩阵（实方阵）
+
+**定义：**实 $n$ 阶方阵 $Q$ 满足
+
+$$
+\boxed{Q^TQ=QQ^T=I}
+\iff\boxed{Q^{-1}=Q^T}.
+$$
+
+正交矩阵的列向量两两正交且均为单位向量，行向量也一样；特别有
+
+$$
+\boxed{|Q|=\pm1},\qquad \boxed{\|Qx\|_2=\|x\|_2}.
+$$
+
+此外，$Q^{-1}$、$Q^T$、$Q^*$ 均为正交矩阵；两个同阶正交矩阵之积仍正交。
+
+<Callout type="idea" title="快证伴随矩阵仍正交">
+
+由 $Q^*=|Q|Q^{-1}=\pm Q^T$，而 $Q^T$ 正交，乘以 $\pm1$ 不改变正交性。因此 $Q^*$ 也正交。注意正交是实矩阵的转置性质；复数矩阵对应概念为酉矩阵与共轭转置。
+
+</Callout>
+
+## 必记 10｜转置、伴随、逆矩阵的对照
+
+原书的三组公式整理如下，均以所涉逆矩阵存在为前提。
+
+| 运算 | 乘积 $AB$ | 和 $A+B$ |
+| --- | --- | --- |
+| 转置 | $(AB)^T=B^TA^T$ | $(A+B)^T=A^T+B^T$ |
+| 伴随 | $(AB)^*=B^*A^*$ | **通常不等于** $A^*+B^*$ |
+| 逆矩阵 | $(AB)^{-1}=B^{-1}A^{-1}$ | **通常不等于** $A^{-1}+B^{-1}$ |
+
+<Callout type="warn" title="不是所有乘积变换都能不换顺序">
+
+对乘积取转置、伴随或逆，**因素顺序全部反转**。例如 $(ABC)^{-1}=C^{-1}B^{-1}A^{-1}$。对和取逆一般无法分配，即使 $A,B,A+B$ 全可逆也不行。
+
+</Callout>
+
+当 $A$ 可逆，三个操作 $T,*,-1$ 两两可交换，例如
+
+$$
+\boxed{(A^*)^{-1}=(A^{-1})^*=\frac{A}{|A|}},
+$$
+
+以及
+
+$$
+(A^T)^*=(A^*)^T,
+\qquad
+(A^T)^{-1}=(A^{-1})^T.
+$$
+
+**证明第一式：**由 $A^*=|A|A^{-1}$ 可得 $(A^*)^{-1}=A/|A|$；另一方面 $|A^{-1}|=1/|A|$，故 $(A^{-1})^*=|A^{-1}|A=A/|A|$。
+
+---
+
+## 强化训练｜本记原创自测（附完整参考解答）
+
+以下为根据原书 10 个“必记”设计的**新增练习**，不标为原书真题。每道题可在答题后展开解析。
+
+<div id="math21-2027-note12-q01">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:线性代数, 考点:余子式线性组合, 难度:基础
+
+已知
+
+$$
+A=\begin{pmatrix}1&2&0\\2&1&3\\0&1&1\end{pmatrix},
+$$
+
+设 $A_{2j}$ 为第 $2$ 行元素的代数余子式。求 $A_{21}+2A_{22}+A_{23}$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+将原行列式的第 $2$ 行替换成 $(1,2,1)$，则
+
+$$
+\begin{aligned}
+A_{21}+2A_{22}+A_{23}
+&=\begin{vmatrix}1&2&0\\1&2&1\\0&1&1\end{vmatrix}\\
+&=1(2-1)-2(1-0)=-1.
+\end{aligned}
+$$
+
+**答案：** $\boxed{-1}$。不必分别求三个代数余子式。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note12-q02">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:线性代数, 考点:范德蒙行列式, 难度:基础
+
+计算
+
+$$
+\begin{vmatrix}1&1&1\\1&2&4\\1&4&16\end{vmatrix}.
+$$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+三个列变量分别为 $x_1=1,x_2=2,x_3=4$。由范德蒙公式
+
+$$
+D=(x_2-x_1)(x_3-x_1)(x_3-x_2)
+=(2-1)(4-1)(4-2)=\boxed{6}.
+$$
+
+也可作 $C_3\leftarrow C_3-C_2$、$C_2\leftarrow C_2-C_1$，检验同样结果。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note12-q03">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:线性代数, 考点:分块行列式, 难度:中等
+
+设 $A$ 为 $2$ 阶方阵、$B$ 为 $3$ 阶方阵，已知 $|A|=-2$，$|B|=4$，求
+
+$$
+D=\det\begin{pmatrix}0_{2\times3}&A\\B&0_{3\times2}\end{pmatrix}.
+$$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+应用分块反对角行列式公式，$m=2,n=3$，所以 $(-1)^{mn}=(-1)^6=1$，从而
+
+$$
+D=(-1)^6|A||B|=1\times(-2)\times4=\boxed{-8}.
+$$
+
+**检查：**这是一个 $5$ 阶方阵；不能直接写成普通标量二阶行列式的公式。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note12-q04">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:线性代数, 考点:秩为1的矩阵, 难度:中等
+
+设
+
+$$
+\alpha=\begin{pmatrix}1\\2\\1\end{pmatrix},\quad
+\beta=\begin{pmatrix}2\\-1\\0\end{pmatrix},\quad
+A=\alpha\beta^T.
+$$
+
+求 $\operatorname{tr}A$、$A^5$ 及 $A$ 能否相似对角化。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+$$
+\operatorname{tr}A=\beta^T\alpha=2-2+0=0.
+$$
+
+$A=\alpha\beta^T\ne0$，故 $\operatorname{rank}A=1$；由 $A^2=(\operatorname{tr}A)A$ 得 $A^2=0$，进而 $\boxed{A^5=0}$。非零矩阵 $A$ 幂零，不可能与对角矩阵相似，因此**不能相似对角化**。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note12-q05">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:线性代数, 考点:伴随矩阵与秩, 难度:中等
+
+设 $A$ 为 $4$ 阶矩阵，讨论 $r(A)=4,3,2$ 时 $r(A^*)$ 的可能值。若 $r(A)=3$，再判断 $AA^*$ 是否为零矩阵。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+由伴随矩阵秩公式，
+
+$$
+\begin{array}{c|ccc}
+r(A)&4&3&2\\\hline
+r(A^*)&4&1&0
+\end{array}.
+$$
+
+当 $r(A)=3<4$ 时，$|A|=0$，所以 $\boxed{AA^*=|A|I=0}$，但 $A^*\ne0$。这正是“奇异矩阵的伴随矩阵未必为零”的典型情形。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note12-q06">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:线性代数, 考点:分块矩阵求逆, 难度:中等
+
+求分块矩阵（每一块都是实数标量）
+
+$$
+M=\begin{pmatrix}2&0\\3&4\end{pmatrix}
+$$
+
+的逆矩阵，并用相乘验证。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+视为下三角分块矩阵，$A=2,B=4,C=3$，得
+
+$$
+M^{-1}=
+\begin{pmatrix}
+1/2&0\\
+-(1/4)\cdot3\cdot(1/2)&1/4
+\end{pmatrix}
+=\boxed{\begin{pmatrix}1/2&0\\-3/8&1/4\end{pmatrix}}.
+$$
+
+验证
+
+$$
+MM^{-1}=\begin{pmatrix}
+2\cdot\frac12&0\\
+3\cdot\frac12+4\cdot\left(-\frac38\right)&4\cdot\frac14
+\end{pmatrix}=I.
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note12-q07">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:线性代数, 考点:正交矩阵, 难度:基础
+
+判断
+
+$$
+Q=\frac15\begin{pmatrix}3&-4\\4&3\end{pmatrix}
+$$
+
+是否为正交矩阵，计算其行列式与逆矩阵。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+$$
+Q^TQ=\frac1{25}\begin{pmatrix}3&4\\-4&3\end{pmatrix}
+\begin{pmatrix}3&-4\\4&3\end{pmatrix}
+=\begin{pmatrix}1&0\\0&1\end{pmatrix}.
+$$
+
+故 $Q$ 正交，
+
+$$
+|Q|=\frac{9+16}{25}=\boxed{1},\qquad
+Q^{-1}=Q^T=\boxed{\frac15\begin{pmatrix}3&4\\-4&3\end{pmatrix}}.
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note12-q08">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:线性代数, 考点:逆矩阵行列式恒等式, 难度:中等
+
+设 $A,B$ 均为可逆方阵，$|A|=2,|B|=-3$，且 $|A+B^{-1}|=4$。求 $|A^{-1}+B|$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+由
+
+$$
+|A^{-1}+B|=\frac{|B|}{|A|}|A+B^{-1}|,
+$$
+
+代入得到
+
+$$
+\boxed{|A^{-1}+B|=\frac{-3}{2}\times4=-6}.
+$$
+
+**关键：**无需额外假设 $I+AB$ 可逆。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note12-q09">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:线性代数, 考点:对称秩1矩阵, 难度:中等, 易错
+
+证明 $A=\begin{pmatrix}-2&0\\0&0\end{pmatrix}$ 是实对称秩 1 矩阵，但不存在实列向量 $\alpha$ 使 $A=\alpha\alpha^T$；给出 $A=\lambda uu^T$ 的正确表示。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+$A^T=A$，仅一个非零行和非零列，因此 $r(A)=1$。对任意实列向量 $\alpha$，$\alpha^T(\alpha\alpha^T)\alpha=(\alpha^T\alpha)^2\ge0$，更一般地对任意 $x$ 有 $x^T\alpha\alpha^Tx=(\alpha^Tx)^2\ge0$。故 $\alpha\alpha^T$ 半正定；但给 $A$ 取 $x=(1,0)^T$，有 $x^TAx=-2<0$，矛盾。
+
+正确表示为
+
+$$
+\boxed{A=-2\begin{pmatrix}1\\0\end{pmatrix}(1,0)},
+$$
+
+即 $\lambda=-2$，$u=(1,0)^T$。这道题用于专门核正原书第 62 页的适用条件。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 本记复盘｜“见什么，想什么”
+
+| 题干给出的线索 | 首选突破口 | 常见失误 |
+| --- | --- | --- |
+| 一行的多个代数余子式线性和 | 替换该行还原行列式 | 误把原行中的系数当必须保留 |
+| 全部主对角代数余子式之和 | $\operatorname{tr}(A^*)$ | 错写成 $\operatorname{tr}(A)$ |
+| 行列式很多零元素 | 沿含零最多的行列展开 | 忽略 $(-1)^{i+j}$ |
+| 范德蒙列结构 | $\prod_{j<i}(x_i-x_j)$ | 把差的顺序写反 |
+| 块上三角 / 下三角 | 对角块行列式的积 | 错用标量二阶行列式规则 |
+| 秩为 1 | $A^2=(\operatorname{tr}A)A$ | 忘记迹为零时 $A^2=0$ |
+| 伴随矩阵 $A^*$ | $AA^*=\vert A\vert I$ | 误判奇异矩阵伴随一定为零 |
+| 判断 $A$ 可逆 | $\vert A\vert \ne0$、$r(A)=n$、$0$ 非特征值 | 忽略“唯一解”限定 |
+| 正交矩阵 | $Q^{-1}=Q^T$、$\vert Q\vert =\pm1$ | 只检查列长而未检查列正交 |
+| $(AB)^{-1},(AB)^*,(AB)^T$ | 顺序颠倒 | 误按交换律保持原顺序 |
+
+<Callout type="success" title="第 12 记核对范围">
+
+已按原 PDF 第 **60—65 页**与解析 MD 逐项对照，覆盖原书 **10 个“必记”及第 62—64 页的附注**；订正秩 1 对称矩阵缺少半正定条件的问题，明确非齐次线性方程组通解的适用条件，并补充 **9 道原创自测题**。
+
+</Callout>

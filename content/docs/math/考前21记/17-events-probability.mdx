@@ -1,0 +1,1041 @@
+---
+title: "第 17 记｜随机事件及其概率（数学一、数学三）"
+description: "2027 周洋鑫《考前21记》第 17 记：随机事件及其概率（数学一、数学三）。含知识梳理、适用条件与 10 道配套题及解析。"
+---
+
+<Callout type="info" title="整理范围、来源与使用约定">
+
+本记依据原资料 **第 90—92 页**，完整按原顺序整理 **必记 1—4**：随机事件的关系与运算、概率公式、事件独立性、三大概型；包含原文的三个补充注释。对原 MD 识别中缺失的分配律右侧、集合符号和公式适用条件，已结合 PDF 页面核对并补齐。原书本记**没有列出具体年份的考研真题**；下方例题及巩固训练均明确属于**根据本记知识点编写的原创例题或自测题**，不冒称真题。
+
+记样本空间为 $\Omega$，不可能事件为 $\varnothing$；$\overline A$ 表示 $A$ 的对立事件。原书的 $A+B$、$AB$、$A-B$ 分别表示 $A\cup B$、$A\cap B$、$A\cap\overline B$。为避免把事件的并与概率数值相加混淆，推导时优先使用 $\cup$、$\cap$。
+
+</Callout>
+
+<Cards>
+  <Card title="必记 1｜事件关系和运算">包含、互斥、对立、独立；并交差与德摩根律。</Card>
+  <Card title="必记 2｜七组概率公式">单调性、加减法、条件概率、乘法、全概率与贝叶斯。</Card>
+  <Card title="必记 3｜事件独立性">二事件及其对立事件；两两独立与三个事件相互独立。</Card>
+  <Card title="必记 4｜三大概型">古典概型、几何概型、伯努利重复试验及二项公式。</Card>
+</Cards>
+
+## 必记 1｜随机事件的关系及运算
+
+### 1. 随机事件的五种关系
+
+| 关系 | 数学表述 | 准确含义与判别提示 |
+| --- | --- | --- |
+| 包含 | $B\subseteq A$ | $B$ 一旦发生，$A$ 必发生；允许 $A=B$。 |
+| 相等 | $A=B$ | $A\subseteq B$ 且 $B\subseteq A$，两事件包含的样本点相同。 |
+| 互斥（互不相容） | $A\cap B=\varnothing$ | 两事件不能同时发生；它们**不一定穷尽**所有可能结果。 |
+| 对立（互补） | $A\cap B=\varnothing$，$A\cup B=\Omega$ | 两事件恰有一个发生，即 $B=\overline A$。 |
+| 独立 | $P(A\cap B)=P(A)P(B)$ | 一事件发生不会改变另一事件发生的概率（条件概率有定义时）；**不是集合关系**。 |
+
+<Callout type="warn" title="两个最容易混淆的概念">
+
+- **对立必互斥；互斥未必对立。**例如掷一次骰子，$A=\{1\}$ 与 $B=\{2\}$ 互斥，但 $A\cup B\ne\Omega$。
+- **独立不等于互斥。**若 $A,B$ 互斥且 $P(A)>0$、$P(B)>0$，则 $P(AB)=0<P(A)P(B)$，所以不独立。反过来，含零概率事件时可能同时互斥和独立，不能笼统说二者“绝不兼容”。
+
+</Callout>
+
+### 2. 加、乘、减三种事件运算
+
+| 原书记号 | 标准集合写法 | 发生条件 | 常用改写 |
+| --- | --- | --- | --- |
+| $A+B$ | $A\cup B$ | $A,B$ **至少一个**发生 | $\overline{\overline A\cap\overline B}$ |
+| $AB$ | $A\cap B$ | $A,B$ **都**发生 | $\overline{\overline A\cup\overline B}$ |
+| $A-B$ | $A\cap\overline B$ | $A$ 发生、$B$ 不发生 | $A\setminus B$ |
+
+<Tabs items={['中文条件翻译', '集合与概率区分', '否定与至少一个']}>
+  <Tab value="中文条件翻译">
+
+  - “至少有一个发生”：$A\cup B$。
+  - “恰有一个发生”：$(A\cap\overline B)\cup(\overline A\cap B)$。
+  - “至少有两个发生”（三个事件）：$(AB)\cup(AC)\cup(BC)$。
+  - “恰有两个发生”：$(AB\overline C)\cup(A\overline BC)\cup(\overline ABC)$。
+  - “三个都不发生”：$\overline A\cap\overline B\cap\overline C$。
+
+  </Tab>
+  <Tab value="集合与概率区分">
+
+  $A\cup B$ 是事件，$P(A\cup B)$ 才是数。通常
+
+  $$
+  P(A\cup B)=P(A)+P(B)-P(A\cap B),
+  $$
+
+  **并非**恒有 $P(A\cup B)=P(A)+P(B)$；只有 $P(AB)=0$ 时才可直接相加。
+
+  </Tab>
+  <Tab value="否定与至少一个">
+
+  “没有一个发生”是“至少有一个发生”的对立事件：
+
+  $$
+  \overline{A\cup B\cup C}=\overline A\cap\overline B\cap\overline C.
+  $$
+
+  “不是三个都发生”并不等于“三个都不发生”，而是
+
+  $$
+  \overline{A\cap B\cap C}=\overline A\cup\overline B\cup\overline C.
+  $$
+
+  </Tab>
+</Tabs>
+
+### 3. 五组运算律（原书顺序）
+
+<Accordions>
+  <Accordion title="（1）吸收律、零一律：交取小，并取大">
+
+  若 $A\subseteq B$，则
+
+  $$
+  A\cap B=A,\qquad A\cup B=B.
+  $$
+
+  与不可能事件、必然事件运算：
+
+  $$
+  A\cap\varnothing=\varnothing,\quad
+  A\cap\Omega=A,\quad
+  A\cup\varnothing=A,\quad
+  A\cup\Omega=\Omega.
+  $$
+
+  原书强调 $ABC\subseteq AB\subseteq A$。因此
+
+  $$
+  (ABC)\cap(AB)=ABC,\qquad (ABC)\cup(AB)=AB.
+  $$
+
+  </Accordion>
+  <Accordion title="（2）交换律：交换事件顺序不影响并、交">
+
+  $$
+  A\cap B=B\cap A,\qquad A\cup B=B\cup A.
+  $$
+
+  </Accordion>
+  <Accordion title="（3）结合律：多事件运算可重新加括号">
+
+  $$
+  \begin{aligned}
+  (A\cup B)\cup C&=A\cup(B\cup C),\\
+  (A\cap B)\cap C&=A\cap(B\cap C).
+  \end{aligned}
+  $$
+
+  结合律只允许**同类**并运算或同类交运算重新分组，不能随意交换并、交。
+
+  </Accordion>
+  <Accordion title="（4）分配律：并、交可以相互分配">
+
+  $$
+  \begin{aligned}
+  A\cap(B\cup C)&=(A\cap B)\cup(A\cap C),\\
+  A\cup(B\cap C)&=(A\cup B)\cap(A\cup C).
+  \end{aligned}
+  $$
+
+  <Callout type="info" title="原 MD 识别修正">
+
+  原识别文本第二条分配律只有左边 $A\cup(B\cap C)$，右边遗漏；对照 PDF 可确认应为 $(A\cup B)\cap(A\cup C)$，此处已补齐。
+
+  </Callout>
+
+  </Accordion>
+  <Accordion title="（5）德摩根律（对偶律）：整体取反，并交互换">
+
+  $$
+  \begin{aligned}
+  \overline{A\cap B}&=\overline A\cup\overline B,\\
+  \overline{A\cup B}&=\overline A\cap\overline B,\\
+  \overline{A\cup B\cup C}&=\overline A\cap\overline B\cap\overline C,\\
+  \overline{A\cap B\cap C}&=\overline A\cup\overline B\cup\overline C.
+  \end{aligned}
+  $$
+
+  </Accordion>
+</Accordions>
+
+<Callout type="idea" title="事件化简的操作顺序">
+
+先把“至少、至多、恰好、只有”翻译为并交与对立事件；再用包含关系判断能否吸收；出现整体否定时优先德摩根律；最后才计算概率。**不要在集合表达式还没化简时就机械套概率加法公式。**
+
+</Callout>
+
+### 4. 原书的“事件包含链”与三个附注
+
+原书第 92 页归纳：对任意 $A,B,C$，都有
+
+$$
+\boxed{\varnothing\subseteq A\cap B\cap C\subseteq A\cap B\subseteq A
+\subseteq A\cup B\subseteq A\cup B\cup C\subseteq\Omega.}
+$$
+
+这条链说明“**越交越小，越并越大**”。在链中任取两个事件，交集等于其中较小者，并集等于较大者。例如
+
+$$
+A\cap(A\cup B\cup C)=A,
+$$
+
+$$
+(A\cup B)\cap(A\cup B\cup C)=A\cup B.
+$$
+
+<Callout type="warn" title="原书附注 3：由概率等式通常不能反推出事件相等">
+
+- $A=\varnothing\Rightarrow P(A)=0$，但 $P(A)=0\not\Rightarrow A=\varnothing$。
+- $A=\Omega\Rightarrow P(A)=1$，但 $P(A)=1\not\Rightarrow A=\Omega$。
+- 一般地，$P(A)=P(B)$ 也不能推出 $A=B$。
+
+例如在 $[0,1]$ 上均匀随机取一点，事件 $A=\{0\}$ 不是空集，但 $P(A)=0$；事件 $B=(0,1]$ 不是整个样本空间，却有 $P(B)=1$。这与原书的提醒一致。
+
+</Callout>
+
+## 必记 2｜概率公式（重点记忆）
+
+### 1. 单调性和交、并的概率界
+
+对于任意事件 $A,B$：
+
+$$
+A\subseteq B\quad\Longrightarrow\quad P(A)\le P(B).
+$$
+
+特别地，$A\cap B\subseteq A$ 且 $A\cap B\subseteq B$，故
+
+$$
+P(A\cap B)\le\min\{P(A),P(B)\}.
+$$
+
+再由概率加法公式可推得
+
+$$
+\max\{P(A),P(B)\}\le P(A\cup B)\le\min\{1,P(A)+P(B)\},
+$$
+
+以及考场常用的 Fréchet 界：
+
+$$
+\boxed{\max\{0,P(A)+P(B)-1\}\le P(A\cap B)\le\min\{P(A),P(B)\}.}
+$$
+
+这是从原书单调性、加法公式自然推出的**补充结论**，适合求参数范围或检验数据是否合理。
+
+### 2. 加法公式：两个事件与三个事件
+
+对任意事件（**无须独立，也无须互斥**），
+
+$$
+\boxed{P(A\cup B)=P(A)+P(B)-P(A\cap B).}
+$$
+
+三个事件的容斥公式为
+
+$$
+\boxed{\begin{aligned}
+P(A\cup B\cup C)
+={}&P(A)+P(B)+P(C)\\
+&-P(AB)-P(AC)-P(BC)+P(ABC).
+\end{aligned}}
+$$
+
+如果 $A\cap B=\varnothing$，二事件公式才退化为 $P(A\cup B)=P(A)+P(B)$。注意“两个事件独立”时 $P(AB)=P(A)P(B)$，而不是 $0$。
+
+<Steps>
+  <Step>
+
+  ### 先看重复计算了什么
+
+  $P(A)+P(B)$ 把交集 $A\cap B$ 计算了两次，因此减去一次 $P(AB)$。
+
+  </Step>
+  <Step>
+
+  ### 推广到三个事件
+
+  三个单事件概率相加后，所有两两交集被多计算；减去三项两两交集后，三重交集又被过度扣除，因此再加回 $P(ABC)$。
+
+  </Step>
+  <Step>
+
+  ### 做一次边界检查
+
+  若 $A=B=C$，右侧应化为 $3P(A)-3P(A)+P(A)=P(A)$；若三者两两互斥，三组交集概率都为零，结果为三者概率之和。
+
+  </Step>
+</Steps>
+
+### 3. 减法公式及其三个常见变形
+
+$$
+\boxed{P(A-B)=P(A\cap\overline B)=P(A)-P(A\cap B).}
+$$
+
+由于 $A=(A\cap B)\cup(A\cap\overline B)$ 是互斥并，公式显然成立。联立可得
+
+$$
+\begin{aligned}
+P(A\cap\overline B)&=P(A)-P(AB),\\
+P(\overline A\cap B)&=P(B)-P(AB),\\
+P(\overline A\cap\overline B)&=1-P(A\cup B).
+\end{aligned}
+$$
+
+### 4. 条件概率：先核查条件事件的概率
+
+当且仅当 $P(A)>0$ 时，原书定义
+
+$$
+\boxed{P(B\mid A)=\frac{P(A\cap B)}{P(A)}.}
+$$
+
+固定条件事件 $A$ 且 $P(A)>0$，有
+
+$$
+P(\varnothing\mid A)=0,\qquad P(\Omega\mid A)=1,
+$$
+
+$$
+P(\overline B\mid A)=1-P(B\mid A).
+$$
+
+条件概率仍满足加法公式。特别地，若 $B\cap C=\varnothing$，则
+
+$$
+P(B\cup C\mid A)=P(B\mid A)+P(C\mid A).
+$$
+
+<Callout type="warn" title="不能丢掉分母非零的条件">
+
+当 $P(A)=0$ 时，教材中的商式 $P(B\mid A)=P(AB)/P(A)$ 没有定义。不能把 $0/0$ 当成 $0$，也不能在写条件概率时默认条件事件一定能发生。类似地，$P(B\mid\overline A)$ 只有在 $P(\overline A)>0$ 时才按此定义有意义。
+
+</Callout>
+
+### 5. 乘法公式：事件顺序决定条件概率
+
+由条件概率的定义，若 $P(A)>0$，则
+
+$$
+\boxed{P(A\cap B)=P(A)P(B\mid A).}
+$$
+
+若 $P(B)>0$，也可交换顺序为
+
+$$
+P(A\cap B)=P(B)P(A\mid B).
+$$
+
+当 $P(A\cap B)>0$ 时，三个事件连乘为
+
+$$
+\boxed{P(ABC)=P(A)P(B\mid A)P(C\mid AB).}
+$$
+
+更一般地，若前面的交事件概率均为正，
+
+$$
+P(A_1\cap\cdots\cap A_n)=P(A_1)\prod_{k=2}^nP(A_k\mid A_1\cap\cdots\cap A_{k-1}).
+$$
+
+<Callout type="idea" title="识别乘法公式与独立性公式">
+
+- $P(AB)=P(A)P(B\mid A)$：一般乘法公式，有分母条件即可使用。
+- $P(AB)=P(A)P(B)$：**独立性**带来的特殊化简。
+
+除非题目给出独立，不能擅自删掉条件符号“$\mid A$”。
+
+</Callout>
+
+### 6. 全概率公式：先分类，再合并
+
+设 $A_1,\dots,A_n$ 是样本空间的一个**有限完备事件组**：
+
+$$
+A_i\cap A_j=\varnothing\ (i\ne j),\qquad\bigcup_{i=1}^nA_i=\Omega.
+$$
+
+若对涉及条件概率的 $A_i$ 有 $P(A_i)>0$，则对任意事件 $B$，
+
+$$
+\boxed{\begin{aligned}
+P(B)&=\sum_{i=1}^nP(B\cap A_i)\\
+&=\sum_{i=1}^nP(A_i)P(B\mid A_i).
+\end{aligned}}
+$$
+
+若某 $P(A_i)=0$，对应的交集概率直接取 $0$；无需对该项使用未定义的条件概率。最常见的是二分法 $A,\overline A$：
+
+$$
+P(B)=P(A)P(B\mid A)+P(\overline A)P(B\mid\overline A),
+$$
+
+其中两个条件概率都写出时需 $0<P(A)<1$。
+
+### 7. 贝叶斯公式：先算结果概率，再回推原因
+
+在上述完备事件组及正概率条件下，当 $P(B)>0$，
+
+$$
+\boxed{P(A_i\mid B)=\frac{P(A_i)P(B\mid A_i)}{\sum_{j=1}^nP(A_j)P(B\mid A_j)}.}
+$$
+
+分子是“第 $i$ 种原因并且出现结果 $B$”的联合概率；分母是所有原因产生结果 $B$ 的总概率。
+
+<Tabs items={['正向求概率｜全概率', '反向求原因｜贝叶斯', '两类原因速记']}>
+  <Tab value="正向求概率｜全概率">
+
+  先已知各来源 $A_i$ 的比例和每类来源产生结果 $B$ 的概率，要求“不区分来源的总体 $B$ 概率”时，求和：
+
+  $$
+  P(B)=\sum_iP(A_i)P(B\mid A_i).
+  $$
+
+  </Tab>
+  <Tab value="反向求原因｜贝叶斯">
+
+  已观察到结果 $B$，反问“来自来源 $A_i$ 的概率”，使用
+
+  $$
+  P(A_i\mid B)=\frac{P(A_i\cap B)}{P(B)}.
+  $$
+
+  **条件方向不能倒写**：$P(A_i\mid B)$ 通常不等于 $P(B\mid A_i)$。
+
+  </Tab>
+  <Tab value="两类原因速记">
+
+  令 $P(A)=p$、$P(B\mid A)=u$、$P(B\mid\overline A)=v$，则
+
+  $$
+  P(A\mid B)=\frac{pu}{pu+(1-p)v},
+  $$
+
+  前提为 $0<p<1$ 且 $pu+(1-p)v>0$。
+
+  </Tab>
+</Tabs>
+
+### 8. 原创例题｜全概率与贝叶斯的一题两问
+
+某厂甲、乙两条生产线分别产出总量的 $60\%$、$40\%$，次品率分别为 $2\%$、$5\%$。随机抽到一件产品，记“产品为次品”为 $D$，“产品来自乙线”为 $E$。
+
+先算总体次品概率：
+
+$$
+P(D)=0.6\times0.02+0.4\times0.05=0.032.
+$$
+
+再算观察到次品后它来自乙线的概率：
+
+$$
+P(E\mid D)=\frac{0.4\times0.05}{0.032}=\boxed{\frac58}.
+$$
+
+<Callout type="warn" title="来源标识">
+
+上述生产线题为**本记原创说明例**，用于演示原书的全概率、贝叶斯公式，不是原书标注的历年考研真题。
+
+</Callout>
+
+## 必记 3｜随机事件的独立性
+
+### 1. 两个事件相互独立的定义及等价形式
+
+最稳妥的定义对**任意**两个事件都可用：
+
+$$
+\boxed{A\text{ 与 }B\text{ 独立}\iff P(AB)=P(A)P(B).}
+$$
+
+独立时，只要有关条件概率有定义，还可写成
+
+$$
+P(B\mid A)=P(B),\qquad P(A\mid B)=P(A).
+$$
+
+原书写出的另一等价形式是
+
+$$
+P(B\mid A)=P(B\mid\overline A),
+$$
+
+但须补上 **$0<P(A)<1$**，否则至少有一边条件概率按基础定义不存在。在此正概率条件下，该式与独立确实等价：
+
+$$
+P(B)=P(A)P(B\mid A)+P(\overline A)P(B\mid\overline A),
+$$
+
+若右边两个条件概率同为 $c$，则 $P(B)=c$，从而 $P(B\mid A)=P(B)$。
+
+### 2. 两事件独立，对立事件组合也独立
+
+如果 $A,B$ 独立，那么下列四对事件都独立：
+
+$$
+(A,B),\quad(A,\overline B),\quad(\overline A,B),\quad(\overline A,\overline B).
+$$
+
+与原书逐项列出的结论对应，有
+
+$$
+\begin{aligned}
+P(A\overline B)&=P(A)P(\overline B),\\
+P(\overline AB)&=P(\overline A)P(B),\\
+P(\overline A\,\overline B)&=P(\overline A)P(\overline B).
+\end{aligned}
+$$
+
+**证明示例：**
+
+$$
+\begin{aligned}
+P(A\overline B)&=P(A)-P(AB)\\
+&=P(A)-P(A)P(B)\\
+&=P(A)[1-P(B)]\\
+&=P(A)P(\overline B).
+\end{aligned}
+$$
+
+两个原事件都取对立也同理；反过来，若其中任意一种组合独立，也可通过取对立事件得到原事件独立。
+
+<Callout type="info" title="独立与互斥是否能够并存？">
+
+若互斥，则 $P(AB)=0$；若还独立，则 $0=P(A)P(B)$。因此**至少有一个事件概率为零**是同时满足互斥和独立的必要条件；若已互斥且某事件概率为零，也是充分条件。通常考题说两个事件都具有正概率，此时二者不可能既互斥又独立。
+
+</Callout>
+
+### 3. 三个事件：两两独立不等于相互独立
+
+原书第 92 页区分两种层次：
+
+- **两两独立**：$P(AB)=P(A)P(B)$、$P(AC)=P(A)P(C)$、$P(BC)=P(B)P(C)$。
+- **三个事件相互独立**：上述三个等式成立，且还要满足
+
+$$
+\boxed{P(ABC)=P(A)P(B)P(C).}
+$$
+
+所以“三个相互独立 $\Rightarrow$ 两两独立”，逆命题一般不成立。$n$ 个事件相互独立还要求**任意至少两个事件构成的子集**的交概率等于对应各事件概率之积；只检验所有两两交集不足以确认相互独立。
+
+<Accordions>
+  <Accordion title="典型反例（原创整理）：三个事件两两独立，却不相互独立">
+
+  抛两枚独立、公平的硬币，样本空间由 $HH,HT,TH,TT$ 四个等可能样本点组成。设
+
+  $$
+  A=\{HH,HT\},\qquad B=\{HH,TH\},\qquad C=\{HH,TT\}.
+  $$
+
+  则 $P(A)=P(B)=P(C)=\frac12$，且
+
+  $$
+  P(AB)=P(AC)=P(BC)=\frac14
+  =\frac12\cdot\frac12.
+  $$
+
+  所以 **$A,B,C$ 两两独立**。然而
+
+  $$
+  P(ABC)=P(\{HH\})=\frac14\ne\frac18=P(A)P(B)P(C),
+  $$
+
+  故 **不相互独立**。这里三个事件都含 $HH$，使三重交集概率高于相互独立时应有的 $1/8$。
+
+  </Accordion>
+  <Accordion title="三事件恰有两个发生的概率怎样计算？">
+
+  令 $E$ 表示“$A,B,C$ 恰有两个发生”，则
+
+  $$
+  E=(AB\overline C)\cup(A\overline BC)\cup(\overline ABC).
+  $$
+
+  三个部分两两互斥，因而
+
+  $$
+  P(E)=P(AB)+P(AC)+P(BC)-3P(ABC).
+  $$
+
+  如果 $A,B,C$ **相互独立**，可以进一步替换各交概率为乘积；如果仅两两独立，三重交概率不能这样替换。
+
+  </Accordion>
+  <Accordion title="三个事件至少有两个发生的概率怎样计算？">
+
+  $F=(AB)\cup(AC)\cup(BC)$，因此
+
+  $$
+  \boxed{P(F)=P(AB)+P(AC)+P(BC)-2P(ABC).}
+  $$
+
+  这个式子对任意三事件成立。理由是“三者都发生”的样本点在三个两两交事件中被算了三次，想在并集中只算一次，需减去两次。
+
+  </Accordion>
+</Accordions>
+
+### 4. 原书三个补充注释在独立性题中的作用
+
+**注 1：事件包含链**用于先判断交集和并集的大小；**注 2：吸收律**用于化简嵌套事件；**注 3：概率关系不能反推集合关系**防止误判。尤其注意，$P(AB)=0$ 只是交集概率为零，并不必然意味着 $AB=\varnothing$。
+
+## 必记 4｜三大概型
+
+### 1. 古典概型：有限且等可能
+
+原书写作
+
+$$
+\boxed{P(A)=\frac{k}{n}},
+$$
+
+其中 $n$ 是基本样本点的总数、$k$ 是事件 $A$ 所含基本样本点的个数。**除“有限”外还必须满足每个基本结果等可能**；若有限但不等可能，不能直接数个数求比值。
+
+<Steps>
+  <Step>
+
+  ### 定义无歧义的基本结果
+
+  判断是否区分顺序、是否放回、是否区分同类物品，令每一个基本结果真正等可能。
+
+  </Step>
+  <Step>
+
+  ### 计算样本点总数 $n$
+
+  例如从 $N$ 个不同物品中不放回取 $k$ 个且不计顺序，样本点数为 $\binom Nk$；如果计顺序，应改用排列数。
+
+  </Step>
+  <Step>
+
+  ### 计算满足条件的样本点数
+
+  得到 $k$ 后使用 $P(A)=k/n$；若“至少一次成功”更容易由“全部失败”求得，可先算对立事件。
+
+  </Step>
+</Steps>
+
+**原创小例：**掷两枚公平骰子，点数之和为 $7$ 的有 $(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)$ 共六种，有序基本结果共 $36$ 种，所以概率为 $6/36=1/6$。
+
+### 2. 几何概型：按等可能的长度、面积或体积比例
+
+原书以长度、面积为例：若随机点在有限测度的区域 $\Omega$ 上**按面积（或相应测度）均匀分布**，则
+
+$$
+\boxed{P(A)=\frac{\operatorname{mes}(A)}{\operatorname{mes}(\Omega)}},
+\qquad 0<\operatorname{mes}(\Omega)<\infty.
+$$
+
+这里 $\operatorname{mes}$ 可为长度、面积、体积等；只知道样本空间无限，**还不足以**判定为几何概型。取样分布必须与所用测度匹配。连续区域的边界若长度/面积/体积测度为零，包含边界与不包含边界通常不影响概率。
+
+**原创小例：**从正方形 $[0,1]\times[0,1]$ 中按面积均匀取点 $(X,Y)$，求 $P(X+Y\le1)$。所求区域是直角三角形，面积 $1/2$；正方形面积为 $1$，故
+
+$$
+P(X+Y\le1)=\frac{1/2}{1}=\boxed{\frac12}.
+$$
+
+### 3. 伯努利概型：独立重复试验与二项概率公式
+
+每次试验只有“成功 $A$ / 失败 $\overline A$”两类结果，成功概率恒为 $p$，且 **$n$ 次试验相互独立**。令 $X$ 为 $n$ 次中的成功次数，则
+
+$$
+X\sim B(n,p),\qquad
+\boxed{P(X=k)=\binom nk p^k(1-p)^{n-k}},\quad k=0,1,\ldots,n.
+$$
+
+原书限定 $0<p<1$；若形式上取 $p=0$ 或 $p=1$，得到退化的确定性情形。组合系数 $\binom nk$ 表示成功出现在哪 $k$ 次的不同排列。
+
+令 $q=1-p$，可得到三个高频结论：
+
+$$
+P(X=0)=q^n,\qquad P(X\ge1)=1-q^n,
+$$
+
+$$
+P(X\le1)=q^n+npq^{n-1},\qquad P(X=n)=p^n.
+$$
+
+<Callout type="warn" title="伯努利试验三个必要识别条件">
+
+必须是**次数固定、各次独立、每次成功概率相同**。若采用不放回抽取，后续成功概率通常变化，不能不加分析直接使用二项公式；若问“首次成功在第几次”，所求不是固定 $n$ 次的成功总数，也不能直接套 $\binom nkp^k(1-p)^{n-k}$。
+
+</Callout>
+
+<Callout type="idea" title="从原书二项概率公式得到的校验方法">
+
+由二项式定理，
+
+$$
+\sum_{k=0}^n\binom nkp^k(1-p)^{n-k}=[p+(1-p)]^n=1.
+$$
+
+这证明所有可能成功次数的概率加总为 $1$，也可以用来检查算出的概率分布是否遗漏情况。
+
+</Callout>
+
+## 贯通知识：把公式选对，比先计算更重要
+
+| 题干关键词 | 首选表达式或方法 | 适用条件提醒 |
+| --- | --- | --- |
+| “至少一个发生” | $P(A\cup B)$；需要时用对立事件 | 非互斥时不能直接概率相加 |
+| “$A$ 发生且 $B$ 不发生” | $P(A\overline B)=P(A)-P(AB)$ | 总成立 |
+| “已知 $A$ 发生，再看 $B$” | $P(B\mid A)$ | 需要 $P(A)>0$ |
+| “先分类型，再求总体” | 全概率公式 | 分类须互斥且覆盖全体 |
+| “已看到结果，反查来源” | 贝叶斯公式 | 分母结果概率必须大于零 |
+| “每次相同成功率，独立重复 $n$ 次” | $\binom nkp^k(1-p)^{n-k}$ | 试验次数固定、独立、概率恒定 |
+| “三事件两两独立” | 三组两两交概率可化乘积 | 不能直接把 $P(ABC)$ 化乘积 |
+| “有限等可能结果 / 区域均匀随机取点” | 古典计数 / 几何度量 | 先证明等可能性或均匀性 |
+
+## 本记原创自测（非原书真题）
+
+下面题目按本记知识点设计，独立于原书内容，用于检查是否真正会选择公式、说明适用条件和判断易错结论。
+
+<div id="math21-2027-note17-q01">
+
+**题型：单选题**
+
+来源:本记原创自测, 科目:概率论, 考点:事件关系, 难度:基础
+
+设事件 $A$、$B$ 满足 $A\subseteq B$，下列结论必然成立的是（ ）。
+
+
+
+**A.** $A\cup B=A$
+
+
+
+
+**B.** $A\cap B=A$
+
+
+
+
+**C.** $P(A)=P(B)$
+
+
+
+
+**D.** $A\cap B=\varnothing$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** B
+
+由吸收律，$A\cap B=A$ 且 $A\cup B=B$。概率单调性只能推出 $P(A)\le P(B)$，未必取等号；$A$ 也未必为空集。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note17-q02">
+
+**题型：多选题**
+
+来源:本记原创自测, 科目:概率论, 考点:事件独立性, 难度:中等
+
+设 $A,B$ 两事件相互独立，下列结论一定正确的有（ ）。
+
+
+
+**A.** $P(A\cap\overline B)=P(A)[1-P(B)]$
+
+
+
+
+**B.** $P(\overline A\cap\overline B)=[1-P(A)][1-P(B)]$
+
+
+
+
+**C.** $A\cap B=\varnothing$
+
+
+
+
+**D.** $P(A\cup B)=P(A)+P(B)-P(A)P(B)$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** A、B、D
+
+独立对对立事件组合仍保持成立，因此前两项正确；代入加法公式得到第四项正确。独立并不表示互斥，例如两次独立掷骰分别掷出偶数，可以同时发生。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note17-q03">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论, 考点:三事件容斥, 难度:中等
+
+设 $P(A)=0.5$，$P(B)=0.4$，$P(C)=0.3$，$P(AB)=0.2$，$P(AC)=0.1$，$P(BC)=0.15$，$P(ABC)=0.05$，求 $P(A\cup B\cup C)$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+容斥公式给出
+
+$$
+\begin{aligned}
+P(A\cup B\cup C)
+&=0.5+0.4+0.3-0.2-0.1-0.15+0.05\\
+&=\boxed{0.8}.
+\end{aligned}
+$$
+
+检查：结果不小于最大单事件概率 $0.5$，也不大于 $1$，因此通过基本界限检查。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note17-q04">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论, 考点:条件概率, 难度:基础
+
+设 $P(A)=0.6$、$P(B)=0.5$、$P(A\cup B)=0.8$。求 $P(A\cap B)$、$P(B\mid A)$ 与 $P(A\cap\overline B)$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+首先由加法公式，
+
+$$
+P(AB)=0.6+0.5-0.8=\boxed{0.3}.
+$$
+
+因为 $P(A)=0.6>0$，
+
+$$
+P(B\mid A)=\frac{P(AB)}{P(A)}=\frac{0.3}{0.6}=\boxed{\frac12}.
+$$
+
+由减法公式，
+
+$$
+P(A\overline B)=P(A)-P(AB)=\boxed{0.3}.
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note17-q05">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论, 考点:全概率与贝叶斯, 难度:中等
+
+某工厂的甲、乙生产线产量占比分别为 $3/5$、$2/5$，次品率分别为 $1/50$、$1/20$。随机抽得一件次品，求它来自乙生产线的概率。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+设 $E$ 为“来自乙线”，$D$ 为“次品”。全概率给出
+
+$$
+P(D)=\frac35\cdot\frac1{50}+\frac25\cdot\frac1{20}
+=\frac3{250}+\frac1{50}=\frac4{125}.
+$$
+
+再使用贝叶斯公式：
+
+$$
+P(E\mid D)=\frac{P(E)P(D\mid E)}{P(D)}
+=\frac{\frac25\cdot\frac1{20}}{\frac4{125}}
+=\boxed{\frac58}.
+$$
+
+核心是区分“乙线出现次品”的 $P(D\mid E)$ 与“次品来自乙线”的 $P(E\mid D)$。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note17-q06">
+
+**题型：判断题**
+
+来源:本记原创自测, 科目:概率论, 考点:两两独立与相互独立, 易错
+
+若三个事件 $A,B,C$ 两两独立，则必有 $P(ABC)=P(A)P(B)P(C)$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** 错误
+
+错误。两两独立仅要求三组两事件的交概率满足乘积公式；三事件相互独立还要另验三重交概率。两枚公平硬币的四结果反例已在本记“必记 3”给出。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note17-q07">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论, 考点:古典概型, 难度:中等
+
+一个盒子中有红球 $4$ 个、白球 $3$ 个、黑球 $2$ 个，各球可区分。无放回地任取 $3$ 个球，求“恰有 $2$ 个红球”的概率。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+所有无序三球组合数为 $\binom93=84$。恰有两个红球时，先从四个红球中选两个，再从剩余五个非红球中选一个，所以有
+
+$$
+\binom42\binom51=6\cdot5=30
+$$
+
+种。于是
+
+$$
+P=\frac{\binom42\binom51}{\binom93}
+=\frac{30}{84}=\boxed{\frac5{14}}.
+$$
+
+本题是不放回取球，不能直接将每次抽到红球的概率视为固定 $4/9$ 来使用二项公式。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note17-q08">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论, 考点:几何概型, 难度:中等
+
+在单位正方形 $\Omega=[0,1]^2$ 内按面积均匀取一点 $(X,Y)$。求 $P(X+Y>3/2)$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+直线 $x+y=3/2$ 在正方形内部截出靠近右上角的小直角三角形，两条直角边均长 $1/2$。故所求区域面积为
+
+$$
+\frac12\cdot\frac12\cdot\frac12=\frac18.
+$$
+
+正方形面积为 $1$，所以
+
+$$
+\boxed{P(X+Y>3/2)=\frac18}.
+$$
+
+等号对应的线段面积为零，不影响结果。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note17-q09">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论, 考点:伯努利与二项概率, 难度:中等
+
+某次独立重复试验每次成功概率为 $p=0.2$，共进行 $5$ 次。求恰有两次成功、至少一次成功的概率。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+设成功次数 $X\sim B(5,0.2)$。
+
+恰好两次成功：
+
+$$
+P(X=2)=\binom52(0.2)^2(0.8)^3
+=10\cdot0.04\cdot0.512=\boxed{0.2048}.
+$$
+
+至少一次成功用对立事件更简单：
+
+$$
+P(X\ge1)=1-P(X=0)=1-(0.8)^5=\boxed{0.67232}.
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note17-q10">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论, 考点:互斥与独立及概率界, 难度:较难
+
+已知 $P(A)=0.4$，$P(B)=0.6$。
+
+（1）求 $P(AB)$ 的可能取值范围；
+
+（2）若 $A,B$ 独立，求 $P(A\cup B)$；
+
+（3）若 $A,B$ 互斥，求 $P(A\cup B)$，并判断这种情形与独立是否兼容。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+（1）交集概率满足
+
+$$
+\max\{0,0.4+0.6-1\}\le P(AB)\le\min\{0.4,0.6\},
+$$
+
+故 $\boxed{0\le P(AB)\le0.4}$。
+
+（2）若独立，$P(AB)=0.4\times0.6=0.24$，所以
+
+$$
+P(A\cup B)=0.4+0.6-0.24=\boxed{0.76}.
+$$
+
+（3）若互斥，$P(AB)=0$，因此
+
+$$
+P(A\cup B)=0.4+0.6=\boxed{1}.
+$$
+
+由于 $P(A)P(B)=0.24>0$，与 $P(AB)=0$ 矛盾，因此本题中互斥和独立不可兼得。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 考前速查｜本记必须牢牢记住的公式链
+
+1. **包含与吸收**：$A\subseteq B\Rightarrow AB=A,\ A\cup B=B,\ P(A)\le P(B)$。
+2. **互斥与对立**：对立 $\Rightarrow$ 互斥；互斥但不一定对立；互斥且双方概率都为正 $\Rightarrow$ 不独立。
+3. **并事件的容斥**：$P(A\cup B)=P(A)+P(B)-P(AB)$；三事件再“减两两交、加三重交”。
+4. **差事件**：$P(A\overline B)=P(A)-P(AB)$；整体否定先用德摩根律。
+5. **条件与乘法**：$P(B\mid A)=P(AB)/P(A)$（$P(A)>0$）；$P(AB)=P(A)P(B\mid A)$。
+6. **全概率与贝叶斯**：先互斥且穷尽地分类，再计算 $P(B)$；观察到 $B$ 后，以联合概率除以 $P(B)$ 回推来源。
+7. **独立性**：$P(AB)=P(A)P(B)$；两两独立不代表三事件相互独立。
+8. **古典与几何**：前者有限等可能，后者按相应测度均匀；“结果有限/无限”本身不足以套式。
+9. **伯努利试验**：固定次数、独立、成功率恒定；成功 $k$ 次的概率为 $\binom nkp^k(1-p)^{n-k}$。
+
+<Callout type="success" title="第 17 记整理与核对记录">
+
+- **原书范围**：第 **90—92 页**；仅涉及数学一、数学三的随机事件及概率专题，依次覆盖 **必记 1—4** 及第 92 页的 **注 1—3**。
+- **原书图形**：第 90 页包含关系、互斥与对立、并交差事件的维恩图，已逐一转写为准确的集合关系、定义与判别表；本单文件不依赖未随 MDX 分发的图片相对路径。
+- **与 PDF 对照的修订**：补齐识别缺失的第二条分配律、规范空集与补集符号，并为条件概率、独立的条件等价形式、全概率和几何概型补上必要前提。
+- **练习来源**：本记题库新增 **10 道原创自测题**（单选、多选、判断、解答），均附结构化答案和完整解析；本记原书没有可直接标注为历年真题的题目。
+
+</Callout>

@@ -1,0 +1,1077 @@
+---
+title: "第 18 记｜一维随机变量及其分布（数学一、数学三）"
+description: "2027 周洋鑫《考前21记》第 18 记：一维随机变量及其分布（数学一、数学三）。含知识梳理、适用条件与 12 道配套题及解析。"
+---
+
+<Callout type="info" title="本记范围、来源和校订边界">
+
+本记对应原资料 **第 93—97 页**，依照原书 **必记 1—4** 的次序整理：分布函数、连续型随机变量、常见一维分布、一维随机变量函数的分布。原书第 94—96 页集中给出常见分布的公式、图形及泊松定理；第 97 页仅提示连续型函数分布使用课程中的“万能解法”，**没有展开算法和例题**。因此下文将“原书核心”与“补充推导 / 原创训练”区别说明，避免把扩展内容误认为原书逐字原题。
+
+本记原书仅提到“可与 25 年真题一起看”，没有提供对应真题的完整题干或解析。后面的题目均为**本记原创巩固题**，不冒称真题。原书的四张示意图（均匀区间图、一般与标准正态曲线图）以精确的区间、公式和对称性说明替代，保证单文件 MDX 可以独立阅读。
+
+</Callout>
+
+<Cards>
+  <Card title="必记 1｜分布函数">右连续、左极限、跳跃概率、区间端点处理。</Card>
+  <Card title="必记 2｜连续型随机变量">密度的非负性与归一化、积分求概率、点概率为零。</Card>
+  <Card title="必记 3｜八类常见分布">0-1、二项、泊松、几何、均匀、指数、一般正态与标准正态。</Card>
+  <Card title="必记 4｜函数的分布">离散情形合并同值；连续情形优先使用分布函数法。</Card>
+</Cards>
+
+## 必记 1｜分布函数
+
+### 1. 定义与四个基本性质
+
+对**任意类型**的随机变量 $X$，定义分布函数
+
+$$
+\boxed{F_X(x)=P(X\le x),\qquad x\in\mathbb R.}
+$$
+
+| 必记性质 | 准确表达 | 记忆要点 |
+| --- | --- | --- |
+| 有界性（原书称“非负性”） | $0\le F_X(x)\le1$ | 它本身就是一个事件的概率。 |
+| 规范性 | $\lim_{x\to-\infty}F_X(x)=0$，$\lim_{x\to+\infty}F_X(x)=1$ | 这里的 $F(\pm\infty)$ 只是极限记号，不是有限点的取值。 |
+| **右连续性** | $\lim_{h\downarrow0}F_X(x+h)=F_X(x)$ | 在跳跃点，函数值取**右边台阶**。 |
+| 单调不减 | $x_1<x_2\Rightarrow F_X(x_1)\le F_X(x_2)$ | 允许水平段，不要求严格递增。 |
+
+<Callout type="warn" title="两个易混淆命题">
+
+- **所有**分布函数都右连续；**连续型**随机变量的分布函数在整个实数轴连续。但“分布函数连续”并不必然意味着随机变量有概率密度：还存在奇异连续分布。
+- 分布函数的导数、概率密度以及概率本身不是同一个概念。仅当随机变量有密度时，才可用 $F_X(x)=\int_{-\infty}^{x}f_X(t)\,\mathrm dt$ 表示。
+
+</Callout>
+
+### 2. 分布函数与区间概率：端点一变，公式随之改变
+
+记 $F(x^-)=\lim_{t\uparrow x}F(t)$（即原书 $F(x-0)$）。
+
+| 所求事件 | 用分布函数计算 |
+| --- | --- |
+| $X\le b$ | $P(X\le b)=F(b)$ |
+| $X<b$ | $P(X<b)=F(b^-)$ |
+| $X=b$ | $P(X=b)=F(b)-F(b^-)$ |
+| $a<X\le b$ | $P(a<X\le b)=F(b)-F(a)$ |
+| $a\le X\le b$ | $P(a\le X\le b)=F(b)-F(a^-)$ |
+| $a<X<b$ | $P(a<X<b)=F(b^-)-F(a)$ |
+| $a\le X<b$ | $P(a\le X<b)=F(b^-)-F(a^-)$ |
+| $X>b$ | $P(X>b)=1-F(b)$ |
+| $X\ge b$ | $P(X\ge b)=1-F(b^-)$ |
+
+<Steps>
+  <Step>
+
+  ### 先看要不要包含左端点
+
+  左端点是 $a$：若题目写 $X>a$，就减 $F(a)$；若写 $X\ge a$，就减 $F(a^-)$。
+
+  </Step>
+  <Step>
+
+  ### 再看要不要包含右端点
+
+  右端点是 $b$：若写 $X\le b$，就取 $F(b)$；若写 $X<b$，就取 $F(b^-)$。
+
+  </Step>
+  <Step>
+
+  ### 最后判断能否直接“忽略等号”
+
+  如果已知 $X$ 连续型，则 $P(X=a)=P(X=b)=0$，四种端点写法给出同一个概率；**离散型、混合型不得擅自忽略端点**。
+
+  </Step>
+</Steps>
+
+<Tabs items={['离散跳跃例', '连续分布例'] }>
+  <Tab value="离散跳跃例">
+
+  **原创示例。**令 $P(X=-1)=\frac14$、$P(X=2)=\frac34$。则
+
+  $$
+  F_X(x)=
+  \begin{cases}
+  0,&x<-1,\\
+  \frac14,&-1\le x<2,\\
+  1,&x\ge2.
+  \end{cases}
+  $$
+
+  因此 $F(2^-)=\frac14$、$F(2)=1$，跳跃幅度为
+
+  $$
+  P(X=2)=F(2)-F(2^-)=\frac34.
+  $$
+
+  在 $x=-1$ 处也发生大小为 $\frac14$ 的跳跃；与原书性质完全一致。
+
+  </Tab>
+  <Tab value="连续分布例">
+
+  **原创示例。**若 $X\sim U(0,2)$，则
+
+  $$
+  F_X(x)=
+  \begin{cases}
+  0,&x<0,\\
+  \frac{x}{2},&0\le x<2,\\
+  1,&x\ge2.
+  \end{cases}
+  $$
+
+  $F_X$ 连续，因此
+
+  $$
+  P(0<X\le1)=P(0\le X<1)=F(1)-F(0)=\frac12.
+  $$
+
+  </Tab>
+</Tabs>
+
+## 必记 2｜一维连续型随机变量
+
+### 1. 密度函数的定义与性质
+
+如果存在可积函数 $f_X$，使所有实数 $x$ 都满足
+
+$$
+\boxed{F_X(x)=\int_{-\infty}^{x}f_X(t)\,\mathrm dt,}
+$$
+
+则称 $X$ 为（绝对）连续型随机变量，$f_X$ 为其概率密度函数。常用的两个必要条件是
+
+$$
+\boxed{f_X(x)\ge0\quad\text{（几乎处处）},\qquad
+\int_{-\infty}^{+\infty}f_X(x)\,\mathrm dx=1.}
+$$
+
+教材和考研常用的分段密度通常处处非负。严格地说，密度在零测集上改变取值不影响分布，因此“几乎处处非负”更精确。
+
+**三个考点：**
+
+1. 已知含待定参数的密度 $f_X(x)=c\,g(x)$，先以 $\int f_X=1$ 解出 $c$，并核查非负性。
+2. 在 $F_X$ 可导的点，有 $f_X(x)=F_X'(x)$；一般应理解为几乎处处成立，不要求每点可导。
+3. **密度值不是概率**，可以大于 $1$。例如 $U(0,\frac12)$ 的密度在区间内恒为 $2$，但区间总面积仍为 $1$。
+
+### 2. 区间概率与点概率
+
+对任意 $a<b$，
+
+$$
+\boxed{P(a\le X\le b)=P(a<X<b)=\int_a^b f_X(x)\,\mathrm dx=F_X(b)-F_X(a).}
+$$
+
+连续型随机变量满足 $P(X=c)=0$（任意实数 $c$）；其概率要看**密度曲线与横轴围出的面积**，不能仅看某一点的密度函数值。
+
+<Accordions>
+  <Accordion title="证明：为什么连续型随机变量的单点概率为零？">
+
+  因为其分布函数连续，故 $F_X(c)=F_X(c^-)$，而一般恒等式给出
+
+  $$
+  P(X=c)=F_X(c)-F_X(c^-)=0.
+  $$
+
+  这并不意味着“$X=c$ 是不可能事件”；零概率事件和空事件不是同一个概念。
+
+  </Accordion>
+  <Accordion title="密度含参数的解题模板">
+
+  若 $f_X(x)=c(1-x^2)$（$-1<x<1$），其他处为 $0$，先解
+
+  $$
+  1=c\int_{-1}^{1}(1-x^2)\,\mathrm dx
+  =c\left(2-\frac23\right)=\frac{4c}{3},
+  $$
+
+  所以 $c=\frac34$。例如
+
+  $$
+  \begin{aligned}
+  P(0<X<1)&=\frac34\int_0^1(1-x^2)\,\mathrm dx\\
+  &=\frac34\left(1-\frac13\right)=\frac12.
+  \end{aligned}
+  $$
+
+  </Accordion>
+</Accordions>
+
+## 必记 3｜常见随机变量的分布（高频公式表）
+
+### 考点 1｜四种离散型分布
+
+| 分布 | 参数与概率律 | 期望 $E(X)$ | 方差 $D(X)$ |
+| --- | --- | --- | --- |
+| **0-1 分布** $X\sim\operatorname{Bernoulli}(p)$ | $P(X=1)=p$，$P(X=0)=1-p$，$0\le p\le1$ | $p$ | $p(1-p)$ |
+| **二项分布** $X\sim B(n,p)$ | $P(X=k)=\binom nkp^k(1-p)^{n-k}$，$k=0,\ldots,n$ | $np$ | $np(1-p)$ |
+| **泊松分布** $X\sim\operatorname{Pois}(\lambda)$ | $P(X=k)=e^{-\lambda}\dfrac{\lambda^k}{k!}$，$k=0,1,\ldots$，$\lambda>0$ | $\lambda$ | $\lambda$ |
+| **几何分布** $X\sim\operatorname{Geom}(p)$ | $P(X=k)=(1-p)^{k-1}p$，$k=1,2,\ldots$，$0<p\le1$ | $\dfrac1p$ | $\dfrac{1-p}{p^2}$ |
+
+<Callout type="idea" title="四种离散分布的选型关键词">
+
+- **单次成功/失败**：0-1 分布。
+- **固定做 $n$ 次，问成功次数**：二项分布。
+- **给定时空范围内的稀少事件计数**：常用泊松模型。
+- **一直试到首次成功，问第几次才成功**：本书记号的几何分布，支持集从 $1$ 开始；与“首次成功之前失败的次数”从 $0$ 起的另一种定义不同。
+
+</Callout>
+
+<Accordions>
+  <Accordion title="二项分布：由独立重复试验得到概率律与均值方差">
+
+  每次成功概率为 $p$，独立重复 $n$ 次。恰好 $k$ 次成功有 $\binom nk$ 种安排，每种发生概率为 $p^k(1-p)^{n-k}$，故
+
+  $$
+  P(X=k)=\binom nkp^k(1-p)^{n-k}.
+  $$
+
+  若 $X=I_1+\cdots+I_n$，其中 $I_i$ 独立且服从参数为 $p$ 的 0-1 分布，则
+
+  $$
+  E(X)=\sum_{i=1}^n E(I_i)=np,
+  \qquad D(X)=\sum_{i=1}^n D(I_i)=np(1-p).
+  $$
+
+  </Accordion>
+  <Accordion title="泊松分布：独立可加性及其前提">
+
+  原书明确指出：若 $X\sim\operatorname{Pois}(\lambda_1)$、$Y\sim\operatorname{Pois}(\lambda_2)$，并且**相互独立**，则
+
+  $$
+  \boxed{X+Y\sim\operatorname{Pois}(\lambda_1+\lambda_2).}
+  $$
+
+  不能仅由两个边缘分布都是泊松分布，就断言它们的和仍为泊松分布；**独立性不可省略**。
+
+  </Accordion>
+  <Accordion title="几何分布：首次成功及离散无记忆性">
+
+  第 $k$ 次才第一次成功，意味着前 $k-1$ 次均失败、第 $k$ 次成功，概率为
+
+  $$
+  P(X=k)=(1-p)^{k-1}p.
+  $$
+
+  补充一个常见推论：对非负整数 $m,n$（$P(X>m)>0$），
+
+  $$
+  \begin{aligned}
+  P(X>m+n\mid X>m)
+  &=\frac{(1-p)^{m+n}}{(1-p)^m}\\
+  &=(1-p)^n=P(X>n).
+  \end{aligned}
+  $$
+
+  当 $p=1$ 时，条件事件 $X>m$ 可能为零概率；该条件概率式须限于有定义的情况。
+
+  </Accordion>
+</Accordions>
+
+### 考点 2｜四种连续型分布
+
+#### 1. 均匀分布 $X\sim U(a,b)$（$a<b$）
+
+原书使用 $U(a,b)$ 或 $U[a,b]$ 两种写法。其密度与分布函数分别为
+
+$$
+ f_X(x)=\begin{cases}
+ \dfrac{1}{b-a},&a<x<b,\\
+ 0,&\text{其他},
+ \end{cases}
+ \qquad
+ F_X(x)=\begin{cases}
+ 0,&x\le a,\\
+ \dfrac{x-a}{b-a},&a<x<b,\\
+ 1,&x\ge b.
+ \end{cases}
+$$
+
+$$
+\boxed{E(X)=\frac{a+b}{2},\qquad D(X)=\frac{(b-a)^2}{12}.}
+$$
+
+落在支持区间内的**概率 = 有效区间长度 / 总长度**。原书的示例 $X\sim U[1,10]$：
+
+$$
+\boxed{P(4<X<6)=\frac29,\quad P(X>5)=\frac59,\quad P(X<0)=0.}
+$$
+
+若所求区间伸出了 $[a,b]$，需先求与 $[a,b]$ 的交集，不能直接拿完整题目区间的长度相除。
+
+#### 2. 指数分布 $X\sim\operatorname{Exp}(\lambda)$（$\lambda>0$）
+
+$$
+ f_X(x)=\begin{cases}
+ \lambda e^{-\lambda x},&x>0,\\
+ 0,&x\le0,
+ \end{cases}
+ \qquad
+ F_X(x)=\begin{cases}
+ 0,&x\le0,\\
+ 1-e^{-\lambda x},&x>0.
+ \end{cases}
+$$
+
+$$
+\boxed{E(X)=\frac1\lambda,\qquad D(X)=\frac1{\lambda^2}.}
+$$
+
+<Callout type="success" title="指数分布的无记忆性（原书重点）">
+
+对 $s,t\ge0$（指数分布下 $P(X>s)>0$），
+
+$$
+\boxed{P(X>s+t\mid X>s)=P(X>t)=e^{-\lambda t}.}
+$$
+
+由于 $X$ 连续型，这还等价于原书写的“剩余等待时间不超过 $t$”形式：
+
+$$
+P(X<s+t\mid X>s)=P(X<t)=1-e^{-\lambda t}.
+$$
+
+</Callout>
+
+<Accordions>
+  <Accordion title="逐步证明指数分布的无记忆性">
+
+  对 $s,t\ge0$，利用 $\{X>s+t\}\subseteq\{X>s\}$ 和指数分布的尾概率：
+
+  $$
+  \begin{aligned}
+  P(X>s+t\mid X>s)
+  &=\frac{P(X>s+t)}{P(X>s)}\\
+  &=\frac{e^{-\lambda(s+t)}}{e^{-\lambda s}}\\
+  &=e^{-\lambda t}=P(X>t).
+  \end{aligned}
+  $$
+
+  求“小于”概率时取补集，可得 $1-e^{-\lambda t}$。原书给出的另一种证明是分布函数相减再除以尾概率，两种证明一致。
+
+  </Accordion>
+</Accordions>
+
+#### 3. 一般正态分布 $X\sim N(\mu,\sigma^2)$（$\sigma>0$）
+
+$$
+\boxed{f_X(x)=\frac{1}{\sqrt{2\pi}\,\sigma}
+\exp\!\left[-\frac{(x-\mu)^2}{2\sigma^2}\right],\quad x\in\mathbb R.}
+$$
+
+| 要点 | 结论 |
+| --- | --- |
+| 数字特征 | $E(X)=\mu$，$D(X)=\sigma^2$ |
+| 图形对称轴 | $x=\mu$ |
+| 密度最大值 | $f_X(\mu)=\dfrac1{\sqrt{2\pi}\sigma}$ |
+| 两侧各半 | $P(X<\mu)=P(X>\mu)=\dfrac12$ |
+| 参数意义 | $\mu$ 控制中心位置，$\sigma$ 控制分散程度 |
+
+**图形解读：**一般正态密度是一条关于 $x=\mu$ 对称的钟形曲线；$\sigma$ 越小，曲线越窄越高。任何单点（含 $x=\mu$）的概率均为 $0$，不要把“密度最大值”当作“点概率”。
+
+#### 4. 标准正态分布 $Z\sim N(0,1)$
+
+$$
+\varphi(x)=\frac{1}{\sqrt{2\pi}}e^{-x^2/2},
+\qquad
+\Phi(x)=\int_{-\infty}^{x}\varphi(t)\,\mathrm dt.
+$$
+
+$$
+\boxed{\Phi(0)=\frac12,\qquad \Phi(-x)=1-\Phi(x).}
+$$
+
+若 $X\sim N(\mu,\sigma^2)$，则
+
+$$
+\boxed{Z=\frac{X-\mu}{\sigma}\sim N(0,1),\qquad
+P(a<X<b)=\Phi\!\left(\frac{b-\mu}{\sigma}\right)-\Phi\!\left(\frac{a-\mu}{\sigma}\right).}
+$$
+
+对 $a\ge0$，标准正态满足
+
+$$
+\boxed{P(|Z|\le a)=\Phi(a)-\Phi(-a)=2\Phi(a)-1.}
+$$
+
+<Callout type="warn" title="正态标准化的三项检查">
+
+- 分母是**标准差 $\sigma$**，不是方差 $\sigma^2$。
+- $P(X>a)$ 应化为 $1-\Phi((a-\mu)/\sigma)$；也可以用对称性写成 $\Phi((\mu-a)/\sigma)$。
+- 对 $P(|Z|\le a)$ 使用 $2\Phi(a)-1$ 的前提是 **$a\ge0$**；$a<0$ 时事件为空、概率为 $0$。
+
+</Callout>
+
+### 原书补充｜泊松定理：二项分布的稀有事件极限
+
+设 $X_n\sim B(n,p_n)$，其中每次成功概率随 $n$ 改变，满足
+
+$$
+\boxed{n p_n\longrightarrow\lambda>0.}
+$$
+
+则对每个**固定的**非负整数 $k$，
+
+$$
+\boxed{\lim_{n\to\infty}P(X_n=k)
+=\lim_{n\to\infty}\binom nk p_n^{\,k}(1-p_n)^{n-k}
+=e^{-\lambda}\frac{\lambda^k}{k!}.}
+$$
+
+<Callout type="warn" title="按原书 PDF 校正一个容易漏看的下标">
+
+原文先定义 $p_n$，但极限公式中印成了 $p^k(1-p)^{n-k}$；为了与“$np_n\to\lambda$”条件一致，这里统一修正为 $p_n^k(1-p_n)^{n-k}$。**这是符号一致性勘正，不是改动结论。** 原书只是提示可结合 2025 年真题复习，未收录该真题的题面。
+
+</Callout>
+
+<Steps>
+  <Step>
+
+  ### 识别“次数多、单次概率小”
+
+  先确认计数来自独立重复的伯努利试验：$X\sim B(n,p)$，且 $n$ 较大、$p$ 较小。
+
+  </Step>
+  <Step>
+
+  ### 确认泊松参数
+
+  取 $\lambda=np$，以 $\operatorname{Pois}(\lambda)$ 近似二项分布。**近似误差大小取决于 $n,p$，不能只因 $n$ 大就机械使用。**
+
+  </Step>
+  <Step>
+
+  ### 套入点概率或其和
+
+  例如
+
+  $$
+  P(X\le2)\approx e^{-\lambda}\left(1+\lambda+\frac{\lambda^2}{2}\right).
+  $$
+
+  这是有限参数下的**近似式**；只有满足定理极限条件时，固定 $k$ 的点概率极限才是严格等式。
+
+  </Step>
+</Steps>
+
+## 必记 4｜一维随机变量函数的分布
+
+原书依次提到**离散型合并同值**和**连续型使用课程中的“万能解法”**。以下先给出忠于原文的结论，再补充可直接用于考研试题的严格步骤与两个典型演算。
+
+### 1. $X$ 离散型：列值、代入、合并
+
+若 $P(X=x_i)=p_i$，令 $Y=g(X)$，则对 $Y$ 的每个可能取值 $y$，应写
+
+$$
+\boxed{P(Y=y)=\sum_{i:\,g(x_i)=y}p_i.}
+$$
+
+<Callout type="idea" title="为什么不能直接把每个 $p_i$ 原封不动列给 $Y$？">
+
+如果不同的 $x_i$ 经 $g$ 映射到同一个值 $y$，这些互斥结果的概率应**相加**。例如 $X=-1$ 与 $X=1$ 都可能映射为 $Y=X^2=1$；若忽略合并就会把概率律写错。
+
+</Callout>
+
+**原创示例。**设
+
+| $x$ | $-2$ | $-1$ | $1$ | $3$ |
+| --- | ---: | ---: | ---: | ---: |
+| $P(X=x)$ | $\frac16$ | $\frac13$ | $\frac14$ | $\frac14$ |
+
+若 $Y=X^2$，则
+
+| $y$ | $1$ | $4$ | $9$ |
+| --- | ---: | ---: | ---: |
+| $P(Y=y)$ | $\frac13+\frac14=\frac7{12}$ | $\frac16$ | $\frac14$ |
+
+检验：$\frac7{12}+\frac16+\frac14=1$。
+
+### 2. $X$ 连续型：分布函数法是“万能解法”
+
+<Steps>
+  <Step>
+
+  ### 先确定 $Y=g(X)$ 的取值范围
+
+  根据 $X$ 的支持集与函数 $g$ 的性质，判断 $Y$ 的可能取值；这是分布函数分段的依据。
+
+  </Step>
+  <Step>
+
+  ### 建立事件 $\{g(X)\le y\}$
+
+  写出
+
+  $$
+  F_Y(y)=P(Y\le y)=P(g(X)\le y),
+  $$
+
+  再把不等式转化成关于 $X$ 的一个或多个区间。**若 $g$ 不单调，必须分支求解，不能直接套单一反函数。**
+
+  </Step>
+  <Step>
+
+  ### 用 $F_X$ 或 $f_X$ 算概率
+
+  若不等式对应区间 $(a(y),b(y)]$，便有
+
+  $$
+  F_Y(y)=F_X(b(y))-F_X(a(y));
+  $$
+
+  多个不重叠区间时分别求概率再相加。
+
+  </Step>
+  <Step>
+
+  ### 需要密度时再求导，并检查是否有离散质量
+
+  在可导区间内求 $f_Y(y)=F_Y'(y)$，核对 $f_Y\ge0$、积分为 $1$。若 $g$ 把一段**正概率区间压成同一点**，$Y$ 还可能具有点质量，此时不能只用普通密度描述全部分布。
+
+  </Step>
+</Steps>
+
+<Tabs items={['例 1｜单调变换', '例 2｜非单调变换', '捷径｜反函数求密度']}>
+  <Tab value="例 1｜单调变换">
+
+  **原创示例（补充原书未展开的连续型“万能解法”）：**设 $X\sim U(0,1)$，求 $Y=-\ln X$ 的分布。
+
+  **范围：**$Y>0$。对 $y\le0$，$F_Y(y)=0$。当 $y>0$，
+
+  $$
+  \begin{aligned}
+  F_Y(y)&=P(-\ln X\le y)
+  =P(\ln X\ge-y)\\
+  &=P(X\ge e^{-y})=1-e^{-y}.
+  \end{aligned}
+  $$
+
+  所以
+
+  $$
+  F_Y(y)=\begin{cases}0,&y\le0,\\1-e^{-y},&y>0,\end{cases}
+  \qquad
+  f_Y(y)=\begin{cases}e^{-y},&y>0,\\0,&y\le0.\end{cases}
+  $$
+
+  **结论：**$Y\sim\operatorname{Exp}(1)$。
+
+  </Tab>
+  <Tab value="例 2｜非单调变换">
+
+  **原创示例：**设 $X\sim U(-1,1)$，求 $Y=X^2$ 的分布。
+
+  $Y\in[0,1]$，对 $0<y<1$，
+
+  $$
+  \begin{aligned}
+  F_Y(y)&=P(X^2\le y)
+  =P(-\sqrt y\le X\le\sqrt y)\\
+  &=\frac{2\sqrt y}{2}=\sqrt y.
+  \end{aligned}
+  $$
+
+  因此
+
+  $$
+  F_Y(y)=\begin{cases}
+  0,&y\le0,\\
+  \sqrt y,&0<y<1,\\
+  1,&y\ge1,
+  \end{cases}
+  \qquad
+  f_Y(y)=\begin{cases}
+  \dfrac1{2\sqrt y},&0<y<1,\\
+  0,&\text{其他}.
+  \end{cases}
+  $$
+
+  检验 $\int_0^1\frac1{2\sqrt y}\,\mathrm dy=1$。密度在 $0$ 附近无界是允许的，**但单点概率仍为零**。
+
+  </Tab>
+  <Tab value="捷径｜反函数求密度">
+
+  当 $g$ 在 $X$ 的支持区间上**严格单调、可微且导数不为零**时，若 $x=g^{-1}(y)$，可使用
+
+  $$
+  \boxed{f_Y(y)=f_X(g^{-1}(y))\left|\frac{\mathrm d}{\mathrm dy}g^{-1}(y)\right|,}
+  $$
+
+  只在 $Y$ 的支持区间内使用。若给定 $y$ 存在多个满足 $g(x_i)=y$ 的可微反解分支，则可按各分支求和：
+
+  $$
+  f_Y(y)=\sum_i\frac{f_X(x_i(y))}{|g'(x_i(y))|},
+  $$
+
+  式中要求分支处 $g'(x_i(y))\ne0$ 且满足适用条件；临界点需要结合分布函数或极限单独检查。**复杂分段题以分布函数法最稳妥。**
+
+  </Tab>
+</Tabs>
+
+<Callout type="warn" title="函数变换的三类常见陷阱">
+
+1. **$g$ 非单调却当作单调。**例如求 $X^2$ 时漏掉负半轴的原像。
+2. **映射后支持区间没写全。**密度表达式正确，区间写错仍会导致积分总和不为 $1$。
+3. **把密度误认为必然存在。**例如 $Y=\mathbf1_{\{X>0\}}$ 即使 $X$ 连续，$Y$ 仍是离散型随机变量，应直接求各点概率。
+
+</Callout>
+
+## 综合训练｜本记原创巩固题
+
+以下题目专为检验第 18 记知识点编写。原书本记未收录完整、可核验的历年真题题干，故不设置任何伪造的“真题年份”标签。
+
+<div id="math21-2027-note18-q01">
+
+**题型：单选题**
+
+来源:本记原创自测, 科目:概率论, 考点:分布函数, 难度:基础
+
+设随机变量 $X$ 的分布函数为 $F$，下列说法正确的是（ ）。
+
+
+
+**A.** $F$ 一定处处连续
+
+
+
+
+**B.** $F$ 一定单调不减且右连续
+
+
+
+
+**C.** $F$ 一定严格递增
+
+
+
+
+**D.** $P(X=x)=F(x)-F(x^+)$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** B
+
+分布函数必单调不减、右连续、介于 $0$ 与 $1$ 之间。它可以有跳跃点和水平段；单点概率的正确公式为
+
+$$
+P(X=x)=F(x)-F(x^-).
+$$
+
+因此正确的是第二项。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note18-q02">
+
+**题型：多选题**
+
+来源:本记原创自测, 科目:概率论, 考点:区间概率, 难度:中等
+
+任意随机变量 $X$ 的分布函数为 $F$，任取 $a<b$，以下恒成立的关系有哪些？
+
+
+
+**A.** $P(a<X\le b)=F(b)-F(a)$
+
+
+
+
+**B.** $P(X=a)=F(a)-F(a^-)$
+
+
+
+
+**C.** $P(a\le X<b)=F(b)-F(a)$
+
+
+
+
+**D.** $P(X\ge b)=1-F(b^-)$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** A、B、D
+
+第一、第二、第四项由分布函数的定义和左极限公式直接成立。第三项应为
+
+$$
+P(a\le X<b)=F(b^-)-F(a^-).
+$$
+
+只有连续型等特殊情形才能忽略端点。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note18-q03">
+
+**题型：填空题**
+
+来源:本记原创自测, 科目:概率论, 考点:密度参数与区间概率, 难度:中等
+
+设 $X$ 的密度为
+
+$$
+f_X(x)=\begin{cases}c x,&0<x<2,\\0,&\text{其他}.\end{cases}
+$$
+
+则 $c=$ $\underline{\qquad}$，且 $P(1<X<2)=$ $\underline{\qquad}$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** $1/2$、$3/4$
+
+$$
+1=\int_0^2 cx\,\mathrm dx=2c\quad\Rightarrow\quad c=\frac12.
+$$
+
+于是
+
+$$
+P(1<X<2)=\int_1^2\frac{x}{2}\,\mathrm dx
+=\left[\frac{x^2}{4}\right]_1^2=\frac34.
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note18-q04">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论, 考点:二项分布, 难度:基础
+
+每次独立试验成功概率为 $\frac13$，独立进行 $4$ 次。求恰好成功 $2$ 次的概率、至少成功一次的概率，并写出成功次数的期望和方差。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+令 $X\sim B(4,\frac13)$。则
+
+$$
+\begin{aligned}
+P(X=2)&=\binom42\left(\frac13\right)^2\left(\frac23\right)^2
+=\boxed{\frac8{27}},\\
+P(X\ge1)&=1-P(X=0)=1-\left(\frac23\right)^4
+=\boxed{\frac{65}{81}}.
+\end{aligned}
+$$
+
+并且
+
+$$
+E(X)=4\cdot\frac13=\boxed{\frac43},
+\qquad
+D(X)=4\cdot\frac13\cdot\frac23=\boxed{\frac89}.
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note18-q05">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论, 考点:泊松分布可加性, 难度:中等
+
+设 $X\sim\operatorname{Pois}(2)$、$Y\sim\operatorname{Pois}(3)$，且 $X,Y$ 相互独立。求 $P(X+Y=2)$ 以及 $D(X+Y)$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+由独立泊松分布的可加性，$X+Y\sim\operatorname{Pois}(5)$，所以
+
+$$
+P(X+Y=2)=e^{-5}\frac{5^2}{2!}=\boxed{\frac{25}{2}e^{-5}}.
+$$
+
+泊松分布的方差等于参数：
+
+$$
+D(X+Y)=\boxed{5}.
+$$
+
+直接用方差可加性计算也可得 $2+3=5$。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note18-q06">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论, 考点:几何分布, 难度:中等
+
+独立重复试验的每次成功概率为 $p=\frac14$。记首次成功发生在第 $X$ 次，求 $P(X=3)$、$P(X>3)$、$E(X)$ 和 $D(X)$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+$X\sim\operatorname{Geom}(\frac14)$，以首次成功次数为定义：
+
+$$
+\begin{aligned}
+P(X=3)&=\left(\frac34\right)^2\cdot\frac14
+=\boxed{\frac9{64}},\\
+P(X>3)&=\left(\frac34\right)^3=\boxed{\frac{27}{64}},\\
+E(X)&=\frac1{1/4}=\boxed{4},\\
+D(X)&=\frac{1-1/4}{(1/4)^2}=\boxed{12}.
+\end{aligned}
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note18-q07">
+
+**题型：单选题**
+
+来源:本记原创自测, 科目:概率论, 考点:均匀分布, 难度:基础
+
+若 $X\sim U(-2,6)$，则 $P(-1<X<3)$ 等于（ ）。
+
+
+
+**A.** $\frac14$
+
+
+
+
+**B.** $\frac12$
+
+
+
+
+**C.** $\frac23$
+
+
+
+
+**D.** $\frac34$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** B
+
+总区间长为 $6-(-2)=8$，事件区间长为 $3-(-1)=4$，因此
+
+$$
+P(-1<X<3)=\frac48=\boxed{\frac12}.
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note18-q08">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论, 考点:指数分布无记忆性, 难度:中等
+
+设设备等待时间 $T\sim\operatorname{Exp}(2)$。已知等待已经超过 $1$ 个时间单位，求继续等待至少 $\frac12$ 个时间单位的条件概率。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+所求为
+
+$$
+P(T>1+\tfrac12\mid T>1).
+$$
+
+由指数分布的无记忆性，
+
+$$
+P(T>\tfrac32\mid T>1)
+=P(T>\tfrac12)=e^{-2\cdot\frac12}=\boxed{e^{-1}}.
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note18-q09">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论, 考点:正态标准化, 难度:中等
+
+已知 $X\sim N(3,4)$，用标准正态分布函数 $\Phi$ 表示 $P(1<X<5)$ 和 $P(X\ge5)$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+由于标准差为 $\sigma=2$，令 $Z=(X-3)/2\sim N(0,1)$。
+
+$$
+\begin{aligned}
+P(1<X<5)&=P(-1<Z<1)\\
+&=\Phi(1)-\Phi(-1)
+=\boxed{2\Phi(1)-1},\\
+P(X\ge5)&=P(Z\ge1)=\boxed{1-\Phi(1)}.
+\end{aligned}
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note18-q10">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论, 考点:泊松定理, 难度:较难
+
+设 $X_n\sim B(n,2/n)$（$n\ge2$）。求 $\displaystyle\lim_{n\to\infty}P(X_n=1)$ 和 $\displaystyle\lim_{n\to\infty}P(X_n\le2)$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+由 $p_n=2/n$、$np_n=2$，泊松极限定理的参数为 $\lambda=2$。因此
+
+$$
+\lim_{n\to\infty}P(X_n=1)
+=e^{-2}\frac{2^1}{1!}=\boxed{2e^{-2}}.
+$$
+
+第二问是**有限个固定 $k$ 的概率之和**，可以逐项取极限：
+
+$$
+\begin{aligned}
+\lim_{n\to\infty}P(X_n\le2)
+&=\sum_{k=0}^{2}e^{-2}\frac{2^k}{k!}\\
+&=e^{-2}\left(1+2+\frac{4}{2}\right)
+=\boxed{5e^{-2}}.
+\end{aligned}
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note18-q11">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论, 考点:离散函数的分布, 难度:中等
+
+随机变量 $X$ 取值 $-2,-1,0,1,2$ 的概率分别是 $\frac1{10},\frac2{10},\frac4{10},\frac2{10},\frac1{10}$。设 $Y=X^2$，求 $Y$ 的分布律及 $E(Y)$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+$Y$ 的可能取值为 $0,1,4$。将 $x$ 与 $-x$ 映到同一 $y$ 的概率合并，得
+
+| $Y$ | $0$ | $1$ | $4$ |
+| --- | ---: | ---: | ---: |
+| 概率 | $\frac4{10}$ | $\frac4{10}$ | $\frac2{10}$ |
+
+期望为
+
+$$
+E(Y)=0\cdot\frac4{10}+1\cdot\frac4{10}+4\cdot\frac2{10}
+=\boxed{\frac65}.
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note18-q12">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:概率论, 考点:非单调函数的分布, 难度:较难
+
+设 $X\sim U(-2,1)$，令 $Y=X^2$。求 $F_Y(y)$ 和 $f_Y(y)$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+$X$ 的密度在 $(-2,1)$ 上为 $\frac13$，而 $Y$ 的取值范围为 $[0,4]$。由于平方映射在原区间上**非单调**，需要根据 $\sqrt y$ 是否超过正端点 $1$ 分两段。
+
+**第一段：**若 $0<y<1$，原像为 $[-\sqrt y,\sqrt y]$，故
+
+$$
+F_Y(y)=\frac{2\sqrt y}{3}.
+$$
+
+**第二段：**若 $1\le y<4$，原像在原区间中的部分为 $[-\sqrt y,1]$，故
+
+$$
+F_Y(y)=\frac{1+\sqrt y}{3}.
+$$
+
+于是
+
+$$
+\boxed{F_Y(y)=
+\begin{cases}
+0,&y\le0,\\
+\dfrac{2\sqrt y}{3},&0<y<1,\\
+\dfrac{1+\sqrt y}{3},&1\le y<4,\\
+1,&y\ge4.
+\end{cases}}
+$$
+
+在对应开区间求导，得到密度（边界点取值不影响分布）：
+
+$$
+\boxed{f_Y(y)=
+\begin{cases}
+\dfrac{1}{3\sqrt y},&0<y<1,\\
+\dfrac{1}{6\sqrt y},&1<y<4,\\
+0,&\text{其他}.
+\end{cases}}
+$$
+
+检验 $\int_0^1\frac{1}{3\sqrt y}\,\mathrm dy=\frac23$、$\int_1^4\frac{1}{6\sqrt y}\,\mathrm dy=\frac13$，总和为 $1$；并且 $F_Y(1^-)=F_Y(1)=\frac23$，没有跳跃。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 考前速查｜第 18 记核心公式链
+
+1. **分布函数**：$F(x)=P(X\le x)$；$F$ 单调不减、右连续，$F(-\infty)=0$、$F(+\infty)=1$。
+2. **跳跃与左极限**：$P(X=x)=F(x)-F(x^-)$，$P(a<X\le b)=F(b)-F(a)$。
+3. **连续型积分**：$F(x)=\int_{-\infty}^{x}f(t)\,\mathrm dt$，$f\ge0$、$\int f=1$；$P(X=x)=0$。
+4. **二项分布**：$P(X=k)=\binom nkp^k(1-p)^{n-k}$，$E=np$，$D=np(1-p)$。
+5. **泊松分布**：$P(X=k)=e^{-\lambda}\lambda^k/k!$，$E=D=\lambda$；**独立**泊松变量相加参数相加。
+6. **几何分布**：第 $k$ 次首次成功概率 $(1-p)^{k-1}p$，$E=1/p$，$D=(1-p)/p^2$。
+7. **均匀分布**：支持区间内概率按长度比例；$E=(a+b)/2$，$D=(b-a)^2/12$。
+8. **指数分布**：$P(X>t)=e^{-\lambda t}$（$t\ge0$），$E=1/\lambda$，$D=1/\lambda^2$，具有无记忆性。
+9. **正态分布**：$Z=(X-\mu)/\sigma\sim N(0,1)$，$\Phi(-a)=1-\Phi(a)$；$a\ge0$ 时 $P(|Z|\le a)=2\Phi(a)-1$。
+10. **泊松极限定理**：$np_n\to\lambda$ 时，$\binom nk p_n^k(1-p_n)^{n-k}\to e^{-\lambda}\lambda^k/k!$（固定 $k$）。
+11. **函数分布**：离散型对同值合并；连续型优先从 $F_Y(y)=P(g(X)\le y)$ 入手，找到**完整的原像区间**再求导。
+
+<Callout type="success" title="第 18 记整理与核对记录">
+
+- **原书范围**：第 **93—97 页**。已逐项整理 **必记 1—4**，包括 0-1、二项、泊松、几何、均匀、指数、一般正态、标准正态八项分布，以及泊松极限定理。
+- **图文对应**：第 94 页均匀区间示例、第 95—96 页正态密度及对称概率示意，已转化为可独立阅读和可计算的文字、公式与表格；无丢失的图形依赖。
+- **识别和公式修订**：第 96 页泊松极限定理中 $p$ 与 $p_n$ 的符号不一致已校正；“首次成功次数”已明确与另一种几何分布定义区分；函数分布的同值概率改写为严谨的合并求和式。
+- **补充边界**：第 97 页只要求复习“万能解法”，未列出具体算法和例题；本记补入分布函数法、条件化反函数法及两例推导，均注明为扩展。训练部分的 **12 道题**均为原创自测，附完整答案与解析。
+
+</Callout>

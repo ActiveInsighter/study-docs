@@ -1,0 +1,840 @@
+---
+title: "第 9 记｜二重积分"
+description: "2027 周洋鑫《考前21记》第 9 记：二重积分。含知识梳理、适用条件与 9 道配套题及解析。"
+---
+
+<Callout type="info" title="本记范围｜原书第 47—49 页">
+
+本记依照《2027 周洋鑫考前 21 记（数一、数二、数三最终版）》的 Markdown 解析稿与对应 PDF，按原书顺序完整整理 **5 个“必记”板块**：二重积分定义、性质、对称技巧、计算方法、难画区域的判断。原书给出 **3 个黎曼和公式、1 道缩小积分区域的极限例题、1 张方法流程图及 1 幅形心示意图**；以下用可检索的公式、步骤和文字保留其信息，并补充推导与原创练习。
+
+**准确性说明：**原书二重积分中值定理写为“有界闭区域”上的连续函数。为保证严格成立，下面明确所需的连通性与正面积条件；换元公式也补全了被积函数的变量代换。补充例题均标注为“原创自测”，不冒充原书真题。
+
+</Callout>
+
+<Cards>
+  <Card title="必记 1｜定义与黎曼和">从网格小矩形到二重积分，尤其要核对两个求和上限。</Card>
+  <Card title="必记 2｜积分性质">比较定理、绝对值估计、中值定理与缩小区域极限。</Card>
+  <Card title="必记 3｜对称技巧">关于两坐标轴的奇偶对称，以及关于 $y=x$ 的轮换对称。</Card>
+  <Card title="必记 4｜积分计算">直角坐标、极坐标、雅可比换元与形心公式逆用。</Card>
+  <Card title="必记 5｜区域辨识">图形难画时，先看特殊点，再核验完整区域的对称性。</Card>
+</Cards>
+
+## 必记 1｜二重积分的定义：从二重和识别积分区域
+
+### 1. 二重积分与黎曼和
+
+把平面区域 $D$ 分割成小块 $\Delta\sigma_{ij}$，在每小块中选取样点 $(\xi_{ij},\eta_{ij})$，若当网格最大直径趋于零时，和式有与取样点、分割方式无关的极限，就定义
+
+$$
+\iint_D f(x,y)\,\mathrm d\sigma
+=\lim_{\lambda\to0}\sum_{i,j}f(\xi_{ij},\eta_{ij})\,\Delta\sigma_{ij}.
+$$
+
+其中 $\lambda$ 是划分网格的最大直径。**函数在有界闭矩形上连续时，可直接使用下面三条结果**；更一般的黎曼可积函数也成立。
+
+<Tabs items={['原书三种和式', '统一识别方法']}>
+  <Tab value="原书三种和式">
+
+  **（1）单位正方形 $[0,1]\times[0,1]$：**
+
+  $$
+  \boxed{\lim_{n\to\infty}\frac1{n^2}
+  \sum_{i=1}^{n}\sum_{j=1}^{n}
+  f\!\left(\frac in,\frac jn\right)
+  =\int_0^1\!\int_0^1 f(x,y)\,\mathrm dy\,\mathrm dx.}
+  $$
+
+  **（2）宽为 $2$、高为 $1$ 的矩形 $[0,2]\times[0,1]$：**
+
+  $$
+  \boxed{\lim_{n\to\infty}\frac1{n^2}
+  \sum_{i=1}^{2n}\sum_{j=1}^{n}
+  f\!\left(\frac in,\frac jn\right)
+  =\int_0^2\!\int_0^1 f(x,y)\,\mathrm dy\,\mathrm dx.}
+  $$
+
+  **（3）边长为 $2$ 的正方形 $[0,2]\times[0,2]$：**
+
+  $$
+  \boxed{\lim_{n\to\infty}\frac1{n^2}
+  \sum_{i=1}^{2n}\sum_{j=1}^{2n}
+  f\!\left(\frac in,\frac jn\right)
+  =\int_0^2\!\int_0^2 f(x,y)\,\mathrm dy\,\mathrm dx.}
+  $$
+
+  </Tab>
+  <Tab value="统一识别方法">
+
+  <Steps>
+    <Step>
+
+    ### 看样点坐标
+
+    $i/n$ 与 $j/n$ 表示小矩形在两个坐标方向上取边长 $1/n$，样点为网格右上角。
+
+    </Step>
+    <Step>
+
+    ### 看两个求和上限
+
+    $i=1,\ldots,an$ 对应 $0\le x\le a$；$j=1,\ldots,bn$ 对应 $0\le y\le b$（这里 $a,b>0$ 固定且分割数为整数）。
+
+    </Step>
+    <Step>
+
+    ### 看每小块面积
+
+    $\Delta\sigma=\frac1n\cdot\frac1n=\frac1{n^2}$。和式中的 $1/n^2$ 是**网格面积**，不是最终积分区域的面积倒数。
+
+    </Step>
+    <Step>
+
+    ### 写成二重积分并计算
+
+    $$
+    \frac1{n^2}\sum_{i=1}^{an}\sum_{j=1}^{bn}
+    f\!\left(\frac in,\frac jn\right)
+    \longrightarrow\int_0^a\!\int_0^b f(x,y)\,\mathrm dy\,\mathrm dx.
+    $$
+
+    </Step>
+  </Steps>
+
+  </Tab>
+</Tabs>
+
+<Callout type="warn" title="易错：把求和上限当成归一化因子">
+
+$\sum_{i=1}^{2n}\sum_{j=1}^n$ 共含 $2n^2$ 项，但**前面的系数仍为 $1/n^2$**，因此对应面积为 $2$ 的矩形；如果误乘 $1/(2n^2)$，算出的将是该矩形上的函数平均值，而不是积分。
+
+</Callout>
+
+### 2. 加一道可复核的和式例题
+
+<div id="math21-2027-note09-q01">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:高等数学, 考点:黎曼和与积分区域, 难度:基础
+
+计算
+
+$$
+L=\lim_{n\to\infty}\frac1{n^2}
+\sum_{i=1}^{2n}\sum_{j=1}^{n}
+\left(\frac in+\frac jn\right).
+$$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+这是 $[0,2]\times[0,1]$ 上的二重积分：
+
+$$
+\begin{aligned}
+L&=\int_0^2\!\int_0^1(x+y)\,\mathrm dy\,\mathrm dx\\
+&=\int_0^2\left(x+\frac12\right)\mathrm dx
+=\boxed{3}.
+\end{aligned}
+$$
+
+也可直接算出有限和式等于 $3+2/n$，因此极限为 $3$。这两种方法互相校验。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 必记 2｜二重积分性质：比较、绝对值和中值
+
+### 1. 比较定理
+
+设 $D$ 是可求面积的有界区域，$f,g$ 在 $D$ 上可积。若对所有 $(x,y)\in D$ 都有 $f(x,y)\le g(x,y)$，则
+
+$$
+\boxed{\iint_D f(x,y)\,\mathrm d\sigma
+\le\iint_D g(x,y)\,\mathrm d\sigma.}
+$$
+
+特别地，令 $m\le f(x,y)\le M$，则
+
+$$
+\boxed{mS_D\le\iint_D f(x,y)\,\mathrm d\sigma\le MS_D,}
+$$
+
+其中 $S_D=\iint_D1\,\mathrm d\sigma$ 为区域面积。利用 $-|f|\le f\le |f|$，得到原书强调的绝对值不等式：
+
+$$
+\boxed{\left|\iint_D f(x,y)\,\mathrm d\sigma\right|
+\le\iint_D|f(x,y)|\,\mathrm d\sigma.}
+$$
+
+<Callout type="idea" title="一眼选择估计式">
+
+求**大小范围**：先找 $m$ 与 $M$，再乘面积 $S_D$；求**带符号积分的绝对值**：先取绝对值后积分。**反向不等号一般不能成立**，因为正负贡献可能抵消。
+
+</Callout>
+
+### 2. 二重积分中值定理
+
+若 $D$ 是面积 $S_D>0$ 的有界闭连通区域、$f$ 在 $D$ 上连续，则至少存在 $(\xi,\eta)\in D$，使
+
+$$
+\boxed{\iint_D f(x,y)\,\mathrm d\sigma
+=f(\xi,\eta)S_D.}
+$$
+
+原书注明此定理为 **2021 年考研数学大纲修订涉及的内容**，并提示其编写时近三年真题未考查；此为原书的考情说明，不代表今后不会命题。
+
+因此连续函数在区域内的**积分平均值**
+
+$$
+\frac1{S_D}\iint_D f(x,y)\,\mathrm d\sigma
+$$
+
+必可作为区域内某点的函数值。它通常不是面积重心处的函数值：$f(\bar x,\bar y)$ 与积分平均值一般不相等。
+
+<Accordions>
+  <Accordion title="为什么要强调“连通”？原书的条件怎样理解？">
+
+  对连续函数，区域 $D$ 连通意味着 $f(D)$ 为区间；积分平均值位于最小值和最大值之间，故能在 $D$ 中取得。原书写作“有界闭区域”时，通常默认讨论连通的积分区域。
+
+  **若任意允许不连通的有界闭集，则结论不一定成立。**例如取两个不相交、等面积的闭圆盘，在一个圆盘上令 $f=0$，另一个上令 $f=2$；$f$ 在其并集上连续，但积分平均值为 $1$，并不被函数取到。
+
+  </Accordion>
+  <Accordion title="如何从比较定理推出中值定理？">
+
+  令 $m=\min_D f$、$M=\max_D f$。由比较定理，
+
+  $$
+  m\le\frac1{S_D}\iint_Df\,\mathrm d\sigma\le M.
+  $$
+
+  因 $f(D)$ 是区间，介于 $m$ 与 $M$ 之间的数都能作为某点的函数值，结论成立。
+
+  </Accordion>
+</Accordions>
+
+### 3. 原书例 1：分母与面积同阶的极限
+
+<div id="math21-2027-note09-q02">
+
+**题型：解答题**
+
+来源:原书第47页例1, 科目:高等数学, 考点:缩小区域的二重积分极限, 难度:中等
+
+求极限
+
+$$
+\lim_{t\to0^+}\frac1{t^2}
+\int_0^t\!\mathrm dx\int_0^{t-x}
+ e^{x^2+y^2}\,\mathrm dy.
+$$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**方法一：比较定理（考前优先）**
+
+积分区域是第一象限的三角形
+
+$$
+D_t=\{(x,y):x\ge0,\ y\ge0,\ x+y\le t\},
+\qquad S_{D_t}=\frac{t^2}{2}.
+$$
+
+在 $D_t$ 上有 $0\le x^2+y^2\le t^2$，所以
+
+$$
+1\le e^{x^2+y^2}\le e^{t^2}.
+$$
+
+对区域积分并除以 $t^2$，得到
+
+$$
+\frac12\le
+\frac1{t^2}\iint_{D_t}e^{x^2+y^2}\,\mathrm d\sigma
+\le\frac12e^{t^2}.
+$$
+
+令 $t\to0^+$，两边均趋于 $1/2$，由夹逼定理得
+
+$$
+\boxed{\frac12}.
+$$
+
+**方法二：面积与连续性。**因为区域向原点收缩且 $e^{x^2+y^2}\to1$，积分渐近等于 $1\cdot S_{D_t}=t^2/2$。严格证明可以使用方法一的统一估计。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<Callout type="warn" title="关键是看面积的阶，不是积分中出现了几个积分号">
+
+面积 $S_{D_t}\sim t^2/2$，因此除以 $t^2$ 后得到常数 $1/2$。若误把三角形当成边长为 $t$ 的正方形，答案会错算成 $1$。对于其他收缩区域，也必须先求面积系数。
+
+</Callout>
+
+## 必记 3｜二重积分的技巧性：奇偶与轮换对称
+
+### 1. 关于坐标轴的奇偶对称
+
+在区域变换下，如果积分区域保持不变，就可以把被积函数拆成奇、偶部分。原书的两组结论如下。
+
+| 区域条件 | 被积函数性质 | 结论 |
+| --- | --- | --- |
+| $D$ 关于 $y$ 轴对称 | $f(-x,y)=-f(x,y)$，关于 $x$ 为奇函数 | $\displaystyle\iint_Df\,\mathrm d\sigma=0$ |
+| $D$ 关于 $y$ 轴对称 | $f(-x,y)=f(x,y)$，关于 $x$ 为偶函数 | $\displaystyle\iint_Df\,\mathrm d\sigma=2\iint_{D\cap\{x\ge0\}}f\,\mathrm d\sigma$ |
+| $D$ 关于 $x$ 轴对称 | $f(x,-y)=-f(x,y)$，关于 $y$ 为奇函数 | $\displaystyle\iint_Df\,\mathrm d\sigma=0$ |
+| $D$ 关于 $x$ 轴对称 | $f(x,-y)=f(x,y)$，关于 $y$ 为偶函数 | $\displaystyle\iint_Df\,\mathrm d\sigma=2\iint_{D\cap\{y\ge0\}}f\,\mathrm d\sigma$ |
+
+这里对称轴本身面积为 $0$，是否把轴归入半区域，不影响积分值。
+
+<Callout type="idea" title="一眼看出消掉的项">
+
+在关于 $y$ 轴对称的区域上，若被积函数写成 $f(x,y)=xA(x^2,y)+B(x^2,y)$，第一部分关于 $x$ 为奇函数，积分必为零，直接留下 $B$ 的积分。**先化简奇偶性，再设置积分限。**
+
+</Callout>
+
+### 2. 关于直线 $y=x$ 的轮换对称
+
+若把 $(x,y)$ 替换成 $(y,x)$ 后区域 $D$ 不变，则
+
+$$
+\boxed{
+\iint_D f(x,y)\,\mathrm d\sigma
+=\iint_D f(y,x)\,\mathrm d\sigma
+=\frac12\iint_D\bigl[f(x,y)+f(y,x)\bigr]\,\mathrm d\sigma.
+}
+$$
+
+特别地，如果 $f(y,x)=-f(x,y)$，则原积分为 $0$；若 $f(x,y)+f(y,x)$ 为简单的常数，便可把难算积分降为求面积。
+
+<div id="math21-2027-note09-q03">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:高等数学, 考点:轮换对称性, 难度:中等
+
+设 $D=[0,1]\times[0,1]$，计算
+
+$$
+I=\iint_D\frac{x}{x+y}\,\mathrm dx\,\mathrm dy.
+$$
+
+其中在 $(0,0)$ 处的函数值可以任意定义，不影响二重积分。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+$D$ 关于 $y=x$ 对称，交换 $x$、$y$ 得
+
+$$
+I=\iint_D\frac{y}{x+y}\,\mathrm dx\,\mathrm dy.
+$$
+
+两式相加：
+
+$$
+2I=\iint_D\left(\frac{x}{x+y}+\frac{y}{x+y}\right)\,\mathrm dx\,\mathrm dy
+=\iint_D1\,\mathrm d\sigma=1.
+$$
+
+因此 $\boxed{I=1/2}$。原点只是零测集上的一点，不影响这里的积分。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<Callout type="warn" title="对称性同时要求两件事">
+
+只有 **区域不变** 且 **被积函数在变换下符合所用关系**，才能用对称性。单独看到 $x$ 的奇次幂，不代表积分一定为零。例如在右半圆 $D=\{x^2+y^2\le1,\ x\ge0\}$ 上，$x$ 虽为奇函数，但区域不关于 $y$ 轴对称，$\iint_Dx\,\mathrm d\sigma>0$。
+
+</Callout>
+
+## 必记 4｜二重积分的计算：区域、坐标、换元与形心
+
+### 1. 原书解题流程：先判断积分区域，再选择工具
+
+<Steps>
+  <Step>
+
+  ### 先识别区域形状与对称性
+
+  - 对**常规可作图曲线**，优先画出边界：直线、初等函数曲线、圆、双曲线、椭圆，以及心形线、双纽线等。
+  - 原书还列举星形线、摆线等曲线，标注为**数学一、数学二的有关内容**。
+  - 对**非常规、难画精确图像的曲线**，先查与坐标轴的交点，再用 $x\mapsto-x$、$y\mapsto-y$、$x\leftrightarrow y$ 判断对称性；不用追求精确作图。
+
+  </Step>
+  <Step>
+
+  ### 看奇偶性与轮换对称能否直接简化
+
+  能化为零、两倍半区积分、或将 $f(x,y)+f(y,x)$ 简化时，先用对称性，不要过早算复杂原函数。
+
+  </Step>
+  <Step>
+
+  ### 直角坐标与极坐标选更短的一种
+
+  边界容易表示成 $y=\varphi(x)$、$x=\psi(y)$ 时用**直角坐标累次积分**；出现圆、扇形、射线或被积函数 $F(x^2+y^2)$ 时优先考虑**极坐标**。
+
+  </Step>
+  <Step>
+
+  ### 形状适合线性/非线性换元时，用雅可比
+
+  边界含 $x+y$、$x-y$、$ax+by$，或椭圆的标准化，考虑适当换元，并补上雅可比绝对值。
+
+  </Step>
+  <Step>
+
+  ### 看能否使用面积和形心公式
+
+  被积函数是 $1$、$x$、$y$ 或它们的线性组合时，优先考虑面积与形心；尤其适合对称图形、三角形及简单拼接区域。
+
+  </Step>
+</Steps>
+
+### 2. 直角坐标下的累次积分
+
+对 $x$ 型区域
+
+$$
+D=\{(x,y):a\le x\le b,\ \varphi_1(x)\le y\le\varphi_2(x)\},
+$$
+
+有
+
+$$
+\boxed{\iint_D f(x,y)\,\mathrm d\sigma
+=\int_a^b\!\mathrm dx\int_{\varphi_1(x)}^{\varphi_2(x)} f(x,y)\,\mathrm dy.}
+$$
+
+对 $y$ 型区域
+
+$$
+D=\{(x,y):c\le y\le d,\ \psi_1(y)\le x\le\psi_2(y)\},
+$$
+
+有
+
+$$
+\boxed{\iint_D f(x,y)\,\mathrm d\sigma
+=\int_c^d\!\mathrm dy\int_{\psi_1(y)}^{\psi_2(y)} f(x,y)\,\mathrm dx.}
+$$
+
+对积分次序切换，**必须先画出或精确描述同一个 $D$**；不能仅把 $\mathrm dx$ 和 $\mathrm dy$ 或上下限机械对调。若一条竖线/横线与区域相交为多段，应分割区域再积。
+
+### 3. 极坐标：一定写面积元 $r\,\mathrm dr\,\mathrm d\theta$
+
+令 $x=r\cos\theta$、$y=r\sin\theta$，其中 $r\ge0$，则
+
+$$
+\boxed{\mathrm dx\,\mathrm dy=r\,\mathrm dr\,\mathrm d\theta.}
+$$
+
+因此，对于能够用 $\alpha\le\theta\le\beta$ 和 $r_1(\theta)\le r\le r_2(\theta)$ 表示的区域，
+
+$$
+\iint_D f(x,y)\,\mathrm d\sigma
+=\int_\alpha^\beta\!\mathrm d\theta
+\int_{r_1(\theta)}^{r_2(\theta)}
+ f(r\cos\theta,r\sin\theta)\,r\,\mathrm dr.
+$$
+
+<Tabs items={['直角坐标示例', '极坐标示例']}>
+  <Tab value="直角坐标示例">
+
+  设 $D=\{(x,y):0\le x\le1,\ x^2\le y\le x\}$，则
+
+  $$
+  \iint_D(x+y)\,\mathrm d\sigma
+  =\int_0^1\!\mathrm dx\int_{x^2}^{x}(x+y)\,\mathrm dy
+  =\boxed{\frac3{20}}.
+  $$
+
+  若先对 $x$ 积分，需要写成
+
+  $$
+  \int_0^1\!\mathrm dy\int_y^{\sqrt y}(x+y)\,\mathrm dx,
+  $$
+
+  结果相同。
+
+  </Tab>
+  <Tab value="极坐标示例">
+
+  设 $D=\{(x,y):x^2+y^2\le2x\}$。写为 $r^2\le2r\cos\theta$，得到
+
+  $$
+  -\frac\pi2\le\theta\le\frac\pi2,
+  \qquad0\le r\le2\cos\theta.
+  $$
+
+  因而面积为
+
+  $$
+  \begin{aligned}
+  S_D&=\int_{-\pi/2}^{\pi/2}\!\mathrm d\theta
+  \int_0^{2\cos\theta}r\,\mathrm dr\\
+  &=2\int_{-\pi/2}^{\pi/2}\cos^2\theta\,\mathrm d\theta
+  =\boxed{\pi}.
+  \end{aligned}
+  $$
+
+  几何核对：原区域等价于 $(x-1)^2+y^2\le1$，确为半径为 $1$ 的圆盘。
+
+  </Tab>
+</Tabs>
+
+### 4. 雅可比换元法：变量、积分域、面积因子三者同时变
+
+设变换 $x=x(u,v)$、$y=y(u,v)$ 在相应区域内适用，且积分域 $D$ 对应到 $D_1$，则
+
+$$
+\boxed{
+\iint_D f(x,y)\,\mathrm dx\,\mathrm dy
+=\iint_{D_1}
+ f\bigl(x(u,v),y(u,v)\bigr)
+ \left|\frac{\partial(x,y)}{\partial(u,v)}\right|
+ \,\mathrm du\,\mathrm dv.
+}
+$$
+
+其中
+
+$$
+\frac{\partial(x,y)}{\partial(u,v)}
+=\begin{vmatrix}
+\dfrac{\partial x}{\partial u}&\dfrac{\partial x}{\partial v}\\
+\dfrac{\partial y}{\partial u}&\dfrac{\partial y}{\partial v}
+\end{vmatrix}.
+$$
+
+<Callout type="warn" title="原书换元公式需要补全被积函数">
+
+原书将右边简写为 $f(u,v)|J(u,v)|$，容易被误解为仅把变量名从 $x,y$ 改成 $u,v$。**正确做法是把原来的整个被积函数中的 $x,y$ 代入 $x(u,v),y(u,v)$**，再乘雅可比的绝对值。变换需满足相应的可逆性与光滑性条件；变换分片时应避免重复计数。
+
+</Callout>
+
+**常用线性换元：**令 $x=u+v$、$y=u-v$，则
+
+$$
+J=\begin{vmatrix}1&1\\1&-1\end{vmatrix}=-2,
+\qquad|J|=2.
+$$
+
+每个新变量小矩形变到原平面的面积，会扩大 $2$ 倍。
+
+### 5. 形心公式逆用：把一阶矩直接化成面积乘坐标
+
+若 $D$ 是面积 $S_D>0$ 的平面区域，几何形心为 $(\bar x,\bar y)$，则
+
+$$
+\bar x=\frac{\iint_Dx\,\mathrm d\sigma}{S_D},
+\qquad
+\bar y=\frac{\iint_Dy\,\mathrm d\sigma}{S_D}.
+$$
+
+故原书强调的**逆用**是
+
+$$
+\boxed{\iint_Dx\,\mathrm d\sigma=\bar x S_D,
+\qquad\iint_Dy\,\mathrm d\sigma=\bar y S_D.}
+$$
+
+对于线性函数 $f(x,y)=ax+by+c$，有
+
+$$
+\iint_Df(x,y)\,\mathrm d\sigma
+=(a\bar x+b\bar y+c)S_D.
+$$
+
+<Callout type="idea" title="与中值定理不要混淆">
+
+形心公式对 **$1,x,y$ 的线性组合**特别快捷；对一般非线性函数，不能写成 $\iint_Df=f(\bar x,\bar y)S_D$。例如单位圆盘上的 $f(x,y)=x^2+y^2$，形心是 $(0,0)$，但积分为 $\pi/2$，不等于 $f(0,0)\,S_D=0$。
+
+</Callout>
+
+## 必记 5｜积分区域难以画出时：特殊点与区域的对称性
+
+原书第 49 页将这种问题概括为“看特殊点、看特殊性”。可据此建立以下检查表。
+
+| 观察对象 | 具体做法 | 主要作用 |
+| --- | --- | --- |
+| $x$ 轴交点 | 在**全部约束**中令 $y=0$ | 找出边界截距、半轴取值范围 |
+| $y$ 轴交点 | 在**全部约束**中令 $x=0$ | 确认区域是否跨越坐标轴 |
+| 关于 $y$ 轴对称 | 对区域全部等式与不等式代入 $x\mapsto-x$，区域保持不变 | 可使用关于 $x$ 的奇偶性 |
+| 关于 $x$ 轴对称 | 代入 $y\mapsto-y$，区域保持不变 | 可使用关于 $y$ 的奇偶性 |
+| 关于 $y=x$ 对称 | 同时互换 $x\leftrightarrow y$，区域保持不变 | 可使用轮换对称性 |
+| 有界性与分段 | 确认曲线围成有限面积，必要时按交点分块 | 避免遗漏区域或重叠积分 |
+
+<Callout type="warn" title="不要只检验单条边界的方程">
+
+必须检验**整个区域的全部条件**。例如 $x^2+y^2\le1$ 单独关于两轴都对称，但加入 $x\ge0$ 后，右半圆**不再关于 $y$ 轴对称**。由此不能将 $\iint_Dx\,\mathrm d\sigma$ 错判为零。
+
+</Callout>
+
+### 原书知识点的统一方法图（文字版）
+
+<Cards>
+  <Card title="A｜对称性优先">坐标轴奇偶性、$x\leftrightarrow y$ 轮换对称。</Card>
+  <Card title="B｜直接法">绘制或分割积分域，选 $x$ 型、$y$ 型累次积分，或改用极坐标。</Card>
+  <Card title="C｜换元法">在新坐标中简化边界与被积函数，完整计算 $|J|$。</Card>
+  <Card title="D｜几何公式">面积、形心与几何对称；可直接利用 $\iint_Dx$、$\iint_Dy$ 的一阶矩。</Card>
+</Cards>
+
+## 本记考前自测｜补充练习（非原书题目）
+
+<div id="math21-2027-note09-q04">
+
+**题型：单选题**
+
+来源:本记原创自测, 科目:高等数学, 考点:积分对称与比较, 难度:基础
+
+下列结论必然正确的是（ ）。
+
+
+
+**A.** 若 $D$ 关于 $y$ 轴对称，则 $\iint_Dx^2\,\mathrm d\sigma=0$
+
+
+
+
+**B.** 若 $D$ 关于直线 $y=x$ 对称，则 $\iint_D(x-y)\,\mathrm d\sigma=0$
+
+
+
+
+**C.** 对任意可积函数，都有 $\left|\iint_Df\right|=\iint_D|f|$
+
+
+
+
+**D.** 若 $D$ 关于 $x$ 轴对称，则 $\iint_Dy^2\,\mathrm d\sigma=0$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** B
+
+交换 $x$ 与 $y$ 时，$x-y$ 变为 $-(x-y)$；由于 $D$ 关于 $y=x$ 对称，故积分为零。$x^2$、$y^2$ 都为偶函数，并不因区域对称而积分为零；绝对值不等式一般只有“$\le$”，不能一律写为等号。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note09-q05">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:高等数学, 考点:直角坐标换序, 难度:中等
+
+将积分
+
+$$
+I=\int_0^1\!\mathrm dx\int_{x^2}^{x}(x+y)\,\mathrm dy
+$$
+
+交换积分次序，并计算其值。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+积分域为 $0\le x\le1$、$x^2\le y\le x$。对固定的 $y\in[0,1]$，条件等价于 $y\le x\le\sqrt y$。因此
+
+$$
+I=\int_0^1\!\mathrm dy\int_y^{\sqrt y}(x+y)\,\mathrm dx.
+$$
+
+用原积分直接算：
+
+$$
+\begin{aligned}
+I&=\int_0^1\left[x(x-x^2)+\frac{x^2-x^4}{2}\right]\mathrm dx\\
+&=\int_0^1\left(\frac32x^2-x^3-\frac12x^4\right)\mathrm dx\\
+&=\frac12-\frac14-\frac1{10}=\boxed{\frac3{20}}.
+\end{aligned}
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note09-q06">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:高等数学, 考点:极坐标与面积元, 难度:基础
+
+计算单位圆盘 $D=\{(x,y):x^2+y^2\le1\}$ 上的积分
+
+$$
+I=\iint_D(x^2+y^2)\,\mathrm dx\,\mathrm dy.
+$$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+极坐标下 $x^2+y^2=r^2$，面积元为 $r\,\mathrm dr\,\mathrm d\theta$，所以
+
+$$
+I=\int_0^{2\pi}\!\mathrm d\theta\int_0^1r^3\,\mathrm dr
+=2\pi\cdot\frac14=\boxed{\frac\pi2}.
+$$
+
+特别注意积分被积函数是 $r^2$，**连同面积因子后的被积式为 $r^3$**。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note09-q07">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:高等数学, 考点:雅可比换元, 难度:较难
+
+设
+
+$$
+D=\{(x,y):|x+y|\le2,\ |x-y|\le2\},
+$$
+
+求
+
+$$
+I=\iint_D(x^2+y^2)\,\mathrm dx\,\mathrm dy.
+$$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+令 $u=(x+y)/2$、$v=(x-y)/2$，即 $x=u+v$、$y=u-v$。原域对应正方形 $-1\le u,v\le1$。雅可比绝对值
+
+$$
+\left|\frac{\partial(x,y)}{\partial(u,v)}\right|=2,
+\qquad x^2+y^2=2(u^2+v^2).
+$$
+
+故
+
+$$
+\begin{aligned}
+I&=\int_{-1}^1\!\int_{-1}^1 4(u^2+v^2)\,\mathrm du\,\mathrm dv\\
+&=4\left(\frac23\cdot2+2\cdot\frac23\right)
+=\boxed{\frac{32}{3}}.
+\end{aligned}
+$$
+
+变换前后面积核对：新域面积为 $4$，乘 $|J|=2$ 得原域面积 $8$，与菱形两条对角线均长 $4$ 的面积吻合。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note09-q08">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:高等数学, 考点:形心公式逆用, 难度:基础
+
+设 $D$ 为顶点 $(0,0)$、$(2,0)$、$(0,3)$ 组成的三角形。计算
+
+$$
+I=\iint_D(2x-y+1)\,\mathrm d\sigma.
+$$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+三角形面积 $S_D=\frac12\cdot2\cdot3=3$，形心为三个顶点坐标的平均值：
+
+$$
+(\bar x,\bar y)=\left(\frac{0+2+0}{3},\frac{0+0+3}{3}\right)
+=\left(\frac23,1\right).
+$$
+
+由形心公式逆用，
+
+$$
+\begin{aligned}
+I&=(2\bar x-\bar y+1)S_D\\
+&=\left(\frac43-1+1\right)\cdot3
+=\boxed{4}.
+\end{aligned}
+$$
+
+无需写累次积分，也能迅速得到结果。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note09-q09">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:高等数学, 考点:区域对称判断, 难度:中等
+
+令 $D=\{(x,y):x^2+y^2\le1,\ x\ge0\}$，分别求
+
+$$
+I_1=\iint_Dy\,\mathrm d\sigma,
+\qquad I_2=\iint_Dx\,\mathrm d\sigma.
+$$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+$D$ 是单位右半圆，关于 $x$ 轴对称，但不关于 $y$ 轴对称；因此 $y$ 是关于 $y$ 的奇函数，
+
+$$
+\boxed{I_1=0}.
+$$
+
+求 $I_2$ 时，用极坐标 $-\pi/2\le\theta\le\pi/2$、$0\le r\le1$：
+
+$$
+\begin{aligned}
+I_2&=\int_{-\pi/2}^{\pi/2}\!\mathrm d\theta\int_0^1
+ r\cos\theta\cdot r\,\mathrm dr\\
+&=\frac13\int_{-\pi/2}^{\pi/2}\cos\theta\,\mathrm d\theta
+=\boxed{\frac23}.
+\end{aligned}
+$$
+
+这说明看到奇函数必须先核对区域的对应轴对称性。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 本记复盘｜五个“先看”与常见陷阱
+
+| 题型线索 | 首选方法 | 必须检查 |
+| --- | --- | --- |
+| $n^{-2}$ 与双重求和 | 视为黎曼和 | 每个上限、样点位置、网格面积 |
+| 积分区域随参数缩小 | 比较估计或连续性乘面积 | 面积的主阶与系数；缩到的点 |
+| 被积函数有奇偶性 | 坐标轴对称 | 整个积分域必须保持不变 |
+| $f(x,y)$ 与 $f(y,x)$ 可配对 | 轮换对称 | 区域是否关于 $y=x$ 对称 |
+| 边界适合竖切/横切 | 直角坐标累次积分 | 上下/左右界，必要时分段 |
+| 圆与 $x^2+y^2$ | 极坐标 | $r\ge0$、角度范围与面积因子 $r$ |
+| $x+y$、$x-y$ 或椭圆变换 | 雅可比换元 | 域、被积函数和 $\lvert J\rvert$ **三者全换** |
+| 线性函数、三角形或对称几何域 | 面积与形心 | $S_D>0$、形心不是一般函数的积分中值点 |
+| 曲线画不准 | 看截距与区域全体条件 | 区分边界方程对称、区域实际对称 |
+
+<Callout type="success" title="第 9 记范围确认">
+
+已依据原书第 47—49 页逐项整理 **5 个“必记”板块**。原书的三条黎曼和公式、积分比较与中值定理、缩小三角域极限例题、两坐标轴奇偶对称、轮换对称、直角与极坐标计算、雅可比换元、形心公式逆用，以及难画曲线的交点和对称性判断均已保留。原流程图与形心图已转换为可编辑的文字结构与公式，另附 **9 道完整解答的练习**（其中原书例题 1 道、原创自测 8 道）。
+
+</Callout>

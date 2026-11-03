@@ -1,0 +1,812 @@
+---
+title: "第 6 记｜不定积分"
+description: "2027 周洋鑫《考前21记》第 6 记：不定积分。含知识梳理、适用条件与 7 道配套题及解析。"
+---
+
+<Callout type="info" title="本记来源、范围与修订口径">
+
+本记对应《2027 周洋鑫考前 21 记》**第 30—32 页**。以解析 Markdown 为主，逐页对照原 PDF，按原书顺序完整整理 **6 项必记**：原函数、变上限积分的奇偶性与周期性、变上限积分的连续性与可导性、原函数与定积分的存在性、不定积分基本性质、13 组积分表。原书列出的 **2016 年数二、2018 年数一** 两个例题均保留并补足推导；新增的辨析、测试题与适用条件会明确说明。
+
+</Callout>
+
+<Cards>
+  <Card title="必记 1｜原函数">原函数的意义、变上限积分法、两道原书真题。</Card>
+  <Card title="必记 2—3｜变上限积分">奇偶、周期、连续与左右导数。</Card>
+  <Card title="必记 4｜两种存在性">原函数与黎曼可积：不能相互混同。</Card>
+  <Card title="必记 5—6｜性质与积分表">积分微分互逆、13 组基本公式与适用条件。</Card>
+</Cards>
+
+## 必记 1｜原函数：从“求出表达式”转为“构造变上限积分”
+
+### 1. 定义、存在性与积分常数
+
+设 $f$ 定义在区间 $I$ 上。若存在在 $I$ 内可导的函数 $F$，使
+
+$$
+F'(x)=f(x),\qquad x\in I,
+$$
+
+则称 $F$ 为 $f$ 在区间 $I$ 上的一个**原函数**。若 $I$ 是区间，则任意两个原函数相差常数，所有原函数统一写为
+
+$$
+\boxed{\int f(x)\,\mathrm dx=F(x)+C.}
+$$
+
+<Callout type="idea" title="原书关键技巧：不要求先积出初等函数">
+
+若 $f$ 在包含 $x_0$ 的区间 $I$ 上连续，直接构造
+
+$$
+F(x)=\int_{x_0}^{x}f(t)\,\mathrm dt,
+\qquad F'(x)=f(x).
+$$
+
+尤其当 $x_0=0$ 且 $0\in I$ 时，
+
+$$
+\int f(x)\,\mathrm dx=\int_0^x f(t)\,\mathrm dt+C.
+$$
+
+变上限积分本身就是一个**确定的原函数**。题目要研究符号、平均值、极值、零点、奇偶性或周期性时，不必执着于将积分表示成初等函数。
+
+</Callout>
+
+<Steps>
+  <Step>
+
+  ### 第一步｜判断是否适合“积分上限变量化”
+
+  题目给出 $F'=f$、$f$ 连续，或者涉及“不容易写出初等原函数”的表达式，可优先设 $F(x)=\int_{x_0}^x f(t)\,\mathrm dt+C$。
+
+  </Step>
+  <Step>
+
+  ### 第二步｜利用初值确定常数
+
+  如 $F(x_0)=y_0$，则 $C=y_0$。**注意：**初值点须属于函数的连续延拓区间，才能据此确定原函数对应的积分常数。
+
+  </Step>
+  <Step>
+
+  ### 第三步｜让积分性质替代硬算
+
+  算平均值可交换积分次序；证唯一零点可结合导数符号与积分正负；处理周期微分方程可把积分常数作为待定初值。
+
+  </Step>
+</Steps>
+
+### 原书真题 1｜2016 年数学二：原函数的平均值与唯一零点
+
+<div id="math21-2027-note06-q01">
+
+**题型：解答题**
+
+来源:原书2016年数学二例1, 科目:高等数学, 考点:变限积分与零点, 难度:较难
+
+已知 $f$ 在区间 $\left(0,\dfrac{3\pi}{2}\right)$ 上连续，且在该区间内是
+
+$$
+g(x)=\frac{\cos x}{2x-3\pi}
+$$
+
+的一个原函数，并满足 $f(0)=0$。
+
+（1）求 $f$ 在区间 $\left(0,\dfrac{3\pi}{2}\right)$ 上的平均值。
+
+（2）证明 $f$ 在区间 $\left(0,\dfrac{3\pi}{2}\right)$ 内存在唯一零点。
+
+<Callout type="warn" title="原题端点条件的严谨说明">
+
+原书按 $f(0)=0$ 确定积分常数，隐含 **$f$ 在 $0$ 处右连续**。原题文字仅写开区间内连续、另给 $f(0)$，严格按字面并不足以确定积分常数。下方沿用原书预期的连续延拓理解；若不补充此条件，原题结论不能由已给条件推出。
+
+</Callout>
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**先将原函数变为变上限积分。**记 $a=3\pi/2$。由于 $g(x)=\cos x/[2(x-a)]$ 在 $[0,a)$ 上连续，且 $x\to a^-$ 时有可去奇点（$g(x)\to1/2$），按题意在 $0$ 处连续延拓可得
+
+$$
+f(x)=\int_0^x\frac{\cos t}{2t-3\pi}\,\mathrm dt.
+$$
+
+**第（1）问：交换积分次序，计算平均值。**
+
+$$
+\begin{aligned}
+\int_0^a f(x)\,\mathrm dx
+&=\int_0^a\int_0^x\frac{\cos t}{2(t-a)}\,\mathrm dt\,\mathrm dx\\
+&=\int_0^a(a-t)\frac{\cos t}{2(t-a)}\,\mathrm dt\\
+&=-\frac12\int_0^a\cos t\,\mathrm dt\\
+&=-\frac12\sin a=\frac12.
+\end{aligned}
+$$
+
+因此平均值为
+
+$$
+\boxed{\overline f=\frac1a\int_0^a f(x)\,\mathrm dx=\frac1{3\pi}.}
+$$
+
+**第（2）问：单调区间＋积分正负证明存在性和唯一性。**对 $0<x<a$，
+
+$$
+f'(x)=\frac{\cos x}{2x-3\pi}.
+$$
+
+分母恒负；分子在 $\left(0,\frac\pi2\right)$ 上为正，在 $\left(\frac\pi2,a\right)$ 上为负。因此
+
+$$
+\begin{cases}
+f'(x)<0,&0<x<\dfrac\pi2,\\[3pt]
+f'(x)>0,&\dfrac\pi2<x<a.
+\end{cases}
+$$
+
+由 $f(0)=0$ 知 $f(x)<0$（$0<x\le\pi/2$）。但刚才算得
+
+$$
+\int_0^a f(x)\,\mathrm dx=\frac12>0,
+$$
+
+故在 $\left(\frac\pi2,a\right)$ 中必有某点的函数值为正。结合连续性，介值定理保证在该区间至少有一个零点；又因 $f$ 在该区间**严格递增**，零点至多一个。因此原题所求的零点**存在且唯一**。
+
+<Callout type="success" title="原书方法的核心">
+
+对不易直接求原函数的题，先改成 $\int_0^x$，再用**积分换序计算平均值**，配合**导数符号证明零点唯一**。
+
+</Callout>
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+### 原书真题 2｜2018 年数学一：周期线性微分方程
+
+<div id="math21-2027-note06-q02">
+
+**题型：解答题**
+
+来源:原书2018年数学一例2, 科目:高等数学, 考点:一阶微分方程, 难度:中等
+
+设 $f(x)$ 是 $\mathbb R$ 上的连续函数，已知微分方程
+
+$$
+y'+y=f(x).
+$$
+
+（1）当 $f(x)=x$ 时，求方程的通解。
+
+（2）当 $f$ 是周期为 $T>0$ 的函数时，证明方程存在唯一一个以 $T$ 为周期的解。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**通用形式：**乘积分因子 $e^x$，得到
+
+$$
+(e^x y)'=e^x f(x).
+$$
+
+于是任意解都可写为
+
+$$
+\boxed{y(x)=e^{-x}\left(C+\int_0^x e^t f(t)\,\mathrm dt\right).}
+$$
+
+**第（1）问：**取 $f(x)=x$，有
+
+$$
+\int xe^x\,\mathrm dx=(x-1)e^x+C_0,
+$$
+
+故通解为
+
+$$
+\boxed{y=x-1+Ce^{-x}.}
+$$
+
+**第（2）问：先确定唯一可能的周期初值。**若 $y$ 以 $T$ 为周期，则 $y(T)=y(0)=C$。令
+
+$$
+A=\int_0^T e^t f(t)\,\mathrm dt,
+$$
+
+代入通解，可得
+
+$$
+e^{-T}(C+A)=C
+\quad\Longleftrightarrow\quad
+\boxed{C=\frac{A}{e^T-1}.}
+$$
+
+由于 $T>0$，分母 $e^T-1\ne0$，因此这样的初值**唯一存在**。
+
+**再验证整段周期性。**令 $z(x)=y(x+T)$。因为 $f(x+T)=f(x)$，所以 $z$ 与 $y$ 都满足 $u'+u=f(x)$，且
+
+$$
+z(0)=y(T)=y(0).
+$$
+
+由一阶线性微分方程初值问题解的唯一性，$z(x)=y(x)$ 对任意 $x$ 成立，即 $y(x+T)=y(x)$。
+
+最后，任意两个 $T$-周期解之差 $w$ 满足 $w'+w=0$，故 $w=Ke^{-x}$；由 $w(T)=w(0)$ 和 $T>0$ 可得 $K=0$，因此周期解唯一。
+
+综上，唯一的 $T$-周期解为
+
+$$
+\boxed{y(x)=e^{-x}\left(\frac{\displaystyle\int_0^T e^t f(t)\,\mathrm dt}{e^T-1}+\int_0^x e^t f(t)\,\mathrm dt\right).}
+$$
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 必记 2｜变上限积分函数的奇偶性与周期性
+
+设 $f$ 在 $\mathbb R$ 上连续（若只讨论对称区间内的奇偶性，可将定义域缩小为包含 $0$ 的对称区间），记
+
+$$
+F(x)=\int_0^x f(t)\,\mathrm dt.
+$$
+
+| 被积函数 $f$ 的性质 | 变上限积分 $F$ 的性质 | 关键原因 |
+| --- | --- | --- |
+| $f$ 是奇函数 | $F$ 是**偶函数** | $F(-x)=F(x)$ |
+| $f$ 是偶函数 | $F$ 是**奇函数** | $F(-x)=-F(x)$ |
+| $f$ 以 $T>0$ 为周期，且 $\int_0^T f(t)\,\mathrm dt=0$ | $F$ 也以 $T$ 为一个周期 | $F(x+T)-F(x)=0$ |
+
+<Tabs items={['奇偶性证明', '周期性证明', '反例与拓展']}>
+  <Tab value="奇偶性证明">
+
+  作代换 $t=-u$，得到
+
+  $$
+  F(-x)=\int_0^{-x}f(t)\,\mathrm dt
+  =-\int_0^x f(-u)\,\mathrm du.
+  $$
+
+  若 $f(-u)=-f(u)$，则 $F(-x)=F(x)$；若 $f(-u)=f(u)$，则 $F(-x)=-F(x)$。
+
+  </Tab>
+  <Tab value="周期性证明">
+
+  若 $f(t+T)=f(t)$，则
+
+  $$
+  \begin{aligned}
+  F(x+T)-F(x)
+  &=\int_x^{x+T}f(t)\,\mathrm dt\\
+  &=\int_0^T f(t)\,\mathrm dt.
+  \end{aligned}
+  $$
+
+  因此 **$F$ 以 $T$ 为周期当且仅当一个周期上的积分为 $0$**。
+
+  </Tab>
+  <Tab value="反例与拓展">
+
+  **周期函数的原函数不一定周期。**例如 $f(x)=1$ 以任意正数 $T$ 为周期，$F(x)=x$ 却不可能具有非零周期。
+
+  更一般地，记 $m=\dfrac1T\int_0^T f(t)\,\mathrm dt$，则
+
+  $$
+  F(x)=mx+P(x),\qquad P(x+T)=P(x).
+  $$
+
+  即 $F$ 由**线性漂移项**与**周期项**构成。
+
+  </Tab>
+</Tabs>
+
+<Callout type="warn" title="“积分改变奇偶性”的前提">
+
+上述结论针对**以 $0$ 为下限**的积分 $F(x)=\int_0^x f(t)\,\mathrm dt$。若改用任意下限 $c$，则会多出常数；尤其当 $f$ 为偶函数时，$\int_c^x f(t)\,\mathrm dt$ 未必是奇函数（除非附加适当条件）。
+
+</Callout>
+
+## 必记 3｜变上限积分的连续性与可导性
+
+设 $f$ 在 $[a,b]$ 上黎曼可积，并在除 $x_0\in(a,b)$ 之外的点连续，定义
+
+$$
+F(x)=\int_c^x f(t)\,\mathrm dt,\qquad c\in[a,b].
+$$
+
+由于 $f$ 可积，所以 $f$ 有界，$F$ 在整个 $[a,b]$ 上连续。此处的重点是：**$F$ 能否在 $x_0$ 处求导，取决于 $f$ 的邻域平均值，而不是单独的 $f(x_0)$。**
+
+### 1. 连续点：微积分基本定理
+
+若 $f$ 在 $x_0$ 连续，则
+
+$$
+\boxed{F'(x_0)=f(x_0).}
+$$
+
+证明只需把差商改写为
+
+$$
+\frac{F(x_0+h)-F(x_0)}h
+=\frac1h\int_{x_0}^{x_0+h}f(t)\,\mathrm dt
+\xrightarrow[h\to0]{}f(x_0).
+$$
+
+### 2. 第一类间断点：先求左右导数
+
+若 $f$ 在 $x_0$ 两侧存在有限极限
+
+$$
+L_-=\lim_{x\to x_0^-}f(x),\qquad
+L_+=\lim_{x\to x_0^+}f(x),
+$$
+
+则
+
+$$
+\boxed{F'_-(x_0)=L_-,\qquad F'_+(x_0)=L_+.}
+$$
+
+由此分两种常考情况：
+
+- **可去间断点：**若 $L_-=L_+=L$，则 $F'(x_0)=L$，即使 $f(x_0)\ne L$，$F$ 也可能可导。
+- **跳跃间断点：**若 $L_-\ne L_+$，则 $F$ 在 $x_0$ 连续但**不可导**。
+
+<Accordions>
+  <Accordion title="为什么积分函数在跳跃点仍连续？">
+
+  因为 $f$ 在 $[a,b]$ 有界，设 $|f(t)|\le M$，则任意 $x,y\in[a,b]$ 均有
+
+  $$
+  |F(x)-F(y)|=\left|\int_y^x f(t)\,\mathrm dt\right|\le M|x-y|.
+  $$
+
+  因此 $F$ 甚至满足 Lipschitz 条件，必连续。**连续不等于可导**，跳跃点恰好是典型反例。
+
+  </Accordion>
+  <Accordion title="可去间断点为何可能有 F'(x₀)≠f(x₀)？">
+
+  例如设 $f(x)=1$（$x\ne0$）且 $f(0)=0$，则
+
+  $$
+  F(x)=\int_0^x f(t)\,\mathrm dt=x.
+  $$
+
+  所以 $F'(0)=1$，而 $f(0)=0$。积分不受**单个点**的函数值影响，但在间断点不能直接套用 $F'=f$。
+
+  </Accordion>
+  <Accordion title="跳跃间断点对应的直观图形是什么？">
+
+  取 $f(x)=\begin{cases}-1,&x<0,\\1,&x\ge0,\end{cases}$，则
+
+  $$
+  F(x)=\int_0^x f(t)\,\mathrm dt=|x|.
+  $$
+
+  于是 $F$ 在 $0$ 处连续，且 $F'_-(0)=-1$、$F'_+(0)=1$，形成尖点，不能求普通导数。
+
+  </Accordion>
+</Accordions>
+
+<Callout type="idea" title="考场处理次序">
+
+先判断**可积性与连续性**，再写 $F'_\pm(x_0)=\lim_{x\to x_0^\pm} f(x)$；左右极限相同才推出 $F'(x_0)$ 存在。**不要机械地把间断点的 $f(x_0)$ 当成 $F'(x_0)$。**
+
+</Callout>
+
+## 必记 4｜原函数的存在性与定积分的存在性
+
+### 1. 原函数存在性：连续性充分，但非必要
+
+对区间 $I$ 内的函数 $f$：
+
+| $f$ 的情况 | 原函数是否存在 | 原因或备注 |
+| --- | --- | --- |
+| 在 $I$ 上连续 | **一定存在** | 可直接用 $\int_{x_0}^x f(t)\,\mathrm dt$ 构造 |
+| 内点有可去间断点或跳跃间断点 | **不存在覆盖该点的原函数** | 导函数具有介值性质（Darboux 性质） |
+| 内点有无穷间断点 | **不存在覆盖该点且导数处处等于 $f$ 的普通原函数** | 普通导函数在该点必须是有限实数 |
+| 有振荡间断点 | **可能存在，也可能不存在** | 需要直接验证是否有某个 $F$ 满足 $F'=f$ |
+
+<Callout type="warn" title="区分两个常见说法">
+
+**“不连续就没有原函数”是错的。**虽然导函数必须满足介值性质，因而不能出现通常的第一类间断，但导函数可以不连续，并且可以在某点附近持续振荡。
+
+</Callout>
+
+**原书振荡间断点示例（已核对 PDF 第 31 页并修正端点误排）：**
+
+$$
+f(x)=
+\begin{cases}
+2x\sin\dfrac1x-\cos\dfrac1x,&x\ne0,\\
+0,&x=0,
+\end{cases}
+$$
+
+虽然 $f$ 在 $0$ 处振荡而不连续，依然有原函数
+
+$$
+F(x)=
+\begin{cases}
+x^2\sin\dfrac1x,&x\ne0,\\
+0,&x=0.
+\end{cases}
+$$
+
+在 $x\ne0$ 时直接求导即可验证。对 $x=0$：
+
+$$
+F'(0)=\lim_{h\to0}\frac{h^2\sin(1/h)}h
+=\lim_{h\to0}h\sin\frac1h=0=f(0).
+$$
+
+因此在整个 $\mathbb R$ 上都有 $F'=f$。
+
+### 2. 定积分存在性：教材所说的“可积”
+
+此处的“可积”特指 **黎曼可积**。对闭区间 $[a,b]$：
+
+- 若 $f$ 连续，则 $\int_a^b f(x)\,\mathrm dx$ **存在**。
+- 若 $f$ **有界**且只有**有限个间断点**，则 $\int_a^b f(x)\,\mathrm dx$ 也**存在**。
+- **有界是黎曼可积的必要条件**，但不是充分条件；并非一切有界函数都黎曼可积。
+
+<Tabs items={['原函数不一定存在', '可积但原函数不存在', '容易混淆的反例']}>
+  <Tab value="原函数不一定存在">
+
+  设 $f(x)=\begin{cases}-1,&x<0,\\1,&x\ge0.\end{cases}$，在 $[-1,1]$ 上有跳跃间断点，故不存在一个在整个区间内满足 $F'=f$ 的原函数。
+
+  </Tab>
+  <Tab value="可积但原函数不存在">
+
+  同一个跳跃函数虽然无全区间原函数，却只有一个间断点且有界，所以 **黎曼可积**，并且
+
+  $$
+  \int_{-1}^1f(x)\,\mathrm dx=-1+1=0.
+  $$
+
+  这证明“定积分存在”并不等于“原函数存在”。
+
+  </Tab>
+  <Tab value="容易混淆的反例">
+
+  $f(x)=1/x$ 在 $[0,1]$ 上无界，因此不是该闭区间上的黎曼可积函数；即使考虑 $\int_0^1\frac1x\,\mathrm dx$ 的**反常积分**，它也发散。
+
+  与之不同，$1/\sqrt x$ 在 $(0,1]$ 上有原函数 $2\sqrt x$，其 $0$ 到 $1$ 的反常积分收敛，但仍不属于 $[0,1]$ 上有界函数的普通黎曼积分。反常积分将在下一记讨论。
+
+  </Tab>
+</Tabs>
+
+| 对比问题 | 原函数 | 定积分（黎曼意义） |
+| --- | --- | --- |
+| 关心什么？ | 是否存在某个 $F$ 使 $F'=f$ | 和式是否收敛为积分值 |
+| 连续能保证吗？ | 能 | 能 |
+| 有限个跳跃间断点？ | 通常妨碍全区间原函数 | 只要有界，仍可积 |
+| 有界是必要条件吗？ | **不是** | **是** |
+| 能否由“可积”直接推出“有原函数”？ | 不能 | — |
+
+## 必记 5｜不定积分的基本性质
+
+原书把积分与微分视作“互逆操作”，但须留意积分常数。假设相关函数具有所需的可导性，则
+
+$$
+\boxed{\int \mathrm dG(x)=G(x)+C,}
+$$
+
+原书取 $G=F'$，写作
+
+$$
+\int \mathrm dF'(x)=F'(x)+C.
+$$
+
+这与另一个常用公式必须区分：
+
+$$
+\boxed{\int F'(x)\,\mathrm dx=F(x)+C.}
+$$
+
+若 $f$ 有原函数，则形式上
+
+$$
+\boxed{\mathrm d\!\left[\int f(x)\,\mathrm dx\right]=f(x)\,\mathrm dx.}
+$$
+
+<Callout type="warn" title="不要把 dF′ 和 F′dx 混成同一个被积式">
+
+$\mathrm dF'(x)=F''(x)\,\mathrm dx$（当 $F''$ 存在），所以 $\int\mathrm dF'(x)=F'(x)+C$；而 $\int F'(x)\,\mathrm dx=F(x)+C$。**原 PDF 第 32 页第一式并非排版识别错误，两式只是积分对象不同。**
+
+</Callout>
+
+## 必记 6｜13 组基本积分公式：考前速查与反向验算
+
+下面依原书**（1）—（13）** 顺序整理，补足使用范围与易错条件。除另有说明外，积分常数 $C$ 均可在相应的**连通定义区间**上单独选取。
+
+### A. 幂函数与指数函数（原书 1—3）
+
+| 编号 | 积分公式 | 适用范围与提醒 |
+| --- | --- | --- |
+| 1 | $\displaystyle\int x^\alpha\,\mathrm dx=\frac{x^{\alpha+1}}{\alpha+1}+C$ | $\alpha\ne-1$；实数幂通常先取 $x>0$，整数幂可按定义域延拓 |
+| 2 | $\displaystyle\int\frac{1}{x}\,\mathrm dx=\ln\vert x\vert +C$ | $x\ne0$；**绝对值不可漏** |
+| 3 | $\displaystyle\int a^x\,\mathrm dx=\frac{a^x}{\ln a}+C$；$\displaystyle\int e^x\,\mathrm dx=e^x+C$ | $a>0$ 且 $a\ne1$ |
+
+### B. 三角函数及其倒数（原书 4—8）
+
+| 编号 | 积分公式 | 易错点 |
+| --- | --- | --- |
+| 4 | $\displaystyle\int\cos x\,\mathrm dx=\sin x+C$；$\displaystyle\int\sin x\,\mathrm dx=-\cos x+C$ | $\sin x$ 的原函数前有负号 |
+| 5 | $\displaystyle\int\sec^2x\,\mathrm dx=\tan x+C$；$\displaystyle\int\csc^2x\,\mathrm dx=-\cot x+C$ | $\sec^2x=1/\cos^2x$，$\csc^2x=1/\sin^2x$ |
+| 6 | $\displaystyle\int\tan x\sec x\,\mathrm dx=\sec x+C$；$\displaystyle\int\cot x\csc x\,\mathrm dx=-\csc x+C$ | 对照 $\sec'$ 与 $\csc'$ |
+| 7 | $\displaystyle\int\tan x\,\mathrm dx=-\ln\vert \cos x\vert +C$；$\displaystyle\int\cot x\,\mathrm dx=\ln\vert \sin x\vert +C$ | 牢记对数与正负号 |
+| 8 | $\displaystyle\int\sec x\,\mathrm dx=\ln\vert \sec x+\tan x\vert +C$；$\displaystyle\int\csc x\,\mathrm dx=\ln\vert \csc x-\cot x\vert +C$ | $\csc x$ 公式中是减号 |
+
+<Accordions>
+  <Accordion title="怎样快速验证第 8 组：积分 sec x 和 csc x？">
+
+  利用 $\dfrac{\mathrm d}{\mathrm dx}(\sec x+\tan x)=\sec x(\sec x+\tan x)$，因此在每个定义区间内
+
+  $$
+  \frac{\mathrm d}{\mathrm dx}\ln|\sec x+\tan x|=\sec x.
+  $$
+
+  另一方面，对 $\csc x-\cot x$ 求导，得到
+
+  $$
+  (\csc x-\cot x)'=-\csc x\cot x+\csc^2x
+  =\csc x(\csc x-\cot x),
+  $$
+
+  所以
+
+  $$
+  \frac{\mathrm d}{\mathrm dx}\ln|\csc x-\cot x|=\csc x.
+  $$
+
+  </Accordion>
+</Accordions>
+
+### C. 反三角与二次根式（原书 9—13）
+
+| 编号 | 积分公式 | 适用条件 |
+| --- | --- | --- |
+| 9 | $\displaystyle\int\frac{\mathrm dx}{\sqrt{a^2-x^2}}=\arcsin\frac xa+C$ | $a>0$，且 $\vert x\vert <a$ |
+| 10 | $\displaystyle\int\frac{\mathrm dx}{a^2+x^2}=\frac1a\arctan\frac xa+C$ | $a>0$ |
+| 11 | $\displaystyle\int\frac{\mathrm dx}{x^2-a^2}=\frac1{2a}\ln\left\vert \frac{x-a}{x+a}\right\vert +C$ | $a>0$，且 $x\ne\pm a$ |
+| 12 | $\displaystyle\int\frac{\mathrm dx}{\sqrt{x^2+a^2}}=\ln\!\left(x+\sqrt{x^2+a^2}\right)+C$ | 原书式中未单列条件；取 $a>0$ 可保证公式对所有实数 $x$ 成立 |
+| 13 | $\displaystyle\int\frac{\mathrm dx}{\sqrt{x^2-a^2}}=\ln\left\vert x+\sqrt{x^2-a^2}\right\vert +C$ | $a>0$，且 $\vert x\vert >a$ |
+
+<Callout type="idea" title="最后五组最好成对背记">
+
+- 带 $\sqrt{a^2-x^2}$：看 **$\arcsin$**。
+- 带 $a^2+x^2$：看 **$\arctan$**。
+- 带 $x^2-a^2$ 的**分母（无根号）**：看分式比值的 **$\ln$**。
+- 带 $\sqrt{x^2\pm a^2}$：看 **$\ln|x+\sqrt{\cdots}|$**；$+$ 号且 $a>0$ 时绝对值可省。
+
+</Callout>
+
+<Tabs items={['公式 11：部分分式', '公式 12—13：对数求导验算']}>
+  <Tab value="公式 11：部分分式">
+
+  $$
+  \frac1{x^2-a^2}
+  =\frac1{(x-a)(x+a)}
+  =\frac1{2a}\left(\frac1{x-a}-\frac1{x+a}\right),
+  $$
+
+  从而
+
+  $$
+  \int\frac{\mathrm dx}{x^2-a^2}
+  =\frac1{2a}\ln|x-a|-\frac1{2a}\ln|x+a|+C.
+  $$
+
+  </Tab>
+  <Tab value="公式 12—13：对数求导验算">
+
+  令 $u(x)=\sqrt{x^2\pm a^2}$，在根式有定义且不为零的区间内，$u'(x)=x/u(x)$，故
+
+  $$
+  \begin{aligned}
+  \frac{\mathrm d}{\mathrm dx}\ln|x+u(x)|
+  &=\frac{1+x/u(x)}{x+u(x)}\\
+  &=\frac1{u(x)}
+  =\frac1{\sqrt{x^2\pm a^2}}.
+  \end{aligned}
+  $$
+
+  注意公式 12 的根式为 $\sqrt{x^2+a^2}$；公式 13 的根式为 $\sqrt{x^2-a^2}$，定义域不同，不能忽略。
+
+  </Tab>
+</Tabs>
+
+## 考前自测｜新增训练（非原书真题）
+
+以下练习为根据本记六组考点补充的原创自测题，**不是原 PDF 另列的真题**。
+
+<div id="math21-2027-note06-q03">
+
+**题型：多选题**
+
+来源:本记原创自测, 科目:高等数学, 考点:积分与周期, 难度:中等
+
+设 $f$ 在 $\mathbb R$ 上连续，$F(x)=\int_0^x f(t)\,\mathrm dt$，下列说法正确的有（ ）。
+
+
+
+**A.** 若 $f$ 为奇函数，则 $F$ 为偶函数。
+
+
+
+
+**B.** 若 $f$ 为偶函数，则 $F$ 为奇函数。
+
+
+
+
+**C.** 若 $f$ 以 $T>0$ 为周期，则 $F$ 一定以 $T$ 为周期。
+
+
+
+
+**D.** 若 $f$ 以 $T>0$ 为周期，且 $\int_0^T f(t)\,\mathrm dt=0$，则 $F$ 以 $T$ 为周期。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** A、B、D
+
+前三项依次用 $t=-u$ 换元验证；第三项错误，例如 $f\equiv1$ 虽是周期函数但 $F(x)=x$ 不具有正周期。第四项由 $F(x+T)-F(x)=\int_0^T f(t)\,\mathrm dt=0$ 得证。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note06-q04">
+
+**题型：单选题**
+
+来源:本记原创自测, 科目:高等数学, 考点:原函数存在性, 难度:中等
+
+下列函数在 $[-1,1]$ 上**一定黎曼可积，但不存在整个区间上的原函数**的是（ ）。
+
+
+
+**A.** $f(x)=x^2$
+
+
+
+
+**B.** $f(x)=\begin{cases}0,&x<0,\\1,&x\ge0.\end{cases}$
+
+
+
+
+**C.** $f(x)=\sin x$
+
+
+
+
+**D.** $f(x)=1/|x|$（$x\ne0$），且规定 $f(0)=0$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** B
+
+第二项有界且仅一个跳跃间断点，所以黎曼可积；但导函数不能有跳跃间断点，故不存在全区间原函数。第一、三项连续，既可积又有原函数。第四项在 $0$ 附近无界，不是通常的黎曼可积函数。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note06-q05">
+
+**题型：填空题**
+
+来源:本记原创自测, 科目:高等数学, 考点:变限积分左右导数, 难度:基础
+
+设 $f(x)=\begin{cases}2,&x<0,\\5,&x\ge0,\end{cases}$，$F(x)=\int_0^x f(t)\,\mathrm dt$，则 $F'_-(0)=$ $\underline{\qquad}$，$F'_+(0)=$ $\underline{\qquad}$。
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+**参考答案：** $2$、$5$
+
+$f$ 在 $0$ 处有跳跃间断，左、右极限分别为 $2$、$5$。变限积分函数左右导数恰等于这两个单侧极限；因此 $F$ 连续但在 $0$ 处不可导。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note06-q06">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:高等数学, 考点:周期积分分解, 难度:中等
+
+设 $f$ 是连续的 $T$-周期函数（$T>0$），记
+
+$$
+A=\int_0^T f(t)\,\mathrm dt,\qquad F(x)=\int_0^x f(t)\,\mathrm dt.
+$$
+
+证明存在以 $T$ 为周期的连续可导函数 $P$，使
+
+$$
+F(x)=\frac ATx+P(x).
+$$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+令 $P(x)=F(x)-\dfrac ATx$，则 $P$ 连续可导。利用 $f$ 的周期性，
+
+$$
+\begin{aligned}
+P(x+T)-P(x)
+&=F(x+T)-F(x)-A\\
+&=\int_x^{x+T}f(t)\,\mathrm dt-A\\
+&=\int_0^T f(t)\,\mathrm dt-A=0.
+\end{aligned}
+$$
+
+因此 $P(x+T)=P(x)$，命题得证。当且仅当 $A=0$ 时，$F$ 自身才以 $T$ 为周期。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+<div id="math21-2027-note06-q07">
+
+**题型：解答题**
+
+来源:本记原创自测, 科目:高等数学, 考点:基本积分公式, 难度:基础
+
+求下列不定积分，并注明定义域限制：
+
+$$
+I_1=\int\frac{\mathrm dx}{4+x^2},\qquad
+I_2=\int\frac{\mathrm dx}{x^2-9},\qquad
+I_3=\int\frac{\mathrm dx}{\sqrt{9-x^2}}.
+$$
+
+<Accordions>
+  <Accordion title="查看答案与解析">
+
+分别套用原书公式（10）、（11）、（9），取 $a=2$ 或 $a=3$：
+
+$$
+\begin{aligned}
+I_1&=\frac12\arctan\frac x2+C_1,&&x\in\mathbb R,\\
+I_2&=\frac16\ln\left|\frac{x-3}{x+3}\right|+C_2,&&x\ne\pm3,\\
+I_3&=\arcsin\frac x3+C_3,&&|x|<3.
+\end{aligned}
+$$
+
+若定义域分成多个连通区间，各区间中的积分常数可分别取值。
+
+  </Accordion>
+</Accordions>
+
+</div>
+
+## 本记复盘｜六项必记对照表
+
+| 看见什么题目关键词 | 先做什么 | 必查的细节 |
+| --- | --- | --- |
+| 原函数无法积出初等表达式 | 写成 $\int_{x_0}^{x}f(t)\,\mathrm dt+C$ | 初值点及其连续性 |
+| 变上限积分的奇偶性 | 对 $F(-x)$ 作 $t=-u$ | 下限是否为 $0$、定义域是否对称 |
+| 变上限积分的周期性 | 算 $F(x+T)-F(x)$ | 单周期积分是否为 $0$ |
+| 积分函数在间断点可导吗 | 分别求左右导数 | 左右极限是否一致，不必等于 $f(x_0)$ |
+| “有原函数”还是“可积” | 分别检查 Darboux 性质和黎曼可积条件 | 两者没有简单的等价关系 |
+| 积分与微分“约掉” | 分清 $\mathrm dF$ 和 $F'\,\mathrm dx$ | 不定积分加 $C$ |
+| 积分公式 | 按 13 组对照导函数 | 对数绝对值、参数条件、定义区间 |
+
+<Callout type="success" title="第 6 记整理范围确认">
+
+已对照原书第 30—32 页，整理并校核 **6 项必记、2 道原书真题与 13 组积分表**，并单独说明原书 **2016 年数二题初值所隐含的右连续条件**、振荡间断例子在 $x=0$ 处的原 PDF 排版问题，以及 $\int\mathrm dF'(x)$ 与 $\int F'(x)\,\mathrm dx$ 的区别。
+
+</Callout>
