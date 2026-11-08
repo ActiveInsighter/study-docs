@@ -1,0 +1,10 @@
+LABEL = '多级 Cache 的混合搭配：L1 写直通 + 写缓冲，L2 写回'
+F = Fig(700, 200, '多级 Cache 的混合搭配')
+F.box(30, 80, 90, 44, 'CPU', 'violet', 13, 6)
+F.box(200, 64, 100, 34, 'L1 Cache', 'green', 12.5, 5)
+F.cells(200, 112, ['', '', '', '', ''], 20, 20, size=10); F.text(250, 148, 'Write Buffer', 11, color=MUTED)
+F.box(390, 76, 100, 52, 'L2 Cache', 'green', 12.5, 6); F.box(570, 76, 100, 52, 'DRAM', 'amber', 13, 6)
+F.line(122, 90, 198, 81, INK2, 1.3, arrow='both'); F.poly([(122, 110), (160, 110), (160, 122), (198, 122)], INK2, 1.3, arrow='end')
+F.line(302, 81, 388, 92, INK2, 1.3, arrow='both'); F.line(302, 122, 388, 112, INK2, 1.3, arrow='end')
+F.line(492, 102, 568, 102, INK2, 1.3, arrow='both')
+F.text(350, 186, 'L1 对 L2 用全写法（经写缓冲）；L2 对主存用写回法', 12, color=MUTED)

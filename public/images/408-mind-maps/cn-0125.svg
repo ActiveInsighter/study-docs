@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" width="720" height="330" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="IP 地址的分类：A、B、C、D、E 类">
+<title>IP 地址的分类：A、B、C、D、E 类</title>
+<rect x="0.75" y="0.75" width="718.5" height="328.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">分类的 IP 地址</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="150" y="60" font-size="10.5" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="166.5" y="60" font-size="10.5" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="183" y="60" font-size="10.5" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<text x="199.5" y="60" font-size="10.5" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<text x="216" y="60" font-size="10.5" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
+<text x="282" y="60" font-size="10.5" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8</text>
+<text x="414" y="60" font-size="10.5" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">16</text>
+<text x="546" y="60" font-size="10.5" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">24</text>
+<text x="678" y="60" font-size="10.5" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">32</text>
+<text x="140" y="92" font-size="11.5" fill="#18181b" text-anchor="end">A 类（1~126）</text>
+<rect x="150" y="72" width="16.5" height="32" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="158.2" y="91.8" font-size="11" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<rect x="166.5" y="72" width="115.5" height="32" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="224.2" y="92" font-size="11.5" fill="#1e3a8a" text-anchor="middle">网络号</text>
+<rect x="282" y="72" width="396" height="32" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="480" y="92" font-size="11.5" fill="#78350f" text-anchor="middle">主机号</text>
+<text x="278" y="68" font-size="9.5" fill="#3f3f46" text-anchor="end">7 bit</text>
+<text x="140" y="140" font-size="11.5" fill="#18181b" text-anchor="end">B 类（128~191）</text>
+<rect x="150" y="120" width="16.5" height="32" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="158.2" y="139.8" font-size="11" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="166.5" y="120" width="16.5" height="32" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="174.8" y="139.8" font-size="11" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<rect x="183" y="120" width="231" height="32" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="298.5" y="140" font-size="11.5" fill="#1e3a8a" text-anchor="middle">网络号</text>
+<rect x="414" y="120" width="264" height="32" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="546" y="140" font-size="11.5" fill="#78350f" text-anchor="middle">主机号</text>
+<text x="410" y="116" font-size="9.5" fill="#3f3f46" text-anchor="end">14 bit</text>
+<text x="140" y="188" font-size="11.5" fill="#18181b" text-anchor="end">C 类（192~223）</text>
+<rect x="150" y="168" width="16.5" height="32" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="158.2" y="187.8" font-size="11" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="166.5" y="168" width="16.5" height="32" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="174.8" y="187.8" font-size="11" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="183" y="168" width="16.5" height="32" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="191.2" y="187.8" font-size="11" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<rect x="199.5" y="168" width="346.5" height="32" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="372.8" y="188" font-size="11.5" fill="#1e3a8a" text-anchor="middle">网络号</text>
+<rect x="546" y="168" width="132" height="32" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="612" y="188" font-size="11.5" fill="#78350f" text-anchor="middle">主机号</text>
+<text x="542" y="164" font-size="9.5" fill="#3f3f46" text-anchor="end">21 bit</text>
+<text x="140" y="236" font-size="11.5" fill="#18181b" text-anchor="end">D 类（224~239）</text>
+<rect x="150" y="216" width="16.5" height="32" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="158.2" y="235.8" font-size="11" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="166.5" y="216" width="16.5" height="32" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="174.8" y="235.8" font-size="11" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="183" y="216" width="16.5" height="32" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="191.2" y="235.8" font-size="11" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="199.5" y="216" width="16.5" height="32" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="207.8" y="235.8" font-size="11" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<rect x="216" y="216" width="462" height="32" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="447" y="236" font-size="11.5" fill="#78350f" text-anchor="middle">多播地址</text>
+<text x="140" y="284" font-size="11.5" fill="#18181b" text-anchor="end">E 类（240~255）</text>
+<rect x="150" y="264" width="16.5" height="32" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="158.2" y="283.9" font-size="11" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="166.5" y="264" width="16.5" height="32" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="174.8" y="283.9" font-size="11" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="183" y="264" width="16.5" height="32" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="191.2" y="283.9" font-size="11" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="199.5" y="264" width="16.5" height="32" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="207.8" y="283.9" font-size="11" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="216" y="264" width="462" height="32" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="447" y="284" font-size="11.5" fill="#78350f" text-anchor="middle">保留为今后使用</text>
+</svg>

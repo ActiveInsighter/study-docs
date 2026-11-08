@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="700" height="420" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="数据、数据对象、数据元素、数据项的关系">
+<title>数据、数据对象、数据元素、数据项的关系</title>
+<rect x="0.75" y="0.75" width="698.5" height="418.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">数据 ⊃ 数据对象 ⊃ 数据元素 ⊃ 数据项</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<ellipse cx="350" cy="225" rx="320" ry="180" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="350" y="80" font-size="16" fill="#18181b" text-anchor="middle" font-weight="700">数据</text>
+<ellipse cx="220" cy="240" rx="170" ry="110" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="220" y="158" font-size="14" fill="#3b0764" text-anchor="middle" font-weight="700">数据对象</text>
+<text x="220" y="330" font-size="11.5" fill="#3b0764" text-anchor="middle">（个人财富的数据元素集合）</text>
+<rect x="90" y="178" width="120" height="120" rx="14" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="150" y="198" font-size="13" fill="#78350f" text-anchor="middle" font-weight="700">数据元素</text>
+<rect x="98" y="212" width="32" height="76" rx="6" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="114" y="238" font-size="12" fill="#1e3a8a" text-anchor="middle"><tspan x="114" dy="0">数</tspan><tspan x="114" dy="16.2">据</tspan><tspan x="114" dy="16.2">项</tspan></text>
+<rect x="134" y="212" width="32" height="76" rx="6" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="150" y="238" font-size="12" fill="#1e3a8a" text-anchor="middle"><tspan x="150" dy="0">数</tspan><tspan x="150" dy="16.2">据</tspan><tspan x="150" dy="16.2">项</tspan></text>
+<rect x="170" y="212" width="32" height="76" rx="6" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="186" y="238" font-size="12" fill="#1e3a8a" text-anchor="middle"><tspan x="186" dy="0">数</tspan><tspan x="186" dy="16.2">据</tspan><tspan x="186" dy="16.2">项</tspan></text>
+<rect x="230" y="178" width="120" height="120" rx="14" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="290" y="198" font-size="13" fill="#78350f" text-anchor="middle" font-weight="700">数据元素</text>
+<rect x="238" y="212" width="32" height="76" rx="6" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="254" y="238" font-size="12" fill="#1e3a8a" text-anchor="middle"><tspan x="254" dy="0">数</tspan><tspan x="254" dy="16.2">据</tspan><tspan x="254" dy="16.2">项</tspan></text>
+<rect x="274" y="212" width="32" height="76" rx="6" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="290" y="238" font-size="12" fill="#1e3a8a" text-anchor="middle"><tspan x="290" dy="0">数</tspan><tspan x="290" dy="16.2">据</tspan><tspan x="290" dy="16.2">项</tspan></text>
+<rect x="310" y="212" width="32" height="76" rx="6" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="326" y="238" font-size="12" fill="#1e3a8a" text-anchor="middle"><tspan x="326" dy="0">数</tspan><tspan x="326" dy="16.2">据</tspan><tspan x="326" dy="16.2">项</tspan></text>
+<ellipse cx="520" cy="170" rx="100" ry="50" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="520" y="164" font-size="14" fill="#3b0764" text-anchor="middle" font-weight="700">数据对象</text>
+<text x="520" y="186" font-size="11" fill="#3b0764" text-anchor="middle">（微博账号的数据元素集合）</text>
+<ellipse cx="520" cy="300" rx="100" ry="50" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="520" y="294" font-size="14" fill="#3b0764" text-anchor="middle" font-weight="700">数据对象</text>
+<text x="520" y="316" font-size="11" fill="#3b0764" text-anchor="middle">（海底捞排队的数据元素集合）</text>
+</svg>

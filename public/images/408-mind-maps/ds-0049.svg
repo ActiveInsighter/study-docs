@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="Dijkstra 算法：从 v1 到各终点的 dist 值和最短路径的求解过程">
+<title>Dijkstra 算法：从 v1 到各终点的 dist 值和最短路径的求解过程</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="858.5" height="498.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">Dijkstra 算法（源点 1）</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M74.2 138.9L134.2 92.3" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="98.4" y="110.7" font-size="12" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">10</text>
+<path d="M75 160L133.4 198.9" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="99" y="193.2" font-size="12" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">5</text>
+<path d="M168 80L260 80" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="215" y="73.4" font-size="12" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">1</text>
+<path d="M162.7 197.3L265.9 94.1" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="181.4" y="167.6" font-size="12" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">9</text>
+<path d="M168 210L260 210" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="215" y="225" font-size="12" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">2</text>
+<path d="M280 192L280 100" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="290.8" y="149.2" font-size="12" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">6</text>
+<path d="M262.6 205.3L79.3 155.3" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="205.8" y="182.8" font-size="12" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">7</text>
+<circle cx="60" cy="150" r="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="60" y="155.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">1</text>
+<circle cx="150" cy="80" r="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="150" y="85.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">2</text>
+<circle cx="280" cy="80" r="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="280" y="85.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">3</text>
+<circle cx="280" cy="210" r="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="280" y="215.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">4</text>
+<circle cx="150" cy="210" r="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="150" y="215.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">5</text>
+<path d="M145 98L145 190" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="134" y="149.2" font-size="12" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">2</text>
+<path d="M155 192L155 100" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="166" y="149.2" font-size="12" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">3</text>
+<path d="M275 98L275 190" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="264" y="149.2" font-size="12" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">4</text>
+<text x="360" y="84" font-size="13" fill="#18181b" font-weight="600">每轮得到的最短路径：</text>
+<text x="360" y="110" font-size="13" fill="#3f3f46"><tspan x="360" dy="0">第 1 轮：1→5，距离 5</tspan><tspan x="360" dy="20.8">第 2 轮：1→5→4，距离 7</tspan><tspan x="360" dy="20.8">第 3 轮：1→5→2，距离 8</tspan><tspan x="360" dy="20.8">第 4 轮：1→5→2→3，距离 9</tspan></text>
+<rect x="430" y="304" width="190" height="34" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="30" y="338" width="780" height="34" rx="0" fill="#fafafa" stroke="none" stroke-width="0"/>
+<rect x="620" y="338" width="190" height="34" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="260" y="372" width="170" height="34" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="30" y="406" width="780" height="34" rx="0" fill="#fafafa" stroke="none" stroke-width="0"/>
+<rect x="110" y="406" width="150" height="34" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<path d="M30 304V278Q30 270 38 270H802Q810 270 810 278V304Z" fill="#27272a"/>
+<path d="M30 304L810 304" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30 338L810 338" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30 372L810 372" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30 406L810 406" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30 440L810 440" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M110 304L110 474" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M260 304L260 474" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M430 304L430 474" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M620 304L620 474" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="30" y="270" width="780" height="204" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="70" y="291.4" font-size="12.5" fill="#fafafa" text-anchor="middle" font-weight="600">终点</text>
+<text x="185" y="291.4" font-size="12.5" fill="#fafafa" text-anchor="middle" font-weight="600">第 1 轮</text>
+<text x="345" y="291.4" font-size="12.5" fill="#fafafa" text-anchor="middle" font-weight="600">第 2 轮</text>
+<text x="525" y="291.4" font-size="12.5" fill="#fafafa" text-anchor="middle" font-weight="600">第 3 轮</text>
+<text x="715" y="291.4" font-size="12.5" fill="#fafafa" text-anchor="middle" font-weight="600">第 4 轮</text>
+<text x="70" y="325.4" font-size="12.5" fill="#18181b" text-anchor="middle">2</text>
+<text x="185" y="325.4" font-size="12.5" fill="#18181b" text-anchor="middle">10  1→2</text>
+<text x="345" y="325.4" font-size="12.5" fill="#18181b" text-anchor="middle">8  1→5→2</text>
+<text x="525" y="325.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle">8  1→5→2</text>
+<text x="715" y="325.4" font-size="12.5" fill="#18181b" text-anchor="middle"></text>
+<text x="70" y="359.4" font-size="12.5" fill="#18181b" text-anchor="middle">3</text>
+<text x="185" y="359.4" font-size="12.5" fill="#18181b" text-anchor="middle">∞</text>
+<text x="345" y="359.4" font-size="12.5" fill="#18181b" text-anchor="middle">14  1→5→3</text>
+<text x="525" y="359.4" font-size="12.5" fill="#18181b" text-anchor="middle">13  1→5→4→3</text>
+<text x="715" y="359.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle">9  1→5→2→3</text>
+<text x="70" y="393.4" font-size="12.5" fill="#18181b" text-anchor="middle">4</text>
+<text x="185" y="393.4" font-size="12.5" fill="#18181b" text-anchor="middle">∞</text>
+<text x="345" y="393.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle">7  1→5→4</text>
+<text x="525" y="393.4" font-size="12.5" fill="#18181b" text-anchor="middle"></text>
+<text x="715" y="393.4" font-size="12.5" fill="#18181b" text-anchor="middle"></text>
+<text x="70" y="427.4" font-size="12.5" fill="#18181b" text-anchor="middle">5</text>
+<text x="185" y="427.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle">5  1→5</text>
+<text x="345" y="427.4" font-size="12.5" fill="#18181b" text-anchor="middle"></text>
+<text x="525" y="427.4" font-size="12.5" fill="#18181b" text-anchor="middle"></text>
+<text x="715" y="427.4" font-size="12.5" fill="#18181b" text-anchor="middle"></text>
+<text x="70" y="461.4" font-size="12.5" fill="#18181b" text-anchor="middle">集合 S</text>
+<text x="185" y="461.4" font-size="12.5" fill="#18181b" text-anchor="middle">{1, 5}</text>
+<text x="345" y="461.4" font-size="12.5" fill="#18181b" text-anchor="middle">{1, 5, 4}</text>
+<text x="525" y="461.4" font-size="12.5" fill="#18181b" text-anchor="middle">{1, 5, 4, 2}</text>
+<text x="715" y="461.4" font-size="12.5" fill="#18181b" text-anchor="middle">{1, 5, 4, 2, 3}</text>
+<text x="430" y="490" font-size="12.5" fill="#71717a" text-anchor="middle">每轮从未确定的顶点中选 dist 最小者（蓝色）加入 S，再用它更新其余顶点的 dist</text>
+</svg>

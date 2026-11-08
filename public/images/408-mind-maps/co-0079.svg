@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="I/O 接口的结构（教材图）：主机侧连系统总线，设备侧连接口电缆">
+<title>I/O 接口的结构（教材图）：主机侧连系统总线，设备侧连接口电缆</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker><marker id="a3f3f46s" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10 0.8L1.5 5 10 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="798.5" height="378.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">I/O 接口的结构</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="160" y="62" font-size="12" fill="#3f3f46" text-anchor="middle" font-weight="600">主机侧（系统总线）</text>
+<text x="680" y="62" font-size="12" fill="#3f3f46" text-anchor="middle" font-weight="600">设备侧（接口电缆）</text>
+<rect x="150" y="74" width="500" height="280" rx="8" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-dasharray="5 4"/>
+<rect x="180" y="90" width="200" height="40" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="280" y="114.4" font-size="12.5" fill="#78350f" text-anchor="middle">数据缓冲寄存器</text>
+<rect x="180" y="170" width="200" height="40" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="280" y="194.4" font-size="12.5" fill="#78350f" text-anchor="middle">状态 / 控制寄存器</text>
+<rect x="240" y="260" width="220" height="52" rx="4" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="350" y="281.9" font-size="12.5" fill="#7f1d1d" text-anchor="middle"><tspan x="350" dy="0">地址译码和</tspan><tspan x="350" dy="16.9">I/O 逻辑控制</tspan></text>
+<rect x="520" y="90" width="100" height="40" rx="4" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="570" y="106.4" font-size="11" fill="#14532d" text-anchor="middle"><tspan x="570" dy="0">外设界面</tspan><tspan x="570" dy="14.9">控制逻辑</tspan></text>
+<path d="M622 96L680 96" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="686" y="99.5" font-size="10" fill="#3f3f46">数据</text>
+<path d="M622 108L680 108" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="686" y="111.5" font-size="10" fill="#3f3f46">状态</text>
+<path d="M622 120L680 120" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="686" y="123.5" font-size="10" fill="#3f3f46">控制</text>
+<rect x="520" y="170" width="100" height="40" rx="4" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="570" y="186.4" font-size="11" fill="#14532d" text-anchor="middle"><tspan x="570" dy="0">外设界面</tspan><tspan x="570" dy="14.9">控制逻辑</tspan></text>
+<path d="M622 176L680 176" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="686" y="179.5" font-size="10" fill="#3f3f46">数据</text>
+<path d="M622 188L680 188" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="686" y="191.5" font-size="10" fill="#3f3f46">状态</text>
+<path d="M622 200L680 200" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="686" y="203.5" font-size="10" fill="#3f3f46">控制</text>
+<rect x="520" y="280" width="100" height="40" rx="4" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="570" y="296.4" font-size="11" fill="#14532d" text-anchor="middle"><tspan x="570" dy="0">外设界面</tspan><tspan x="570" dy="14.9">控制逻辑</tspan></text>
+<path d="M622 286L680 286" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="686" y="289.5" font-size="10" fill="#3f3f46">数据</text>
+<path d="M622 298L680 298" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="686" y="301.5" font-size="10" fill="#3f3f46">状态</text>
+<path d="M622 310L680 310" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="686" y="313.5" font-size="10" fill="#3f3f46">控制</text>
+<text x="570" y="258.9" font-size="14" fill="#71717a" text-anchor="middle">⋯</text>
+<path d="M60 140L178 110" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<path d="M60 140L178 190" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="54" y="144" font-size="11.5" fill="#3f3f46" text-anchor="end">数据线</text>
+<path d="M60 270L238 276" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="54" y="274" font-size="11.5" fill="#3f3f46" text-anchor="end">地址线</text>
+<path d="M60 310L238 300" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="54" y="314" font-size="11.5" fill="#3f3f46" text-anchor="end">控制线</text>
+<path d="M380 110L518 110" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<path d="M380 190L518 190" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<path d="M300 212L300 258" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<path d="M462 286L518 306" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="400" y="374" font-size="10.5" fill="#71717a" text-anchor="middle">数据线：读写数据、状态字、控制字、中断类型号；地址线：指明 I/O 端口；控制线：读写 I/O、中断请求</text>
+</svg>

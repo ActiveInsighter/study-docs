@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 310" width="560" height="310" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="集线器：再生、放大信号并转发到其他所有端口，共享式设备，星型拓扑">
+<title>集线器：再生、放大信号并转发到其他所有端口，共享式设备，星型拓扑</title>
+<rect x="0.75" y="0.75" width="558.5" height="308.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">集线器（Hub）：星型拓扑</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="210" y="120" width="140" height="50" rx="6" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<text x="280" y="149.9" font-size="14" fill="#fafafa" text-anchor="middle" font-weight="600">集线器</text>
+<path d="M280 145L70 70" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="52" y="56" width="36" height="28" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<path d="M280 145L490 70" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="472" y="56" width="36" height="28" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<path d="M280 145L60 200" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="42" y="186" width="36" height="28" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<path d="M280 145L500 200" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="482" y="186" width="36" height="28" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<path d="M280 145L280 260" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="262" y="246" width="36" height="28" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="280" y="40" font-size="10.5" fill="#3f3f46" text-anchor="middle">对信号进行再生放大转发，对衰减的信号进行放大，转发到除输入端口外的所有端口</text>
+<text x="280" y="296" font-size="11" fill="#71717a" text-anchor="middle">广播 + 不能分割冲突域：连在集线器上的设备共享网络带宽</text>
+</svg>

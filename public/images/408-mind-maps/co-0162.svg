@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 368" width="820" height="368" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="M(MAR)→MDR 的微操作控制信号逻辑">
+<title>M(MAR)→MDR 的微操作控制信号逻辑</title>
+<defs><marker id="ad1493a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#d1493a"/></marker></defs>
+<rect x="0.75" y="0.75" width="818.5" height="366.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">M(MAR) → MDR 的控制信号</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="410" y="72" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">M(MAR)→MDR = FE·T₁ + IND·T₁(ADD + STA + LDA + JMP + BAN) + EX·T₁(ADD + LDA)</text>
+<rect x="250" y="100" width="34" height="42" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="267" y="125.4" font-size="12.5" fill="#18181b" text-anchor="middle" font-weight="600">&amp;</text>
+<rect x="250" y="170" width="34" height="72" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="267" y="210.4" font-size="12.5" fill="#18181b" text-anchor="middle" font-weight="600">≥1</text>
+<rect x="360" y="180" width="34" height="56" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="377" y="212.4" font-size="12.5" fill="#18181b" text-anchor="middle" font-weight="600">&amp;</text>
+<rect x="250" y="260" width="34" height="42" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="267" y="285.4" font-size="12.5" fill="#18181b" text-anchor="middle" font-weight="600">≥1</text>
+<rect x="360" y="260" width="34" height="56" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="377" y="292.4" font-size="12.5" fill="#18181b" text-anchor="middle" font-weight="600">&amp;</text>
+<path d="M120 114L250 114" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="114" y="118" font-size="11.5" fill="#3f3f46" text-anchor="end">FE</text>
+<path d="M120 128L250 128" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="114" y="132" font-size="11.5" fill="#3f3f46" text-anchor="end">T₁</text>
+<path d="M200 182L250 182" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="194" y="185.7" font-size="10.5" fill="#3f3f46" text-anchor="end">ADD</text>
+<path d="M200 194L250 194" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="194" y="197.7" font-size="10.5" fill="#3f3f46" text-anchor="end">STA</text>
+<path d="M200 206L250 206" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="194" y="209.7" font-size="10.5" fill="#3f3f46" text-anchor="end">LDA</text>
+<path d="M200 218L250 218" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="194" y="221.7" font-size="10.5" fill="#3f3f46" text-anchor="end">JMP</text>
+<path d="M200 230L250 230" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="194" y="233.7" font-size="10.5" fill="#3f3f46" text-anchor="end">BAN</text>
+<path d="M120 194L150 194Q150 194 150 194L150 150Q150 150 150 150L340 150Q340 150 340 150L340 194Q340 194 340 194L360 194" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="114" y="198" font-size="11.5" fill="#3f3f46" text-anchor="end">IND</text>
+<path d="M284 206L346 206Q346 206 346 206L346 208Q346 208 346 208L360 208" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M330 230L330 222Q330 222 330 222L360 222" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="326" y="236" font-size="10.5" fill="#3f3f46" text-anchor="end">T₁</text>
+<path d="M200 274L250 274" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="194" y="277.7" font-size="10.5" fill="#3f3f46" text-anchor="end">ADD</text>
+<path d="M200 288L250 288" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="194" y="291.7" font-size="10.5" fill="#3f3f46" text-anchor="end">LDA</text>
+<path d="M284 281L346 281Q346 281 346 281L346 274Q346 274 346 274L360 274" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M120 288L150 288Q150 288 150 288L150 320Q150 320 150 320L350 320Q350 320 350 320L350 288Q350 288 350 288L360 288" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="114" y="292" font-size="11.5" fill="#3f3f46" text-anchor="end">EX</text>
+<path d="M330 330L330 302Q330 302 330 302L360 302" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="326" y="340" font-size="10.5" fill="#3f3f46" text-anchor="end">T₁</text>
+<rect x="560" y="160" width="34" height="56" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="577" y="192.4" font-size="12.5" fill="#18181b" text-anchor="middle" font-weight="600">≥1</text>
+<path d="M284 121L520 121Q520 121 520 121L520 174Q520 174 520 174L560 174" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M394 208L530 208Q530 208 530 208L530 188Q530 188 530 188L560 188" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M394 288L540 288Q540 288 540 288L540 202Q540 202 540 202L560 202" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M594 188L690 188" fill="none" stroke="#d1493a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<text x="696" y="183.8" font-size="12" fill="#d1493a"><tspan x="696" dy="0">M(MAR)→MDR</tspan><tspan x="696" dy="16.8">的控制信号</tspan></text>
+<text x="410" y="354" font-size="11.5" fill="#71717a" text-anchor="middle">依据指令操作码、所处机器周期、节拍信号与状态条件，确定现在该发出哪些微命令</text>
+</svg>

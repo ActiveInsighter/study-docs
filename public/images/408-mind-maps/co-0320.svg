@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="I/O 控制器（I/O 接口）的组成">
+<title>I/O 控制器（I/O 接口）的组成</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker><marker id="a3f3f46s" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10 0.8L1.5 5 10 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="798.5" height="398.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">I/O 控制器的组成</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="30" y="170" width="80" height="60" rx="8" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="70" y="204.9" font-size="14" fill="#3b0764" text-anchor="middle">CPU</text>
+<rect x="170" y="70" width="420" height="220" rx="10" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.3" opacity="0.6"/>
+<rect x="180" y="60" width="80.9" height="23.5" rx="11.8" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.2"/>
+<text x="220.5" y="75.8" font-size="11.5" fill="#1e3a8a" text-anchor="middle" font-weight="500">I/O 控制器</text>
+<rect x="190" y="90" width="130" height="180" rx="6" fill="#ffffff" stroke="#a1a1aa" stroke-width="1.1"/>
+<rect x="200" y="100" width="110" height="30" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="255" y="119" font-size="11.5" fill="#18181b" text-anchor="middle">数据寄存器</text>
+<rect x="200" y="142" width="110" height="36" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="255" y="156.4" font-size="11" fill="#18181b" text-anchor="middle"><tspan x="255" dy="0">控制 / 状态</tspan><tspan x="255" dy="14.9">寄存器</tspan></text>
+<text x="255" y="200" font-size="11" fill="#71717a" text-anchor="middle">⋮（有多个）</text>
+<rect x="350" y="160" width="80" height="70" rx="4" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="390" y="199.2" font-size="12" fill="#7f1d1d" text-anchor="middle">I/O 逻辑</text>
+<rect x="460" y="90" width="110" height="44" rx="4" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="515" y="108.4" font-size="11" fill="#14532d" text-anchor="middle"><tspan x="515" dy="0">控制器与设备</tspan><tspan x="515" dy="14.9">的接口 1</tspan></text>
+<rect x="460" y="210" width="110" height="44" rx="4" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="515" y="228.4" font-size="11" fill="#14532d" text-anchor="middle"><tspan x="515" dy="0">控制器与设备</tspan><tspan x="515" dy="14.9">的接口 i</tspan></text>
+<text x="515" y="176.9" font-size="14" fill="#71717a" text-anchor="middle">⋯</text>
+<path d="M572 100L640 100" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<path d="M572 112L640 112" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<path d="M572 124L640 124" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<path d="M572 220L640 220" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<path d="M572 232L640 232" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<path d="M572 244L640 244" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="646" y="103.7" font-size="10.5" fill="#3f3f46">数据</text>
+<text x="646" y="115.7" font-size="10.5" fill="#3f3f46">状态</text>
+<text x="646" y="127.7" font-size="10.5" fill="#3f3f46">控制</text>
+<text x="646" y="223.7" font-size="10.5" fill="#3f3f46">数据</text>
+<text x="646" y="235.7" font-size="10.5" fill="#3f3f46">状态</text>
+<text x="646" y="247.7" font-size="10.5" fill="#3f3f46">控制</text>
+<path d="M70 168L70 121Q70 115 76 115L198 115" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="80" y="106" font-size="11" fill="#3f3f46">数据总线</text>
+<path d="M112 190L348 190" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="130" y="182" font-size="11" fill="#3f3f46">地址线</text>
+<path d="M112 215L348 215" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="130" y="230" font-size="11" fill="#3f3f46">控制线</text>
+<path d="M312 160L348 175" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<path d="M430 180L458 115" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<path d="M430 210L458 230" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<rect x="30" y="300" width="250" height="54" rx="6" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="155" y="316.5" font-size="10.5" fill="#78350f" text-anchor="middle"><tspan x="155" dy="0">CPU 与控制器的接口：数据线传</tspan><tspan x="155" dy="14.2">数据，地址线指明设备与寄存器，控</tspan><tspan x="155" dy="14.2">制线发命令</tspan></text>
+<rect x="300" y="300" width="230" height="54" rx="6" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="415" y="316.5" font-size="10.5" fill="#7f1d1d" text-anchor="middle"><tspan x="415" dy="0">I/O 逻辑：接收和识别 CPU</tspan><tspan x="415" dy="14.2"> 的命令（如地址译码），并向设备</tspan><tspan x="415" dy="14.2">发出命令</tspan></text>
+<rect x="550" y="300" width="220" height="54" rx="6" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="660" y="323.6" font-size="10.5" fill="#14532d" text-anchor="middle"><tspan x="660" dy="0">控制器与设备的接口：数据、状态、</tspan><tspan x="660" dy="14.2">控制三类信号</tspan></text>
+<text x="400" y="386" font-size="11" fill="#71717a" text-anchor="middle">一个 I/O 控制器可以控制多个设备；状态寄存器反映设备忙 / 闲等状态</text>
+</svg>

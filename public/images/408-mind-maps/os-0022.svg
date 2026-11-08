@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="打开文件的过程：读目录找到 FCB，复制到系统打开文件表，再在进程打开文件表中建条目并返回文件描述符">
+<title>打开文件的过程：读目录找到 FCB，复制到系统打开文件表，再在进程打开文件表中建条目并返回文件描述符</title>
+<defs><marker id="a3b6fd4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3b6fd4"/></marker><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="898.5" height="468.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">open 系统调用的过程</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="20" y="40" width="140" height="400" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.2"/>
+<rect x="160" y="40" width="520" height="400" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.2"/>
+<text x="90" y="460" font-size="11.5" fill="#3b6fd4" text-anchor="middle">用户区</text>
+<text x="420" y="460" font-size="11.5" fill="#3b6fd4" text-anchor="middle">内核区</text>
+<circle cx="80" cy="300" r="18" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="80" y="304.2" font-size="12" fill="#14532d" text-anchor="middle" font-weight="500">fd</text>
+<text x="80" y="340" font-size="10.5" fill="#3b6fd4" text-anchor="middle">文件描述符 / 文件句柄</text>
+<rect x="400" y="60" width="80" height="28" rx="0" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="440" y="78" font-size="11.5" fill="#3b0764" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">FCB_A</text>
+<rect x="400" y="88" width="80" height="28" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="440" y="106" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">FCB_B</text>
+<rect x="400" y="116" width="80" height="28" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="440" y="134" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">FCB_C</text>
+<rect x="400" y="144" width="80" height="28" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="440" y="162" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">FCB_D</text>
+<text x="440" y="186" font-size="11" fill="#d1493a" text-anchor="middle">目录 M 缓存</text>
+<rect x="380" y="278" width="56" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="436" y="278" width="70" height="26" rx="0" fill="#efe9fb" stroke="none" stroke-width="0"/>
+<path d="M380 226V208Q380 200 388 200H568Q576 200 576 208V226Z" fill="#f4f4f5"/>
+<path d="M380 226L576 226" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M380 252L576 252" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M380 278L576 278" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M436 200L436 304" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M506 200L506 304" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="380" y="200" width="196" height="104" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="408" y="216.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="600">索引</text>
+<text x="471" y="216.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="600">目录项</text>
+<text x="541" y="216.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="600">打开计数</text>
+<text x="408" y="242.8" font-size="11" fill="#18181b" text-anchor="middle">0</text>
+<text x="471" y="242.8" font-size="11" fill="#18181b" text-anchor="middle">FCB_F</text>
+<text x="541" y="242.8" font-size="11" fill="#18181b" text-anchor="middle">1</text>
+<text x="408" y="268.9" font-size="11" fill="#18181b" text-anchor="middle">1</text>
+<text x="471" y="268.9" font-size="11" fill="#18181b" text-anchor="middle">FCB_B</text>
+<text x="541" y="268.9" font-size="11" fill="#18181b" text-anchor="middle">2</text>
+<text x="408" y="294.9" font-size="11" fill="#1e3a8a" text-anchor="middle">2</text>
+<text x="471" y="294.9" font-size="11" fill="#3b0764" text-anchor="middle">FCB_A</text>
+<text x="541" y="294.9" font-size="11" fill="#18181b" text-anchor="middle">1</text>
+<text x="480" y="318" font-size="11" fill="#d1493a" text-anchor="middle">系统打开文件表</text>
+<rect x="330" y="392" width="50" height="26" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="480" y="392" width="150" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<path d="M330 366V348Q330 340 338 340H622Q630 340 630 348V366Z" fill="#f4f4f5"/>
+<path d="M330 366L630 366" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M330 392L630 392" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M380 340L380 418" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M450 340L450 418" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M480 340L480 418" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="330" y="340" width="300" height="78" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="355" y="356.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="600">索引</text>
+<text x="415" y="356.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="600">打开方式</text>
+<text x="465" y="356.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="600">…</text>
+<text x="555" y="356.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="600">系统打开文件表索引</text>
+<text x="355" y="382.9" font-size="11" fill="#18181b" text-anchor="middle">0</text>
+<text x="415" y="382.9" font-size="11" fill="#18181b" text-anchor="middle">读 / 写</text>
+<text x="465" y="382.9" font-size="11" fill="#18181b" text-anchor="middle"></text>
+<text x="555" y="382.9" font-size="11" fill="#18181b" text-anchor="middle">0</text>
+<text x="355" y="408.9" font-size="11" fill="#14532d" text-anchor="middle">1</text>
+<text x="415" y="408.9" font-size="11" fill="#18181b" text-anchor="middle">只读</text>
+<text x="465" y="408.9" font-size="11" fill="#18181b" text-anchor="middle"></text>
+<text x="555" y="408.9" font-size="11" fill="#1e3a8a" text-anchor="middle">2</text>
+<text x="480" y="430" font-size="11" fill="#d1493a" text-anchor="middle">进程（用户）打开文件表</text>
+<ellipse cx="800" cy="90" rx="70" ry="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="730" y="90" width="140" height="290" rx="0" fill="#fff" stroke="none" stroke-width="0"/>
+<path d="M730 90V380M870 90V380" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="800" cy="380" rx="70" ry="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="800" y="410" font-size="11.5" fill="#3b6fd4" text-anchor="middle">外存</text>
+<rect x="750" y="150" width="70" height="26" rx="0" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="785" y="166.8" font-size="11" fill="#3b0764" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">FCB_A</text>
+<rect x="750" y="176" width="70" height="26" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="785" y="192.8" font-size="11" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">FCB_B</text>
+<rect x="750" y="202" width="70" height="26" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="785" y="218.8" font-size="11" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">FCB_C</text>
+<rect x="750" y="228" width="70" height="26" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="785" y="244.8" font-size="11" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">FCB_D</text>
+<text x="785" y="270" font-size="11" fill="#3b6fd4" text-anchor="middle">目录 M</text>
+<rect x="750" y="290" width="70" height="30" rx="0" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="785" y="309" font-size="11.5" fill="#3b0764" text-anchor="middle">文件 A</text>
+<rect x="830" y="296" width="30" height="0.1" rx="8" fill="none" stroke="none" stroke-width="1.5"/>
+<path d="M748 163L706 163Q700 163 700 157L700 136Q700 130 694 130L482 130" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="560" y="70" font-size="10.5" fill="#2f8f57"><tspan x="560" dy="0">(1) open(…/M/A, 只读)：</tspan><tspan x="560" dy="13.7">根据路径逐级读入目录</tspan></text>
+<path d="M398 74L366 74Q360 74 360 80L360 272Q360 278 366 278L378 278" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="290" y="110" font-size="10.5" fill="#2f8f57" text-anchor="middle"><tspan x="290" dy="0">(2) 找到目标文件</tspan><tspan x="290" dy="13.7">的 FCB，复制到</tspan><tspan x="290" dy="13.7">系统打开文件表</tspan></text>
+<path d="M578 278L748 305" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M100 300L234 300Q240 300 240 306L240 399Q240 405 246 405L328 405" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="240" y="330" font-size="10.5" fill="#2f8f57" text-anchor="middle"><tspan x="240" dy="0">(3) 在进程打开文件表</tspan><tspan x="240" dy="13.7">中新建条目，并返回</tspan><tspan x="240" dy="13.7">文件描述符</tspan></text>
+<path d="M632 405L654 405Q660 405 660 399L660 336Q660 330 654 330L414 330Q408 330 408 324L408 306" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+</svg>

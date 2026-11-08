@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="磁盘的盘面与柱面：所有盘面上相同位置的磁道组成柱面">
+<title>磁盘的盘面与柱面：所有盘面上相同位置的磁道组成柱面</title>
+<defs><marker id="ad1493a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#d1493a"/></marker><marker id="ad1493as" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10 0.8L1.5 5 10 9.2z" fill="#d1493a"/></marker></defs>
+<rect x="0.75" y="0.75" width="638.5" height="358.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">盘面与柱面</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<ellipse cx="222" cy="90" rx="150" ry="30" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<ellipse cx="222" cy="90" rx="96" ry="19" fill="none" stroke="#2f8f57" stroke-width="2" stroke-dasharray="4 3"/>
+<ellipse cx="222" cy="90" rx="18" ry="6" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="64" y="94.2" font-size="12" fill="#3f3f46" text-anchor="end">0 号盘面</text>
+<rect x="312" y="76" width="18" height="8" rx="1" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<rect x="312" y="96" width="18" height="8" rx="1" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<ellipse cx="222" cy="154" rx="150" ry="30" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<ellipse cx="222" cy="154" rx="96" ry="19" fill="none" stroke="#2f8f57" stroke-width="2" stroke-dasharray="4 3"/>
+<ellipse cx="222" cy="154" rx="18" ry="6" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="64" y="158.2" font-size="12" fill="#3f3f46" text-anchor="end">1 号盘面</text>
+<rect x="312" y="140" width="18" height="8" rx="1" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<rect x="312" y="160" width="18" height="8" rx="1" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<ellipse cx="222" cy="218" rx="150" ry="30" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<ellipse cx="222" cy="218" rx="96" ry="19" fill="none" stroke="#2f8f57" stroke-width="2" stroke-dasharray="4 3"/>
+<ellipse cx="222" cy="218" rx="18" ry="6" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="64" y="222.2" font-size="12" fill="#3f3f46" text-anchor="end">2 号盘面</text>
+<rect x="312" y="204" width="18" height="8" rx="1" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<rect x="312" y="224" width="18" height="8" rx="1" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<ellipse cx="222" cy="282" rx="150" ry="30" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<ellipse cx="222" cy="282" rx="96" ry="19" fill="none" stroke="#2f8f57" stroke-width="2" stroke-dasharray="4 3"/>
+<ellipse cx="222" cy="282" rx="18" ry="6" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="64" y="286.2" font-size="12" fill="#3f3f46" text-anchor="end">3 号盘面</text>
+<rect x="312" y="268" width="18" height="8" rx="1" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<rect x="312" y="288" width="18" height="8" rx="1" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<path d="M321 60L321 300" fill="none" stroke="#3f3f46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M392 60L330 60" fill="none" stroke="#d1493a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)" marker-start="url(#ad1493as)"/>
+<text x="400" y="64" font-size="12" fill="#d1493a">磁头臂整体移动</text>
+<text x="400" y="110" font-size="12" fill="#3f3f46">每个盘面对应一个磁头；</text>
+<text x="400" y="132" font-size="12" fill="#3f3f46">所有磁头连在同一个磁臂上，</text>
+<text x="400" y="154" font-size="12" fill="#3f3f46">因此所有磁头“共进退”</text>
+<text x="400" y="212" font-size="12" fill="#2f8f57" font-weight="600">所有盘面中相对位置相同的</text>
+<text x="400" y="234" font-size="12" fill="#2f8f57" font-weight="600">磁道（绿色虚线）组成柱面</text>
+<text x="310" y="344" font-size="12" fill="#71717a" text-anchor="middle">一个盘片可能有两个盘面；磁盘地址：⟨柱面号, 盘面号, 扇区号⟩</text>
+</svg>

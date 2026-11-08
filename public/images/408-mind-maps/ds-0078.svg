@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 490" width="640" height="490" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="AOE 网：求活动的最早开始时间 e、最迟开始时间 l 与时间余量">
+<title>AOE 网：求活动的最早开始时间 e、最迟开始时间 l 与时间余量</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker><marker id="ad1493a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#d1493a"/></marker></defs>
+<rect x="0.75" y="0.75" width="638.5" height="488.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">求活动 a<tspan baseline-shift="-22%" font-size="72%">i</tspan> 的 e(i)、l(i) 与 d(i) = l(i) − e(i)</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M96.1 164.9L182.2 111.1" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="133.8" y="132.1" font-size="13" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">a₁=3</text>
+<path d="M96.1 185.1L182.2 238.9" fill="none" stroke="#d1493a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<text x="133.8" y="227" font-size="13" fill="#d1493a" text-anchor="middle" font-weight="600" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">a₂=2</text>
+<path d="M219 100L419 100" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="320" y="92.8" font-size="13" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">a₄=3</text>
+<path d="M216.1 110.1L302.2 163.9" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="266.2" y="132.1" font-size="13" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">a₃=2</text>
+<path d="M216.1 239.9L302.2 186.1" fill="none" stroke="#d1493a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<text x="266.2" y="227" font-size="13" fill="#d1493a" text-anchor="middle" font-weight="600" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">a₅=4</text>
+<path d="M218.6 246.1L539.4 179.3" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="382.4" y="228.5" font-size="13" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">a₆=3</text>
+<path d="M339 175L539 175" fill="none" stroke="#d1493a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<text x="440" y="167.9" font-size="13" fill="#d1493a" text-anchor="middle" font-weight="600" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">a₇=2</text>
+<path d="M456.1 110.1L542.2 163.9" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="506.2" y="132.1" font-size="13" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">a₈=1</text>
+<circle cx="80" cy="175" r="19" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="80" y="180.2" font-size="15" fill="#7f1d1d" text-anchor="middle" font-weight="500">v<tspan baseline-shift="-22%" font-size="72%">1</tspan></text>
+<circle cx="200" cy="100" r="19" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="200" y="105.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">v<tspan baseline-shift="-22%" font-size="72%">2</tspan></text>
+<circle cx="200" cy="250" r="19" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="200" y="255.2" font-size="15" fill="#7f1d1d" text-anchor="middle" font-weight="500">v<tspan baseline-shift="-22%" font-size="72%">3</tspan></text>
+<circle cx="320" cy="175" r="19" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="320" y="180.2" font-size="15" fill="#7f1d1d" text-anchor="middle" font-weight="500">v<tspan baseline-shift="-22%" font-size="72%">4</tspan></text>
+<circle cx="440" cy="100" r="19" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="440" y="105.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">v<tspan baseline-shift="-22%" font-size="72%">5</tspan></text>
+<circle cx="560" cy="175" r="19" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="560" y="180.2" font-size="15" fill="#7f1d1d" text-anchor="middle" font-weight="500">v<tspan baseline-shift="-22%" font-size="72%">6</tspan></text>
+<rect x="80" y="290" width="14" height="14" rx="3" fill="#fde7e4" stroke="#d1493a" stroke-width="1.3"/>
+<text x="100" y="301" font-size="13" fill="#3f3f46">d(i) = 0 的活动即关键活动：a₂、a₅、a₇</text>
+<rect x="260" y="356" width="50" height="34" rx="0" fill="#fde7e4" stroke="none" stroke-width="0"/>
+<rect x="410" y="356" width="50" height="34" rx="0" fill="#fde7e4" stroke="none" stroke-width="0"/>
+<rect x="510" y="356" width="50" height="34" rx="0" fill="#fde7e4" stroke="none" stroke-width="0"/>
+<rect x="30" y="390" width="580" height="34" rx="0" fill="#fafafa" stroke="none" stroke-width="0"/>
+<rect x="260" y="390" width="50" height="34" rx="0" fill="#fde7e4" stroke="none" stroke-width="0"/>
+<rect x="410" y="390" width="50" height="34" rx="0" fill="#fde7e4" stroke="none" stroke-width="0"/>
+<rect x="510" y="390" width="50" height="34" rx="0" fill="#fde7e4" stroke="none" stroke-width="0"/>
+<rect x="260" y="424" width="50" height="34" rx="0" fill="#fde7e4" stroke="none" stroke-width="0"/>
+<rect x="410" y="424" width="50" height="34" rx="0" fill="#fde7e4" stroke="none" stroke-width="0"/>
+<rect x="510" y="424" width="50" height="34" rx="0" fill="#fde7e4" stroke="none" stroke-width="0"/>
+<path d="M30 356V330Q30 322 38 322H602Q610 322 610 330V356Z" fill="#27272a"/>
+<path d="M30 356L610 356" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30 390L610 390" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30 424L610 424" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M210 356L210 458" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M260 356L260 458" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M310 356L310 458" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M360 356L360 458" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M410 356L410 458" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M460 356L460 458" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M510 356L510 458" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M560 356L560 458" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="30" y="322" width="580" height="136" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="40" y="343.9" font-size="14" fill="#fafafa" font-weight="600">活动</text>
+<text x="235" y="343.9" font-size="14" fill="#fafafa" text-anchor="middle" font-weight="600">a₁</text>
+<text x="285" y="343.9" font-size="14" fill="#fafafa" text-anchor="middle" font-weight="600">a₂</text>
+<text x="335" y="343.9" font-size="14" fill="#fafafa" text-anchor="middle" font-weight="600">a₃</text>
+<text x="385" y="343.9" font-size="14" fill="#fafafa" text-anchor="middle" font-weight="600">a₄</text>
+<text x="435" y="343.9" font-size="14" fill="#fafafa" text-anchor="middle" font-weight="600">a₅</text>
+<text x="485" y="343.9" font-size="14" fill="#fafafa" text-anchor="middle" font-weight="600">a₆</text>
+<text x="535" y="343.9" font-size="14" fill="#fafafa" text-anchor="middle" font-weight="600">a₇</text>
+<text x="585" y="343.9" font-size="14" fill="#fafafa" text-anchor="middle" font-weight="600">a₈</text>
+<text x="40" y="377.9" font-size="14" fill="#18181b">e(i) = ve(起点)</text>
+<text x="235" y="377.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="285" y="377.9" font-size="14" fill="#7f1d1d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="335" y="377.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<text x="385" y="377.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<text x="435" y="377.9" font-size="14" fill="#7f1d1d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<text x="485" y="377.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<text x="535" y="377.9" font-size="14" fill="#7f1d1d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6</text>
+<text x="585" y="377.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6</text>
+<text x="40" y="411.9" font-size="14" fill="#18181b">l(i) = vl(终点) − 权</text>
+<text x="235" y="411.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="285" y="411.9" font-size="14" fill="#7f1d1d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="335" y="411.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
+<text x="385" y="411.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
+<text x="435" y="411.9" font-size="14" fill="#7f1d1d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<text x="485" y="411.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">5</text>
+<text x="535" y="411.9" font-size="14" fill="#7f1d1d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6</text>
+<text x="585" y="411.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">7</text>
+<text x="40" y="445.9" font-size="14" fill="#18181b">d(i) = l − e</text>
+<text x="235" y="445.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="285" y="445.9" font-size="14" fill="#7f1d1d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="335" y="445.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="385" y="445.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="435" y="445.9" font-size="14" fill="#7f1d1d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="485" y="445.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<text x="535" y="445.9" font-size="14" fill="#7f1d1d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="585" y="445.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="30" y="474" font-size="12.5" fill="#71717a">先求各事件的 ve、vl，再由活动 ⟨v<tspan baseline-shift="-22%" font-size="72%">j</tspan>, v<tspan baseline-shift="-22%" font-size="72%">k</tspan>⟩ 得 e(i) = ve(j)，l(i) = vl(k) − 权值</text>
+</svg>

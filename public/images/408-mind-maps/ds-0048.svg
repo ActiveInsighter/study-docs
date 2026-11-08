@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" width="860" height="380" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="Floyd 的 path 矩阵：递归找到完整路径">
+<title>Floyd 的 path 矩阵：递归找到完整路径</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="858.5" height="378.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">path[][] 矩阵：递归还原完整路径</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M67.2 144.5L250.9 86.1" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="200.7" y="94.9" font-size="12" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">1</text>
+<path d="M62.7 162.7L125.9 225.9" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="87.4" y="206.8" font-size="12" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">10</text>
+<path d="M252 80L160 80" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="205" y="95" font-size="12" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">1</text>
+<path d="M140 98L140 220" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="150.8" y="148.2" font-size="12" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">5</text>
+<path d="M151.4 94L257.4 224.5" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="239.4" y="189.4" font-size="12" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">1</text>
+<path d="M258.6 94L152.6 224.5" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="245.9" y="131" font-size="12" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">7</text>
+<path d="M252 240L160 240" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="205" y="255" font-size="12" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">1</text>
+<circle cx="50" cy="150" r="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="50" y="155.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">v0</text>
+<circle cx="140" cy="80" r="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="140" y="85.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">v1</text>
+<circle cx="270" cy="80" r="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="270" y="85.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">v2</text>
+<circle cx="270" cy="240" r="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="270" y="245.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">v3</text>
+<circle cx="140" cy="240" r="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="140" y="245.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">v4</text>
+<text x="330" y="66" font-size="14" fill="#18181b" font-weight="700">A</text>
+<rect x="404" y="100" width="34" height="26" rx="0" fill="#fdf1d8" stroke="none" stroke-width="0"/>
+<rect x="472" y="100" width="34" height="26" rx="0" fill="#fdf1d8" stroke="none" stroke-width="0"/>
+<rect x="506" y="100" width="34" height="26" rx="0" fill="#fdf1d8" stroke="none" stroke-width="0"/>
+<rect x="506" y="126" width="34" height="26" rx="0" fill="#fdf1d8" stroke="none" stroke-width="0"/>
+<rect x="472" y="152" width="34" height="26" rx="0" fill="#fdf1d8" stroke="none" stroke-width="0"/>
+<rect x="506" y="152" width="34" height="26" rx="0" fill="#fdf1d8" stroke="none" stroke-width="0"/>
+<path d="M330 100V82Q330 74 338 74H532Q540 74 540 82V100Z" fill="#f4f4f5"/>
+<path d="M330 100L540 100" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M330 126L540 126" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M330 152L540 152" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M330 178L540 178" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M330 204L540 204" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M370 74L370 230" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M404 74L404 230" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M438 74L438 230" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M472 74L472 230" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M506 74L506 230" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="330" y="74" width="210" height="156" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="350" y="91.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600"></text>
+<text x="387" y="91.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">v0</text>
+<text x="421" y="91.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">v1</text>
+<text x="455" y="91.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">v2</text>
+<text x="489" y="91.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">v3</text>
+<text x="523" y="91.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">v4</text>
+<text x="350" y="117.2" font-size="12" fill="#18181b" text-anchor="middle">v0</text>
+<text x="387" y="117.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="421" y="117.2" font-size="12" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<text x="455" y="117.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="489" y="117.2" font-size="12" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<text x="523" y="117.2" font-size="12" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
+<text x="350" y="143.2" font-size="12" fill="#18181b" text-anchor="middle">v1</text>
+<text x="387" y="143.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">∞</text>
+<text x="421" y="143.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="455" y="143.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">∞</text>
+<text x="489" y="143.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="523" y="143.2" font-size="12" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<text x="350" y="169.2" font-size="12" fill="#18181b" text-anchor="middle">v2</text>
+<text x="387" y="169.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">∞</text>
+<text x="421" y="169.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="455" y="169.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="489" y="169.2" font-size="12" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<text x="523" y="169.2" font-size="12" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<text x="350" y="195.2" font-size="12" fill="#18181b" text-anchor="middle">v3</text>
+<text x="387" y="195.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">∞</text>
+<text x="421" y="195.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">∞</text>
+<text x="455" y="195.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">∞</text>
+<text x="489" y="195.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="523" y="195.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="350" y="221.2" font-size="12" fill="#18181b" text-anchor="middle">v4</text>
+<text x="387" y="221.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">∞</text>
+<text x="421" y="221.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">∞</text>
+<text x="455" y="221.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">∞</text>
+<text x="489" y="221.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">∞</text>
+<text x="523" y="221.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="600" y="66" font-size="14" fill="#18181b" font-weight="700">path</text>
+<rect x="674" y="100" width="34" height="26" rx="0" fill="#fdf1d8" stroke="none" stroke-width="0"/>
+<rect x="742" y="100" width="34" height="26" rx="0" fill="#fdf1d8" stroke="none" stroke-width="0"/>
+<rect x="776" y="100" width="34" height="26" rx="0" fill="#fdf1d8" stroke="none" stroke-width="0"/>
+<rect x="776" y="126" width="34" height="26" rx="0" fill="#fdf1d8" stroke="none" stroke-width="0"/>
+<rect x="742" y="152" width="34" height="26" rx="0" fill="#fdf1d8" stroke="none" stroke-width="0"/>
+<rect x="776" y="152" width="34" height="26" rx="0" fill="#fdf1d8" stroke="none" stroke-width="0"/>
+<path d="M600 100V82Q600 74 608 74H802Q810 74 810 82V100Z" fill="#f4f4f5"/>
+<path d="M600 100L810 100" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M600 126L810 126" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M600 152L810 152" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M600 178L810 178" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M600 204L810 204" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M640 74L640 230" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M674 74L674 230" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M708 74L708 230" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M742 74L742 230" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M776 74L776 230" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="600" y="74" width="210" height="156" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="620" y="91.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600"></text>
+<text x="657" y="91.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">v0</text>
+<text x="691" y="91.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">v1</text>
+<text x="725" y="91.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">v2</text>
+<text x="759" y="91.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">v3</text>
+<text x="793" y="91.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">v4</text>
+<text x="620" y="117.2" font-size="12" fill="#18181b" text-anchor="middle">v0</text>
+<text x="657" y="117.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="691" y="117.2" font-size="12" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<text x="725" y="117.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="759" y="117.2" font-size="12" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<text x="793" y="117.2" font-size="12" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<text x="620" y="143.2" font-size="12" fill="#18181b" text-anchor="middle">v1</text>
+<text x="657" y="143.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="691" y="143.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="725" y="143.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="759" y="143.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="793" y="143.2" font-size="12" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<text x="620" y="169.2" font-size="12" fill="#18181b" text-anchor="middle">v2</text>
+<text x="657" y="169.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="691" y="169.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="725" y="169.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="759" y="169.2" font-size="12" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="793" y="169.2" font-size="12" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<text x="620" y="195.2" font-size="12" fill="#18181b" text-anchor="middle">v3</text>
+<text x="657" y="195.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="691" y="195.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="725" y="195.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="759" y="195.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="793" y="195.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="620" y="221.2" font-size="12" fill="#18181b" text-anchor="middle">v4</text>
+<text x="657" y="221.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="691" y="221.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="725" y="221.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="759" y="221.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="793" y="221.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">-1</text>
+<text x="330" y="260" font-size="13.5" fill="#3f3f46">v0 → v4 最短路径长度 A[0][4] = 4，path[0][4] = 3：</text>
+<text x="330" y="290" font-size="14" fill="#18181b" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">v0 ⋯ v3 → v4</text>
+<text x="330" y="314" font-size="14" fill="#18181b" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">v0 ⋯ v2 ⋯ v3 → v4      (path[0][3] = 2)</text>
+<text x="330" y="338" font-size="14" fill="#d1493a" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">v0 → v2 → v1 → v3 → v4  (path[2][3] = 1)</text>
+</svg>

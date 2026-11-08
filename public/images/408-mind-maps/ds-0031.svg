@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 390" width="860" height="390" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="B 树：终端结点与叶结点（失败结点）">
+<title>B 树：终端结点与叶结点（失败结点）</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker><marker id="aa1a1aa" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#a1a1aa"/></marker></defs>
+<rect x="0.75" y="0.75" width="858.5" height="388.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">m 阶 B 树（m = 5）</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="408" y="72" width="44" height="38" rx="8" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.2"/>
+<rect x="414" y="76" width="32" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="430" y="95.5" font-size="13" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">22</text>
+<circle cx="413" cy="110" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="447" cy="110" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<rect x="182" y="166" width="76" height="38" rx="8" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.2"/>
+<rect x="188" y="170" width="30" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="203" y="189.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">5</text>
+<rect x="222" y="170" width="30" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="237" y="189.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">11</text>
+<circle cx="187" cy="204" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="220" cy="204" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="253" cy="204" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<rect x="602" y="166" width="76" height="38" rx="8" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.2"/>
+<rect x="608" y="170" width="30" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="623" y="189.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">36</text>
+<rect x="642" y="170" width="30" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="657" y="189.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">45</text>
+<circle cx="607" cy="204" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="640" cy="204" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="673" cy="204" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<path d="M413 110L220 164" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M447 110L640 164" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="36" y="258" width="68" height="38" rx="8" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.2"/>
+<rect x="42" y="262" width="26" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="55" y="281.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="72" y="262" width="26" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="85" y="281.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<circle cx="41" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="70" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="99" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<path d="M187 204L70 256" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M41 299L41 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="34" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<path d="M70 299L70 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="63" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<path d="M99 299L99 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="92" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="151" y="258" width="98" height="38" rx="8" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.2"/>
+<rect x="157" y="262" width="26" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="170" y="281.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6</text>
+<rect x="187" y="262" width="26" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="200" y="281.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8</text>
+<rect x="217" y="262" width="26" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="230" y="281.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">9</text>
+<circle cx="156" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="185" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="215" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="244" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<path d="M220 204L200 256" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M156 299L156 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="149" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<path d="M185 299L185 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="178" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<path d="M215 299L215 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="208" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<path d="M244 299L244 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="237" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="296" y="258" width="68" height="38" rx="8" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.2"/>
+<rect x="302" y="262" width="26" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="315" y="281.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">13</text>
+<rect x="332" y="262" width="26" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="345" y="281.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">15</text>
+<circle cx="301" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="330" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="359" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<path d="M253 204L330 256" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M301 299L301 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="294" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<path d="M330 299L330 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="323" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<path d="M359 299L359 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="352" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="436" y="258" width="68" height="38" rx="8" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.2"/>
+<rect x="442" y="262" width="26" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="455" y="281.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">30</text>
+<rect x="472" y="262" width="26" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="485" y="281.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">35</text>
+<circle cx="441" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="470" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="499" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<path d="M607 204L470 256" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M441 299L441 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="434" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<path d="M470 299L470 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="463" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<path d="M499 299L499 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="492" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="556" y="258" width="68" height="38" rx="8" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.2"/>
+<rect x="562" y="262" width="26" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="575" y="281.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">40</text>
+<rect x="592" y="262" width="26" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="605" y="281.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">42</text>
+<circle cx="561" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="590" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="619" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<path d="M640 204L590 256" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M561 299L561 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="554" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<path d="M590 299L590 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="583" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<path d="M619 299L619 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="612" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="676" y="258" width="128" height="38" rx="8" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.2"/>
+<rect x="682" y="262" width="26" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="695" y="281.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">47</text>
+<rect x="712" y="262" width="26" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="725" y="281.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">48</text>
+<rect x="742" y="262" width="26" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="755" y="281.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">50</text>
+<rect x="772" y="262" width="26" height="30" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="785" y="281.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">56</text>
+<circle cx="681" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="710" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="740" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="770" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<circle cx="799" cy="296" r="3.2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<path d="M673 204L740 256" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M681 299L681 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="674" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<path d="M710 299L710 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="703" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<path d="M740 299L740 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="733" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<path d="M770 299L770 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="763" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<path d="M799 299L799 318" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="792" y="320" width="14" height="16" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="40" y="330" width="14" height="14" rx="3" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.3"/>
+<text x="60" y="341" font-size="13" fill="#3f3f46">终端结点（最底层的非叶结点）</text>
+<rect x="260" y="330" width="14" height="14" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1.3"/>
+<text x="280" y="341" font-size="13" fill="#3f3f46">叶结点 = 失败结点，实际不存在</text>
+<text x="430" y="374" font-size="12.5" fill="#71717a" text-anchor="middle">所有叶结点都在同一层；n 个关键字的 B 树有 n + 1 个叶结点</text>
+</svg>

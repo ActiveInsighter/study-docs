@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 540" width="560" height="540" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="细分 SDN 控制器：北向接口层、全网状态管理层、南向通信层">
+<title>细分 SDN 控制器：北向接口层、全网状态管理层、南向通信层</title>
+<rect x="0.75" y="0.75" width="558.5" height="538.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">细分 SDN 控制器</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<ellipse cx="100" cy="70" rx="50" ry="18" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="100" y="73.8" font-size="11" fill="#1e3a8a" text-anchor="middle" font-weight="500">路由选择</text>
+<ellipse cx="250" cy="70" rx="50" ry="18" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="250" y="73.8" font-size="11" fill="#1e3a8a" text-anchor="middle" font-weight="500">接入控制</text>
+<ellipse cx="380" cy="70" rx="50" ry="18" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="380" y="73.8" font-size="11" fill="#1e3a8a" text-anchor="middle" font-weight="500">负载均衡</text>
+<path d="M30 100L450 100" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 4"/>
+<text x="530" y="104" font-size="11.5" fill="#3b6fd4" text-anchor="end">北向 API</text>
+<rect x="50" y="116" width="380" height="70" rx="4" fill="#3b6fd4" stroke="none" stroke-width="0" opacity="0.9"/>
+<text x="240" y="132" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="600">接口，对于网络控制应用程序的抽象</text>
+<rect x="66" y="146" width="80" height="26" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="106" y="162.5" font-size="10" fill="#18181b" text-anchor="middle">网络图</text>
+<rect x="156" y="146" width="80" height="26" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="196" y="162.5" font-size="10" fill="#18181b" text-anchor="middle">REST 风格的 API</text>
+<rect x="246" y="146" width="80" height="26" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="286" y="162.5" font-size="10" fill="#18181b" text-anchor="middle">…</text>
+<rect x="336" y="146" width="80" height="26" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="376" y="162.5" font-size="10" fill="#18181b" text-anchor="middle">意图</text>
+<rect x="50" y="196" width="380" height="100" rx="4" fill="#3b6fd4" stroke="none" stroke-width="0" opacity="0.9"/>
+<text x="240" y="212" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="600">网络范围的分布式、健壮的状态管理</text>
+<rect x="66" y="226" width="80" height="26" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="106" y="242.5" font-size="10" fill="#18181b" text-anchor="middle">统计</text>
+<rect x="186" y="226" width="80" height="26" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="226" y="242.5" font-size="10" fill="#18181b" text-anchor="middle">…</text>
+<rect x="306" y="226" width="80" height="26" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="346" y="242.5" font-size="10" fill="#18181b" text-anchor="middle">流表</text>
+<rect x="66" y="260" width="80" height="26" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="106" y="276.5" font-size="10" fill="#18181b" text-anchor="middle">链路状态信息</text>
+<rect x="186" y="260" width="80" height="26" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="226" y="276.5" font-size="10" fill="#18181b" text-anchor="middle">主机信息</text>
+<rect x="306" y="260" width="80" height="26" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="346" y="276.5" font-size="10" fill="#18181b" text-anchor="middle">交换机信息</text>
+<rect x="50" y="306" width="380" height="70" rx="4" fill="#3b6fd4" stroke="none" stroke-width="0" opacity="0.9"/>
+<text x="240" y="322" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="600">到 / 来自受控设备的通信</text>
+<rect x="66" y="336" width="80" height="26" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="106" y="352.5" font-size="10" fill="#18181b" text-anchor="middle">OpenFlow</text>
+<rect x="156" y="336" width="80" height="26" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="196" y="352.5" font-size="10" fill="#18181b" text-anchor="middle">…</text>
+<rect x="246" y="336" width="80" height="26" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="286" y="352.5" font-size="10" fill="#18181b" text-anchor="middle">SNMP</text>
+<path d="M436 116q8 0 8 8V238q0 8 8 8q-8 0 -8 8V368q0 8 -8 8" fill="none" stroke="#3b6fd4" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="458" y="250.6" font-size="13" fill="#3b6fd4">SDN 控制器</text>
+<path d="M30 392L450 392" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 4"/>
+<text x="530" y="396" font-size="11.5" fill="#3b6fd4" text-anchor="end">南向 API</text>
+<ellipse cx="240" cy="456" rx="180" ry="50" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<ellipse cx="150" cy="446" rx="12" ry="6" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<ellipse cx="240" cy="436" rx="12" ry="6" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<ellipse cx="330" cy="448" rx="12" ry="6" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<ellipse cx="190" cy="476" rx="12" ry="6" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<ellipse cx="290" cy="478" rx="12" ry="6" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+</svg>

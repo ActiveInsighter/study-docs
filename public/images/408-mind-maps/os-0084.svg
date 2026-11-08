@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 290" width="620" height="290" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="TCB（线程控制块）的内容">
+<title>TCB（线程控制块）的内容</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="618.5" height="288.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">TCB（线程控制块）</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="150" y="56" width="140" height="220" rx="6" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.2"/>
+<text x="220" y="72" font-size="12" fill="#3f3f46" text-anchor="middle">TCB</text>
+<rect x="162" y="84" width="116" height="28" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="220" y="102.2" font-size="12" fill="#18181b" text-anchor="middle">线程标识符</text>
+<path d="M280 98L320 98" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="326" y="102.2" font-size="12" fill="#3f3f46">TID，与 PID 类似</text>
+<rect x="162" y="114" width="116" height="28" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="220" y="132.2" font-size="12" fill="#78350f" text-anchor="middle">程序计数器 PC</text>
+<path d="M280 128L320 128" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="326" y="132.2" font-size="12" fill="#3f3f46">线程目前执行到哪里</text>
+<rect x="162" y="144" width="116" height="28" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="220" y="162.2" font-size="12" fill="#78350f" text-anchor="middle">其他寄存器</text>
+<path d="M280 158L320 158" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="326" y="162.2" font-size="12" fill="#3f3f46">线程运行的中间结果</text>
+<rect x="162" y="174" width="116" height="28" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="220" y="192.2" font-size="12" fill="#78350f" text-anchor="middle">堆栈指针</text>
+<path d="M280 188L320 188" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="326" y="192.2" font-size="12" fill="#3f3f46">堆栈保存函数调用信息、局部变量等</text>
+<rect x="162" y="204" width="116" height="28" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="220" y="222.2" font-size="12" fill="#18181b" text-anchor="middle">线程运行状态</text>
+<path d="M280 218L320 218" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="326" y="222.2" font-size="12" fill="#3f3f46">运行 / 就绪 / 阻塞</text>
+<rect x="162" y="234" width="116" height="28" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="220" y="252.2" font-size="12" fill="#18181b" text-anchor="middle">优先级</text>
+<path d="M280 248L320 248" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="326" y="252.2" font-size="12" fill="#3f3f46">线程调度、资源分配的参考</text>
+<path d="M156 116q-8 0 -8 8V150q0 8 -8 8q8 0 8 8V192q0 8 8 8" fill="none" stroke="#71717a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="134" y="153.8" font-size="13" fill="#71717a" text-anchor="end"><tspan x="134" dy="0">线程切换时</tspan><tspan x="134" dy="17.6">要保存 / 恢复</tspan></text>
+</svg>

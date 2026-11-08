@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" width="700" height="400" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="二路归并树与磁盘 I/O 次数：I/O 次数 = 2 × WPL">
+<title>二路归并树与磁盘 I/O 次数：I/O 次数 = 2 × WPL</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="698.5" height="398.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">归并树：磁盘 I/O 次数 = 2 × WPL</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M100.3 106L123.6 142.3" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M169.7 106L146.4 142.3" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M300.3 106L323.6 142.3" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M369.7 106L346.4 142.3" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M150.6 170.9L217.8 218" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M319.4 170.9L252.2 218" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M132.1 244.6L164.6 283.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M223 244.7L191.3 283.7" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="90" cy="90" r="19" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="90" y="94.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">5</text>
+<circle cx="180" cy="90" r="19" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="180" y="94.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">1</text>
+<circle cx="290" cy="90" r="19" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="290" y="94.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">6</text>
+<circle cx="380" cy="90" r="19" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="380" y="94.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">2</text>
+<circle cx="135" cy="160" r="19" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="135" y="164.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="500">6</text>
+<circle cx="335" cy="160" r="19" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="335" y="164.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="500">8</text>
+<circle cx="235" cy="230" r="19" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="235" y="234.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="500">14</text>
+<circle cx="120" cy="230" r="19" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="120" y="234.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">2</text>
+<circle cx="178" cy="300" r="19" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="178" y="304.9" font-size="14" fill="#7f1d1d" text-anchor="middle" font-weight="500">16</text>
+<text x="120" y="202" font-size="12" fill="#71717a" text-anchor="middle" font-weight="600">R1</text>
+<text x="90" y="62" font-size="12" fill="#71717a" text-anchor="middle" font-weight="600">R2</text>
+<text x="180" y="62" font-size="12" fill="#71717a" text-anchor="middle" font-weight="600">R3</text>
+<text x="290" y="62" font-size="12" fill="#71717a" text-anchor="middle" font-weight="600">R4</text>
+<text x="380" y="62" font-size="12" fill="#71717a" text-anchor="middle" font-weight="600">R5</text>
+<text x="163" y="164" font-size="12" fill="#d1493a">读写各 6 次</text>
+<text x="363" y="164" font-size="12" fill="#d1493a">读写各 8 次</text>
+<text x="263" y="234" font-size="12" fill="#d1493a">读写各 14 次</text>
+<text x="206" y="304" font-size="12" fill="#d1493a">读写各 16 次</text>
+<rect x="470" y="120" width="200" height="56" rx="10" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="570" y="143.8" font-size="13" fill="#3b0764" text-anchor="middle"><tspan x="570" dy="0">想让 I/O 次数最少</tspan><tspan x="570" dy="17.6">→ WPL 最小 → 哈夫曼树</tspan></text>
+<text x="350" y="354" font-size="14" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">WPL = 2×1 + (5+1+6+2)×3 = 44 = 读盘次数 = 写盘次数</text>
+<text x="350" y="380" font-size="13.5" fill="#d1493a" text-anchor="middle" font-weight="600">结论：归并过程中的磁盘 I/O 次数 = 归并树的 WPL × 2</text>
+</svg>

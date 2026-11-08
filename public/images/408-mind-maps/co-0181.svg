@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" width="560" height="380" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="磁盘的概念：磁道、扇区、磁道间隙、扇区间隙">
+<title>磁盘的概念：磁道、扇区、磁道间隙、扇区间隙</title>
+<rect x="0.75" y="0.75" width="558.5" height="378.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">磁道 · 扇区 · 间隙</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<circle cx="200" cy="205" r="150" fill="#f4f4f5" stroke="#52525b" stroke-width="1.2"/>
+<circle cx="200" cy="205" r="122" fill="#ffffff" stroke="#52525b" stroke-width="1.2"/>
+<circle cx="200" cy="205" r="94" fill="#f4f4f5" stroke="#52525b" stroke-width="1.2"/>
+<circle cx="200" cy="205" r="66" fill="#ffffff" stroke="#52525b" stroke-width="1.2"/>
+<circle cx="200" cy="205" r="40" fill="#ffffff" stroke="#52525b" stroke-width="1.4"/>
+<path d="M240 205L350 205" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M228.3 233.3L306.1 311.1" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M200 245L200 355" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M171.7 233.3L93.9 311.1" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M160 205L50 205" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M171.7 176.7L93.9 98.9" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M200 165L200 55" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M228.3 176.7L306.1 98.9" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M208.2 69.2A136 136 0 0 1 290.2 103.2" fill="none" stroke="#2f8f57" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M400 80L249.3 78.2" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="408" y="84.4" font-size="12.5" fill="#2f8f57" font-weight="600">扇区（磁盘块）</text>
+<path d="M400 130L294.8 153.2" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="408" y="134.4" font-size="12.5" fill="#18181b" font-weight="600">磁道</text>
+<path d="M400 180L336 205" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="408" y="184.4" font-size="12.5" fill="#18181b" font-weight="600">扇区间隙</text>
+<path d="M400 230L270.2 243.4" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="408" y="234.4" font-size="12.5" fill="#18181b" font-weight="600">磁道间隙</text>
+<text x="408" y="290" font-size="12" fill="#71717a"><tspan x="408" dy="0">每条磁道划分为若干扇区；</tspan><tspan x="408" dy="18">各扇区存储的数据量相同</tspan></text>
+</svg>

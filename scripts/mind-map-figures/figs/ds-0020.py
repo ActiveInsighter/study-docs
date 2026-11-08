@@ -1,0 +1,22 @@
+LABEL = '森林与二叉树的相互转换'
+F = Fig(820, 520, '森林 ⇄ 二叉树')
+def tr(x, y, t, **k):
+    return F.tree(x, y, t, unit=42, levelh=54, r=16, size=13, **k)
+B = {k: 'blue' for k in 'ABCD'}; G = {k: 'green' for k in 'GHI'}
+F.text(30, 82, '① 森林（三棵树）', 13, 'start', MUTED)
+tr(30, 116, ('A', ['B', 'C', 'D']), tones=B)
+tr(190, 116, ('E', ['F']))
+tr(268, 116, ('G', ['H', 'I']), tones=G)
+F.line(190, 196, 190, 236, LINE, 1.5, arrow='end')
+F.text(204, 222, '每棵树：左孩子、右兄弟', 12.5, 'start', MUTED)
+F.text(30, 262, '② 每棵树各自转成二叉树', 13, 'start', MUTED)
+tr(10, 296, ('A', [('B', [None, ('C', [None, 'D'])]), None]), tones=B)
+tr(190, 296, ('E', ['F', None]))
+tr(290, 296, ('G', [('H', [None, 'I']), None]), tones=G)
+F.line(110, 296, 221, 296, ACCENT['red'], 1.5, '5 4', gap=17, gap2=18)
+F.line(232, 296, 353, 296, ACCENT['red'], 1.5, '5 4', gap=17, gap2=18)
+F.text(220, 480, '③ 把后一棵树的根作为前一棵树根的右孩子（虚线）', 12.5, 'middle', ACCENT['red'])
+F.line(420, 300, 460, 260, LINE, 1.6, arrow='end')
+F.text(620, 82, '④ 对应的二叉树', 13, color=MUTED)
+tr(470, 116, ('A', [('B', [None, ('C', [None, 'D'])]), ('E', ['F', ('G', [('H', [None, 'I']), None])])]), tones={**B, **G})
+F.text(630, 480, '逆过程：沿根的右链断开，各自还原成树', 12.5, color=INK2)

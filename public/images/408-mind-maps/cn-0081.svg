@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="非导向性传输介质：无线电波、微波、红外线与激光">
+<title>非导向性传输介质：无线电波、微波、红外线与激光</title>
+<rect x="0.75" y="0.75" width="758.5" height="298.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">非导向性传输介质</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="60" y="146.1" font-size="13" fill="#d1493a" text-anchor="middle" font-weight="700"><tspan x="60" dy="0">非导向性</tspan><tspan x="60" dy="16.9">传输介质</tspan></text>
+<path d="M110 150L140 76" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="68" font-size="13" fill="#18181b" font-weight="700">无线电波</text>
+<rect x="150" y="76" width="130" height="24" rx="3" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="215" y="91.7" font-size="10.5" fill="#7f1d1d" text-anchor="middle">信号向所有方向传播</text>
+<text x="300" y="91.8" font-size="11" fill="#3f3f46">较强穿透能力，可传远距离，广泛用于通信领域（如手机通信）</text>
+<path d="M110 150L140 126" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="118" font-size="13" fill="#18181b" font-weight="700">微波</text>
+<rect x="150" y="126" width="130" height="24" rx="3" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="215" y="141.7" font-size="10.5" fill="#1e3a8a" text-anchor="middle">信号固定方向传播</text>
+<text x="300" y="141.8" font-size="11" fill="#3f3f46">通信频率高、频段范围宽，因此数据率很高</text>
+<path d="M110 150L140 252" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="244" font-size="13" fill="#18181b" font-weight="700">红外线、激光</text>
+<rect x="150" y="252" width="130" height="24" rx="3" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="215" y="267.7" font-size="10.5" fill="#1e3a8a" text-anchor="middle">信号固定方向传播</text>
+<text x="300" y="267.9" font-size="11" fill="#3f3f46">要把传输的信号转换为各自的信号格式，即红外光信号和激光信号，再在空间中传播</text>
+<rect x="300" y="206" width="450" height="24" rx="0" fill="#fafafa" stroke="none" stroke-width="0"/>
+<path d="M300 182V166Q300 158 308 158H742Q750 158 750 166V182Z" fill="#f4f4f5"/>
+<path d="M300 182L750 182" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M300 206L750 206" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M410 158L410 230" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M540 158L540 230" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="300" y="158" width="450" height="72" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="355" y="173.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-weight="600"></text>
+<text x="475" y="173.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-weight="600">优点</text>
+<text x="645" y="173.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-weight="600">缺点</text>
+<text x="355" y="197.7" font-size="10.5" fill="#18181b" text-anchor="middle">地面微波接力</text>
+<text x="475" y="197.7" font-size="10.5" fill="#18181b" text-anchor="middle">容量大、距离远</text>
+<text x="645" y="197.7" font-size="10.5" fill="#18181b" text-anchor="middle">受恶劣天气影响</text>
+<text x="355" y="221.7" font-size="10.5" fill="#18181b" text-anchor="middle">卫星通信</text>
+<text x="475" y="221.7" font-size="10.5" fill="#18181b" text-anchor="middle">覆盖广、容量大</text>
+<text x="645" y="221.7" font-size="10.5" fill="#18181b" text-anchor="middle">传播时延长（250~270 ms）、成本高</text>
+<text x="80" y="290" font-size="11" fill="#71717a">微波不需要转格式，红外 / 激光需要</text>
+</svg>

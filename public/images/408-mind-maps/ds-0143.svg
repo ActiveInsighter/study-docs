@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="并查集的应用：判断图的连通分量">
+<title>并查集的应用：判断图的连通分量</title>
+<rect x="0.75" y="0.75" width="858.5" height="418.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">并查集的应用：判断图的连通分量</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M75 80L165 80" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="120" y="72.8" font-size="13" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">1</text>
+<path d="M60 95L60 165" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="48.3" y="134.6" font-size="13" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">3</text>
+<path d="M71.5 170.4L168.5 89.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="127.5" y="143.5" font-size="13" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">4</text>
+<path d="M145 180L215 180" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="180" y="172.9" font-size="13" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">2</text>
+<circle cx="60" cy="80" r="15" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="60" y="84.5" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">a</text>
+<circle cx="180" cy="80" r="15" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="180" y="84.5" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">c</text>
+<circle cx="60" cy="180" r="15" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="60" y="184.6" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">b</text>
+<circle cx="130" cy="180" r="15" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="130" y="184.6" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">d</text>
+<circle cx="230" cy="180" r="15" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="230" y="184.6" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">e</text>
+<text x="30" y="236" font-size="12.5" fill="#71717a">用邻接矩阵表示无向图的边：</text>
+<path d="M40 274V256Q40 248 48 248H218Q226 248 226 256V274Z" fill="#f4f4f5"/>
+<path d="M40 274L226 274" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 300L226 300" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 326L226 326" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 352L226 352" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 378L226 378" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M76 248L76 404" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M106 248L106 404" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M136 248L136 404" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M166 248L166 404" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M196 248L196 404" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="40" y="248" width="186" height="156" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="58" y="265.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600"></text>
+<text x="91" y="265.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">a</text>
+<text x="121" y="265.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">b</text>
+<text x="151" y="265.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">c</text>
+<text x="181" y="265.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">d</text>
+<text x="211" y="265.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">e</text>
+<text x="58" y="291.2" font-size="12" fill="#18181b" text-anchor="middle">a</text>
+<text x="91" y="291.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="121" y="291.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<text x="151" y="291.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="181" y="291.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="211" y="291.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="58" y="317.2" font-size="12" fill="#18181b" text-anchor="middle">b</text>
+<text x="91" y="317.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<text x="121" y="317.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="151" y="317.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
+<text x="181" y="317.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="211" y="317.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="58" y="343.2" font-size="12" fill="#18181b" text-anchor="middle">c</text>
+<text x="91" y="343.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="121" y="343.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
+<text x="151" y="343.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="181" y="343.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="211" y="343.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="58" y="369.2" font-size="12" fill="#18181b" text-anchor="middle">d</text>
+<text x="91" y="369.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="121" y="369.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="151" y="369.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="181" y="369.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="211" y="369.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<text x="58" y="395.2" font-size="12" fill="#18181b" text-anchor="middle">e</text>
+<text x="91" y="395.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="121" y="395.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="151" y="395.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="181" y="395.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<text x="211" y="395.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="300" y="80" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="300" y="80" font-size="12" fill="#8b8b94" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">// 用并查集判断图有几个连通分量（邻接矩阵）</text>
+<text x="300" y="97.4" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">int ComponentCount(int g[5][5]) {</text>
+<text x="300" y="114.8" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">  int S[5];                       </text>
+<text x="544.8" y="114.8" font-size="12" fill="#8b8b94" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">// 定义、初始化并查集</text>
+<text x="300" y="132.2" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">  for (int i = 0; i &lt; 5; i++) S[i] = -1;</text>
+<text x="300" y="149.6" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">  for (int i = 0; i &lt; 5; i++)     </text>
+<text x="544.8" y="149.6" font-size="12" fill="#8b8b94" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">// 遍历各条边（上三角）</text>
+<text x="300" y="167" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">    for (int j = i + 1; j &lt; 5; j++)</text>
+<text x="300" y="184.4" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">      if (g[i][j] &gt; 0) {          </text>
+<text x="544.8" y="184.4" font-size="12" fill="#8b8b94" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">// 结点 i、j 之间有边</text>
+<text x="300" y="201.8" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">        int iRoot = Find(S, i);</text>
+<text x="300" y="219.2" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">        int jRoot = Find(S, j);</text>
+<text x="300" y="236.6" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">        if (iRoot != jRoot)       </text>
+<text x="544.8" y="236.6" font-size="12" fill="#8b8b94" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">// 不在同一集合则合并</text>
+<text x="300" y="254" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">          Union(S, iRoot, jRoot);</text>
+<text x="300" y="271.4" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">      }</text>
+<text x="300" y="288.8" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">  int count = 0;                  </text>
+<text x="544.8" y="288.8" font-size="12" fill="#8b8b94" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">// 统计有几个连通分量</text>
+<text x="300" y="306.2" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">  for (int i = 0; i &lt; 5; i++)</text>
+<text x="300" y="323.6" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">    if (S[i] &lt; 0) count++;</text>
+<text x="300" y="341" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">  return count;</text>
+<text x="300" y="358.4" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">}</text>
+</svg>

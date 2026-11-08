@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 180" width="560" height="180" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="单级目录结构：所有文件的 FCB 放在一个目录中">
+<title>单级目录结构：所有文件的 FCB 放在一个目录中</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="558.5" height="178.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">单级目录结构</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="30" y="60" width="100" height="36" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="80" y="82.5" font-size="13" fill="#1e3a8a" text-anchor="middle">FCB₁</text>
+<ellipse cx="80" cy="140" rx="36" ry="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="80" y="144.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="500">文件₁</text>
+<path d="M80 96L80 120" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="130" y="60" width="100" height="36" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="180" y="82.5" font-size="13" fill="#1e3a8a" text-anchor="middle">FCB₂</text>
+<ellipse cx="180" cy="140" rx="36" ry="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="180" y="144.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="500">文件₂</text>
+<path d="M180 96L180 120" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="230" y="60" width="100" height="36" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="280" y="82.5" font-size="13" fill="#1e3a8a" text-anchor="middle">FCB₃</text>
+<ellipse cx="280" cy="140" rx="36" ry="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="280" y="144.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="500">文件₃</text>
+<path d="M280 96L280 120" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="330" y="60" width="100" height="36" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="380" y="82.5" font-size="13" fill="#18181b" text-anchor="middle">…</text>
+<ellipse cx="380" cy="140" rx="36" ry="18" fill="none" stroke="none" stroke-width="1.5"/>
+<text x="380" y="144.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="500">…</text>
+<rect x="430" y="60" width="100" height="36" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="480" y="82.5" font-size="13" fill="#1e3a8a" text-anchor="middle">FCBₙ</text>
+<ellipse cx="480" cy="140" rx="36" ry="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="480" y="144.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="500">文件ₙ</text>
+<path d="M480 96L480 120" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+</svg>

@@ -1,0 +1,16 @@
+LABEL = 'I/O 接口的结构（教材图）：主机侧连系统总线，设备侧连接口电缆'
+F = Fig(800, 380, 'I/O 接口的结构')
+F.text(160, 62, '主机侧（系统总线）', 12, color=INK2, weight=600); F.text(680, 62, '设备侧（接口电缆）', 12, color=INK2, weight=600)
+F.rect(150, 74, 500, 280, 'none', INK2, 1.2, 8, dash='5 4')
+F.box(180, 90, 200, 40, '数据缓冲寄存器', 'amber', 12.5, 4); F.box(180, 170, 200, 40, '状态 / 控制寄存器', 'amber', 12.5, 4)
+F.box(240, 260, 220, 52, '地址译码和\nI/O 逻辑控制', 'red', 12.5, 4)
+for i, y in enumerate((96, 176, 286)):
+    F.box(520, y - 6, 100, 40, '外设界面\n控制逻辑', 'green', 11, 4)
+    for k, t in enumerate(('数据', '状态', '控制')): F.line(622, y + k * 12, 680, y + k * 12, INK2, 1.1, arrow='both'); F.text(686, y + k * 12, t, 10, 'start', INK2, valign='middle')
+F.text(570, 254, '⋯', 14, color=MUTED, valign='middle')
+F.line(60, 140, 178, 110, INK2, 1.4, arrow='both'); F.line(60, 140, 178, 190, INK2, 1.4, arrow='both'); F.text(54, 140, '数据线', 11.5, 'end', INK2, valign='middle')
+F.line(60, 270, 238, 276, INK2, 1.4, arrow='end'); F.text(54, 270, '地址线', 11.5, 'end', INK2, valign='middle')
+F.line(60, 310, 238, 300, INK2, 1.4, arrow='both'); F.text(54, 310, '控制线', 11.5, 'end', INK2, valign='middle')
+F.line(380, 110, 518, 110, INK2, 1.2, arrow='both'); F.line(380, 190, 518, 190, INK2, 1.2, arrow='both'); F.line(300, 212, 300, 258, INK2, 1.2, arrow='both')
+F.line(462, 286, 518, 306, INK2, 1.2, arrow='end')
+F.text(400, 374, '数据线：读写数据、状态字、控制字、中断类型号；地址线：指明 I/O 端口；控制线：读写 I/O、中断请求', 10.5, color=MUTED)

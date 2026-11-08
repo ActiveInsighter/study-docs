@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 460" width="840" height="460" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="常用编码：非归零、归零、反向不归零、曼彻斯特、差分曼彻斯特">
+<title>常用编码：非归零、归零、反向不归零、曼彻斯特、差分曼彻斯特</title>
+<rect x="0.75" y="0.75" width="838.5" height="458.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">数字数据 → 数字信号的编码</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="180" y="78.5" font-size="13" fill="#18181b" text-anchor="end" font-weight="700">二进制数据</text>
+<text x="232" y="78.9" font-size="14" fill="#18181b" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="296" y="78.9" font-size="14" fill="#18181b" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="360" y="78.9" font-size="14" fill="#18181b" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="424" y="78.9" font-size="14" fill="#18181b" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="488" y="78.9" font-size="14" fill="#18181b" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="552" y="78.9" font-size="14" fill="#18181b" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="616" y="78.9" font-size="14" fill="#18181b" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="680" y="78.9" font-size="14" fill="#18181b" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<path d="M200 60L200 420" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<path d="M264 60L264 420" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<path d="M328 60L328 420" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<path d="M392 60L392 420" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<path d="M456 60L456 420" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<path d="M520 60L520 420" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<path d="M584 60L584 420" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<path d="M648 60L648 420" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<path d="M712 60L712 420" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<text x="180" y="124.4" font-size="12.5" fill="#18181b" text-anchor="end" font-weight="600">非归零编码</text>
+<path d="M200 106H232.0H264.0V130H296.0H328.0H360.0H392.0V106H424.0H456.0H488.0H520.0V130H552.0H584.0V106H616.0H648.0V130H680.0H712.0" fill="none" stroke="#3b6fd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="456" y="146" font-size="10.5" fill="#71717a" text-anchor="middle">1 是高电平，0 是低电平</text>
+<text x="180" y="188.4" font-size="12.5" fill="#18181b" text-anchor="end" font-weight="600">归零编码</text>
+<path d="M200 170H232.0V194H264.0H296.0H328.0H360.0H392.0V170H424.0V194H456.0V170H488.0V194H520.0H552.0H584.0V170H616.0V194H648.0H680.0H712.0" fill="none" stroke="#3b6fd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="456" y="210" font-size="10.5" fill="#71717a" text-anchor="middle">信号电平在一个码元之内都要恢复到 0</text>
+<text x="180" y="252.4" font-size="12.5" fill="#18181b" text-anchor="end" font-weight="600">反向不归零编码</text>
+<path d="M200 258H232.0H264.0V234H296.0H328.0V258H360.0H392.0H424.0H456.0H488.0H520.0V234H552.0H584.0H616.0H648.0V258H680.0H712.0" fill="none" stroke="#3b6fd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="456" y="274" font-size="10.5" fill="#71717a" text-anchor="middle">电平翻转表示 0，不变表示 1</text>
+<text x="180" y="316.4" font-size="12.5" fill="#18181b" text-anchor="end" font-weight="600">曼彻斯特编码</text>
+<path d="M200 298H232.0V322H264.0H296.0V298H328.0V322H360.0V298H392.0H424.0V322H456.0V298H488.0V322H520.0H552.0V298H584.0H616.0V322H648.0H680.0V298H712.0" fill="none" stroke="#3b6fd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="456" y="338" font-size="10.5" fill="#71717a" text-anchor="middle">1 先高后低，0 先低后高</text>
+<text x="180" y="380.4" font-size="12.5" fill="#18181b" text-anchor="end" font-weight="600">差分曼彻斯特编码</text>
+<path d="M200 362H232.0V386H264.0V362H296.0V386H328.0V362H360.0V386H392.0H424.0V362H456.0H488.0V386H520.0V362H552.0V386H584.0H616.0V362H648.0V386H680.0V362H712.0" fill="none" stroke="#3b6fd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="456" y="402" font-size="10.5" fill="#71717a" text-anchor="middle">1 码元开始处不变，0 要变；中间总有跳变</text>
+<rect x="740" y="112" width="80" height="44" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="780" y="130.6" font-size="10.5" fill="#78350f" text-anchor="middle"><tspan x="780" dy="0">无自同步</tspan><tspan x="780" dy="14.2">能力</tspan></text>
+<rect x="740" y="330" width="80" height="70" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="780" y="349.1" font-size="9.5" fill="#78350f" text-anchor="middle"><tspan x="780" dy="0">可以自同步；</tspan><tspan x="780" dy="12.8">数据传输率</tspan><tspan x="780" dy="12.8">只有调制</tspan><tspan x="780" dy="12.8">速率的 1/2</tspan></text>
+</svg>

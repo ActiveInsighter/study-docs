@@ -57,9 +57,19 @@ layout: mind-map
 - 定长操作码：
   - 操作码有n bit，则一共有2^n个指令
 - 扩展操作码：
-  - <img src="/images/408-mind-maps/co-0318.png" alt="扩展操作码：" width="188" height="220">
+  - <img src="/images/408-mind-maps/co-0318.svg" alt="扩展操作码：" width="300" height="270">
 
-    - 更灵活的：动态的扩展操作码 <img src="/images/408-mind-maps/co-0124.png" alt="更灵活的：动态的扩展操作码" width="240" height="73">
+    - 更灵活的：动态的扩展操作码
+      - 动态扩展操作码：设指令字长固定为 16 位，设计一套指令系统满足
+
+        |指令类型|条数|格式（OP 部分）|
+        |---|---|---|
+        |三地址|15|0000 ~ 1110 · A₁ · A₂ · A₃|
+        |二地址|12|1111 · 0000 ~ 1011 · A₁ · A₂|
+        |一地址|62|1111 · 1100 ~ 1110 · 0000 ~ 1111（共 48 条）+ 1111 · 1111 · 0000 ~ 1101（共 14 条）· A₁|
+        |零地址|32|1111 · 1111 · 1110 ~ 1111 · 0000 ~ 1111|
+
+        - 每类指令都要留出足够的“扩展窗口”给下一类：剩余编码数 = 上一类未用的编码 × 2^(新增位数)
 
 - 指令系统是软硬件的界面
   - 软件依靠指令和硬件进行交互
@@ -89,19 +99,19 @@ layout: mind-map
   - 指令格式：
     - &lt;OP，寻址特征，ADD&gt;
   - 隐含寻址
-    - <img src="/images/408-mind-maps/co-0235.png" alt="隐含寻址" width="240" height="122">
+    - <img src="/images/408-mind-maps/co-0235.svg" alt="隐含寻址" width="300" height="135">
 
       - 即两个操作数：一个直接寻址，一个在ACC
       - 给出一个操作数A的地址，与ACC进行运算
     - 批注：EA = A + ACC
   - 普通寻址
     - 立即数寻址
-      - <img src="/images/408-mind-maps/co-0252.png" alt="立即数寻址" width="240" height="143">
+      - <img src="/images/408-mind-maps/co-0252.svg" alt="立即数寻址" width="300" height="143">
 
         - 直接给出操作的立即数的数字
       - 批注：无EA，#A
     - 直接寻址
-      - <img src="/images/408-mind-maps/co-0226.png" alt="直接寻址" width="240" height="94">
+      - <img src="/images/408-mind-maps/co-0226.svg" alt="直接寻址" width="300" height="123">
 
         - 直接存有操作数的地址，EA = A
         - 优缺点
@@ -109,7 +119,7 @@ layout: mind-map
           - 缺点：寻址的区间被A的地址所约束
       - 批注：EA = A
     - 间接寻址
-      - <img src="/images/408-mind-maps/co-0024.png" alt="间接寻址" width="240" height="106">
+      - <img src="/images/408-mind-maps/co-0024.svg" alt="间接寻址" width="300" height="118">
 
         - 可能存在多次间接寻址
           - 多次间接寻址需要设置一个bit位来指明是否是最后一次寻址
@@ -121,7 +131,7 @@ layout: mind-map
       - 批注：EA = (A)
   - 寄存器寻址
     - 寄存器寻址
-      - <img src="/images/408-mind-maps/co-0084.png" alt="寄存器寻址" width="171" height="220">
+      - <img src="/images/408-mind-maps/co-0084.svg" alt="寄存器寻址" width="300" height="215">
 
         - 数据码部分的是寄存器编号，寄存器中存有操作数
         - 优缺点
@@ -130,13 +140,13 @@ layout: mind-map
       - 批注：EA = Ri
     - 寄存器间接寻址
 
-      - <img src="/images/408-mind-maps/co-0078.png" alt="寄存器间接寻址" width="240" height="206">
+      - <img src="/images/408-mind-maps/co-0078.svg" alt="寄存器间接寻址" width="300" height="177">
 
         - 数据码部分是指明的寄存器编号，寄存器中存有操作数的地址
       - 批注：EA = (Ri）
   - 偏移寻址
     - 相对寻址
-      - <img src="/images/408-mind-maps/co-0192.png" alt="相对寻址" width="240" height="129">
+      - <img src="/images/408-mind-maps/co-0192.svg" alt="相对寻址" width="300" height="145">
 
         - A是一个补码偏移量
         - EA = (PC) + A
@@ -147,7 +157,7 @@ layout: mind-map
           - 程序浮动：一段代码在程序内部跳转
       - 批注：EA = (PC) + A
     - 基址寻址
-      - <img src="/images/408-mind-maps/co-0200.png" alt="基址寻址" width="240" height="85">
+      - <img src="/images/408-mind-maps/co-0200.svg" alt="基址寻址" width="300" height="112">
 
         - EA = (BR) + A
           - 其中可以是BR，也可以是Ri
@@ -155,7 +165,7 @@ layout: mind-map
           - 编制浮动程序：一个程序在内存中浮动
       - 批注：EA = (BR) + A
     - 变址寻址
-      - <img src="/images/408-mind-maps/co-0050.png" alt="变址寻址" width="240" height="153">
+      - <img src="/images/408-mind-maps/co-0050.svg" alt="变址寻址" width="300" height="150">
 
         - IX用户可以编程设置
         - 面向用户的，可以方便的设置A为某个数组的首部地址，然后执行EA = A + (IX)
@@ -269,7 +279,31 @@ layout: mind-map
     }
     ```
 
-    - <img src="/images/408-mind-maps/co-0294.png" alt="例题举例：" width="198" height="220">
+    - 例题：递归函数 f1 的汇编（x86，Intel 格式）
+
+      ```text
+      int f1(int n) {
+       1  00401000  55              push ebp
+          ...
+          if (n > 1)
+      11  00401018  83 7D 08 01     cmp dword ptr [ebp+8], 1   # 比较 n 和 1
+      12  0040101C  7E 17           jle f1+35h (00401035)      # n <= 1 则跳转
+          return n * f1(n - 1);
+      13  0040101E  8B 45 08        mov eax, dword ptr [ebp+8] # n 放入 eax
+      14  00401021  83 E8 01        sub eax, 1                 # eax = n - 1
+      15  00401024  50              push eax                   # 参数入栈
+      16  00401025  E8 D6 FF FF FF  call f1 (00401000)         # 递归调用 f1
+          ...
+      19  00401030  0F AF C1        imul eax, ecx              # eax = eax * ecx
+      20  00401033  EB 05           jmp f1+3Ah (0040103a)      # 无条件跳出
+          else return 1;
+      21  00401035  B8 01 00 00 00  mov eax, 1
+          ...
+      26  00401040  3B EC           cmp ebp, esp
+          ...
+      30  0040104A  C3              ret                        # 返回
+      }
+      ```
 
       - 考题：
       - 1\. 考C语言：递归次数
@@ -279,7 +313,13 @@ layout: mind-map
       - 5\. 带标记的乘法器OF判断；异常处理：溢出陷入指令。
         - 并且告诉了R\[eax\] = R\[eax\] \* R\[ecx\]
 - AT&amp;T和Intel的汇编格式
-  - 汇编语法格式区分 <img src="/images/408-mind-maps/co-0132.png" alt="汇编语法格式区分" width="240" height="54">
+  - 汇编语法格式区分
+    - AT&T 与 Intel 汇编格式的区分
+
+      |类别|寄存器名|立即数|源、目的操作数|操作数字长|
+      |---|---|---|---|---|
+      |Linux 的 AT&T 格式|加前缀 %：`pushl %eax`|加前缀 $：`addl $1, %eax`|源在前、目的在后：`addl $1, %eax`（eax = eax + 1）；`subw %ax, %bx`（bx = bx − ax）|指令末尾加字母：b（byte，8 位）、w（word，16 位）、l（long，32 位）；如 `movb`、`movw`、`movl`|
+      |Windows 的 Intel 格式|不加前缀：`push eax`|不加前缀：`add eax, 1`|目的在前、源在后：`add eax, 1`；`sub bx, ax`|在操作数前加说明：`byte ptr`、`word ptr`、`dword ptr`；如 `mov al, byte ptr 12`|
 
   - 批注：22
 - 考频：低
@@ -309,5 +349,4 @@ layout: mind-map
     |控制方式|绝大多数是微程序控制|绝大多数是组合逻辑控制|
     |指令流水线|可以通过一定方式实现|必须实现|
 
-- <img src="/images/408-mind-maps/co-0221.png" alt="END" width="48" height="48">
 ````

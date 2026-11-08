@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" width="700" height="300" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="802.1Q 帧：在以太网 MAC 帧的源地址后插入 4 字节 VLAN 标记">
+<title>802.1Q 帧：在以太网 MAC 帧的源地址后插入 4 字节 VLAN 标记</title>
+<defs><marker id="a3b6fd4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3b6fd4"/></marker></defs>
+<rect x="0.75" y="0.75" width="698.5" height="298.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">802.1Q 帧（插入 VLAN 标记）</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="300" y="62" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">以太网的 MAC 帧（max：1518 字节）</text>
+<rect x="100" y="74" width="90" height="30" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="145" y="93.2" font-size="12" fill="#18181b" text-anchor="middle">目的地址</text>
+<rect x="190" y="74" width="90" height="30" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="235" y="93.2" font-size="12" fill="#18181b" text-anchor="middle">源地址</text>
+<rect x="280" y="74" width="70" height="30" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="315" y="93.2" font-size="12" fill="#18181b" text-anchor="middle">类型</text>
+<rect x="350" y="74" width="110" height="30" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="405" y="93.2" font-size="12" fill="#18181b" text-anchor="middle">数据载荷</text>
+<rect x="460" y="74" width="70" height="30" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="495" y="93.2" font-size="12" fill="#18181b" text-anchor="middle">FCS</text>
+<text x="145" y="120" font-size="11" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6</text>
+<text x="235" y="120" font-size="11" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6</text>
+<text x="305" y="120" font-size="11" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<text x="395" y="120" font-size="11" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">46~1500</text>
+<text x="485" y="120" font-size="11" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
+<text x="330" y="160" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">插入 VLAN 标记后的 802.1Q 帧（max：1522 字节）</text>
+<rect x="100" y="172" width="90" height="30" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="145" y="191.2" font-size="12" fill="#18181b" text-anchor="middle">目的地址</text>
+<rect x="190" y="172" width="90" height="30" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="235" y="191.2" font-size="12" fill="#18181b" text-anchor="middle">源地址</text>
+<rect x="280" y="172" width="70" height="30" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="315" y="191.2" font-size="12" fill="#78350f" text-anchor="middle">VLAN 标记</text>
+<rect x="350" y="172" width="70" height="30" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="385" y="191.2" font-size="12" fill="#18181b" text-anchor="middle">类型</text>
+<rect x="420" y="172" width="110" height="30" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="475" y="191.2" font-size="12" fill="#18181b" text-anchor="middle">数据载荷</text>
+<rect x="530" y="172" width="70" height="30" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="565" y="191.2" font-size="12" fill="#18181b" text-anchor="middle">FCS</text>
+<text x="145" y="218" font-size="11" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6</text>
+<text x="235" y="218" font-size="11" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6</text>
+<text x="315" y="218" font-size="11" fill="#d1493a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
+<text x="375" y="218" font-size="11" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<text x="465" y="218" font-size="11" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">46~1500</text>
+<text x="555" y="218" font-size="11" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
+<path d="M60 100Q52.2 153.8 96 186" fill="none" stroke="#3b6fd4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="30" y="150" font-size="11" fill="#78350f"><tspan x="30" dy="0">插入 4 字节</tspan><tspan x="30" dy="14.3">VLAN 标记</tspan></text>
+<text x="350" y="256" font-size="12" fill="#3f3f46" text-anchor="middle">VLAN 标记的前两个字节表明是 IEEE 802.1Q 帧，接下来 4 位没用，</text>
+<text x="350" y="278" font-size="12" fill="#d1493a" text-anchor="middle">后面 12 位是 VLAN 标识符 VID，唯一表示该以太网帧属于哪个 VLAN</text>
+</svg>

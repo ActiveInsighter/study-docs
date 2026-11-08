@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="基于接口的 VLAN：交换机端口划分 VLAN，不同 VLAN 通信需要路由器或三层交换机">
+<title>基于接口的 VLAN：交换机端口划分 VLAN，不同 VLAN 通信需要路由器或三层交换机</title>
+<rect x="0.75" y="0.75" width="758.5" height="298.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">基于接口的 VLAN</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="60" y="54" width="220" height="50" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.2"/>
+<text x="170" y="70" font-size="12" fill="#3f3f46" text-anchor="middle">交换机</text>
+<rect x="110" y="92" width="28" height="20" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="124" y="105.8" font-size="11" fill="#78350f" text-anchor="middle">1</text>
+<rect x="144" y="92" width="28" height="20" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="158" y="105.8" font-size="11" fill="#78350f" text-anchor="middle">2</text>
+<rect x="198" y="92" width="28" height="20" rx="0" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<text x="212" y="105.8" font-size="11" fill="#fafafa" text-anchor="middle" font-weight="600">3</text>
+<rect x="232" y="92" width="28" height="20" rx="0" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<text x="246" y="105.8" font-size="11" fill="#fafafa" text-anchor="middle" font-weight="600">4</text>
+<rect x="20" y="80" width="140" height="170" rx="12" fill="none" stroke="#c98a12" stroke-width="1.4"/>
+<rect x="180" y="80" width="140" height="170" rx="12" fill="none" stroke="#18181b" stroke-width="1.4"/>
+<rect x="46" y="180" width="28" height="24" rx="3" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="60" y="196.2" font-size="12" fill="#78350f" text-anchor="middle">A</text>
+<path d="M60 180L124 112" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="106" y="180" width="28" height="24" rx="3" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="120" y="196.2" font-size="12" fill="#78350f" text-anchor="middle">B</text>
+<path d="M120 180L158 112" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="206" y="180" width="28" height="24" rx="3" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="220" y="196.2" font-size="12" fill="#18181b" text-anchor="middle">C</text>
+<path d="M220 180L212 112" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="266" y="180" width="28" height="24" rx="3" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="280" y="196.2" font-size="12" fill="#18181b" text-anchor="middle">D</text>
+<path d="M280 180L246 112" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="50" y="256" width="54.1" height="23" rx="11.5" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.2"/>
+<text x="77" y="271.4" font-size="11" fill="#78350f" text-anchor="middle" font-weight="500">VLAN1</text>
+<rect x="210" y="256" width="54.1" height="23" rx="11.5" fill="#f4f4f5" stroke="#52525b" stroke-width="1.2"/>
+<text x="237.1" y="271.4" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500">VLAN2</text>
+<text x="350" y="60" font-size="11.5" fill="#3f3f46"><tspan x="350" dy="0">交换机上生成的各 VLAN 互不相通，若想实现通信，</tspan><tspan x="350" dy="17.2">需要借助：① 路由器　② 三层交换机</tspan></text>
+<text x="440" y="124" font-size="12" fill="#3b6fd4" text-anchor="middle">交换机的转发表</text>
+<rect x="370" y="186" width="140" height="26" rx="0" fill="#fafafa" stroke="none" stroke-width="0"/>
+<rect x="370" y="238" width="140" height="26" rx="0" fill="#fafafa" stroke="none" stroke-width="0"/>
+<path d="M370 160V142Q370 134 378 134H502Q510 134 510 142V160Z" fill="#e8effc"/>
+<path d="M370 160L510 160" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M370 186L510 186" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M370 212L510 212" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M370 238L510 238" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M450 134L450 264" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="370" y="134" width="140" height="130" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="410" y="151" font-size="11.5" fill="#1e3a8a" text-anchor="middle" font-weight="600">MAC 地址</text>
+<text x="480" y="151" font-size="11.5" fill="#1e3a8a" text-anchor="middle" font-weight="600">端口</text>
+<text x="410" y="177" font-size="11.5" fill="#18181b" text-anchor="middle">A</text>
+<text x="480" y="177" font-size="11.5" fill="#18181b" text-anchor="middle">1</text>
+<text x="410" y="203" font-size="11.5" fill="#18181b" text-anchor="middle">B</text>
+<text x="480" y="203" font-size="11.5" fill="#18181b" text-anchor="middle">2</text>
+<text x="410" y="229" font-size="11.5" fill="#18181b" text-anchor="middle">C</text>
+<text x="480" y="229" font-size="11.5" fill="#18181b" text-anchor="middle">3</text>
+<text x="410" y="255" font-size="11.5" fill="#18181b" text-anchor="middle">D</text>
+<text x="480" y="255" font-size="11.5" fill="#18181b" text-anchor="middle">4</text>
+<text x="640" y="124" font-size="12" fill="#3b6fd4" text-anchor="middle">交换机的 VLAN 表</text>
+<rect x="570" y="186" width="140" height="26" rx="0" fill="#fafafa" stroke="none" stroke-width="0"/>
+<rect x="570" y="238" width="140" height="26" rx="0" fill="#fafafa" stroke="none" stroke-width="0"/>
+<path d="M570 160V142Q570 134 578 134H702Q710 134 710 142V160Z" fill="#e8effc"/>
+<path d="M570 160L710 160" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M570 186L710 186" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M570 212L710 212" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M570 238L710 238" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M650 134L650 264" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="570" y="134" width="140" height="130" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="610" y="151" font-size="11.5" fill="#1e3a8a" text-anchor="middle" font-weight="600">VLAN ID</text>
+<text x="680" y="151" font-size="11.5" fill="#1e3a8a" text-anchor="middle" font-weight="600">端口</text>
+<text x="610" y="177" font-size="11.5" fill="#18181b" text-anchor="middle">1</text>
+<text x="680" y="177" font-size="11.5" fill="#18181b" text-anchor="middle">1</text>
+<text x="610" y="203" font-size="11.5" fill="#18181b" text-anchor="middle">1</text>
+<text x="680" y="203" font-size="11.5" fill="#18181b" text-anchor="middle">2</text>
+<text x="610" y="229" font-size="11.5" fill="#18181b" text-anchor="middle">2</text>
+<text x="680" y="229" font-size="11.5" fill="#18181b" text-anchor="middle">3</text>
+<text x="610" y="255" font-size="11.5" fill="#18181b" text-anchor="middle">2</text>
+<text x="680" y="255" font-size="11.5" fill="#18181b" text-anchor="middle">4</text>
+</svg>

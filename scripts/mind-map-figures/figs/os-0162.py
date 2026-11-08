@@ -1,0 +1,12 @@
+LABEL = '资源分配图：资源结点 R1 有 3 个资源、R2 有 2 个资源'
+F = Fig(460, 352, '资源分配图找安全序列')
+F.box(40, 140, 70, 54, '', 'green', rx=4); F.box(350, 140, 70, 54, '', 'green', rx=4)
+for (x, y) in ((58, 158), (90, 158), (74, 178)): F.circle(x, y, 6, '', 'white', sw=1.1)
+for (x, y) in ((370, 162), (396, 172)): F.circle(x, y, 6, '', 'white', sw=1.1)
+F.text(75, 128, 'R1', 13, color=INK, weight=600); F.text(385, 128, 'R2', 13, color=INK, weight=600)
+F.circle(230, 70, 24, 'P1', 'blue', 14); F.circle(230, 280, 24, 'P2', 'blue', 14)
+F.line(70, 138, 204, 70, ACCENT['green'], 1.5, arrow='end'); F.line(84, 138, 210, 84, ACCENT['green'], 1.5, arrow='end')
+F.line(254, 78, 352, 138, ACCENT['blue'], 1.5, arrow='end')
+F.line(370, 196, 252, 270, ACCENT['green'], 1.5, arrow='end')
+F.line(210, 266, 92, 196, ACCENT['blue'], 1.5, arrow='end'); F.line(78, 196, 206, 282, ACCENT['green'], 1.5, arrow='end')
+F.legend(60, 330, [('green', '分配边：资源 → 进程'), ('blue', '请求边：进程 → 资源')])

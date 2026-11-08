@@ -1,0 +1,26 @@
+from common import gate, wire
+LABEL = '一位全加器：S = A⊕B⊕C，C = AB + (A⊕B)C'
+F = Fig(860, 380, '一位全加器 FA')
+rows = [['A_{i}', 'B_{i}', 'C_{i−1}', 'S_{i}', 'C_{i}']] + [list(f'{v:03b}') + [str(bin(v).count('1') % 2), str(int(bin(v).count('1') >= 2))] for v in range(8)]
+F.table(30, 64, rows, [44, 44, 52, 44, 44], 28, size=12.5, mono_cols=range(5), head_tone='blue', tones={**{(r, 3): 'green' for r in range(1, 9)}, **{(r, 4): 'amber' for r in range(1, 9)}})
+F.text(30, 340, 'S_{i} = A_{i} ⊕ B_{i} ⊕ C_{i−1}（输入中有奇数个 1 时为 1）', 13, 'start', INK2)
+F.text(30, 364, 'C_{i} = A_{i}B_{i} + (A_{i} ⊕ B_{i})C_{i−1}（本级产生 / 低位传递）', 13, 'start', INK2)
+X = 360
+F.text(X, 120, 'A_{i}', 13, 'end', INK2, valign='middle'); F.text(X, 150, 'B_{i}', 13, 'end', INK2, valign='middle'); F.text(X, 260, 'C_{i−1}', 13, 'end', INK2, valign='middle')
+x1i, x1o = gate(F, 430, 112, 'xor', pitch=14)
+a1i, a1o = gate(F, 430, 182, 'and')
+x2i, x2o = gate(F, 580, 200, 'xor')
+a2i, a2o = gate(F, 580, 260, 'and')
+o1i, o1o = gate(F, 710, 268, 'or')
+wire(F, [(366, 120), (x1i[0][0], x1i[0][1] - 4 + 4)], dot=[(396, 120)])
+wire(F, [(366, 120), (x1i[0][0], 121.3)]); wire(F, [(396, 120), (396, a1i[0][1]), (a1i[0][0], a1i[0][1])])
+wire(F, [(366, 150), (x1i[1][0], 150)])
+wire(F, [(366, 150), (410, 150), (410, a1i[1][1]), (a1i[1][0], a1i[1][1])], dot=[(410, 150)])
+wire(F, [x1o, (540, x1o[1]), (540, x2i[0][1]), x2i[0]], dot=[(540, x2i[0][1])])
+wire(F, [(540, x2i[0][1]), (540, a2i[0][1]), a2i[0]])
+wire(F, [(366, 260), (520, 260), (520, x2i[1][1]), x2i[1]], dot=[(520, 260)])
+wire(F, [(520, 260), (520, a2i[1][1]), a2i[1]])
+wire(F, [x2o, (800, x2o[1])]); F.text(806, x2o[1], 'S_{i}', 13, 'start', ACCENT['green'], 600, valign='middle')
+wire(F, [a1o, (690, a1o[1]), (690, o1i[0][1]), o1i[0]])
+wire(F, [a2o, (690, a2o[1]), (690, o1i[1][1]), o1i[1]])
+wire(F, [o1o, (800, o1o[1])]); F.text(806, o1o[1], 'C_{i}', 13, 'start', ACCENT['amber'], 600, valign='middle')

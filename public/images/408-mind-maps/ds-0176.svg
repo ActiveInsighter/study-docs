@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" width="600" height="280" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="满二叉树：每层结点数都达到最大">
+<title>满二叉树：每层结点数都达到最大</title>
+<rect x="0.75" y="0.75" width="598.5" height="278.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">满二叉树（h = 4，n = 2⁴ − 1 = 15）</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M57.9 205.4L49.1 234.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M66.1 205.4L74.9 234.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M125.9 205.4L117.1 234.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M134.1 205.4L142.9 234.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M88.7 148L69.3 180" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M103.3 148L122.7 180" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M193.9 205.4L185.1 234.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M202.1 205.4L210.9 234.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M261.9 205.4L253.1 234.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M270.1 205.4L278.9 234.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M224.7 148L205.3 180" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M239.3 148L258.7 180" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M153.2 88.9L106.8 127.1" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M174.8 88.9L221.2 127.1" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="45" cy="248" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="45" y="252.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">8</text>
+<circle cx="79" cy="248" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="79" y="252.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">9</text>
+<circle cx="62" cy="192" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="62" y="196.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">4</text>
+<circle cx="113" cy="248" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="113" y="252.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">10</text>
+<circle cx="147" cy="248" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="147" y="252.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">11</text>
+<circle cx="130" cy="192" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="130" y="196.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">5</text>
+<circle cx="96" cy="136" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="96" y="140.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">2</text>
+<circle cx="181" cy="248" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="181" y="252.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">12</text>
+<circle cx="215" cy="248" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="215" y="252.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">13</text>
+<circle cx="198" cy="192" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="198" y="196.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">6</text>
+<circle cx="249" cy="248" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="249" y="252.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">14</text>
+<circle cx="283" cy="248" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="283" y="252.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">15</text>
+<circle cx="266" cy="192" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="266" y="196.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">7</text>
+<circle cx="232" cy="136" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="232" y="140.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">3</text>
+<circle cx="164" cy="80" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="164" y="84.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">1</text>
+<text x="300" y="264" font-size="12.5" fill="#71717a" text-anchor="middle">按层序从 1 开始编号：结点 i 的孩子为 2i、2i + 1</text>
+</svg>

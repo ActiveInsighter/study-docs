@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="循环移位：不带进位位与带进位位">
+<title>循环移位：不带进位位与带进位位</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker><marker id="aa1a1aa" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#a1a1aa"/></marker></defs>
+<rect x="0.75" y="0.75" width="758.5" height="298.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">循环移位</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="30" y="86" width="34" height="22" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="47" y="100.8" font-size="11" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">CF</text>
+<rect x="100" y="80" width="200" height="34" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.3"/>
+<text x="100" y="72" font-size="11" fill="#71717a">最高位</text>
+<text x="300" y="72" font-size="11" fill="#71717a" text-anchor="end">最低位</text>
+<path d="M130 97L270 97" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M300 97L314 97Q320 97 320 103L320 126Q320 132 314 132L90 132Q84 132 84 126L84 103Q84 97 90 97L98 97" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M310 97L310 72Q310 66 304 66L53 66Q47 66 47 72L47 84" fill="none" stroke="#a1a1aa" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<text x="200" y="156" font-size="12" fill="#3f3f46" text-anchor="middle">(a) 不带进位位的循环右移</text>
+<rect x="400" y="86" width="34" height="22" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="417" y="100.8" font-size="11" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">CF</text>
+<rect x="470" y="80" width="200" height="34" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.3"/>
+<text x="470" y="72" font-size="11" fill="#71717a">最高位</text>
+<text x="670" y="72" font-size="11" fill="#71717a" text-anchor="end">最低位</text>
+<path d="M500 97L640 97" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M670 97L684 97Q690 97 690 103L690 126Q690 132 684 132L423 132Q417 132 417 126L417 110" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M434 97L468 97" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="570" y="156" font-size="12" fill="#3f3f46" text-anchor="middle">(b) 带进位位的循环右移</text>
+<rect x="30" y="206" width="34" height="22" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="47" y="220.8" font-size="11" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">CF</text>
+<rect x="100" y="200" width="200" height="34" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.3"/>
+<text x="100" y="192" font-size="11" fill="#71717a">最高位</text>
+<text x="300" y="192" font-size="11" fill="#71717a" text-anchor="end">最低位</text>
+<path d="M270 217L130 217" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M100 217L90 217Q84 217 84 223L84 246Q84 252 90 252L314 252Q320 252 320 246L320 223Q320 217 314 217L302 217" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M84 217L66 217" fill="none" stroke="#a1a1aa" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<text x="200" y="276" font-size="12" fill="#3f3f46" text-anchor="middle">(c) 不带进位位的循环左移</text>
+<rect x="400" y="206" width="34" height="22" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="417" y="220.8" font-size="11" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">CF</text>
+<rect x="470" y="200" width="200" height="34" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.3"/>
+<text x="470" y="192" font-size="11" fill="#71717a">最高位</text>
+<text x="670" y="192" font-size="11" fill="#71717a" text-anchor="end">最低位</text>
+<path d="M640 217L500 217" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M470 217L452 217" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M452 217L436 217" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M417 230L417 246Q417 252 423 252L684 252Q690 252 690 246L690 223Q690 217 684 217L672 217" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="570" y="276" font-size="12" fill="#3f3f46" text-anchor="middle">(d) 带进位位的循环左移</text>
+</svg>

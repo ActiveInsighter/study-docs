@@ -1,0 +1,10 @@
+LABEL = '第二类虚拟机管理程序：运行在宿主操作系统之上，如 VMware Workstation'
+F = Fig(480, 380)
+F.box(60, 70, 240, 110, '', 'blue', rx=0); F.line(60, 120, 300, 120, INK2, 1, dash='4 3')
+for x in (110, 170, 230): F.circle(x, 96, 16, '', 'white')
+F.text(180, 150, '客户操作系统（如 Windows）', 12, color=TONES['blue'][2])
+F.box(60, 180, 240, 44, '第二类虚拟机管理程序', 'white', 12.5, 0); F.box(300, 160, 120, 64, '', 'amber', rx=0)
+for x in (330, 390): F.circle(x, 192, 16, '', 'white')
+F.box(60, 224, 360, 44, '宿主操作系统（如 Linux）', 'amber', 13, 0); F.box(60, 268, 360, 52, '硬件（CPU、磁盘、网络、中断等）', 'white', 13, 0)
+F.text(180, 56, '客户操作系统进程', 12.5, color=INK, weight=600); F.line(230, 58, 230, 78, INK2, 1.1, arrow='end')
+F.text(370, 120, '宿主操作\n系统进程', 12.5, color=INK, weight=600, lh=1.3); F.line(390, 140, 390, 174, INK2, 1.1, arrow='end')

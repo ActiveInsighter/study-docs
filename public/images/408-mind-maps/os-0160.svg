@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="进程的七状态模型（填空版）：创建、就绪、运行、终止、就绪挂起、阻塞、阻塞挂起">
+<title>进程的七状态模型（填空版）：创建、就绪、运行、终止、就绪挂起、阻塞、阻塞挂起</title>
+<rect x="0.75" y="0.75" width="638.5" height="298.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">进程的七状态模型</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="18" y="62" width="104" height="36" rx="18" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="70" y="84.7" font-size="13.5" fill="#1e3a8a" text-anchor="middle">创建态</text>
+<rect x="168" y="62" width="104" height="36" rx="18" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="220" y="84.7" font-size="13.5" fill="#1e3a8a" text-anchor="middle">就绪态</text>
+<rect x="348" y="62" width="104" height="36" rx="18" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="400" y="84.7" font-size="13.5" fill="#1e3a8a" text-anchor="middle">运行态</text>
+<rect x="508" y="62" width="104" height="36" rx="18" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="560" y="84.7" font-size="13.5" fill="#1e3a8a" text-anchor="middle">终止态</text>
+<rect x="118" y="162" width="104" height="36" rx="18" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="170" y="184.7" font-size="13.5" fill="#3b0764" text-anchor="middle">就绪挂起</text>
+<rect x="398" y="162" width="104" height="36" rx="18" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="450" y="184.7" font-size="13.5" fill="#1e3a8a" text-anchor="middle">阻塞态</text>
+<rect x="258" y="242" width="104" height="36" rx="18" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="310" y="264.7" font-size="13.5" fill="#3b0764" text-anchor="middle">阻塞挂起</text>
+<text x="320" y="296" font-size="11.5" fill="#71717a" text-anchor="middle">试着画出各状态之间的转换</text>
+</svg>

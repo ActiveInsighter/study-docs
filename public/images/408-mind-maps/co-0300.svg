@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 252" width="620" height="252" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="边界不对齐：数据紧密存放，一个半字或字可能跨两个存储字">
+<title>边界不对齐：数据紧密存放，一个半字或字可能跨两个存储字</title>
+<rect x="0.75" y="0.75" width="618.5" height="250.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">边界不对齐方式（紧密存放）</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="110" y="64" width="100" height="30" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="160" y="83.5" font-size="13" fill="#1e3a8a" text-anchor="middle">字节1</text>
+<rect x="210" y="64" width="100" height="30" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="260" y="83.5" font-size="13" fill="#1e3a8a" text-anchor="middle">字节2</text>
+<rect x="310" y="64" width="100" height="30" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="360" y="83.5" font-size="13" fill="#1e3a8a" text-anchor="middle">字节3</text>
+<rect x="410" y="64" width="100" height="30" rx="0" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="460" y="83.5" font-size="13" fill="#7f1d1d" text-anchor="middle">半字1-1</text>
+<rect x="110" y="94" width="100" height="30" rx="0" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="160" y="113.5" font-size="13" fill="#7f1d1d" text-anchor="middle">半字1-2</text>
+<rect x="210" y="94" width="200" height="30" rx="0" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="310" y="113.5" font-size="13" fill="#134e4a" text-anchor="middle">半字2</text>
+<rect x="410" y="94" width="100" height="30" rx="0" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="460" y="113.5" font-size="13" fill="#7f1d1d" text-anchor="middle">半字3-1</text>
+<rect x="110" y="124" width="100" height="30" rx="0" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="160" y="143.6" font-size="13" fill="#7f1d1d" text-anchor="middle">半字3-2</text>
+<rect x="210" y="124" width="300" height="30" rx="0" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="360" y="143.6" font-size="13" fill="#7f1d1d" text-anchor="middle">字1-1</text>
+<rect x="110" y="154" width="100" height="30" rx="0" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="160" y="173.6" font-size="13" fill="#7f1d1d" text-anchor="middle">字1-2</text>
+<rect x="210" y="154" width="100" height="30" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="260" y="173.6" font-size="13" fill="#1e3a8a" text-anchor="middle">字节1</text>
+<rect x="310" y="154" width="200" height="30" rx="0" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="410" y="173.6" font-size="13" fill="#134e4a" text-anchor="middle">半字1</text>
+<rect x="110" y="184" width="400" height="30" rx="0" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="310" y="203.6" font-size="13" fill="#3b0764" text-anchor="middle">字2</text>
+<text x="310" y="240" font-size="12.5" fill="#71717a" text-anchor="middle">红色：跨越两个存储字，读一个半字也可能需要 2 次访存</text>
+</svg>

@@ -1,0 +1,12 @@
+LABEL = '现代计算机硬件组成：CPU = 运算器 + 控制器；主机 = CPU + 主存'
+F = Fig(680, 360, '现代计算机：以存储器为核心')
+F.rect(30, 60, 150, 170, '#f4f4f5', INK2, 1.5, 12); F.box(55, 86, 100, 42, '运算器', 'white', 14); F.box(55, 160, 100, 42, '控制器', 'white', 14)
+F.text(105, 252, 'CPU', 15, color=INK, weight=700)
+F.rect(265, 60, 150, 170, '#f4f4f5', INK2, 1.5, 12); F.text(340, 145, '存储器', 15, color=INK2, weight=600)
+F.text(340, 252, '主存 + 辅存', 14, color=ACCENT['red'], weight=600)
+F.rect(500, 60, 150, 170, '#f4f4f5', INK2, 1.5, 12); F.box(525, 86, 100, 42, '输入设备', 'white', 14); F.box(525, 160, 100, 42, '输出设备', 'white', 14)
+F.text(575, 252, 'I/O', 15, color=INK, weight=700)
+F.box(160, 284, 100, 32, '主机', 'red', 14, weight=700); F.box(440, 284, 100, 32, 'I/O 设备', 'red', 14, weight=700)
+F.line(105, 260, 180, 282, ACCENT['red'], 1.4, arrow='end'); F.line(310, 260, 240, 282, ACCENT['red'], 1.4, arrow='end'); F.text(280, 270, '主存', 12, color=ACCENT['red'])
+F.line(370, 260, 460, 282, ACCENT['red'], 1.4, arrow='end'); F.text(400, 268, '辅存', 12, color=ACCENT['red']); F.line(575, 260, 520, 282, ACCENT['red'], 1.4, arrow='end')
+F.text(340, 344, '主机 + I/O 设备 = 硬件', 14, color=INK, weight=600)

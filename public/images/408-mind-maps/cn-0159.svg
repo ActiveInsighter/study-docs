@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 520" width="380" height="520" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="SDN 方法中控制平面与数据平面分离：路由器不再运行路由选择协议">
+<title>SDN 方法中控制平面与数据平面分离：路由器不再运行路由选择协议</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker><marker id="a3f3f46s" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10 0.8L1.5 5 10 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="378.5" height="518.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">SDN：控制平面与数据平面分离</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="40" y="60" width="300" height="140" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="190" y="86" font-size="16" fill="#18181b" text-anchor="middle" font-weight="600">路由选择处理机</text>
+<rect x="70" y="104" width="240" height="36" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="190" y="126.9" font-size="14" fill="#18181b" text-anchor="middle">路由选择协议</text>
+<rect x="130" y="150" width="120" height="32" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="190" y="170.9" font-size="14" fill="#18181b" text-anchor="middle">路由表</text>
+<path d="M10 226L370 226" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 6"/>
+<path d="M190 202L190 252" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="190" y="242" font-size="40" fill="#d1493a" text-anchor="middle" font-weight="700">✕</text>
+<rect x="40" y="260" width="300" height="220" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="90" y="286" width="200" height="100" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="190" y="316" font-size="16" fill="#18181b" text-anchor="middle" font-weight="600">分组处理</text>
+<rect x="130" y="336" width="120" height="32" rx="2" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="190" y="356.9" font-size="14" fill="#1e3a8a" text-anchor="middle">转发表</text>
+<text x="190" y="430" font-size="16" fill="#18181b" text-anchor="middle" font-weight="600">交换结构</text>
+</svg>

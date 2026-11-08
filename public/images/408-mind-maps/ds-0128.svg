@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" width="760" height="340" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="链式基数排序：第三趟（百位）">
+<title>链式基数排序：第三趟（百位）</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker><marker id="aa1a1aa" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#a1a1aa"/></marker></defs>
+<rect x="0.75" y="0.75" width="758.5" height="338.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">链式基数排序 · 第三趟（百位）</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="50" y="82" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">q[0]</text>
+<path d="M50 88L50 102" fill="none" stroke="#a1a1aa" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="25" y="104" width="50" height="26" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="50" y="121.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"><tspan fill="#d1493a" font-weight="600">0</tspan>08</text>
+<rect x="25" y="144" width="50" height="26" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="50" y="161.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"><tspan fill="#d1493a" font-weight="600">0</tspan>63</text>
+<path d="M50 130L50 142" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="25" y="184" width="50" height="26" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="50" y="201.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"><tspan fill="#d1493a" font-weight="600">0</tspan>83</text>
+<path d="M50 170L50 182" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="120" y="82" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">q[1]</text>
+<path d="M120 88L120 102" fill="none" stroke="#a1a1aa" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="95" y="104" width="50" height="26" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="120" y="121.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"><tspan fill="#d1493a" font-weight="600">1</tspan>09</text>
+<rect x="95" y="144" width="50" height="26" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="120" y="161.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"><tspan fill="#d1493a" font-weight="600">1</tspan>84</text>
+<path d="M120 130L120 142" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="190" y="82" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">q[2]</text>
+<path d="M190 88L190 102" fill="none" stroke="#a1a1aa" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="165" y="104" width="50" height="26" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="190" y="121.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"><tspan fill="#d1493a" font-weight="600">2</tspan>69</text>
+<rect x="165" y="144" width="50" height="26" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="190" y="161.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"><tspan fill="#d1493a" font-weight="600">2</tspan>78</text>
+<path d="M190 130L190 142" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="260" y="82" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">q[3]</text>
+<path d="M260 88L260 102" fill="none" stroke="#a1a1aa" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<text x="330" y="82" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">q[4]</text>
+<path d="M330 88L330 102" fill="none" stroke="#a1a1aa" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<text x="400" y="82" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">q[5]</text>
+<path d="M400 88L400 102" fill="none" stroke="#a1a1aa" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="375" y="104" width="50" height="26" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="400" y="121.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"><tspan fill="#d1493a" font-weight="600">5</tspan>05</text>
+<rect x="375" y="144" width="50" height="26" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="400" y="161.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"><tspan fill="#d1493a" font-weight="600">5</tspan>89</text>
+<path d="M400 130L400 142" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="470" y="82" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">q[6]</text>
+<path d="M470 88L470 102" fill="none" stroke="#a1a1aa" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<text x="540" y="82" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">q[7]</text>
+<path d="M540 88L540 102" fill="none" stroke="#a1a1aa" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<text x="610" y="82" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">q[8]</text>
+<path d="M610 88L610 102" fill="none" stroke="#a1a1aa" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<text x="680" y="82" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">q[9]</text>
+<path d="M680 88L680 102" fill="none" stroke="#a1a1aa" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<rect x="655" y="104" width="50" height="26" rx="5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="680" y="121.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"><tspan fill="#d1493a" font-weight="600">9</tspan>30</text>
+<text x="380" y="246" font-size="12.5" fill="#71717a" text-anchor="middle">(a) 分配：按百位放入队列</text>
+<path d="M16 279L26 279" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="28" y="266" width="52" height="26" rx="5" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="54" y="283.4" font-size="12.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">008</text>
+<path d="M80 279L98 279" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="100" y="266" width="52" height="26" rx="5" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="126" y="283.4" font-size="12.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">063</text>
+<path d="M152 279L170 279" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="172" y="266" width="52" height="26" rx="5" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="198" y="283.4" font-size="12.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">083</text>
+<path d="M224 279L242 279" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="244" y="266" width="52" height="26" rx="5" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="270" y="283.4" font-size="12.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">109</text>
+<path d="M296 279L314 279" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="316" y="266" width="52" height="26" rx="5" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="342" y="283.4" font-size="12.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">184</text>
+<path d="M368 279L386 279" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="388" y="266" width="52" height="26" rx="5" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="414" y="283.4" font-size="12.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">269</text>
+<path d="M440 279L458 279" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="460" y="266" width="52" height="26" rx="5" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="486" y="283.4" font-size="12.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">278</text>
+<path d="M512 279L530 279" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="532" y="266" width="52" height="26" rx="5" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="558" y="283.4" font-size="12.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">505</text>
+<path d="M584 279L602 279" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="604" y="266" width="52" height="26" rx="5" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="630" y="283.4" font-size="12.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">589</text>
+<path d="M656 279L674 279" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="676" y="266" width="52" height="26" rx="5" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="702" y="283.4" font-size="12.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">930</text>
+<text x="380" y="318" font-size="12.5" fill="#71717a" text-anchor="middle">(b) 收集：按 q[0]…q[9] 依次首尾相接</text>
+</svg>

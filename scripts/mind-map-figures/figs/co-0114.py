@@ -1,0 +1,12 @@
+LABEL = '存储芯片浓缩版：地址线、片选线、读写控制线、数据线'
+F = Fig(640, 300, '存储芯片：五大部分引脚')
+F.rect(170, 60, 300, 170, 'violet', ACCENT['violet'], 1.4, 10)
+F.box(190, 80, 50, 130, '译\n码\n驱\n动', 'red', 12, 5); F.box(260, 80, 120, 130, '存储矩阵', 'red', 14, 5); F.box(400, 80, 50, 130, '读\n写\n电\n路', 'red', 12, 5)
+for y in (86, 106, 166, 186): F.line(100, y, 168, y, INK2, 1.3, arrow='end')
+F.text(134, 138, '⋮', 14, color=MUTED, valign='middle'); F.vbrace(92, 80, 192, '', right=False); F.text(60, 136, '地址线', 12.5, 'end', INK, 600, valign='middle')
+F.line(100, 214, 168, 214, INK2, 1.3, arrow='end'); F.text(94, 214, '片选线', 12.5, 'end', INK, 600, valign='middle')
+for y in (86, 106, 166, 186): F.line(472, y, 540, y, INK2, 1.3, arrow='both')
+F.text(506, 138, '⋮', 14, color=MUTED, valign='middle'); F.vbrace(548, 80, 192, ''); F.text(578, 136, '数据线', 12.5, 'start', INK, 600, valign='middle')
+F.line(540, 214, 472, 214, INK2, 1.3, arrow='end'); F.text(546, 214, '读 / 写控制线', 12.5, 'start', INK, 600, valign='middle')
+F.text(320, 264, '另有供电线与接地线；一条内存条可包含多块存储芯片', 12, color=MUTED)
+F.text(320, 286, '地址复用（DRAM）时地址线数减半、片选线 2 根（RAS、CAS）', 12, color=MUTED)

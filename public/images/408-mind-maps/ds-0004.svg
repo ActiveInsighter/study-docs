@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" width="720" height="280" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="共享栈：两个顺序栈共享一段存储空间">
+<title>共享栈：两个顺序栈共享一段存储空间</title>
+<defs><marker id="a2f8f57" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#2f8f57"/></marker><marker id="a3b6fd4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3b6fd4"/></marker></defs>
+<rect x="0.75" y="0.75" width="718.5" height="278.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">共享栈 · 两个顺序栈共享存储空间</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="52" y="108" width="44" height="40" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="96" y="108" width="44" height="40" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="140" y="108" width="44" height="40" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="184" y="108" width="44" height="40" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="228" y="108" width="44" height="40" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="272" y="108" width="44" height="40" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="316" y="108" width="44" height="40" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="360" y="108" width="44" height="40" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="404" y="108" width="44" height="40" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="448" y="108" width="44" height="40" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="492" y="108" width="44" height="40" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="536" y="108" width="44" height="40" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="580" y="108" width="44" height="40" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="624" y="108" width="44" height="40" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="52" y="108" width="616" height="40" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M96 108L96 148" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M140 108L140 148" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M184 108L184 148" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M228 108L228 148" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M272 108L272 148" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M316 108L316 148" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M360 108L360 148" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M404 108L404 148" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M448 108L448 148" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M492 108L492 148" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M536 108L536 148" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M580 108L580 148" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M624 108L624 148" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="74" y="132.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">a₀</text>
+<text x="118" y="132.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">a₁</text>
+<text x="162" y="132.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">a₂</text>
+<text x="206" y="132.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">a₃</text>
+<text x="250" y="132.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="294" y="132.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="338" y="132.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="382" y="132.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="426" y="132.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="470" y="132.9" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="514" y="132.9" font-size="14" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">b₃</text>
+<text x="558" y="132.9" font-size="14" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">b₂</text>
+<text x="602" y="132.9" font-size="14" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">b₁</text>
+<text x="646" y="132.9" font-size="14" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">b₀</text>
+<text x="52" y="96" font-size="12" fill="#71717a" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="668" y="96" font-size="12" fill="#71717a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">MaxSize−1</text>
+<path d="M238 128L316 128" fill="none" stroke="#3b6fd4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" marker-end="url(#a3b6fd4)"/>
+<path d="M482 128L404 128" fill="none" stroke="#2f8f57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" marker-end="url(#a2f8f57)"/>
+<path d="M74 200L74 154" fill="none" stroke="#3b6fd4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="74" y="218" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">栈底</text>
+<text x="74" y="236" font-size="12" fill="#71717a" text-anchor="middle">0 号栈</text>
+<path d="M206 200L206 154" fill="none" stroke="#3b6fd4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="206" y="218" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">top0</text>
+<text x="206" y="236" font-size="12" fill="#71717a" text-anchor="middle">0 号栈顶</text>
+<path d="M514 200L514 154" fill="none" stroke="#2f8f57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a2f8f57)"/>
+<text x="514" y="218" font-size="14" fill="#14532d" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">top1</text>
+<text x="514" y="236" font-size="12" fill="#71717a" text-anchor="middle">1 号栈顶</text>
+<path d="M646 200L646 154" fill="none" stroke="#2f8f57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a2f8f57)"/>
+<text x="646" y="218" font-size="14" fill="#14532d" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">栈底</text>
+<text x="646" y="236" font-size="12" fill="#71717a" text-anchor="middle">1 号栈</text>
+<text x="360" y="262" font-size="13" fill="#3f3f46" text-anchor="middle">栈满：top1 − top0 = 1　　入栈：0 号 ++top0，1 号 −−top1</text>
+</svg>

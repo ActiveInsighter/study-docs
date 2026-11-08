@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 440" width="740" height="440" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="执行 ./test 后：程序从磁盘装入主存，执行 printf 时把字符串送到显示器">
+<title>执行 ./test 后：程序从磁盘装入主存，执行 printf 时把字符串送到显示器</title>
+<defs><marker id="a3b6fd4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3b6fd4"/></marker><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker><marker id="a3f3f46s" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10 0.8L1.5 5 10 9.2z" fill="#3f3f46"/></marker><marker id="ad1493a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#d1493a"/></marker></defs>
+<rect x="0.75" y="0.75" width="738.5" height="438.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">回车后：磁盘 → 主存；printf：主存 → 显示器</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="24" y="64" width="300" height="140" rx="12" fill="none" stroke="#3b6fd4" stroke-width="1.3" stroke-dasharray="5 4"/>
+<rect x="36" y="54" width="41.4" height="23.5" rx="11.8" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.2"/>
+<text x="56.7" y="69.8" font-size="11.5" fill="#1e3a8a" text-anchor="middle" font-weight="500">CPU</text>
+<rect x="40" y="84" width="70" height="26" rx="5" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="75" y="101.2" font-size="12" fill="#18181b" text-anchor="middle">控制器</text>
+<rect x="120" y="80" width="70" height="56" rx="5" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="155" y="112.2" font-size="12" fill="#18181b" text-anchor="middle">寄存器组</text>
+<path d="M226 80L262 94V128L226 142L226 120L236 111L226 102Z" fill="#fde7e4" stroke="#d1493a" stroke-width="1.3"/>
+<text x="246" y="115.8" font-size="11" fill="#7f1d1d" text-anchor="middle" font-weight="700">ALU</text>
+<rect x="40" y="160" width="110" height="28" rx="5" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="95" y="178.2" font-size="12" fill="#18181b" text-anchor="middle">总线接口</text>
+<rect x="380" y="140" width="90" height="44" rx="6" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="425" y="166.2" font-size="12" fill="#18181b" text-anchor="middle">I/O 桥接器</text>
+<rect x="600" y="140" width="100" height="44" rx="6" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="650" y="166.6" font-size="13" fill="#14532d" text-anchor="middle">主存储器</text>
+<path d="M150 174L378 162" fill="none" stroke="#3f3f46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="260" y="158" font-size="11" fill="#71717a" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">处理器总线</text>
+<path d="M470 162L598 162" fill="none" stroke="#3f3f46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="534" y="152" font-size="11" fill="#71717a" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">存储器总线</text>
+<rect x="40" y="236" width="640" height="12" rx="6" fill="#e4e4e7" stroke="#71717a" stroke-width="1.2"/>
+<text x="50" y="228" font-size="11.5" fill="#71717a">I/O 总线</text>
+<path d="M425 184L425 234" fill="none" stroke="#3f3f46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<path d="M130 248L130 278" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="88" y="280" width="84" height="44" rx="6" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="130" y="298.1" font-size="12" fill="#18181b" text-anchor="middle"><tspan x="130" dy="0">USB</tspan><tspan x="130" dy="16.2">控制器</tspan></text>
+<path d="M330 248L330 278" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="288" y="280" width="84" height="44" rx="6" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="330" y="298.1" font-size="12" fill="#18181b" text-anchor="middle"><tspan x="330" dy="0">显示</tspan><tspan x="330" dy="16.2">适配卡</tspan></text>
+<path d="M560 248L560 278" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="518" y="280" width="84" height="44" rx="6" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="560" y="298.1" font-size="12" fill="#18181b" text-anchor="middle"><tspan x="560" dy="0">磁盘</tspan><tspan x="560" dy="16.2">控制器</tspan></text>
+<text x="105" y="364" font-size="12" fill="#3f3f46" text-anchor="middle">鼠标</text>
+<text x="155" y="364" font-size="12" fill="#3f3f46" text-anchor="middle">键盘</text>
+<path d="M105 350L105 326" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M155 350L155 326" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M330 324L330 350" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="330" y="364" font-size="12" fill="#3f3f46" text-anchor="middle">显示器</text>
+<path d="M560 324L560 344" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<ellipse cx="560" cy="350" rx="26" ry="7" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="534" y="350" width="52" height="18" rx="0" fill="#fff" stroke="none" stroke-width="0"/>
+<path d="M534 350V368M586 350V368" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="560" cy="368" rx="26" ry="7" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="560" y="388" font-size="12" fill="#3f3f46" text-anchor="middle">磁盘</text>
+<path d="M570 278L570 264Q570 258 564 258L446 258Q440 258 440 252L440 202Q440 196 446 196L474 196Q480 196 485.9 195L598 176" fill="none" stroke="#d1493a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<path d="M598 172L476 172Q470 172 464.4 174.2L415.6 193.8Q410 196 410 202L410 252Q410 258 404 258L346 258Q340 258 340 264L340 278" fill="none" stroke="#3b6fd4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<rect x="40" y="400" width="248.6" height="24" rx="12" fill="#fde7e4" stroke="#d1493a" stroke-width="1.2"/>
+<text x="164.3" y="416.2" font-size="12" fill="#7f1d1d" text-anchor="middle" font-weight="500">③ shell 调用内核把 test 从磁盘装入主存</text>
+<rect x="370" y="400" width="286" height="24" rx="12" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.2"/>
+<text x="513" y="416.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">④⑤ 执行到 printf，字符串经 CPU/总线送显示器</text>
+</svg>

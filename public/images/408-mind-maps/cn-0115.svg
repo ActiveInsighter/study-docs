@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200" width="700" height="200" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="码元：固定时长的信号波形；M 进制码元可携带 log2(M) 比特信息">
+<title>码元：固定时长的信号波形；M 进制码元可携带 log2(M) 比特信息</title>
+<rect x="0.75" y="0.75" width="698.5" height="198.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">码元</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="40" y="60" width="70" height="50" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="75" y="89.5" font-size="13" fill="#18181b" text-anchor="middle">A</text>
+<rect x="590" y="60" width="70" height="50" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="625" y="89.5" font-size="13" fill="#18181b" text-anchor="middle">B</text>
+<path d="M112 85L588 85" fill="none" stroke="#3b6fd4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M470 66H483.0V78H496.0V66H509.0V78H522.0V66H535.0V78H548.0V66H561.0H574.0" fill="none" stroke="#18181b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="522" y="56" font-size="10.5" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1 0 1 0 1 0 1</text>
+<text x="350" y="140" font-size="11.5" fill="#3f3f46" text-anchor="middle">K 进制码元：如 4 进制码元 → 码元的离散状态有 4 个 → 4 种高低不同的信号波形 00、01、10、11</text>
+<text x="350" y="168" font-size="11.5" fill="#71717a" text-anchor="middle">1 个码元可以携带多个比特的信息量（二进制码元只携带 1 bit）</text>
+</svg>

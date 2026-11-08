@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 230" width="660" height="230" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="DMA 与 CPU 交替访存：一个 CPU 周期分为 C1、C2 两段">
+<title>DMA 与 CPU 交替访存：一个 CPU 周期分为 C1、C2 两段</title>
+<rect x="0.75" y="0.75" width="658.5" height="228.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">DMA 与 CPU 交替访存</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="120" y="80.4" font-size="12.5" fill="#18181b" text-anchor="end">主存工作时间</text>
+<path d="M130 76L640 76" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M130 60L130 210" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="120" y="126.4" font-size="12" fill="#2f8f57" text-anchor="end"><tspan x="120" dy="0">CPU 控制</tspan><tspan x="120" dy="15.6">并使用主存</tspan></text>
+<text x="120" y="182.4" font-size="12" fill="#d1493a" text-anchor="end"><tspan x="120" dy="0">DMA 控制</tspan><tspan x="120" dy="15.6">并使用主存</tspan></text>
+<path d="M130 130L165 130" fill="none" stroke="#2f8f57" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M200 130L235 130" fill="none" stroke="#2f8f57" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M270 130L305 130" fill="none" stroke="#2f8f57" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M340 130L375 130" fill="none" stroke="#2f8f57" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M410 130L445 130" fill="none" stroke="#2f8f57" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M480 130L515 130" fill="none" stroke="#2f8f57" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M550 130L585 130" fill="none" stroke="#2f8f57" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M165 186L200 186" fill="none" stroke="#d1493a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M235 186L270 186" fill="none" stroke="#d1493a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M305 186L340 186" fill="none" stroke="#d1493a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M375 186L410 186" fill="none" stroke="#d1493a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M445 186L480 186" fill="none" stroke="#d1493a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M515 186L550 186" fill="none" stroke="#d1493a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M585 186L620 186" fill="none" stroke="#d1493a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M130 80L130 200" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<path d="M165 80L165 200" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<path d="M200 80L200 200" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<path d="M235 80L235 200" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<path d="M270 80L270 200" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<path d="M305 80L305 200" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<path d="M340 80L340 200" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<path d="M375 80L375 200" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<path d="M410 80L410 200" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<path d="M445 80L445 200" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<path d="M480 80L480 200" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<path d="M515 80L515 200" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<path d="M550 80L550 200" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<path d="M585 80L585 200" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<path d="M620 80L620 200" fill="none" stroke="#a1a1aa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<text x="390" y="222" font-size="11.5" fill="#71717a" text-anchor="middle">C₁ 阶段 CPU 访存，C₂ 阶段 DMA 访存：不需要申请、归还总线</text>
+</svg>

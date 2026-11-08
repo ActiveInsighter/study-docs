@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" width="760" height="330" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="早期冯·诺依曼机以运算器为核心">
+<title>早期冯·诺依曼机以运算器为核心</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="758.5" height="328.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">冯·诺依曼机：以运算器为核心</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="120" y="140" width="110" height="44" rx="8" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="175" y="166.9" font-size="14" fill="#18181b" text-anchor="middle">输入设备</text>
+<rect x="320" y="140" width="120" height="44" rx="8" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="380" y="167.2" font-size="15" fill="#7f1d1d" text-anchor="middle" font-weight="700">运算器</text>
+<rect x="320" y="62" width="120" height="40" rx="8" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="380" y="86.9" font-size="14" fill="#18181b" text-anchor="middle">存储器</text>
+<rect x="320" y="240" width="120" height="40" rx="8" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="380" y="264.9" font-size="14" fill="#18181b" text-anchor="middle">控制器</text>
+<rect x="530" y="140" width="110" height="44" rx="8" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="585" y="166.9" font-size="14" fill="#18181b" text-anchor="middle">输出设备</text>
+<path d="M20 162L118 162" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="66" y="150" font-size="12" fill="#71717a" text-anchor="middle">原始数据</text>
+<path d="M230 162L318 162" fill="none" stroke="#3f3f46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M440 162L528 162" fill="none" stroke="#3f3f46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M640 162L740 162" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="690" y="150" font-size="12" fill="#71717a" text-anchor="middle">计算结果</text>
+<path d="M370 102L370 138" fill="none" stroke="#3f3f46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M390 138L390 102" fill="none" stroke="#3f3f46" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M380 238L380 186" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3" marker-end="url(#a3f3f46)"/>
+<path d="M320 260L181 260Q175 260 175 254L175 186" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3" marker-end="url(#a3f3f46)"/>
+<path d="M440 260L579 260Q585 260 585 254L585 186" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3" marker-end="url(#a3f3f46)"/>
+<path d="M320 82L276 82Q270 82 270 88L270 244Q270 250 276 250L318 250" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3" marker-end="url(#a3f3f46)"/>
+<text x="380" y="132" font-size="1" fill="#18181b" text-anchor="middle"></text>
+<text x="460" y="82" font-size="12" fill="#71717a">存放数据和程序</text>
+<text x="460" y="264" font-size="12" fill="#71717a">解释并指挥程序运行</text>
+<text x="175" y="204" font-size="11.5" fill="#71717a" text-anchor="middle">信息 → 机器可识别形式</text>
+<text x="585" y="204" font-size="11.5" fill="#71717a" text-anchor="middle">结果转换</text>
+<path d="M40 308L76 308" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="84" y="312" font-size="12.5" fill="#3f3f46">数据线</text>
+<path d="M160 308L196 308" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3"/>
+<text x="204" y="312" font-size="12.5" fill="#3f3f46">控制线和反馈线</text>
+</svg>
