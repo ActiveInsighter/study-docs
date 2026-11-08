@@ -1,0 +1,17 @@
+LABEL = 'OSI 参考模型、TCP/IP 参考模型与 TCP/IP 协议栈的对应'
+F = Fig(760, 360, 'OSI 模型 · TCP/IP 模型 · TCP/IP 协议栈')
+osi = [('应用层', 'amber'), ('表示层', 'amber'), ('会话层', 'amber'), ('传输层', 'blue'), ('网络层', 'green'), ('数据链路层', 'gold'), ('物理层', 'gold')]
+TONES['gold'] = ('#fdf1d8', '#c98a12', '#78350f')
+F.text(80, 60, 'OSI 参考模型', 12, color=INK, weight=600)
+for i, (t, tone) in enumerate(osi): F.box(30, 70 + i * 36, 100, 36, t, tone, 12, 0)
+F.text(260, 60, 'TCP/IP 参考模型', 12, color=INK, weight=600)
+F.box(200, 70, 120, 108, '应用层', 'amber', 13, 0); F.box(200, 178, 120, 36, '传输层', 'blue', 12, 0); F.box(200, 214, 120, 36, '网际层', 'green', 12, 0); F.box(200, 250, 120, 72, '网络接口层', 'gold', 12, 0)
+F.line(140, 124, 190, 124, ACCENT['blue'], 2, arrow='end'); F.text(165, 114, '合并', 11, color=ACCENT['blue'])
+F.line(140, 286, 190, 286, ACCENT['blue'], 2, arrow='end'); F.text(165, 276, '合并', 11, color=ACCENT['blue'])
+F.text(560, 60, 'TCP/IP 协议栈', 12, color=INK, weight=600)
+for i, t in enumerate(('HTTP', 'FTP', 'DNS')): F.box(400 + i * 60, 70, 60, 108, t, 'amber', 12, 0)
+F.box(400, 178, 90, 36, 'TCP', 'blue', 12, 0); F.box(490, 178, 90, 36, 'UDP', 'blue', 12, 0)
+F.box(400, 214, 330, 36, 'IP', 'green', 13, 0)
+for i, t in enumerate(('Ethernet', 'ATM', 'Frame Relay')): F.box(400 + i * 110, 250, 110, 72, t, 'gold', 12, 0)
+for y in (124, 196, 232, 286): F.line(330, y, 390, y, ACCENT['blue'], 1.6, arrow='end')
+F.text(380, 346, '沙漏形：IP 是核心，IP over everything，everything over IP', 11.5, color=MUTED)

@@ -1,0 +1,10 @@
+LABEL = '因特网的边缘部分与核心部分'
+F = Fig(600, 340, '因特网的工作方式')
+F.ellipse(300, 180, 270, 140, '', 'light'); F.text(400, 72, '因特网的边缘部分', 13, color=INK, weight=700)
+F.ellipse(300, 196, 140, 66, '', 'blue'); F.text(330, 196, '因特网的核心部分', 13, color=TONES['blue'][2], weight=700)
+for x, y in ((90, 130), (150, 90), (130, 250), (200, 290), (500, 250)): F.box(x - 12, y - 18, 24, 36, '', 'white', rx=3); F.line(x - 6, y - 8, x + 6, y - 8, INK2, 1)
+F.text(150, 66, '主机', 12, color=INK2)
+for x, y in ((240, 168), (240, 232), (370, 236)): F.ellipse(x, y, 16, 7, '', 'teal')
+F.text(240, 204, '路由器', 11.5, color=INK2)
+for x, y in ((210, 210), (320, 170), (320, 248)): F.circle(x, y, 10, '', 'violet')
+F.text(196, 186, '网络', 11.5, color=INK2)

@@ -760,3 +760,42 @@ def disk_grid(F, x, y, n=32, cols=4, hl=None, labels=True, cw=26, ch=16, dx=50, 
         if labels: F.text(bx - 3, by + ch / 2, str(b), 10, 'end', INK2, mono=True, valign='middle')
         cs[b] = (bx + cw / 2, by + ch / 2)
     return cs
+
+def wave_digital(F, x0, y, levels, bw, h=22, color=None, sw=1.8, hl=None):
+    """levels: list per half-bit of 0/1 (len = 2*bits). Draw square wave."""
+    color = color or INK
+    d = f'M{x0} {y - levels[0] * h}'
+    x = x0
+    for i, lv in enumerate(levels):
+        if i and lv != levels[i - 1]:
+            d += f'V{y - lv * h}'
+        x += bw / 2
+        d += f'H{x}'
+    F.path(d, color, sw)
+
+def encode(bits, kind):
+    out = []
+    prev = 0
+    lvl = 0
+    for i, b in enumerate(bits):
+        if kind == 'nrz': out += [b, b]
+        elif kind == 'rz': out += [b, 0]
+        elif kind == 'nrzi':
+            if b == 0: lvl ^= 1
+            out += [lvl, lvl]
+        elif kind == 'man': out += [1, 0] if b else [0, 1]
+        elif kind == 'dman':
+            if i == 0: first = [1, 0] if b else [0, 1]; out += first; lvl = first[1]
+            else:
+                start = lvl if b else lvl ^ 1
+                out += [start, start ^ 1]; lvl = start ^ 1
+    return out
+
+def sine_path(x0, y, w, cycles, amp, step=2):
+    import math
+    pts = []
+    n = int(w / step)
+    for i in range(n + 1):
+        x = x0 + i * step
+        pts.append(f'{x:.1f} {y - amp * math.sin(2 * math.pi * cycles * i / n):.1f}')
+    return 'M' + 'L'.join(pts)

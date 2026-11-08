@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="OSI 参考模型、TCP/IP 参考模型与 TCP/IP 协议栈的对应">
+<title>OSI 参考模型、TCP/IP 参考模型与 TCP/IP 协议栈的对应</title>
+<defs><marker id="a3b6fd4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3b6fd4"/></marker></defs>
+<rect x="0.75" y="0.75" width="758.5" height="358.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">OSI 模型 · TCP/IP 模型 · TCP/IP 协议栈</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="80" y="60" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">OSI 参考模型</text>
+<rect x="30" y="70" width="100" height="36" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="80" y="92.2" font-size="12" fill="#78350f" text-anchor="middle">应用层</text>
+<rect x="30" y="106" width="100" height="36" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="80" y="128.2" font-size="12" fill="#78350f" text-anchor="middle">表示层</text>
+<rect x="30" y="142" width="100" height="36" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="80" y="164.2" font-size="12" fill="#78350f" text-anchor="middle">会话层</text>
+<rect x="30" y="178" width="100" height="36" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="80" y="200.2" font-size="12" fill="#1e3a8a" text-anchor="middle">传输层</text>
+<rect x="30" y="214" width="100" height="36" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="80" y="236.2" font-size="12" fill="#14532d" text-anchor="middle">网络层</text>
+<rect x="30" y="250" width="100" height="36" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="80" y="272.2" font-size="12" fill="#78350f" text-anchor="middle">数据链路层</text>
+<rect x="30" y="286" width="100" height="36" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="80" y="308.2" font-size="12" fill="#78350f" text-anchor="middle">物理层</text>
+<text x="260" y="60" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">TCP/IP 参考模型</text>
+<rect x="200" y="70" width="120" height="108" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="260" y="128.6" font-size="13" fill="#78350f" text-anchor="middle">应用层</text>
+<rect x="200" y="178" width="120" height="36" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="260" y="200.2" font-size="12" fill="#1e3a8a" text-anchor="middle">传输层</text>
+<rect x="200" y="214" width="120" height="36" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="260" y="236.2" font-size="12" fill="#14532d" text-anchor="middle">网际层</text>
+<rect x="200" y="250" width="120" height="72" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="260" y="290.2" font-size="12" fill="#78350f" text-anchor="middle">网络接口层</text>
+<path d="M140 124L190 124" fill="none" stroke="#3b6fd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="165" y="114" font-size="11" fill="#3b6fd4" text-anchor="middle">合并</text>
+<path d="M140 286L190 286" fill="none" stroke="#3b6fd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="165" y="276" font-size="11" fill="#3b6fd4" text-anchor="middle">合并</text>
+<text x="560" y="60" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">TCP/IP 协议栈</text>
+<rect x="400" y="70" width="60" height="108" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="430" y="128.2" font-size="12" fill="#78350f" text-anchor="middle">HTTP</text>
+<rect x="460" y="70" width="60" height="108" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="490" y="128.2" font-size="12" fill="#78350f" text-anchor="middle">FTP</text>
+<rect x="520" y="70" width="60" height="108" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="550" y="128.2" font-size="12" fill="#78350f" text-anchor="middle">DNS</text>
+<rect x="400" y="178" width="90" height="36" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="445" y="200.2" font-size="12" fill="#1e3a8a" text-anchor="middle">TCP</text>
+<rect x="490" y="178" width="90" height="36" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="535" y="200.2" font-size="12" fill="#1e3a8a" text-anchor="middle">UDP</text>
+<rect x="400" y="214" width="330" height="36" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="565" y="236.6" font-size="13" fill="#14532d" text-anchor="middle">IP</text>
+<rect x="400" y="250" width="110" height="72" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="455" y="290.2" font-size="12" fill="#78350f" text-anchor="middle">Ethernet</text>
+<rect x="510" y="250" width="110" height="72" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="565" y="290.2" font-size="12" fill="#78350f" text-anchor="middle">ATM</text>
+<rect x="620" y="250" width="110" height="72" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="675" y="290.2" font-size="12" fill="#78350f" text-anchor="middle">Frame Relay</text>
+<path d="M330 124L390 124" fill="none" stroke="#3b6fd4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<path d="M330 196L390 196" fill="none" stroke="#3b6fd4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<path d="M330 232L390 232" fill="none" stroke="#3b6fd4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<path d="M330 286L390 286" fill="none" stroke="#3b6fd4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="380" y="346" font-size="11.5" fill="#71717a" text-anchor="middle">沙漏形：IP 是核心，IP over everything，everything over IP</text>
+</svg>
