@@ -18,7 +18,7 @@ layout: mind-map
   - 使用有两个稳定状态的物理器件就可以表示二进制的每一位了
   - 逻辑运算方便
   - 逻辑门电路设计方便
-- 二进制、八进制、十六进制、十进制相互转化 <img src="/images/408-mind-maps/thumb/co-0241.webp" alt="二进制、八进制、十六进制、十进制相互转化" width="240" height="204">
+- 二进制、八进制、十六进制、十进制相互转化 <img src="/images/408-mind-maps/co-0241.png" alt="二进制、八进制、十六进制、十进制相互转化" width="240" height="204">
 
   - 注意八进制和十六进制要补位
 - 真值、机器数
@@ -39,18 +39,18 @@ layout: mind-map
 - 无符号数
   - unsigned int、 unsigned long
     - 无符号数没有小数
-  - 【没有符号位】，有n个bit，则数的表示范围为：( 0 ~ 2^n - 1 ) <img src="/images/408-mind-maps/thumb/co-0123.webp" alt="【没有符号位】，有n个bit，则数的表示范围为：( 0 ~ 2^n - 1 )" width="240" height="76">
+  - 【没有符号位】，有n个bit，则数的表示范围为：( 0 ~ 2^n - 1 ) <img src="/images/408-mind-maps/co-0123.png" alt="【没有符号位】，有n个bit，则数的表示范围为：( 0 ~ 2^n - 1 )" width="240" height="76">
 
     - 指针、表示地址
 - 定点数
   - 小数点位置是固定的
     - 即小数点前面和后面的位数是固定的
   - 定点小数
-    - <img src="/images/408-mind-maps/thumb/co-0032.webp" alt="定点小数" width="240" height="79">
+    - <img src="/images/408-mind-maps/co-0032.png" alt="定点小数" width="240" height="79">
 
       - 只表示正的、负的小数
   - 定点整数
-    - <img src="/images/408-mind-maps/thumb/co-0244.webp" alt="定点整数" width="240" height="76">
+    - <img src="/images/408-mind-maps/co-0244.png" alt="定点整数" width="240" height="76">
 
       - 只表示正的、负的整数
 - 浮点数 --- 小数点位置是不固定的
@@ -201,7 +201,7 @@ layout: mind-map
     - GB2312-(19)80
       - 汉字 + 各种符号一共7445个
       - 一共16bit来存储，分为区号(8bit) + 位号(8bit)
-      - <img src="/images/408-mind-maps/thumb/co-0206.webp" alt="GB2312-(19)80" width="223" height="220">
+      - <img src="/images/408-mind-maps/co-0206.png" alt="GB2312-(19)80" width="223" height="220">
 
         - 区位码 = 区号 + 位号
         - 国标码 = 区位码 + 2020H
@@ -257,14 +257,14 @@ layout: mind-map
 - 考频：低
   - 18（标志位）、20大（ALU）
 - （补充）门电路和摩根定律
-  - <img src="/images/408-mind-maps/thumb/co-0322.webp" alt="（补充）门电路和摩根定律" width="240" height="158">
+  - <img src="/images/408-mind-maps/co-0322.png" alt="（补充）门电路和摩根定律" width="240" height="158">
 
-    - <img src="/images/408-mind-maps/thumb/co-0272.webp" alt="（补充）门电路和摩根定律" width="211" height="220">
+    - <img src="/images/408-mind-maps/co-0272.png" alt="（补充）门电路和摩根定律" width="211" height="220">
 
 - 一位全加器
-  - <img src="/images/408-mind-maps/thumb/co-0282.webp" alt="一位全加器" width="240" height="121">
+  - <img src="/images/408-mind-maps/co-0282.png" alt="一位全加器" width="240" height="121">
 
-    - 逻辑符号（简化） <img src="/images/408-mind-maps/thumb/co-0145.webp" alt="逻辑符号（简化）" width="240" height="164">
+    - 逻辑符号（简化） <img src="/images/408-mind-maps/co-0145.png" alt="逻辑符号（简化）" width="240" height="164">
 
       - 结构
         - 三个输入
@@ -284,38 +284,38 @@ layout: mind-map
           > 整理说明：修复 XMind 公式源码中无效的 array 列格式 {**l**}，改为 {l}；不改变公式数值。
 
 - 串行加法器
-  - 串行加法器：循环使用一位全加器 <img src="/images/408-mind-maps/thumb/co-0036.webp" alt="串行加法器：循环使用一位全加器" width="240" height="161">
+  - 串行加法器：循环使用一位全加器 <img src="/images/408-mind-maps/co-0036.png" alt="串行加法器：循环使用一位全加器" width="240" height="161">
 
     - 如果操作数长n位，加法就要分n次进行，每次产生一位和，并且串行逐位地送回寄存器。
     - 问题：每一位的运算必须基于上一次的运算才能进行，非常浪费时间
 - 串行进位加法器
-  - 把多个全加器串在一起，和串行加法器问题一致，速度一样的慢 <img src="/images/408-mind-maps/thumb/co-0122.webp" alt="把多个全加器串在一起，和串行加法器问题一致，速度一样的慢" width="240" height="92">
+  - 把多个全加器串在一起，和串行加法器问题一致，速度一样的慢 <img src="/images/408-mind-maps/co-0122.png" alt="把多个全加器串在一起，和串行加法器问题一致，速度一样的慢" width="240" height="92">
 
     - 串行进位的并行加法器：把n个全加器串接起来，就可进行两个n位数的相加。
     - 串行进位又称为行波进位，每一级进位直接依赖于前一级的进位，即进位信号是【逐级形成】。
 - 并行进位加法器
   - 理论依据
-    - 相互间的进位没有依赖关系，只要同时到达，可以同时生成C1~C3 <img src="/images/408-mind-maps/thumb/co-0058.webp" alt="相互间的进位没有依赖关系，只要同时到达，可以同时生成C1~C3" width="240" height="56">
+    - 相互间的进位没有依赖关系，只要同时到达，可以同时生成C1~C3 <img src="/images/408-mind-maps/co-0058.png" alt="相互间的进位没有依赖关系，只要同时到达，可以同时生成C1~C3" width="240" height="56">
 
       - 先行进位、超前进位
   - 四位CLA部件/CLA电路
-    - <img src="/images/408-mind-maps/thumb/co-0257.webp" alt="四位CLA部件/CLA电路" width="240" height="110">
+    - <img src="/images/408-mind-maps/co-0257.png" alt="四位CLA部件/CLA电路" width="240" height="110">
 
   - 四位全先行进位加法器
-    - <img src="/images/408-mind-maps/thumb/co-0264.webp" alt="四位全先行进位加法器" width="240" height="86">
+    - <img src="/images/408-mind-maps/co-0264.png" alt="四位全先行进位加法器" width="240" height="86">
 
       - 简化
-        - 把几(4)个加法器串在一起，这样可以并发的计算4bit的数据 <img src="/images/408-mind-maps/thumb/co-0128.webp" alt="把几(4)个加法器串在一起，这样可以并发的计算4bit的数据" width="240" height="188">
+        - 把几(4)个加法器串在一起，这样可以并发的计算4bit的数据 <img src="/images/408-mind-maps/co-0128.png" alt="把几(4)个加法器串在一起，这样可以并发的计算4bit的数据" width="240" height="188">
 
 - 多级并行进位加法器
-  - <img src="/images/408-mind-maps/thumb/co-0051.webp" alt="多级并行进位加法器" width="240" height="162">
+  - <img src="/images/408-mind-maps/co-0051.png" alt="多级并行进位加法器" width="240" height="162">
 
 - 带标记加法器
   - 标志位的生成
     - PSW用来存放两类信息：
       - 一类是体现当前指令执行结果的各种状态信息，称为状态标志，如有无借位进位（CF位）、有无溢出（OF位）、结果正负（SF位）、结果是否为零（ZF位）、奇偶标志位（PF位）等；
         - 另一类是存放控制信息，称为控制状态，如允许中断(IF位)，跟踪标志（TF位），方向标志(DF)等。有些机器中将PSW称为标志寄存器FR（Flag Register）。
-  - <img src="/images/408-mind-maps/thumb/co-0137.webp" alt="带标记加法器" width="225" height="220">
+  - <img src="/images/408-mind-maps/co-0137.png" alt="带标记加法器" width="225" height="220">
 
     - ZF：
       - F输出全为0，ZF = 1 $ZF = \overline{F_n + \dots + F_2+F_1}$
@@ -336,21 +336,21 @@ layout: mind-map
         - 减法运算Cin = 1，Cout = 0说明出现了借位，就是A比B小
 
   - 带标记加法器逻辑电路
-    - <img src="/images/408-mind-maps/thumb/co-0178.webp" alt="带标记加法器逻辑电路" width="240" height="131">
+    - <img src="/images/408-mind-maps/co-0178.png" alt="带标记加法器逻辑电路" width="240" height="131">
 
       - Cn和Cout一样
 - 多路选择器、三态门
-  - 多路选择器 <img src="/images/408-mind-maps/thumb/co-0299.webp" alt="多路选择器" width="240" height="162">
+  - 多路选择器 <img src="/images/408-mind-maps/co-0299.png" alt="多路选择器" width="240" height="162">
 
     - k个输入，m要求 $m \ge \left \lceil log_2k \right \rceil  bit$
 
-      - 一位ALU的结构（有三种操作） <img src="/images/408-mind-maps/thumb/co-0112.webp" alt="一位ALU的结构（有三种操作）" width="240" height="152">
+      - 一位ALU的结构（有三种操作） <img src="/images/408-mind-maps/co-0112.png" alt="一位ALU的结构（有三种操作）" width="240" height="152">
 
-  - 三态门 <img src="/images/408-mind-maps/thumb/co-0016.webp" alt="三态门" width="237" height="220">
+  - 三态门 <img src="/images/408-mind-maps/co-0016.png" alt="三态门" width="237" height="220">
 
 - ALU为组合逻辑电路
   - 组合逻辑电路：没有存储单元只包含了电路。 时序逻辑电路：既有电路又有存储单元
-  - ALU的基本结构 <img src="/images/408-mind-maps/thumb/co-0223.webp" alt="ALU的基本结构" width="240" height="187">
+  - ALU的基本结构 <img src="/images/408-mind-maps/co-0223.png" alt="ALU的基本结构" width="240" height="187">
 
 - 运算器的组成部分
   - ALU
@@ -396,7 +396,7 @@ layout: mind-map
       ```
 
 - 循环移位
-  - 带进制位和不带进制位 <img src="/images/408-mind-maps/thumb/co-0065.webp" alt="带进制位和不带进制位" width="240" height="95">
+  - 带进制位和不带进制位 <img src="/images/408-mind-maps/co-0065.png" alt="带进制位和不带进制位" width="240" height="95">
 
     - CF中不是0就是1
     - 带进位位：大循环
@@ -413,7 +413,7 @@ layout: mind-map
     - 1\. 使用补码来进行加法，符号位参与运算
     - 2\. 如果是 A - B，改为补码形式的 A + (-B)来进行计算
   - 运算电路：
-    - <img src="/images/408-mind-maps/thumb/co-0245.webp" alt="运算电路：" width="240" height="132">
+    - <img src="/images/408-mind-maps/co-0245.png" alt="运算电路：" width="240" height="132">
 
       - ZF、OF、SF、CF的意义
         - zero flag，overflow flag，signal flag，carry flag
@@ -429,18 +429,18 @@ layout: mind-map
       - 原码、反码、补码计算器
         [参考链接](<https://chenwenhang.github.io/code-switch/>)
 
-      - <img src="/images/408-mind-maps/thumb/co-0225.webp" alt="溢出的含义：" width="240" height="119">
+      - <img src="/images/408-mind-maps/co-0225.png" alt="溢出的含义：" width="240" height="119">
 
     - 检测手段
       - 单符号位
-        - 计算出结果后进行检测，可以检测出异常 <img src="/images/408-mind-maps/thumb/co-0169.webp" alt="计算出结果后进行检测，可以检测出异常" width="240" height="142">
+        - 计算出结果后进行检测，可以检测出异常 <img src="/images/408-mind-maps/co-0169.png" alt="计算出结果后进行检测，可以检测出异常" width="240" height="142">
 
           - 无法检测是正溢出还是负溢出
       - 符号位 + 进制位
-        - ( 正溢出 -&gt; 0,1 ) ；( 负溢出 -&gt; 1,0 ) <img src="/images/408-mind-maps/thumb/co-0136.webp" alt="( 正溢出 -&amp;amp;gt; 0,1 ) ；( 负溢出 -&amp;amp;gt; 1,0 )" width="240" height="144">
+        - ( 正溢出 -&gt; 0,1 ) ；( 负溢出 -&gt; 1,0 ) <img src="/images/408-mind-maps/co-0136.png" alt="( 正溢出 -&amp;amp;gt; 0,1 ) ；( 负溢出 -&amp;amp;gt; 1,0 )" width="240" height="144">
 
       - 双符号位
-        - ( 正溢出 -&gt; 0,1 ) ；( 负溢出 -&gt; 1,0 ) <img src="/images/408-mind-maps/thumb/co-0104.webp" alt="( 正溢出 -&amp;amp;gt; 0,1 ) ；( 负溢出 -&amp;amp;gt; 1,0 )" width="240" height="128">
+        - ( 正溢出 -&gt; 0,1 ) ；( 负溢出 -&gt; 1,0 ) <img src="/images/408-mind-maps/co-0104.png" alt="( 正溢出 -&amp;amp;gt; 0,1 ) ；( 负溢出 -&amp;amp;gt; 1,0 )" width="240" height="128">
 
           - 存储的时候是单符号位，运算时扩展成了双符号位。
       - 拓展
@@ -451,7 +451,7 @@ layout: mind-map
     - 解决办法
       - 通过符号扩展来进行溢出控制，例如 int (4B) -&gt; long(8B)，扩展方法和算术位移一致
 - 【乘法运算】
-  - <img src="/images/408-mind-maps/thumb/co-0080.webp" alt="【乘法运算】" width="178" height="220">
+  - <img src="/images/408-mind-maps/co-0080.png" alt="【乘法运算】" width="178" height="220">
 
     - ACC：乘积高位
     - MQ：乘数、乘积低位
@@ -466,7 +466,7 @@ layout: mind-map
         - （X\*Y）
   - 【原码乘法】 符号另算。多次累加，通过MQ最后一位来判断是否让ACC加X，每次都让右移，最后结果ACC为高位，MQ为低位
     - 硬件构成
-      - <img src="/images/408-mind-maps/thumb/co-0229.webp" alt="硬件构成" width="240" height="106">
+      - <img src="/images/408-mind-maps/co-0229.png" alt="硬件构成" width="240" height="106">
 
         - ACC有n+1位，MQ也有n+1位
     - 加法规则：
@@ -492,12 +492,12 @@ layout: mind-map
     - 概要：配图
       概要范围：[运算流程：](#focus=%E8%BF%90%E7%AE%97%E6%B5%81%E7%A8%8B%EF%BC%9A)
 
-      - <img src="/images/408-mind-maps/thumb/co-0118.webp" alt="【原码乘法】 符号另算。多次累加，通过MQ最后一位来判断是否让ACC加X，每次都让右移，最后结果ACC为高位，MQ为低位" width="240" height="160">
+      - <img src="/images/408-mind-maps/co-0118.png" alt="【原码乘法】 符号另算。多次累加，通过MQ最后一位来判断是否让ACC加X，每次都让右移，最后结果ACC为高位，MQ为低位" width="240" height="160">
 
     - 批注：n次位移，n次运算
   - 【补码乘法】 符号参与运算，双符号位，MQ多一个辅助位，ACC是+/- X或者不变看MQ后两位之差，然后位移。【最后还有一次加法】
     - 硬件构成
-      - <img src="/images/408-mind-maps/thumb/co-0173.webp" alt="硬件构成" width="240" height="115">
+      - <img src="/images/408-mind-maps/co-0173.png" alt="硬件构成" width="240" height="115">
 
         分组说明：MQ有辅助位，ACC、X均为双符号位；对应：[MQ为 n+2 位（因为多了一位辅助位）](#focus=MQ%E4%B8%BA%20n%2B2%20%E4%BD%8D%EF%BC%88%E5%9B%A0%E4%B8%BA%E5%A4%9A%E4%BA%86%E4%B8%80%E4%BD%8D%E8%BE%85%E5%8A%A9%E4%BD%8D%EF%BC%89)、[同样ACC和X都是n+2位（因为CPU要保证寄存器长度一致），那么就可以采用双符号位了](#focus=%E5%90%8C%E6%A0%B7ACC%E5%92%8CX%E9%83%BD%E6%98%AFn%2B2%E4%BD%8D%EF%BC%88%E5%9B%A0%E4%B8%BACPU%E8%A6%81%E4%BF%9D%E8%AF%81%E5%AF%84%E5%AD%98%E5%99%A8%E9%95%BF%E5%BA%A6%E4%B8%80%E8%87%B4%EF%BC%89%EF%BC%8C%E9%82%A3%E4%B9%88%E5%B0%B1%E5%8F%AF%E4%BB%A5%E9%87%87%E7%94%A8%E5%8F%8C%E7%AC%A6%E5%8F%B7%E4%BD%8D%E4%BA%86)
 
@@ -524,7 +524,7 @@ layout: mind-map
     - 概要：配图
       概要范围：[运算流程：](#focus=%E8%BF%90%E7%AE%97%E6%B5%81%E7%A8%8B%EF%BC%9A)
 
-      - <img src="/images/408-mind-maps/thumb/co-0262.webp" alt="【补码乘法】 符号参与运算，双符号位，MQ多一个辅助位，ACC是+/- X或者不变看MQ后两位之差，然后位移。【最后还有一次加法】" width="240" height="136">
+      - <img src="/images/408-mind-maps/co-0262.png" alt="【补码乘法】 符号参与运算，双符号位，MQ多一个辅助位，ACC是+/- X或者不变看MQ后两位之差，然后位移。【最后还有一次加法】" width="240" height="136">
 
     - 批注：n次位移，n+1次运算
   - 整数运算和小数运算的符号位位置相同
@@ -532,16 +532,16 @@ layout: mind-map
   - 批注：原补码乘法，区别在于原码只需看MQ最后一位，补码需要看MQ的辅助位和最后一位
 - 乘法电路
   - 无符号数
-    - <img src="/images/408-mind-maps/thumb/co-0269.webp" alt="无符号数" width="240" height="117">
+    - <img src="/images/408-mind-maps/co-0269.png" alt="无符号数" width="240" height="117">
 
-      - 自己尝试一下~ <img src="/images/408-mind-maps/thumb/co-0020.webp" alt="自己尝试一下~" width="240" height="128">
+      - 自己尝试一下~ <img src="/images/408-mind-maps/co-0020.png" alt="自己尝试一下~" width="240" height="128">
 
-        - 阵列乘法器，可以同时得到多位的乘积 <img src="/images/408-mind-maps/thumb/co-0230.webp" alt="阵列乘法器，可以同时得到多位的乘积" width="240" height="108">
+        - 阵列乘法器，可以同时得到多位的乘积 <img src="/images/408-mind-maps/co-0230.png" alt="阵列乘法器，可以同时得到多位的乘积" width="240" height="108">
 
           [参考链接](<https://zhuanlan.zhihu.com/p/139173424>)
 
   - 有符号数
-    - 补码一位乘法逻辑结构图 <img src="/images/408-mind-maps/thumb/co-0100.webp" alt="补码一位乘法逻辑结构图" width="240" height="129">
+    - 补码一位乘法逻辑结构图 <img src="/images/408-mind-maps/co-0100.png" alt="补码一位乘法逻辑结构图" width="240" height="129">
 
       - 注意事项：这里电路（MIPS）中的【补码】乘法是单符号位的，n次加移就够了
         - 上面学的双符号位【补码】乘法要n+1次加法、n次移位
@@ -551,7 +551,7 @@ layout: mind-map
   - 硬件检测
     - 定点小数应是除数 &gt; 被除数
     - 如果第一步的商运算后的结果为 1，那么就说明除数 &lt;= 被除数，无法用定点小数来进行计算，故报错
-  - <img src="/images/408-mind-maps/thumb/co-0080.webp" alt="【除法运算】" width="178" height="220">
+  - <img src="/images/408-mind-maps/co-0080.png" alt="【除法运算】" width="178" height="220">
 
     - ACC：被除数、余数
     - MQ：商
@@ -565,7 +565,7 @@ layout: mind-map
   - 【原码除法】 先商一，然后相减后发现是负数了，再处理，逐渐左移，最后MQ是商，ACC是余数
     - 恢复余数法
       - 硬件构成
-        - <img src="/images/408-mind-maps/thumb/co-0276.webp" alt="硬件构成" width="240" height="143">
+        - <img src="/images/408-mind-maps/co-0276.png" alt="硬件构成" width="240" height="143">
 
           - ACC有n+1位，MQ也有n+1位
       - 运算流程：
@@ -585,11 +585,11 @@ layout: mind-map
       - 概要：配图
         概要范围：[运算流程：](#focus=%E8%BF%90%E7%AE%97%E6%B5%81%E7%A8%8B%EF%BC%9A)
 
-        - <img src="/images/408-mind-maps/thumb/co-0030.webp" alt="恢复余数法" width="240" height="140">
+        - <img src="/images/408-mind-maps/co-0030.png" alt="恢复余数法" width="240" height="140">
 
     - 加减交替法
       - 优化思路：
-        - <img src="/images/408-mind-maps/thumb/co-0158.webp" alt="优化思路：" width="240" height="101">
+        - <img src="/images/408-mind-maps/co-0158.png" alt="优化思路：" width="240" height="101">
 
         - 不进行恢复余数的操作，将操作更改如下
           - 计算机每次都默认商 1，然后进行补码减法，对于减法后的结果，如果结果为正，则移位进行下一次商操作。
@@ -603,10 +603,10 @@ layout: mind-map
       - 概要：配图
         概要范围：[优化思路：](#focus=%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF%EF%BC%9A)、[其他特点：](#focus=%E5%85%B6%E4%BB%96%E7%89%B9%E7%82%B9%EF%BC%9A)
 
-        - <img src="/images/408-mind-maps/thumb/co-0161.webp" alt="加减交替法" width="240" height="126">
+        - <img src="/images/408-mind-maps/co-0161.png" alt="加减交替法" width="240" height="126">
 
   - 【补码除法】 符号位参与运算，如果X和ACC异号，则左移后相加，如果X和ACC同号，则左移后相减
-    - <img src="/images/408-mind-maps/thumb/co-0126.webp" alt="【补码除法】 符号位参与运算，如果X和ACC异号，则左移后相加，如果X和ACC同号，则左移后相减" width="240" height="122">
+    - <img src="/images/408-mind-maps/co-0126.png" alt="【补码除法】 符号位参与运算，如果X和ACC异号，则左移后相加，如果X和ACC同号，则左移后相减" width="240" height="122">
 
       - 原码除法采用默认商 1
         - 如果结果为正：左移 + X
@@ -620,13 +620,13 @@ layout: mind-map
         - 如果ACC和X的符号同号，则商 1
           - (ACC, MQ)左移一位， - X
 - 除法电路
-  - R ÷ Y = Q...R / ACC ÷ X = MQ ... ACC <img src="/images/408-mind-maps/thumb/co-0013.webp" alt="R ÷ Y = Q...R / ACC ÷ X = MQ ... ACC" width="240" height="140">
+  - R ÷ Y = Q...R / ACC ÷ X = MQ ... ACC <img src="/images/408-mind-maps/co-0013.png" alt="R ÷ Y = Q...R / ACC ÷ X = MQ ... ACC" width="240" height="140">
 
     - 定点小数
-      - <img src="/images/408-mind-maps/thumb/co-0008.webp" alt="定点小数" width="240" height="121">
+      - <img src="/images/408-mind-maps/co-0008.png" alt="定点小数" width="240" height="121">
 
     - 定点整数
-      - <img src="/images/408-mind-maps/thumb/co-0142.webp" alt="定点整数" width="240" height="145">
+      - <img src="/images/408-mind-maps/co-0142.png" alt="定点整数" width="240" height="145">
 
     - 批注：复习：Q中写值0或1，然后左移
 - 总结：
@@ -641,7 +641,7 @@ layout: mind-map
 - 强制类型转化
   - 原则：不改变具体数值，只改变解释方式
   - 例如：
-    - <img src="/images/408-mind-maps/thumb/co-0092.webp" alt="例如：" width="240" height="138">
+    - <img src="/images/408-mind-maps/co-0092.png" alt="例如：" width="240" height="138">
 
 - 长整数变短整数
   - 高位截断，低位保留
@@ -650,7 +650,7 @@ layout: mind-map
     - unsigned 就是直接补0
     - short/int/long 就是按正负补0/补 1
   - 由 short 变为 unsigned int 的过程
-    - 首先先把short【扩展】为int类型，然后再【转为】unsigned int的【表示方法】 <img src="/images/408-mind-maps/thumb/co-0239.webp" alt="首先先把short【扩展】为int类型，然后再【转为】unsigned int的【表示方法】" width="240" height="214">
+    - 首先先把short【扩展】为int类型，然后再【转为】unsigned int的【表示方法】 <img src="/images/408-mind-maps/co-0239.png" alt="首先先把short【扩展】为int类型，然后再【转为】unsigned int的【表示方法】" width="240" height="214">
 
       - 如果自己手动修改转化的方式：先转为unsigned再扩展，就会很系统默认的不一样
 - 数据存储
@@ -692,12 +692,12 @@ layout: mind-map
 
   - 边界对齐
     - 边界对齐方式
-      - 边界对齐方式，最大可能满足一次访存可以直接获得一个字的数据 <img src="/images/408-mind-maps/thumb/co-0048.webp" alt="边界对齐方式，最大可能满足一次访存可以直接获得一个字的数据" width="240" height="125">
+      - 边界对齐方式，最大可能满足一次访存可以直接获得一个字的数据 <img src="/images/408-mind-maps/co-0048.png" alt="边界对齐方式，最大可能满足一次访存可以直接获得一个字的数据" width="240" height="125">
 
         - 空间换时间
         - RISC通常采用边界对齐，可以适应指令流水
     - 边界不对齐方式
-      - 边界不对齐方式可能2B的半字都需要2次访存 <img src="/images/408-mind-maps/thumb/co-0300.webp" alt="边界不对齐方式可能2B的半字都需要2次访存" width="240" height="89">
+      - 边界不对齐方式可能2B的半字都需要2次访存 <img src="/images/408-mind-maps/co-0300.png" alt="边界不对齐方式可能2B的半字都需要2次访存" width="240" height="89">
 
         - 时间换空间
 - 考频：高
@@ -714,7 +714,7 @@ layout: mind-map
     - E为定点整数，M为定点小数
     - 其中E和M可以用补码或原码来表示
       - 注意计算十进制值的时候补码为负要转为对应真值在写值
-  - 一般格式 <img src="/images/408-mind-maps/thumb/co-0004.webp" alt="一般格式" width="240" height="75">
+  - 一般格式 <img src="/images/408-mind-maps/co-0004.png" alt="一般格式" width="240" height="75">
 
   - 尾数规格化
     - 原码
@@ -770,7 +770,7 @@ layout: mind-map
         - 直接在补码那里进行加法运算，例如：1, 000 0001 + 0111 1111(偏) = 0000 0000
       - 【尾数】用原码表示，且隐藏最高位的1
     - 不同精度
-      - <img src="/images/408-mind-maps/thumb/co-0099.webp" alt="不同精度" width="240" height="196">
+      - <img src="/images/408-mind-maps/co-0099.png" alt="不同精度" width="240" height="196">
 
     - 特殊的浮点数情况
       - 配图
@@ -811,15 +811,15 @@ layout: mind-map
             省略号表示原图略去的中间数值。移码表示的数较便于按编码大小比较；其编码由 8 位补码的符号位取反得到。
 
 - 举个举例：
-  - <img src="/images/408-mind-maps/thumb/co-0023.webp" alt="举个举例：" width="240" height="174">
+  - <img src="/images/408-mind-maps/co-0023.png" alt="举个举例：" width="240" height="174">
 
     - IEEE 754 浮点数 - 在线工具
       [参考链接](<https://www.toolhelper.cn/Digit/FractionConvert>)
 
 - 类型转换
-  - <img src="/images/408-mind-maps/thumb/co-0311.webp" alt="类型转换" width="240" height="149">
+  - <img src="/images/408-mind-maps/co-0311.png" alt="类型转换" width="240" height="149">
 
-- <img src="/images/408-mind-maps/thumb/co-0202.webp" alt="END" width="48" height="48">
+- <img src="/images/408-mind-maps/co-0202.png" alt="END" width="48" height="48">
 
 ## 原图关联关系
 

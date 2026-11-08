@@ -7,7 +7,6 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 const EMPTY_MESSAGE = '思维导图内容为空。请补充至少一个标题。';
 const RENDER_ERROR_MESSAGE = '思维导图暂时无法生成，请检查 Markdown 的层级结构。';
 const FOCUS_HASH_PREFIX = '#focus=';
-const THUMBNAIL_SEGMENT = '/thumb/';
 /** Visible nodes above which the first view folds back to the root's children. */
 const DENSE_MAP_NODES = 48;
 
@@ -274,7 +273,7 @@ export function useMindMap({
         cleanups.push(() => toolbar.destroy());
 
         // Site links inside labels navigate in-app; focus links move to a node;
-        // images open in the preview dialog at full resolution. Hit-test in layout
+        // images open in the preview dialog. Hit-test in layout
         // coordinates before the view handles the click.
         const handleClick = (event: MouseEvent) => {
           if (event.defaultPrevented || event.button !== 0) return;
@@ -307,7 +306,7 @@ export function useMindMap({
           if (src) {
             event.preventDefault();
             callbacksRef.current.onPreviewImage({
-              src: src.replace(THUMBNAIL_SEGMENT, '/'),
+              src,
               alt: '配图',
             });
           }

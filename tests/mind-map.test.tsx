@@ -91,7 +91,7 @@ describe('transformMindMapMarkdown (Markmap 1.0)', () => {
       '  |---|---|',
       '  | 1 | 3 |',
       '## 配图',
-      '- <img src="/images/408-mind-maps/thumb/a.webp" alt="图" width="240" height="120">',
+      '- <img src="/images/408-mind-maps/a.png" alt="图" width="240" height="120">',
     ].join('\n'),
   );
   const nodes = flatten(root);
@@ -113,7 +113,7 @@ describe('transformMindMapMarkdown (Markmap 1.0)', () => {
       .find((inline) => inline.type === 'image');
     expect(image).toMatchObject({
       type: 'image',
-      url: '/images/408-mind-maps/thumb/a.webp',
+      url: '/images/408-mind-maps/a.png',
       data: { width: 240, height: 120 },
     });
     expect(JSON.stringify(root)).not.toContain('"position"');

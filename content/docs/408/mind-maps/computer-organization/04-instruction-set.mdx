@@ -57,9 +57,9 @@ layout: mind-map
 - 定长操作码：
   - 操作码有n bit，则一共有2^n个指令
 - 扩展操作码：
-  - <img src="/images/408-mind-maps/thumb/co-0318.webp" alt="扩展操作码：" width="188" height="220">
+  - <img src="/images/408-mind-maps/co-0318.png" alt="扩展操作码：" width="188" height="220">
 
-    - 更灵活的：动态的扩展操作码 <img src="/images/408-mind-maps/thumb/co-0124.webp" alt="更灵活的：动态的扩展操作码" width="240" height="73">
+    - 更灵活的：动态的扩展操作码 <img src="/images/408-mind-maps/co-0124.png" alt="更灵活的：动态的扩展操作码" width="240" height="73">
 
 - 指令系统是软硬件的界面
   - 软件依靠指令和硬件进行交互
@@ -89,19 +89,19 @@ layout: mind-map
   - 指令格式：
     - &lt;OP，寻址特征，ADD&gt;
   - 隐含寻址
-    - <img src="/images/408-mind-maps/thumb/co-0235.webp" alt="隐含寻址" width="240" height="122">
+    - <img src="/images/408-mind-maps/co-0235.png" alt="隐含寻址" width="240" height="122">
 
       - 即两个操作数：一个直接寻址，一个在ACC
       - 给出一个操作数A的地址，与ACC进行运算
     - 批注：EA = A + ACC
   - 普通寻址
     - 立即数寻址
-      - <img src="/images/408-mind-maps/thumb/co-0252.webp" alt="立即数寻址" width="240" height="143">
+      - <img src="/images/408-mind-maps/co-0252.png" alt="立即数寻址" width="240" height="143">
 
         - 直接给出操作的立即数的数字
       - 批注：无EA，#A
     - 直接寻址
-      - <img src="/images/408-mind-maps/thumb/co-0226.webp" alt="直接寻址" width="240" height="94">
+      - <img src="/images/408-mind-maps/co-0226.png" alt="直接寻址" width="240" height="94">
 
         - 直接存有操作数的地址，EA = A
         - 优缺点
@@ -109,7 +109,7 @@ layout: mind-map
           - 缺点：寻址的区间被A的地址所约束
       - 批注：EA = A
     - 间接寻址
-      - <img src="/images/408-mind-maps/thumb/co-0024.webp" alt="间接寻址" width="240" height="106">
+      - <img src="/images/408-mind-maps/co-0024.png" alt="间接寻址" width="240" height="106">
 
         - 可能存在多次间接寻址
           - 多次间接寻址需要设置一个bit位来指明是否是最后一次寻址
@@ -121,7 +121,7 @@ layout: mind-map
       - 批注：EA = (A)
   - 寄存器寻址
     - 寄存器寻址
-      - <img src="/images/408-mind-maps/thumb/co-0084.webp" alt="寄存器寻址" width="171" height="220">
+      - <img src="/images/408-mind-maps/co-0084.png" alt="寄存器寻址" width="171" height="220">
 
         - 数据码部分的是寄存器编号，寄存器中存有操作数
         - 优缺点
@@ -130,13 +130,13 @@ layout: mind-map
       - 批注：EA = Ri
     - 寄存器间接寻址
 
-      - <img src="/images/408-mind-maps/thumb/co-0078.webp" alt="寄存器间接寻址" width="240" height="206">
+      - <img src="/images/408-mind-maps/co-0078.png" alt="寄存器间接寻址" width="240" height="206">
 
         - 数据码部分是指明的寄存器编号，寄存器中存有操作数的地址
       - 批注：EA = (Ri）
   - 偏移寻址
     - 相对寻址
-      - <img src="/images/408-mind-maps/thumb/co-0192.webp" alt="相对寻址" width="240" height="129">
+      - <img src="/images/408-mind-maps/co-0192.png" alt="相对寻址" width="240" height="129">
 
         - A是一个补码偏移量
         - EA = (PC) + A
@@ -147,7 +147,7 @@ layout: mind-map
           - 程序浮动：一段代码在程序内部跳转
       - 批注：EA = (PC) + A
     - 基址寻址
-      - <img src="/images/408-mind-maps/thumb/co-0200.webp" alt="基址寻址" width="240" height="85">
+      - <img src="/images/408-mind-maps/co-0200.png" alt="基址寻址" width="240" height="85">
 
         - EA = (BR) + A
           - 其中可以是BR，也可以是Ri
@@ -155,7 +155,7 @@ layout: mind-map
           - 编制浮动程序：一个程序在内存中浮动
       - 批注：EA = (BR) + A
     - 变址寻址
-      - <img src="/images/408-mind-maps/thumb/co-0050.webp" alt="变址寻址" width="240" height="153">
+      - <img src="/images/408-mind-maps/co-0050.png" alt="变址寻址" width="240" height="153">
 
         - IX用户可以编程设置
         - 面向用户的，可以方便的设置A为某个数组的首部地址，然后执行EA = A + (IX)
@@ -269,7 +269,7 @@ layout: mind-map
     }
     ```
 
-    - <img src="/images/408-mind-maps/thumb/co-0294.webp" alt="例题举例：" width="198" height="220">
+    - <img src="/images/408-mind-maps/co-0294.png" alt="例题举例：" width="198" height="220">
 
       - 考题：
       - 1\. 考C语言：递归次数
@@ -279,7 +279,7 @@ layout: mind-map
       - 5\. 带标记的乘法器OF判断；异常处理：溢出陷入指令。
         - 并且告诉了R\[eax\] = R\[eax\] \* R\[ecx\]
 - AT&amp;T和Intel的汇编格式
-  - 汇编语法格式区分 <img src="/images/408-mind-maps/thumb/co-0132.webp" alt="汇编语法格式区分" width="240" height="54">
+  - 汇编语法格式区分 <img src="/images/408-mind-maps/co-0132.png" alt="汇编语法格式区分" width="240" height="54">
 
   - 批注：22
 - 考频：低
@@ -309,5 +309,5 @@ layout: mind-map
     |控制方式|绝大多数是微程序控制|绝大多数是组合逻辑控制|
     |指令流水线|可以通过一定方式实现|必须实现|
 
-- <img src="/images/408-mind-maps/thumb/co-0221.webp" alt="END" width="48" height="48">
+- <img src="/images/408-mind-maps/co-0221.png" alt="END" width="48" height="48">
 ````

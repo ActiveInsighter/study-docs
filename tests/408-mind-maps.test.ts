@@ -75,7 +75,7 @@ describe('408 chapter mind maps', () => {
     }
   });
 
-  it('resolves cross-chapter links, focus links and local WebP images', () => {
+  it('resolves cross-chapter links, focus links and local full-size PNG images', () => {
     const referencedAssets = new Set<string>();
     const pageUrls = new Set(
       courses.flatMap(([course]) =>
@@ -93,17 +93,16 @@ describe('408 chapter mind maps', () => {
           expect(decodeURIComponent(label).trim().length).toBeGreaterThan(0);
         }
         expect(document).not.toMatch(/\/images\/408-mind-maps\/[^"]+\.svg/);
-        for (const [, filename] of document.matchAll(/<img src="\/images\/408-mind-maps\/thumb\/([a-z0-9-]+\.webp)" alt="[^"]*" width="\d+" height="\d+">/g)) {
+        expect(document).not.toMatch(/408-mind-maps\/[^"]*\.webp|408-mind-maps\/thumb\//);
+        for (const [, filename] of document.matchAll(/<img src="\/images\/408-mind-maps\/([a-z0-9-]+\.png)" alt="[^"]*" width="\d+" height="\d+">/g)) {
           referencedAssets.add(filename);
-          // The map shows the thumbnail; the preview dialog opens the full size.
-          expect(existsSync(join(assetRoot, 'thumb', filename))).toBe(true);
           expect(existsSync(join(assetRoot, filename))).toBe(true);
         }
       }
     }
     // Every image file is referenced: unused heading icons were removed.
-    expect(readdirSync(assetRoot).filter((name) => name.endsWith('.webp'))).toHaveLength(referencedAssets.size);
-    expect(readdirSync(join(assetRoot, 'thumb'))).toHaveLength(referencedAssets.size);
+    // One uncompressed full-size PNG per referenced image, nothing else.
+    expect(readdirSync(assetRoot).sort()).toEqual([...referencedAssets].sort());
     expect(readdirSync(assetRoot).filter((name) => name.endsWith('.svg'))).toHaveLength(0);
     expect(referencedAssets.size).toBe(555);
   });

@@ -27,7 +27,7 @@ layout: mind-map
 - 考频：低
   - 09
 - 流程：
-  - <img src="/images/408-mind-maps/thumb/os-0085.webp" alt="流程：" width="240" height="97">
+  - <img src="/images/408-mind-maps/os-0085.png" alt="流程：" width="240" height="97">
 
 - 编译
   - 编译的步骤：
@@ -78,7 +78,7 @@ layout: mind-map
     - PCB进程控制块（放在系统区，由操作系统控制）
     - 堆（存放动态分配的变量）
     - 栈（实现函数调用）
-  - <img src="/images/408-mind-maps/thumb/os-0009.webp" alt="程序运行的内存映像和地址空间" width="240" height="195">
+  - <img src="/images/408-mind-maps/os-0009.png" alt="程序运行的内存映像和地址空间" width="240" height="195">
 
   - MMU（内存管理部件）
     - 一个把虚拟地址转为物理地址的程序
@@ -163,7 +163,7 @@ layout: mind-map
     - 主存利用率低，很多内部碎片
     - 没有内存共享能力
 - 动态分区分配
-  - <img src="/images/408-mind-maps/thumb/os-0061.webp" alt="动态分区分配" width="240" height="74">
+  - <img src="/images/408-mind-maps/os-0061.png" alt="动态分区分配" width="240" height="74">
 
   - 记录存储内存使用情况
     - 内存分区链、内存分区块
@@ -214,7 +214,7 @@ layout: mind-map
     - 原理
       - 把内存划分为数个大小相同且固定的块、块相对较小、作为主存的基本单位
       - 页面和内存块的完全大小相同
-      - <img src="/images/408-mind-maps/thumb/os-0017.webp" alt="原理" width="188" height="220">
+      - <img src="/images/408-mind-maps/os-0017.png" alt="原理" width="188" height="220">
 
     - 转换
       - 内存总大小为 4GB, 内存块大小为4KB, 所以内存中一共可以有 2^20个内存块，内存块编号为0 ~ 2^20 - 1
@@ -232,7 +232,7 @@ layout: mind-map
         - （页号）块号
           - 页号并不占用存储空间
     - 基本地址变换机构： 得到一个逻辑地址，操作流程
-      - 对逻辑地址A的页号先进行越界检查，确认不会中断，与页表始址进行相加（块号地址 = F + P \* 页表项所占地址个数），就可以对应到块号了。物理地址 = 块号 拼接上(concat) 偏置值 <img src="/images/408-mind-maps/thumb/os-0071.webp" alt="对逻辑地址A的页号先进行越界检查，确认不会中断，与页表始址进行相加（块号地址 = F + P \* 页表项所占地址个数），就可以对应到块号了。物理地址 = 块号 拼接上(concat) 偏置值" width="240" height="136">
+      - 对逻辑地址A的页号先进行越界检查，确认不会中断，与页表始址进行相加（块号地址 = F + P \* 页表项所占地址个数），就可以对应到块号了。物理地址 = 块号 拼接上(concat) 偏置值 <img src="/images/408-mind-maps/os-0071.png" alt="对逻辑地址A的页号先进行越界检查，确认不会中断，与页表始址进行相加（块号地址 = F + P \* 页表项所占地址个数），就可以对应到块号了。物理地址 = 块号 拼接上(concat) 偏置值" width="240" height="136">
 
         - 两次内存访问
         - 一次越界检测
@@ -241,7 +241,7 @@ layout: mind-map
         - 访问页表
         - 访问内存中对应的位置
   - 快表分页存储
-    - <img src="/images/408-mind-maps/thumb/os-0044.webp" alt="快表分页存储" width="240" height="136">
+    - <img src="/images/408-mind-maps/os-0044.png" alt="快表分页存储" width="240" height="136">
 
     - 多了一个TLB
       - 相联存储器、快表
@@ -261,9 +261,9 @@ layout: mind-map
     - 第二级页表的名称
       - 二级页表
     - 操作流程
-      - 获得逻辑地址的一级页号，一级页号进行溢出检测，通过访问一级页表找到对应的二级页表对应的块号。然后先对二级页号进行溢出检测，通过二级页号在二级页表中查找内存块号。找到内存块号就可以访问啦 <img src="/images/408-mind-maps/thumb/os-0059.webp" alt="获得逻辑地址的一级页号，一级页号进行溢出检测，通过访问一级页表找到对应的二级页表对应的块号。然后先对二级页号进行溢出检测，通过二级页号在二级页表中查找内存块号。找到内存块号就可以访问啦" width="240" height="186">
+      - 获得逻辑地址的一级页号，一级页号进行溢出检测，通过访问一级页表找到对应的二级页表对应的块号。然后先对二级页号进行溢出检测，通过二级页号在二级页表中查找内存块号。找到内存块号就可以访问啦 <img src="/images/408-mind-maps/os-0059.png" alt="获得逻辑地址的一级页号，一级页号进行溢出检测，通过访问一级页表找到对应的二级页表对应的块号。然后先对二级页号进行溢出检测，通过二级页号在二级页表中查找内存块号。找到内存块号就可以访问啦" width="240" height="186">
 
-        - <img src="/images/408-mind-maps/thumb/os-0063.webp" alt="获得逻辑地址的一级页号，一级页号进行溢出检测，通过访问一级页表找到对应的二级页表对应的块号。然后先对二级页号进行溢出检测，通过二级页号在二级页表中查找内存块号。找到内存块号就可以访问啦" width="240" height="135">
+        - <img src="/images/408-mind-maps/os-0063.png" alt="获得逻辑地址的一级页号，一级页号进行溢出检测，通过访问一级页表找到对应的二级页表对应的块号。然后先对二级页号进行溢出检测，通过二级页号在二级页表中查找内存块号。找到内存块号就可以访问啦" width="240" height="135">
 
           - 三次内存访问
           - 两次越界查看
@@ -288,7 +288,7 @@ layout: mind-map
     - 段表项
       - （段号）\| 段长、始址（没有内存块咯）
     - 操作流程
-      - 首先获得逻辑地址，判断段号是否越界，然后访问段表，查看对应段的偏置值有无越界，随后即可访问 <img src="/images/408-mind-maps/thumb/os-0111.webp" alt="首先获得逻辑地址，判断段号是否越界，然后访问段表，查看对应段的偏置值有无越界，随后即可访问" width="240" height="143">
+      - 首先获得逻辑地址，判断段号是否越界，然后访问段表，查看对应段的偏置值有无越界，随后即可访问 <img src="/images/408-mind-maps/os-0111.png" alt="首先获得逻辑地址，判断段号是否越界，然后访问段表，查看对应段的偏置值有无越界，随后即可访问" width="240" height="143">
 
         - 两次内存访问
         - 两次越界检测
@@ -304,7 +304,7 @@ layout: mind-map
     - 页表项
       - （页号）、块号
     - 操作流程
-      - 首先获得逻辑地址，判断段号是否越界，访问段表项，判断页号是否越界，就页表始址+偏置值 <img src="/images/408-mind-maps/thumb/os-0168.webp" alt="首先获得逻辑地址，判断段号是否越界，访问段表项，判断页号是否越界，就页表始址+偏置值" width="240" height="144">
+      - 首先获得逻辑地址，判断段号是否越界，访问段表项，判断页号是否越界，就页表始址+偏置值 <img src="/images/408-mind-maps/os-0168.png" alt="首先获得逻辑地址，判断段号是否越界，访问段表项，判断页号是否越界，就页表始址+偏置值" width="240" height="144">
 
         - 三次内存访问
         - 两次检测
@@ -380,7 +380,7 @@ layout: mind-map
   - 页表机制
     分组说明：在非虚拟存储的页表、段表是基本固定的，而虚拟存储的页表要实时记得要不要修改页表项；对应：[配图／公式](#focus=%E9%85%8D%E5%9B%BE%EF%BC%8F%E5%85%AC%E5%BC%8F)
 
-    - <img src="/images/408-mind-maps/thumb/os-0120.webp" alt="页表机制" width="240" height="41">
+    - <img src="/images/408-mind-maps/os-0120.png" alt="页表机制" width="240" height="41">
 
   - 缺页中断机构
     - 内存有空闲块
@@ -392,7 +392,7 @@ layout: mind-map
         - 【若被修改了，写回外存】
         - 【若该页也存在于快表中，一并删除】
   - 地址变化机构
-    - <img src="/images/408-mind-maps/thumb/os-0081.webp" alt="地址变化机构" width="240" height="199">
+    - <img src="/images/408-mind-maps/os-0081.png" alt="地址变化机构" width="240" height="199">
 
 - 页面分配策略
   - 调入页面的时机
@@ -414,7 +414,7 @@ layout: mind-map
     - Unix方式
       - 首次都是 文件区 → 内存
       - 其余 对换区 ↔ 内存
-      - <img src="/images/408-mind-maps/thumb/os-0116.webp" alt="Unix方式" width="240" height="175">
+      - <img src="/images/408-mind-maps/os-0116.png" alt="Unix方式" width="240" height="175">
 
   - 驻留集大小
     - 驻留集：
@@ -451,9 +451,9 @@ layout: mind-map
     - 使用堆栈进行模拟
       分组说明：区别：考试做法这里面不考虑页面对应哪一个物理块。；对应：[堆栈上方的是新的，下方的是旧的，pop从下面pop出现，上面push进入](#focus=%E5%A0%86%E6%A0%88%E4%B8%8A%E6%96%B9%E7%9A%84%E6%98%AF%E6%96%B0%E7%9A%84%EF%BC%8C%E4%B8%8B%E6%96%B9%E7%9A%84%E6%98%AF%E6%97%A7%E7%9A%84%EF%BC%8Cpop%E4%BB%8E%E4%B8%8B%E9%9D%A2pop%E5%87%BA%E7%8E%B0%EF%BC%8C%E4%B8%8A%E9%9D%A2push%E8%BF%9B%E5%85%A5)
 
-      - 堆栈上方的是新的，下方的是旧的，pop从下面pop出现，上面push进入 <img src="/images/408-mind-maps/thumb/os-0127.webp" alt="堆栈上方的是新的，下方的是旧的，pop从下面pop出现，上面push进入" width="240" height="140">
+      - 堆栈上方的是新的，下方的是旧的，pop从下面pop出现，上面push进入 <img src="/images/408-mind-maps/os-0127.png" alt="堆栈上方的是新的，下方的是旧的，pop从下面pop出现，上面push进入" width="240" height="140">
 
-        - 王道的做法是底层实现的方法。（用访问字段的值来模拟堆栈） <img src="/images/408-mind-maps/thumb/os-0139.webp" alt="王道的做法是底层实现的方法。（用访问字段的值来模拟堆栈）" width="240" height="80">
+        - 王道的做法是底层实现的方法。（用访问字段的值来模拟堆栈） <img src="/images/408-mind-maps/os-0139.png" alt="王道的做法是底层实现的方法。（用访问字段的值来模拟堆栈）" width="240" height="80">
 
           - 批注：底层实现
         - 批注：考试做法
@@ -512,11 +512,11 @@ layout: mind-map
 
 - 地址翻译：
   - 详细看计组
-  - 虚地址 -&gt; 物理地址 <img src="/images/408-mind-maps/thumb/os-0143.webp" alt="虚地址 -&amp;amp;gt; 物理地址" width="228" height="220">
+  - 虚地址 -&gt; 物理地址 <img src="/images/408-mind-maps/os-0143.png" alt="虚地址 -&amp;amp;gt; 物理地址" width="228" height="220">
 
-    - 物理地址 -&gt; 数据 <img src="/images/408-mind-maps/thumb/os-0006.webp" alt="物理地址 -&amp;amp;gt; 数据" width="216" height="220">
+    - 物理地址 -&gt; 数据 <img src="/images/408-mind-maps/os-0006.png" alt="物理地址 -&amp;amp;gt; 数据" width="216" height="220">
 
-- <img src="/images/408-mind-maps/thumb/os-0088.webp" alt="END" width="48" height="48">
+- <img src="/images/408-mind-maps/os-0088.png" alt="END" width="48" height="48">
 
 ## 原图关联关系
 

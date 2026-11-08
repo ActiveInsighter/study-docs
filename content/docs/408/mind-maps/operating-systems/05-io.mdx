@@ -74,7 +74,7 @@ layout: mind-map
   - 电子部件
     - 藏起来的电路板
 - I/O控制器组成
-  - <img src="/images/408-mind-maps/thumb/os-0122.webp" alt="I/O控制器组成" width="240" height="143">
+  - <img src="/images/408-mind-maps/os-0122.png" alt="I/O控制器组成" width="240" height="143">
 
     - 由图可知：
     - 1\. 一个I/O控制器，管理多个IO设备
@@ -102,11 +102,11 @@ layout: mind-map
 - I/O 端口
   - 设备控制器中可被CPU直接访问的寄存器
     - 上面白框
-  - 独立编址I/O <img src="/images/408-mind-maps/thumb/co-0293.webp" alt="独立编址I/O" width="240" height="184">
+  - 独立编址I/O <img src="/images/408-mind-maps/co-0293.png" alt="独立编址I/O" width="240" height="184">
 
-    - 统一编址 = 内存映射I/O <img src="/images/408-mind-maps/thumb/co-0091.webp" alt="统一编址 = 内存映射I/O" width="240" height="184">
+    - 统一编址 = 内存映射I/O <img src="/images/408-mind-maps/co-0091.png" alt="统一编址 = 内存映射I/O" width="240" height="184">
 
-      - <img src="/images/408-mind-maps/thumb/os-0096.webp" alt="统一编址 = 内存映射I/O" width="240" height="130">
+      - <img src="/images/408-mind-maps/os-0096.png" alt="统一编址 = 内存映射I/O" width="240" height="130">
 
   - 内存映射I/O简化了指令
   - 寄存器独立编址让指令设计变得复杂，需要单独设计和read write相区别的指令(input output)
@@ -115,7 +115,7 @@ layout: mind-map
 
 - 程序直接控制
   - 图：
-    - <img src="/images/408-mind-maps/thumb/os-0068.webp" alt="图：" width="170" height="220">
+    - <img src="/images/408-mind-maps/os-0068.png" alt="图：" width="170" height="220">
 
       - CPU不停的进行轮询测试
   - CPU干预：
@@ -127,7 +127,7 @@ layout: mind-map
     - I/O控制器 -&gt; CPU -&gt; 内存
 - 中断驱动方式
   - 图：
-    - <img src="/images/408-mind-maps/thumb/os-0118.webp" alt="图：" width="113" height="220">
+    - <img src="/images/408-mind-maps/os-0118.png" alt="图：" width="113" height="220">
 
       - CPU中断去做其他事情
   - CPU干预：
@@ -142,10 +142,10 @@ layout: mind-map
     - 保存在执行程序的上下文，然后去执行中断处理程序
 - DMA方式
   - 图：
-    - <img src="/images/408-mind-maps/thumb/os-0131.webp" alt="图：" width="240" height="218">
+    - <img src="/images/408-mind-maps/os-0131.png" alt="图：" width="240" height="218">
 
   - DMA控制器的组成：
-    - <img src="/images/408-mind-maps/thumb/os-0153.webp" alt="DMA控制器的组成：" width="240" height="94">
+    - <img src="/images/408-mind-maps/os-0153.png" alt="DMA控制器的组成：" width="240" height="94">
 
       - 四个寄存器的作用：
       - DR：
@@ -270,7 +270,7 @@ layout: mind-map
     - 电子部件
       - 设备控制器（设备适配器）
 
-- I/O子系统概述 <img src="/images/408-mind-maps/thumb/co-0247.webp" alt="I/O子系统概述" width="48" height="48">
+- I/O子系统概述 <img src="/images/408-mind-maps/co-0247.png" alt="I/O子系统概述" width="48" height="48">
 
   - 层次：
     - 设备无关性软件
@@ -324,7 +324,7 @@ layout: mind-map
       - 图形学开篇，使用双缓冲来实现图像更换
   - 若无特殊说明，缓冲区大小为一个块
   - 高速缓存和缓冲区的对比
-    - <img src="/images/408-mind-maps/thumb/os-0042.webp" alt="高速缓存和缓冲区的对比" width="240" height="66">
+    - <img src="/images/408-mind-maps/os-0042.png" alt="高速缓存和缓冲区的对比" width="240" height="66">
 
   - 预读 + 滞后写
     - 预读：读区域A的时候，把A的下一块也同时读入到buffer中
@@ -332,13 +332,13 @@ layout: mind-map
 - 缓冲技术
   - 注：
     - 下图中计算周期时假设的是工作区已经满了，所以设备 -&gt; 缓冲和工作区 -&gt; CPU可以同时运行，如果初始情况为空：
-      - <img src="/images/408-mind-maps/thumb/os-0035.webp" alt="下图中计算周期时假设的是工作区已经满了，所以设备 -&amp;amp;gt; 缓冲和工作区 -&amp;amp;gt; CPU可以同时运行，如果初始情况为空：" width="240" height="96">
+      - <img src="/images/408-mind-maps/os-0035.png" alt="下图中计算周期时假设的是工作区已经满了，所以设备 -&amp;amp;gt; 缓冲和工作区 -&amp;amp;gt; CPU可以同时运行，如果初始情况为空：" width="240" height="96">
 
   - 1\. 单缓冲
     - 流程图：
-      - <img src="/images/408-mind-maps/thumb/os-0093.webp" alt="流程图：" width="240" height="194">
+      - <img src="/images/408-mind-maps/os-0093.png" alt="流程图：" width="240" height="194">
 
-        - <img src="/images/408-mind-maps/thumb/os-0123.webp" alt="流程图：" width="240" height="187">
+        - <img src="/images/408-mind-maps/os-0123.png" alt="流程图：" width="240" height="187">
 
     - 描述：
       - 开始状态缓冲区的数据为空，工作区数据为满
@@ -349,9 +349,9 @@ layout: mind-map
 
   - 2\. 双缓冲
     - 流程图：
-      - <img src="/images/408-mind-maps/thumb/os-0112.webp" alt="流程图：" width="240" height="136">
+      - <img src="/images/408-mind-maps/os-0112.png" alt="流程图：" width="240" height="136">
 
-        - <img src="/images/408-mind-maps/thumb/os-0101.webp" alt="流程图：" width="190" height="220">
+        - <img src="/images/408-mind-maps/os-0101.png" alt="流程图：" width="190" height="220">
 
     - 描述：
       - 假设开始状态，工作区为空，缓冲区A为满，缓冲区B为空
@@ -365,24 +365,24 @@ layout: mind-map
     - 缓存通信
       - 如果两台机器都只有单缓冲
         - 只能单向传输
-          - <img src="/images/408-mind-maps/thumb/os-0030.webp" alt="只能单向传输" width="240" height="200">
+          - <img src="/images/408-mind-maps/os-0030.png" alt="只能单向传输" width="240" height="200">
 
       - 如果都有双缓冲
         - 可以实现双线传输
-          - <img src="/images/408-mind-maps/thumb/os-0045.webp" alt="可以实现双线传输" width="240" height="193">
+          - <img src="/images/408-mind-maps/os-0045.png" alt="可以实现双线传输" width="240" height="193">
 
     - ”管道“通信：
       - ”管道“通信就是一个缓冲区，要实现双向通信，就需要两个”管道“
   - 3\. 循环缓冲
     - 流程图：
-      - <img src="/images/408-mind-maps/thumb/os-0087.webp" alt="流程图：" width="240" height="217">
+      - <img src="/images/408-mind-maps/os-0087.png" alt="流程图：" width="240" height="217">
 
     - 描述：
       - 包含多个大小相等的缓冲区，形成循环链表的形式。另外有两个指针in/out，分别是输入指针和输出指针。in指向空缓冲，out指向满缓冲
   - 4\. 缓冲池
     - 组成：
       - 多个公共缓冲区组成缓冲池
-      - <img src="/images/408-mind-maps/thumb/os-0041.webp" alt="组成：" width="240" height="149">
+      - <img src="/images/408-mind-maps/os-0041.png" alt="组成：" width="240" height="149">
 
     - 三个队列：
       - 空缓冲队列
@@ -479,7 +479,7 @@ layout: mind-map
   - 概要：配图
     概要范围：[SDT：](#focus=SDT%EF%BC%9A)
 
-    - <img src="/images/408-mind-maps/thumb/os-0082.webp" alt="数据结构：" width="240" height="160">
+    - <img src="/images/408-mind-maps/os-0082.png" alt="数据结构：" width="240" height="160">
 
 - 设备分配策略：
   - 设备分配方式：
@@ -521,10 +521,10 @@ layout: mind-map
 - 用空间换时间的技术
   - vs 请求分页系统：时间换空间
 - 脱机技术：
-  - 批处理阶段引入了脱机输入/输出技术（用磁带完成） <img src="/images/408-mind-maps/thumb/os-0115.webp" alt="批处理阶段引入了脱机输入/输出技术（用磁带完成）" width="240" height="91">
+  - 批处理阶段引入了脱机输入/输出技术（用磁带完成） <img src="/images/408-mind-maps/os-0115.png" alt="批处理阶段引入了脱机输入/输出技术（用磁带完成）" width="240" height="91">
 
 - SPOOLING技术
-  - <img src="/images/408-mind-maps/thumb/os-0092.webp" alt="SPOOLING技术" width="240" height="145">
+  - <img src="/images/408-mind-maps/os-0092.png" alt="SPOOLING技术" width="240" height="145">
 
     - 共享打印机：
       - 当系统同意其打印时：有用户（输出进程）开辟一个空闲磁盘区
@@ -559,7 +559,7 @@ layout: mind-map
     - 每两个扇区之间的间隙
   - 未命名主题
   - 柱面
-    - 多个磁盘垂直叠在一起时，所有磁道组成的垂直面就是柱面 <img src="/images/408-mind-maps/thumb/os-0005.webp" alt="多个磁盘垂直叠在一起时，所有磁道组成的垂直面就是柱面" width="240" height="217">
+    - 多个磁盘垂直叠在一起时，所有磁道组成的垂直面就是柱面 <img src="/images/408-mind-maps/os-0005.png" alt="多个磁盘垂直叠在一起时，所有磁道组成的垂直面就是柱面" width="240" height="217">
 
   - 块
     - 物理块
@@ -574,7 +574,7 @@ layout: mind-map
   - 概要：配图
     概要范围：[磁道](#focus=%E7%A3%81%E9%81%93)、[磁道间隙](#focus=%E7%A3%81%E9%81%93%E9%97%B4%E9%9A%99)、[扇区](#focus=%E6%89%87%E5%8C%BA)、[扇区间隙](#focus=%E6%89%87%E5%8C%BA%E9%97%B4%E9%9A%99)
 
-    - <img src="/images/408-mind-maps/thumb/os-0102.webp" alt="磁盘的概念" width="222" height="220">
+    - <img src="/images/408-mind-maps/os-0102.png" alt="磁盘的概念" width="222" height="220">
 
 - 磁盘的类型
   - 磁头
@@ -664,7 +664,7 @@ layout: mind-map
 - 考频：高
   - 09、15、17\*2、18、21、10大、19大、21大
 - 图示+公式：
-  - 1\. 启动时间  2. 寻找/寻道时间  3. 旋转【延迟】时间  4. 传输时间 <img src="/images/408-mind-maps/thumb/os-0039.webp" alt="1. 启动时间 2. 寻找/寻道时间 3. 旋转【延迟】时间 4. 传输时间" width="240" height="144">
+  - 1\. 启动时间  2. 寻找/寻道时间  3. 旋转【延迟】时间  4. 传输时间 <img src="/images/408-mind-maps/os-0039.png" alt="1. 启动时间 2. 寻找/寻道时间 3. 旋转【延迟】时间 4. 传输时间" width="240" height="144">
 
     - 批注：注意：今年将①和②时间统称为寻找时间
 - 可以优化的
@@ -730,11 +730,11 @@ layout: mind-map
 - 基于闪存的存储器
   - 存储介质：NAND颗粒
 - 读写速度比较：
-  - <img src="/images/408-mind-maps/thumb/co-0101.webp" alt="读写速度比较：" width="240" height="99">
+  - <img src="/images/408-mind-maps/co-0101.png" alt="读写速度比较：" width="240" height="99">
 
     - （硬件茶谈）
 - 组成：
-  - 闪存翻译层 + 多个闪存芯片 <img src="/images/408-mind-maps/thumb/os-0033.webp" alt="闪存翻译层 + 多个闪存芯片" width="240" height="142">
+  - 闪存翻译层 + 多个闪存芯片 <img src="/images/408-mind-maps/os-0033.png" alt="闪存翻译层 + 多个闪存芯片" width="240" height="142">
 
     - 读写单位
       - CPU下令要读取一个块的内容
@@ -763,7 +763,7 @@ layout: mind-map
 - 考频：低
   - 无
 
-- <img src="/images/408-mind-maps/thumb/co-0242.webp" alt="END" width="48" height="48">
+- <img src="/images/408-mind-maps/co-0242.png" alt="END" width="48" height="48">
 
 ## 原图关联关系
 

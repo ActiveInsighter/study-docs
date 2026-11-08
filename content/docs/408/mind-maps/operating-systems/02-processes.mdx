@@ -52,9 +52,9 @@ layout: mind-map
 - 考频：中
   - 10 \*2、14、15、18、19、21、22
 - 进程的七状态模型：
-  - <img src="/images/408-mind-maps/thumb/os-0160.webp" alt="进程的七状态模型：" width="240" height="108">
+  - <img src="/images/408-mind-maps/os-0160.png" alt="进程的七状态模型：" width="240" height="108">
 
-    - <img src="/images/408-mind-maps/thumb/os-0036.webp" alt="进程的七状态模型：" width="240" height="109">
+    - <img src="/images/408-mind-maps/os-0036.png" alt="进程的七状态模型：" width="240" height="109">
 
     - 由运行结束或者发生异常到终止态：撤销
     - 图中还有可能从运行态到就绪挂起（当运行的程序在内存中的空间被抢占后）
@@ -206,7 +206,7 @@ layout: mind-map
 - 用户级线程：
   - 用户自行进行线程管理
 - 线程实现方式：
-  - OS会给每一个内核线程分配一个TCB（Thread Control Block) <img src="/images/408-mind-maps/thumb/os-0097.webp" alt="OS会给每一个内核线程分配一个TCB（Thread Control Block)" width="240" height="118">
+  - OS会给每一个内核线程分配一个TCB（Thread Control Block) <img src="/images/408-mind-maps/os-0097.png" alt="OS会给每一个内核线程分配一个TCB（Thread Control Block)" width="240" height="118">
 
     - 用户级方式
       - 用户级线程 ULT
@@ -221,7 +221,7 @@ layout: mind-map
       - 多个系统进程多个用户线程
   - 批注：进程与线程
 - 多线程模型：
-  - 考虑红框部分 <img src="/images/408-mind-maps/thumb/os-0114.webp" alt="考虑红框部分" width="240" height="121">
+  - 考虑红框部分 <img src="/images/408-mind-maps/os-0114.png" alt="考虑红框部分" width="240" height="121">
 
     - 一对一模型
       - 一个用户级线程
@@ -264,14 +264,14 @@ layout: mind-map
 - 考频：低
   - 12
 - 线程的状态和转换
-  - 线程三状态模型 <img src="/images/408-mind-maps/thumb/os-0046.webp" alt="线程三状态模型" width="240" height="146">
+  - 线程三状态模型 <img src="/images/408-mind-maps/os-0046.png" alt="线程三状态模型" width="240" height="146">
 
 - 线程库
   - 线程的实现
     - 常见线程库（Thread Library）：例如POSIX标准的Pthreads线程库
-    - 通过调用线程库提供的函数来创建用户线程，线程的控制（状态转换）由运行时系统负责 <img src="/images/408-mind-maps/thumb/os-0028.webp" alt="通过调用线程库提供的函数来创建用户线程，线程的控制（状态转换）由运行时系统负责" width="240" height="194">
+    - 通过调用线程库提供的函数来创建用户线程，线程的控制（状态转换）由运行时系统负责 <img src="/images/408-mind-maps/os-0028.png" alt="通过调用线程库提供的函数来创建用户线程，线程的控制（状态转换）由运行时系统负责" width="240" height="194">
 
-      - 通过系统调用来创建内核线程，线程的控制（状态转换）由内核负责 <img src="/images/408-mind-maps/thumb/os-0098.webp" alt="通过系统调用来创建内核线程，线程的控制（状态转换）由内核负责" width="240" height="202">
+      - 通过系统调用来创建内核线程，线程的控制（状态转换）由内核负责 <img src="/images/408-mind-maps/os-0098.png" alt="通过系统调用来创建内核线程，线程的控制（状态转换）由内核负责" width="240" height="202">
 
         - 用户级线程
           - 由内核维护PCB进程表
@@ -292,12 +292,12 @@ layout: mind-map
 
     可将多个 TCB 组织成一张线程表。
 
-    - TCB <img src="/images/408-mind-maps/thumb/os-0084.webp" alt="TCB" width="240" height="131">
+    - TCB <img src="/images/408-mind-maps/os-0084.png" alt="TCB" width="240" height="131">
 
       - PC：每个线程共享一个进程代码片段，所以需要保存自己的PC
       - 其他寄存器、堆栈指针：同理
 - 调度器/调度程序
-  - 区别在于是否支持内核级线程 <img src="/images/408-mind-maps/thumb/os-0077.webp" alt="区别在于是否支持内核级线程" width="240" height="201">
+  - 区别在于是否支持内核级线程 <img src="/images/408-mind-maps/os-0077.png" alt="区别在于是否支持内核级线程" width="240" height="201">
 
 - 闲逛进程
   - idle进程，在系统中没有其他进程的时候运行idle进程，每个指令周期只需进行中断检查就行
@@ -305,7 +305,7 @@ layout: mind-map
     - 任何进程进来都可以抢占idle进程的时间片
 - 内核和用户级线程调度
   - 用户级线程的调度
-    - 线程切换代价：低，不需要切换完整的上下文 并发/并行度：低，一个阻塞整个进程阻塞 <img src="/images/408-mind-maps/thumb/os-0155.webp" alt="线程切换代价：低，不需要切换完整的上下文 并发/并行度：低，一个阻塞整个进程阻塞" width="240" height="181">
+    - 线程切换代价：低，不需要切换完整的上下文 并发/并行度：低，一个阻塞整个进程阻塞 <img src="/images/408-mind-maps/os-0155.png" alt="线程切换代价：低，不需要切换完整的上下文 并发/并行度：低，一个阻塞整个进程阻塞" width="240" height="181">
 
       - 用户级线程
         - 内核不知道线程的存在，所以内核是调度进程
@@ -316,7 +316,7 @@ layout: mind-map
           - 进程中的一个线程阻塞了整个进程也会阻塞
           - 如果是多处理器，那么无法发挥其并行优势（例如一个进程8个线程）
   - 内核级线程的调度
-    - 线程切换的代价：高，需转为内核态、切换完整上下文 并发/并行度：高，一个阻塞其他线程仍可运行 <img src="/images/408-mind-maps/thumb/os-0011.webp" alt="线程切换的代价：高，需转为内核态、切换完整上下文 并发/并行度：高，一个阻塞其他线程仍可运行" width="240" height="211">
+    - 线程切换的代价：高，需转为内核态、切换完整上下文 并发/并行度：高，一个阻塞其他线程仍可运行 <img src="/images/408-mind-maps/os-0011.png" alt="线程切换的代价：高，需转为内核态、切换完整上下文 并发/并行度：高，一个阻塞其他线程仍可运行" width="240" height="211">
 
       - 内核级线程
         - 内核选择线程进行运行，不用考虑属于哪一个进程，调度线程
@@ -396,7 +396,7 @@ layout: mind-map
   - 响应时间
     - 从用户提交到系统首次产生响应所用的时间
 - 调度的实现
-  - <img src="/images/408-mind-maps/thumb/os-0051.webp" alt="调度的实现" width="240" height="116">
+  - <img src="/images/408-mind-maps/os-0051.png" alt="调度的实现" width="240" height="116">
 
     - 排队器：
       - 将系统中的所有就绪进程按照一定的策略排成一个或多个队列，以便于调度程序选择。
@@ -435,13 +435,13 @@ layout: mind-map
     - 目的：
       - 创造【实时系统】，让多个用户可以及时干预系统
   - 多级队列调度：
-    - <img src="/images/408-mind-maps/thumb/os-0050.webp" alt="多级队列调度：" width="240" height="125">
+    - <img src="/images/408-mind-maps/os-0050.png" alt="多级队列调度：" width="240" height="125">
 
       - 把进程就绪队列从一个拆分为多个（根据进程的性质）
       - 多个就绪队列都一定的优先级
       - 不同就绪队列的调度算法可以不一样
   - 多级反馈队列：
-    - <img src="/images/408-mind-maps/thumb/os-0072.webp" alt="多级反馈队列：" width="240" height="99">
+    - <img src="/images/408-mind-maps/os-0072.png" alt="多级反馈队列：" width="240" height="99">
 
       - 1）设置多个就绪队列，不同队列优先级不同，时间片也不同。
       - 2）除了最后一个队列是FCFS + RR，其他都是FCFS
@@ -615,7 +615,7 @@ layout: mind-map
   - A: P(s1) do xxx ... V(s2) V(s3)
     - B: P(s2) do xxx ... V(s4) V(s5)
       - ...
-  - <img src="/images/408-mind-maps/thumb/os-0025.webp" alt="信号量实现前驱关系：" width="240" height="141">
+  - <img src="/images/408-mind-maps/os-0025.png" alt="信号量实现前驱关系：" width="240" height="141">
 
 ## 管程：
 
@@ -897,7 +897,7 @@ layout: mind-map
       ```
 
 - 哲学家进餐
-  - <img src="/images/408-mind-maps/thumb/os-0148.webp" alt="哲学家进餐" width="240" height="71">
+  - <img src="/images/408-mind-maps/os-0148.png" alt="哲学家进餐" width="240" height="71">
 
   - 思路：
     - 哲学家（较多的进程）和筷子（较少的资源），且进程需要持有两个资源
@@ -1100,7 +1100,7 @@ layout: mind-map
 
     - 批注：动态侦查
   - 死锁检测
-    - 资源分配图找安全序列 <img src="/images/408-mind-maps/thumb/os-0162.webp" alt="资源分配图找安全序列" width="240" height="175">
+    - 资源分配图找安全序列 <img src="/images/408-mind-maps/os-0162.png" alt="资源分配图找安全序列" width="240" height="175">
 
       - 如果图不可简化，则为死锁
     - 批注：动态检测
