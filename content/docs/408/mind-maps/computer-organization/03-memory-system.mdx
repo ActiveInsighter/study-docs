@@ -11,9 +11,7 @@ layout: mind-map
 
 [查看关联主题：第一章 计算机系统概论](/docs/408/mind-maps/computer-organization/01-overview)
 
-## 存储器特点
-
-<a href="/images/408-mind-maps/co-0015.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0015.svg" alt="存储器特点" width="48" height="48" loading="lazy" /></a>
+## 存储器特点 <img src="/images/408-mind-maps/thumb/co-0015.webp" alt="存储器特点" width="48" height="48">
 
 - 分类：
   - 按作用：
@@ -42,9 +40,7 @@ layout: mind-map
 - 性能指标：
   - 存储容量：
     - 存储字数 \* 字长
-    - 公式
-
-      $2^{MAR位数} * MDR位数$
+    - 公式 $2^{MAR位数} * MDR位数$
 
       - MAR位数：
         - 地址总线个数
@@ -61,9 +57,7 @@ layout: mind-map
     - 主存带宽：
       - 数据传输率，表示每秒从主存进出信息的最大数量
 - 多级存储系统：
-  - 配图
-
-    <a href="/images/408-mind-maps/co-0199.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0199.svg" alt="多级存储系统：" width="240" height="111" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/co-0199.webp" alt="多级存储系统：" width="240" height="111">
 
     - 配图
 
@@ -78,18 +72,14 @@ layout: mind-map
 - 考频：低
   - 11
 
-## SRAM、DRAM
-
-<a href="/images/408-mind-maps/co-0017.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0017.svg" alt="SRAM、DRAM" width="48" height="48" loading="lazy" /></a>
+## SRAM、DRAM <img src="/images/408-mind-maps/thumb/co-0017.webp" alt="SRAM、DRAM" width="48" height="48">
 
 - 考频：低
   - 12、14、15、22
 - SRAM
   - Static Random Access Memory
-  - 存储元：<br>（几个MOS)
-    - 双稳态触发管，6个MOS
-
-      <a href="/images/408-mind-maps/co-0003.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0003.svg" alt="双稳态触发管，6个MOS" width="240" height="168" loading="lazy" /></a>
+  - 存储元： （几个MOS)
+    - 双稳态触发管，6个MOS <img src="/images/408-mind-maps/thumb/co-0003.webp" alt="双稳态触发管，6个MOS" width="240" height="168">
 
       - 了解即可
   - 优点：
@@ -108,15 +98,11 @@ layout: mind-map
   - 现在DRAM被称为SDRAM（例如DDR3，DDR4）
   - 刷新：
     - 每次刷新多少存储单元：
-      - 【基础版】一次刷新一整行
-
-        <a href="/images/408-mind-maps/co-0010.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0010.svg" alt="【基础版】一次刷新一整行" width="240" height="219" loading="lazy" /></a>
+      - 【基础版】一次刷新一整行 <img src="/images/408-mind-maps/thumb/co-0010.webp" alt="【基础版】一次刷新一整行" width="240" height="219">
 
         - 例如有20根地址线，则一共对应有1024 \* 1024根选通线。
         - 刷新顺序：从上到下选n个。每次刷新一行
-      - 【行列存储版】把地址分布改为行地址+列地址的存储方式
-
-        <a href="/images/408-mind-maps/co-0148.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0148.svg" alt="【行列存储版】把地址分布改为行地址+列地址的存储方式" width="240" height="120" loading="lazy" /></a>
+      - 【行列存储版】把地址分布改为行地址+列地址的存储方式 <img src="/images/408-mind-maps/thumb/co-0148.webp" alt="【行列存储版】把地址分布改为行地址+列地址的存储方式" width="240" height="120">
 
         - 例如有20根地址线，则有1024根行选通线，1024根列选通线 = 2048根选通线。
         - 刷新顺序：从左到右，从上到下。每次选n个一起刷新
@@ -162,20 +148,14 @@ layout: mind-map
     - 都是易失，只不过一个不需要刷新（SRAM)、一个需要刷新（DRAM)
 - 存储芯片的基本原理：
   - 栅极电容：
-    - MOS管+电容
-
-      <a href="/images/408-mind-maps/co-0219.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0219.svg" alt="MOS管+电容" width="240" height="148" loading="lazy" /></a>
+    - MOS管+电容 <img src="/images/408-mind-maps/thumb/co-0219.webp" alt="MOS管+电容" width="240" height="148">
 
   - 存储体/存储单元：
-    - 配图
-
-      <a href="/images/408-mind-maps/co-0044.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0044.svg" alt="存储体/存储单元：" width="240" height="81" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/co-0044.webp" alt="存储体/存储单元：" width="240" height="81">
 
       - 存储体的一排连接了多个栅极电容，故CPU的一次读写单位即“一排栅极电容”，也即【一个存储字长/机器字长】
   - 存储芯片：
-    - 配图
-
-      <a href="/images/408-mind-maps/co-0034.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0034.svg" alt="存储芯片：" width="240" height="116" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/co-0034.webp" alt="存储芯片：" width="240" height="116">
 
       - 存储芯片：
         - 一个存储芯片由多个字排列组成，每一排字对应一根【选通线】，即对应【MAR（地址）】中一个的数据。
@@ -186,9 +166,7 @@ layout: mind-map
       - 读/写控制线：
         - WE/RD杠，如果此时线是低电平，则说明允许读写，如果只有一个WE杠的话，则【低写高读】
   - 存储芯片浓缩版：
-    - 配图
-
-      <a href="/images/408-mind-maps/co-0114.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0114.svg" alt="存储芯片浓缩版：" width="240" height="169" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/co-0114.webp" alt="存储芯片浓缩版：" width="240" height="169">
 
       分组说明：一共五大部分；对应：[片选线：](#focus=%E7%89%87%E9%80%89%E7%BA%BF%EF%BC%9A)、[读写线：](#focus=%E8%AF%BB%E5%86%99%E7%BA%BF%EF%BC%9A)、[地址线：](#focus=%E5%9C%B0%E5%9D%80%E7%BA%BF%EF%BC%9A)、[数据线：](#focus=%E6%95%B0%E6%8D%AE%E7%BA%BF%EF%BC%9A)、[注意一定有【供电线】和【接地线】](#focus=%E6%B3%A8%E6%84%8F%E4%B8%80%E5%AE%9A%E6%9C%89%E3%80%90%E4%BE%9B%E7%94%B5%E7%BA%BF%E3%80%91%E5%92%8C%E3%80%90%E6%8E%A5%E5%9C%B0%E7%BA%BF%E3%80%91)
 
@@ -222,15 +200,11 @@ layout: mind-map
   - RAM的读周期
   - RAM的写周期
 
-## 只读存储器ROM
-
-<a href="/images/408-mind-maps/co-0152.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0152.svg" alt="只读存储器ROM" width="48" height="48" loading="lazy" /></a>
+## 只读存储器ROM <img src="/images/408-mind-maps/thumb/co-0152.webp" alt="只读存储器ROM" width="48" height="48">
 
 - 特点：
   - 不易失、断电不丢失、结构简单、位密度高
-  - 写到主板中的，能让系统进入BIOS
-
-    <a href="/images/408-mind-maps/co-0150.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0150.svg" alt="写到主板中的，能让系统进入BIOS" width="240" height="96" loading="lazy" /></a>
+  - 写到主板中的，能让系统进入BIOS <img src="/images/408-mind-maps/thumb/co-0150.webp" alt="写到主板中的，能让系统进入BIOS" width="240" height="96">
 
 - 类型：
   - MROM：
@@ -274,25 +248,21 @@ layout: mind-map
 - 考频：低
   - 10、15
 
-## 双端口RAM和多模块存储器
-
-<a href="/images/408-mind-maps/co-0033.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0033.svg" alt="双端口RAM和多模块存储器" width="48" height="48" loading="lazy" /></a>
+## 双端口RAM和多模块存储器 <img src="/images/408-mind-maps/thumb/co-0033.webp" alt="双端口RAM和多模块存储器" width="48" height="48">
 
 - 考频：低
   - 15、17、22
 - 双端口RAM：
   - 解决问题：
     - 用于优化多核CPU访问单个内存条的情况
-  - 在同一个存储器的左右设置两个独立的端口，分别与两个CPU相连，每个端口都具有独立的地址、数据、控制线
-
-    <a href="/images/408-mind-maps/co-0011.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0011.svg" alt="在同一个存储器的左右设置两个独立的端口，分别与两个CPU相连，每个端口都具有独立的地址、数据、控制线" width="240" height="112" loading="lazy" /></a>
+  - 在同一个存储器的左右设置两个独立的端口，分别与两个CPU相连，每个端口都具有独立的地址、数据、控制线 <img src="/images/408-mind-maps/thumb/co-0011.webp" alt="在同一个存储器的左右设置两个独立的端口，分别与两个CPU相连，每个端口都具有独立的地址、数据、控制线" width="240" height="112">
 
     - 四种情况（读写者问题）
       - 时间\\地址
         - 同一地址
           - 不同地址
       - 同时
-        - ①都读出 --- 无冲突<br>②都写入 --- 冲突<br>③写+读 --- 冲突
+        - ①都读出 --- 无冲突 ②都写入 --- 冲突 ③写+读 --- 冲突
           - 不会冲突
       - 不同时
         - 不会冲突
@@ -306,11 +276,9 @@ layout: mind-map
     - CPU可以同时快速的取出四条指令
     - 每个模块都有独立的控制电路、地址寄存器、时间寄存器、可以并行+交叉工作
     - 高位交叉编址
-      - 高位2bit是对应不同的存储体
+      - 高位2bit是对应不同的存储体 <img src="/images/408-mind-maps/thumb/co-0281.webp" alt="高位2bit是对应不同的存储体" width="240" height="172">
 
-        <a href="/images/408-mind-maps/co-0281.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0281.svg" alt="高位2bit是对应不同的存储体" width="240" height="172" loading="lazy" /></a>
-
-        - M0 : 00 xxxxxxxx<br>M 1:  01 xxxxxxxx<br>编程难度大
+        - M0 : 00 xxxxxxxx M 1:  01 xxxxxxxx 编程难度大
           - 读完一个数据后，存储体需要进行恢复，恢复完后才能读下一个
         - 举例：
 
@@ -320,14 +288,10 @@ layout: mind-map
           00000 → 00001 → 00010 → 00011 → 00100
           ```
 
-          - 甘特图， 耗时 5T
-
-            <a href="/images/408-mind-maps/co-0261.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0261.svg" alt="甘特图， 耗时 5T" width="240" height="101" loading="lazy" /></a>
+          - 甘特图， 耗时 5T <img src="/images/408-mind-maps/thumb/co-0261.webp" alt="甘特图， 耗时 5T" width="240" height="101">
 
     - 低位交叉编址
-      - 低位2bit对应不同存储体
-
-        <a href="/images/408-mind-maps/co-0253.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0253.svg" alt="低位2bit对应不同存储体" width="240" height="158" loading="lazy" /></a>
+      - 低位2bit对应不同存储体 <img src="/images/408-mind-maps/thumb/co-0253.webp" alt="低位2bit对应不同存储体" width="240" height="158">
 
         - 举例：
 
@@ -337,9 +301,7 @@ layout: mind-map
           00000 → 00001 → 00010 → 00011 → 00100
           ```
 
-          - 甘特图， 耗时 T+4r
-
-            <a href="/images/408-mind-maps/co-0067.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0067.svg" alt="甘特图， 耗时 T+4r" width="240" height="168" loading="lazy" /></a>
+          - 甘特图， 耗时 T+4r <img src="/images/408-mind-maps/thumb/co-0067.webp" alt="甘特图， 耗时 T+4r" width="240" height="168">
 
   - 流水线式
     - 多体并行 + 低位交叉
@@ -348,102 +310,68 @@ layout: mind-map
         - 每过r周期启动下一个模块，这样当最后一块传完后，第一块又能接上了。
         - 存取m个字，需要T+(m-1)r的时间
   - 单体多字
-    - 把多体并行存储器合并在了同一个存储器中，所有存储器共用控制电路、寄存器等等
-
-      <a href="/images/408-mind-maps/co-0076.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0076.svg" alt="把多体并行存储器合并在了同一个存储器中，所有存储器共用控制电路、寄存器等等" width="240" height="162" loading="lazy" /></a>
+    - 把多体并行存储器合并在了同一个存储器中，所有存储器共用控制电路、寄存器等等 <img src="/images/408-mind-maps/thumb/co-0076.webp" alt="把多体并行存储器合并在了同一个存储器中，所有存储器共用控制电路、寄存器等等" width="240" height="162">
 
       - 故一次存取都需要读写一整行的信息（可能会读取多余的信息）
       - 速度和多体并行的速度基本完全一致
 
-## 主存储器和CPU的连接
-
-<a href="/images/408-mind-maps/co-0166.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0166.svg" alt="主存储器和CPU的连接" width="48" height="48" loading="lazy" /></a>
+## 主存储器和CPU的连接 <img src="/images/408-mind-maps/thumb/co-0166.webp" alt="主存储器和CPU的连接" width="48" height="48">
 
 - 总线信号命名：
   - 地址A0 ~ A7，数据 D0 ~ D7
 - 主存的基本组成
-  - 配图
-
-    <a href="/images/408-mind-maps/co-0258.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0258.svg" alt="主存的基本组成" width="240" height="95" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/co-0258.webp" alt="主存的基本组成" width="240" height="95">
 
     - 内存条插槽内有存储器总线
     - 内存条中的信息通过【内存条的引脚】，再通过【插槽内的引线】连接到【主板】上，通过【主板上的导线】连接到【CPU芯片】。
-    - 配图
-
-      <a href="/images/408-mind-maps/co-0069.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0069.svg" alt="主存的基本组成" width="240" height="156" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/co-0069.webp" alt="主存的基本组成" width="240" height="156">
 
 - 位扩展
   - 原因：芯片的字长(bit数)和CPU的字长(bit数)不统一，需要横向连接多块芯片来满足CPU的读取一次时的bit数需求
     - 即：扩展一次性可以读出的数据字长
-  - 最开始只有一块芯片的时候（数据线不够）
+  - 最开始只有一块芯片的时候（数据线不够） <img src="/images/408-mind-maps/thumb/co-0233.webp" alt="最开始只有一块芯片的时候（数据线不够）" width="215" height="220">
 
-    <a href="/images/408-mind-maps/co-0233.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0233.svg" alt="最开始只有一块芯片的时候（数据线不够）" width="215" height="220" loading="lazy" /></a>
+    - 例如再连一块 <img src="/images/408-mind-maps/thumb/co-0301.webp" alt="例如再连一块" width="240" height="177">
 
-    - 例如再连一块
-
-      <a href="/images/408-mind-maps/co-0301.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0301.svg" alt="例如再连一块" width="240" height="177" loading="lazy" /></a>
-
-      - 最后连接8块芯片
-
-        <a href="/images/408-mind-maps/co-0309.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0309.svg" alt="最后连接8块芯片" width="240" height="188" loading="lazy" /></a>
+      - 最后连接8块芯片 <img src="/images/408-mind-maps/thumb/co-0309.webp" alt="最后连接8块芯片" width="240" height="188">
 
         - 这样就把八个8K \* 1位的芯片通过【位扩展的方法】扩展为了8K \* 8位的芯片
 - 字扩展
   - 原因：芯片的字长和CPU已经满足了，可是CPU的地址总线上还是有很多根没有充分利用。故可以通过在地址中设置片选信号来增加地址数目
     - 即：扩展主存字数
-  - 最开始的时候地址线还有3个引脚没有连接
+  - 最开始的时候地址线还有3个引脚没有连接 <img src="/images/408-mind-maps/thumb/co-0074.webp" alt="最开始的时候地址线还有3个引脚没有连接" width="213" height="220">
 
-    <a href="/images/408-mind-maps/co-0074.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0074.svg" alt="最开始的时候地址线还有3个引脚没有连接" width="213" height="220" loading="lazy" /></a>
-
-    - 法一：线选法，CPU每一根多的地址线就连接着对应的芯片的CS。【这样CPU多了N根线，就可以多连接N个芯片】
-
-      <a href="/images/408-mind-maps/co-0314.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0314.svg" alt="法一：线选法，CPU每一根多的地址线就连接着对应的芯片的CS。【这样CPU多了N根线，就可以多连接N个芯片】" width="240" height="140" loading="lazy" /></a>
+    - 法一：线选法，CPU每一根多的地址线就连接着对应的芯片的CS。【这样CPU多了N根线，就可以多连接N个芯片】 <img src="/images/408-mind-maps/thumb/co-0314.webp" alt="法一：线选法，CPU每一根多的地址线就连接着对应的芯片的CS。【这样CPU多了N根线，就可以多连接N个芯片】" width="240" height="140">
 
       - 地址空间不连续
-    - 法二：译码片选法，CPU的每一根对应的地址线都连接一个非门和一根线，这样可以控制两个芯片。【所以CPU多了N根线，可以多连接2^N个芯片】
-
-      <a href="/images/408-mind-maps/co-0138.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0138.svg" alt="法二：译码片选法，CPU的每一根对应的地址线都连接一个非门和一根线，这样可以控制两个芯片。【所以CPU多了N根线，可以多连接2^N个芯片】" width="240" height="116" loading="lazy" /></a>
+    - 法二：译码片选法，CPU的每一根对应的地址线都连接一个非门和一根线，这样可以控制两个芯片。【所以CPU多了N根线，可以多连接2^N个芯片】 <img src="/images/408-mind-maps/thumb/co-0138.webp" alt="法二：译码片选法，CPU的每一根对应的地址线都连接一个非门和一根线，这样可以控制两个芯片。【所以CPU多了N根线，可以多连接2^N个芯片】" width="240" height="116">
 
       - 译码片选法连接多个芯片(此处选择了A13,A14，所以A15无论是多少都不会改变A0-A14的地址映射）
       - 这样就把4个8K \* 8位的芯片通过【字扩展的方法】扩展为了32K \* 8位的芯片
 - 字位扩展法：
-  - 配图
-
-    <a href="/images/408-mind-maps/co-0125.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0125.svg" alt="字位扩展法：" width="240" height="123" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/co-0125.webp" alt="字位扩展法：" width="240" height="123">
 
     - 两个芯片(16K \* 4)为一组进行【位扩展】，所以机器字长为8bit(16K \* 8)。再将四组通过【字扩展】连接在一起，形成(64K \* 8)的存储空间
-    - 地址空间为：<br>0000 0000 0000 0000 ~ 1111 1111 1111 1111
+    - 地址空间为： 0000 0000 0000 0000 ~ 1111 1111 1111 1111
       - 每个地址对应一个字的数据（此处一个字=1 Byte）
   - 注意CS和WE线
 - 补充：译码器
-  - 普通的3-8译码器
-
-    <a href="/images/408-mind-maps/co-0157.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0157.svg" alt="普通的3-8译码器" width="240" height="154" loading="lazy" /></a>
+  - 普通的3-8译码器 <img src="/images/408-mind-maps/thumb/co-0157.webp" alt="普通的3-8译码器" width="240" height="154">
 
     - "使能"端
-      - EN使能
+      - EN使能 <img src="/images/408-mind-maps/thumb/co-0175.webp" alt="EN使能" width="240" height="214">
 
-        <a href="/images/408-mind-maps/co-0175.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0175.svg" alt="EN使能" width="240" height="214" loading="lazy" /></a>
-
-        - 74ls138
-
-          <a href="/images/408-mind-maps/co-0302.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0302.svg" alt="74ls138" width="207" height="220" loading="lazy" /></a>
+        - 74ls138 <img src="/images/408-mind-maps/thumb/co-0302.webp" alt="74ls138" width="207" height="220">
 
     - MREQ
-      - CPU通过控制一个使能端，来控制CPU的操作顺序
+      - CPU通过控制一个使能端，来控制CPU的操作顺序 <img src="/images/408-mind-maps/thumb/co-0037.webp" alt="CPU通过控制一个使能端，来控制CPU的操作顺序" width="240" height="154">
 
-        <a href="/images/408-mind-maps/co-0037.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0037.svg" alt="CPU通过控制一个使能端，来控制CPU的操作顺序" width="240" height="154" loading="lazy" /></a>
-
-        - CPU先把地址信号传递到地址线上面去，检测到信号稳定后，CPU才会把MREQ设置为0，芯片才能进行运作
-
-          <a href="/images/408-mind-maps/co-0066.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0066.svg" alt="CPU先把地址信号传递到地址线上面去，检测到信号稳定后，CPU才会把MREQ设置为0，芯片才能进行运作" width="240" height="136" loading="lazy" /></a>
+        - CPU先把地址信号传递到地址线上面去，检测到信号稳定后，CPU才会把MREQ设置为0，芯片才能进行运作 <img src="/images/408-mind-maps/thumb/co-0066.webp" alt="CPU先把地址信号传递到地址线上面去，检测到信号稳定后，CPU才会把MREQ设置为0，芯片才能进行运作" width="240" height="136">
 
 - 考频：中
   - 09-11、16、18、21
 
-## 外部存储器
-
-<a href="/images/408-mind-maps/co-0042.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0042.svg" alt="外部存储器" width="45" height="46" loading="lazy" /></a>
+## 外部存储器 <img src="/images/408-mind-maps/thumb/co-0042.webp" alt="外部存储器" width="45" height="46">
 
 - 考频：低
   - 13\*2、15、19
@@ -460,9 +388,7 @@ layout: mind-map
       - 每两个扇区之间的间隙
     - 未命名主题
     - 柱面
-      - 多个磁盘垂直叠在一起时，所有磁道组成的垂直面就是柱面
-
-        <a href="/images/408-mind-maps/co-0038.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0038.svg" alt="多个磁盘垂直叠在一起时，所有磁道组成的垂直面就是柱面" width="240" height="217" loading="lazy" /></a>
+      - 多个磁盘垂直叠在一起时，所有磁道组成的垂直面就是柱面 <img src="/images/408-mind-maps/thumb/co-0038.webp" alt="多个磁盘垂直叠在一起时，所有磁道组成的垂直面就是柱面" width="240" height="217">
 
     - 块
       - 物理块
@@ -474,7 +400,7 @@ layout: mind-map
     - 概要：配图
       概要范围：[磁道](#focus=%E7%A3%81%E9%81%93)、[磁道间隙](#focus=%E7%A3%81%E9%81%93%E9%97%B4%E9%9A%99)、[扇区](#focus=%E6%89%87%E5%8C%BA)、[扇区间隙](#focus=%E6%89%87%E5%8C%BA%E9%97%B4%E9%9A%99)
 
-      <a href="/images/408-mind-maps/co-0181.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0181.svg" alt="磁盘的概念" width="240" height="214" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/co-0181.webp" alt="磁盘的概念" width="240" height="214">
 
   - 磁盘地址形式：
     - &lt;柱面、盘面、扇区&gt;
@@ -495,15 +421,11 @@ layout: mind-map
   - 基于闪存的存储器
     - 存储介质：NAND颗粒
   - 读写速度比较：
-    - 配图
-
-      <a href="/images/408-mind-maps/co-0101.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0101.svg" alt="读写速度比较：" width="240" height="99" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/co-0101.webp" alt="读写速度比较：" width="240" height="99">
 
       - （硬件茶谈）
   - 组成：
-    - 闪存翻译层 + 多个闪存芯片
-
-      <a href="/images/408-mind-maps/co-0082.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0082.svg" alt="闪存翻译层 + 多个闪存芯片" width="240" height="145" loading="lazy" /></a>
+    - 闪存翻译层 + 多个闪存芯片 <img src="/images/408-mind-maps/thumb/co-0082.webp" alt="闪存翻译层 + 多个闪存芯片" width="240" height="145">
 
       - 读写单位
         - CPU下令要读取一个块的内容
@@ -529,9 +451,7 @@ layout: mind-map
     - 概要：静态平均的效果比动态平均效果更好
       概要范围：[静态平均：](#focus=%E9%9D%99%E6%80%81%E5%B9%B3%E5%9D%87%EF%BC%9A)
 
-## 高速缓冲存储器Cache
-
-<a href="/images/408-mind-maps/co-0022.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0022.svg" alt="高速缓冲存储器Cache" width="48" height="48" loading="lazy" /></a>
+## 高速缓冲存储器Cache <img src="/images/408-mind-maps/thumb/co-0022.webp" alt="高速缓冲存储器Cache" width="48" height="48">
 
 - 前提
   - 局部性原理
@@ -560,9 +480,7 @@ layout: mind-map
         ```
 
         - 分析：
-          - 配图
-
-            <a href="/images/408-mind-maps/co-0109.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0109.svg" alt="分析：" width="98" height="220" loading="lazy" /></a>
+          - <img src="/images/408-mind-maps/thumb/co-0109.webp" alt="分析：" width="98" height="220">
 
   - 上述问题的三个其他点：
     - 数组访问的时间局部性：
@@ -572,28 +490,20 @@ layout: mind-map
   - 操作系统采用页式存储
     - &lt;页号、偏置值&gt;
 - Cache的基本工作原理
-  - 配图
-
-    <a href="/images/408-mind-maps/co-0263.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0263.svg" alt="Cache的基本工作原理" width="240" height="123" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/co-0263.webp" alt="Cache的基本工作原理" width="240" height="123">
 
     - Cache中的内容是主存的复制（缓冲区\_\_\_\_\_\_\_）
       - 可以将局部性好的内容放入到Cache中
       - Cache命中后直接把标记后的数据部分进行读取（就可以不访问内存了）
-    - Cache的访问速度t，H为命中率，tc是cache速度，tm是访问主存速度，(1-H)后面也可以只有tm
-
-      $t = Ht_c + (1-H)(t_m+t_c)$
+    - Cache的访问速度t，H为命中率，tc是cache速度，tm是访问主存速度，(1-H)后面也可以只有tm $t = Ht_c + (1-H)(t_m+t_c)$
 
     - 通常采用SRAM构成
       - 现代计算机把Cache集成在了CPU的内部
     - 速度快、成本高、集成度低
 - 大题看到题目第一步怎么做：
-  - 下面那个地址可以不画
+  - 下面那个地址可以不画 <img src="/images/408-mind-maps/thumb/co-0191.webp" alt="下面那个地址可以不画" width="240" height="138">
 
-    <a href="/images/408-mind-maps/co-0191.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0191.svg" alt="下面那个地址可以不画" width="240" height="138" loading="lazy" /></a>
-
-- Cache和主存的映射关系
-
-  <a href="/images/408-mind-maps/co-0168.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0168.svg" alt="Cache和主存的映射关系" width="45" height="45" loading="lazy" /></a>
+- Cache和主存的映射关系 <img src="/images/408-mind-maps/thumb/co-0168.webp" alt="Cache和主存的映射关系" width="45" height="45">
 
   - Cache每一行的内容
     - (计数位 + 脏位) + 有效位+标记+存储的内容
@@ -606,41 +516,27 @@ layout: mind-map
     - 【存储的内容】就是对应的主存页面的副本
   - 直接映射
     - 直接映射规则：
-      - 主存在Cache中的行号 = 主存块号 % Cache总块数
-
-        <a href="/images/408-mind-maps/co-0180.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0180.svg" alt="主存在Cache中的行号 = 主存块号 % Cache总块数" width="178" height="220" loading="lazy" /></a>
+      - 主存在Cache中的行号 = 主存块号 % Cache总块数 <img src="/images/408-mind-maps/thumb/co-0180.webp" alt="主存在Cache中的行号 = 主存块号 % Cache总块数" width="178" height="220">
 
     - 映射公式
-      - Cache中有2^c页，则主存中第 i 页对应在Cache中的行号 j
-
-        $j = i \ mod\ 2^c$
+      - Cache中有2^c页，则主存中第 i 页对应在Cache中的行号 j $j = i \ mod\ 2^c$
 
         - 替换算法：如果出现冲突，则直接将块移出cache
     - 地址变化：
-      - 大题第二步（根据地址应声规则计算正确的地址形式）
+      - 大题第二步（根据地址应声规则计算正确的地址形式） <img src="/images/408-mind-maps/thumb/co-0254.webp" alt="大题第二步（根据地址应声规则计算正确的地址形式）" width="240" height="179">
 
-        <a href="/images/408-mind-maps/co-0254.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0254.svg" alt="大题第二步（根据地址应声规则计算正确的地址形式）" width="240" height="179" loading="lazy" /></a>
+        - 此时主存的地址样子 <img src="/images/408-mind-maps/thumb/co-0143.webp" alt="此时主存的地址样子" width="194" height="220">
 
-        - 此时主存的地址样子
-
-          <a href="/images/408-mind-maps/co-0143.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0143.svg" alt="此时主存的地址样子" width="194" height="220" loading="lazy" /></a>
-
-          - CPU访问例子（大题第三步）
-
-            <a href="/images/408-mind-maps/co-0296.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0296.svg" alt="CPU访问例子（大题第三步）" width="240" height="150" loading="lazy" /></a>
+          - CPU访问例子（大题第三步） <img src="/images/408-mind-maps/thumb/co-0296.webp" alt="CPU访问例子（大题第三步）" width="240" height="150">
 
     - 电路图
-      - 配图
-
-        <a href="/images/408-mind-maps/co-0090.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0090.svg" alt="电路图" width="240" height="188" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/co-0090.webp" alt="电路图" width="240" height="188">
 
         - 首先获得访问的地址&lt;块号、块内地址&gt;
           - &lt;页号、偏移量&gt;
         - 解析页号，获得最末尾的c位，【直接定位到】Cache的对应行，把前t位与当前标记位进行比较，如果相同则命中。
     - Cache每行结构：
-      - Cache每行有 1+1+19+64\*8 = 533 bit
-
-        <a href="/images/408-mind-maps/co-0046.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0046.svg" alt="Cache每行有 1+1+19+64\*8 = 533 bit" width="240" height="160" loading="lazy" /></a>
+      - Cache每行有 1+1+19+64\*8 = 533 bit <img src="/images/408-mind-maps/thumb/co-0046.webp" alt="Cache每行有 1+1+19+64\*8 = 533 bit" width="240" height="160">
 
     - 特点
       - 简单，不够灵活，冲突率高，空间利用率低
@@ -658,17 +554,11 @@ layout: mind-map
       - 【无】
         - 查找方式：遍历所有Cache行
     - 地址变化：
-      - 大题第二步（根据地址映射规则计算正确的地址形式）
+      - 大题第二步（根据地址映射规则计算正确的地址形式） <img src="/images/408-mind-maps/thumb/co-0319.webp" alt="大题第二步（根据地址映射规则计算正确的地址形式）" width="240" height="159">
 
-        <a href="/images/408-mind-maps/co-0319.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0319.svg" alt="大题第二步（根据地址映射规则计算正确的地址形式）" width="240" height="159" loading="lazy" /></a>
+        - 此时主存的地址样子 <img src="/images/408-mind-maps/thumb/co-0071.webp" alt="此时主存的地址样子" width="211" height="220">
 
-        - 此时主存的地址样子
-
-          <a href="/images/408-mind-maps/co-0071.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0071.svg" alt="此时主存的地址样子" width="211" height="220" loading="lazy" /></a>
-
-          - CPU访问例子（大题第三步）
-
-            <a href="/images/408-mind-maps/co-0083.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0083.svg" alt="CPU访问例子（大题第三步）" width="240" height="138" loading="lazy" /></a>
+          - CPU访问例子（大题第三步） <img src="/images/408-mind-maps/thumb/co-0083.webp" alt="CPU访问例子（大题第三步）" width="240" height="138">
 
     - 原理
       - 首先获得访问的地址&lt;块号、块内地址&gt;
@@ -677,51 +567,33 @@ layout: mind-map
     - 特点
       - 灵活、冲突率低、利用率高、命中率高
       - 比较速度慢，实现成本高，需要昂贵的TLB(相联存储器)进行地址映射
-    - Cache每行有 1+1+3+22+64\*8 = 539 bit
-
-      <a href="/images/408-mind-maps/co-0086.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0086.svg" alt="Cache每行有 1+1+3+22+64\*8 = 539 bit" width="240" height="127" loading="lazy" /></a>
+    - Cache每行有 1+1+3+22+64\*8 = 539 bit <img src="/images/408-mind-maps/thumb/co-0086.webp" alt="Cache每行有 1+1+3+22+64\*8 = 539 bit" width="240" height="127">
 
       - 有效位：LRU算法需要3bit
   - 组相联映射
     - 组相联映射规则：
-      - 主存在Cache中的组号 = 主存块号 % Cache总组数
-
-        <a href="/images/408-mind-maps/co-0224.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0224.svg" alt="主存在Cache中的组号 = 主存块号 % Cache总组数" width="192" height="220" loading="lazy" /></a>
+      - 主存在Cache中的组号 = 主存块号 % Cache总组数 <img src="/images/408-mind-maps/thumb/co-0224.webp" alt="主存在Cache中的组号 = 主存块号 % Cache总组数" width="192" height="220">
 
     - N路组相联 --- Cache每个组中有N个Cache行
       - 2路组相联：两个一组
     - 映射公式
-      - 把Cache分为大小相同的组，每个组对应了主存的一个区域的内容。组间采用直接映射，组内采用全相联映射（i 为 主存的页号，j 为 Cache的行号、Q为Cache的组数）
-
-        $j = i \ mod \ Q$
+      - 把Cache分为大小相同的组，每个组对应了主存的一个区域的内容。组间采用直接映射，组内采用全相联映射（i 为 主存的页号，j 为 Cache的行号、Q为Cache的组数） $j = i \ mod \ Q$
 
     - 地址变化：
-      - 大题第二步（根据地址应声规则计算正确的地址形式）
+      - 大题第二步（根据地址应声规则计算正确的地址形式） <img src="/images/408-mind-maps/thumb/co-0278.webp" alt="大题第二步（根据地址应声规则计算正确的地址形式）" width="240" height="194">
 
-        <a href="/images/408-mind-maps/co-0278.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0278.svg" alt="大题第二步（根据地址应声规则计算正确的地址形式）" width="240" height="194" loading="lazy" /></a>
+        - 此时主存的地址样子 <img src="/images/408-mind-maps/thumb/co-0275.webp" alt="此时主存的地址样子" width="184" height="220">
 
-        - 此时主存的地址样子
-
-          <a href="/images/408-mind-maps/co-0275.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0275.svg" alt="此时主存的地址样子" width="184" height="220" loading="lazy" /></a>
-
-          - CPU访问例子（大题第三步）
-
-            <a href="/images/408-mind-maps/co-0141.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0141.svg" alt="CPU访问例子（大题第三步）" width="240" height="145" loading="lazy" /></a>
+          - CPU访问例子（大题第三步） <img src="/images/408-mind-maps/thumb/co-0141.webp" alt="CPU访问例子（大题第三步）" width="240" height="145">
 
     - Cache每行结构：
-      - Cache每行有 1+1+1+20+64\*8 = 535 bit
-
-        <a href="/images/408-mind-maps/co-0197.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0197.svg" alt="Cache每行有 1+1+1+20+64\*8 = 535 bit" width="240" height="126" loading="lazy" /></a>
+      - Cache每行有 1+1+1+20+64\*8 = 535 bit <img src="/images/408-mind-maps/thumb/co-0197.webp" alt="Cache每行有 1+1+1+20+64\*8 = 535 bit" width="240" height="126">
 
         - 查找Cache时就是查找标记阵列的标记项是 否符合要求
-        - 标记项组成的二维标记阵列
-
-          <a href="/images/408-mind-maps/co-0246.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0246.svg" alt="标记项组成的二维标记阵列" width="240" height="109" loading="lazy" /></a>
+        - 标记项组成的二维标记阵列 <img src="/images/408-mind-maps/thumb/co-0246.webp" alt="标记项组成的二维标记阵列" width="240" height="109">
 
     - 奇葩的题目
-      - 组相联映射还可以把最末的几位作为组号
-
-        <a href="/images/408-mind-maps/co-0218.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0218.svg" alt="组相联映射还可以把最末的几位作为组号" width="240" height="131" loading="lazy" /></a>
+      - 组相联映射还可以把最末的几位作为组号 <img src="/images/408-mind-maps/thumb/co-0218.webp" alt="组相联映射还可以把最末的几位作为组号" width="240" height="131">
 
 - Cache的替换算法
   - 直接映射：
@@ -735,9 +607,7 @@ layout: mind-map
     - LRU --- 最近最少使用算法
       - 堆栈类算法，在每个cache中添加一个“counter位”
         - 2^n 路组相联，就需要n bit的计数位
-      - 举例
-
-        <a href="/images/408-mind-maps/co-0026.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0026.svg" alt="举例" width="240" height="71" loading="lazy" /></a>
+      - 举例 <img src="/images/408-mind-maps/thumb/co-0026.webp" alt="举例" width="240" height="71">
 
         - 使用counter计数来模拟堆栈的实现，阴影数值越小，说明越新进入Cache
         - counter的值是有范围的 0 ~ 2^n-1，不会超过
@@ -770,30 +640,24 @@ layout: mind-map
     - 【回写】写回法 + 写分配法
       - 写命中只写入Cache并修改脏位，写不命中则把块调入到Cache中，并只修改Cache
     - 多级Cache的混合搭配
-      - 配图
-
-        <a href="/images/408-mind-maps/co-0021.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0021.svg" alt="多级Cache的混合搭配" width="240" height="44" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/co-0021.webp" alt="多级Cache的混合搭配" width="240" height="44">
 
         - CPU -&gt; Cache -&gt; L2 Cache
           - 采用的是全写法 + 非写分配法（因为有写缓冲）
         - Cache -&gt; L2 Cache -&gt; DRAM
           - 采用的是写回法 + 写分配法
       - 离CPU越远，容量越大，速度越慢
-        - Cache 存 L2 Cache 的复制<br>L2 Cache 存 DRAM 的复制
+        - Cache 存 L2 Cache 的复制 L2 Cache 存 DRAM 的复制
 - 考频：超高
   - 09\*2、12、14、16、17、21、22、10大、13大、16大、20大
 
-## 虚拟存储器
-
-<a href="/images/408-mind-maps/co-0085.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0085.svg" alt="虚拟存储器" width="48" height="48" loading="lazy" /></a>
+## 虚拟存储器 <img src="/images/408-mind-maps/thumb/co-0085.webp" alt="虚拟存储器" width="48" height="48">
 
 - 考频：超高
   - 10、13、15\*2、19、20、22、11大、18大、21大
 - 虚拟存储器对应用程序员是透明的，是操作系统使用虚拟技术创造的具有主存速度辅存容量的存储器
 - 用户编程使用逻辑/虚地址来进行编程，操作系统自行将其转为对应的物理/实地址
-  - 虚拟存储器的三个地址空间
-
-    <a href="/images/408-mind-maps/co-0268.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0268.svg" alt="虚拟存储器的三个地址空间" width="240" height="115" loading="lazy" /></a>
+  - 虚拟存储器的三个地址空间 <img src="/images/408-mind-maps/thumb/co-0268.webp" alt="虚拟存储器的三个地址空间" width="240" height="115">
 
 - 页式虚拟存储
   分组说明：重要考点；对应：[TLB + Cache 的多级存储系统](#focus=TLB%20%2B%20Cache%20%E7%9A%84%E5%A4%9A%E7%BA%A7%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F)
@@ -803,9 +667,7 @@ layout: mind-map
       - 虚拟地址的空间：内存 + 外存
       - 实地址的空间：内存
     - 页表项
-      - 主存中的页表实例：&lt;有效位、脏位、引用位、物理页号&gt;
-
-        <a href="/images/408-mind-maps/co-0062.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0062.svg" alt="主存中的页表实例：&amp;lt;有效位、脏位、引用位、物理页号&amp;gt;" width="240" height="133" loading="lazy" /></a>
+      - 主存中的页表实例：&lt;有效位、脏位、引用位、物理页号&gt; <img src="/images/408-mind-maps/thumb/co-0062.webp" alt="主存中的页表实例：&amp;amp;lt;有效位、脏位、引用位、物理页号&amp;amp;gt;" width="240" height="133">
 
         - 有效位：装入位，表示是否已经装入内存
         - 脏位：是否被修改过
@@ -813,9 +675,7 @@ layout: mind-map
         - 引用位：使用位，给置换算法用的
         - 磁盘地址/页号：有效位为 1，则存的是内存页号。有效位为0，则存的是磁盘块号
     - 地址转化：
-      - 配图
-
-        <a href="/images/408-mind-maps/co-0107.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0107.svg" alt="地址转化：" width="240" height="195" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/co-0107.webp" alt="地址转化：" width="240" height="195">
 
   - 快表
     - TLB 相联存储器，由高速缓冲器组成
@@ -829,13 +689,9 @@ layout: mind-map
     - TLB命中了，主存一定命中
       - Cache命中了，主存也一定命中
   - TLB + Cache 的多级存储系统
-    - 第一步：虚拟地址到物理地址
+    - 第一步：虚拟地址到物理地址 <img src="/images/408-mind-maps/thumb/co-0070.webp" alt="第一步：虚拟地址到物理地址" width="227" height="220">
 
-      <a href="/images/408-mind-maps/co-0070.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0070.svg" alt="第一步：虚拟地址到物理地址" width="227" height="220" loading="lazy" /></a>
-
-      - 第二步：物理地址的Cache表示形式
-
-        <a href="/images/408-mind-maps/co-0306.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0306.svg" alt="第二步：物理地址的Cache表示形式" width="215" height="220" loading="lazy" /></a>
+      - 第二步：物理地址的Cache表示形式 <img src="/images/408-mind-maps/thumb/co-0306.webp" alt="第二步：物理地址的Cache表示形式" width="215" height="220">
 
         - CPU给出虚拟地址&lt;虚页号 + 页内地址&gt;
         - OS层：
@@ -862,7 +718,7 @@ layout: mind-map
       - 概要：也可以合起来图
         概要范围：[第二步：物理地址的Cache表示形式](#focus=%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80%E7%9A%84Cache%E8%A1%A8%E7%A4%BA%E5%BD%A2%E5%BC%8F)
 
-        <a href="/images/408-mind-maps/co-0298.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0298.svg" alt="也可以合起来图" width="240" height="125" loading="lazy" /></a>
+        - <img src="/images/408-mind-maps/thumb/co-0298.webp" alt="也可以合起来图" width="240" height="125">
 
 - 段式虚拟存储
   - 与主存交换信息采用”段“

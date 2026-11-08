@@ -9,9 +9,7 @@ layout: mind-map
 
 [查看关联主题：第一章 计算机系统概论](/docs/408/mind-maps/computer-organization/01-overview)
 
-## 指令格式
-
-<a href="/images/408-mind-maps/co-0271.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0271.svg" alt="指令格式" width="48" height="48" loading="lazy" /></a>
+## 指令格式 <img src="/images/408-mind-maps/thumb/co-0271.webp" alt="指令格式" width="48" height="48">
 
 - 基本格式
   - 操作码 + 地址码（op + add）
@@ -59,13 +57,9 @@ layout: mind-map
 - 定长操作码：
   - 操作码有n bit，则一共有2^n个指令
 - 扩展操作码：
-  - 配图
+  - <img src="/images/408-mind-maps/thumb/co-0318.webp" alt="扩展操作码：" width="188" height="220">
 
-    <a href="/images/408-mind-maps/co-0318.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0318.svg" alt="扩展操作码：" width="188" height="220" loading="lazy" /></a>
-
-    - 更灵活的：动态的扩展操作码
-
-      <a href="/images/408-mind-maps/co-0124.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0124.svg" alt="更灵活的：动态的扩展操作码" width="240" height="73" loading="lazy" /></a>
+    - 更灵活的：动态的扩展操作码 <img src="/images/408-mind-maps/thumb/co-0124.webp" alt="更灵活的：动态的扩展操作码" width="240" height="73">
 
 - 指令系统是软硬件的界面
   - 软件依靠指令和硬件进行交互
@@ -79,9 +73,7 @@ layout: mind-map
 - 考频：低
   - 17、22\*2
 
-## 指令寻址和数据寻址
-
-<a href="/images/408-mind-maps/co-0097.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0097.svg" alt="指令寻址和数据寻址" width="48" height="48" loading="lazy" /></a>
+## 指令寻址和数据寻址 <img src="/images/408-mind-maps/thumb/co-0097.webp" alt="指令寻址和数据寻址" width="48" height="48">
 
 - 考频：高
   - 11\*2、13、14、16-20
@@ -92,30 +84,24 @@ layout: mind-map
   - 跳跃寻址
     - 下条指令的地址码由指令给出
     - 跳动地址分为绝对地址和相对地址
-  - 批注：寻找下条运行<br>的指令的地址
+  - 批注：寻找下条运行 的指令的地址
 - 数据寻址
   - 指令格式：
     - &lt;OP，寻址特征，ADD&gt;
   - 隐含寻址
-    - 配图
-
-      <a href="/images/408-mind-maps/co-0235.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0235.svg" alt="隐含寻址" width="240" height="122" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/co-0235.webp" alt="隐含寻址" width="240" height="122">
 
       - 即两个操作数：一个直接寻址，一个在ACC
       - 给出一个操作数A的地址，与ACC进行运算
     - 批注：EA = A + ACC
   - 普通寻址
     - 立即数寻址
-      - 配图
-
-        <a href="/images/408-mind-maps/co-0252.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0252.svg" alt="立即数寻址" width="240" height="143" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/co-0252.webp" alt="立即数寻址" width="240" height="143">
 
         - 直接给出操作的立即数的数字
       - 批注：无EA，#A
     - 直接寻址
-      - 配图
-
-        <a href="/images/408-mind-maps/co-0226.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0226.svg" alt="直接寻址" width="240" height="94" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/co-0226.webp" alt="直接寻址" width="240" height="94">
 
         - 直接存有操作数的地址，EA = A
         - 优缺点
@@ -123,9 +109,7 @@ layout: mind-map
           - 缺点：寻址的区间被A的地址所约束
       - 批注：EA = A
     - 间接寻址
-      - 配图
-
-        <a href="/images/408-mind-maps/co-0024.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0024.svg" alt="间接寻址" width="240" height="106" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/co-0024.webp" alt="间接寻址" width="240" height="106">
 
         - 可能存在多次间接寻址
           - 多次间接寻址需要设置一个bit位来指明是否是最后一次寻址
@@ -137,9 +121,7 @@ layout: mind-map
       - 批注：EA = (A)
   - 寄存器寻址
     - 寄存器寻址
-      - 配图
-
-        <a href="/images/408-mind-maps/co-0084.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0084.svg" alt="寄存器寻址" width="171" height="220" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/co-0084.webp" alt="寄存器寻址" width="171" height="220">
 
         - 数据码部分的是寄存器编号，寄存器中存有操作数
         - 优缺点
@@ -148,17 +130,13 @@ layout: mind-map
       - 批注：EA = Ri
     - 寄存器间接寻址
 
-      - 配图
-
-        <a href="/images/408-mind-maps/co-0078.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0078.svg" alt="寄存器间接寻址" width="240" height="206" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/co-0078.webp" alt="寄存器间接寻址" width="240" height="206">
 
         - 数据码部分是指明的寄存器编号，寄存器中存有操作数的地址
       - 批注：EA = (Ri）
   - 偏移寻址
     - 相对寻址
-      - 配图
-
-        <a href="/images/408-mind-maps/co-0192.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0192.svg" alt="相对寻址" width="240" height="129" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/co-0192.webp" alt="相对寻址" width="240" height="129">
 
         - A是一个补码偏移量
         - EA = (PC) + A
@@ -169,9 +147,7 @@ layout: mind-map
           - 程序浮动：一段代码在程序内部跳转
       - 批注：EA = (PC) + A
     - 基址寻址
-      - 配图
-
-        <a href="/images/408-mind-maps/co-0200.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0200.svg" alt="基址寻址" width="240" height="85" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/co-0200.webp" alt="基址寻址" width="240" height="85">
 
         - EA = (BR) + A
           - 其中可以是BR，也可以是Ri
@@ -179,9 +155,7 @@ layout: mind-map
           - 编制浮动程序：一个程序在内存中浮动
       - 批注：EA = (BR) + A
     - 变址寻址
-      - 配图
-
-        <a href="/images/408-mind-maps/co-0050.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0050.svg" alt="变址寻址" width="240" height="153" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/co-0050.webp" alt="变址寻址" width="240" height="153">
 
         - IX用户可以编程设置
         - 面向用户的，可以方便的设置A为某个数组的首部地址，然后执行EA = A + (IX)
@@ -209,9 +183,7 @@ layout: mind-map
 
     注：表中的次数按原图统计操作数访问，不计取指。
 
-## X86汇编指令
-
-<a href="/images/408-mind-maps/co-0182.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0182.svg" alt="X86汇编指令" width="48" height="48" loading="lazy" /></a>
+## X86汇编指令 <img src="/images/408-mind-maps/thumb/co-0182.webp" alt="X86汇编指令" width="48" height="48">
 
 - X86默认字长 32bit
 - 寄存器只有Ri、PC、PSW是程序员可见的
@@ -227,7 +199,7 @@ layout: mind-map
   - 变址ESI、EDI
   - 堆栈基EBP
   - 堆栈顶ESP
-  - 概要：32位：E\_\_X<br>低16位：\_\_X<br>\_\_X的高8位：\_\_H<br>\_\_X的低8位：\_\_L
+  - 概要：32位：E\_\_X 低16位：\_\_X \_\_X的高8位：\_\_H \_\_X的低8位：\_\_L
     概要范围：[A](#focus=A)、[B](#focus=B)、[C](#focus=C)、[D](#focus=D)
 
   - 概要：这两个寄存器不能乱用
@@ -297,9 +269,7 @@ layout: mind-map
     }
     ```
 
-    - 配图
-
-      <a href="/images/408-mind-maps/co-0294.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0294.svg" alt="例题举例：" width="198" height="220" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/co-0294.webp" alt="例题举例：" width="198" height="220">
 
       - 考题：
       - 1\. 考C语言：递归次数
@@ -309,17 +279,13 @@ layout: mind-map
       - 5\. 带标记的乘法器OF判断；异常处理：溢出陷入指令。
         - 并且告诉了R\[eax\] = R\[eax\] \* R\[ecx\]
 - AT&amp;T和Intel的汇编格式
-  - 汇编语法格式区分
-
-    <a href="/images/408-mind-maps/co-0132.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0132.svg" alt="汇编语法格式区分" width="240" height="54" loading="lazy" /></a>
+  - 汇编语法格式区分 <img src="/images/408-mind-maps/thumb/co-0132.webp" alt="汇编语法格式区分" width="240" height="54">
 
   - 批注：22
 - 考频：低
   - 17大、19大\*2
 
-## CISC、RISC
-
-<a href="/images/408-mind-maps/co-0135.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0135.svg" alt="CISC、RISC" width="48" height="48" loading="lazy" /></a>
+## CISC、RISC <img src="/images/408-mind-maps/thumb/co-0135.webp" alt="CISC、RISC" width="48" height="48">
 
 - 考频：低
   - 09、11
@@ -343,5 +309,5 @@ layout: mind-map
     |控制方式|绝大多数是微程序控制|绝大多数是组合逻辑控制|
     |指令流水线|可以通过一定方式实现|必须实现|
 
-<a href="/images/408-mind-maps/co-0221.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0221.svg" alt="END" width="48" height="48" loading="lazy" /></a>
+- <img src="/images/408-mind-maps/thumb/co-0221.webp" alt="END" width="48" height="48">
 ````

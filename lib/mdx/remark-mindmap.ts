@@ -9,8 +9,8 @@ export interface RemarkMdxMindmapOptions {
 }
 
 function toMDX(code: string) {
-  // Markdown → markmap tree happens once at build time: math is rendered by
-  // KaTeX and code by highlight.js here, so the browser only loads the view.
+  // Markdown → Markmap tree happens once at build time, so the browser skips
+  // the Markdown parser and only loads the view.
   const data = JSON.stringify(transformMindMapMarkdown(code));
 
   return {

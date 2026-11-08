@@ -33,9 +33,7 @@ layout: mind-map
     - 有个n个关键字，则这n个关键字的'数组'有 【n!】种形成方式
     - 设至少t次两两比较，则这t次两两比较后数组会有【 2^t 】种结果
     - 故形成结果数【一定要 &gt; 】形成方式数
-      - t 为整数，最后取上整数
-
-        $2^t \ge n! 即\ t\ge log_2(n!)$
+      - t 为整数，最后取上整数 $2^t \ge n! 即\ t\ge log_2(n!)$
 
 - 考频：低
   - 无
@@ -70,9 +68,7 @@ layout: mind-map
     ```
 
 - 示意图
-  - 配图
-
-    <a href="/images/408-mind-maps/ds-0168.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0168.svg" alt="示意图" width="240" height="136" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/ds-0168.webp" alt="示意图" width="240" height="136">
 
     - 边找、边换位置
 - 分析&amp;特点
@@ -147,9 +143,7 @@ layout: mind-map
   - 将整个数组分割成若干个特殊字表，对各个字表进行直插排序，最后对总表进行一次直插
     - 优化点：每次进行直插的时候很大概率都会在中间停下，是和【概率/数组情况】有关的
 - 示意图：
-  - 配图
-
-    <a href="/images/408-mind-maps/ds-0175.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0175.svg" alt="示意图：" width="240" height="152" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/ds-0175.webp" alt="示意图：" width="240" height="152">
 
 - 代码：
   - 配图
@@ -187,9 +181,7 @@ layout: mind-map
 - 思路：
   - 像泡泡一样，每次都两两交换把最大/最小交换到对应位置
 - 示意图：
-  - 配图
-
-    <a href="/images/408-mind-maps/ds-0063.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0063.svg" alt="示意图：" width="227" height="220" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/ds-0063.webp" alt="示意图：" width="227" height="220">
 
 - 代码：
   - 配图
@@ -234,9 +226,7 @@ layout: mind-map
   - 每次快排，选择一个值为pivot，把比其小的放在左边，比其大的放在右边。然后再对pivot左右的数组进行快排
     - 默认pivot选择最左边的元素
 - 示意图：
-  - 配图
-
-    <a href="/images/408-mind-maps/ds-0148.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0148.svg" alt="示意图：" width="186" height="220" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/ds-0148.webp" alt="示意图：" width="186" height="220">
 
 - 代码：
   - 配图
@@ -331,9 +321,7 @@ layout: mind-map
   - 思路：
     - 从倒数第一个非叶子结点开始，调整其下属的堆，使得自己是这个堆中的最大值
   - 示意图：
-    - 配图
-
-      <a href="/images/408-mind-maps/ds-0062.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0062.svg" alt="示意图：" width="240" height="158" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/ds-0062.webp" alt="示意图：" width="240" height="158">
 
   - 代码：
     - 配图
@@ -379,9 +367,7 @@ layout: mind-map
   - 思路：
     - 每次都把根节点和树的最后一个结点交换，交换后把这个节点和树的联系切断
   - 示意图：
-    - 配图
-
-      <a href="/images/408-mind-maps/ds-0070.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0070.svg" alt="示意图：" width="240" height="75" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/ds-0070.webp" alt="示意图：" width="240" height="75">
 
   - 代码：
     - 配图
@@ -415,9 +401,7 @@ layout: mind-map
 - 思路：
   - 把多个有序表组合成一个有序表
 - 图示：
-  - 一般讨论只说红色部分，但是真正的代码实现是蓝色+红色来实现的
-
-    <a href="/images/408-mind-maps/ds-0215.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0215.svg" alt="一般讨论只说红色部分，但是真正的代码实现是蓝色+红色来实现的" width="240" height="180" loading="lazy" /></a>
+  - 一般讨论只说红色部分，但是真正的代码实现是蓝色+红色来实现的 <img src="/images/408-mind-maps/thumb/ds-0215.webp" alt="一般讨论只说红色部分，但是真正的代码实现是蓝色+红色来实现的" width="240" height="180">
 
 - 代码：
   - 递归
@@ -487,17 +471,11 @@ layout: mind-map
 - 思路：
   - 通过多个关键字的比较进行排序
 - 图示：
-  - 配图
+  - <img src="/images/408-mind-maps/thumb/ds-0071.webp" alt="图示：" width="240" height="122">
 
-    <a href="/images/408-mind-maps/ds-0071.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0071.svg" alt="图示：" width="240" height="122" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/ds-0159.webp" alt="图示：" width="240" height="122">
 
-  - 配图
-
-    <a href="/images/408-mind-maps/ds-0159.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0159.svg" alt="图示：" width="240" height="122" loading="lazy" /></a>
-
-  - 配图
-
-    <a href="/images/408-mind-maps/ds-0128.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0128.svg" alt="图示：" width="240" height="120" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/ds-0128.webp" alt="图示：" width="240" height="120">
 
   - 批注：三位数
 - 分析：
@@ -585,26 +563,16 @@ layout: mind-map
 - 概念
   - 外部排序重点优化的是外存调入内存的次数
   - 归并段：
-    - 初始情况
+    - 初始情况 <img src="/images/408-mind-maps/thumb/ds-0212.webp" alt="初始情况" width="240" height="147">
 
-      <a href="/images/408-mind-maps/ds-0212.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0212.svg" alt="初始情况" width="240" height="147" loading="lazy" /></a>
+      - 完成一次归并排序后的新的数据段 <img src="/images/408-mind-maps/thumb/ds-0076.webp" alt="完成一次归并排序后的新的数据段" width="240" height="95">
 
-      - 完成一次归并排序后的新的数据段
-
-        <a href="/images/408-mind-maps/ds-0076.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0076.svg" alt="完成一次归并排序后的新的数据段" width="240" height="95" loading="lazy" /></a>
-
-        - 也可以是归并段和归并段形成新的归并段
-
-          <a href="/images/408-mind-maps/ds-0210.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0210.svg" alt="也可以是归并段和归并段形成新的归并段" width="240" height="82" loading="lazy" /></a>
+        - 也可以是归并段和归并段形成新的归并段 <img src="/images/408-mind-maps/thumb/ds-0210.webp" alt="也可以是归并段和归并段形成新的归并段" width="240" height="82">
 
 - 归并排序
-  - 采用三个缓冲区即可完成二路归并排序
+  - 采用三个缓冲区即可完成二路归并排序 <img src="/images/408-mind-maps/thumb/ds-0220.webp" alt="采用三个缓冲区即可完成二路归并排序" width="240" height="100">
 
-    <a href="/images/408-mind-maps/ds-0220.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0220.svg" alt="采用三个缓冲区即可完成二路归并排序" width="240" height="100" loading="lazy" /></a>
-
-    - 加大输入缓冲区的数目可以实现多路归并
-
-      <a href="/images/408-mind-maps/ds-0097.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0097.svg" alt="加大输入缓冲区的数目可以实现多路归并" width="240" height="70" loading="lazy" /></a>
+    - 加大输入缓冲区的数目可以实现多路归并 <img src="/images/408-mind-maps/thumb/ds-0097.webp" alt="加大输入缓冲区的数目可以实现多路归并" width="240" height="70">
 
 - 归并排序的复杂度：
   - 增大归并路数能减少归并趟数，但会增加内部排序的时间
@@ -617,26 +585,18 @@ layout: mind-map
     - 优化：采用败者树
   - 构造流程
     - 初始情况：
-      - 配图
-
-        <a href="/images/408-mind-maps/ds-0035.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0035.svg" alt="初始情况：" width="240" height="138" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/ds-0035.webp" alt="初始情况：" width="240" height="138">
 
     - 构造过程：
-      - 配图
-
-        <a href="/images/408-mind-maps/ds-0106.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0106.svg" alt="构造过程：" width="240" height="128" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/ds-0106.webp" alt="构造过程：" width="240" height="128">
 
         - 只有胜者才有资格进行向上继续竞争，输掉的就保留在当前黑色节点中
     - 构造完成：
-      - 配图
-
-        <a href="/images/408-mind-maps/ds-0054.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0054.svg" alt="构造完成：" width="240" height="124" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/ds-0054.webp" alt="构造完成：" width="240" height="124">
 
         - 结点记录来自哪个归并段（index），而不是具体的值
     - 下次比较：
-      - 配图
-
-        <a href="/images/408-mind-maps/ds-0172.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0172.svg" alt="下次比较：" width="240" height="141" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/ds-0172.webp" alt="下次比较：" width="240" height="141">
 
         - 新的结点和树上各层的胜者进行比拼，最后选出一个新的胜者
   - 复杂度：
@@ -649,9 +609,7 @@ layout: mind-map
   - 思路：
     - 尝试构造最大的初始归并段
   - 示意图：
-    - 配图
-
-      <a href="/images/408-mind-maps/ds-0042.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0042.svg" alt="示意图：" width="240" height="64" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/ds-0042.webp" alt="示意图：" width="240" height="64">
 
       - MINIMAX为当前生成的归并段的最大值
     - 配图
@@ -668,52 +626,32 @@ layout: mind-map
   - 最佳归并树
     - 归并排序的IO次数：
       - 二路归并
-        - 配图
+        - <img src="/images/408-mind-maps/thumb/ds-0219.webp" alt="二路归并" width="240" height="147">
 
-          <a href="/images/408-mind-maps/ds-0219.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0219.svg" alt="二路归并" width="240" height="147" loading="lazy" /></a>
-
-          - 最佳归并树（哈夫曼树）
-
-            <a href="/images/408-mind-maps/ds-0025.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0025.svg" alt="最佳归并树（哈夫曼树）" width="223" height="220" loading="lazy" /></a>
+          - 最佳归并树（哈夫曼树） <img src="/images/408-mind-maps/thumb/ds-0025.webp" alt="最佳归并树（哈夫曼树）" width="223" height="220">
 
     - 三路归并
-      - 配图
+      - <img src="/images/408-mind-maps/thumb/ds-0019.webp" alt="三路归并" width="240" height="97">
 
-        <a href="/images/408-mind-maps/ds-0019.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0019.svg" alt="三路归并" width="240" height="97" loading="lazy" /></a>
-
-        - 用类似哈夫曼树的方法构造：每次找权值最小的三个结点来归并
-
-          <a href="/images/408-mind-maps/ds-0161.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0161.svg" alt="用类似哈夫曼树的方法构造：每次找权值最小的三个结点来归并" width="240" height="150" loading="lazy" /></a>
+        - 用类似哈夫曼树的方法构造：每次找权值最小的三个结点来归并 <img src="/images/408-mind-maps/thumb/ds-0161.webp" alt="用类似哈夫曼树的方法构造：每次找权值最小的三个结点来归并" width="240" height="150">
 
       - 如果没有足够的归并段如何处理
-        - 配图
+        - <img src="/images/408-mind-maps/thumb/ds-0015.webp" alt="如果没有足够的归并段如何处理" width="240" height="149">
 
-          <a href="/images/408-mind-maps/ds-0015.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0015.svg" alt="如果没有足够的归并段如何处理" width="240" height="149" loading="lazy" /></a>
-
-          - 补充长度为0的虚段来凑归并段
-
-            <a href="/images/408-mind-maps/ds-0052.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0052.svg" alt="补充长度为0的虚段来凑归并段" width="240" height="151" loading="lazy" /></a>
+          - 补充长度为0的虚段来凑归并段 <img src="/images/408-mind-maps/thumb/ds-0052.webp" alt="补充长度为0的虚段来凑归并段" width="240" height="151">
 
         - 应该补充多少个归并段呢
           - 公式法：
-            - k叉归并树：严格的k叉树，设有n0个叶子，nk个分支，总结点为n个。其中nk是整数
-
-              $\left\{ \begin{array}{l} n=n_0+n_k \\ kn_k = n-1 \end{array} \right.  \Longrightarrow  n_k = \frac{n_0-1}{k-1}$
+            - k叉归并树：严格的k叉树，设有n0个叶子，nk个分支，总结点为n个。其中nk是整数 $\left\{ \begin{array}{l} n=n_0+n_k \\ kn_k = n-1 \end{array} \right.  \Longrightarrow  n_k = \frac{n_0-1}{k-1}$
 
               > 整理说明：修复 XMind 公式源码中无效的 array 列格式 {**l**}，改为 {l}；不改变公式数值。
 
-              - 需要补充的虚段个数：
+              - 需要补充的虚段个数： $u = (n_0-1)\%(k-1), 补充 (k-1) - u个$
 
-                $u = (n_0-1)\%(k-1), 补充 (k-1) - u个$
-
-                - 配图
-
-                  <a href="/images/408-mind-maps/ds-0029.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0029.svg" alt="需要补充的虚段个数：" width="240" height="146" loading="lazy" /></a>
+                - <img src="/images/408-mind-maps/thumb/ds-0029.webp" alt="需要补充的虚段个数：" width="240" height="146">
 
           - 考场现推法：
-            - 配图
-
-              <a href="/images/408-mind-maps/ds-0162.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0162.svg" alt="考场现推法：" width="240" height="215" loading="lazy" /></a>
+            - <img src="/images/408-mind-maps/thumb/ds-0162.webp" alt="考场现推法：" width="240" height="215">
 
     - 批注：置换选择后长度不均
 ````

@@ -9,9 +9,7 @@ layout: mind-map
 
 [查看关联主题：第一章 操作系统概述](/docs/408/mind-maps/operating-systems/01-overview)
 
-## 文件
-
-<a href="/images/408-mind-maps/os-0086.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0086.svg" alt="文件" width="48" height="48" loading="lazy" /></a>
+## 文件 <img src="/images/408-mind-maps/thumb/os-0086.webp" alt="文件" width="48" height="48">
 
 - 定义
   - 信息集合、文本文档图片程序...
@@ -76,9 +74,7 @@ layout: mind-map
   - 系统级安全管理：
     - 登录注册
 
-## 文件操作
-
-<a href="/images/408-mind-maps/os-0013.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0013.svg" alt="文件操作" width="45" height="45" loading="lazy" /></a>
+## 文件操作 <img src="/images/408-mind-maps/thumb/os-0013.webp" alt="文件操作" width="45" height="45">
 
 - 最后看看
 - 创建
@@ -95,9 +91,7 @@ layout: mind-map
 - 打开(目录)文件
   - 主要工作：
     - 1\. 找到文件对应的目录项
-    - 2\. 把目录项复制到内存中的打开文件表中
-
-      <a href="/images/408-mind-maps/os-0145.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0145.svg" alt="2. 把目录项复制到内存中的打开文件表中" width="240" height="139" loading="lazy" /></a>
+    - 2\. 把目录项复制到内存中的打开文件表中 <img src="/images/408-mind-maps/thumb/os-0145.webp" alt="2. 把目录项复制到内存中的打开文件表中" width="240" height="139">
 
     - 3\. 随后用户就可以使用打开文件表中的编号来指明要操作的文件
     - 把文件目录调入到内存中（调入 --- 复制到内存中）
@@ -138,9 +132,7 @@ layout: mind-map
   - 采用磁盘高速缓存
     - ✅
 
-## 文件的逻辑结构
-
-<a href="/images/408-mind-maps/os-0169.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0169.svg" alt="文件的逻辑结构" width="48" height="48" loading="lazy" /></a>
+## 文件的逻辑结构 <img src="/images/408-mind-maps/thumb/os-0169.webp" alt="文件的逻辑结构" width="48" height="48">
 
 - 文件+索引方式
   - 文件
@@ -185,9 +177,7 @@ layout: mind-map
     - 索引文件
 
       - 示意图：
-        - 配图
-
-          <a href="/images/408-mind-maps/os-0103.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0103.svg" alt="示意图：" width="240" height="115" loading="lazy" /></a>
+        - <img src="/images/408-mind-maps/thumb/os-0103.webp" alt="示意图：" width="240" height="115">
 
       - 【索引表】的物理存储类型：
         - 顺序结构、顺序存储、定长的顺序文件
@@ -208,9 +198,7 @@ layout: mind-map
       - 此处也可以设计多级索引（因为是数据结构），但是书上没说过
     - 索引顺序文件
       - 示意图：
-        - 配图
-
-          <a href="/images/408-mind-maps/os-0132.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0132.svg" alt="示意图：" width="240" height="121" loading="lazy" /></a>
+        - <img src="/images/408-mind-maps/thumb/os-0132.webp" alt="示意图：" width="240" height="121">
 
       - 前提：
         - 顺序文件
@@ -241,17 +229,13 @@ layout: mind-map
 
 - 逻辑结构是用户自己定义的数据结构，和文件具体的存储方式没有半点关系，和内存管理也没有半点关系
 
-## 文件分配方式（物理结构）
-
-<a href="/images/408-mind-maps/co-0152.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0152.svg" alt="文件分配方式（物理结构）" width="48" height="48" loading="lazy" /></a>
+## 文件分配方式（物理结构） <img src="/images/408-mind-maps/thumb/co-0152.webp" alt="文件分配方式（物理结构）" width="48" height="48">
 
 - 考频：超高
   - 09\*2、10、12、13\*3、14、15、17、18、20\*2、14大、16大、18大、22大
 - 文件在外存中具体的存储方式（文件的物理结构）
 - 连续分配
-  - 配图
-
-    <a href="/images/408-mind-maps/os-0140.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0140.svg" alt="连续分配" width="240" height="198" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/os-0140.webp" alt="连续分配" width="240" height="198">
 
   - 原理：
     - 每个文件在磁盘上占有一组连续的块，在外存中是【连续分配】
@@ -274,9 +258,7 @@ layout: mind-map
     - 顺序访问
       - 不能直接访问
   - 隐式链接
-    - 在每一个盘块的末尾都存有一个【指向下一个盘块】的指针
-
-      <a href="/images/408-mind-maps/os-0152.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0152.svg" alt="在每一个盘块的末尾都存有一个【指向下一个盘块】的指针" width="240" height="197" loading="lazy" /></a>
+    - 在每一个盘块的末尾都存有一个【指向下一个盘块】的指针 <img src="/images/408-mind-maps/thumb/os-0152.webp" alt="在每一个盘块的末尾都存有一个【指向下一个盘块】的指针" width="240" height="197">
 
     - 目录表：
       - &lt;文件名、起始盘块号、末尾盘块号&gt;
@@ -285,9 +267,7 @@ layout: mind-map
       - 指针会消耗空间
       - 只能顺序访问，有大量的IO，很费事
   - 显式链接
-    - FAT表
-
-      <a href="/images/408-mind-maps/os-0136.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0136.svg" alt="FAT表" width="240" height="209" loading="lazy" /></a>
+    - FAT表 <img src="/images/408-mind-maps/thumb/os-0136.webp" alt="FAT表" width="240" height="209">
 
     - 目录表：
       - 文件名、起始盘块号
@@ -306,9 +286,7 @@ layout: mind-map
       - 磁盘章节，-2就是空闲盘块
 - 索引分配
 
-  - 配图
-
-    <a href="/images/408-mind-maps/os-0135.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0135.svg" alt="索引分配" width="240" height="183" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/os-0135.webp" alt="索引分配" width="240" height="183">
 
   - 原理：
     - 【每个文件对应有一个索引表】，内存中的文件目录表存的是每个文件对应的索引表块号，当要访问一个文件的时候，首先把该文件【的索引表从外存读入内存】
@@ -330,9 +308,7 @@ layout: mind-map
       - 和多级页表一样，首先访问一级索引表，然后再访问二级索引表
     - 混合索引
 - 混合索引：
-  - 配图
-
-    <a href="/images/408-mind-maps/os-0003.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0003.svg" alt="混合索引：" width="240" height="218" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/os-0003.webp" alt="混合索引：" width="240" height="218">
 
     - 一个索引表中，存在
     - 1\. 直接地址（直接指向一个块）
@@ -353,9 +329,7 @@ layout: mind-map
     - 访问两次磁盘（一次读索引表，一次读文件）
     - 可能存在超过两次访问（如果索引表一块磁盘装不下）
 
-## 文件的目录结构
-
-<a href="/images/408-mind-maps/os-0021.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0021.svg" alt="文件的目录结构" width="48" height="48" loading="lazy" /></a>
+## 文件的目录结构 <img src="/images/408-mind-maps/thumb/os-0021.webp" alt="文件的目录结构" width="48" height="48">
 
 - 文件目录项
   - 文件控制块
@@ -435,18 +409,14 @@ layout: mind-map
   - 四种目录结构
     - 单/一级目录结构
       - 示意图：
-        - 配图
-
-          <a href="/images/408-mind-maps/os-0099.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0099.svg" alt="示意图：" width="240" height="66" loading="lazy" /></a>
+        - <img src="/images/408-mind-maps/thumb/os-0099.webp" alt="示意图：" width="240" height="66">
 
       - 缺点：
         - 不允许重名
         - 不适用于多用户
     - 两级目录结构
       - 示意图：
-        - 配图
-
-          <a href="/images/408-mind-maps/os-0026.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0026.svg" alt="示意图：" width="240" height="79" loading="lazy" /></a>
+        - <img src="/images/408-mind-maps/thumb/os-0026.webp" alt="示意图：" width="240" height="79">
 
         - 分为主文件目录、用户文件目录
       - 缺点：
@@ -455,9 +425,7 @@ layout: mind-map
         - 不能对文件分类
     - 多级/树形目录结构
       - 示意图：
-        - 配图
-
-          <a href="/images/408-mind-maps/os-0018.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0018.svg" alt="示意图：" width="240" height="110" loading="lazy" /></a>
+        - <img src="/images/408-mind-maps/thumb/os-0018.webp" alt="示意图：" width="240" height="110">
 
       - 树形目录结构，现代OS都在用
       - 绝对路径、相对路径：
@@ -471,9 +439,7 @@ layout: mind-map
         - 搜索路径长，增加了磁盘访问次数
     - 无环图目录结构
       - 示意图：
-        - 配图
-
-          <a href="/images/408-mind-maps/os-0158.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0158.svg" alt="示意图：" width="240" height="186" loading="lazy" /></a>
+        - <img src="/images/408-mind-maps/thumb/os-0158.webp" alt="示意图：" width="240" height="186">
 
           - DAG图
       - 共享计数器：
@@ -525,9 +491,7 @@ layout: mind-map
     - 采用哈希函数来快速定位文件
 - 共享
   - 硬链接
-    - 文件指向同一个inode
-
-      <a href="/images/408-mind-maps/os-0067.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0067.svg" alt="文件指向同一个inode" width="240" height="130" loading="lazy" /></a>
+    - 文件指向同一个inode <img src="/images/408-mind-maps/thumb/os-0067.webp" alt="文件指向同一个inode" width="240" height="130">
 
       - 索引节点的两大功能
         分组说明：索引节点中；对应：[访问计数](#focus=%E8%AE%BF%E9%97%AE%E8%AE%A1%E6%95%B0)
@@ -540,9 +504,7 @@ layout: mind-map
         - 访问计数
           - 在内存中运行时的访问计数
   - 软链接
-    - 使用符号链，创建一个LINK类新文件
-
-      <a href="/images/408-mind-maps/os-0133.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0133.svg" alt="使用符号链，创建一个LINK类新文件" width="240" height="131" loading="lazy" /></a>
+    - 使用符号链，创建一个LINK类新文件 <img src="/images/408-mind-maps/thumb/os-0133.webp" alt="使用符号链，创建一个LINK类新文件" width="240" height="131">
 
       - 新文件：
         - 创建一个LINK类型的新文件
@@ -555,9 +517,7 @@ layout: mind-map
 - 考频：中
   - 09、10、17、20、21
 
-## 文件系统
-
-<a href="/images/408-mind-maps/os-0010.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0010.svg" alt="文件系统" width="48" height="48" loading="lazy" /></a>
+## 文件系统 <img src="/images/408-mind-maps/thumb/os-0010.webp" alt="文件系统" width="48" height="48">
 
 - 考频：低
   - 15、19
@@ -566,9 +526,7 @@ layout: mind-map
 
 - OS管理外存的空闲盘块、分区、VFS等
 - 文件系统结构：
-  - 配图
-
-    <a href="/images/408-mind-maps/os-0142.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0142.svg" alt="文件系统结构：" width="93" height="220" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/os-0142.webp" alt="文件系统结构：" width="93" height="220">
 
     - 4\. 逻辑文件系统
       - 管理元数据信息
@@ -601,9 +559,7 @@ layout: mind-map
   - 空闲表法
     - 分配方式：
       - 连续分配
-        - 配图
-
-          <a href="/images/408-mind-maps/os-0066.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0066.svg" alt="连续分配" width="240" height="169" loading="lazy" /></a>
+        - <img src="/images/408-mind-maps/thumb/os-0066.webp" alt="连续分配" width="240" height="169">
 
     - 空闲盘块表：
       - &lt;空闲盘块号、空闲盘块数&gt;
@@ -617,9 +573,7 @@ layout: mind-map
       概要范围：[分配算法：](#focus=%E5%88%86%E9%85%8D%E7%AE%97%E6%B3%95%EF%BC%9A)、[存储回收：](#focus=%E5%AD%98%E5%82%A8%E5%9B%9E%E6%94%B6%EF%BC%9A)
 
   - 空闲链表法
-    - 配图
-
-      <a href="/images/408-mind-maps/os-0074.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0074.svg" alt="空闲链表法" width="240" height="154" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/os-0074.webp" alt="空闲链表法" width="240" height="154">
 
     - 空闲盘块链：
       - 分配模式：
@@ -640,9 +594,7 @@ layout: mind-map
       - 回收算法：
         - 将回收区和相邻的空闲盘区合并
   - 位示图法
-    - 配图
-
-      <a href="/images/408-mind-maps/os-0057.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0057.svg" alt="位示图法" width="240" height="76" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/os-0057.webp" alt="位示图法" width="240" height="76">
 
       - 字号、位号和盘块号进行转化
     - 分配算法：
@@ -660,13 +612,9 @@ layout: mind-map
     - 超级块
       - 成组链接法的第一块
     - 图示：
-      - 配图
+      - <img src="/images/408-mind-maps/thumb/os-0154.webp" alt="图示：" width="240" height="140">
 
-        <a href="/images/408-mind-maps/os-0154.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0154.svg" alt="图示：" width="240" height="140" loading="lazy" /></a>
-
-        - 配图
-
-          <a href="/images/408-mind-maps/os-0091.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0091.svg" alt="图示：" width="240" height="120" loading="lazy" /></a>
+        - <img src="/images/408-mind-maps/thumb/os-0091.webp" alt="图示：" width="240" height="120">
 
           - 批注：天勤b站视频链接
             [参考链接](<https://www.bilibili.com/video/av71840093/?vd_source=d75b38061e3b7a39145438daf0bed0fe>)
@@ -681,9 +629,7 @@ layout: mind-map
       - 如果位置满了，就新建一个“成组链块”，指向现在满的这个超级块
 - 虚拟文件系统
   - 虚拟文件系统采用了面向对象的思想，它抽象出一个通用的文件系统模型，定义了通用文件系统都支持的接口。新的文件系统只要支持并实现这些接口，即可安装和使用。
-  - 配图
-
-    <a href="/images/408-mind-maps/os-0002.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0002.svg" alt="虚拟文件系统" width="198" height="220" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/os-0002.webp" alt="虚拟文件系统" width="198" height="220">
 
     分组说明：Linux中调用write()的例子：；对应：[write()](#focus=write())
 
@@ -712,19 +658,13 @@ layout: mind-map
       - 当文件读入内存后，文件的各种信息会被复制+转化为vnode对应的数据结构（构造）
       - 函数功能指针指向的是对应文件系统中的函数
         - UFS：
-          - 配图
-
-            <a href="/images/408-mind-maps/os-0146.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0146.svg" alt="UFS：" width="240" height="171" loading="lazy" /></a>
+          - <img src="/images/408-mind-maps/thumb/os-0146.webp" alt="UFS：" width="240" height="171">
 
         - FAT：
-          - 配图
-
-            <a href="/images/408-mind-maps/os-0075.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0075.svg" alt="FAT：" width="240" height="169" loading="lazy" /></a>
+          - <img src="/images/408-mind-maps/thumb/os-0075.webp" alt="FAT：" width="240" height="169">
 
   - Linux抽象的四种对象类型
-    - 配图
-
-      <a href="/images/408-mind-maps/os-0032.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0032.svg" alt="Linux抽象的四种对象类型" width="240" height="145" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/os-0032.webp" alt="Linux抽象的四种对象类型" width="240" height="145">
 
       - 超级块对象
         - 表示一个已安装（挂载）的特定文件系统
@@ -769,9 +709,9 @@ layout: mind-map
 - 概要：之前的图
   概要范围：[文件系统结构：](#focus=%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84%EF%BC%9A)
 
-  <a href="/images/408-mind-maps/os-0164.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0164.svg" alt="之前的图" width="170" height="220" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/os-0164.webp" alt="之前的图" width="170" height="220">
 
-  分组说明：可以不记；对应：[1. 用户调用接口](#focus=1.%20%E7%94%A8%E6%88%B7%E8%B0%83%E7%94%A8%E6%8E%A5%E5%8F%A3)、[2. 文件目录系统](#focus=2.%20%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%B3%BB%E7%BB%9F)、[3. 存取控制验证模块](#focus=3.%20%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6%E9%AA%8C%E8%AF%81%E6%A8%A1%E5%9D%97)、[4. 逻辑文件系统<br>    和文件信息缓存区](#focus=4.%20%E9%80%BB%E8%BE%91%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%20%20%20%20%E5%92%8C%E6%96%87%E4%BB%B6%E4%BF%A1%E6%81%AF%E7%BC%93%E5%AD%98%E5%8C%BA)、[5. 物理文件系统](#focus=5.%20%E7%89%A9%E7%90%86%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F)、[6. 辅助分配模块](#focus=6.%20%E8%BE%85%E5%8A%A9%E5%88%86%E9%85%8D%E6%A8%A1%E5%9D%97)、[7. 设备管理程序模块](#focus=7.%20%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%9D%97)
+  分组说明：可以不记；对应：[1. 用户调用接口](#focus=1.%20%E7%94%A8%E6%88%B7%E8%B0%83%E7%94%A8%E6%8E%A5%E5%8F%A3)、[2. 文件目录系统](#focus=2.%20%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%B3%BB%E7%BB%9F)、[3. 存取控制验证模块](#focus=3.%20%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6%E9%AA%8C%E8%AF%81%E6%A8%A1%E5%9D%97)、[4. 逻辑文件系统 和文件信息缓存区](#focus=4.%20%E9%80%BB%E8%BE%91%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%20%20%20%20%E5%92%8C%E6%96%87%E4%BB%B6%E4%BF%A1%E6%81%AF%E7%BC%93%E5%AD%98%E5%8C%BA)、[5. 物理文件系统](#focus=5.%20%E7%89%A9%E7%90%86%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F)、[6. 辅助分配模块](#focus=6.%20%E8%BE%85%E5%8A%A9%E5%88%86%E9%85%8D%E6%A8%A1%E5%9D%97)、[7. 设备管理程序模块](#focus=7.%20%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%9D%97)
 
   - 1\. 用户调用接口
     - 功能：
@@ -791,7 +731,7 @@ layout: mind-map
     - 功能：
       - 确认访问的合法性
     - 把用户访问要求和FCB的指示访问控制权限进行比较
-  - 4\. 逻辑文件系统<br>    和文件信息缓存区
+  - 4\. 逻辑文件系统 和文件信息缓存区
     - 功能：
       - 将用户要读写的逻辑记录转为逻辑结构
     - 文件信息缓冲区
@@ -806,16 +746,12 @@ layout: mind-map
     - 功能：
       - 给设备（特殊文件）分配：缓冲区、磁盘调度、启动设备、处理设备中断、释放设备等
 
-## 两个补充
-
-<a href="/images/408-mind-maps/co-0317.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0317.svg" alt="两个补充" width="45" height="45" loading="lazy" /></a>
+## 两个补充 <img src="/images/408-mind-maps/thumb/co-0317.webp" alt="两个补充" width="45" height="45">
 
 - UNIX文件系统
-  - 配图
+  - <img src="/images/408-mind-maps/thumb/os-0104.webp" alt="UNIX文件系统" width="240" height="89">
 
-    <a href="/images/408-mind-maps/os-0104.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0104.svg" alt="UNIX文件系统" width="240" height="89" loading="lazy" /></a>
-
-- 全局结构Layout/<br>文件在内存中的结构
+- 全局结构Layout/ 文件在内存中的结构
   - 概念：
     - 目录缓存：
       - 把最近读入过的目录文件的数据保存在内存中
@@ -824,9 +760,7 @@ layout: mind-map
     - 进程打开文件表：
       - 保存一个进程打开了哪些文件，记录在进程的PCB中
   - 图示：
-    - 配图
-
-      <a href="/images/408-mind-maps/os-0022.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0022.svg" alt="图示：" width="240" height="133" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/os-0022.webp" alt="图示：" width="240" height="133">
 
       - ① 使用open调用把文件目录调入内存
       - ② 根据open中的文件名参数，在内存的目录缓存中找到对应的文件，记录其FCB等信息
@@ -836,7 +770,7 @@ layout: mind-map
       - 概要：区别：【系统的打开文件表】记录的是文件在外存中的【地址】；而【进程的打开文件表】记录的是系统打开文件表的【索引号】
         概要范围：[② 根据open中的文件名参数，在内存的目录缓存中找到对应的文件，记录其FCB等信息](#focus=%E2%91%A1%20%E6%A0%B9%E6%8D%AEopen%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6%E5%90%8D%E5%8F%82%E6%95%B0%EF%BC%8C%E5%9C%A8%E5%86%85%E5%AD%98%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BC%93%E5%AD%98%E4%B8%AD%E6%89%BE%E5%88%B0%E5%AF%B9%E5%BA%94%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%8C%E8%AE%B0%E5%BD%95%E5%85%B6FCB%E7%AD%89%E4%BF%A1%E6%81%AF)、[③ 打开这个文件的进程同样需要把这个文件信息写入到自己的打开文件表中](#focus=%E2%91%A2%20%E6%89%93%E5%BC%80%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6%E7%9A%84%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%A0%B7%E9%9C%80%E8%A6%81%E6%8A%8A%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6%E4%BF%A1%E6%81%AF%E5%86%99%E5%85%A5%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E8%A1%A8%E4%B8%AD)
 
-<a href="/images/408-mind-maps/os-0150.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0150.svg" alt="END" width="48" height="48" loading="lazy" /></a>
+- <img src="/images/408-mind-maps/thumb/os-0150.webp" alt="END" width="48" height="48">
 
 ## 独立主题：自由主题
 
