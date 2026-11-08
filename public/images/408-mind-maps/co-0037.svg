@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" width="760" height="330" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="CPU 用 MREQ 控制译码器使能端，从而控制片选信号生效的时间">
+<title>CPU 用 MREQ 控制译码器使能端，从而控制片选信号生效的时间</title>
+<defs><marker id="a3b6fd4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3b6fd4"/></marker><marker id="ac98a12" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#c98a12"/></marker><marker id="ad1493a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#d1493a"/></marker></defs>
+<rect x="0.75" y="0.75" width="758.5" height="328.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">MREQ̄ 接译码器使能端</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="30" y="120" width="140" height="160" rx="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="90" y="214.9" font-size="14" fill="#18181b" text-anchor="middle" font-weight="700">CPU</text>
+<text x="100" y="140" font-size="12" fill="#c98a12" text-anchor="middle" font-weight="600">MREQ̄</text>
+<text x="162" y="174" font-size="11.5" fill="#d1493a" text-anchor="end">A₁₅</text>
+<text x="162" y="196" font-size="11.5" fill="#d1493a" text-anchor="end">A₁₄</text>
+<text x="162" y="218" font-size="11.5" fill="#d1493a" text-anchor="end">A₁₃</text>
+<text x="162" y="240" font-size="11.5" fill="#d1493a" text-anchor="end">A₁₂~A₀</text>
+<rect x="400" y="60" width="90" height="150" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="445" y="137" font-size="13" fill="#18181b" text-anchor="middle"><tspan x="445" dy="0">译</tspan><tspan x="445" dy="17.6">码</tspan><tspan x="445" dy="17.6">器</tspan></text>
+<path d="M100 120L100 110Q100 104 106 104L398 104" fill="none" stroke="#c98a12" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ac98a12)"/>
+<text x="404" y="76" font-size="11" fill="#3b6fd4">G₁ ← 1</text>
+<text x="404" y="92" font-size="11" fill="#3b6fd4">G̅₂A ← 0</text>
+<text x="404" y="108" font-size="11" fill="#3b6fd4">G̅₂B</text>
+<path d="M170 170L295 170Q300 170 300 165L300 165Q300 160 305 160L398 160" fill="none" stroke="#d1493a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<path d="M170 192L308 192Q314 192 314 186L314 182Q314 176 320 176L398 176" fill="none" stroke="#d1493a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<path d="M170 214L322 214Q328 214 328 208L328 198Q328 192 334 192L398 192" fill="none" stroke="#d1493a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<path d="M490 72L530 72" fill="none" stroke="#d1493a" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M490 89L530 89" fill="none" stroke="#d1493a" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M490 106L530 106" fill="none" stroke="#d1493a" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M490 123L530 123" fill="none" stroke="#d1493a" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M490 140L530 140" fill="none" stroke="#d1493a" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M490 157L530 157" fill="none" stroke="#d1493a" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M490 174L530 174" fill="none" stroke="#d1493a" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M490 191L530 191" fill="none" stroke="#d1493a" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="560" y="210" width="140" height="80" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="630" y="254.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle">8K × 8 位</text>
+<path d="M530 157L634 157Q640 157 640 163L640 208" fill="none" stroke="#c98a12" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ac98a12)"/>
+<text x="648" y="198" font-size="11" fill="#c98a12">CS̄（低电平有效）</text>
+<path d="M170 236L534 236Q540 236 546 236L558 236" fill="none" stroke="#d1493a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<rect x="200" y="280" width="160" height="34" rx="6" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="280" y="301.2" font-size="12" fill="#1e3a8a" text-anchor="middle">先送出地址信号</text>
+<path d="M362 297L420 297" fill="none" stroke="#3b6fd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="560" y="60" font-size="12" fill="#3f3f46"><tspan x="560" dy="0">地址稳定后 CPU 才使 MREQ̄ = 0，</tspan><tspan x="560" dy="18">译码器开始工作，片选信号生效</tspan></text>
+</svg>

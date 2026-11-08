@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="位扩展前：一块 8K×1 位芯片只能接 1 根数据线">
+<title>位扩展前：一块 8K×1 位芯片只能接 1 根数据线</title>
+<rect x="0.75" y="0.75" width="758.5" height="378.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">位扩展前</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="30" y="60" width="90" height="300" rx="6" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="61" y="214.9" font-size="14" fill="#18181b" text-anchor="middle" font-weight="700">CPU</text>
+<text x="114" y="80" font-size="11.5" fill="#d1493a" text-anchor="end">A₁₅</text>
+<text x="114" y="96" font-size="11.5" fill="#d1493a" text-anchor="end">A₁₄</text>
+<text x="114" y="112" font-size="11.5" fill="#d1493a" text-anchor="end">A₁₃</text>
+<text x="114" y="144" font-size="11.5" fill="#d1493a" text-anchor="end">A₁₂~A₀</text>
+<text x="114" y="254" font-size="11.5" fill="#c98a12" text-anchor="end">WĒ</text>
+<text x="114" y="304" font-size="11.5" fill="#2f8f57" text-anchor="end">D₇~D₁</text>
+<text x="114" y="344" font-size="11.5" fill="#2f8f57" text-anchor="end">D₀</text>
+<path d="M120 76L160 76" fill="none" stroke="#d1493a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M120 92L160 92" fill="none" stroke="#d1493a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M120 108L160 108" fill="none" stroke="#d1493a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="220" y="124" width="118" height="84" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="279" y="170.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle" font-weight="600">8K × 1 位</text>
+<text x="226" y="143.7" font-size="10.5" fill="#d1493a">A₁₂~A₀</text>
+<text x="304" y="141.7" font-size="10.5" fill="#c98a12" text-anchor="middle">CS̄</text>
+<text x="226" y="199.7" font-size="10.5" fill="#c98a12">WĒ</text>
+<text x="332" y="199.7" font-size="10.5" fill="#2f8f57" text-anchor="end">D₀</text>
+<text x="332" y="161.8" font-size="11" fill="#71717a" text-anchor="end">0</text>
+<path d="M120 140L220 140Q220 140 220 140L220 140" fill="none" stroke="#d1493a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M304 96L304 124" fill="none" stroke="#c98a12" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="304" y="88" font-size="11" fill="#c98a12" text-anchor="middle">0</text>
+<path d="M244 208L244 250Q244 250 244 250L120 250" fill="none" stroke="#c98a12" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M320 208L320 340Q320 340 320 340L120 340" fill="none" stroke="#2f8f57" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="470" y="372" font-size="12" fill="#71717a" text-anchor="middle">芯片只有 1 位数据线，CPU 的 D₇~D₁ 闲置：数据线不够</text>
+</svg>

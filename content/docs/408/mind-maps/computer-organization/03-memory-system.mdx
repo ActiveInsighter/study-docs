@@ -330,44 +330,44 @@ layout: mind-map
 - 位扩展
   - 原因：芯片的字长(bit数)和CPU的字长(bit数)不统一，需要横向连接多块芯片来满足CPU的读取一次时的bit数需求
     - 即：扩展一次性可以读出的数据字长
-  - 最开始只有一块芯片的时候（数据线不够） <img src="/images/408-mind-maps/co-0233.png" alt="最开始只有一块芯片的时候（数据线不够）" width="215" height="220">
+  - 最开始只有一块芯片的时候（数据线不够） <img src="/images/408-mind-maps/co-0233.svg" alt="最开始只有一块芯片的时候（数据线不够）" width="300" height="150">
 
-    - 例如再连一块 <img src="/images/408-mind-maps/co-0301.png" alt="例如再连一块" width="240" height="177">
+    - 例如再连一块 <img src="/images/408-mind-maps/co-0301.svg" alt="例如再连一块" width="300" height="150">
 
-      - 最后连接8块芯片 <img src="/images/408-mind-maps/co-0309.png" alt="最后连接8块芯片" width="240" height="188">
+      - 最后连接8块芯片 <img src="/images/408-mind-maps/co-0309.svg" alt="最后连接8块芯片" width="300" height="142">
 
         - 这样就把八个8K \* 1位的芯片通过【位扩展的方法】扩展为了8K \* 8位的芯片
 - 字扩展
   - 原因：芯片的字长和CPU已经满足了，可是CPU的地址总线上还是有很多根没有充分利用。故可以通过在地址中设置片选信号来增加地址数目
     - 即：扩展主存字数
-  - 最开始的时候地址线还有3个引脚没有连接 <img src="/images/408-mind-maps/co-0074.png" alt="最开始的时候地址线还有3个引脚没有连接" width="213" height="220">
+  - 最开始的时候地址线还有3个引脚没有连接 <img src="/images/408-mind-maps/co-0074.svg" alt="最开始的时候地址线还有3个引脚没有连接" width="300" height="174">
 
-    - 法一：线选法，CPU每一根多的地址线就连接着对应的芯片的CS。【这样CPU多了N根线，就可以多连接N个芯片】 <img src="/images/408-mind-maps/co-0314.png" alt="法一：线选法，CPU每一根多的地址线就连接着对应的芯片的CS。【这样CPU多了N根线，就可以多连接N个芯片】" width="240" height="140">
+    - 法一：线选法，CPU每一根多的地址线就连接着对应的芯片的CS。【这样CPU多了N根线，就可以多连接N个芯片】 <img src="/images/408-mind-maps/co-0314.svg" alt="法一：线选法，CPU每一根多的地址线就连接着对应的芯片的CS。【这样CPU多了N根线，就可以多连接N个芯片】" width="300" height="142">
 
       - 地址空间不连续
-    - 法二：译码片选法，CPU的每一根对应的地址线都连接一个非门和一根线，这样可以控制两个芯片。【所以CPU多了N根线，可以多连接2^N个芯片】 <img src="/images/408-mind-maps/co-0138.png" alt="法二：译码片选法，CPU的每一根对应的地址线都连接一个非门和一根线，这样可以控制两个芯片。【所以CPU多了N根线，可以多连接2^N个芯片】" width="240" height="116">
+    - 法二：译码片选法，CPU的每一根对应的地址线都连接一个非门和一根线，这样可以控制两个芯片。【所以CPU多了N根线，可以多连接2^N个芯片】 <img src="/images/408-mind-maps/co-0138.svg" alt="法二：译码片选法，CPU的每一根对应的地址线都连接一个非门和一根线，这样可以控制两个芯片。【所以CPU多了N根线，可以多连接2^N个芯片】" width="300" height="140">
 
       - 译码片选法连接多个芯片(此处选择了A13,A14，所以A15无论是多少都不会改变A0-A14的地址映射）
       - 这样就把4个8K \* 8位的芯片通过【字扩展的方法】扩展为了32K \* 8位的芯片
 - 字位扩展法：
-  - <img src="/images/408-mind-maps/co-0125.png" alt="字位扩展法：" width="240" height="123">
+  - <img src="/images/408-mind-maps/co-0125.svg" alt="字位扩展法：" width="300" height="133">
 
     - 两个芯片(16K \* 4)为一组进行【位扩展】，所以机器字长为8bit(16K \* 8)。再将四组通过【字扩展】连接在一起，形成(64K \* 8)的存储空间
     - 地址空间为： 0000 0000 0000 0000 ~ 1111 1111 1111 1111
       - 每个地址对应一个字的数据（此处一个字=1 Byte）
   - 注意CS和WE线
 - 补充：译码器
-  - 普通的3-8译码器 <img src="/images/408-mind-maps/co-0157.png" alt="普通的3-8译码器" width="240" height="154">
+  - 普通的3-8译码器 <img src="/images/408-mind-maps/co-0157.svg" alt="普通的3-8译码器" width="300" height="130">
 
     - "使能"端
-      - EN使能 <img src="/images/408-mind-maps/co-0175.png" alt="EN使能" width="240" height="214">
+      - EN使能 <img src="/images/408-mind-maps/co-0175.svg" alt="EN使能" width="300" height="183">
 
-        - 74ls138 <img src="/images/408-mind-maps/co-0302.png" alt="74ls138" width="207" height="220">
+        - 74ls138 <img src="/images/408-mind-maps/co-0302.svg" alt="74ls138" width="300" height="193">
 
     - MREQ
-      - CPU通过控制一个使能端，来控制CPU的操作顺序 <img src="/images/408-mind-maps/co-0037.png" alt="CPU通过控制一个使能端，来控制CPU的操作顺序" width="240" height="154">
+      - CPU通过控制一个使能端，来控制CPU的操作顺序 <img src="/images/408-mind-maps/co-0037.svg" alt="CPU通过控制一个使能端，来控制CPU的操作顺序" width="300" height="130">
 
-        - CPU先把地址信号传递到地址线上面去，检测到信号稳定后，CPU才会把MREQ设置为0，芯片才能进行运作 <img src="/images/408-mind-maps/co-0066.png" alt="CPU先把地址信号传递到地址线上面去，检测到信号稳定后，CPU才会把MREQ设置为0，芯片才能进行运作" width="240" height="136">
+        - CPU先把地址信号传递到地址线上面去，检测到信号稳定后，CPU才会把MREQ设置为0，芯片才能进行运作 <img src="/images/408-mind-maps/co-0066.svg" alt="CPU先把地址信号传递到地址线上面去，检测到信号稳定后，CPU才会把MREQ设置为0，芯片才能进行运作" width="300" height="118">
 
 - 考频：中
   - 09-11、16、18、21

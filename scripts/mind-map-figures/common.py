@@ -418,3 +418,23 @@ def datapath(F, top_reg, left_reg, right_reg, alu='32 位 ALU', w=32, op='加', 
     F.poly([(cx, ry - 15), (cx, y0 + 90), (ax + 154, y0 + 90)], INK2, 1.2, dash='4 3', arrow='end'); F.text(ax + 200, y0 + 82, op, 11, color=INK2)
     F.line(cx, ry + 80, cx, ry + 46, INK2, 1.2, arrow='end'); F.text(cx + 8, ry + 78, '时钟', 11, 'start', INK2)
     return ry
+
+ADDR_C, CTRL_C, DATA_C = '#d1493a', '#c98a12', '#2f8f57'
+
+def cpu_box(F, x=30, y=60, w=86, h=300, pins=()):
+    """pins: [(label, y, color)] drawn on the right edge."""
+    F.box(x, y, w, h, '', 'white', rx=6)
+    F.text(x + w / 2 - 14, y + h / 2, 'CPU', 14, color=INK, weight=700, valign='middle')
+    for lab, py, col in pins:
+        F.text(x + w - 6, py, lab, 11.5, 'end', col, valign='middle')
+    return x + w
+
+def chip(F, x, y, label, num=None, w=118, h=84, cs='CS̄', data='D₀', data_col=DATA_C):
+    F.box(x, y, w, h, label, 'blue', 12.5, 4, weight=600)
+    F.text(x + 6, y + 16, 'A₁₂~A₀', 10.5, 'start', ADDR_C, valign='middle')
+    F.text(x + w - 34, y + 14, cs, 10.5, 'middle', CTRL_C, valign='middle')
+    F.text(x + 6, y + h - 12, 'WĒ', 10.5, 'start', CTRL_C, valign='middle')
+    F.text(x + w - 6, y + h - 12, data, 10.5, 'end', data_col, valign='middle')
+    if num is not None:
+        F.text(x + w - 6, y + 34, str(num), 11, 'end', MUTED, valign='middle')
+    return {'addr': (x, y + 16), 'cs': (x + w - 34, y), 'we': (x + 24, y + h), 'data': (x + w - 18, y + h)}
