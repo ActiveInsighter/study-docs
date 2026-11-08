@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" width="460" height="300" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="有向图示例：A ⇄ B，B → C">
+<title>有向图示例：A ⇄ B，B → C</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="458.5" height="298.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<path d="M107 86L331 86" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M333 74L109 74" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M341.6 99.7L239.8 208.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="80" cy="80" r="26" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="80" y="85.6" font-size="16" fill="#18181b" text-anchor="middle" font-weight="500">A</text>
+<circle cx="360" cy="80" r="26" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="360" y="85.6" font-size="16" fill="#18181b" text-anchor="middle" font-weight="500">B</text>
+<circle cx="220" cy="230" r="26" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="220" y="235.6" font-size="16" fill="#18181b" text-anchor="middle" font-weight="500">C</text>
+<text x="230" y="284" font-size="13" fill="#3f3f46" text-anchor="middle">A ⇄ B 互通；B → C</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 312" width="640" height="312" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="并查集：将各个元素划分为若干个互不相交的子集">
+<title>并查集：将各个元素划分为若干个互不相交的子集</title>
+<rect x="0.75" y="0.75" width="638.5" height="310.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">将元素划分为若干互不相交的子集</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="24" y="62" width="182" height="214" rx="18" fill="none" stroke="#a1a1aa" stroke-width="1.2" stroke-dasharray="5 4"/>
+<circle cx="130" cy="92" r="19" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="130" y="96.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">A</text>
+<circle cx="130" cy="148" r="19" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="130" y="152.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">B</text>
+<circle cx="90" cy="196" r="19" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="90" y="200.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">E</text>
+<circle cx="170" cy="196" r="19" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="170" y="200.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">F</text>
+<circle cx="60" cy="248" r="19" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="60" y="252.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">K</text>
+<circle cx="130" cy="248" r="19" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="130" y="252.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">L</text>
+<text x="115" y="294" font-size="13.5" fill="#3f3f46" text-anchor="middle" font-weight="600">子集 S<tspan baseline-shift="-22%" font-size="72%">0</tspan></text>
+<rect x="264" y="62" width="72" height="214" rx="18" fill="none" stroke="#a1a1aa" stroke-width="1.2" stroke-dasharray="5 4"/>
+<circle cx="300" cy="120" r="19" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="300" y="124.9" font-size="14" fill="#3b0764" text-anchor="middle" font-weight="500">C</text>
+<circle cx="300" cy="200" r="19" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="300" y="204.9" font-size="14" fill="#3b0764" text-anchor="middle" font-weight="500">G</text>
+<text x="300" y="294" font-size="13.5" fill="#3f3f46" text-anchor="middle" font-weight="600">子集 S<tspan baseline-shift="-22%" font-size="72%">1</tspan></text>
+<rect x="384" y="62" width="192" height="214" rx="18" fill="none" stroke="#a1a1aa" stroke-width="1.2" stroke-dasharray="5 4"/>
+<circle cx="480" cy="100" r="19" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="480" y="104.9" font-size="14" fill="#78350f" text-anchor="middle" font-weight="500">D</text>
+<circle cx="420" cy="160" r="19" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="420" y="164.9" font-size="14" fill="#78350f" text-anchor="middle" font-weight="500">H</text>
+<circle cx="480" cy="160" r="19" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="480" y="164.9" font-size="14" fill="#78350f" text-anchor="middle" font-weight="500">I</text>
+<circle cx="540" cy="160" r="19" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="540" y="164.9" font-size="14" fill="#78350f" text-anchor="middle" font-weight="500">J</text>
+<circle cx="420" cy="220" r="19" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="420" y="224.9" font-size="14" fill="#78350f" text-anchor="middle" font-weight="500">M</text>
+<text x="480" y="294" font-size="13.5" fill="#3f3f46" text-anchor="middle" font-weight="600">子集 S<tspan baseline-shift="-22%" font-size="72%">2</tspan></text>
+</svg>

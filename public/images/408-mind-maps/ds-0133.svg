@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 390" width="620" height="390" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="三对角矩阵（带状矩阵）">
+<title>三对角矩阵（带状矩阵）</title>
+<rect x="0.75" y="0.75" width="618.5" height="388.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">三对角矩阵（带状矩阵）</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M70 92 L130 76 L486 300 L470 340 L414 352 L58 128Z" fill="#e8effc" stroke="none" opacity="0.9"/>
+<text x="90" y="100.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="600">a₁,₁</text>
+<text x="166" y="100.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="600">a₁,₂</text>
+<text x="242" y="100.9" font-size="14" fill="#71717a" text-anchor="middle">0</text>
+<text x="318" y="100.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
+<text x="394" y="100.9" font-size="14" fill="#71717a" text-anchor="middle">0</text>
+<text x="470" y="100.9" font-size="14" fill="#71717a" text-anchor="middle">0</text>
+<text x="90" y="146.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="600">a₂,₁</text>
+<text x="166" y="146.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="600">a₂,₂</text>
+<text x="242" y="146.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="600">a₂,₃</text>
+<text x="318" y="146.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
+<text x="394" y="146.9" font-size="14" fill="#71717a" text-anchor="middle">0</text>
+<text x="470" y="146.9" font-size="14" fill="#71717a" text-anchor="middle">0</text>
+<text x="90" y="192.9" font-size="14" fill="#71717a" text-anchor="middle">0</text>
+<text x="166" y="192.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="600">a₃,₂</text>
+<text x="242" y="192.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="600">a₃,₃</text>
+<text x="318" y="192.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
+<text x="394" y="192.9" font-size="14" fill="#71717a" text-anchor="middle">0</text>
+<text x="470" y="192.9" font-size="14" fill="#71717a" text-anchor="middle">0</text>
+<text x="90" y="238.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
+<text x="166" y="238.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
+<text x="242" y="238.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
+<text x="318" y="238.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
+<text x="394" y="238.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
+<text x="470" y="238.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
+<text x="90" y="284.9" font-size="14" fill="#71717a" text-anchor="middle">0</text>
+<text x="166" y="284.9" font-size="14" fill="#71717a" text-anchor="middle">0</text>
+<text x="242" y="284.9" font-size="14" fill="#71717a" text-anchor="middle">0</text>
+<text x="318" y="284.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
+<text x="394" y="284.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="600">aₙ₋₁,ₙ₋₁</text>
+<text x="470" y="284.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="600">aₙ₋₁,ₙ</text>
+<text x="90" y="330.9" font-size="14" fill="#71717a" text-anchor="middle">0</text>
+<text x="166" y="330.9" font-size="14" fill="#71717a" text-anchor="middle">0</text>
+<text x="242" y="330.9" font-size="14" fill="#71717a" text-anchor="middle">0</text>
+<text x="318" y="330.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
+<text x="394" y="330.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="600">aₙ,ₙ₋₁</text>
+<text x="470" y="330.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="600">aₙ,ₙ</text>
+<path d="M52 76 q-10 0 -10 10 V340 q0 10 10 10" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M528 76 q10 0 10 10 V340 q0 10 -10 10" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="310" y="378" font-size="12" fill="#3f3f46" text-anchor="middle">|i − j| &gt; 1 时 a<tspan baseline-shift="-22%" font-size="72%">i,j</tspan> = 0；按行存入数组共 3n − 2 个元素，a<tspan baseline-shift="-22%" font-size="72%">i,j</tspan> 的下标 k = 2i + j − 3（从 0 起）</text>
+</svg>

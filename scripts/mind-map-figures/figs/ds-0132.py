@@ -1,0 +1,15 @@
+from common import subtree, avl_node, edge
+LABEL = 'LL 平衡旋转（右单旋）'
+F = Fig(760, 330, 'LL 型：右单旋')
+A, B = (190, 80), (120, 140)
+avl_node(F, *A, 'A', '2', 'amber'); avl_node(F, *B, 'B', '1')
+edge(F, A, B, 16, 16); edge(F, A, (240, 186)); edge(F, B, (80, 186)); edge(F, B, (160, 186))
+subtree(F, 80, 186, 'BL', 'H+1', hot=True); subtree(F, 160, 186, 'BR', 'H'); subtree(F, 240, 186, 'AR', 'H')
+F.text(120, 110, '', 12)
+F.line(330, 150, 420, 150, LINE, 1.6, arrow='end'); F.text(375, 136, '右旋', 13, color=INK2, weight=600)
+A2, B2 = (600, 140), (530, 80)
+avl_node(F, *B2, 'B', '0'); avl_node(F, *A2, 'A', '0', 'amber')
+edge(F, B2, A2, 16, 16); edge(F, B2, (480, 186)); edge(F, A2, (560, 186)); edge(F, A2, (640, 186))
+subtree(F, 480, 186, 'BL', 'H+1', hot=True); subtree(F, 560, 186, 'BR', 'H'); subtree(F, 640, 186, 'AR', 'H')
+F.text(380, 270, '在 A 的左孩子 B 的左子树上插入：B 向右上旋转代替 A 成为根，A 右下旋成为 B 的右孩子', 13, color=INK2)
+F.text(380, 296, 'B 原来的右子树 BR 作为 A 的左子树　　中序不变：BL < B < BR < A < AR', 13, color=MUTED)

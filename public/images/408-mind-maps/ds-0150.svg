@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" width="560" height="360" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="无向图中子图、连通分量、极小连通子图、生成树的关系">
+<title>无向图中子图、连通分量、极小连通子图、生成树的关系</title>
+<rect x="0.75" y="0.75" width="558.5" height="358.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">无向图中的几个概念</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<ellipse cx="280" cy="190" rx="250" ry="150" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="280" y="64" font-size="14" fill="#3f3f46" text-anchor="middle" font-weight="600">子图</text>
+<ellipse cx="280" cy="200" rx="190" ry="116" fill="#ffffff" stroke="#52525b" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="280" y="104" font-size="13" fill="#71717a" text-anchor="middle" font-weight="600">连通图</text>
+<circle cx="190" cy="210" r="68" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="190" y="202" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="700">连通分量</text>
+<text x="190" y="224" font-size="12" fill="#1e3a8a" text-anchor="middle">（极大连通子图）</text>
+<circle cx="360" cy="210" r="72" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="360" y="186" font-size="14" fill="#14532d" text-anchor="middle" font-weight="700">极小连通子图</text>
+<circle cx="360" cy="236" r="32" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="360" y="240.6" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">生成树</text>
+</svg>

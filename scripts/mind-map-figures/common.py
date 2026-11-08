@@ -285,3 +285,18 @@ def rb(F, x, y, t, unit=44, levelh=58, r=16, nil=True, size=13, labels=None):
         return (key, kids)
     pos = F.tree(x, y, conv(t), unit=unit, levelh=levelh, r=r, size=size, tones=tones, mono=True)
     return pos
+
+def subtree(F, cx, y, label, h='H', tone='gray', w=40, hh=34, hot=False):
+    """Triangle-ish subtree box with height label below."""
+    t = 'red' if hot else tone
+    F.items.append(f'<path d="M{cx} {y}L{cx + w / 2} {y + hh}H{cx - w / 2}Z" fill="{TONES[t][0]}" stroke="{TONES[t][1]}" stroke-width="1.3" stroke-linejoin="round"/>')
+    F.text(cx, y + hh - 9, label, 11.5, color=TONES[t][2], weight=600)
+    F.text(cx, y + hh + 15, h, 11.5, color=ACCENT['red'] if hot else MUTED, mono=True)
+
+def avl_node(F, x, y, k, bf=None, tone='blue'):
+    F.circle(x, y, 16, k, tone, 14, weight=600)
+    if bf is not None:
+        F.text(x + 22, y - 10, bf, 12, 'start', ACCENT['red'] if bf in ('2', '-2') else MUTED, 700, mono=True)
+
+def edge(F, a, b, r1=16, r2=0):
+    F.line(a[0], a[1], b[0], b[1], INK2, 1.4, gap=r1, gap2=r2)

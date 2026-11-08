@@ -398,6 +398,9 @@ class Fig:
             col = ACCENT[hl_color] if hot else ACCENT.get(o.get('color', ecolor), o.get('color', ecolor))
             sw = 2.4 if hot else 1.5
             bend = o.get('bend', 0)
+            sh = o.get('shift', 0)
+            if sh:
+                x1, y1, x2, y2 = x1 - uy * sh, y1 + ux * sh, x2 - uy * sh, y2 + ux * sh
             arrow = 'end' if directed else None
             ra, rb = (r if not isinstance(r, dict) else r[a]), (r if not isinstance(r, dict) else r[b])
             if bend:

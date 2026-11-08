@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 330" width="860" height="330" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="二叉树顺序存储的最坏情况：单支树也要 2^h−1 个单元">
+<title>二叉树顺序存储的最坏情况：单支树也要 2^h−1 个单元</title>
+<rect x="0.75" y="0.75" width="858.5" height="328.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">顺序存储：结点编号与完全二叉树对应</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M50.1 200.4L40.9 229.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M57.9 200.4L67.1 229.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M118.1 200.4L108.9 229.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M125.9 200.4L135.1 229.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M81.1 145L60.9 177" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M94.9 145L115.1 177" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M186.1 200.4L176.9 229.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M193.9 200.4L203.1 229.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M254.1 200.4L244.9 229.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M261.9 200.4L271.1 229.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M217.1 145L196.9 177" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M230.9 145L251.1 177" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M145.8 88.1L98.2 125.9" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M166.2 88.1L213.8 125.9" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="37" cy="242" r="13" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="37" y="245.8" font-size="11" fill="#3f3f46" text-anchor="middle" font-weight="500">8</text>
+<circle cx="71" cy="242" r="13" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="71" y="245.8" font-size="11" fill="#3f3f46" text-anchor="middle" font-weight="500">9</text>
+<circle cx="54" cy="188" r="13" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="54" y="191.8" font-size="11" fill="#3f3f46" text-anchor="middle" font-weight="500">4</text>
+<circle cx="105" cy="242" r="13" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="105" y="245.8" font-size="11" fill="#3f3f46" text-anchor="middle" font-weight="500">10</text>
+<circle cx="139" cy="242" r="13" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="139" y="245.8" font-size="11" fill="#3f3f46" text-anchor="middle" font-weight="500">11</text>
+<circle cx="122" cy="188" r="13" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="122" y="191.8" font-size="11" fill="#3f3f46" text-anchor="middle" font-weight="500">5</text>
+<circle cx="88" cy="134" r="13" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="88" y="137.8" font-size="11" fill="#3f3f46" text-anchor="middle" font-weight="500">2</text>
+<circle cx="173" cy="242" r="13" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="173" y="245.8" font-size="11" fill="#3f3f46" text-anchor="middle" font-weight="500">12</text>
+<circle cx="207" cy="242" r="13" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="207" y="245.8" font-size="11" fill="#3f3f46" text-anchor="middle" font-weight="500">13</text>
+<circle cx="190" cy="188" r="13" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="190" y="191.8" font-size="11" fill="#3f3f46" text-anchor="middle" font-weight="500">6</text>
+<circle cx="241" cy="242" r="13" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="241" y="245.8" font-size="11" fill="#3f3f46" text-anchor="middle" font-weight="500">14</text>
+<circle cx="275" cy="242" r="13" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="275" y="245.8" font-size="11" fill="#1e3a8a" text-anchor="middle" font-weight="500">15</text>
+<circle cx="258" cy="188" r="13" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="258" y="191.8" font-size="11" fill="#1e3a8a" text-anchor="middle" font-weight="500">7</text>
+<circle cx="224" cy="134" r="13" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="224" y="137.8" font-size="11" fill="#1e3a8a" text-anchor="middle" font-weight="500">3</text>
+<circle cx="156" cy="80" r="13" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="156" y="83.8" font-size="11" fill="#1e3a8a" text-anchor="middle" font-weight="500">1</text>
+<rect x="30" y="280" width="34" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="64" y="280" width="34" height="28" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="98" y="280" width="34" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="132" y="280" width="34" height="28" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="166" y="280" width="34" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="200" y="280" width="34" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="234" y="280" width="34" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="268" y="280" width="34" height="28" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="302" y="280" width="34" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="336" y="280" width="34" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="370" y="280" width="34" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="404" y="280" width="34" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="438" y="280" width="34" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="472" y="280" width="34" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="506" y="280" width="34" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="540" y="280" width="34" height="28" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="30" y="280" width="544" height="28" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M64 280L64 308" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M98 280L98 308" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M132 280L132 308" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M166 280L166 308" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M200 280L200 308" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M234 280L234 308" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M268 280L268 308" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M302 280L302 308" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M336 280L336 308" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M370 280L370 308" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M404 280L404 308" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M438 280L438 308" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M472 280L472 308" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M506 280L506 308" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M540 280L540 308" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="47" y="298.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">^</text>
+<text x="81" y="298.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="115" y="298.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">^</text>
+<text x="149" y="298.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<text x="183" y="298.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">^</text>
+<text x="217" y="298.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">^</text>
+<text x="251" y="298.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">^</text>
+<text x="285" y="298.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">7</text>
+<text x="319" y="298.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">^</text>
+<text x="353" y="298.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">^</text>
+<text x="387" y="298.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">^</text>
+<text x="421" y="298.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">^</text>
+<text x="455" y="298.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">^</text>
+<text x="489" y="298.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">^</text>
+<text x="523" y="298.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">^</text>
+<text x="557" y="298.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">15</text>
+<text x="47" y="325" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="81" y="325" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="115" y="325" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<text x="149" y="325" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<text x="183" y="325" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
+<text x="217" y="325" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">5</text>
+<text x="251" y="325" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6</text>
+<text x="285" y="325" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">7</text>
+<text x="319" y="325" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8</text>
+<text x="353" y="325" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">9</text>
+<text x="387" y="325" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">10</text>
+<text x="421" y="325" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">11</text>
+<text x="455" y="325" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">12</text>
+<text x="489" y="325" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">13</text>
+<text x="523" y="325" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">14</text>
+<text x="557" y="325" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">15</text>
+<text x="580" y="96" font-size="13.5" fill="#18181b" font-weight="600">结点 i（下标从 1 开始）：</text>
+<text x="580" y="122" font-size="13.5" fill="#3f3f46"><tspan x="580" dy="0">左孩子 2i，右孩子 2i + 1</tspan><tspan x="580" dy="21.6">双亲 ⌊i/2⌋</tspan></text>
+<text x="580" y="192" font-size="13.5" fill="#d1493a"><tspan x="580" dy="0">最坏情况：高度为 h、只有 h 个</tspan><tspan x="580" dy="21.6">结点的单支树（右斜树），</tspan><tspan x="580" dy="21.6">也至少需要 2<tspan baseline-shift="38%" font-size="72%">h</tspan> − 1 个存储单元</tspan></text>
+</svg>
