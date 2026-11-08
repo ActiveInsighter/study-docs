@@ -15,7 +15,7 @@ def render(fid):
     F = ns['F']
     label = ns.get('LABEL', '')
     open(f'{PUB}/{fid}.svg', 'w').write(F.svg(label))
-    dw = ns.get('DW', 300 if F.w >= 400 else F.w)
+    dw = ns.get('DW', min(300, F.w))
     return dw, round(dw * F.h / F.w), F
 
 IMG = re.compile(r'<img src="/images/408-mind-maps/([a-z0-9-]+)\.(png|svg)" alt="([^"]*)" width="(\d+)" height="(\d+)">')
