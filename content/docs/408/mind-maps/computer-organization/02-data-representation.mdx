@@ -319,7 +319,7 @@ layout: mind-map
     - PSW用来存放两类信息：
       - 一类是体现当前指令执行结果的各种状态信息，称为状态标志，如有无借位进位（CF位）、有无溢出（OF位）、结果正负（SF位）、结果是否为零（ZF位）、奇偶标志位（PF位）等；
         - 另一类是存放控制信息，称为控制状态，如允许中断(IF位)，跟踪标志（TF位），方向标志(DF)等。有些机器中将PSW称为标志寄存器FR（Flag Register）。
-  - <img src="/images/408-mind-maps/co-0137.png" alt="带标记加法器" width="225" height="220">
+  - <img src="/images/408-mind-maps/co-0137.svg" alt="带标记加法器" width="300" height="212">
 
     - ZF：
       - F输出全为0，ZF = 1 $ZF = \overline{F_n + \dots + F_2+F_1}$
@@ -340,21 +340,21 @@ layout: mind-map
         - 减法运算Cin = 1，Cout = 0说明出现了借位，就是A比B小
 
   - 带标记加法器逻辑电路
-    - <img src="/images/408-mind-maps/co-0178.png" alt="带标记加法器逻辑电路" width="240" height="131">
+    - <img src="/images/408-mind-maps/co-0178.svg" alt="带标记加法器逻辑电路" width="300" height="128">
 
       - Cn和Cout一样
 - 多路选择器、三态门
-  - 多路选择器 <img src="/images/408-mind-maps/co-0299.png" alt="多路选择器" width="240" height="162">
+  - 多路选择器 <img src="/images/408-mind-maps/co-0299.svg" alt="多路选择器" width="300" height="173">
 
     - k个输入，m要求 $m \ge \left \lceil log_2k \right \rceil  bit$
 
-      - 一位ALU的结构（有三种操作） <img src="/images/408-mind-maps/co-0112.png" alt="一位ALU的结构（有三种操作）" width="240" height="152">
+      - 一位ALU的结构（有三种操作） <img src="/images/408-mind-maps/co-0112.svg" alt="一位ALU的结构（有三种操作）" width="300" height="150">
 
-  - 三态门 <img src="/images/408-mind-maps/co-0016.png" alt="三态门" width="237" height="220">
+  - 三态门 <img src="/images/408-mind-maps/co-0016.svg" alt="三态门" width="300" height="229">
 
 - ALU为组合逻辑电路
   - 组合逻辑电路：没有存储单元只包含了电路。 时序逻辑电路：既有电路又有存储单元
-  - ALU的基本结构 <img src="/images/408-mind-maps/co-0223.png" alt="ALU的基本结构" width="240" height="187">
+  - ALU的基本结构 <img src="/images/408-mind-maps/co-0223.svg" alt="ALU的基本结构" width="300" height="204">
 
 - 运算器的组成部分
   - ALU
@@ -400,7 +400,7 @@ layout: mind-map
       ```
 
 - 循环移位
-  - 带进制位和不带进制位 <img src="/images/408-mind-maps/co-0065.png" alt="带进制位和不带进制位" width="240" height="95">
+  - 带进制位和不带进制位 <img src="/images/408-mind-maps/co-0065.svg" alt="带进制位和不带进制位" width="300" height="118">
 
     - CF中不是0就是1
     - 带进位位：大循环
@@ -417,7 +417,7 @@ layout: mind-map
     - 1\. 使用补码来进行加法，符号位参与运算
     - 2\. 如果是 A - B，改为补码形式的 A + (-B)来进行计算
   - 运算电路：
-    - <img src="/images/408-mind-maps/co-0245.png" alt="运算电路：" width="240" height="132">
+    - <img src="/images/408-mind-maps/co-0245.svg" alt="运算电路：" width="300" height="133">
 
       - ZF、OF、SF、CF的意义
         - zero flag，overflow flag，signal flag，carry flag

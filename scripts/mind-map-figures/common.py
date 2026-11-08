@@ -370,3 +370,31 @@ def block(F, x, y, w, h, label, tone='blue', size=14, top=None, bottoms=(), left
         F.line(x, y + h / 2, x - L, y + h / 2, INK2, 1.4, arrow='end'); F.text(x - L - 6, y + h / 2, left, lsize, 'end', INK, valign='middle')
     if right:
         F.line(x + w + L, y + h / 2, x + w, y + h / 2, INK2, 1.4, arrow='end'); F.text(x + w + L + 6, y + h / 2, right, lsize, 'start', INK, valign='middle')
+
+def alu_shape(F, cx, top, w=220, h=90, label='加法器', tone='red', size=16, vertical=False):
+    """ALU/adder trapezoid with notch; inputs enter at bottom. Returns dict of anchor points."""
+    f, s, t = TONES[tone]
+    x0, x1 = cx - w / 2, cx + w / 2
+    k = w * 0.2
+    d = (f'M{x0 + k} {top}H{x1 - k}L{x1} {top + h}H{cx + w * 0.16}L{cx} {top + h - h * 0.35}L{cx - w * 0.16} {top + h}H{x0}Z')
+    F.items.append(f'<path d="{d}" fill="{f}" stroke="{s}" stroke-width="1.5" stroke-linejoin="round"/>')
+    F.text(cx, top + h * 0.42, label, size, color=t, weight=700, valign='middle')
+    return {'A': (cx - w * 0.3, top + h), 'B': (cx + w * 0.3, top + h), 'left': (x0 + k / 2, top + h / 2), 'right': (x1 - k / 2, top + h / 2), 'top': (cx, top)}
+
+def bus_slash(F, x, y, label='n', vertical=True):
+    if vertical:
+        F.line(x - 6, y + 6, x + 6, y - 6, INK2, 1.3); F.text(x + 9, y + 9, label, 11, 'start', INK2)
+    else:
+        F.line(x - 6, y + 6, x + 6, y - 6, INK2, 1.3); F.text(x + 2, y - 10, label, 11, 'middle', INK2)
+
+def mux_shape(F, x, y, w, h, label='MUX', tone='blue', size=14, vertical=False):
+    """Horizontal MUX: wide bottom (inputs), narrow top (output) when vertical=False means inputs bottom."""
+    f, s, t = TONES[tone]
+    if not vertical:
+        k = w * 0.14
+        F.items.append(f'<path d="M{x + k} {y}H{x + w - k}L{x + w} {y + h}H{x}Z" fill="{f}" stroke="{s}" stroke-width="1.5" stroke-linejoin="round"/>')
+        F.text(x + w / 2, y + h / 2, label, size, color=t, weight=700, valign='middle')
+    else:
+        k = h * 0.16
+        F.items.append(f'<path d="M{x} {y}L{x + w} {y + k}V{y + h - k}L{x} {y + h}Z" fill="{f}" stroke="{s}" stroke-width="1.5" stroke-linejoin="round"/>')
+        F.text(x + w / 2, y + h / 2, label, size, color=t, weight=700, valign='middle', rotate=90)
