@@ -678,7 +678,7 @@ layout: mind-map
     - 【回写】写回法 + 写分配法
       - 写命中只写入Cache并修改脏位，写不命中则把块调入到Cache中，并只修改Cache
     - 多级Cache的混合搭配
-      - <img src="/images/408-mind-maps/co-0021.png" alt="多级Cache的混合搭配" width="240" height="44">
+      - <img src="/images/408-mind-maps/co-0021.svg" alt="多级Cache的混合搭配" width="300" height="86">
 
         - CPU -&gt; Cache -&gt; L2 Cache
           - 采用的是全写法 + 非写分配法（因为有写缓冲）
@@ -695,7 +695,7 @@ layout: mind-map
   - 10、13、15\*2、19、20、22、11大、18大、21大
 - 虚拟存储器对应用程序员是透明的，是操作系统使用虚拟技术创造的具有主存速度辅存容量的存储器
 - 用户编程使用逻辑/虚地址来进行编程，操作系统自行将其转为对应的物理/实地址
-  - 虚拟存储器的三个地址空间 <img src="/images/408-mind-maps/co-0268.png" alt="虚拟存储器的三个地址空间" width="240" height="115">
+  - 虚拟存储器的三个地址空间 <img src="/images/408-mind-maps/co-0268.svg" alt="虚拟存储器的三个地址空间" width="300" height="130">
 
 - 页式虚拟存储
   分组说明：重要考点；对应：[TLB + Cache 的多级存储系统](#focus=TLB%20%2B%20Cache%20%E7%9A%84%E5%A4%9A%E7%BA%A7%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F)
@@ -705,7 +705,7 @@ layout: mind-map
       - 虚拟地址的空间：内存 + 外存
       - 实地址的空间：内存
     - 页表项
-      - 主存中的页表实例：&lt;有效位、脏位、引用位、物理页号&gt; <img src="/images/408-mind-maps/co-0062.png" alt="主存中的页表实例：&amp;amp;lt;有效位、脏位、引用位、物理页号&amp;amp;gt;" width="240" height="133">
+      - 主存中的页表实例：&lt;有效位、脏位、引用位、物理页号&gt; <img src="/images/408-mind-maps/co-0062.svg" alt="主存中的页表实例：&amp;amp;lt;有效位、脏位、引用位、物理页号&amp;amp;gt;" width="300" height="158">
 
         - 有效位：装入位，表示是否已经装入内存
         - 脏位：是否被修改过
@@ -713,7 +713,7 @@ layout: mind-map
         - 引用位：使用位，给置换算法用的
         - 磁盘地址/页号：有效位为 1，则存的是内存页号。有效位为0，则存的是磁盘块号
     - 地址转化：
-      - <img src="/images/408-mind-maps/co-0107.png" alt="地址转化：" width="240" height="195">
+      - <img src="/images/408-mind-maps/co-0107.svg" alt="地址转化：" width="300" height="171">
 
   - 快表
     - TLB 相联存储器，由高速缓冲器组成
@@ -727,9 +727,9 @@ layout: mind-map
     - TLB命中了，主存一定命中
       - Cache命中了，主存也一定命中
   - TLB + Cache 的多级存储系统
-    - 第一步：虚拟地址到物理地址 <img src="/images/408-mind-maps/co-0070.png" alt="第一步：虚拟地址到物理地址" width="227" height="220">
+    - 第一步：虚拟地址到物理地址 <img src="/images/408-mind-maps/co-0070.svg" alt="第一步：虚拟地址到物理地址" width="300" height="246">
 
-      - 第二步：物理地址的Cache表示形式 <img src="/images/408-mind-maps/co-0306.png" alt="第二步：物理地址的Cache表示形式" width="215" height="220">
+      - 第二步：物理地址的Cache表示形式 <img src="/images/408-mind-maps/co-0306.svg" alt="第二步：物理地址的Cache表示形式" width="300" height="248">
 
         - CPU给出虚拟地址&lt;虚页号 + 页内地址&gt;
         - OS层：
@@ -756,7 +756,7 @@ layout: mind-map
       - 概要：也可以合起来图
         概要范围：[第二步：物理地址的Cache表示形式](#focus=%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80%E7%9A%84Cache%E8%A1%A8%E7%A4%BA%E5%BD%A2%E5%BC%8F)
 
-        - <img src="/images/408-mind-maps/co-0298.png" alt="也可以合起来图" width="240" height="125">
+        - <img src="/images/408-mind-maps/co-0298.svg" alt="也可以合起来图" width="300" height="136">
 
 - 段式虚拟存储
   - 与主存交换信息采用”段“

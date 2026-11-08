@@ -438,3 +438,50 @@ def chip(F, x, y, label, num=None, w=118, h=84, cs='CS̄', data='D₀', data_col
     if num is not None:
         F.text(x + w - 6, y + 34, str(num), 11, 'end', MUTED, valign='middle')
     return {'addr': (x, y + 16), 'cs': (x + w - 34, y), 'we': (x + 24, y + h), 'data': (x + w - 18, y + h)}
+
+def tlb_part(F, ox=0, oy=0):
+    X = lambda x: x + ox
+    Y = lambda y: y + oy
+    F.box(X(160), Y(60), 100, 30, 'CPU', 'violet', 13, 5)
+    F.text(X(40), Y(110), '虚拟地址', 12, 'start', INK2)
+    F.box(X(60), Y(116), 180, 30, '虚页号（20 位）', 'amber', 12, 0); F.box(X(240), Y(116), 130, 30, '页内地址（12 位）', 'gray', 12, 0)
+    F.line(X(210), Y(92), X(210), Y(114), INK2, 1.3, arrow='end')
+    F.rect(X(40), Y(166), 320, 140, 'none', INK2, 1.2, 8, dash='5 4'); F.text(X(50), Y(184), 'TLB', 12.5, 'start', INK, 700)
+    F.table(X(140), Y(190), [['Tag', '有效位', '实页号'], ['0008CH', '1', '0040H'], ['', '', ''], ['⋮', '⋮', '⋮']], [80, 60, 80], 26, size=11.5, head_tone='gray', tones={(1, 0): 'blue', (1, 1): 'blue', (1, 2): 'blue'}, zebra=False)
+    for i in range(3):
+        F.circle(X(112), Y(229 + i * 26), 8, '=', 'white', 11)
+    F.text(X(112), Y(298), '比较器', 11, color=MUTED)
+    F.poly([(X(80), Y(146)), (X(80), Y(229)), (X(102), Y(229))], INK2, 1.2, arrow='end')
+    F.text(X(42), Y(330), 'TLB 缺失', 11.5, 'start', ACCENT['red'])
+    F.poly([(X(80), Y(229)), (X(80), Y(342))], ACCENT['red'], 1.2, arrow='end')
+    F.cells(X(40), Y(344), ['10 位', '10 位'], 60, 26, size=11.5, mono=False); F.text(X(70), Y(386), '查页表', 11, color=ACCENT['red'])
+    F.text(X(270), Y(330), '物理地址', 12, 'middle', INK2)
+    F.box(X(180), Y(344), 160, 26, '实页号', 'blue', 12, 0); F.box(X(340), Y(344), 120, 26, '页内地址（12 位）', 'gray', 11.5, 0)
+    F.line(X(300), Y(296), X(300), Y(342), INK2, 1.3, arrow='end')
+    F.poly([(X(320), Y(146)), (X(400), Y(146)), (X(400), Y(342))], INK2, 1.3, arrow='end')
+
+def cache_part(F, ox=0, oy=0):
+    X = lambda x: x + ox
+    Y = lambda y: y + oy
+    F.box(X(240), Y(60), 90, 28, 'CPU', 'violet', 12.5, 5); F.box(X(240), Y(104), 90, 28, '数据', 'white', 12, 5)
+    F.line(X(285), Y(104), X(285), Y(90), INK2, 1.2, arrow='end')
+    F.rect(X(30), Y(150), 520, 210, 'none', INK2, 1.2, 8, dash='5 4'); F.text(X(42), Y(168), 'Cache（2 路组相联）', 12, 'start', INK, 700)
+    F.items.append(f'<path d="M{X(230)} {Y(172)}H{X(340)}L{X(325)} {Y(190)}H{X(245)}Z" fill="#f4f4f5" stroke="#52525b" stroke-width="1.2"/>')
+    F.text(X(285), Y(181), '多路选择', 11, color=INK, valign='middle'); F.line(X(285), Y(172), X(285), Y(134), INK2, 1.2, arrow='end')
+    for k, x0 in enumerate((60, 310)):
+        cols = [('有效位', 40), ('Tag', 80), ('Data', 100)] if k == 0 else [('Data', 100), ('Tag', 80), ('有效位', 40)]
+        rows = [[c for c, _ in cols], ['1', '00400H', ''] if k == 0 else ['', '', ''], ['⋮', '⋮', '⋮']]
+        F.table(X(x0), Y(250), rows, [w for _, w in cols], 26, size=11, head_tone='gray', tones={(1, i): 'blue' for i in range(3)}, zebra=False)
+        cx = X(x0 + (100 if k == 0 else 120))
+        F.circle(cx, Y(224), 8, '=', 'white', 11); F.text(cx + 14, Y(220), '比较器', 10.5, 'start', MUTED)
+        F.box(cx - 14, Y(196), 28, 18, '&', 'white', 11, 3)
+        F.line(cx, Y(214), cx, Y(206) + 8, INK2, 1)
+        F.text(cx, Y(190) - 0, '', 1)
+        F.line(cx + 2, Y(196), X(285) + (-30 if k == 0 else 30), Y(190), INK2, 1.1)
+        F.line(cx, Y(250), cx, Y(232), INK2, 1.1, arrow='end')
+    F.line(X(282), Y(290), X(308), Y(290), INK2, 1.2, arrow='both')
+    F.cells(X(180), Y(384), ['标记', '组号', '块内地址'], 70, 26, size=11.5, mono=False)
+    F.line(X(250), Y(384), X(250), Y(312), INK2, 1.2, arrow='end')
+    F.poly([(X(215), Y(384)), (X(215), Y(370)), (X(20), Y(370)), (X(20), Y(224)), (X(150), Y(224))], INK2, 1.1)
+    F.text(X(320), Y(428), '物理地址 ⇕', 11.5, 'start', MUTED)
+    F.cells(X(180), Y(440), ['实页号', '页内地址（12 位）'], [0] and 0, 0) if False else (F.box(X(180), Y(440), 100, 26, '实页号', 'blue', 11.5, 0), F.box(X(280), Y(440), 120, 26, '页内地址（12 位）', 'gray', 11, 0))

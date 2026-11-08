@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 500" width="1100" height="500" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="TLB + Cache 的多级存储系统全图">
+<title>TLB + Cache 的多级存储系统全图</title>
+<defs><marker id="a3b6fd4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3b6fd4"/></marker><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker><marker id="a3f3f46s" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10 0.8L1.5 5 10 9.2z" fill="#3f3f46"/></marker><marker id="ad1493a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#d1493a"/></marker></defs>
+<rect x="0.75" y="0.75" width="1098.5" height="498.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">TLB + Cache 的多级存储系统</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="160" y="100" width="100" height="30" rx="5" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="210" y="119.5" font-size="13" fill="#3b0764" text-anchor="middle">CPU</text>
+<text x="40" y="150" font-size="12" fill="#3f3f46">虚拟地址</text>
+<rect x="60" y="156" width="180" height="30" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="150" y="175.2" font-size="12" fill="#78350f" text-anchor="middle">虚页号（20 位）</text>
+<rect x="240" y="156" width="130" height="30" rx="0" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="305" y="175.2" font-size="12" fill="#18181b" text-anchor="middle">页内地址（12 位）</text>
+<path d="M210 132L210 154" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="40" y="206" width="320" height="140" rx="8" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="50" y="224" font-size="12.5" fill="#18181b" font-weight="700">TLB</text>
+<rect x="140" y="256" width="80" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="220" y="256" width="60" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="280" y="256" width="80" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<path d="M140 256V238Q140 230 148 230H352Q360 230 360 238V256Z" fill="#f4f4f5"/>
+<path d="M140 256L360 256" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M140 282L360 282" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M140 308L360 308" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M220 230L220 334" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M280 230L280 334" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="140" y="230" width="220" height="104" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="180" y="247" font-size="11.5" fill="#18181b" text-anchor="middle" font-weight="600">Tag</text>
+<text x="250" y="247" font-size="11.5" fill="#18181b" text-anchor="middle" font-weight="600">有效位</text>
+<text x="320" y="247" font-size="11.5" fill="#18181b" text-anchor="middle" font-weight="600">实页号</text>
+<text x="180" y="273" font-size="11.5" fill="#1e3a8a" text-anchor="middle">0008CH</text>
+<text x="250" y="273" font-size="11.5" fill="#1e3a8a" text-anchor="middle">1</text>
+<text x="320" y="273" font-size="11.5" fill="#1e3a8a" text-anchor="middle">0040H</text>
+<text x="180" y="299" font-size="11.5" fill="#18181b" text-anchor="middle"></text>
+<text x="250" y="299" font-size="11.5" fill="#18181b" text-anchor="middle"></text>
+<text x="320" y="299" font-size="11.5" fill="#18181b" text-anchor="middle"></text>
+<text x="180" y="325" font-size="11.5" fill="#18181b" text-anchor="middle">⋮</text>
+<text x="250" y="325" font-size="11.5" fill="#18181b" text-anchor="middle">⋮</text>
+<text x="320" y="325" font-size="11.5" fill="#18181b" text-anchor="middle">⋮</text>
+<circle cx="112" cy="269" r="8" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="112" y="272.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500">=</text>
+<circle cx="112" cy="295" r="8" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="112" y="298.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500">=</text>
+<circle cx="112" cy="321" r="8" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="112" y="324.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500">=</text>
+<text x="112" y="338" font-size="11" fill="#71717a" text-anchor="middle">比较器</text>
+<path d="M80 186L80 263Q80 269 86 269L102 269" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="42" y="370" font-size="11.5" fill="#d1493a">TLB 缺失</text>
+<path d="M80 269L80 382" fill="none" stroke="#d1493a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<rect x="40" y="384" width="60" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="100" y="384" width="60" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="40" y="384" width="120" height="26" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M100 384L100 410" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="70" y="401" font-size="11.5" fill="#18181b" text-anchor="middle">10 位</text>
+<text x="130" y="401" font-size="11.5" fill="#18181b" text-anchor="middle">10 位</text>
+<text x="70" y="426" font-size="11" fill="#d1493a" text-anchor="middle">查页表</text>
+<text x="270" y="370" font-size="12" fill="#3f3f46" text-anchor="middle">物理地址</text>
+<rect x="180" y="384" width="160" height="26" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="260" y="401.2" font-size="12" fill="#1e3a8a" text-anchor="middle">实页号</text>
+<rect x="340" y="384" width="120" height="26" rx="0" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="400" y="401" font-size="11.5" fill="#18181b" text-anchor="middle">页内地址（12 位）</text>
+<path d="M300 336L300 382" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M320 186L394 186Q400 186 400 192L400 382" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="740" y="60" width="90" height="28" rx="5" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="785" y="78.4" font-size="12.5" fill="#3b0764" text-anchor="middle">CPU</text>
+<rect x="740" y="104" width="90" height="28" rx="5" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="785" y="122.2" font-size="12" fill="#18181b" text-anchor="middle">数据</text>
+<path d="M785 104L785 90" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="530" y="150" width="520" height="210" rx="8" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="542" y="168" font-size="12" fill="#18181b" font-weight="700">Cache（2 路组相联）</text>
+<path d="M730 172H840L825 190H745Z" fill="#f4f4f5" stroke="#52525b" stroke-width="1.2"/>
+<text x="785" y="184.8" font-size="11" fill="#18181b" text-anchor="middle">多路选择</text>
+<path d="M785 172L785 134" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="560" y="276" width="40" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="600" y="276" width="80" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="680" y="276" width="100" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<path d="M560 276V258Q560 250 568 250H772Q780 250 780 258V276Z" fill="#f4f4f5"/>
+<path d="M560 276L780 276" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M560 302L780 302" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M600 250L600 328" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M680 250L680 328" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="560" y="250" width="220" height="78" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="580" y="266.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="600">有效位</text>
+<text x="640" y="266.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="600">Tag</text>
+<text x="730" y="266.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="600">Data</text>
+<text x="580" y="292.9" font-size="11" fill="#1e3a8a" text-anchor="middle">1</text>
+<text x="640" y="292.9" font-size="11" fill="#1e3a8a" text-anchor="middle">00400H</text>
+<text x="730" y="292.9" font-size="11" fill="#1e3a8a" text-anchor="middle"></text>
+<text x="580" y="318.9" font-size="11" fill="#18181b" text-anchor="middle">⋮</text>
+<text x="640" y="318.9" font-size="11" fill="#18181b" text-anchor="middle">⋮</text>
+<text x="730" y="318.9" font-size="11" fill="#18181b" text-anchor="middle">⋮</text>
+<circle cx="660" cy="224" r="8" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="660" y="227.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500">=</text>
+<text x="674" y="220" font-size="10.5" fill="#71717a">比较器</text>
+<rect x="646" y="196" width="28" height="18" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="660" y="208.8" font-size="11" fill="#18181b" text-anchor="middle">&amp;</text>
+<path d="M660 214L660 214" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="660" y="190" font-size="1" fill="#18181b" text-anchor="middle"></text>
+<path d="M662 196L755 190" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M660 250L660 232" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="810" y="276" width="100" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="910" y="276" width="80" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="990" y="276" width="40" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<path d="M810 276V258Q810 250 818 250H1022Q1030 250 1030 258V276Z" fill="#f4f4f5"/>
+<path d="M810 276L1030 276" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M810 302L1030 302" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M910 250L910 328" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M990 250L990 328" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="810" y="250" width="220" height="78" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="860" y="266.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="600">Data</text>
+<text x="950" y="266.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="600">Tag</text>
+<text x="1010" y="266.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="600">有效位</text>
+<text x="860" y="292.9" font-size="11" fill="#1e3a8a" text-anchor="middle"></text>
+<text x="950" y="292.9" font-size="11" fill="#1e3a8a" text-anchor="middle"></text>
+<text x="1010" y="292.9" font-size="11" fill="#1e3a8a" text-anchor="middle"></text>
+<text x="860" y="318.9" font-size="11" fill="#18181b" text-anchor="middle">⋮</text>
+<text x="950" y="318.9" font-size="11" fill="#18181b" text-anchor="middle">⋮</text>
+<text x="1010" y="318.9" font-size="11" fill="#18181b" text-anchor="middle">⋮</text>
+<circle cx="930" cy="224" r="8" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="930" y="227.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500">=</text>
+<text x="944" y="220" font-size="10.5" fill="#71717a">比较器</text>
+<rect x="916" y="196" width="28" height="18" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="930" y="208.8" font-size="11" fill="#18181b" text-anchor="middle">&amp;</text>
+<path d="M930 214L930 214" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="930" y="190" font-size="1" fill="#18181b" text-anchor="middle"></text>
+<path d="M932 196L815 190" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M930 250L930 232" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M782 290L808 290" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<rect x="680" y="384" width="70" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="750" y="384" width="70" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="820" y="384" width="70" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="680" y="384" width="210" height="26" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M750 384L750 410" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M820 384L820 410" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="715" y="401" font-size="11.5" fill="#18181b" text-anchor="middle">标记</text>
+<text x="785" y="401" font-size="11.5" fill="#18181b" text-anchor="middle">组号</text>
+<text x="855" y="401" font-size="11.5" fill="#18181b" text-anchor="middle">块内地址</text>
+<path d="M750 384L750 312" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M715 384L715 376Q715 370 709 370L526 370Q520 370 520 364L520 230Q520 224 526 224L650 224" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="820" y="428" font-size="11.5" fill="#71717a">物理地址 ⇕</text>
+<rect x="680" y="440" width="100" height="26" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="730" y="457" font-size="11.5" fill="#1e3a8a" text-anchor="middle">实页号</text>
+<rect x="780" y="440" width="120" height="26" rx="0" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="840" y="456.9" font-size="11" fill="#18181b" text-anchor="middle">页内地址（12 位）</text>
+<path d="M400 410L454 410Q460 410 460 416L460 460Q460 466 466 466L680 466" fill="none" stroke="#3b6fd4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 4" marker-end="url(#a3b6fd4)"/>
+</svg>
