@@ -818,3 +818,12 @@ def switch_net(F, path=(), color=None, label_arrows=None, ox=0):
         (x1, y1), (x2, y2) = N[a], N[b]
         F.line(x1, y1, x2, y2, color, 3.2, arrow='end', gap=20, gap2=24)
     return N
+
+def frame(F, x, y, fields, h=34, size=12, top=None, bottom=None):
+    """fields: [(label, width, tone, top_len)]"""
+    cx = x
+    for lab, w, tone, ln in fields:
+        F.box(cx, y, w, h, lab, tone, size, 0)
+        if ln is not None: F.text(cx + w / 2, y - 8, str(ln), 11, color=INK2, mono=True)
+        cx += w
+    return cx

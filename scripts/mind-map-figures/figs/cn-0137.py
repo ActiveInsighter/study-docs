@@ -1,0 +1,16 @@
+from common import frame
+LABEL = '以太网 MAC 帧格式：目的地址、源地址、类型、数据、FCS，物理层加前导码'
+F = Fig(900, 340, '以太网 MAC 帧（DIX Ethernet V2）')
+F.box(400, 54, 150, 30, 'IP 数据报', 'white', 12, 0); F.text(610, 69, 'IP 层（SDU）', 12, 'start', ACCENT['blue'], valign='middle')
+F.line(475, 86, 475, 106, INK2, 1.2, arrow='end')
+end = frame(F, 140, 110, [('目的地址', 110, 'blue', 6), ('源地址', 110, 'blue', 6), ('类型', 80, 'blue', 2), ('数据 + 填充', 210, 'blue', '46~1500'), ('FCS', 80, 'blue', 4)])
+F.text(end + 10, 127, 'MAC 层（SDU + PCI）', 12, 'start', ACCENT['blue'], valign='middle'); F.text(110, 102, '字节', 11, 'end', MUTED)
+F.box(60, 176, 80, 30, '8 B', 'green', 12, 0); F.box(140, 176, 590, 30, '以太网 MAC 帧', 'blue', 12, 0); F.text(740, 191, '物理层（PDU）', 12, 'start', ACCENT['blue'], valign='middle')
+F.pill(66, 148, '插入', 'white', 10.5)
+F.box(40, 250, 300, 34, '1010101010 … 1010101010（7 B）', 'white', 11.5, 0, True); F.box(340, 250, 110, 34, '10101011（1 B）', 'white', 11.5, 0, True)
+F.text(190, 300, '前同步码', 11, color=INK2); F.text(395, 300, '帧开始定界符', 11, color=INK2)
+F.line(60, 206, 40, 248, LINE, 1, dash='3 3'); F.line(140, 206, 450, 248, LINE, 1, dash='3 3')
+F.text(470, 250, '前导码：8 B（7 + 1）　以太网帧：64 B ~ 1518 B（6+6+2+1500+4）', 11.5, 'start', INK2)
+F.text(470, 276, '为什么最短 64 B？由 CSMA/CD 的争用期决定', 11, 'start', ACCENT['red'])
+F.text(470, 298, '为什么数据最长 1500 B？即 MTU', 11, 'start', ACCENT['red'])
+F.text(470, 320, '无帧结束符：靠曼彻斯特编码的电压跳变判断帧结束', 11, 'start', MUTED)
