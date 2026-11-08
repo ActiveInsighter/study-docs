@@ -65,6 +65,7 @@ describe('study module metadata structure', () => {
     expect(coursesMeta.pages).toEqual([
       'index',
       'knowledge2',
+      'mind-maps',
       'question-summary',
       'exam',
     ]);
