@@ -532,27 +532,27 @@ layout: mind-map
     - 【存储的内容】就是对应的主存页面的副本
   - 直接映射
     - 直接映射规则：
-      - 主存在Cache中的行号 = 主存块号 % Cache总块数 <img src="/images/408-mind-maps/co-0180.png" alt="主存在Cache中的行号 = 主存块号 % Cache总块数" width="178" height="220">
+      - 主存在Cache中的行号 = 主存块号 % Cache总块数 <img src="/images/408-mind-maps/co-0180.svg" alt="主存在Cache中的行号 = 主存块号 % Cache总块数" width="300" height="302">
 
     - 映射公式
       - Cache中有2^c页，则主存中第 i 页对应在Cache中的行号 j $j = i \ mod\ 2^c$
 
         - 替换算法：如果出现冲突，则直接将块移出cache
     - 地址变化：
-      - 大题第二步（根据地址应声规则计算正确的地址形式） <img src="/images/408-mind-maps/co-0254.png" alt="大题第二步（根据地址应声规则计算正确的地址形式）" width="240" height="179">
+      - 大题第二步（根据地址应声规则计算正确的地址形式） <img src="/images/408-mind-maps/co-0254.svg" alt="大题第二步（根据地址应声规则计算正确的地址形式）" width="300" height="111">
 
-        - 此时主存的地址样子 <img src="/images/408-mind-maps/co-0143.png" alt="此时主存的地址样子" width="194" height="220">
+        - 此时主存的地址样子 <img src="/images/408-mind-maps/co-0143.svg" alt="此时主存的地址样子" width="300" height="227">
 
-          - CPU访问例子（大题第三步） <img src="/images/408-mind-maps/co-0296.png" alt="CPU访问例子（大题第三步）" width="240" height="150">
+          - CPU访问例子（大题第三步） <img src="/images/408-mind-maps/co-0296.svg" alt="CPU访问例子（大题第三步）" width="300" height="150">
 
     - 电路图
-      - <img src="/images/408-mind-maps/co-0090.png" alt="电路图" width="240" height="188">
+      - <img src="/images/408-mind-maps/co-0090.svg" alt="电路图" width="300" height="158">
 
         - 首先获得访问的地址&lt;块号、块内地址&gt;
           - &lt;页号、偏移量&gt;
         - 解析页号，获得最末尾的c位，【直接定位到】Cache的对应行，把前t位与当前标记位进行比较，如果相同则命中。
     - Cache每行结构：
-      - Cache每行有 1+1+19+64\*8 = 533 bit <img src="/images/408-mind-maps/co-0046.png" alt="Cache每行有 1+1+19+64\*8 = 533 bit" width="240" height="160">
+      - Cache每行有 1+1+19+64\*8 = 533 bit <img src="/images/408-mind-maps/co-0046.svg" alt="Cache每行有 1+1+19+64\*8 = 533 bit" width="300" height="150">
 
     - 特点
       - 简单，不够灵活，冲突率高，空间利用率低
@@ -570,11 +570,11 @@ layout: mind-map
       - 【无】
         - 查找方式：遍历所有Cache行
     - 地址变化：
-      - 大题第二步（根据地址映射规则计算正确的地址形式） <img src="/images/408-mind-maps/co-0319.png" alt="大题第二步（根据地址映射规则计算正确的地址形式）" width="240" height="159">
+      - 大题第二步（根据地址映射规则计算正确的地址形式） <img src="/images/408-mind-maps/co-0319.svg" alt="大题第二步（根据地址映射规则计算正确的地址形式）" width="300" height="111">
 
-        - 此时主存的地址样子 <img src="/images/408-mind-maps/co-0071.png" alt="此时主存的地址样子" width="211" height="220">
+        - 此时主存的地址样子 <img src="/images/408-mind-maps/co-0071.svg" alt="此时主存的地址样子" width="300" height="227">
 
-          - CPU访问例子（大题第三步） <img src="/images/408-mind-maps/co-0083.png" alt="CPU访问例子（大题第三步）" width="240" height="138">
+          - CPU访问例子（大题第三步） <img src="/images/408-mind-maps/co-0083.svg" alt="CPU访问例子（大题第三步）" width="300" height="150">
 
     - 原理
       - 首先获得访问的地址&lt;块号、块内地址&gt;
@@ -583,12 +583,12 @@ layout: mind-map
     - 特点
       - 灵活、冲突率低、利用率高、命中率高
       - 比较速度慢，实现成本高，需要昂贵的TLB(相联存储器)进行地址映射
-    - Cache每行有 1+1+3+22+64\*8 = 539 bit <img src="/images/408-mind-maps/co-0086.png" alt="Cache每行有 1+1+3+22+64\*8 = 539 bit" width="240" height="127">
+    - Cache每行有 1+1+3+22+64\*8 = 539 bit <img src="/images/408-mind-maps/co-0086.svg" alt="Cache每行有 1+1+3+22+64\*8 = 539 bit" width="300" height="150">
 
       - 有效位：LRU算法需要3bit
   - 组相联映射
     - 组相联映射规则：
-      - 主存在Cache中的组号 = 主存块号 % Cache总组数 <img src="/images/408-mind-maps/co-0224.png" alt="主存在Cache中的组号 = 主存块号 % Cache总组数" width="192" height="220">
+      - 主存在Cache中的组号 = 主存块号 % Cache总组数 <img src="/images/408-mind-maps/co-0224.svg" alt="主存在Cache中的组号 = 主存块号 % Cache总组数" width="300" height="302">
 
     - N路组相联 --- Cache每个组中有N个Cache行
       - 2路组相联：两个一组
@@ -596,20 +596,30 @@ layout: mind-map
       - 把Cache分为大小相同的组，每个组对应了主存的一个区域的内容。组间采用直接映射，组内采用全相联映射（i 为 主存的页号，j 为 Cache的行号、Q为Cache的组数） $j = i \ mod \ Q$
 
     - 地址变化：
-      - 大题第二步（根据地址应声规则计算正确的地址形式） <img src="/images/408-mind-maps/co-0278.png" alt="大题第二步（根据地址应声规则计算正确的地址形式）" width="240" height="194">
+      - 大题第二步（根据地址应声规则计算正确的地址形式） <img src="/images/408-mind-maps/co-0278.svg" alt="大题第二步（根据地址应声规则计算正确的地址形式）" width="300" height="111">
 
-        - 此时主存的地址样子 <img src="/images/408-mind-maps/co-0275.png" alt="此时主存的地址样子" width="184" height="220">
+        - 此时主存的地址样子 <img src="/images/408-mind-maps/co-0275.svg" alt="此时主存的地址样子" width="300" height="227">
 
-          - CPU访问例子（大题第三步） <img src="/images/408-mind-maps/co-0141.png" alt="CPU访问例子（大题第三步）" width="240" height="145">
+          - CPU访问例子（大题第三步） <img src="/images/408-mind-maps/co-0141.svg" alt="CPU访问例子（大题第三步）" width="300" height="150">
 
     - Cache每行结构：
-      - Cache每行有 1+1+1+20+64\*8 = 535 bit <img src="/images/408-mind-maps/co-0197.png" alt="Cache每行有 1+1+1+20+64\*8 = 535 bit" width="240" height="126">
+      - Cache每行有 1+1+1+20+64\*8 = 535 bit <img src="/images/408-mind-maps/co-0197.svg" alt="Cache每行有 1+1+1+20+64\*8 = 535 bit" width="300" height="150">
 
         - 查找Cache时就是查找标记阵列的标记项是 否符合要求
-        - 标记项组成的二维标记阵列 <img src="/images/408-mind-maps/co-0246.png" alt="标记项组成的二维标记阵列" width="240" height="109">
+        - 标记项组成的二维标记阵列 <img src="/images/408-mind-maps/co-0246.svg" alt="标记项组成的二维标记阵列" width="300" height="139">
 
     - 奇葩的题目
-      - 组相联映射还可以把最末的几位作为组号 <img src="/images/408-mind-maps/co-0218.png" alt="组相联映射还可以把最末的几位作为组号" width="240" height="131">
+      - 组相联映射还可以把最末的几位作为组号
+        - 例：按字编址，Cache 有 4 行，块大小为 1 个字；2 路组相联 + LRU；初始为空。依次访问主存地址 0, 4, 8, 2, 0, 6, 8, 6, 4, 8，命中 Cache 的次数是？（A. 1　B. 2　C. 3　D. 4）
+          - 本题把“块号的次低位”作为组号：块 0、4、8 → 第 0 组，块 2、6 → 第 1 组
+
+            |访问|0|4|8|2|0|6|8|6|4|8|
+            |---|---|---|---|---|---|---|---|---|---|---|
+            |第 0 组|0|0, 4|8, 4|8, 4|8, 0|8, 0|**8**, 0|8, 0|8, 4|**8**, 4|
+            |第 1 组||||2|2|2, 6|2, 6|2, **6**|2, 6|2, 6|
+            |结果|缺|缺|缺|缺|缺|缺|中|中|缺|中|
+
+          - 共命中 3 次，选 C
 
 - Cache的替换算法
   - 直接映射：
@@ -623,7 +633,19 @@ layout: mind-map
     - LRU --- 最近最少使用算法
       - 堆栈类算法，在每个cache中添加一个“counter位”
         - 2^n 路组相联，就需要n bit的计数位
-      - 举例 <img src="/images/408-mind-maps/co-0026.png" alt="举例" width="240" height="71">
+      - 举例
+        - LRU 举例：Cache 有 4 行，访问序列 1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5
+
+            |访问|1|2|3|4|1|2|5|1|2|3|4|5|
+            |---|---|---|---|---|---|---|---|---|---|---|---|---|
+            |行 0|1|1|1|1|**1**|1|1|**1**|1|1|1|5|
+            |行 1||2|2|2|2|**2**|2|2|**2**|2|2|2|
+            |行 2|||3|3|3|3|5|5|5|5|4|4|
+            |行 3||||4|4|4|4|4|4|3|3|3|
+            |结果|缺|缺|缺|缺|中|中|缺|中|中|缺|缺|缺|
+
+          - 每行配一个计数器（2 bit），值越小表示越近被访问；替换计数值最大（最久未用）的行：访问 5 时换出 3，访问 3 时换出 4，访问 4 时换出 5，访问 5 时换出 1
+          - 共命中 4 次
 
         - 使用counter计数来模拟堆栈的实现，阴影数值越小，说明越新进入Cache
         - counter的值是有范围的 0 ~ 2^n-1，不会超过
