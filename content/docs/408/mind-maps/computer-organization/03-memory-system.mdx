@@ -57,7 +57,7 @@ layout: mind-map
     - 主存带宽：
       - 数据传输率，表示每秒从主存进出信息的最大数量
 - 多级存储系统：
-  - <img src="/images/408-mind-maps/co-0199.png" alt="多级存储系统：" width="240" height="111">
+  - <img src="/images/408-mind-maps/co-0199.svg" alt="多级存储系统：" width="300" height="155">
 
     - 配图
 
@@ -79,7 +79,7 @@ layout: mind-map
 - SRAM
   - Static Random Access Memory
   - 存储元： （几个MOS)
-    - 双稳态触发管，6个MOS <img src="/images/408-mind-maps/co-0003.png" alt="双稳态触发管，6个MOS" width="240" height="168">
+    - 双稳态触发管，6个MOS <img src="/images/408-mind-maps/co-0003.svg" alt="双稳态触发管，6个MOS" width="300" height="141">
 
       - 了解即可
   - 优点：
@@ -98,11 +98,11 @@ layout: mind-map
   - 现在DRAM被称为SDRAM（例如DDR3，DDR4）
   - 刷新：
     - 每次刷新多少存储单元：
-      - 【基础版】一次刷新一整行 <img src="/images/408-mind-maps/co-0010.png" alt="【基础版】一次刷新一整行" width="240" height="219">
+      - 【基础版】一次刷新一整行 <img src="/images/408-mind-maps/co-0010.svg" alt="【基础版】一次刷新一整行" width="300" height="177">
 
         - 例如有20根地址线，则一共对应有1024 \* 1024根选通线。
         - 刷新顺序：从上到下选n个。每次刷新一行
-      - 【行列存储版】把地址分布改为行地址+列地址的存储方式 <img src="/images/408-mind-maps/co-0148.png" alt="【行列存储版】把地址分布改为行地址+列地址的存储方式" width="240" height="120">
+      - 【行列存储版】把地址分布改为行地址+列地址的存储方式 <img src="/images/408-mind-maps/co-0148.svg" alt="【行列存储版】把地址分布改为行地址+列地址的存储方式" width="300" height="123">
 
         - 例如有20根地址线，则有1024根行选通线，1024根列选通线 = 2048根选通线。
         - 刷新顺序：从左到右，从上到下。每次选n个一起刷新
@@ -148,14 +148,14 @@ layout: mind-map
     - 都是易失，只不过一个不需要刷新（SRAM)、一个需要刷新（DRAM)
 - 存储芯片的基本原理：
   - 栅极电容：
-    - MOS管+电容 <img src="/images/408-mind-maps/co-0219.png" alt="MOS管+电容" width="240" height="148">
+    - MOS管+电容 <img src="/images/408-mind-maps/co-0219.svg" alt="MOS管+电容" width="300" height="180">
 
   - 存储体/存储单元：
-    - <img src="/images/408-mind-maps/co-0044.png" alt="存储体/存储单元：" width="240" height="81">
+    - <img src="/images/408-mind-maps/co-0044.svg" alt="存储体/存储单元：" width="300" height="99">
 
       - 存储体的一排连接了多个栅极电容，故CPU的一次读写单位即“一排栅极电容”，也即【一个存储字长/机器字长】
   - 存储芯片：
-    - <img src="/images/408-mind-maps/co-0034.png" alt="存储芯片：" width="240" height="116">
+    - <img src="/images/408-mind-maps/co-0034.svg" alt="存储芯片：" width="300" height="142">
 
       - 存储芯片：
         - 一个存储芯片由多个字排列组成，每一排字对应一根【选通线】，即对应【MAR（地址）】中一个的数据。
@@ -166,7 +166,7 @@ layout: mind-map
       - 读/写控制线：
         - WE/RD杠，如果此时线是低电平，则说明允许读写，如果只有一个WE杠的话，则【低写高读】
   - 存储芯片浓缩版：
-    - <img src="/images/408-mind-maps/co-0114.png" alt="存储芯片浓缩版：" width="240" height="169">
+    - <img src="/images/408-mind-maps/co-0114.svg" alt="存储芯片浓缩版：" width="300" height="141">
 
       分组说明：一共五大部分；对应：[片选线：](#focus=%E7%89%87%E9%80%89%E7%BA%BF%EF%BC%9A)、[读写线：](#focus=%E8%AF%BB%E5%86%99%E7%BA%BF%EF%BC%9A)、[地址线：](#focus=%E5%9C%B0%E5%9D%80%E7%BA%BF%EF%BC%9A)、[数据线：](#focus=%E6%95%B0%E6%8D%AE%E7%BA%BF%EF%BC%9A)、[注意一定有【供电线】和【接地线】](#focus=%E6%B3%A8%E6%84%8F%E4%B8%80%E5%AE%9A%E6%9C%89%E3%80%90%E4%BE%9B%E7%94%B5%E7%BA%BF%E3%80%91%E5%92%8C%E3%80%90%E6%8E%A5%E5%9C%B0%E7%BA%BF%E3%80%91)
 
@@ -204,7 +204,8 @@ layout: mind-map
 
 - 特点：
   - 不易失、断电不丢失、结构简单、位密度高
-  - 写到主板中的，能让系统进入BIOS <img src="/images/408-mind-maps/co-0150.png" alt="写到主板中的，能让系统进入BIOS" width="240" height="96">
+  - 写到主板中的，能让系统进入BIOS
+    - ROM vs RAM：主板上的 BIOS 芯片属于 ROM，断电不丢失；内存条属于 RAM，断电丢失
 
 - 类型：
   - MROM：
@@ -255,7 +256,7 @@ layout: mind-map
 - 双端口RAM：
   - 解决问题：
     - 用于优化多核CPU访问单个内存条的情况
-  - 在同一个存储器的左右设置两个独立的端口，分别与两个CPU相连，每个端口都具有独立的地址、数据、控制线 <img src="/images/408-mind-maps/co-0011.png" alt="在同一个存储器的左右设置两个独立的端口，分别与两个CPU相连，每个端口都具有独立的地址、数据、控制线" width="240" height="112">
+  - 在同一个存储器的左右设置两个独立的端口，分别与两个CPU相连，每个端口都具有独立的地址、数据、控制线 <img src="/images/408-mind-maps/co-0011.svg" alt="在同一个存储器的左右设置两个独立的端口，分别与两个CPU相连，每个端口都具有独立的地址、数据、控制线" width="300" height="131">
 
     - 四种情况（读写者问题）
       - 时间\\地址
@@ -276,7 +277,7 @@ layout: mind-map
     - CPU可以同时快速的取出四条指令
     - 每个模块都有独立的控制电路、地址寄存器、时间寄存器、可以并行+交叉工作
     - 高位交叉编址
-      - 高位2bit是对应不同的存储体 <img src="/images/408-mind-maps/co-0281.png" alt="高位2bit是对应不同的存储体" width="240" height="172">
+      - 高位2bit是对应不同的存储体 <img src="/images/408-mind-maps/co-0281.svg" alt="高位2bit是对应不同的存储体" width="300" height="158">
 
         - M0 : 00 xxxxxxxx M 1:  01 xxxxxxxx 编程难度大
           - 读完一个数据后，存储体需要进行恢复，恢复完后才能读下一个
@@ -288,10 +289,10 @@ layout: mind-map
           00000 → 00001 → 00010 → 00011 → 00100
           ```
 
-          - 甘特图， 耗时 5T <img src="/images/408-mind-maps/co-0261.png" alt="甘特图， 耗时 5T" width="240" height="101">
+          - 甘特图， 耗时 5T <img src="/images/408-mind-maps/co-0261.svg" alt="甘特图， 耗时 5T" width="300" height="122">
 
     - 低位交叉编址
-      - 低位2bit对应不同存储体 <img src="/images/408-mind-maps/co-0253.png" alt="低位2bit对应不同存储体" width="240" height="158">
+      - 低位2bit对应不同存储体 <img src="/images/408-mind-maps/co-0253.svg" alt="低位2bit对应不同存储体" width="300" height="158">
 
         - 举例：
 
@@ -301,7 +302,7 @@ layout: mind-map
           00000 → 00001 → 00010 → 00011 → 00100
           ```
 
-          - 甘特图， 耗时 T+4r <img src="/images/408-mind-maps/co-0067.png" alt="甘特图， 耗时 T+4r" width="240" height="168">
+          - 甘特图， 耗时 T+4r <img src="/images/408-mind-maps/co-0067.svg" alt="甘特图， 耗时 T+4r" width="300" height="142">
 
   - 流水线式
     - 多体并行 + 低位交叉
@@ -310,7 +311,7 @@ layout: mind-map
         - 每过r周期启动下一个模块，这样当最后一块传完后，第一块又能接上了。
         - 存取m个字，需要T+(m-1)r的时间
   - 单体多字
-    - 把多体并行存储器合并在了同一个存储器中，所有存储器共用控制电路、寄存器等等 <img src="/images/408-mind-maps/co-0076.png" alt="把多体并行存储器合并在了同一个存储器中，所有存储器共用控制电路、寄存器等等" width="240" height="162">
+    - 把多体并行存储器合并在了同一个存储器中，所有存储器共用控制电路、寄存器等等 <img src="/images/408-mind-maps/co-0076.svg" alt="把多体并行存储器合并在了同一个存储器中，所有存储器共用控制电路、寄存器等等" width="300" height="161">
 
       - 故一次存取都需要读写一整行的信息（可能会读取多余的信息）
       - 速度和多体并行的速度基本完全一致
@@ -320,11 +321,11 @@ layout: mind-map
 - 总线信号命名：
   - 地址A0 ~ A7，数据 D0 ~ D7
 - 主存的基本组成
-  - <img src="/images/408-mind-maps/co-0258.png" alt="主存的基本组成" width="240" height="95">
+  - <img src="/images/408-mind-maps/co-0258.svg" alt="主存的基本组成" width="300" height="112">
 
     - 内存条插槽内有存储器总线
     - 内存条中的信息通过【内存条的引脚】，再通过【插槽内的引线】连接到【主板】上，通过【主板上的导线】连接到【CPU芯片】。
-    - <img src="/images/408-mind-maps/co-0069.png" alt="主存的基本组成" width="240" height="156">
+    - <img src="/images/408-mind-maps/co-0069.svg" alt="主存的基本组成" width="300" height="125">
 
 - 位扩展
   - 原因：芯片的字长(bit数)和CPU的字长(bit数)不统一，需要横向连接多块芯片来满足CPU的读取一次时的bit数需求

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="560" height="300" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="单体多字存储器：一个存储单元存 m 个字，一次读一整行">
+<title>单体多字存储器：一个存储单元存 m 个字，一次读一整行</title>
+<rect x="0.75" y="0.75" width="558.5" height="298.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">单体多字存储器</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="40" y="64" width="120" height="34" rx="0" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="100" y="85.5" font-size="13" fill="#7f1d1d" text-anchor="middle">1 个字</text>
+<rect x="160" y="64" width="120" height="34" rx="0" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="220" y="85.5" font-size="13" fill="#7f1d1d" text-anchor="middle">1 个字</text>
+<rect x="280" y="64" width="120" height="34" rx="0" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="340" y="85.5" font-size="13" fill="#7f1d1d" text-anchor="middle">1 个字</text>
+<rect x="400" y="64" width="120" height="34" rx="0" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="460" y="85.5" font-size="13" fill="#7f1d1d" text-anchor="middle">1 个字</text>
+<rect x="40" y="98" width="120" height="34" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.1"/>
+<rect x="160" y="98" width="120" height="34" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.1"/>
+<rect x="280" y="98" width="120" height="34" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.1"/>
+<rect x="400" y="98" width="120" height="34" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.1"/>
+<rect x="40" y="132" width="120" height="34" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.1"/>
+<rect x="160" y="132" width="120" height="34" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.1"/>
+<rect x="280" y="132" width="120" height="34" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.1"/>
+<rect x="400" y="132" width="120" height="34" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.1"/>
+<rect x="40" y="200" width="120" height="34" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.1"/>
+<rect x="160" y="200" width="120" height="34" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.1"/>
+<rect x="280" y="200" width="120" height="34" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.1"/>
+<rect x="400" y="200" width="120" height="34" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.1"/>
+<rect x="40" y="234" width="120" height="34" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.1"/>
+<rect x="160" y="234" width="120" height="34" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.1"/>
+<rect x="280" y="234" width="120" height="34" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.1"/>
+<rect x="400" y="234" width="120" height="34" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.1"/>
+<rect x="40" y="166" width="480" height="34" rx="0" fill="#fafafa" stroke="#3f3f46" stroke-width="1.1"/>
+<text x="280" y="187.9" font-size="14" fill="#71717a" text-anchor="middle">⋮</text>
+<text x="280" y="290" font-size="12" fill="#71717a" text-anchor="middle">共用控制电路与寄存器；一次存取一整行（m 个字），可能读到多余的信息</text>
+</svg>

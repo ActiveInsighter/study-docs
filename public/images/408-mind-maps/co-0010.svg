@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 330" width="560" height="330" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="存储器的简单模型：n 根地址线经译码器产生 2^n 根选通线">
+<title>存储器的简单模型：n 根地址线经译码器产生 2^n 根选通线</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="558.5" height="328.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">存储器的简单模型：2<tspan baseline-shift="38%" font-size="72%">n</tspan> 根选通线</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="110" y="110" width="70" height="140" rx="6" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="145" y="164" font-size="16" fill="#7f1d1d" text-anchor="middle"><tspan x="145" dy="0">译</tspan><tspan x="145" dy="21.6">码</tspan><tspan x="145" dy="21.6">器</tspan></text>
+<path d="M50 130L108 130" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M50 150L108 150" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M50 230L108 230" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="44" y="134.6" font-size="13" fill="#18181b" text-anchor="end">A<tspan baseline-shift="-22%" font-size="72%">0</tspan></text>
+<text x="80" y="195.6" font-size="16" fill="#71717a" text-anchor="middle">⋮</text>
+<text x="44" y="234.6" font-size="13" fill="#18181b" text-anchor="end">A<tspan baseline-shift="-22%" font-size="72%">n−1</tspan></text>
+<rect x="300" y="70" width="200" height="40" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="400" y="94.9" font-size="14" fill="#18181b" text-anchor="middle">0 号存储单元</text>
+<path d="M180 120L234 120Q240 120 240 114L240 96Q240 90 246 90L298 90" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="300" y="130" width="200" height="40" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="400" y="154.9" font-size="14" fill="#18181b" text-anchor="middle">1 号存储单元</text>
+<path d="M180 150L239.5 150Q240 150 240 150L240 150Q240 150 240.5 150L298 150" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="300" y="250" width="200" height="40" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="400" y="274.9" font-size="14" fill="#18181b" text-anchor="middle">2<tspan baseline-shift="38%" font-size="72%">n</tspan> − 1 号存储单元</text>
+<path d="M180 240L234 240Q240 240 240 246L240 264Q240 270 246 270L298 270" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="400" y="220.3" font-size="18" fill="#71717a" text-anchor="middle">⋮</text>
+<text x="280" y="316" font-size="12" fill="#71717a" text-anchor="middle">一根选通线选中一个存储单元：n 位地址 → 2<tspan baseline-shift="38%" font-size="72%">n</tspan> 个单元</text>
+</svg>

@@ -1,0 +1,12 @@
+LABEL = 'DRAM 存储元：MOS 管 + 电容'
+F = Fig(500, 300, 'DRAM 存储元：MOS 管 + 电容')
+F.path('M180 140V100H260V140M200 92H240', INK2, 2)
+F.line(120, 140, 180, 140, INK2, 2); F.line(260, 140, 340, 140, INK2, 2)
+F.line(120, 140, 120, 196, INK2, 2); F.line(96, 196, 144, 196, INK2, 3); F.line(96, 208, 144, 208, INK2, 3)
+F.line(120, 208, 120, 250, INK2, 2); F.path('M102 250H138M108 258H132M114 266H126', INK2, 1.6)
+F.pill(178, 58, 'MOS 管：开关', 'blue', 12.5)
+F.pill(20, 186, '电容', 'blue', 12.5)
+F.line(400, 140, 344, 140, INK2, 1.3, arrow='end'); F.text(410, 140, '电压', 13, 'start', INK2, valign='middle')
+F.text(170, 210, '有电荷 → “1”\n无电荷 → “0”', 13, 'start', INK, lh=1.5)
+F.text(330, 80, 'MOS 管导通即选中\n（1 启动，0 不启动）', 12, 'start', MUTED, lh=1.4)
+F.text(250, 290, '电容会漏电，所以 DRAM 需要定期刷新', 12, color=ACCENT['red'])
