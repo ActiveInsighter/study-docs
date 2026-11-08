@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280" width="760" height="280" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="动态分区分配：进程按需分配，回收后产生外部碎片">
+<title>动态分区分配：进程按需分配，回收后产生外部碎片</title>
+<rect x="0.75" y="0.75" width="758.5" height="278.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">动态分区分配</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="30" y="60" width="70" height="24" rx="0" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<text x="65" y="75.7" font-size="10.5" fill="#fafafa" text-anchor="middle" font-weight="600">OS</text>
+<text x="104" y="75.3" font-size="9.5" fill="#71717a">8 MB</text>
+<rect x="30" y="84" width="70" height="168" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="104" y="171.3" font-size="9.5" fill="#71717a">56 MB</text>
+<rect x="152" y="60" width="70" height="24" rx="0" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<text x="187" y="75.7" font-size="10.5" fill="#fafafa" text-anchor="middle" font-weight="600">OS</text>
+<text x="226" y="75.3" font-size="9.5" fill="#71717a">8 MB</text>
+<rect x="152" y="84" width="70" height="60" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="187" y="117.7" font-size="10.5" fill="#78350f" text-anchor="middle">进程 1</text>
+<text x="226" y="117.3" font-size="9.5" fill="#71717a">20 MB</text>
+<rect x="152" y="144" width="70" height="42" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="187" y="168.7" font-size="10.5" fill="#78350f" text-anchor="middle">进程 2</text>
+<text x="226" y="168.3" font-size="9.5" fill="#71717a">14 MB</text>
+<rect x="152" y="186" width="70" height="54" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="187" y="216.7" font-size="10.5" fill="#78350f" text-anchor="middle">进程 3</text>
+<text x="226" y="216.3" font-size="9.5" fill="#71717a">18 MB</text>
+<rect x="152" y="240" width="70" height="12" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="226" y="249.3" font-size="9.5" fill="#d1493a">4 MB</text>
+<rect x="274" y="60" width="70" height="24" rx="0" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<text x="309" y="75.7" font-size="10.5" fill="#fafafa" text-anchor="middle" font-weight="600">OS</text>
+<text x="348" y="75.3" font-size="9.5" fill="#71717a">8 MB</text>
+<rect x="274" y="84" width="70" height="60" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="309" y="117.7" font-size="10.5" fill="#78350f" text-anchor="middle">进程 1</text>
+<text x="348" y="117.3" font-size="9.5" fill="#71717a">20 MB</text>
+<rect x="274" y="144" width="70" height="42" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="348" y="168.3" font-size="9.5" fill="#d1493a">14 MB</text>
+<rect x="274" y="186" width="70" height="54" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="309" y="216.7" font-size="10.5" fill="#78350f" text-anchor="middle">进程 3</text>
+<text x="348" y="216.3" font-size="9.5" fill="#71717a">18 MB</text>
+<rect x="274" y="240" width="70" height="12" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="348" y="249.3" font-size="9.5" fill="#d1493a">4 MB</text>
+<rect x="396" y="60" width="70" height="24" rx="0" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<text x="431" y="75.7" font-size="10.5" fill="#fafafa" text-anchor="middle" font-weight="600">OS</text>
+<text x="470" y="75.3" font-size="9.5" fill="#71717a">8 MB</text>
+<rect x="396" y="84" width="70" height="60" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="431" y="117.7" font-size="10.5" fill="#78350f" text-anchor="middle">进程 1</text>
+<text x="470" y="117.3" font-size="9.5" fill="#71717a">20 MB</text>
+<rect x="396" y="144" width="70" height="24" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="431" y="159.7" font-size="10.5" fill="#78350f" text-anchor="middle">进程 4</text>
+<text x="470" y="159.3" font-size="9.5" fill="#71717a">8 MB</text>
+<rect x="396" y="168" width="70" height="18" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="470" y="180.3" font-size="9.5" fill="#d1493a">6 MB</text>
+<rect x="396" y="186" width="70" height="54" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="431" y="216.7" font-size="10.5" fill="#78350f" text-anchor="middle">进程 3</text>
+<text x="470" y="216.3" font-size="9.5" fill="#71717a">18 MB</text>
+<rect x="396" y="240" width="70" height="12" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="470" y="249.3" font-size="9.5" fill="#d1493a">4 MB</text>
+<rect x="518" y="60" width="70" height="24" rx="0" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<text x="553" y="75.7" font-size="10.5" fill="#fafafa" text-anchor="middle" font-weight="600">OS</text>
+<text x="592" y="75.3" font-size="9.5" fill="#71717a">8 MB</text>
+<rect x="518" y="84" width="70" height="60" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="592" y="117.3" font-size="9.5" fill="#d1493a">20 MB</text>
+<rect x="518" y="144" width="70" height="24" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="553" y="159.7" font-size="10.5" fill="#78350f" text-anchor="middle">进程 4</text>
+<text x="592" y="159.3" font-size="9.5" fill="#71717a">8 MB</text>
+<rect x="518" y="168" width="70" height="18" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="592" y="180.3" font-size="9.5" fill="#d1493a">6 MB</text>
+<rect x="518" y="186" width="70" height="54" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="553" y="216.7" font-size="10.5" fill="#78350f" text-anchor="middle">进程 3</text>
+<text x="592" y="216.3" font-size="9.5" fill="#71717a">18 MB</text>
+<rect x="518" y="240" width="70" height="12" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="592" y="249.3" font-size="9.5" fill="#d1493a">4 MB</text>
+<rect x="640" y="60" width="70" height="24" rx="0" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<text x="675" y="75.7" font-size="10.5" fill="#fafafa" text-anchor="middle" font-weight="600">OS</text>
+<text x="714" y="75.3" font-size="9.5" fill="#71717a">8 MB</text>
+<rect x="640" y="84" width="70" height="42" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="675" y="108.7" font-size="10.5" fill="#78350f" text-anchor="middle">进程 2</text>
+<text x="714" y="108.3" font-size="9.5" fill="#71717a">14 MB</text>
+<rect x="640" y="126" width="70" height="18" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="714" y="138.3" font-size="9.5" fill="#d1493a">6 MB</text>
+<rect x="640" y="144" width="70" height="24" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="675" y="159.7" font-size="10.5" fill="#78350f" text-anchor="middle">进程 4</text>
+<text x="714" y="159.3" font-size="9.5" fill="#71717a">8 MB</text>
+<rect x="640" y="168" width="70" height="18" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="714" y="180.3" font-size="9.5" fill="#d1493a">6 MB</text>
+<rect x="640" y="186" width="70" height="54" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="675" y="216.7" font-size="10.5" fill="#78350f" text-anchor="middle">进程 3</text>
+<text x="714" y="216.3" font-size="9.5" fill="#71717a">18 MB</text>
+<rect x="640" y="240" width="70" height="12" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="714" y="249.3" font-size="9.5" fill="#d1493a">4 MB</text>
+<text x="380" y="268" font-size="11.5" fill="#71717a" text-anchor="middle">空闲区（白色）被切得越来越碎：外部碎片</text>
+</svg>

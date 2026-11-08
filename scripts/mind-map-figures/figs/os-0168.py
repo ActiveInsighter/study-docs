@@ -1,0 +1,22 @@
+LABEL = '段页式系统的地址变换机构：三次访存'
+F = Fig(800, 380, '段页式系统的地址变换')
+F.text(130, 86, '段表寄存器', 11.5, color=INK2); F.box(30, 94, 110, 26, '段表始址 F', 'white', 11, 0); F.box(140, 94, 100, 26, '段表长度 M', 'white', 11, 0)
+F.circle(300, 107, 13, '>', 'white', 13); F.line(300, 94, 300, 60, INK2, 1.2, arrow='end'); F.text(300, 52, '越界中断', 11.5, color=ACCENT['red']); F.line(242, 107, 286, 107, INK2, 1.2, arrow='end')
+F.text(600, 82, '逻辑地址 A', 11.5, color=INK2)
+F.box(480, 94, 70, 26, '段号 S', 'amber', 11, 0); F.box(550, 94, 70, 26, '页号 P', 'green', 11, 0); F.box(620, 94, 110, 26, '页内偏移量 W', 'gray', 11, 0)
+F.poly([(515, 122), (515, 140), (300, 140), (300, 122)], INK2, 1.2, arrow='end'); F.poly([(300, 140), (70, 140), (70, 157)], INK2, 1.2, arrow='end')
+F.circle(70, 170, 13, '+', 'white', 14); F.line(70, 122, 70, 128, INK2, 1)
+F.text(170, 210, '段号　页表长度　页表始址', 10.5, 'start', INK2)
+for i, (s, l, b) in enumerate((('0', '…', '…'), ('…', '…', '…'), ('S', 'C', 'd'), ('…', '…', '…'))):
+    F.text(160, 232 + i * 22, s, 10.5, 'end', INK2, mono=True, valign='middle'); F.box(170, 221 + i * 22, 60, 22, l, 'amber' if s == 'S' else 'white', 10.5, 0, True); F.box(230, 221 + i * 22, 60, 22, b, 'amber' if s == 'S' else 'white', 10.5, 0, True)
+F.text(230, 320, '段表（第一次访存）', 11, color=ACCENT['amber'])
+F.poly([(70, 184), (70, 276), (168, 276)], INK2, 1.2, arrow='end')
+F.circle(380, 276, 13, '+', 'white', 14); F.line(292, 276, 366, 276, INK2, 1.2, arrow='end'); F.poly([(585, 122), (585, 190), (380, 190), (380, 262)], ACCENT['green'], 1.2, arrow='end')
+F.text(470, 210, '页号　块号', 10.5, 'start', INK2)
+for i, (p, b) in enumerate((('0', '…'), ('…', '…'), ('P', 'b'), ('…', '…'))):
+    F.text(460, 232 + i * 22, p, 10.5, 'end', INK2, mono=True, valign='middle'); F.box(470, 221 + i * 22, 60, 22, b, 'green' if p == 'P' else 'white', 10.5, 0, True)
+F.text(500, 320, '页表（第二次访存）', 11, color=ACCENT['green'])
+F.line(394, 276, 468, 276, INK2, 1.2, arrow='end')
+F.box(600, 262, 60, 26, 'b', 'blue', 12, 0, True); F.box(660, 262, 80, 26, 'W', 'gray', 12, 0, True); F.line(532, 276, 598, 276, INK2, 1.2, arrow='end'); F.poly([(700, 122), (700, 260)], INK2, 1.2, arrow='end')
+F.line(742, 275, 780, 275, ACCENT['blue'], 1.4, arrow='end'); F.text(700, 306, '物理地址 E → 访存（第三次）', 11, color=ACCENT['blue'])
+F.text(400, 360, '可引入快表：以段号和页号作为查询关键字，命中则只需一次访存', 11, color=MUTED)

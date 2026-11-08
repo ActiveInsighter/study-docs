@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="将用户程序变为可在内存中执行的程序：编译、链接、装入">
+<title>将用户程序变为可在内存中执行的程序：编译、链接、装入</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="758.5" height="298.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">编译 → 链接 → 装入</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="20" y="56" width="250" height="220" rx="8" fill="#e8effc" stroke="#3b6fd4" stroke-width="1" opacity="0.5"/>
+<text x="145" y="74" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">第一步：编译</text>
+<rect x="280" y="56" width="260" height="220" rx="8" fill="#fdf1d8" stroke="#c98a12" stroke-width="1" opacity="0.5"/>
+<text x="410" y="74" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">第二步：链接</text>
+<rect x="550" y="56" width="190" height="220" rx="8" fill="#fdf1d8" stroke="#c98a12" stroke-width="1" opacity="0.5"/>
+<text x="645" y="74" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">第三步：装入</text>
+<rect x="34" y="150" width="50" height="36" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="59" y="171.8" font-size="11" fill="#18181b" text-anchor="middle">代码</text>
+<text x="150" y="164.7" font-size="11" fill="#3f3f46" text-anchor="middle"><tspan x="150" dy="0">编译程序产生</tspan><tspan x="150" dy="14.3">的目标模块</tspan></text>
+<path d="M86 168L104 168" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="200" y="96" width="50" height="22" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="225" y="110.7" font-size="10.5" fill="#18181b" text-anchor="middle">库</text>
+<rect x="200" y="130" width="50" height="22" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="200" y="166" width="50" height="22" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="200" y="230" width="50" height="22" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="225" y="210.6" font-size="13" fill="#71717a" text-anchor="middle">⋮</text>
+<path d="M192 128q-8 0 -8 8V183q0 8 -8 8q8 0 8 8V246q0 8 8 8" fill="none" stroke="#71717a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M252 107L292 168" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M252 141L292 168" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M252 177L292 168" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M252 241L292 168" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="294" y="150" width="60" height="36" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="324" y="164.4" font-size="11" fill="#18181b" text-anchor="middle"><tspan x="324" dy="0">链接</tspan><tspan x="324" dy="14.9">程序</tspan></text>
+<path d="M356 168L384 168" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="386" y="154" width="90" height="28" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="431" y="171.8" font-size="11" fill="#18181b" text-anchor="middle">装入模块</text>
+<path d="M478 168L568 168" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="570" y="150" width="54" height="36" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="597" y="164.4" font-size="11" fill="#18181b" text-anchor="middle"><tspan x="597" dy="0">装入</tspan><tspan x="597" dy="14.9">程序</tspan></text>
+<path d="M626 168L668 168" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="700" y="96" font-size="11" fill="#3f3f46" text-anchor="middle">内存</text>
+<rect x="670" y="104" width="60" height="30" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="670" y="134" width="60" height="30" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="670" y="164" width="60" height="30" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="670" y="194" width="60" height="30" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="670" y="224" width="60" height="30" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+</svg>

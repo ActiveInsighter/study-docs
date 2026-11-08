@@ -736,3 +736,13 @@ def proc_space(F, ox, oy, kind, sched=False):
     F.text(X(470), Y(366), '进程表', 11, color=INK2); F.line(X(460), Y(356), X(450), Y(314), INK2, 1.1, arrow='end')
     F.text(X(110), Y(40), '进程', 11.5, color=INK2); F.line(X(110), Y(46), X(100), Y(86), ACCENT['amber'], 1.1, arrow='end')
     F.text(X(210), Y(40), '线程', 11.5, color=INK2); F.line(X(206), Y(46), X(170), Y(104), ACCENT['green'], 1.1, arrow='end')
+
+def xlate(F, kind, ox=0, oy=0):
+    """Paging address translation. kind: 'basic' | 'tlb' | 'two' | 'seg' | 'segpage'."""
+    X = lambda v: v + ox; Y = lambda v: v + oy
+    F.text(X(130), Y(86), '页表寄存器' if kind != 'seg' and kind != 'segpage' else '段表寄存器', 11.5, color=INK2)
+    F.cells(X(30), Y(94), ['页表始址 F' if kind not in ('seg', 'segpage') else '段表始址 F', '页表长度 M' if kind not in ('seg', 'segpage') else '段表长度 M'], [0] and 0, 0) if False else (F.box(X(30), Y(94), 110, 26, '页表始址 F' if kind not in ('seg', 'segpage') else '段表始址 F', 'white', 11, 0), F.box(X(140), Y(94), 100, 26, '页表长度 M' if kind not in ('seg', 'segpage') else '段表长度 M', 'white', 11, 0))
+    F.circle(X(300), Y(107), 13, '>', 'white', 13); F.line(X(300), Y(94), X(300), Y(60), INK2, 1.2, arrow='end'); F.text(X(300), Y(52), '越界中断', 11.5, color=ACCENT['red'])
+    F.line(X(242), Y(107), X(286), Y(107), INK2, 1.2, arrow='end')
+    F.circle(X(70), Y(170), 13, '+', 'white', 14)
+    F.line(X(70), Y(122), X(70), Y(156), INK2, 1.2, arrow='end')
