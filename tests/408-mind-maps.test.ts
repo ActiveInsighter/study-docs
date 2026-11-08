@@ -23,13 +23,13 @@ describe('408 chapter mind maps', () => {
   it('pins the Markmap 1.0 packages to one release and drops the 0.18 line', () => {
     const pkg = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8'));
     const lock = JSON.parse(readFileSync(join(root, 'package-lock.json'), 'utf8'));
-    const names = ['core', 'parse', 'render', 'view', 'canvas', 'toolbar', 'plugin-math'];
+    const names = ['core', 'parse', 'render', 'view', 'toolbar', 'plugin-math'];
     for (const name of names.map((entry) => '@markmap/' + entry)) {
       expect(pkg.dependencies[name]).toBe('1.0.0');
       expect(lock.packages[''].dependencies[name]).toBe('1.0.0');
       expect(lock.packages['node_modules/' + name].version).toBe('1.0.0');
     }
-    for (const legacy of ['markmap-lib', 'markmap-view', 'markmap-toolbar']) {
+    for (const legacy of ['markmap-lib', 'markmap-view', 'markmap-toolbar', '@markmap/canvas']) {
       expect(pkg.dependencies[legacy]).toBeUndefined();
     }
   });
@@ -68,6 +68,8 @@ describe('408 chapter mind maps', () => {
         expect(document).not.toMatch(/\]\(#topic-/);
         // Markmap 1.0 keeps only single <img> tags; other raw HTML would be dropped.
         expect(document).not.toMatch(/<a\s|<br\s*\/?>|loading="lazy"/);
+        // Heading icons were never shown by the original maps; keep them out.
+        expect(document).not.toMatch(/^#{1,6} .*<img /m);
       });
       expect(files).toHaveLength(count);
     }
@@ -99,10 +101,11 @@ describe('408 chapter mind maps', () => {
         }
       }
     }
-    expect(readdirSync(assetRoot).filter((name) => name.endsWith('.webp'))).toHaveLength(616);
-    expect(readdirSync(join(assetRoot, 'thumb'))).toHaveLength(616);
+    // Every image file is referenced: unused heading icons were removed.
+    expect(readdirSync(assetRoot).filter((name) => name.endsWith('.webp'))).toHaveLength(referencedAssets.size);
+    expect(readdirSync(join(assetRoot, 'thumb'))).toHaveLength(referencedAssets.size);
     expect(readdirSync(assetRoot).filter((name) => name.endsWith('.svg'))).toHaveLength(0);
-    expect(referencedAssets.size).toBeGreaterThan(600);
+    expect(referencedAssets.size).toBe(555);
   });
 
   it('renders mind-map pages as a full canvas without TOC, title block or footer', () => {

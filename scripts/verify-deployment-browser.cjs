@@ -243,6 +243,49 @@ async function chartGallery(page, base) {
   return 'blog client navigation, rendered charts and interactive table toggle';
 }
 
+/**
+ * Next.js prefetches segment payloads such as `__next.docs.$oc$slug.__PAGE__.txt`.
+ * Workers Static Assets redirects non-canonical spellings of `$`/`!`; a prefetch must
+ * never be redirected (and never loop), or client navigation silently falls back to
+ * full page loads.
+ */
+async function rscPrefetch(page, base) {
+  const redirected = [];
+  const failed = [];
+  let payloads = 0;
+  page.on('response', (response) => {
+    if (!response.url().includes('/__next.')) return;
+    if (response.status() >= 300 && response.status() < 400) {
+      redirected.push(`${response.status()} ${response.url()} -> ${response.headers().location}`);
+    } else if (response.ok()) {
+      payloads++;
+    }
+  });
+  page.on('requestfailed', (request) => {
+    const reason = request.failure()?.errorText ?? 'unknown';
+    if (request.url().includes('/__next.') && reason !== 'net::ERR_ABORTED') failed.push(`${reason} ${request.url()}`);
+  });
+  for (const path of ['/docs/politics/', '/docs/408/mind-maps/data-structures/01-introduction/']) {
+    await page.goto(base + path, { waitUntil: 'networkidle2', timeout: 120000 });
+    await settle(page);
+  }
+  if (redirected.length || failed.length) {
+    throw new Error(`RSC prefetch was redirected or failed:\n${[...redirected, ...failed].slice(0, 10).join('\n')}`);
+  }
+  if (payloads === 0) throw new Error('No RSC prefetch payloads were requested.');
+  return `payloads=${payloads}`;
+}
+
+/** A 408 chapter mind map draws as SVG with its toolbar. */
+async function mindMap(page, base) {
+  await page.goto(base + '/docs/408/mind-maps/operating-systems/02-processes/', { waitUntil: 'networkidle2', timeout: 120000 });
+  await page.waitForSelector('.mind-map[data-status="ready"] svg.mind-map-surface', { timeout: 60000 });
+  const nodes = await page.evaluate(() => document.querySelectorAll('svg.mind-map-surface [data-node-id]').length);
+  const buttons = await page.evaluate(() => document.querySelectorAll('.markmap-toolbar button').length);
+  if (nodes < 10 || buttons < 4) throw new Error(`Mind map rendered ${nodes} node groups and ${buttons} toolbar buttons.`);
+  return `nodes=${nodes} buttons=${buttons}`;
+}
+
 const SCENARIOS = [
   // The knowledge2 courses are the longest flows, so they start first.
   ...KNOWLEDGE2_COURSES.map((course) => [
@@ -257,6 +300,8 @@ const SCENARIOS = [
   ['code tabs', codeTabs],
   ['formatting', formatting],
   ['search', search],
+  ['rsc prefetch without redirects', rscPrefetch],
+  ['408 mind map', mindMap],
 ];
 
 async function runScenario(browser, base, [name, run]) {

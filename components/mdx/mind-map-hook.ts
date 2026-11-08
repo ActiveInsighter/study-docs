@@ -10,15 +10,9 @@ const FOCUS_HASH_PREFIX = '#focus=';
 const THUMBNAIL_SEGMENT = '/thumb/';
 /** Visible nodes above which the first view folds back to the root's children. */
 const DENSE_MAP_NODES = 48;
-/**
- * Maps with more nodes than this use Markmap's canvas backend: SVG re-lays out
- * every label on each zoom step, which stalls the main thread on big chapters.
- */
-const CANVAS_NODE_THRESHOLD = 250;
 
 export type MindMapStatus = 'loading' | 'ready' | 'error';
 export type MindMapColorScheme = 'light' | 'dark';
-export type MindMapRenderer = 'svg' | 'canvas' | 'auto';
 
 export interface MindMapImagePreview {
   src: string;
@@ -35,7 +29,6 @@ interface UseMindMapOptions {
   wrapWidth: number;
   fitPadding: number;
   colorScheme: MindMapColorScheme;
-  renderer: MindMapRenderer;
   fullscreenTargetRef: React.RefObject<HTMLElement | null>;
   onNavigate: (href: string) => void;
   onPreviewImage: (image: MindMapImagePreview) => void;
@@ -96,19 +89,6 @@ function pickFoldLevel(root: MarkmapNode) {
   return visible > DENSE_MAP_NODES ? 1 : 2;
 }
 
-function countNodes(node: MarkmapNode): number {
-  return node.children.reduce((total, child) => total + countNodes(child), 1);
-}
-
-function chooseRenderer(renderer: MindMapRenderer, root: MarkmapNode): 'svg' | 'canvas' {
-  if (typeof window !== 'undefined') {
-    const forced = new URLSearchParams(window.location.search).get('renderer');
-    if (forced === 'svg' || forced === 'canvas') return forced;
-  }
-  if (renderer !== 'auto') return renderer;
-  return countNodes(root) > CANVAS_NODE_THRESHOLD ? 'canvas' : 'svg';
-}
-
 function applyMatrix([a, b, c, d, e, f]: Matrix, x: number, y: number) {
   return [a * x + c * y + e, b * x + d * y + f] as const;
 }
@@ -124,7 +104,7 @@ function multiplyMatrix(m: Matrix, n: Matrix): Matrix {
   ];
 }
 
-/** The image drawn at a layout point, for both SVG and canvas backends. */
+/** The image drawn at a layout point (from the rendered primitives). */
 function imageAt(primitives: readonly Primitive[], x: number, y: number): string | undefined {
   let found: string | undefined;
   const walk = (items: readonly Primitive[], matrix: Matrix) => {
@@ -155,7 +135,6 @@ export function useMindMap({
   wrapWidth,
   fitPadding,
   colorScheme,
-  renderer,
   fullscreenTargetRef,
   onNavigate,
   onPreviewImage,
@@ -170,7 +149,6 @@ export function useMindMap({
 
   const hasContent = Boolean(data?.trim() || markdown?.trim());
   const [status, setStatus] = useState<MindMapStatus>(hasContent ? 'loading' : 'error');
-  const [activeRenderer, setActiveRenderer] = useState<'svg' | 'canvas' | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(
     hasContent ? null : EMPTY_MESSAGE,
   );
@@ -201,22 +179,17 @@ export function useMindMap({
     async function render() {
       try {
         const root = await loadRoot(data, markdown);
-        const kind = chooseRenderer(renderer, root);
-        const [{ Markmap }, { createToolbar, builtinButtons }, { defaultContentPlugins }, { mathContent }, canvasModule] =
+        const [{ Markmap }, { createToolbar, builtinButtons }, { defaultContentPlugins }, { mathContent }] =
           await Promise.all([
             import('@markmap/view'),
             import('@markmap/toolbar'),
             import('@markmap/render'),
             import('@markmap/plugin-math'),
-            kind === 'canvas' ? import('@markmap/canvas') : Promise.resolve(null),
           ]);
         if (cancelled || !surface) return;
 
         const doc = surface.ownerDocument;
-        const element =
-          kind === 'canvas'
-            ? doc.createElement('canvas')
-            : doc.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        const element = doc.createElementNS('http://www.w3.org/2000/svg', 'svg');
         element.setAttribute('class', 'mind-map-surface');
         element.setAttribute('role', 'img');
         element.setAttribute('aria-label', surface.getAttribute('aria-label') ?? '思维导图');
@@ -231,12 +204,7 @@ export function useMindMap({
           fitPadding,
           fitMaxScale: 1.25,
         };
-        const target =
-          canvasModule && element instanceof HTMLCanvasElement
-            ? new canvasModule.CanvasBackend(element)
-            : (element as SVGSVGElement);
-        const mm = Markmap.create(target, root, options);
-        setActiveRenderer(kind);
+        const mm = Markmap.create(element, root, options);
         markmapRef.current = mm;
         cleanups.push(() => {
           mm.destroy();
@@ -306,8 +274,8 @@ export function useMindMap({
         cleanups.push(() => toolbar.destroy());
 
         // Site links inside labels navigate in-app; focus links move to a node;
-        // images open in the preview dialog at full resolution. Works the same
-        // for SVG and canvas: hit-test in layout coordinates before the view does.
+        // images open in the preview dialog at full resolution. Hit-test in layout
+        // coordinates before the view handles the click.
         const handleClick = (event: MouseEvent) => {
           if (event.defaultPrevented || event.button !== 0) return;
           const box = element.getBoundingClientRect();
@@ -378,7 +346,6 @@ export function useMindMap({
     foldLevel,
     wrapWidth,
     fitPadding,
-    renderer,
     focusLabel,
     fullscreenTargetRef,
   ]);
@@ -390,5 +357,5 @@ export function useMindMap({
     mm.setOptions({ ...mm.options, colorScheme });
   }, [colorScheme, status]);
 
-  return { activeRenderer, errorMessage, status, surfaceRef, toolbarHostRef };
+  return { errorMessage, status, surfaceRef, toolbarHostRef };
 }

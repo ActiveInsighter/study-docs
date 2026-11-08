@@ -4,7 +4,6 @@ import { cn } from '@/lib/utils';
 import {
   useMindMap,
   type MindMapImagePreview,
-  type MindMapRenderer,
 } from '@/components/mdx/mind-map-hook';
 import { ExternalLink, X } from 'lucide-react';
 import { useTheme } from 'next-themes';
@@ -42,11 +41,6 @@ export interface MindMapProps {
   variant?: 'embedded' | 'page';
   /** Overlay shown in the top-left corner of the canvas (page variant). */
   header?: ReactNode;
-  /**
-   * Markmap backend. `auto` (default) draws large maps on a canvas, which stays
-   * smooth with thousands of nodes, and the rest as accessible SVG.
-   */
-  renderer?: MindMapRenderer;
   className?: string;
 }
 
@@ -65,7 +59,6 @@ export function MindMap({
   maxWidth = 300,
   variant = 'embedded',
   header,
-  renderer = 'auto',
   className,
 }: MindMapProps) {
   const router = useRouter();
@@ -78,14 +71,13 @@ export function MindMap({
   const descriptionId = `mind-map-description-${id}`;
 
   const onNavigate = useCallback((href: string) => router.push(href), [router]);
-  const { activeRenderer, errorMessage, status, surfaceRef, toolbarHostRef } = useMindMap({
+  const { errorMessage, status, surfaceRef, toolbarHostRef } = useMindMap({
     data,
     markdown,
     foldLevel: toFoldLevel(initialExpandLevel),
     wrapWidth: maxWidth,
     fitPadding: variant === 'page' ? 72 : 24,
     colorScheme: resolvedTheme === 'dark' ? 'dark' : 'light',
-    renderer,
     fullscreenTargetRef: containerRef,
     onNavigate,
     onPreviewImage: setPreview,
@@ -107,7 +99,6 @@ export function MindMap({
       data-mind-map="true"
       data-variant={variant}
       data-status={status}
-      data-renderer={activeRenderer ?? undefined}
       style={
         variant === 'embedded'
           ? ({ '--mind-map-height': heightValue } as CSSProperties)
@@ -121,7 +112,7 @@ export function MindMap({
         aria-describedby={descriptionId}
         aria-busy={status === 'loading'}
       >
-        {/* The hook mounts Markmap's <svg> or <canvas> here. */}
+        {/* The hook mounts Markmap's <svg> here. */}
         <div ref={surfaceRef} className="mind-map-surface-host" aria-label={title} />
 
         {header ? <div className="mind-map-header">{header}</div> : null}
