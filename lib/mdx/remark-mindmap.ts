@@ -1,3 +1,4 @@
+import { transformMindMapMarkdown } from '../mind-map/transform';
 import type { Root } from 'mdast';
 import type { Transformer } from 'unified';
 import { visit } from 'unist-util-visit';
@@ -8,14 +9,18 @@ export interface RemarkMdxMindmapOptions {
 }
 
 function toMDX(code: string) {
+  // Markdown → markmap tree happens once at build time: math is rendered by
+  // KaTeX and code by highlight.js here, so the browser only loads the view.
+  const data = JSON.stringify(transformMindMapMarkdown(code));
+
   return {
     type: 'mdxJsxFlowElement' as const,
     name: 'MindMap',
     attributes: [
       {
         type: 'mdxJsxAttribute' as const,
-        name: 'markdown',
-        value: code.trim(),
+        name: 'data',
+        value: data,
       },
     ],
     children: [],

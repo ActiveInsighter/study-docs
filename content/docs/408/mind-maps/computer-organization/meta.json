@@ -1,0 +1,15 @@
+{
+  "title": "计算机组成原理",
+  "description": "408 计算机组成原理章节思维导图。",
+  "pages": [
+    "index",
+    "01-overview",
+    "02-data-representation",
+    "03-memory-system",
+    "04-instruction-set",
+    "05-cpu",
+    "06-bus",
+    "07-io-system"
+  ],
+  "defaultOpen": false
+}

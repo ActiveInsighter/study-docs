@@ -1,12 +1,12 @@
 {
   "title": "思维导图",
-  "description": "408 四门课完整章节思维导图。",
+  "description": "408 四门课 26 章思维导图，每章一页。",
   "pages": [
     "index",
-    "数据结构思维导图",
-    "计算机组成原理思维导图",
-    "操作系统思维导图",
-    "计算机网络思维导图"
+    "data-structures",
+    "computer-organization",
+    "operating-systems",
+    "computer-networks"
   ],
   "defaultOpen": false
 }

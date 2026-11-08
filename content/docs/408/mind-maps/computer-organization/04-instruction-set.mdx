@@ -1,0 +1,347 @@
+---
+title: "第四章 指令系统"
+description: "计算机组成原理 · 第四章 指令系统：指令格式、指令寻址和数据寻址、X86汇编指令、CISC、RISC。"
+layout: mind-map
+---
+
+````mindmap
+# 第四章 指令系统
+
+[查看关联主题：第一章 计算机系统概论](/docs/408/mind-maps/computer-organization/01-overview)
+
+## 指令格式
+
+<a href="/images/408-mind-maps/co-0271.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0271.svg" alt="指令格式" width="48" height="48" loading="lazy" /></a>
+
+- 基本格式
+  - 操作码 + 地址码（op + add）
+  - 字长
+    - 指令字长
+      - 指令字长【可变】
+      - 一条指令的总长度
+      - 指令字长与机器字长无固定关系，可以使单字长、半字长、双字长
+    - 机器字长
+      - CPU一次运算所能处理的位数
+    - 存储字长
+      - 一个存储单元的位数
+    - 概要：固定
+      概要范围：[机器字长](#focus=%E6%9C%BA%E5%99%A8%E5%AD%97%E9%95%BF)、[存储字长](#focus=%E5%AD%98%E5%82%A8%E5%AD%97%E9%95%BF)
+
+- 指令分类：
+  - 零地址指令
+    - OP
+    - 无操作数
+      - 可用于不需要操作数的指令：空操作、停机、关中断
+    - 有操作数
+      - 用于堆栈计算机，把两个操作数从栈顶和次栈顶弹出，运算后再压回去
+  - 一地址指令
+    - OP A1
+    - 单操作数
+      - 只有目的操作数的单操作数，OP(A1) -&gt; A1
+        - 三次访存：取指令，取A1，写回A1
+        - 例如 ++, --, 取反，求补
+    - 双操作数
+      - (ACC)OP(A1) -&gt; (ACC)
+        - 两次访存：取指令，取A1
+    - 系统32位，若OP为8位，则A1可以寻址16M
+  - 二地址指令
+    - OP A1 A2
+      - 操作码、目的、源
+    - (A1)OP(A2) -&gt; A1
+      - 四次访存：取指令，取A1，取A2，写回A1
+    - 系统32位，若OP为8位，则可以寻址4K
+  - 三地址指令
+    - OP A1 A2 A3
+    - (A1)OP(A2) -&gt; A3
+  - 四地址指令
+    - OP A1 A2 A3 A4
+    - (A1)OP(A2) -&gt; A3，A4为下一条指令的地址
+- 定长操作码：
+  - 操作码有n bit，则一共有2^n个指令
+- 扩展操作码：
+  - 配图
+
+    <a href="/images/408-mind-maps/co-0318.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0318.svg" alt="扩展操作码：" width="188" height="220" loading="lazy" /></a>
+
+    - 更灵活的：动态的扩展操作码
+
+      <a href="/images/408-mind-maps/co-0124.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0124.svg" alt="更灵活的：动态的扩展操作码" width="240" height="73" loading="lazy" /></a>
+
+- 指令系统是软硬件的界面
+  - 软件依靠指令和硬件进行交互
+- 属于指令集体系结构（ISA）规定的有：
+  - 指令字格式和指令类型
+  - 通用寄存器个数和位数
+  - 没有
+
+    - CPU的时钟周期
+    - 加法器的进位方式
+- 考频：低
+  - 17、22\*2
+
+## 指令寻址和数据寻址
+
+<a href="/images/408-mind-maps/co-0097.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0097.svg" alt="指令寻址和数据寻址" width="48" height="48" loading="lazy" /></a>
+
+- 考频：高
+  - 11\*2、13、14、16-20
+- 指令寻址
+  - 顺序寻址
+    - PC计数器++
+      - 注意PC+1是加一个指令字长
+  - 跳跃寻址
+    - 下条指令的地址码由指令给出
+    - 跳动地址分为绝对地址和相对地址
+  - 批注：寻找下条运行<br>的指令的地址
+- 数据寻址
+  - 指令格式：
+    - &lt;OP，寻址特征，ADD&gt;
+  - 隐含寻址
+    - 配图
+
+      <a href="/images/408-mind-maps/co-0235.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0235.svg" alt="隐含寻址" width="240" height="122" loading="lazy" /></a>
+
+      - 即两个操作数：一个直接寻址，一个在ACC
+      - 给出一个操作数A的地址，与ACC进行运算
+    - 批注：EA = A + ACC
+  - 普通寻址
+    - 立即数寻址
+      - 配图
+
+        <a href="/images/408-mind-maps/co-0252.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0252.svg" alt="立即数寻址" width="240" height="143" loading="lazy" /></a>
+
+        - 直接给出操作的立即数的数字
+      - 批注：无EA，#A
+    - 直接寻址
+      - 配图
+
+        <a href="/images/408-mind-maps/co-0226.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0226.svg" alt="直接寻址" width="240" height="94" loading="lazy" /></a>
+
+        - 直接存有操作数的地址，EA = A
+        - 优缺点
+          - 优点：只需要一次访存就可以找到数据
+          - 缺点：寻址的区间被A的地址所约束
+      - 批注：EA = A
+    - 间接寻址
+      - 配图
+
+        <a href="/images/408-mind-maps/co-0024.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0024.svg" alt="间接寻址" width="240" height="106" loading="lazy" /></a>
+
+        - 可能存在多次间接寻址
+          - 多次间接寻址需要设置一个bit位来指明是否是最后一次寻址
+        - 优缺点
+          - 可扩大寻址范围（理论可以访问到任何一个数据）
+          - 需要多次访存，访问速度过慢
+            - 不常用，题中谈及”扩大寻址范围“通常都指寄存器间接寻址
+        - 在【间址周期的末尾】需要把找到的真正地址覆盖到原本指令的形式地址中
+      - 批注：EA = (A)
+  - 寄存器寻址
+    - 寄存器寻址
+      - 配图
+
+        <a href="/images/408-mind-maps/co-0084.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0084.svg" alt="寄存器寻址" width="171" height="220" loading="lazy" /></a>
+
+        - 数据码部分的是寄存器编号，寄存器中存有操作数
+        - 优缺点
+          - 优点：不需要访存找到数据
+          - 缺点：寄存器数目少
+      - 批注：EA = Ri
+    - 寄存器间接寻址
+
+      - 配图
+
+        <a href="/images/408-mind-maps/co-0078.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0078.svg" alt="寄存器间接寻址" width="240" height="206" loading="lazy" /></a>
+
+        - 数据码部分是指明的寄存器编号，寄存器中存有操作数的地址
+      - 批注：EA = (Ri）
+  - 偏移寻址
+    - 相对寻址
+      - 配图
+
+        <a href="/images/408-mind-maps/co-0192.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0192.svg" alt="相对寻址" width="240" height="129" loading="lazy" /></a>
+
+        - A是一个补码偏移量
+        - EA = (PC) + A
+          - 注意此时的PC已经移动到了下一条指令处，因为是【取指完成后立马PC++】
+        - 数据码部分是PC偏移量
+        - 便于【程序浮动】，所以相对寻址广泛用于转移指令
+          - for、while、goto
+          - 程序浮动：一段代码在程序内部跳转
+      - 批注：EA = (PC) + A
+    - 基址寻址
+      - 配图
+
+        <a href="/images/408-mind-maps/co-0200.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0200.svg" alt="基址寻址" width="240" height="85" loading="lazy" /></a>
+
+        - EA = (BR) + A
+          - 其中可以是BR，也可以是Ri
+        - 有利于多道程序设计，可以【编制浮动程序】
+          - 编制浮动程序：一个程序在内存中浮动
+      - 批注：EA = (BR) + A
+    - 变址寻址
+      - 配图
+
+        <a href="/images/408-mind-maps/co-0050.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0050.svg" alt="变址寻址" width="240" height="153" loading="lazy" /></a>
+
+        - IX用户可以编程设置
+        - 面向用户的，可以方便的设置A为某个数组的首部地址，然后执行EA = A + (IX)
+      - 批注：EA = (IX) + A
+  - 堆栈寻址
+    - 模拟堆栈来存储地址，寄存器堆栈分为硬堆栈和软堆栈
+      - 硬：
+        - 使用寄存器实现的
+      - 软：
+        - 在一个主存区域中实现的
+- 访存次数总结：
+  - 配图
+
+    |寻址方式|有效地址／说明|访存次数|
+    |---|---|---:|
+    |隐含寻址|程序指定|0|
+    |立即寻址|$A$ 是操作数|0|
+    |直接寻址|$EA=A$|1|
+    |一次间接寻址|$EA=(A)$|2|
+    |寄存器寻址|$EA=R_i$|0|
+    |寄存器间接一次寻址|$EA=(R_i)$|1|
+    |相对寻址|$EA=(PC)+A$|1|
+    |基址寻址|$EA=(BR)+A$|1|
+    |变址寻址|$EA=(IX)+A$|1|
+
+    注：表中的次数按原图统计操作数访问，不计取指。
+
+## X86汇编指令
+
+<a href="/images/408-mind-maps/co-0182.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0182.svg" alt="X86汇编指令" width="48" height="48" loading="lazy" /></a>
+
+- X86默认字长 32bit
+- 寄存器只有Ri、PC、PSW是程序员可见的
+- 有关寄存器
+  - A
+    - 累加器EAX
+  - B
+    - 基地址EBX
+  - C
+    - 计数ECX
+  - D
+    - 数据EDX
+  - 变址ESI、EDI
+  - 堆栈基EBP
+  - 堆栈顶ESP
+  - 概要：32位：E\_\_X<br>低16位：\_\_X<br>\_\_X的高8位：\_\_H<br>\_\_X的低8位：\_\_L
+    概要范围：[A](#focus=A)、[B](#focus=B)、[C](#focus=C)、[D](#focus=D)
+
+  - 概要：这两个寄存器不能乱用
+    概要范围：[堆栈基EBP](#focus=%E5%A0%86%E6%A0%88%E5%9F%BAEBP)、[堆栈顶ESP](#focus=%E5%A0%86%E6%A0%88%E9%A1%B6ESP)
+
+- 寻址模式
+  - mov + 目的地址 + 源地址
+  - 数据类型大小：
+    - DB、DW、DD
+      - DB：字节
+      - DW：字
+      - DD：双字
+- 常用指令
+  - mov dst src
+  - push pop
+    - ESP
+  - add/sub dst src
+  - inc/dec
+    - ++ / --
+  - imul dst src
+    - 相乘
+    - imul reg src1 src2
+  - idiv + 除数
+    - 被除数在edx:eax中
+  - and/or/xor
+  - not
+    - 位翻转
+  - neg
+    - 取负
+  - shl/shr
+    - shift + left/right
+  - jmp/jcondtion
+    - 实现程序控制
+    - jcondition：
+      - jle
+        - jl
+          - jge
+            - jg
+              - je
+                - jne
+                  - jz
+  - cmp
+  - call ret
+- jcondition的FLAG
+  - PSW中的几个标志位
+  - CF
+    - 借位/错位标志
+    - 最高位出现了进位/借位的时候就是CF = 1
+  - ZF
+    - 零标志位
+    - 结果为0的时候，ZF = 1
+  - OF
+    - 溢出标志位
+    - 结果溢出了，OF = 1
+  - SF
+    - 符号标志位
+    - 如果运算结果为负，则SF = 1
+- 例题举例：
+  - 配图
+
+    ```c
+    int f1(int n) {
+        if (n > 1)
+            return n * f1(n - 1);
+        else
+            return 1;
+    }
+    ```
+
+    - 配图
+
+      <a href="/images/408-mind-maps/co-0294.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0294.svg" alt="例题举例：" width="198" height="220" loading="lazy" /></a>
+
+      - 考题：
+      - 1\. 考C语言：递归次数
+      - 2\. 指令概念：条件转移指令、（无条件跳转指令、函数调用、函数返回）→ 一定出现程序跳转
+      - 3\. 虚地址计算：17条指令的地址；相对寻址：PC的偏移量；大端小端
+      - 4\. 数据溢出：long和int
+      - 5\. 带标记的乘法器OF判断；异常处理：溢出陷入指令。
+        - 并且告诉了R\[eax\] = R\[eax\] \* R\[ecx\]
+- AT&amp;T和Intel的汇编格式
+  - 汇编语法格式区分
+
+    <a href="/images/408-mind-maps/co-0132.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0132.svg" alt="汇编语法格式区分" width="240" height="54" loading="lazy" /></a>
+
+  - 批注：22
+- 考频：低
+  - 17大、19大\*2
+
+## CISC、RISC
+
+<a href="/images/408-mind-maps/co-0135.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0135.svg" alt="CISC、RISC" width="48" height="48" loading="lazy" /></a>
+
+- 考频：低
+  - 09、11
+- CISC
+  - Complex 复杂指令集
+- RISC
+  - Reduced 精简指令集
+- 对比：
+  - 配图
+
+    |比较项|CISC|RISC|
+    |---|---|---|
+    |指令系统|复杂、庞大|简单、精简|
+    |指令数目|一般大于 200 条|一般小于 100 条|
+    |指令字长|不固定|定长|
+    |可访存指令|不加限制|只有 Load/Store 指令|
+    |各种指令执行时间|相差很大|绝大多数在一个周期内完成|
+    |各种指令使用频率|相差很大|都比较常用|
+    |通用寄存器数量|少|多|
+    |目标代码|难以优化编译生成高效的目标代码程序|有优化的编译程序，代码高效|
+    |控制方式|绝大多数是微程序控制|绝大多数是组合逻辑控制|
+    |指令流水线|可以通过一定方式实现|必须实现|
+
+<a href="/images/408-mind-maps/co-0221.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0221.svg" alt="END" width="48" height="48" loading="lazy" /></a>
+````

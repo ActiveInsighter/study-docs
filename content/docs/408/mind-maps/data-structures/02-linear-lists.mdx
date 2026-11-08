@@ -1,0 +1,220 @@
+---
+title: "第二章 线性表"
+description: "数据结构 · 第二章 线性表：线性表定义、顺序表、链表。"
+layout: mind-map
+---
+
+````mindmap
+# 第二章 线性表
+
+[查看关联主题：第一章 操作系统概述](/docs/408/mind-maps/operating-systems/01-overview)
+
+## 线性表定义
+
+- 要求：
+  - 相同数据类型的n个数据元素
+  - 逻辑上的有限序列
+- 相同数据类型的n个数据元素的有限序列
+  - n=0叫空表
+- 位序、表头元素、表尾元素
+- 前驱、后继
+- 基本操作
+  - 初始化
+  - 销毁
+  - 插入
+  - 删除
+  - 按值查找
+  - 按位查找
+  - 其他操作
+    - 求表长
+    - 输出表
+    - 判空
+- 逻辑结构
+- 考频：低
+- 概要：缺一不可，n=0 叫空表
+  概要范围：[要求：](#focus=%E8%A6%81%E6%B1%82%EF%BC%9A)
+
+## 顺序表
+
+- 考频：中
+  - 10大、11大、13大、18大、20大
+- 定义
+  - 顺序存储的线性表
+    - 逻辑结构+物理结构
+- 特点
+  - 随机访问
+    - 查找数组O(1)
+  - 存储密度高
+    - 相比较链表
+  - 拓展容量不方便
+    - 重新开辟新空间进行拷贝
+- 创建
+  - 静态分配
+    - data\[MaxSize\]
+  - 动态分配
+    - \*data = malloc(sizeof(ElemType) \* length)
+    - 释放：free(data)
+    - 增加动态数组的长度
+      - 配图
+
+        ```cpp
+        // 增加动态顺序表的长度
+        void IncreaseSize(SeqList &L, int len) {
+            int *p = L.data;
+            L.data = (int *)malloc((L.MaxSize + len) * sizeof(int));
+            for (int i = 0; i < L.length; i++)
+                L.data[i] = p[i];     // 将数据复制到新区域
+            L.MaxSize += len;        // 更新顺序表最大长度
+            free(p);                // 释放原来的内存空间
+        }
+        ```
+
+- 插入
+  - 代码：注意代码的健壮性
+    - 配图
+
+      ```cpp
+      bool ListInsert(SqList &L, int i, int e) {
+          if (i < 1 || i > L.length + 1)  // 判断 i 的范围是否有效
+              return false;
+          if (L.length >= MaxSize)       // 当前存储空间满，不能插入
+              return false;
+          for (int j = L.length; j >= i; j--)  // 将第 i 个及之后的元素后移
+              L.data[j] = L.data[j - 1];
+          L.data[i - 1] = e;             // 在位置 i 处放入 e
+          L.length++;                   // 表长增加 1
+          return true;
+      }
+      ```
+
+  - 时间复杂度
+    - 最好
+      - O(1)
+    - 最坏
+      - O(n)
+    - 平均
+      - O(n/2) = O(n)
+- 删除
+  - 代码
+    - 配图
+
+      ```cpp
+      bool ListDelete(SqList &L, int i, int &e) {
+          if (i < 1 || i > L.length)  // 判断 i 的范围是否有效
+              return false;
+          e = L.data[i - 1];         // 将被删除元素赋给 e
+          for (int j = i; j < L.length; j++)
+              L.data[j - 1] = L.data[j];
+          L.length--;               // 表长减 1
+          return true;
+      }
+      ```
+
+  - 时间复杂度
+    - 最好
+      - O(1)
+    - 最坏
+      - O(n)
+    - 平均
+      - O(n/2) = O(n)
+- 查找
+  - 代码：
+    - 配图
+
+      ```cpp
+      int LocateElem(SqList L, ElemType e) {
+          int i;
+          for (i = 0; i < L.length; i++)
+              if (L.data[i] == e)
+                  return i + 1;  // 下标为 i 的元素值为 e，返回其位序 i+1
+          return 0;
+      }
+      ```
+
+  - 按位查找
+    - 获得表L中的第i个位置的元素的值
+    - 时间复杂度
+      - O(1)
+  - 按值查找
+    - 搜索即可
+    - 时间复杂度
+      - O(n)
+- 概要：注意length需要修改，传入是引用
+  概要范围：[插入](#focus=%E6%8F%92%E5%85%A5)、[删除](#focus=%E5%88%A0%E9%99%A4)
+
+## 链表
+
+- 单链表
+  - 定义
+    - 线性表的链式存储
+      - 逻辑+物理
+  - 链表类型
+    - 带头节点
+      - 头节点即第0个元素
+    - 不带头节点
+      - 元素从第一个开始
+  - 优缺点
+    - 优点：不要求大片存储空间
+    - 缺点：不支持随机存取
+  - 代码规范
+    - typedef
+      - 使用 LNode\* 来表示使用的是一个节点
+      - 使用 LinkList 来表示使用的是一个链表
+    - malloc
+      - 配图
+
+        ```cpp
+        (LNode *)malloc(sizeof(LNode))
+        ```
+
+    - 结构体
+      - 配图
+
+        ```cpp
+        typedef struct LNode {
+            ElemType data;
+            struct LNode *next;
+        } LNode, *LinkList;
+        ```
+
+  - 按位序插入
+    - 按位序插入（带头节点插入法）
+      - 找到第i - 1 个节点
+      - 然后插入一个新的节点
+    - 按位序插入（不带头节点插入法）
+      - 不带头节点的链表，处理第1个节点的时候需要特殊处理
+  - 插入
+    - 后插节点
+      - 比较简单，直接malloc然后赋值、更新指针
+    - 前插节点
+      - 需要用一个小的巧方法
+        - 对节点p后面插入一个后继节点s
+        - 把节点p的数据移动到节点s里面去
+        - 把新的数据放到p里面
+  - 删除
+    - 按位序删除
+      - ListDelete(LinkList &amp;L, int i, ElemType &amp;e)
+      - 其中的e需要返回删除的数据
+    - 指定节点删除
+  - 查找
+    - 按位查找
+      - O(n)
+    - 按值查找
+      - O(n)
+  - 建立
+    - 尾插法
+    - 头插法
+- 双链表
+  - 双链表在单链表的基础上添加了前驱节点
+  - 插入：需要修改前节点的next和后节点的prior，后设置新节点的next和prior
+  - 删除：先设置前节点的next=next-&gt;next，再设置后节点的prior = prior-&gt;prior，删除中间
+- 循环链表
+  - 链表中最后一个节点指向头结点
+  - 循环单链表
+  - 循环双链表
+- 静态链表
+  - 线性结构+顺序存储
+  - 用顺序表的形式进行存储空间开辟
+- 考频：高
+  - 16\*2、21、09大、12大、15大、19大
+````

@@ -1,0 +1,13 @@
+{
+  "title": "操作系统",
+  "description": "408 操作系统章节思维导图。",
+  "pages": [
+    "index",
+    "01-overview",
+    "02-processes",
+    "03-memory",
+    "04-file-system",
+    "05-io"
+  ],
+  "defaultOpen": false
+}

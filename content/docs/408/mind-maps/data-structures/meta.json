@@ -1,0 +1,16 @@
+{
+  "title": "数据结构",
+  "description": "408 数据结构章节思维导图。",
+  "pages": [
+    "index",
+    "01-introduction",
+    "02-linear-lists",
+    "03-stacks-queues-arrays",
+    "04-strings",
+    "05-trees",
+    "06-graphs",
+    "07-search",
+    "08-sort"
+  ],
+  "defaultOpen": false
+}
