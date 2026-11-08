@@ -1,0 +1,480 @@
+---
+title: "第六章 图"
+description: "数据结构 · 第六章 图：图的定义、图的存储结构、图的遍历、图的应用、并查集的应用。"
+layout: mind-map
+---
+
+````mindmap
+# 第六章 图
+
+[查看关联主题：第一章 绪论](/docs/408/mind-maps/data-structures/01-introduction)
+
+## 图的定义
+
+- 序偶ordered pair
+  - 有序偶：有序边
+    - 就是有两个点AB，的&lt;A, B&gt;
+  - 无序偶：无序边
+    - 两个点AB，的(A, B)
+- 各种各样的图
+  分组说明：数据结构只研究这一种；对应：[简单图：](#focus=%E7%AE%80%E5%8D%95%E5%9B%BE%EF%BC%9A)
+
+  - 表示
+    - 公式
+
+      $G = (V, E)$
+
+      - 有向边
+        - 公式
+
+          $E = \{ <1,2>, <2,3>\}$
+
+      - 无向边
+        - 公式
+
+          $E = \{ (1,2), (2,4)\}$
+
+  - 有向图
+    - 无向图
+      - 简单图
+        - 完全图
+          - 子图
+            - 入度、出度
+  - 简单图：
+
+    <a href="/images/408-mind-maps/ds-0136.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0136.svg" alt="简单图：" width="240" height="192" loading="lazy" /></a>
+
+    - 不存在顶点到其自身的边，且同一条边不重复出现
+    - 举例：有向图第一个是。无向图第一个是。
+    - 概要：不满足：多重图/复杂图
+      概要范围：[不存在顶点到其自身的边，且同一条边不重复出现](#focus=%E4%B8%8D%E5%AD%98%E5%9C%A8%E9%A1%B6%E7%82%B9%E5%88%B0%E5%85%B6%E8%87%AA%E8%BA%AB%E7%9A%84%E8%BE%B9%EF%BC%8C%E4%B8%94%E5%90%8C%E4%B8%80%E6%9D%A1%E8%BE%B9%E4%B8%8D%E9%87%8D%E5%A4%8D%E5%87%BA%E7%8E%B0)
+
+  - 完全图（简单完全图）：每两个顶点都可以路径为一的方式互通
+
+    <a href="/images/408-mind-maps/ds-0099.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0099.svg" alt="完全图（简单完全图）：每两个顶点都可以路径为一的方式互通" width="240" height="131" loading="lazy" /></a>
+
+    - 无向图
+
+      $n个顶点，有C_n^2 = \frac{n(n-1)}{2}条边$
+
+    - 有向图
+
+      $n个顶点，有2*C_n^2=n(n-1)条边$
+
+  - 子图：
+    - 从图开始，可以删点和边形成新的图（但是需要保证子图一定是图，至少有一个顶点）
+
+      $图为G = (V, E)，子图为G' = (V', E')，其中V' \subseteq V, E' \subseteq E。$
+
+      - 但是注意如果E‘中有&lt;A, B&gt;，而V'中且没有A或B节点的话，就说明不是子图（就是一条边，有一边的顶点消失了）
+      - 关于空图、空树、空表：
+        - 空表（线性表中没有元素），空树（没有结点），空图（也称为无边图，没有边，有节点）。
+        - 图中不能一个顶点也没有，图的顶点集V一定非空，但是边集E可以为空，此时图中只有顶点而没有边。
+  - 真子图
+    - 同’子图‘，不允许什么都不删
+  - 生成子图
+    - 同’子图‘，但是只允许删除边
+  - 极小连通子图
+    - 满足连通的情况下没有多余的边
+  - 概要：生成子图 + 极小连通子图 = 生成树
+    概要范围：[生成子图](#focus=%E7%94%9F%E6%88%90%E5%AD%90%E5%9B%BE)、[极小连通子图](#focus=%E6%9E%81%E5%B0%8F%E8%BF%9E%E9%80%9A%E5%AD%90%E5%9B%BE)
+
+    <a href="/images/408-mind-maps/ds-0138.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0138.svg" alt="生成子图 + 极小连通子图 = 生成树" width="240" height="164" loading="lazy" /></a>
+
+    - 包含图中所有节点且没有多余的边
+    - 注意，生成树本质仍然是一个’图/无序树‘，而不是‘有序树’，例如图 V= \{1, 2, 3\} E = \{(1,2), (2,3), (1,3)\}的生成树有3个
+- 顶点的度
+  - 有向图
+    - 顶点的入度和出度之和
+  - 无向图
+    - 该顶点相连的边的个数
+- 简单路径
+  - 顶点不重复的路径
+    - 简单回路
+      - 顶点不重复的回路
+- 无向图
+  - 连通图
+    - 图中任意两个顶点之间都有路径可达
+  - 连通子图
+    - 若图的子图是连通图，则称为连通子图
+  - 极大连通子图
+    - 极大连通子图是该图中所有连通子图中边数最多的子图
+    - 连通图的极大连通子图是它本身
+  - 连通分量
+    - 也就是极大连通子图
+      - 配图
+
+        <a href="/images/408-mind-maps/ds-0218.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0218.svg" alt="也就是极大连通子图" width="240" height="95" loading="lazy" /></a>
+
+- 极大、极小连通子图的关系
+  - 无向图+连通+极大连通子图
+    - 自己
+  - 无向图+连通+极小连通子图
+    - 自己的生成树
+  - 无向图+不连通+极大连通子图
+    - 有多个，不需要删除点、边
+  - 无向图+不连通+极小连通子图
+    - 上面多个极大连通子图各自的生成树
+- 有向图
+  - （强）连通图
+    - 图中任意两个顶点之间都有路径可达
+  - （强）连通分量
+    - 图中的极大连通子图
+- 无向图连通辨析：
+  - 无向图中：
+    - 配图
+
+      <a href="/images/408-mind-maps/ds-0150.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0150.svg" alt="无向图中：" width="240" height="165" loading="lazy" /></a>
+
+      - 连通图的子图中有部分是不连通的
+      - 极大和极小连通子图是两个概念
+      - 在无向连通图中，极小连通子图 = 生成树
+        - 如果是无向不连通图，则没有生成树
+      - 无向图中，连通分量 = 极大连通子图
+  - 原始图：
+    - 原本的图
+  - 子图：
+    - 含有该图中部分边和结点的图，一定是能够形成一个图的“边和结点”集合
+  - 连通分量：
+    - 首先其是子图，就是在该子图的结点对中有所有原始图中的结点对的边，全都要
+  - 生成树：
+    - 极小连通子图，一定不成环
+  - 连通分量、生成树的核心区别点
+    - 【连通分量】是一定要所有的边都在的，连通分量的概念是图论中为了说明【有多少个】连通分量而存在的
+      - 故题中问要求某一个连通分量，只需要求【其中存在的顶点】即可，可以不说明边（建议也说了）
+      - 题中一般考察的是一共有【多少个】连通分量，而不会让你用算法【打印出】连通分量
+    - 【生成树】一个子图的生成树一定是无环的
+      - 生成树一般都不是连通分量（除非原图本来就是一个树）
+      - 题目会让你【求】生成树
+    - 故：<br>DFS、BFS可以找连通分量✅<br>DFS、BFS的结果（生成树）是连通分量❌
+      - DFS、BFS的生成树的个数 = 连通分量的个数。通过改进可以打印出连通分量（了解）
+  - 概要：配图
+    概要范围：[原始图：](#focus=%E5%8E%9F%E5%A7%8B%E5%9B%BE%EF%BC%9A)、[子图：](#focus=%E5%AD%90%E5%9B%BE%EF%BC%9A)、[连通分量：](#focus=%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F%EF%BC%9A)、[生成树：](#focus=%E7%94%9F%E6%88%90%E6%A0%91%EF%BC%9A)
+
+    <a href="/images/408-mind-maps/ds-0033.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0033.svg" alt="无向图连通辨析：" width="240" height="167" loading="lazy" /></a>
+
+- 有向图：
+  - 一个例子
+    - 配图
+
+      若一个有向图的顶点不能排在一个拓扑序列中，则可判定该有向图（ ）。
+
+      - A. 是一个有根的有向图
+      - B. 是一个强连通图
+      - C. 含有多个入度为 0 的顶点
+      - D. 含有顶点数大于 1 的强连通分量
+
+      - 题干 = 一个有向图存在有环的子图
+    - A. 与有无根无关
+      - （从一个结点出发可以抵达所有其他结点）
+    - B. 强连通图
+      - 强连通图：每对顶点都可以互通，所以起码整个图都得是有环图才行，而现在只是其中部分有环而已
+        - 配图
+
+          <a href="/images/408-mind-maps/ds-0009.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0009.svg" alt="强连通图：每对顶点都可以互通，所以起码整个图都得是有环图才行，而现在只是其中部分有环而已" width="240" height="164" loading="lazy" /></a>
+
+    - C. 含有多个入度为0的顶点
+      - 配图
+
+        <a href="/images/408-mind-maps/ds-0093.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0093.svg" alt="C. 含有多个入度为0的顶点" width="240" height="164" loading="lazy" /></a>
+
+    - D. 顶点数大于1的强连通分量
+      - D选项 = 有一个顶点数超过1的子图是环
+  - 有向树
+    - 一个顶点的入度为0，其余顶点的入度都是1的有向图
+
+      <a href="/images/408-mind-maps/ds-0050.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0050.svg" alt="一个顶点的入度为0，其余顶点的入度都是1的有向图" width="240" height="120" loading="lazy" /></a>
+
+- 考频：中
+  - 09、10、11、13、17、22
+
+## 图的存储结构
+
+- 考频：低
+  - 15大、21大
+- 邻接矩阵（二维矩阵存储）
+  - 稠密图
+    - 开辟整个矩阵的空间
+  - 找顶点的入度出度要遍历行/列，要O(n)
+  - 可以非常快速的定位到两个顶点的边关系
+  - 取值
+    - 无向图
+      - 0
+        - A\[i\]\[j\] = A\[j\]\[i\] = 0，则说明不存在 i 到 j 的边
+      - 1
+        - A\[i\]\[j\] = A\[j\]\[i\] = 1，则说明存在 i 到 j 的边
+    - 有向图
+      - n
+        - A\[i\]\[j\] = n，则说明从 i 到 j 的边权重为n
+      - 0/-1/无穷
+        - 对角线（自己到自己）、不存在的边
+  - 性质：
+    - 无向图：对称矩阵
+- 邻接表（数组+链表）
+  - 稀疏图
+  - 需要大量计算入度最好用【逆邻接表】
+- 十字链表（有向）
+  - 对邻接表的优化：又想要入度又想要出度
+    - 顶点结点
+      - &lt;data, in, out&gt;
+    - 弧结点
+      - &lt;尾, 头, 同头, 同尾&gt;
+  - 画图三步走：
+    - 1\. 画邻接表
+      - 考题注意顶点序号从0还是从1开始
+    - 2\. 增加弧结点的域
+    - 3\. 自己指向自己
+  - 如何画图：
+
+    <a href="/images/408-mind-maps/ds-0145.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0145.svg" alt="如何画图：" width="240" height="111" loading="lazy" /></a>
+
+    [参考链接](<https://www.bilibili.com/video/BV1hV411t7SC?from=search&seid=4785318972996389561&spm_id_from=333.337.0.0>)
+
+- 多重链表（无向）
+  - 目的：删除边的时候比较麻烦（要搜两个节点），因此我们就把两个节点合二为一
+  - 先画好点和边，然后找到相同的字母接起来
+
+    <a href="/images/408-mind-maps/ds-0189.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0189.svg" alt="先画好点和边，然后找到相同的字母接起来" width="240" height="105" loading="lazy" /></a>
+
+    - 注意：边中存的应该是结点序号，例如a-0，b-1，此处也提个醒
+
+## 图的遍历
+
+- BFS
+  - 队列
+    - 邻接表 O(v + e)
+    - 邻接矩阵 O(v^2)
+  - 广度优先生成树
+    分组说明：如果给定的是邻接矩阵，则生成树唯一，如果是邻接表，则生成树不唯一；对应：[只针对无权图进行BFS即可得到最小生成树](#focus=%E5%8F%AA%E9%92%88%E5%AF%B9%E6%97%A0%E6%9D%83%E5%9B%BE%E8%BF%9B%E8%A1%8CBFS%E5%8D%B3%E5%8F%AF%E5%BE%97%E5%88%B0%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91)
+
+    - 只针对无权图进行BFS即可得到最小生成树
+      - 时间复杂度：O(v^2)/O(v+e)
+  - 要求掌握代码（队列实现）
+    - 配图
+
+      ```cpp
+      void BFS_MIN_Distance(Graph G, int u) {
+          // d[i] 表示从 u 到 i 的最短路径
+          for (int i = 0; i < G.vexnum; i++)
+              d[i] = INF;
+          visited[u] = true;
+          d[u] = 0;
+          EnQueue(Q, u);
+          while (!IsEmpty(Q)) {
+              DeQueue(Q, u);
+              for (int w = FirstNeighbor(G, u); w >= 0; w = NextNeighbor(G, u, w)) {
+                  if (!visited[w]) {
+                      visited[w] = true;
+                      d[w] = d[u] + 1;
+                      EnQueue(Q, w);
+                  }
+              }
+          }
+      }
+      ```
+
+- DFS
+  - 递归/堆栈
+    - 邻接表 O(v + e)
+    - 邻接矩阵 O(v^2)
+  - 深度优先生成树
+    分组说明：如果给定的是邻接矩阵，则生成树唯一，如果是邻接表，则生成树不唯一；对应：[只针对无权图进行DFS即可得到最小生成树](#focus=%E5%8F%AA%E9%92%88%E5%AF%B9%E6%97%A0%E6%9D%83%E5%9B%BE%E8%BF%9B%E8%A1%8CDFS%E5%8D%B3%E5%8F%AF%E5%BE%97%E5%88%B0%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91)
+
+    - 只针对无权图进行DFS即可得到最小生成树
+      - 时间复杂度：O(v^2)/O(v+e)
+  - 要求掌握代码（递归实现）
+    - 配图
+
+      ```cpp
+      bool visited[MAX_VERTEX_NUM];  // 访问标记数组
+
+      void DFSTraverse(Graph G) {
+          for (int v = 0; v < G.vexnum; v++)
+              visited[v] = false;
+          for (int v = 0; v < G.vexnum; v++)
+              if (!visited[v])
+                  DFS(G, v);
+      }
+
+      void DFS(Graph G, int v) {
+          visit(v);
+          visited[v] = true;
+          for (int w = FirstNeighbor(G, v); w >= 0; w = NextNeighbor(G, v, w))
+              if (!visited[w])
+                  DFS(G, w);
+      }
+      ```
+
+- 考频：低
+  - 13、15、16
+
+## 图的应用
+
+- 考频：超高
+  - 10、12\*3、13、14、16\*2、18、19\*2、20\*3、21\*2、22、09大、11大、14大、17大、18大
+    - 大题都是应用题
+- 最小生成树算法
+  - 无权图：
+    - BFS/DFS都可以找最小生成树
+  - 有权图
+    - Prim算法
+      - 从头到尾只有一个集合，不断扩大
+
+        <a href="/images/408-mind-maps/ds-0137.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0137.svg" alt="从头到尾只有一个集合，不断扩大" width="240" height="159" loading="lazy" /></a>
+
+        - 时间复杂度
+
+          $O(V^2)$
+
+        - 掌握伪代码：英文代码+每一句话都写注释
+
+          ```text
+          /* G：图；T：生成树；树空。以下为 Prim 算法伪代码。 */
+          void Prim(G, T) {
+              T.V = {w};  // 添加任意一个顶点 w 到顶点集
+              while (G.V - T.V != {}) {
+                  (u, v) = find_min_weight(G);
+                  // 选择满足 u ∈ T.V、v ∈ (G.V - T.V) 的最小权值边
+                  T.E = T.E ∪ {(u, v)};
+                  T.V = T.V ∪ {v};
+              }
+          }
+          ```
+
+      - 批注：Party
+    - Kruskal算法
+      - 每次直接找图中最小边，如果不成环，就加进去
+
+        <a href="/images/408-mind-maps/ds-0045.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0045.svg" alt="每次直接找图中最小边，如果不成环，就加进去" width="240" height="163" loading="lazy" /></a>
+
+        - 时间复杂度
+
+          $O(elog_2e)$
+
+        - 掌握伪代码：英文代码+每一句话都写注释
+
+          ```text
+          /* V：图的顶点集；T：生成树。以下为 Kruskal 算法伪代码。 */
+          void Kruskal(V, T) {
+              T.V = V;  // 初始时每个顶点都是一个独立连通分量
+              while (compute_connect(T) > 1) {
+                  // compute_connect(T) 返回生成树的连通分量个数
+                  (u, v) = find_min_weight(T);
+                  // 选择连接不同连通分量的最小权值边 (u, v)
+                  T.E = T.E ∪ {(u, v)};
+              }
+          }
+          ```
+
+- 最短路径算法
+  - 无权图：
+    - BFS可以找最短路径
+  - 有权图
+    - Dijkstra算法
+      - 使用final\[\], path\[\], dis\[\]去搜寻最短路径，每次都在dis\[\]中找到最短的路径。
+
+        <a href="/images/408-mind-maps/ds-0049.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0049.svg" alt="使用final\[\], path\[\], dis\[\]去搜寻最短路径，每次都在dis\[\]中找到最短的路径。" width="240" height="216" loading="lazy" /></a>
+
+        - 基于贪心算法
+        - 可以判断有环图
+        - 无法判断带负权值的图 ：算法失效
+        - 时间复杂度 O(v^2)
+          - 找两个点的时间复杂度，所有点仍是O(v^3)
+    - Floyd算法
+      - 动态规范算法，动态维护一个dis\[\]\[\]和path\[\]\[\]，每次更新时都加入一个新的节点作为可使用的中转点。
+
+        <a href="/images/408-mind-maps/ds-0206.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0206.svg" alt="动态规范算法，动态维护一个dis\[\]\[\]和path\[\]\[\]，每次更新时都加入一个新的节点作为可使用的中转点。" width="231" height="220" loading="lazy" /></a>
+
+        - path\[\]矩阵的用处
+          - 配图
+
+            <a href="/images/408-mind-maps/ds-0048.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0048.svg" alt="path\[\]矩阵的用处" width="240" height="123" loading="lazy" /></a>
+
+            分组说明：多层递归，还是比较麻烦；对应：[例如：找V0 到 V4](#focus=%E4%BE%8B%E5%A6%82%EF%BC%9A%E6%89%BEV0%20%E5%88%B0%20V4)
+
+            - 例如：找V0 到 V4
+              - V0 -&gt; V3 -&gt; V4
+              - 找 V0 到 V3
+                - V0 -&gt; V2 -&gt; V3
+                - 找 V0 到 V2
+                  - 直达
+                - 找 V2 到 V3
+                  - V2 -&gt; V1 -&gt; V3
+                  - 找V2-&gt;V1
+                    - 直达
+                  - 找V1-&gt;V3
+                    - 直达
+              - 找 V3 到 V4
+                - 直达
+        - 无法判断带负权值的【有环图】
+          - 环中有负值
+        - 时间复杂度全部顶点
+
+          $O(V^3)$
+
+- 有向无环图<br>（DAG)
+  - 把算式二叉树简化为有向无环图的形式
+  - 配图
+
+    <a href="/images/408-mind-maps/ds-0055.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0055.svg" alt="有向无环图 （DAG)" width="156" height="220" loading="lazy" /></a>
+
+- 拓扑排序
+  - AOV网
+    - 算法思路
+      - 找入度为0的点，打印出来，删掉所有与这个点有关的边，一直到最后无点可删
+        - 时间复杂度：O(v + e)
+        - 如果无点可删时，图中仍剩有点，就说明有环
+  - 逆拓扑排序
+    - 同理，可以使用逆向DFS来实现
+      - https://blog.csdn.net/xza13155/article/details/113923901
+      - 设置一个visited数组，一个nowvisited数组
+- 关键路径
+  - AOE网
+    - 节点：事件，边：活动
+    - 计算五个量：ve(k), vl(k), e(k), l(k), d(k)
+      - ve(k)：事件的最早发生时间
+      - vl(k)：事件的不得不发生的时间
+      - e(k)：活动的最早发生时间，与箭头尾部ve(k)相同
+      - l(k)：活动的最晚发生时间，与箭头头部l(k) - weight相同
+      - d(k) = l(k) - e(k)，如果是0，就说明是关键路径
+    - 举例
+      - 找关键路径ve(i), le(i)
+        - 配图
+
+          <a href="/images/408-mind-maps/ds-0003.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0003.svg" alt="找关键路径ve(i), le(i)" width="172" height="220" loading="lazy" /></a>
+
+      - 找关键路径的活动的<br>e(i), l(i), l(i)-e(i)
+        - 配图
+
+          <a href="/images/408-mind-maps/ds-0078.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0078.svg" alt="找关键路径的活动的 e(i), l(i), l(i)-e(i)" width="220" height="220" loading="lazy" /></a>
+
+## 并查集的应用
+
+- 图的连通分量
+  - 配图
+
+    <a href="/images/408-mind-maps/ds-0143.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0143.svg" alt="图的连通分量" width="240" height="145" loading="lazy" /></a>
+
+- 判断是否有环
+  - 配图
+
+    <a href="/images/408-mind-maps/ds-0170.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0170.svg" alt="判断是否有环" width="240" height="146" loading="lazy" /></a>
+
+- Kruskal算法
+  - Kruskal算法的实现一定需要并查集来判断新的最短路径会不会成环
+    - 算法实现
+      - 把所有的边按权值大小递增排序
+
+      - 从小到大，使用Find操作检查是否在同一个集合
+
+      - 如果不再同一个集合，就用Union把两个集合加入到同一个集合中
+
+    - 所以时间复杂度为：
+      - 公式
+
+        $O(elog_2e)$
+
+        - 原因：一共有e条边，执行e轮，并查集Find的时间复杂度为log\_2e
+- 考频：低
+  - 无
+````

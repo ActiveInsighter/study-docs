@@ -1,0 +1,542 @@
+---
+title: "第七章 查找"
+description: "数据结构 · 第七章 查找：概念、顺序查找、二分查找、分块查找、树形查找、B树 等。"
+layout: mind-map
+---
+
+````mindmap
+# 第七章 查找
+
+[查看关联主题：第一章 绪论](/docs/408/mind-maps/data-structures/01-introduction)
+
+## 概念
+
+- 查找表
+  - 支持查、增、删
+- 静态查找表
+  - 只支持查
+- 关键字
+  - key words，具有唯一标示性
+    - 例如：学号、身份证号
+  - 使用关键字来查找记录，记录可能非常大（4B—100GB）
+- 查找的【平均查找长度】
+  - ASL
+    - 成功
+    - 失败
+  - 批注：而不是用时间复杂度
+
+## 顺序查找
+
+- 考频：低
+  - 无
+- 顺序查找一般会设置 a\[0\] 为哨兵位
+  - 在创建数据结构的时候就把a\[0\]留出来
+  - 这样查找返回值可以用unsigned int了，否则没找到返回-1，结果是int，很大空间都不用到。
+    - 批注：int：（-32768～32767）
+- 一般表
+  - ASL
+    - 成功
+      - 公式
+
+        $\frac{1}{n}\times1+\frac{1}{n}\times2+\dots+\frac{1}{n}\times n = \frac{n+1}{2}$
+
+    - 失败
+      - 公式
+
+        $n + 1$
+
+        - 因为必须全部搜索一遍
+- 有序表
+  - ASL
+    - 成功
+      - 公式
+
+        $\frac{1}{n}\times1+\frac{1}{n}\times2+\dots+\frac{1}{n}\times n = \frac{n+1}{2}$
+
+    - 失败
+      - 配图
+
+        <a href="/images/408-mind-maps/ds-0084.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0084.svg" alt="失败" width="240" height="184" loading="lazy" /></a>
+
+        - n 个结点 → n+1 种失败情况 → 每个概率相同
+
+          $\frac{1}{n+1}+\frac{2}{n+1}+\dots+\frac{n}{n+1}\times 2 = \frac{n}{2} + \frac{n}{n+1}$
+
+## 二分查找
+
+- 折半查找，前提是一个有序顺序表
+  - 无序的、链式的都不可以
+- ASL
+  - 配图
+
+    <a href="/images/408-mind-maps/ds-0074.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0074.svg" alt="ASL" width="240" height="117" loading="lazy" /></a>
+
+    - 查找成功
+      - 公式
+
+        $ASL = \frac{1}{11}\times (1+2\times2+3\times4+4\times4) = 3.3$
+
+    - 查找失败
+      - 公式
+
+        $ASL = \frac{1}{12}\times(3\times4 + 8\times4) = 3.7$
+
+- 凡是有序、可随机访问的查找表，都可以进行二分查找
+- 考频：中
+  - 10、15、16、17、13大
+
+## 分块查找
+
+- 考频：低
+  - 无
+- 分块/索引查找
+  - 配图
+
+    <a href="/images/408-mind-maps/ds-0165.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0165.svg" alt="分块/索引查找" width="240" height="73" loading="lazy" /></a>
+
+    - 索引查找表平均查找长度 Li
+      - 块内查找表平均查找长度Ls
+    - 查找成功
+      - ASL = Li + Ls
+    - 查找失败
+      - ASL = Li + (Ls + 1)
+    - Li的具体值：顺序/二分
+      - Ls的具体值：只能顺序
+  - 批注：用于OS中分块存储
+- 这个在索引表内部仍然可以采用二分的方法进行加速
+  - 有序的顺序表都可以（\_\_\_ \_\_\_ \_\_\_ \_\_\_）
+
+## 树形查找
+
+- 二叉排序树
+  - 见第五章：树
+- 平衡二叉树
+  - 见第五章：树
+- 红黑树
+  - 各种树的历史
+
+    - **AVL 树**：最早的平衡二叉树之一，可用于其他数据结构的优化；原图举 Windows 对进程地址空间的管理为例。
+    - **红黑树**：平衡二叉树，广泛用于 C++ 的 STL，例如 map、set 基于红黑树实现。
+    - **B/B+ 树**：用于磁盘文件组织和数据库索引。
+    - **Trie 树（字典树）**：用于统计和排序大量字符串，也可自动机化。
+
+  - 发明的原因：
+    - 配图
+
+      |项目|BST|AVL Tree|Red-Black Tree|
+      |---|---|---|---|
+      |诞生年份|1960|1962|1972|
+      |Search（查）|$O(n)$|$O(\log_2 n)$|$O(\log_2 n)$|
+      |Insert（插）|$O(n)$|$O(\log_2 n)$|$O(\log_2 n)$|
+      |Delete（删）|$O(n)$|$O(\log_2 n)$|$O(\log_2 n)$|
+
+      - 平衡二叉树 AVL：进行插入/删除时很容易破坏“平衡”特性，需要频繁调整树的形态。如:插入操作导致不平衡，则需要先计算平衡因子，找到最小不平衡子树(时间开销大)，再进行LL/RR/LR/RL 调整。
+        - 适用于以查为主、很少插入/删除的场景
+      - 红黑树 RBT：插入/删除 很多时候不会破坏“红黑”特性，无需频繁调整树的形态。即便需要调整，一般都可以在常数级时间内完成。
+        - 适用于频繁插入、删除的场景，实用性更强
+      - 概要：配图
+        概要范围：[平衡二叉树 AVL：进行插入/删除时很容易破坏“平衡”特性，需要频繁调整树的形态。如:插入](#focus=%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91%20AVL%EF%BC%9A%E8%BF%9B%E8%A1%8C%E6%8F%92%E5%85%A5%2F%E5%88%A0%E9%99%A4%E6%97%B6%E5%BE%88%E5%AE%B9%E6%98%93%E7%A0%B4%E5%9D%8F%E2%80%9C%E5%B9%B3%E8%A1%A1%E2%80%9D%E7%89%B9%E6%80%A7%EF%BC%8C%E9%9C%80%E8%A6%81%E9%A2%91%E7%B9%81%E8%B0%83%E6%95%B4%E6%A0%91%E7%9A%84%E5%BD%A2%E6%80%81%E3%80%82%E5%A6%82%3A%E6%8F%92%E5%85%A5)、[红黑树 RBT：插入/删除 很多时候不会破坏“红黑”特性，无需频繁调整树的形态。即便需要调](#focus=%E7%BA%A2%E9%BB%91%E6%A0%91%20RBT%EF%BC%9A%E6%8F%92%E5%85%A5%2F%E5%88%A0%E9%99%A4%20%E5%BE%88%E5%A4%9A%E6%97%B6%E5%80%99%E4%B8%8D%E4%BC%9A%E7%A0%B4%E5%9D%8F%E2%80%9C%E7%BA%A2%E9%BB%91%E2%80%9D%E7%89%B9%E6%80%A7%EF%BC%8C%E6%97%A0%E9%9C%80%E9%A2%91%E7%B9%81%E8%B0%83%E6%95%B4%E6%A0%91%E7%9A%84%E5%BD%A2%E6%80%81%E3%80%82%E5%8D%B3%E4%BE%BF%E9%9C%80%E8%A6%81%E8%B0%83)
+
+        <a href="/images/408-mind-maps/ds-0151.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0151.svg" alt="发明的原因：" width="240" height="104" loading="lazy" /></a>
+
+  - 考的方向：
+    - 选择题 --- 定义、性质
+      - 类似
+
+        **2015 年真题**：现有一棵无重复关键字的平衡二叉树（AVL 树），对其进行中序遍历可得到一个递增序列。下列关于该平衡二叉树的叙述中，正确的是（ ）。
+
+        - A. 根结点的度一定为 2
+        - B. 树中最小元素一定是叶结点
+        - C. 最后插入的元素一定是叶结点
+        - D. 树中最大元素一定无左子树
+
+        原图旁注：除 AVL 外，也可考虑 BST 二叉排序树和 RBT 红黑树。
+
+    - 插入（删除） --- 手绘
+      - 类似
+
+        **2013 年真题**：若将关键字 1、2、3、4、5、6、7 依次插入到初始为空的平衡二叉树 T 中，则 T 中平衡因子为 0 的分支结点的个数是（ ）。
+
+        - A. 0
+        - B. 1
+        - C. 2
+        - D. 3
+
+  - 红黑树的定义
+    - 左根右，跟叶黑，不红红，黑路同
+
+      <a href="/images/408-mind-maps/ds-0081.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0081.svg" alt="左根右，跟叶黑，不红红，黑路同" width="240" height="110" loading="lazy" /></a>
+
+      - 出题思路
+
+        <a href="/images/408-mind-maps/ds-0129.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0129.svg" alt="出题思路" width="240" height="132" loading="lazy" /></a>
+
+  - 概念：黑高 bh
+    - 结点的黑高 bh ：从某结点出发(不含该结点)到达任一空叶结点的路径上黑结点总数
+
+      <a href="/images/408-mind-maps/ds-0109.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0109.svg" alt="结点的黑高 bh ：从某结点出发(不含该结点)到达任一空叶结点的路径上黑结点总数" width="240" height="165" loading="lazy" /></a>
+
+      - 性质 1：
+        - 从根节点到叶子节点的最长路径不大于最短路径的2倍
+      - 性质 2：
+        - 有 n 个内部结点的红黑树的树高
+
+          $h \leq 2log_2(n+1)$
+
+  - 基本操作：
+    - 查找：
+      - 与 BST、AVL 相同，从根出发，左小右大，若查找到一个空叶节点，则查找失败
+
+        <a href="/images/408-mind-maps/ds-0101.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0101.svg" alt="与 BST、AVL 相同，从根出发，左小右大，若查找到一个空叶节点，则查找失败" width="240" height="109" loading="lazy" /></a>
+
+    - 插入：
+      - 插入策略：
+        - 配图
+
+          <a href="/images/408-mind-maps/ds-0158.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0158.svg" alt="插入策略：" width="240" height="162" loading="lazy" /></a>
+
+      - 插入练习
+        - 配图
+
+          <a href="/images/408-mind-maps/ds-0090.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0090.svg" alt="插入练习" width="240" height="160" loading="lazy" /></a>
+
+  - 重要性质
+    - 1\. 与AVL的比较
+      - RBT和AVL的时间复杂度都是相同的，但是平均来讲，RBT的插入删除快一些（复杂度相同）
+    - 2\. 旋转次数
+      - 2021年的提问：红黑树的旋转调整一定是在3次以内完成的
+
+        **原图中的提问**
+
+        > 网上有说红黑树可以保证任何插入、删除的旋转调整在 3 次以内，又有人说这是“左倾红黑树”的特点。如果考试问“红黑树可以保证任何插入、删除的旋转调整在 3 次以内”，是否正确？
+
+        图中回复：**“算正确的。”**
+
+        该图为评论问答的摘录；以上保留其问答内容。
+
+      - 概要：最好说是可能超过2次（因为 &lt;= 3不严格正确，参考“左倾红黑树”）
+        概要范围：[2021年的提问：红黑树的旋转调整一定是在3次以内完成的](#focus=2021%E5%B9%B4%E7%9A%84%E6%8F%90%E9%97%AE%EF%BC%9A%E7%BA%A2%E9%BB%91%E6%A0%91%E7%9A%84%E6%97%8B%E8%BD%AC%E8%B0%83%E6%95%B4%E4%B8%80%E5%AE%9A%E6%98%AF%E5%9C%A83%E6%AC%A1%E4%BB%A5%E5%86%85%E5%AE%8C%E6%88%90%E7%9A%84)
+
+- 考频：高
+  - 09-12、13\*2、15、18-21
+
+## B树
+
+- 考频：高
+  - 09、12-14、17、18、20-22
+- B树
+  - 定义
+    - B 树，又称多路平衡查找树，B 树中所有结点的孩子个数的最大值称为 B 树的阶，通常用 m 表示。一棵 m 阶 B 树要么是空树，要么满足这些特性：
+
+      <a href="/images/408-mind-maps/ds-0031.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0031.svg" alt="B 树，又称多路平衡查找树，B 树中所有结点的孩子个数的最大值称为 B 树的阶，通常用 m 表示。一棵 m 阶 B 树要么是空树，要么满足这些特性：" width="240" height="91" loading="lazy" /></a>
+
+      - 1) 树中每个结点至多有m棵子树，即至多含有m-1个关键字。
+      - 2) 若根结点不是终端结点，则至少有两棵子树。
+      - 3) 除根结点外的所有非叶结点至少有⌈m/2⌉棵子树，即至少含有⌈m/2⌉-1个关键字。
+      - 4) 所有的叶结点都出现在同一层次上，并且不带信息（可以视为外部结点或类似于折半查找判定树的查找失败结点，实际上这些结点不存在，指向这些结点的指针为空)。
+  - 数据<br>结构
+    - 配图
+
+      <a href="/images/408-mind-maps/ds-0209.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0209.svg" alt="数据 结构" width="240" height="84" loading="lazy" /></a>
+
+- 是一种BST的拓展
+  - 多叉查找树
+    - BST每次把搜索域分为两个部分，B树把搜索域分为m个部分
+  - 例：
+    - 五叉查找树
+      - 配图
+
+        <a href="/images/408-mind-maps/ds-0010.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0010.svg" alt="五叉查找树" width="240" height="111" loading="lazy" /></a>
+
+        - 例：查9
+          - 22 -&gt; 5 -&gt; 6 -&gt; 8 -&gt; 9
+        - 例：查41
+          - 22 -&gt; 36 -&gt; 40 -&gt; 42 -&gt; 失败
+      - 批注：tint:有序、<br>可随机访问哦
+- 如何保证m叉查找树效率够高
+  - 策略一：
+    - m叉查找树，除了根节点以外任何结点都至少要有⌈m/2⌉个分叉，则至少有⌈m/2⌉ - 1 个关键字
+    - 如何记住⌈m/2⌉ - 1：考虑分裂吧，分裂也是从⌈m/2⌉ 处分的
+
+      <a href="/images/408-mind-maps/ds-0207.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0207.svg" alt="如何记住⌈m/2⌉ - 1：考虑分裂吧，分裂也是从⌈m/2⌉ 处分的" width="240" height="99" loading="lazy" /></a>
+
+  - 策略二：
+    - 任何一个节点，其所有的子树高度都要相同
+- B树的高度
+  - n个关键字的m阶B树，最大最小高度
+    - 注：B树的高度不包括叶子结点（失败节点）
+  - 最小：
+    - 节点填满：(m-1)(1+m+m^2+...+m^h-1) &gt;= n
+
+      $h \ge log_m(n+1)$
+
+      - 每层最多m个指针P，每个P指向的非叶结点最多有(m-1)个关键字K。第i层关键字最多有 ↑。
+
+        $(m-1)*m^{i-1}$
+
+  - 最大：
+    - 根节点2个分叉，其他节点只有⌈m/2⌉个指针
+      - 每层最少⌈m/2⌉个指针P，每个P指向的非叶结点最少有⌈m/2⌉-1个关键字K，因此第i层的关键字最少有 ↑。
+
+        $(⌈m/2⌉-1)*⌈m/2⌉^{i-1}$
+
+    - 算法一（会用此方法推算）
+
+      <a href="/images/408-mind-maps/ds-0200.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0200.svg" alt="算法一（会用此方法推算）" width="240" height="193" loading="lazy" /></a>
+
+      - 算法二
+
+        <a href="/images/408-mind-maps/ds-0199.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0199.svg" alt="算法二" width="240" height="79" loading="lazy" /></a>
+
+  - 高度区间：
+    - 公式
+
+      $log_m(n+1) \le h \le log_{⌈m/2⌉}\frac{n+1}{2} + 1$
+
+      分组说明：巧记；对应：[配图／公式](#focus=%E9%85%8D%E5%9B%BE%EF%BC%8F%E5%85%AC%E5%BC%8F)
+
+      - 配图
+
+        <a href="/images/408-mind-maps/ds-0123.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0123.svg" alt="高度区间：" width="240" height="195" loading="lazy" /></a>
+
+        - 左边：一共n个节点，有n+1个查找区间，每次m叉的进行查找，就是以m为底的log
+        - 右边：注意与左边的区别
+          - 1\. 根节点只有一个节点，所以对n+1进行/2操作，首先将查找区间分成两个部分
+          - 2\. 所以h的高度默认就应该带上根节点那层，即整个式子 +1
+          - 3\. 每个结点都是⌈m/2⌉叉，故对(n+1)/2进行如此分叉查找，即以此为底
+- B树的操作
+
+  - 插入
+    - 插入到【终端节点】，【插满了】就从中间⌈m/2⌉ 分裂，分裂的结点送到父节点中去
+
+      <a href="/images/408-mind-maps/ds-0018.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0018.svg" alt="插入到【终端节点】，【插满了】就从中间⌈m/2⌉ 分裂，分裂的结点送到父节点中去" width="240" height="69" loading="lazy" /></a>
+
+      - 第一次分裂
+
+        <a href="/images/408-mind-maps/ds-0178.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0178.svg" alt="第一次分裂" width="240" height="45" loading="lazy" /></a>
+
+      - 第二次分裂
+
+        <a href="/images/408-mind-maps/ds-0142.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0142.svg" alt="第二次分裂" width="240" height="70" loading="lazy" /></a>
+
+  - 删除
+    - 够删
+      - 删终端
+        - 直接删
+
+          <a href="/images/408-mind-maps/ds-0122.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0122.svg" alt="直接删" width="240" height="75" loading="lazy" /></a>
+
+          - 若被删除关键字在终端节点，则直接删除该关键字 (要注意节点关键字个数是否低于下限⌈m/2⌉ -1)
+      - 删非终端
+        - 找直接前驱或直接后继来进行顶替
+
+          <a href="/images/408-mind-maps/ds-0140.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0140.svg" alt="找直接前驱或直接后继来进行顶替" width="240" height="72" loading="lazy" /></a>
+
+          - 若被删除关键字在非终端节点，则用直接前驱或直接后继来替代被删除的关键字<br>（直接前驱：当前关键字左侧指针所指子树中“最右下”的元素）
+    - 删终端后低于下限了
+      - 1\. 兄弟够借
+        - 借右：借后继和后继的后继
+          - 借前
+
+            <a href="/images/408-mind-maps/ds-0073.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0073.svg" alt="借前" width="240" height="82" loading="lazy" /></a>
+
+            - 借后
+
+              <a href="/images/408-mind-maps/ds-0083.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0083.svg" alt="借后" width="240" height="93" loading="lazy" /></a>
+
+        - 借左：借前驱和前驱的前驱
+          - 借前
+
+            <a href="/images/408-mind-maps/ds-0013.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0013.svg" alt="借前" width="240" height="85" loading="lazy" /></a>
+
+            - 借后
+
+              <a href="/images/408-mind-maps/ds-0190.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0190.svg" alt="借后" width="240" height="88" loading="lazy" /></a>
+
+      - 2\. 兄弟不够借：兄弟合并
+        - 合并前
+
+          <a href="/images/408-mind-maps/ds-0028.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0028.svg" alt="合并前" width="240" height="103" loading="lazy" /></a>
+
+          - 合并后
+
+            <a href="/images/408-mind-maps/ds-0044.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0044.svg" alt="合并后" width="240" height="92" loading="lazy" /></a>
+
+            - 此时在进行一次合并
+
+              <a href="/images/408-mind-maps/ds-0213.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0213.svg" alt="此时在进行一次合并" width="240" height="98" loading="lazy" /></a>
+
+- 是二叉查找的一种升级优化，重点是查是否有某个值
+  - 或者把其记录理解为这样
+
+    <a href="/images/408-mind-maps/ds-0067.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0067.svg" alt="或者把其记录理解为这样" width="240" height="112" loading="lazy" /></a>
+
+- 应用：用B树来做文件索引
+  - 配图
+
+    利用 B 树做文件索引，假设磁盘页块大小为 4000 B（实际应取 2 的次幂，此处为方便计算），指示磁盘地址的指针需要 5 B。现有 20000000 个记录组成的文件，每条记录为 200 B，其中关键字占 5 B。
+
+    试问：在这个采用 B 树作索引的文件中，B 树的阶数应为多少？假定文件数据部分未按关键字有序排列，则记录部分需要占用多少磁盘页块？
+
+    - 配图
+
+      <a href="/images/408-mind-maps/ds-0075.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0075.svg" alt="应用：用B树来做文件索引" width="230" height="220" loading="lazy" /></a>
+
+- 概要：B树
+  概要范围：[如何保证m叉查找树效率够高](#focus=%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81m%E5%8F%89%E6%9F%A5%E6%89%BE%E6%A0%91%E6%95%88%E7%8E%87%E5%A4%9F%E9%AB%98)
+
+## B+树
+
+- 是分块查找的一种升级优化，作用是查某个对应关键字的记录信息
+- 配图
+
+  <a href="/images/408-mind-maps/ds-0184.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0184.svg" alt="B+树" width="240" height="108" loading="lazy" /></a>
+
+  - 里面的分支、叶子结点都是包含有多个数据项的一个总结点
+  - B树的指针是在结点数据之间的，B+树的指针就是结点数据的一个部分
+- m阶B+树的性质
+  - 1\. 每个结点最多有m个子树
+  - 2\. 非叶根节点至少有两颗子树，其他每个分支至少有⌈m/2⌉颗子树
+
+    <a href="/images/408-mind-maps/ds-0039.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0039.svg" alt="2. 非叶根节点至少有两颗子树，其他每个分支至少有⌈m/2⌉颗子树" width="240" height="103" loading="lazy" /></a>
+
+    - B树的叶子结点是最后那一层空的结点，树的最低层的结点是终端结点
+    - B+树的叶子结点就是最底层的节点
+  - 3\. B+树有多少个结点就有多少个分支
+  - 4\. 叶子结点包含有全部的关键字，以及【对应着相应记录的指针】。相邻叶子会被互相连接起来
+
+    <a href="/images/408-mind-maps/ds-0104.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0104.svg" alt="4. 叶子结点包含有全部的关键字，以及【对应着相应记录的指针】。相邻叶子会被互相连接起来" width="240" height="48" loading="lazy" /></a>
+
+    - 可以顺序查找，可以树形分块查找
+  - 5\. 分支节点只包含对应分支的【最大值】
+- B+的查找
+  - 多路查找
+    - 一定需要找到最下一层才可以
+      - B树可能在任何一层查找成功，只能在其叶子结点查找失败
+  - 顺序查找
+    - 可以最后一行全部进行二分查找吗？不行
+- B树和B+树的对比
+  - 配图
+
+    |比较项|$m$ 阶 B 树|$m$ 阶 B+ 树|
+    |---|---|---|
+    |类比|二叉查找树的进化：$m$ 叉查找树|分块查找的进化：多级分块查找|
+    |关键字与分叉|$n$ 个关键字对应 $n+1$ 个分叉（子树）|$n$ 个关键字对应 $n$ 个分叉|
+    |结点包含的信息|所有结点都包含记录的信息|只有最下层叶子结点包含记录的信息，可使树更矮|
+    |查找方式|不支持顺序查找；查找成功可能停在任一层，速度“不稳定”|支持顺序查找；查找成功或失败都会到最下一层，速度“稳定”|
+
+    共同点（按原图表述）：除根结点外，最少 $\lceil m/2\rceil$ 个分叉，避免结点太“空”；任一结点的子树一样高，保证平衡。
+
+- B+的增删操作和B树类似
+- 与OS的联系
+  - B+树可以用来进行磁盘块的管理
+    - 磁盘中的磁盘块号就是B+树中的一个结点编号，磁盘块中的数据就是结点记录
+  - 访问：
+    - 计算机去访问根节点的磁盘块，然后逐层往下去进行结点的访问
+      - 每个结点都是存在一个磁盘块中，例如磁盘块的大小为1KB，一个结点指针为1B，一个块中有1024个节点指针，故为1024叉B+树
+- 拓展：公司的数据库真正实现的时候，为什么不用红黑树，而是用B+树？
+  - 索引的数据结构会被存储在磁盘中，每次查询都需要到磁盘中访问，对于红黑树，树的高度可能会非常的高，会进行很多次的磁盘IO，效率会非常低，B+树的高度一般为2-4，也就是说在最坏的条件下，也最多进行2到4次磁盘IO，这在实际中性能时非常不错的
+- 考频：低
+  - 16、17
+
+## 哈希/散列表
+
+- 考频：中
+  - 11、14、18、19、22
+- 哈希表是一种典型的拿空间换时间的数据结构
+- 概念
+  分组说明：是针对【开放定址法】的概念；对应：[聚集（堆积）](#focus=%E8%81%9A%E9%9B%86%EF%BC%88%E5%A0%86%E7%A7%AF%EF%BC%89)
+
+  - 散列函数：
+    - H(key)= Hash(key) = Addr
+  - 同义词
+    - 通过一次哈希函数映射到同一地址上的关键词
+      - H(key1) = H(key2)
+  - 非同义词
+    - 通过一次哈希函数映射到不同地址上的关键词
+      - H(key1) != H(key2)
+  - 冲突
+    - 同义词引起的，两个或多个同义词关键字想要的地址已经被占用
+  - 聚集（堆积）
+    - 经过Hash后找到了地址，但是还需要【探测】才能找到真正的值
+      - 线性探测：
+        - 很大情况会聚集
+      - 再散列、平方、伪随机探测：都可以避免聚集
+- 哈希函数
+  - 直接定址法
+    - H(key) = key 或 H(key) = a \* key + b
+    - 不会出现冲突，但是空位多，浪费空间
+  - 除留余数法
+    - H(key) = key % p
+    - 把p选好，可以减少冲突的概率
+      - 哈希表的冲突率：由哈希函数的好坏决定
+    - 概要：一般p是取一个最接近表长的素数
+      概要范围：[H(key) = key % p](#focus=H(key)%20%3D%20key%20%25%20p)
+
+  - 数字分析法
+    - 根据出现概率分布情况进行分析得出的方法
+  - 平方取中法
+    - 取关键字的平方的中间某几位数作为Hash值
+- 处理冲突
+  - 开放定址法
+    - 递推式：
+      - Hi = (H(key) +di)%m
+    - 增量序列di：
+      - 线性探测(再散列)法
+        - di = 1, 2, 3 .... m-1
+      - 平方探测(再散列)法
+        - di = 0, 1, -1, 4, -4, 9, -9, ..., k^2, -k^2
+        - k一定要 &lt;= m/2 (m为表长)
+        - 表长必须是4k+3的素数
+      - 再/双散列法
+        - Hi = RHash(Hi)
+          - 使用另一个哈希函数来进行hash值的确定
+            - 批注：题目一定会给出另一个Hash函数
+      - 伪随机序列(再散列)法
+        - di = \{一个伪随机序列\}
+          - di是定义好的，所以每次探测的步长是可以知的
+          - 例如：di = \{rand(0, 100), rand(0, 100), rand(0, 100), rand(0, 100)\}
+    - 问题：
+      - 在开放定址法的哈希表中，删除一个元素是把其标记位Tag改为TRUE
+        - 不可直接删除，例如线性探测法a\[3\]，有0, 3, 6，hash结果都为 0，此时如果把a\[0\] = 0删掉，搜a\[1\] = 3的时候，搜到a\[0\]发现没有值，就判断没有
+  - 拉链法
+    分组说明：直接解决了堆积的问题，不会出现堆积；对应：[遇到冲突了就形成链式结构](#focus=%E9%81%87%E5%88%B0%E5%86%B2%E7%AA%81%E4%BA%86%E5%B0%B1%E5%BD%A2%E6%88%90%E9%93%BE%E5%BC%8F%E7%BB%93%E6%9E%84)
+
+    - 遇到冲突了就形成链式结构
+      - 解决的是同义词的冲突问题
+    - 删除就可以直接物理删除了
+- 性能分析
+  - ASL
+    - 成功失败分别计算即可（算法就是模拟插入过程，手算，求和平均）
+  - 装填因子
+    - 公式
+
+      $\alpha = \frac{表中记录数n}{散列表长度m}$
+
+      - 装填因子越大，表示装的越满，冲突的可能更大
+      - 越小表示发生冲突的可能性更小
+  - 会受到冲突影响的是：
+    - ASL
+      - ✅
+    - 装填因子
+      - ❎
+        - n、m和冲突都没有关系，反而是装填因子可以影响冲突的概率
+- 冲突的探讨
+  - 非同义词会不会引起冲突？
+  - 配图
+
+    <a href="/images/408-mind-maps/ds-0021.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0021.svg" alt="冲突的探讨" width="240" height="179" loading="lazy" /></a>
+
+    - 252页
+
+      1. 哈希函数是一个映像，因此哈希函数的设定很灵活；只要使任何关键字值由此所得的哈希函数值都落在表长允许范围之内即可。
+      2. 对不同的关键字可能得到同一哈希地址，即 $key_1\ne key_2$，而 $f(key_1)=f(key_2)$。这种现象称为**冲突（collision）**；具有相同函数值的关键字对该哈希函数来说称为**同义词**。
+
+    - 257页（但是在讲散列探测方法之前）
+
+      假设哈希表的地址集为 $0\sim(n-1)$，冲突是指由关键字得到的哈希地址为 $j$（$0\le j\le n-1$）的位置上已有记录；这里“处理冲突”就是为该关键字的记录找到另一个“空”地址。
+
+## 原图关联关系
+
+- [3. B+树有多少个结点就有多少个分支](#focus=3.%20B%2B%E6%A0%91%E6%9C%89%E5%A4%9A%E5%B0%91%E4%B8%AA%E7%BB%93%E7%82%B9%E5%B0%B1%E6%9C%89%E5%A4%9A%E5%B0%91%E4%B8%AA%E5%88%86%E6%94%AF) → [B树的指针是在结点数据之间的，B+树的指针就是结点数据的一个部分](#focus=B%E6%A0%91%E7%9A%84%E6%8C%87%E9%92%88%E6%98%AF%E5%9C%A8%E7%BB%93%E7%82%B9%E6%95%B0%E6%8D%AE%E4%B9%8B%E9%97%B4%E7%9A%84%EF%BC%8CB%2B%E6%A0%91%E7%9A%84%E6%8C%87%E9%92%88%E5%B0%B1%E6%98%AF%E7%BB%93%E7%82%B9%E6%95%B0%E6%8D%AE%E7%9A%84%E4%B8%80%E4%B8%AA%E9%83%A8%E5%88%86)
+````

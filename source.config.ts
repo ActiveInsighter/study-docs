@@ -31,6 +31,9 @@ export const docs = defineDocs({
       taskRecordId: z.string().regex(/^[a-z0-9]{15}$/u).optional(),
       messageRecordId: z.string().regex(/^[a-z0-9]{15}$/u).optional(),
       documentVersion: z.coerce.number().int().positive().max(999_999_999).optional(),
+      // `mind-map`: the page's mind map fills the docs panel as a canvas,
+      // without title block, table of contents or footer.
+      layout: z.enum(['mind-map']).optional(),
     }),
   },
 });

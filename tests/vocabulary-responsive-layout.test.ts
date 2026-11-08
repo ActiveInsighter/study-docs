@@ -2,15 +2,11 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 
 describe('vocabulary responsive layout', () => {
-  it('uses full mode for vocabulary and 408 mind maps without changing other docs', () => {
+  it('uses full mode for vocabulary pages without changing other docs', () => {
     const page = readFileSync(new URL('../app/docs/[[...slug]]/page.tsx', import.meta.url), 'utf8');
     expect(page).toContain("page.path.startsWith('english/vocabulary/')");
-    expect(page).toContain("page.path.startsWith('408/mind-maps/')");
-    expect(page).toContain('Boolean(page.data.full) || isVocabularyPage || is408MindMapPage');
-    expect(page).toContain('toc={is408MindMapPage ? [] : data.toc}');
-    expect(page).toContain('full={useFullPage}');
-    expect(page).toContain('tableOfContent={is408MindMapPage ? { enabled: false } : undefined}');
-    expect(page).toContain('tableOfContentPopover={is408MindMapPage ? { enabled: false } : undefined}');
+    expect(page).toContain('Boolean(page.data.full) || isVocabularyPage');
+    expect(page).toContain('<DocsPage toc={data.toc} full={useFullPage}>');
     expect(page).toContain("' vocabulary-docs-body'");
   });
 
