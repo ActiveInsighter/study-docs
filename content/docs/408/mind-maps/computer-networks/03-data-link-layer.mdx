@@ -575,7 +575,7 @@ layout: mind-map
     - 异步响应方式：
       - 非平衡，从站未受主站允许也可以传输
   - HDLC帧格式：
-    - <img src="/images/408-mind-maps/cn-0136.png" alt="HDLC帧格式：" width="240" height="85">
+    - <img src="/images/408-mind-maps/cn-0136.svg" alt="HDLC帧格式：" width="300" height="95">
 
       - 控制C：
         - 无编号帧（U)
@@ -652,17 +652,20 @@ layout: mind-map
       - 先将帧存储在高速缓存器中，进行数据正确性检测，发现无误后传输，否则丢弃
       - 延迟大、可靠性高、支持不同速率的端口交换
 - 好题：
-  - <img src="/images/408-mind-maps/cn-0107.png" alt="好题：" width="240" height="110">
+  - 好题：若主机 H2 向主机 H4 发送一个数据帧，主机 H4 向主机 H2 立即发送一个确认帧，则除 H4 外，从物理层上能够收到该确认帧的主机还有（　）
+    - 拓扑：路由器 E1（192.168.3.254）— 交换机 Switch，交换机下挂 H1、H2 和集线器 Hub，集线器下挂 H3、H4
+    - A. 仅 H2　B. 仅 H3　C. 仅 H1、H2　D. 仅 H2、H3
+    - 解：H4 的确认帧先到集线器，集线器向所有端口广播，H3 能收到；到交换机时，交换机已从 H2 发来的数据帧学习到 H2 的端口，只转发给 H2。答案 D
 
     - D
 
 ## VLAN
 
 - 概念：
-  - <img src="/images/408-mind-maps/cn-0084.png" alt="概念：" width="240" height="124">
+  - <img src="/images/408-mind-maps/cn-0084.svg" alt="概念：" width="300" height="129">
 
 - 基于接口的VLAN技术：
-  - <img src="/images/408-mind-maps/cn-0113.png" alt="基于接口的VLAN技术：" width="240" height="98">
+  - <img src="/images/408-mind-maps/cn-0113.svg" alt="基于接口的VLAN技术：" width="300" height="118">
 
 - 基于MAC的VLAN技术：
   - 配图
@@ -690,7 +693,7 @@ layout: mind-map
   - Truck端口
     - 在不同交换机进行数据传输的时候，交换机之间都是使用的Truck端口，所以不会把tag信息给去掉
   - VLAN帧：
-    - <img src="/images/408-mind-maps/cn-0148.png" alt="VLAN帧：" width="240" height="118">
+    - <img src="/images/408-mind-maps/cn-0148.svg" alt="VLAN帧：" width="300" height="129">
 
     - 特点一：
       - VLAN标记的有效VID范围是1~4094
@@ -698,7 +701,7 @@ layout: mind-map
       - IEEE802.1Q帧是交换机处理的，用户主机发送给交换机的帧仍然是普通的以太网帧，由交换机插入了Tag字段后通过Truck端口发给下一个交换机
         - 下一个交换机收到后，把Tag字段去掉后，发给对应VLAN中的主机
 - 练习题：
-  - <img src="/images/408-mind-maps/cn-0064.png" alt="练习题：" width="240" height="95">
+  - <img src="/images/408-mind-maps/cn-0113.svg" alt="练习题：" width="300" height="118">
 
     - Q1: 可以 Q2: DH可以。A和D、A和H不可以，不同VLAN直接的主机想要互通只能通过”路由器 or 三层交换机“才能完成互通
   - 配图

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" width="560" height="240" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="UDP 首部格式：源端口、目的端口、长度、校验和，共 8 字节">
+<title>UDP 首部格式：源端口、目的端口、长度、校验和，共 8 字节</title>
+<rect x="0.75" y="0.75" width="558.5" height="238.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">UDP 首部格式（8 B）</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="40" y="62" font-size="11" fill="#71717a" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="260" y="62" font-size="11" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">15 16</text>
+<text x="480" y="62" font-size="11" fill="#71717a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">31</text>
+<rect x="40" y="70" width="220" height="36" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="52" y="92.2" font-size="12" fill="#18181b">16 位源端口号</text>
+<rect x="260" y="70" width="220" height="36" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="272" y="92.2" font-size="12" fill="#18181b">16 位目的端口号</text>
+<rect x="40" y="106" width="220" height="36" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="52" y="128.2" font-size="12" fill="#18181b">16 位 UDP 长度</text>
+<rect x="260" y="106" width="220" height="36" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="272" y="128.2" font-size="12" fill="#18181b">16 位 UDP 校验和</text>
+<rect x="40" y="142" width="440" height="60" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="260" y="176.6" font-size="13" fill="#1e3a8a" text-anchor="middle">数据（如果有）</text>
+<path d="M486 70q8 0 8 8V98q0 8 8 8q-8 0 -8 8V134q0 8 -8 8" fill="none" stroke="#71717a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="508" y="110.5" font-size="13" fill="#71717a">8 B</text>
+<rect x="170" y="76" width="87.9" height="21.5" rx="10.8" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.2"/>
+<text x="214" y="90.1" font-size="9.5" fill="#14532d" text-anchor="middle" font-weight="500">可以不用，填 0</text>
+<rect x="420" y="76" width="48.5" height="21.5" rx="10.8" fill="#fde7e4" stroke="#d1493a" stroke-width="1.2"/>
+<text x="444.2" y="90.1" font-size="9.5" fill="#7f1d1d" text-anchor="middle" font-weight="500">一定要</text>
+<rect x="168" y="112" width="73.1" height="21.5" rx="10.8" fill="#fde7e4" stroke="#d1493a" stroke-width="1.2"/>
+<text x="204.6" y="126.1" font-size="9.5" fill="#7f1d1d" text-anchor="middle" font-weight="500">首部 + 数据</text>
+<rect x="410" y="112" width="87.9" height="21.5" rx="10.8" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.2"/>
+<text x="454" y="126.1" font-size="9.5" fill="#14532d" text-anchor="middle" font-weight="500">可以不用，填 0</text>
+</svg>
