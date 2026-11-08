@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="数据的逻辑结构与存储（物理）结构">
+<title>数据的逻辑结构与存储（物理）结构</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="858.5" height="468.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">逻辑结构 ↔ 存储结构</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="30" y="84" font-size="14" fill="#18181b" font-weight="700">存储结构（物理）</text>
+<text x="40" y="112" font-size="12.5" fill="#3f3f46">链式存储：结点可以不连续，靠指针相连</text>
+<rect x="60" y="126" width="40" height="28" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="100" y="126" width="40" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="60" y="126" width="80" height="28" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M100 126L100 154" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="80" y="144.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">a0</text>
+<text x="120" y="144.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">●</text>
+<text x="100" y="172" font-size="11" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0x0000</text>
+<path d="M120 140L198 140" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="200" y="126" width="40" height="28" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="240" y="126" width="40" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="200" y="126" width="80" height="28" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M240 126L240 154" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="220" y="144.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">a1</text>
+<text x="260" y="144.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">●</text>
+<text x="240" y="172" font-size="11" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0x0008</text>
+<path d="M260 140L338 140" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="340" y="126" width="40" height="28" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="380" y="126" width="40" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="340" y="126" width="80" height="28" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M380 126L380 154" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="360" y="144.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">a2</text>
+<text x="400" y="144.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">∧</text>
+<text x="380" y="172" font-size="11" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0x1234</text>
+<text x="60" y="202" font-size="11.5" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">ListNode a;  &amp;a = 0x0000</text>
+<text x="60" y="218.7" font-size="11.5" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">&amp;(a-&gt;next) = 0x0008</text>
+<text x="60" y="235.3" font-size="11.5" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">&amp;(a-&gt;next-&gt;next) = 0x1234</text>
+<text x="440" y="112" font-size="12.5" fill="#3f3f46">顺序存储：连续存放，可随机存取</text>
+<rect x="460" y="126" width="52" height="28" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="512" y="126" width="52" height="28" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="564" y="126" width="52" height="28" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="616" y="126" width="52" height="28" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="668" y="126" width="52" height="28" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="460" y="126" width="260" height="28" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M512 126L512 154" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M564 126L564 154" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M616 126L616 154" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M668 126L668 154" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="486" y="144.2" font-size="12" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">a[0]</text>
+<text x="538" y="144.2" font-size="12" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">a[1]</text>
+<text x="590" y="144.2" font-size="12" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">a[2]</text>
+<text x="642" y="144.2" font-size="12" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">a[3]</text>
+<text x="694" y="144.2" font-size="12" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">a[4]</text>
+<text x="486" y="171" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0x00</text>
+<text x="538" y="171" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0x04</text>
+<text x="590" y="171" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0x08</text>
+<text x="642" y="171" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0x0C</text>
+<text x="694" y="171" font-size="12" fill="#71717a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0x10</text>
+<text x="460" y="202" font-size="11.5" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">int a[5];  &amp;a[0] = 0x0000</text>
+<text x="460" y="218.7" font-size="11.5" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">&amp;a[i] = &amp;a[0] + i × sizeof(int)</text>
+<path d="M30 262L830 262" fill="none" stroke="#e4e4e7" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="30" y="294" font-size="14" fill="#18181b" font-weight="700">逻辑结构</text>
+<text x="110" y="324" font-size="13" fill="#3f3f46" text-anchor="middle" font-weight="600">线性结构</text>
+<text x="320" y="324" font-size="13" fill="#3f3f46" text-anchor="middle" font-weight="600">树形结构</text>
+<text x="520" y="324" font-size="13" fill="#3f3f46" text-anchor="middle" font-weight="600">图状结构</text>
+<text x="720" y="324" font-size="13" fill="#3f3f46" text-anchor="middle" font-weight="600">集合</text>
+<path d="M71 380L99 380" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M121 380L149 380" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M171 380L199 380" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="60" cy="380" r="11" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<circle cx="110" cy="380" r="11" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<circle cx="160" cy="380" r="11" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<circle cx="210" cy="380" r="11" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<path d="M300.1 405.2L290.9 426.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M307.9 405.2L317.1 426.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M324.1 364.4L309.4 387.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M334.9 364.4L349.6 387.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="287" cy="436" r="10" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<circle cx="321" cy="436" r="10" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<circle cx="304" cy="396" r="10" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<circle cx="355" cy="396" r="10" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<circle cx="329.5" cy="356" r="10" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<path d="M490.9 358.6L549.1 351.4" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M486.1 369.2L513.9 410.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M554.5 359.6L525.5 410.4" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M566.1 359.2L593.9 400.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M530.9 418.6L589.1 411.4" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="480" cy="360" r="11" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<circle cx="560" cy="350" r="11" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<circle cx="520" cy="420" r="11" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<circle cx="600" cy="410" r="11" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<ellipse cx="720" cy="390" rx="56" ry="38" fill="#ffffff" stroke="#52525b" stroke-width="1.5" stroke-dasharray="4 3"/>
+<circle cx="700" cy="375" r="8" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<circle cx="735" cy="372" r="8" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<circle cx="710" cy="405" r="8" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<circle cx="745" cy="402" r="8" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="430" y="456" font-size="12.5" fill="#71717a" text-anchor="middle">同一种逻辑结构既可以顺序存储，也可以链式存储（如二叉树可用数组或二叉链表）</text>
+</svg>

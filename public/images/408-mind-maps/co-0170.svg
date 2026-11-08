@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 400" width="460" height="400" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="不共享 Cache 的双核 CPU 结构">
+<title>不共享 Cache 的双核 CPU 结构</title>
+<rect x="0.75" y="0.75" width="458.5" height="398.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">不共享 Cache 的双核 CPU</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="30" y="56" width="400" height="260" rx="20" fill="#d4d4d8" stroke="#71717a" stroke-width="1.2"/>
+<path d="M230 66L230 306" fill="none" stroke="#52525b" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<rect x="70" y="70" width="120" height="30" rx="4" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<text x="130" y="89.5" font-size="13" fill="#fafafa" text-anchor="middle" font-weight="600">CPU 核1</text>
+<rect x="60" y="112" width="140" height="140" rx="14" fill="#52525b" stroke="#3f3f46" stroke-width="1.2"/>
+<rect x="75" y="124" width="110" height="32" rx="4" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="130" y="144.2" font-size="12" fill="#18181b" text-anchor="middle">CPU 状态</text>
+<rect x="75" y="164" width="110" height="32" rx="4" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="130" y="184.2" font-size="12" fill="#18181b" text-anchor="middle">中断逻辑</text>
+<rect x="75" y="204" width="110" height="32" rx="4" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="130" y="224.2" font-size="12" fill="#18181b" text-anchor="middle">执行单元</text>
+<rect x="75" y="266" width="110" height="34" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="130" y="287.6" font-size="13" fill="#1e3a8a" text-anchor="middle">Cache</text>
+<path d="M130 302L130 334" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="270" y="70" width="120" height="30" rx="4" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<text x="330" y="89.5" font-size="13" fill="#fafafa" text-anchor="middle" font-weight="600">CPU 核2</text>
+<rect x="260" y="112" width="140" height="140" rx="14" fill="#52525b" stroke="#3f3f46" stroke-width="1.2"/>
+<rect x="275" y="124" width="110" height="32" rx="4" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="330" y="144.2" font-size="12" fill="#18181b" text-anchor="middle">CPU 状态</text>
+<rect x="275" y="164" width="110" height="32" rx="4" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="330" y="184.2" font-size="12" fill="#18181b" text-anchor="middle">中断逻辑</text>
+<rect x="275" y="204" width="110" height="32" rx="4" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="330" y="224.2" font-size="12" fill="#18181b" text-anchor="middle">执行单元</text>
+<rect x="275" y="266" width="110" height="34" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="330" y="287.6" font-size="13" fill="#1e3a8a" text-anchor="middle">Cache</text>
+<path d="M330 302L330 334" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="30" y="336" width="400" height="30" rx="4" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="230" y="355.6" font-size="13" fill="#18181b" text-anchor="middle">内存</text>
+<text x="230" y="388" font-size="12" fill="#71717a" text-anchor="middle">每个核有自己独立的 Cache</text>
+</svg>

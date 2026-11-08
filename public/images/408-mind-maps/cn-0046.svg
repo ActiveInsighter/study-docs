@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 300" width="820" height="300" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="一个典型的数据通信模型：源系统、传输系统、目的系统">
+<title>一个典型的数据通信模型：源系统、传输系统、目的系统</title>
+<defs><marker id="a3b6fd4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3b6fd4"/></marker></defs>
+<rect x="0.75" y="0.75" width="818.5" height="298.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">数据通信系统的模型</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="30" y="60" font-size="11.5" fill="#3f3f46">发送：你好你好你好</text>
+<text x="790" y="60" font-size="11.5" fill="#3f3f46" text-anchor="end">收到：你好你好你好</text>
+<rect x="70" y="110" width="90" height="30" rx="4" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="115" y="129.2" font-size="12" fill="#18181b" text-anchor="middle">信源</text>
+<text x="60" y="156" font-size="10.5" fill="#3f3f46" text-anchor="middle">输入信息</text>
+<rect x="220" y="110" width="90" height="30" rx="4" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="265" y="129.2" font-size="12" fill="#18181b" text-anchor="middle">发送器</text>
+<text x="210" y="156" font-size="10.5" fill="#3f3f46" text-anchor="middle">输入数据</text>
+<rect x="380" y="110" width="90" height="30" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="425" y="129.2" font-size="12" fill="#78350f" text-anchor="middle">传输系统</text>
+<text x="370" y="156" font-size="10.5" fill="#3f3f46" text-anchor="middle">发送的信号</text>
+<rect x="540" y="110" width="90" height="30" rx="4" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="585" y="129.2" font-size="12" fill="#14532d" text-anchor="middle">接收器</text>
+<text x="530" y="156" font-size="10.5" fill="#3f3f46" text-anchor="middle">接收的信号</text>
+<rect x="690" y="110" width="90" height="30" rx="4" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="735" y="129.2" font-size="12" fill="#14532d" text-anchor="middle">信宿</text>
+<text x="680" y="156" font-size="10.5" fill="#3f3f46" text-anchor="middle">输出数据</text>
+<path d="M20 125L68 125" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<path d="M162 125L218 125" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<path d="M312 125L378 125" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<path d="M472 125L538 125" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<path d="M632 125L688 125" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<path d="M782 125L806 125" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="790" y="156" font-size="10.5" fill="#3f3f46" text-anchor="middle">输出信息</text>
+<text x="240" y="92" font-size="10.5" fill="#3f3f46" text-anchor="middle">数字信号 → 调制解调器 → 模拟信号</text>
+<text x="580" y="92" font-size="10.5" fill="#3f3f46" text-anchor="middle">模拟信号 → 调制解调器 → 数字信号</text>
+<path d="M330 80L330 260" fill="none" stroke="#a1a1aa" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+<path d="M500 80L500 260" fill="none" stroke="#a1a1aa" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+<rect x="110" y="210" width="110" height="44" rx="4" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="165" y="236.9" font-size="14" fill="#18181b" text-anchor="middle">源系统</text>
+<rect x="360" y="210" width="110" height="44" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="415" y="236.9" font-size="14" fill="#78350f" text-anchor="middle">传输系统</text>
+<rect x="600" y="210" width="110" height="44" rx="4" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="655" y="236.9" font-size="14" fill="#14532d" text-anchor="middle">目的系统</text>
+<text x="415" y="92" font-size="10.5" fill="#c98a12" text-anchor="middle">广域网（公用电话网）</text>
+</svg>

@@ -1,0 +1,12 @@
+LABEL = '主存（存储芯片）的基本组成：存储体、MAR、MDR、译码驱动、读写电路、控制电路'
+F = Fig(720, 300, '主存的基本组成')
+F.rect(150, 60, 420, 180, '#f4f4f5', '#a1a1aa', 1.2, 10)
+F.box(170, 120, 60, 60, 'MAR', 'violet', 13, 5, True); F.box(250, 100, 50, 100, '译\n码\n器', 'red', 12, 5)
+F.box(320, 80, 160, 140, '存储体\n（存储矩阵）', 'red', 14, 6); F.box(490, 100, 60, 100, '读\n写\n电\n路', 'red', 12, 5)
+F.box(250, 210, 230, 24, '控制电路', 'amber', 12, 5)
+F.line(232, 150, 248, 150, INK2, 1.2, arrow='end'); F.line(302, 150, 318, 150, INK2, 1.2, arrow='end'); F.line(482, 150, 488, 150, INK2, 1.2, arrow='end')
+F.box(600, 120, 80, 60, 'MDR', 'green', 13, 5, True); F.line(552, 150, 598, 150, INK2, 1.3, arrow='both')
+F.line(60, 150, 168, 150, INK2, 1.8, arrow='end'); F.text(54, 150, '地址\n总线', 12, 'end', INK2, valign='middle')
+F.line(640, 182, 640, 270, INK2, 1.8, arrow='both'); F.text(650, 262, '数据总线', 12, 'start', INK2)
+F.line(60, 222, 248, 222, INK2, 1.2, arrow='end'); F.text(60, 212, '片选 / 读写', 12, 'start', INK2)
+F.text(360, 280, 'MAR、MDR 现在通常集成在 CPU 中；主存只含存储体、译码驱动、读写电路和控制电路', 12, color=MUTED)

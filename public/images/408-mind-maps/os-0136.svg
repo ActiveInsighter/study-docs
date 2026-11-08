@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="显式链接分配：文件分配表 FAT 集中存放各盘块的下一块号">
+<title>显式链接分配：文件分配表 FAT 集中存放各盘块的下一块号</title>
+<defs><marker id="a23877c" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#23877c"/></marker><marker id="a7856c9" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#7856c9"/></marker></defs>
+<rect x="0.75" y="0.75" width="638.5" height="398.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">显式链接：文件分配表 FAT</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="30" y="198" width="70" height="28" rx="0" fill="#e0f3f1" stroke="none" stroke-width="0"/>
+<rect x="100" y="198" width="40" height="28" rx="0" fill="#e0f3f1" stroke="none" stroke-width="0"/>
+<rect x="140" y="198" width="80" height="28" rx="0" fill="#e0f3f1" stroke="none" stroke-width="0"/>
+<rect x="30" y="226" width="190" height="28" rx="0" fill="#fafafa" stroke="none" stroke-width="0"/>
+<rect x="30" y="226" width="70" height="28" rx="0" fill="#efe9fb" stroke="none" stroke-width="0"/>
+<rect x="100" y="226" width="40" height="28" rx="0" fill="#efe9fb" stroke="none" stroke-width="0"/>
+<rect x="140" y="226" width="80" height="28" rx="0" fill="#efe9fb" stroke="none" stroke-width="0"/>
+<path d="M30 198V178Q30 170 38 170H212Q220 170 220 178V198Z" fill="#f4f4f5"/>
+<path d="M30 198L220 198" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30 226L220 226" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100 170L100 254" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M140 170L140 254" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="30" y="170" width="190" height="84" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="65" y="188.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">文件名</text>
+<text x="120" y="188.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">…</text>
+<text x="180" y="188.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">起始块号</text>
+<text x="65" y="216.2" font-size="12" fill="#134e4a" text-anchor="middle">aaa</text>
+<text x="120" y="216.2" font-size="12" fill="#134e4a" text-anchor="middle">…</text>
+<text x="180" y="216.2" font-size="12" fill="#134e4a" text-anchor="middle">2</text>
+<text x="65" y="244.2" font-size="12" fill="#3b0764" text-anchor="middle">bbb</text>
+<text x="120" y="244.2" font-size="12" fill="#3b0764" text-anchor="middle">…</text>
+<text x="180" y="244.2" font-size="12" fill="#3b0764" text-anchor="middle">7</text>
+<text x="125" y="274" font-size="13" fill="#3f3f46" text-anchor="middle">文件目录</text>
+<text x="400" y="60" font-size="12" fill="#3f3f46" text-anchor="middle">盘块号</text>
+<text x="470" y="60" font-size="12" fill="#3f3f46" text-anchor="middle">下一块</text>
+<rect x="370" y="68" width="60" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="400" y="84" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<rect x="430" y="68" width="70" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="465" y="84" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">−2</text>
+<rect x="370" y="92" width="60" height="24" rx="0" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="400" y="108" font-size="11.5" fill="#3b0764" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="430" y="92" width="70" height="24" rx="0" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="465" y="108" font-size="11.5" fill="#3b0764" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">−1</text>
+<rect x="370" y="116" width="60" height="24" rx="0" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="400" y="132" font-size="11.5" fill="#134e4a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<rect x="430" y="116" width="70" height="24" rx="0" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="465" y="132" font-size="11.5" fill="#134e4a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8</text>
+<rect x="370" y="140" width="60" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="400" y="156" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<rect x="430" y="140" width="70" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="465" y="156" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">−2</text>
+<rect x="370" y="164" width="60" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="400" y="180" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
+<rect x="430" y="164" width="70" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="465" y="180" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">−2</text>
+<rect x="370" y="188" width="60" height="24" rx="0" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="400" y="204" font-size="11.5" fill="#134e4a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">5</text>
+<rect x="430" y="188" width="70" height="24" rx="0" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="465" y="204" font-size="11.5" fill="#134e4a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">−1</text>
+<rect x="370" y="212" width="60" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="400" y="228" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6</text>
+<rect x="430" y="212" width="70" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="465" y="228" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">−2</text>
+<rect x="370" y="236" width="60" height="24" rx="0" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="400" y="252" font-size="11.5" fill="#3b0764" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">7</text>
+<rect x="430" y="236" width="70" height="24" rx="0" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="465" y="252" font-size="11.5" fill="#3b0764" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="370" y="260" width="60" height="24" rx="0" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="400" y="276" font-size="11.5" fill="#134e4a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8</text>
+<rect x="430" y="260" width="70" height="24" rx="0" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="465" y="276" font-size="11.5" fill="#134e4a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">5</text>
+<rect x="370" y="284" width="60" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="400" y="300" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">9</text>
+<rect x="430" y="284" width="70" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="465" y="300" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">−2</text>
+<rect x="370" y="308" width="60" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="400" y="324" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
+<rect x="430" y="308" width="70" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="465" y="324" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
+<rect x="370" y="332" width="60" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="400" y="348" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">98</text>
+<rect x="430" y="332" width="70" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="465" y="348" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">−2</text>
+<rect x="370" y="356" width="60" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="400" y="372" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">99</text>
+<rect x="430" y="356" width="70" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="465" y="372" font-size="11.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">−2</text>
+<path d="M222 212L368 128" fill="none" stroke="#23877c" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a23877c)"/>
+<path d="M222 240L368 248" fill="none" stroke="#7856c9" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a7856c9)"/>
+<path d="M502 128Q552.4 200 502 272" fill="none" stroke="#23877c" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a23877c)"/>
+<path d="M502 272Q476.8 236 502 200" fill="none" stroke="#23877c" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a23877c)"/>
+<path d="M502 248Q451.6 176 502 104" fill="none" stroke="#7856c9" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a7856c9)"/>
+<text x="560" y="380" font-size="12" fill="#3f3f46" text-anchor="middle">FAT（文件分配表）</text>
+<text x="170" y="320" font-size="11.5" fill="#71717a" text-anchor="middle"><tspan x="170" dy="0">−1：文件结束</tspan><tspan x="170" dy="17.2">−2：空闲盘块</tspan></text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 300" width="620" height="300" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="完全二叉树的编号规律：下标从 1 或从 0 开始">
+<title>完全二叉树的编号规律：下标从 1 或从 0 开始</title>
+<defs><marker id="a3b6fd4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3b6fd4"/></marker></defs>
+<rect x="0.75" y="0.75" width="618.5" height="298.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">完全二叉树的编号规律</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M147.8 123.8L102.2 168.2" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M172.2 123.8L217.8 168.2" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M82.2 195.1L62.8 232.9" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M97.8 195.1L117.2 232.9" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M222.2 195.1L202.8 232.9" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M237.8 195.1L257.2 232.9" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="160" cy="112" r="17" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="160" y="116.9" font-size="14" fill="#7f1d1d" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<circle cx="90" cy="180" r="17" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="90" y="184.9" font-size="14" fill="#78350f" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<circle cx="230" cy="180" r="17" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="230" y="184.9" font-size="14" fill="#78350f" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<circle cx="55" cy="248" r="17" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="55" y="252.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
+<circle cx="125" cy="248" r="17" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="125" y="252.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">5</text>
+<circle cx="195" cy="248" r="17" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="195" y="252.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6</text>
+<circle cx="265" cy="248" r="17" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="265" y="252.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">7</text>
+<path d="M140 104Q130.9 150.6 84 158" fill="none" stroke="#3b6fd4" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<path d="M180 104Q189.1 150.6 236 158" fill="none" stroke="#3b6fd4" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="60" y="120" font-size="12.5" fill="#3b6fd4" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">i × 2</text>
+<text x="264" y="120" font-size="12.5" fill="#3b6fd4" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">i × 2 + 1</text>
+<text x="160" y="78" font-size="13" fill="#3f3f46" text-anchor="middle" font-weight="600">下标从 1 开始</text>
+<path d="M447.8 123.8L402.2 168.2" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M472.2 123.8L517.8 168.2" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M382.2 195.1L362.8 232.9" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M397.8 195.1L417.2 232.9" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M522.2 195.1L502.8 232.9" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M537.8 195.1L557.2 232.9" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="460" cy="112" r="17" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="460" y="116.9" font-size="14" fill="#7f1d1d" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<circle cx="390" cy="180" r="17" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="390" y="184.9" font-size="14" fill="#78350f" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<circle cx="530" cy="180" r="17" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="530" y="184.9" font-size="14" fill="#78350f" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<circle cx="355" cy="248" r="17" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="355" y="252.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<circle cx="425" cy="248" r="17" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="425" y="252.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
+<circle cx="495" cy="248" r="17" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="495" y="252.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">5</text>
+<circle cx="565" cy="248" r="17" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="565" y="252.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6</text>
+<path d="M440 104Q430.9 150.6 384 158" fill="none" stroke="#3b6fd4" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<path d="M480 104Q489.1 150.6 536 158" fill="none" stroke="#3b6fd4" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="360" y="120" font-size="12.5" fill="#3b6fd4" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">(i+1) × 2 − 1</text>
+<text x="564" y="120" font-size="12.5" fill="#3b6fd4" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">(i+1) × 2</text>
+<text x="460" y="78" font-size="13" fill="#3f3f46" text-anchor="middle" font-weight="600">下标从 0 开始</text>
+<text x="310" y="290" font-size="12.5" fill="#71717a" text-anchor="middle">双亲：从 1 开始为 ⌊i/2⌋；从 0 开始为 ⌊(i−1)/2⌋</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="带标志加法器的逻辑电路：OF、SF、ZF、CF 的产生">
+<title>带标志加法器的逻辑电路：OF、SF、ZF、CF 的产生</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker><marker id="a7856c9" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#7856c9"/></marker><marker id="ad1493a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#d1493a"/></marker></defs>
+<rect x="0.75" y="0.75" width="798.5" height="338.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">带标志加法器的逻辑电路</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="150" y="220" width="60" height="40" rx="6" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="180" y="244.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-weight="600">FA</text>
+<path d="M168 290L168 262" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M192 290L192 262" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="180" y="306" font-size="12" fill="#18181b" text-anchor="middle">A<tspan baseline-shift="-22%" font-size="72%">n−1</tspan> B<tspan baseline-shift="-22%" font-size="72%">n−1</tspan></text>
+<rect x="450" y="220" width="60" height="40" rx="6" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="480" y="244.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-weight="600">FA</text>
+<path d="M468 290L468 262" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M492 290L492 262" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="480" y="306" font-size="12" fill="#18181b" text-anchor="middle">A<tspan baseline-shift="-22%" font-size="72%">1</tspan> B<tspan baseline-shift="-22%" font-size="72%">1</tspan></text>
+<rect x="600" y="220" width="60" height="40" rx="6" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="630" y="244.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-weight="600">FA</text>
+<path d="M618 290L618 262" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M642 290L642 262" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="630" y="306" font-size="12" fill="#18181b" text-anchor="middle">A<tspan baseline-shift="-22%" font-size="72%">0</tspan> B<tspan baseline-shift="-22%" font-size="72%">0</tspan></text>
+<text x="380" y="240" font-size="16" fill="#71717a" text-anchor="middle">…</text>
+<path d="M448 240L214 240" fill="none" stroke="#7856c9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a7856c9)"/>
+<path d="M598 240L512 240" fill="none" stroke="#7856c9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a7856c9)"/>
+<text x="555" y="232" font-size="11" fill="#7856c9" text-anchor="middle">C<tspan baseline-shift="-22%" font-size="72%">1</tspan></text>
+<path d="M740 240L662 240" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="746" y="244.2" font-size="12" fill="#18181b">C<tspan baseline-shift="-22%" font-size="72%">in</tspan></text>
+<path d="M148 240L70 240" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="64" y="244.2" font-size="12" fill="#18181b" text-anchor="end">C<tspan baseline-shift="-22%" font-size="72%">out</tspan></text>
+<path d="M180 218L180 60" fill="none" stroke="#d1493a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<text x="186" y="58" font-size="12" fill="#d1493a">F<tspan baseline-shift="-22%" font-size="72%">n−1</tspan></text>
+<path d="M480 218L480 60" fill="none" stroke="#d1493a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<text x="486" y="58" font-size="12" fill="#d1493a">F<tspan baseline-shift="-22%" font-size="72%">1</tspan></text>
+<path d="M630 218L630 60" fill="none" stroke="#d1493a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<text x="636" y="58" font-size="12" fill="#d1493a">F<tspan baseline-shift="-22%" font-size="72%">0</tspan></text>
+<rect x="80" y="104" width="34" height="42" rx="3" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="97" y="129.4" font-size="12.5" fill="#134e4a" text-anchor="middle" font-weight="600">=1</text>
+<path d="M114 125L130 125" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="136" y="129.6" font-size="13" fill="#18181b" font-weight="700">OF</text>
+<path d="M165 218L165 200Q165 200 165 200L60 200Q60 200 60 200L60 132Q60 132 60 132L80 132" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="158" y="208" font-size="11" fill="#3f3f46" text-anchor="end">C<tspan baseline-shift="-22%" font-size="72%">n</tspan></text>
+<text x="200" y="92" font-size="12.5" fill="#3f3f46">SF = F<tspan baseline-shift="-22%" font-size="72%">n−1</tspan></text>
+<rect x="330" y="80" width="34" height="56" rx="3" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="347" y="112.4" font-size="12.5" fill="#3b0764" text-anchor="middle" font-weight="600">≥1</text>
+<circle cx="367.5" cy="108" r="3.5" fill="#ffffff" stroke="#52525b" stroke-width="1.3"/>
+<path d="M371 108L387 108" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="393" y="112.5" font-size="13" fill="#18181b" font-weight="700">ZF</text>
+<path d="M180 160L300 160Q300 160 300 160L300 94Q300 94 300 94L330 94" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="180" cy="160" r="2.6" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<path d="M480 170L310 170Q310 170 310 170L310 108Q310 108 310 108L330 108" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="480" cy="170" r="2.6" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<path d="M630 180L318 180Q318 180 318 180L318 122Q318 122 318 122L330 122" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="630" cy="180" r="2.6" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<rect x="690" y="90" width="34" height="42" rx="3" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="707" y="115.4" font-size="12.5" fill="#78350f" text-anchor="middle" font-weight="600">=1</text>
+<path d="M724 111L740 111" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="728" y="89" font-size="13" fill="#18181b" font-weight="700">CF</text>
+<path d="M70 240L70 200Q70 200 70 200L70 196Q70 196 70 196L670 196Q670 196 670 196L670 104Q670 104 670 104L690 104" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="70" cy="240" r="2.6" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<path d="M740 240L740 140Q740 140 740 140L680 140Q680 140 680 140L680 118Q680 118 680 118L690 118" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="740" cy="240" r="2.6" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<text x="400" y="330" font-size="12.5" fill="#3f3f46" text-anchor="middle">OF = C<tspan baseline-shift="-22%" font-size="72%">n</tspan> ⊕ C<tspan baseline-shift="-22%" font-size="72%">n−1</tspan>　SF = F<tspan baseline-shift="-22%" font-size="72%">n−1</tspan>　ZF = ¬(F<tspan baseline-shift="-22%" font-size="72%">n−1</tspan> + … + F<tspan baseline-shift="-22%" font-size="72%">0</tspan>)　CF = C<tspan baseline-shift="-22%" font-size="72%">out</tspan> ⊕ C<tspan baseline-shift="-22%" font-size="72%">in</tspan></text>
+</svg>

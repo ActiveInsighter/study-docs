@@ -283,7 +283,40 @@ async function mindMap(page, base) {
   const nodes = await page.evaluate(() => document.querySelectorAll('svg.mind-map-surface [data-node-id]').length);
   const buttons = await page.evaluate(() => document.querySelectorAll('.markmap-toolbar button').length);
   if (nodes < 10 || buttons < 4) throw new Error(`Mind map rendered ${nodes} node groups and ${buttons} toolbar buttons.`);
-  return `nodes=${nodes} buttons=${buttons}`;
+
+  // Reveal a labelled figure, then check both the SVG resource and the real
+  // click-to-preview path (the map uses SVG <image>, the dialog uses <img>).
+  const focus = encodeURIComponent('线程三状态模型');
+  await page.evaluate((hash) => { location.hash = hash; }, '#focus=' + focus);
+  const selector = 'svg.mind-map-surface image[href="/images/408-mind-maps/os-0046.svg"]';
+  await page.waitForSelector(selector, { visible: true, timeout: 60000 });
+  const resource = await page.evaluate(async () => {
+    const response = await fetch('/images/408-mind-maps/os-0046.svg');
+    const body = await response.text();
+    const svg = new DOMParser().parseFromString(body, 'image/svg+xml');
+    return {
+      status: response.status,
+      type: response.headers.get('content-type') ?? '',
+      root: svg.documentElement.localName,
+      errors: svg.querySelectorAll('parsererror').length,
+      text: svg.querySelectorAll('text').length,
+    };
+  });
+  if (resource.status !== 200 || !resource.type.includes('image/svg+xml') || resource.root !== 'svg' || resource.errors || !resource.text) {
+    throw new Error('Redrawn SVG did not load correctly: ' + JSON.stringify(resource));
+  }
+  // Wait for the focus animation before calculating the figure's click point.
+  await page.waitForFunction((target) => {
+    const rect = document.querySelector(target)?.getBoundingClientRect();
+    return rect && rect.width > 0 && rect.height > 0 && rect.left >= 0 && rect.top >= 0 && rect.right <= innerWidth && rect.bottom <= innerHeight;
+  }, { timeout: 60000 }, selector);
+  await page.click(selector);
+  await page.waitForFunction(() => {
+    const image = document.querySelector('dialog[open] .mind-map-lightbox-image');
+    return image?.getAttribute('src') === '/images/408-mind-maps/os-0046.svg' && image.complete && image.naturalWidth > 0;
+  }, { timeout: 60000 });
+  await page.click('dialog[open] button[aria-label="关闭"]');
+  return `nodes=${nodes} buttons=${buttons} SVG figure and preview loaded`;
 }
 
 const SCENARIOS = [

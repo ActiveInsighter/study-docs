@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" width="680" height="330" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="硬链接：多个目录项指向同一个 inode">
+<title>硬链接：多个目录项指向同一个 inode</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="678.5" height="328.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">硬链接：文件指向同一个 inode</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="140" y="56" font-size="11.5" fill="#3f3f46" text-anchor="middle">/home/xiaolin</text>
+<rect x="60" y="64" width="160" height="22" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="60" y="86" width="160" height="22" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="60" y="108" width="80" height="22" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="100" y="122.7" font-size="10.5" fill="#14532d" text-anchor="middle">file</text>
+<rect x="140" y="108" width="80" height="22" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="180" y="122.7" font-size="10.5" fill="#1e3a8a" text-anchor="middle">inode 100</text>
+<rect x="60" y="130" width="160" height="22" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="340" y="56" font-size="11.5" fill="#3f3f46" text-anchor="middle">/home/jay</text>
+<rect x="260" y="64" width="160" height="22" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="260" y="86" width="160" height="22" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="260" y="108" width="80" height="22" rx="0" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="300" y="122.7" font-size="10.5" fill="#3b0764" text-anchor="middle">hardlink1</text>
+<rect x="340" y="108" width="80" height="22" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="380" y="122.7" font-size="10.5" fill="#1e3a8a" text-anchor="middle">inode 100</text>
+<rect x="260" y="130" width="160" height="22" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="540" y="56" font-size="11.5" fill="#3f3f46" text-anchor="middle">/tmp</text>
+<rect x="460" y="64" width="160" height="22" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="460" y="86" width="160" height="22" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="460" y="108" width="80" height="22" rx="0" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="500" y="122.7" font-size="10.5" fill="#3b0764" text-anchor="middle">hardlink2</text>
+<rect x="540" y="108" width="80" height="22" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="580" y="122.7" font-size="10.5" fill="#1e3a8a" text-anchor="middle">inode 100</text>
+<rect x="460" y="130" width="160" height="22" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="54" y="120" font-size="11" fill="#3f3f46" text-anchor="end">目录项</text>
+<rect x="270" y="200" width="110" height="32" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="325" y="220.2" font-size="12" fill="#1e3a8a" text-anchor="middle">inode 100</text>
+<path d="M220 119L226 119Q232 119 232 125L232 210Q232 216 238 216L268 216" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M420 119L425 119Q430 119 430 124L430 170Q430 176 424 176L331 176Q325 176 325 182L325 198" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="380" y="170" font-size="11" fill="#3f3f46" text-anchor="middle">硬链接</text>
+<path d="M620 119L634 119Q640 119 640 125L640 210Q640 216 634 216L382 216" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="520" y="208" font-size="11" fill="#3f3f46" text-anchor="middle">硬链接</text>
+<rect x="180" y="280" width="70" height="28" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="215" y="297.9" font-size="11" fill="#78350f" text-anchor="middle">数据块</text>
+<path d="M325 234L215 278" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="280" y="280" width="70" height="28" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="315" y="297.9" font-size="11" fill="#78350f" text-anchor="middle">数据块</text>
+<path d="M325 234L315 278" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="380" y="280" width="70" height="28" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="415" y="297.9" font-size="11" fill="#78350f" text-anchor="middle">数据块</text>
+<path d="M325 234L415 278" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+</svg>

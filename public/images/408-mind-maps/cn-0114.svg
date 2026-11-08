@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 280" width="620" height="280" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="异步传输：以字符为单位，每个字符加起始位和终止位">
+<title>异步传输：以字符为单位，每个字符加起始位和终止位</title>
+<defs><marker id="a3b6fd4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3b6fd4"/></marker></defs>
+<rect x="0.75" y="0.75" width="618.5" height="278.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">异步传输</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M40 150L580 150" fill="none" stroke="#3b6fd4" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="588" y="154.2" font-size="12" fill="#18181b">t</text>
+<rect x="70" y="90" width="40" height="60" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="90" y="80" font-size="11.5" fill="#3f3f46" text-anchor="middle">字节 5</text>
+<rect x="170" y="90" width="40" height="60" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="190" y="80" font-size="11.5" fill="#3f3f46" text-anchor="middle">字节 4</text>
+<rect x="270" y="90" width="40" height="60" rx="0" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<text x="290" y="80" font-size="11.5" fill="#3f3f46" text-anchor="middle">字节 3</text>
+<rect x="370" y="90" width="40" height="60" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="390" y="80" font-size="11.5" fill="#3f3f46" text-anchor="middle">字节 2</text>
+<rect x="470" y="90" width="40" height="60" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="490" y="80" font-size="11.5" fill="#3f3f46" text-anchor="middle">字节 1</text>
+<rect x="130" y="190" width="34" height="30" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="164" y="190" width="34" height="30" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="198" y="190" width="34" height="30" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="232" y="190" width="34" height="30" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="266" y="190" width="34" height="30" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="300" y="190" width="34" height="30" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="334" y="190" width="34" height="30" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="368" y="190" width="34" height="30" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="402" y="190" width="34" height="30" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="436" y="190" width="34" height="30" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="130" y="190" width="340" height="30" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M164 190L164 220" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M198 190L198 220" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M232 190L232 220" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M266 190L266 220" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M300 190L300 220" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M334 190L334 220" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M368 190L368 220" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M402 190L402 220" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M436 190L436 220" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="147" y="209.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="181" y="209.2" font-size="12" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">b7</text>
+<text x="215" y="209.2" font-size="12" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">b6</text>
+<text x="249" y="209.2" font-size="12" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">b5</text>
+<text x="283" y="209.2" font-size="12" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">b4</text>
+<text x="317" y="209.2" font-size="12" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">b3</text>
+<text x="351" y="209.2" font-size="12" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">b2</text>
+<text x="385" y="209.2" font-size="12" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">b1</text>
+<text x="419" y="209.2" font-size="12" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">b0</text>
+<text x="453" y="209.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="147" y="240" font-size="11.5" fill="#3f3f46" text-anchor="middle">终止位</text>
+<text x="453" y="240" font-size="11.5" fill="#3f3f46" text-anchor="middle">起始位</text>
+<text x="310" y="268" font-size="11" fill="#71717a" text-anchor="middle">发送方可在任何时刻发送；收方不知道它们何时到达，靠起止位识别</text>
+</svg>

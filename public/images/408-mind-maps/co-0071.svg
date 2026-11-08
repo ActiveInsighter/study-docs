@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 470" width="620" height="470" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="主存地址的样子：每个主存块的地址范围">
+<title>主存地址的样子：每个主存块的地址范围</title>
+<rect x="0.75" y="0.75" width="618.5" height="468.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">256 MB = 2²⁸，主存地址共 28 位</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="150" y="66" width="230" height="28" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="265" y="84.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle">主存块号 22 位</text>
+<rect x="380" y="66" width="100" height="28" rx="0" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="430" y="84.4" font-size="12.5" fill="#18181b" text-anchor="middle">块内地址 6 位</text>
+<rect x="150" y="94" width="230" height="40" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="265" y="110.3" font-size="11.5" fill="#1e3a8a" text-anchor="middle"><tspan x="265" dy="0">22 位</tspan><tspan x="265" dy="15.5">标记</tspan></text>
+<rect x="380" y="94" width="100" height="40" rx="0" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="430" y="110.3" font-size="11.5" fill="#18181b" text-anchor="middle"><tspan x="430" dy="0">6 位块</tspan><tspan x="430" dy="15.5">内地址</tspan></text>
+<text x="60" y="166" font-size="13" fill="#18181b" text-anchor="middle" font-weight="700">块号</text>
+<text x="130" y="166" font-size="13" fill="#18181b" text-anchor="middle" font-weight="700">主存</text>
+<text x="400" y="166" font-size="13" fill="#18181b" text-anchor="middle" font-weight="700">每个主存块的地址范围</text>
+<rect x="100" y="178" width="80" height="36" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="60" y="200.4" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="400" y="200.4" font-size="12.5" fill="#3b6fd4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0…0000000000 ~ 0…0000111111</text>
+<rect x="100" y="214" width="80" height="36" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="60" y="236.4" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="400" y="236.4" font-size="12.5" fill="#3b6fd4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0…0001000000 ~ 0…0001111111</text>
+<rect x="100" y="250" width="80" height="36" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="60" y="272.4" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<text x="400" y="272.4" font-size="12.5" fill="#3b6fd4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0…0010000000 ~ 0…0010111111</text>
+<rect x="100" y="286" width="80" height="36" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="60" y="308.4" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">⋮</text>
+<text x="140" y="308.9" font-size="14" fill="#71717a" text-anchor="middle">⋮</text>
+<rect x="100" y="322" width="80" height="36" rx="0" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="60" y="344.4" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2²²−3</text>
+<text x="400" y="344.4" font-size="12.5" fill="#3b6fd4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1…1101000000 ~ 1…1101111111</text>
+<rect x="100" y="358" width="80" height="36" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="60" y="380.4" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2²²−2</text>
+<text x="400" y="380.4" font-size="12.5" fill="#3b6fd4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1…1110000000 ~ 1…1110111111</text>
+<rect x="100" y="394" width="80" height="36" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="60" y="416.4" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2²²−1</text>
+<text x="400" y="416.4" font-size="12.5" fill="#3b6fd4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1…1111000000 ~ 1…1111111111</text>
+<text x="140" y="452" font-size="12.5" fill="#3f3f46" text-anchor="middle">主存：256 MB</text>
+</svg>

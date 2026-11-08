@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 340" width="700" height="340" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="进程的七状态模型：在五状态基础上增加就绪挂起与阻塞挂起">
+<title>进程的七状态模型：在五状态基础上增加就绪挂起与阻塞挂起</title>
+<defs><marker id="a3b6fd4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3b6fd4"/></marker><marker id="a7856c9" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#7856c9"/></marker></defs>
+<rect x="0.75" y="0.75" width="698.5" height="338.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">进程的七状态模型</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="18" y="62" width="104" height="36" rx="18" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="70" y="84.7" font-size="13.5" fill="#1e3a8a" text-anchor="middle">创建态</text>
+<rect x="188" y="62" width="104" height="36" rx="18" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="240" y="84.7" font-size="13.5" fill="#1e3a8a" text-anchor="middle">就绪态</text>
+<rect x="388" y="62" width="104" height="36" rx="18" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="440" y="84.7" font-size="13.5" fill="#1e3a8a" text-anchor="middle">运行态</text>
+<rect x="568" y="62" width="104" height="36" rx="18" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="620" y="84.7" font-size="13.5" fill="#1e3a8a" text-anchor="middle">终止态</text>
+<rect x="148" y="172" width="104" height="36" rx="18" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="200" y="194.7" font-size="13.5" fill="#3b0764" text-anchor="middle">就绪挂起</text>
+<rect x="448" y="172" width="104" height="36" rx="18" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="500" y="194.7" font-size="13.5" fill="#1e3a8a" text-anchor="middle">阻塞态</text>
+<rect x="298" y="262" width="104" height="36" rx="18" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="350" y="284.7" font-size="13.5" fill="#3b0764" text-anchor="middle">阻塞挂起</text>
+<path d="M110 80L196 80" fill="none" stroke="#3b6fd4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="153" y="88" font-size="10.5" fill="#3b6fd4" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">创建</text>
+<path d="M280 74L396 74" fill="none" stroke="#3b6fd4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="338" y="82" font-size="10.5" fill="#3b6fd4" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">获得 CPU</text>
+<path d="M400 86L284 86" fill="none" stroke="#3b6fd4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="342" y="70" font-size="10.5" fill="#3b6fd4" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">时间片到</text>
+<path d="M480 80L576 80" fill="none" stroke="#3b6fd4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="528" y="88" font-size="10.5" fill="#3b6fd4" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">退出</text>
+<path d="M459.2 99.3L478.9 168.9" fill="none" stroke="#3b6fd4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="458.5" y="135.9" font-size="10.5" fill="#3b6fd4" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">事件等待</text>
+<path d="M463.2 181.4L280.5 89.4" fill="none" stroke="#3b6fd4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="376.5" y="120.3" font-size="10.5" fill="#3b6fd4" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">事件发生</text>
+<path d="M100.5 94.2L166.4 174.5" fill="none" stroke="#7856c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a7856c9)"/>
+<text x="125.7" y="139.5" font-size="10.5" fill="#7856c9" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">内存不足</text>
+<path d="M220.3 100.7L209 167.4" fill="none" stroke="#7856c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a7856c9)"/>
+<text x="203.4" y="126" font-size="10.5" fill="#7856c9" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">挂起</text>
+<path d="M219.7 169.3L231 102.6" fill="none" stroke="#7856c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a7856c9)"/>
+<text x="236.6" y="136" font-size="10.5" fill="#7856c9" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">激活</text>
+<path d="M471.7 201.3L393.7 267.7" fill="none" stroke="#7856c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a7856c9)"/>
+<text x="426.5" y="220.2" font-size="10.5" fill="#7856c9" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">挂起</text>
+<path d="M378.3 268.7L456.3 202.3" fill="none" stroke="#7856c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a7856c9)"/>
+<text x="423.5" y="241.8" font-size="10.5" fill="#7856c9" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">激活</text>
+<path d="M315.7 268.7L237.7 202.3" fill="none" stroke="#7856c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a7856c9)"/>
+<text x="282.9" y="221.2" font-size="10.5" fill="#7856c9" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">事件出现</text>
+<path d="M403.6 89.2L240 180" fill="none" stroke="#7856c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a7856c9)"/>
+<text x="316.8" y="119.7" font-size="10.5" fill="#7856c9" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">内存被抢占</text>
+</svg>

@@ -1,0 +1,30 @@
+LABEL = '主存地址的样子：每个主存块的地址范围'
+F = Fig(620, 470, '256 MB = 2²⁸，主存地址共 28 位')
+F.box(150, 66, 230, 28, '主存块号 22 位', 'blue', 12.5, 0); F.box(380, 66, 100, 28, '块内地址 6 位', 'gray', 12.5, 0)
+x = 150
+F.box(x, 94, 180, 40, '20 位\n标记', 'blue', 11.5, 0); x += 180
+F.box(x, 94, 50, 40, '2 位\n组号', 'amber', 11.5, 0); x += 50
+F.box(x, 94, 100, 40, '6 位块\n内地址', 'gray', 11.5, 0); x += 100
+F.text(60, 166, '块号', 13, color=INK, weight=700); F.text(130, 166, '主存', 13, color=INK, weight=700); F.text(400, 166, '每个主存块的地址范围', 13, color=INK, weight=700)
+F.box(100, 178, 80, 36, '', 'white', rx=0)
+F.text(60, 196, '0', 12.5, color=INK2, valign='middle', mono=True)
+F.text(400, 196, '0…00[[amber:00]]000000 ~ 0…00[[amber:00]]111111', 12.5, color=ACCENT['blue'], valign='middle', mono=True)
+F.box(100, 214, 80, 36, '', 'red', rx=0)
+F.text(60, 232, '1', 12.5, color=INK2, valign='middle', mono=True)
+F.text(400, 232, '0…00[[amber:01]]000000 ~ 0…00[[amber:01]]111111', 12.5, color=ACCENT['blue'], valign='middle', mono=True)
+F.box(100, 250, 80, 36, '', 'white', rx=0)
+F.text(60, 268, '2', 12.5, color=INK2, valign='middle', mono=True)
+F.text(400, 268, '0…00[[amber:10]]000000 ~ 0…00[[amber:10]]111111', 12.5, color=ACCENT['blue'], valign='middle', mono=True)
+F.box(100, 286, 80, 36, '', 'white', rx=0)
+F.text(60, 304, '⋮', 12.5, color=INK2, valign='middle', mono=True)
+F.text(140, 304, '⋮', 14, color=MUTED, valign='middle')
+F.box(100, 322, 80, 36, '', 'green', rx=0)
+F.text(60, 340, '2²²−3', 12.5, color=INK2, valign='middle', mono=True)
+F.text(400, 340, '1…11[[amber:01]]000000 ~ 1…11[[amber:01]]111111', 12.5, color=ACCENT['blue'], valign='middle', mono=True)
+F.box(100, 358, 80, 36, '', 'white', rx=0)
+F.text(60, 376, '2²²−2', 12.5, color=INK2, valign='middle', mono=True)
+F.text(400, 376, '1…11[[amber:10]]000000 ~ 1…11[[amber:10]]111111', 12.5, color=ACCENT['blue'], valign='middle', mono=True)
+F.box(100, 394, 80, 36, '', 'white', rx=0)
+F.text(60, 412, '2²²−1', 12.5, color=INK2, valign='middle', mono=True)
+F.text(400, 412, '1…11[[amber:11]]000000 ~ 1…11[[amber:11]]111111', 12.5, color=ACCENT['blue'], valign='middle', mono=True)
+F.text(140, 452, '主存：256 MB', 12.5, color=INK2)

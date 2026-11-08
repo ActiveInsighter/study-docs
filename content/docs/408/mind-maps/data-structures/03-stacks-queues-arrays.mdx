@@ -31,14 +31,14 @@ layout: mind-map
     - 注意初始化top = 0，则说明top指向栈顶元素的下一个元素
     - 如果top = -1，则说明top指向栈顶元素
 - 共享栈
-  - <img src="/images/408-mind-maps/ds-0004.png" alt="共享栈" width="240" height="84">
+  - <img src="/images/408-mind-maps/ds-0004.svg" alt="共享栈" width="300" height="117">
 
     - 作用：
       - 节省存储空间
       - 降低了上溢的可能性
         - 只有两个栈都满才会上溢
 - 链表栈
-  - <img src="/images/408-mind-maps/ds-0047.png" alt="链表栈" width="240" height="113">
+  - <img src="/images/408-mind-maps/ds-0047.svg" alt="链表栈" width="300" height="117">
 
 - 所有的递归实现改为非递归实现都需要使用栈
   - 错！
@@ -54,7 +54,7 @@ layout: mind-map
   - 尾部向后扩展的线性结构
   - front -= 1; rear += 1
 - 普通队列
-  - <img src="/images/408-mind-maps/ds-0107.png" alt="普通队列" width="240" height="80">
+  - <img src="/images/408-mind-maps/ds-0107.svg" alt="普通队列" width="300" height="130">
 
     - 判断队空
       - Q.front == Q.rear == 0
@@ -83,7 +83,7 @@ layout: mind-map
     - 插入元素：Q.rear == (Q.rear + 1)%MaxSize
     - 删除元素：Q.front == (Q.front + 1)%MaxSize
     - 队列长度：(Q.rear - Q.front + MaxSize)%MaxSize
-  - <img src="/images/408-mind-maps/ds-0094.png" alt="循环队列" width="240" height="101">
+  - <img src="/images/408-mind-maps/ds-0094.svg" alt="循环队列" width="300" height="130">
 
   - 概要：与普通队列的front、rear功能同步
     概要范围：[如果队列没有使用“循环功能”，rear &gt; front](#focus=%E5%A6%82%E6%9E%9C%E9%98%9F%E5%88%97%E6%B2%A1%E6%9C%89%E4%BD%BF%E7%94%A8%E2%80%9C%E5%BE%AA%E7%8E%AF%E5%8A%9F%E8%83%BD%E2%80%9D%EF%BC%8Crear%20%3E%20front)、[如果队列使用了“循环功能”, front &gt; rear](#focus=%E5%A6%82%E6%9E%9C%E9%98%9F%E5%88%97%E4%BD%BF%E7%94%A8%E4%BA%86%E2%80%9C%E5%BE%AA%E7%8E%AF%E5%8A%9F%E8%83%BD%E2%80%9D%2C%20front%20%3E%20rear)
@@ -133,7 +133,14 @@ layout: mind-map
     - 一个操作数栈
     - 一个符号栈
   - 举例
-    - <img src="/images/408-mind-maps/ds-0126.png" alt="举例" width="224" height="220">
+    - 括号匹配：`[ ( ) ( ) ] [ ]`
+      - 左括号入栈；遇到右括号时与栈顶匹配并出栈，右括号本身不入栈
+      - 栈中同时最多有 2 个元素：`[ (`，所以栈至少需要 2 个单元
+    - 中缀表达式求值：`(A+B)*C+D÷E`
+      - 用两个栈：符号栈存运算符和左括号，数值栈存操作数和中间结果
+      - 遇到操作数直接入数值栈；遇到运算符时，先把符号栈中优先级 ≥ 它的运算符弹出计算，再让它入栈
+      - 过程：`(`、`(+` 时符号栈最多 2 个；遇到 `)` 计算出 A+B；`*` 入栈后遇到 `+` 先算 (A+B)*C；`+÷` 入栈，数值栈最多同时有 `(A+B)*C, D, E` 3 个
+      - 结论：符号栈最少需要 2 个单元，数值栈最少需要 3 个单元
 
   - 概要：问你这个栈需要多大
     概要范围：[直接计算](#focus=%E7%9B%B4%E6%8E%A5%E8%AE%A1%E7%AE%97)
@@ -164,10 +171,10 @@ layout: mind-map
     - 数据总数：n(1+n)/2
   - 三角矩阵
     - 和对称矩阵类似，加一个位置（数组的最后一位）来存另外三角的常量值
-      - <img src="/images/408-mind-maps/ds-0134.png" alt="和对称矩阵类似，加一个位置（数组的最后一位）来存另外三角的常量值" width="240" height="133">
+      - <img src="/images/408-mind-maps/ds-0134.svg" alt="和对称矩阵类似，加一个位置（数组的最后一位）来存另外三角的常量值" width="300" height="141">
 
   - 三对角矩阵（带状矩阵）
-    - <img src="/images/408-mind-maps/ds-0133.png" alt="三对角矩阵（带状矩阵）" width="240" height="189">
+    - <img src="/images/408-mind-maps/ds-0133.svg" alt="三对角矩阵（带状矩阵）" width="300" height="189">
 
   - 稀疏矩阵
     - 使用一个顺序存储的三元组
@@ -185,7 +192,7 @@ layout: mind-map
         注：此处行、列标从 1 开始。
 
     - 十字链表法
-      - <img src="/images/408-mind-maps/ds-0041.png" alt="十字链表法" width="240" height="120">
+      - <img src="/images/408-mind-maps/ds-0041.svg" alt="十字链表法" width="300" height="133">
 
         - 图那章讲解
 - 考频：中

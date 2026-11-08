@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" width="700" height="300" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="虚拟局域网 VLAN：把局域网内的设备划分成与物理位置无关的逻辑组">
+<title>虚拟局域网 VLAN：把局域网内的设备划分成与物理位置无关的逻辑组</title>
+<rect x="0.75" y="0.75" width="698.5" height="298.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">虚拟局域网 VLAN</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M350 170L200 110" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M350 170L500 110" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M350 170L200 230" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M350 170L500 230" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="350" cy="170" rx="16" ry="8" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<ellipse cx="200" cy="110" rx="16" ry="8" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<ellipse cx="500" cy="110" rx="16" ry="8" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<ellipse cx="200" cy="230" rx="16" ry="8" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<ellipse cx="500" cy="230" rx="16" ry="8" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<rect x="76" y="46" width="28" height="20" rx="3" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<path d="M90 66L200 110" fill="none" stroke="#3b6fd4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="146" y="46" width="28" height="20" rx="3" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<path d="M160 66L200 110" fill="none" stroke="#3b6fd4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="216" y="46" width="28" height="20" rx="3" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<path d="M230 66L200 110" fill="none" stroke="#3b6fd4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="286" y="46" width="28" height="20" rx="3" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<path d="M300 66L200 110" fill="none" stroke="#3b6fd4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="376" y="46" width="28" height="20" rx="3" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<path d="M390 66L500 110" fill="none" stroke="#3b6fd4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="446" y="46" width="28" height="20" rx="3" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<path d="M460 66L500 110" fill="none" stroke="#3b6fd4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="516" y="46" width="28" height="20" rx="3" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<path d="M530 66L500 110" fill="none" stroke="#3b6fd4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="586" y="46" width="28" height="20" rx="3" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<path d="M600 66L500 110" fill="none" stroke="#3b6fd4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="76" y="260" width="28" height="20" rx="3" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<path d="M90 260L200 230" fill="none" stroke="#3b6fd4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="146" y="260" width="28" height="20" rx="3" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<path d="M160 260L200 230" fill="none" stroke="#3b6fd4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="216" y="260" width="28" height="20" rx="3" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<path d="M230 260L200 230" fill="none" stroke="#3b6fd4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="286" y="260" width="28" height="20" rx="3" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<path d="M300 260L200 230" fill="none" stroke="#3b6fd4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="376" y="260" width="28" height="20" rx="3" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<path d="M390 260L500 230" fill="none" stroke="#3b6fd4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="446" y="260" width="28" height="20" rx="3" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<path d="M460 260L500 230" fill="none" stroke="#3b6fd4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="516" y="260" width="28" height="20" rx="3" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<path d="M530 260L500 230" fill="none" stroke="#3b6fd4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="586" y="260" width="28" height="20" rx="3" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<path d="M600 260L500 230" fill="none" stroke="#3b6fd4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="560" y="150" width="14" height="14" rx="3" fill="#f4f4f5" stroke="#52525b" stroke-width="1.3"/>
+<text x="580" y="161" font-size="13" fill="#3f3f46">VLAN1</text>
+<rect x="560" y="176" width="14" height="14" rx="3" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.3"/>
+<text x="580" y="187" font-size="13" fill="#3f3f46">VLAN2</text>
+<text x="620" y="230" font-size="11" fill="#71717a" text-anchor="middle"><tspan x="620" dy="0">每个 VLAN 是一个</tspan><tspan x="620" dy="15.4">单独的广播域</tspan></text>
+</svg>

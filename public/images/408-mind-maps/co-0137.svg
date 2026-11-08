@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" width="480" height="340" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="带标志加法器：输出 F 与 OF、SF、ZF、CF">
+<title>带标志加法器：输出 F 与 OF、SF、ZF、CF</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="478.5" height="338.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<path d="M168.0 130H312.0L360.0 220H278.4L240 188.5L201.6 220H120.0Z" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="240" y="173.4" font-size="16" fill="#7f1d1d" text-anchor="middle" font-weight="700">加法器</text>
+<path d="M170 130L170 72" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="170" y="60" font-size="13" fill="#18181b" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">OF</text>
+<path d="M205 130L205 72" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="205" y="60" font-size="13" fill="#18181b" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">SF</text>
+<path d="M240 130L240 40" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="240" y="28" font-size="14" fill="#18181b" text-anchor="middle" font-weight="700" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">F</text>
+<path d="M275 130L275 72" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="275" y="60" font-size="13" fill="#18181b" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">ZF</text>
+<path d="M310 130L310 72" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="310" y="60" font-size="13" fill="#18181b" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">CF</text>
+<path d="M234 106L246 94" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="249" y="109" font-size="11" fill="#3f3f46">n</text>
+<path d="M144 175L30 175" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="30" y="161" font-size="13" fill="#18181b" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">Cout</text>
+<path d="M450 175L336 175" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="450" y="161" font-size="13" fill="#18181b" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">Cin</text>
+<path d="M168 300L168 220" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M162 270L174 258" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="177" y="273" font-size="11" fill="#3f3f46">n</text>
+<text x="168" y="316" font-size="14" fill="#18181b" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">A</text>
+<path d="M312 300L312 220" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M306 270L318 258" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="321" y="273" font-size="11" fill="#3f3f46">n</text>
+<text x="312" y="316" font-size="14" fill="#18181b" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">B</text>
+</svg>

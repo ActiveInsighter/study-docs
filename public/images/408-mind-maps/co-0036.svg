@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 330" width="620" height="330" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="串行加法器：只有一个全加器，进位触发器保存进位">
+<title>串行加法器：只有一个全加器，进位触发器保存进位</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="618.5" height="328.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">串行加法器</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="230" y="90" width="160" height="60" rx="8" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="310" y="126" font-size="17" fill="#1e3a8a" text-anchor="middle" font-weight="600">FA</text>
+<path d="M310 90L310 50" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="310" y="46.5" font-size="13" fill="#18181b" text-anchor="middle">S<tspan baseline-shift="-22%" font-size="72%">i</tspan></text>
+<path d="M283.3 190L283.3 150" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="283.3" y="206.6" font-size="13" fill="#18181b" text-anchor="middle">A<tspan baseline-shift="-22%" font-size="72%">i</tspan></text>
+<path d="M336.7 190L336.7 150" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="336.7" y="206.6" font-size="13" fill="#18181b" text-anchor="middle">B<tspan baseline-shift="-22%" font-size="72%">i</tspan></text>
+<path d="M230 120L190 120" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="184" y="124.5" font-size="13" fill="#18181b" text-anchor="end">C<tspan baseline-shift="-22%" font-size="72%">i</tspan></text>
+<path d="M430 120L390 120" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="436" y="124.5" font-size="13" fill="#18181b">C<tspan baseline-shift="-22%" font-size="72%">i−1</tspan></text>
+<rect x="230" y="226" width="160" height="40" rx="6" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="310" y="250.9" font-size="14" fill="#78350f" text-anchor="middle">进位触发器</text>
+<path d="M170 140L170 240Q170 246 176 246L228 246" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M392 246L444 246Q450 246 450 240L450 132" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="310" y="296" font-size="12.5" fill="#3f3f46" text-anchor="middle">数据逐位串行送入同一个全加器；进位触发器寄存进位，参与下一位运算</text>
+<text x="310" y="318" font-size="12.5" fill="#71717a" text-anchor="middle">n 位加法要做 n 次，速度慢</text>
+</svg>

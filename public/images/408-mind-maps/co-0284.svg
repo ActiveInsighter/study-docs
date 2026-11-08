@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" width="820" height="420" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="硬布线控制器的完整结构">
+<title>硬布线控制器的完整结构</title>
+<defs><marker id="a2f8f57" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#2f8f57"/></marker><marker id="a3b6fd4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3b6fd4"/></marker><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker><marker id="a7856c9" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#7856c9"/></marker><marker id="ac98a12" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#c98a12"/></marker><marker id="ad1493a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#d1493a"/></marker></defs>
+<rect x="0.75" y="0.75" width="818.5" height="418.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">硬布线控制器的完整结构</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<g opacity="1">
+<rect x="240" y="60" width="220" height="32" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="350" y="80.5" font-size="13" fill="#18181b" text-anchor="middle">指令寄存器 IR</text>
+<path d="M350 92L350 110" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="360" y="102" font-size="11" fill="#3f3f46">n 位操作码</text>
+<rect x="240" y="112" width="220" height="30" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="350" y="131.6" font-size="13" fill="#1e3a8a" text-anchor="middle">操作码译码器</text>
+<path d="M260 142L260 168" fill="none" stroke="#3b6fd4" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="264" y="156" font-size="10.5" fill="#3b6fd4">0</text>
+<path d="M290 142L290 168" fill="none" stroke="#3b6fd4" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="294" y="156" font-size="10.5" fill="#3b6fd4">1</text>
+<path d="M440 142L440 168" fill="none" stroke="#3b6fd4" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="444" y="156" font-size="10.5" fill="#3b6fd4">2ⁿ−1</text>
+<text x="365" y="156" font-size="11" fill="#3b6fd4" text-anchor="middle">……</text>
+</g>
+<rect x="240" y="170" width="220" height="160" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="350" y="244.8" font-size="16" fill="#18181b" text-anchor="middle" font-weight="700"><tspan x="350" dy="0">控制单元</tspan><tspan x="350" dy="21.6">CU</tspan></text>
+<g opacity="1">
+<rect x="40" y="190" width="46" height="26" rx="4" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="63" y="207" font-size="11.5" fill="#3b0764" text-anchor="middle">时钟</text>
+<path d="M30 250h6v-14h8v14h6v-14h8v14h6v-14h8v14h6v-14h8v14h6v-14h8v14h8" fill="none" stroke="#7856c9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="64" y="272" font-size="11" fill="#3f3f46" text-anchor="middle">CLK（主频）</text>
+<rect x="130" y="180" width="30" height="140" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="145" y="224.2" font-size="11" fill="#78350f" text-anchor="middle"><tspan x="145" dy="0">节</tspan><tspan x="145" dy="14.9">拍</tspan><tspan x="145" dy="14.9">发</tspan><tspan x="145" dy="14.9">生</tspan><tspan x="145" dy="14.9">器</tspan></text>
+<path d="M108 244L128 244" fill="none" stroke="#7856c9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a7856c9)"/>
+<path d="M160 190L238 190" fill="none" stroke="#c98a12" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ac98a12)"/>
+<text x="200" y="184" font-size="11" fill="#c98a12" text-anchor="middle">T₀</text>
+<path d="M160 218L238 218" fill="none" stroke="#c98a12" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ac98a12)"/>
+<text x="200" y="212" font-size="11" fill="#c98a12" text-anchor="middle">T₁</text>
+<path d="M160 246L238 246" fill="none" stroke="#c98a12" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ac98a12)"/>
+<text x="200" y="240" font-size="11" fill="#c98a12" text-anchor="middle">T₂</text>
+<text x="200" y="268" font-size="11" fill="#c98a12" text-anchor="middle">⋮</text>
+<path d="M160 302L238 302" fill="none" stroke="#c98a12" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ac98a12)"/>
+<text x="200" y="296" font-size="11" fill="#c98a12" text-anchor="middle">Tₘ</text>
+<text x="145" y="346" font-size="10.5" fill="#c98a12" text-anchor="middle">每个时钟周期发出一个节拍信号（循环）</text>
+</g>
+<g opacity="1">
+<path d="M620 186L462 186" fill="none" stroke="#c98a12" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ac98a12)"/>
+<text x="560" y="176" font-size="11" fill="#c98a12" text-anchor="middle">FE、IND、EX、INT</text>
+<text x="560" y="204" font-size="10" fill="#71717a" text-anchor="middle">（机器周期标志，集成在 CU 内）</text>
+</g>
+<g opacity="1">
+<path d="M620 240L462 240" fill="none" stroke="#2f8f57" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a2f8f57)"/>
+<path d="M620 262L462 262" fill="none" stroke="#2f8f57" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a2f8f57)"/>
+<path d="M620 300L462 300" fill="none" stroke="#2f8f57" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a2f8f57)"/>
+<text x="540" y="286" font-size="11" fill="#2f8f57" text-anchor="middle">⋮</text>
+<text x="640" y="262" font-size="10.5" fill="#2f8f57"><tspan x="640" dy="0">标志（来自执行单元</tspan><tspan x="640" dy="14.7">的反馈：PSW、ACC、</tspan><tspan x="640" dy="14.7">I/O 设备、主存等）</tspan></text>
+</g>
+<g opacity="1">
+<path d="M270 330L270 364" fill="none" stroke="#d1493a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<text x="270" y="380" font-size="12" fill="#d1493a" text-anchor="middle">C₀</text>
+<path d="M300 330L300 364" fill="none" stroke="#d1493a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<text x="300" y="380" font-size="12" fill="#d1493a" text-anchor="middle">C₁</text>
+<path d="M430 330L430 364" fill="none" stroke="#d1493a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<text x="430" y="380" font-size="12" fill="#d1493a" text-anchor="middle">Cₖ</text>
+<text x="365" y="350" font-size="11" fill="#d1493a" text-anchor="middle">……</text>
+<text x="350" y="402" font-size="10.5" fill="#d1493a" text-anchor="middle">每个输出的控制信号对应一个微命令；如 C₁ 对应 (PC)→MAR，就让 C₁ 接到 PCout 和 MARin 上</text>
+</g>
+</svg>

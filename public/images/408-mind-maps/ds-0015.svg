@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 430" width="640" height="430" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="不是最佳归并树的 3 路归并树示例：WPL = 193">
+<title>不是最佳归并树的 3 路归并树示例：WPL = 193</title>
+<rect x="0.75" y="0.75" width="638.5" height="428.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">反例：度不全为 3 的 3 路归并树</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M122.5 268.4L89.5 315.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M134 272L134 312" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M145.5 268.4L178.5 315.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M203.5 185.8L148.5 238.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M224.6 190.9L239.4 233.1" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M232.5 185.8L287.5 238.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M402.5 188.4L369.5 235.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M414 192L414 232" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M425.5 188.4L458.5 235.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M300.5 104.6L233.5 159.4" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M331.5 104.6L398.5 159.4" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="78" cy="332" r="20" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="78" y="336.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">2</text>
+<circle cx="134" cy="332" r="20" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="134" y="336.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">3</text>
+<circle cx="190" cy="332" r="20" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="190" y="336.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">6</text>
+<circle cx="134" cy="252" r="20" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="134" y="256.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="500">11</text>
+<circle cx="246" cy="252" r="20" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="246" y="256.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">9</text>
+<circle cx="302" cy="252" r="20" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="302" y="256.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">12</text>
+<circle cx="218" cy="172" r="20" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="218" y="176.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="500">32</text>
+<circle cx="358" cy="252" r="20" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="358" y="256.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">17</text>
+<circle cx="414" cy="252" r="20" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="414" y="256.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">24</text>
+<circle cx="470" cy="252" r="20" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="470" y="256.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">18</text>
+<circle cx="414" cy="172" r="20" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="414" y="176.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="500">59</text>
+<circle cx="316" cy="92" r="20" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="316" y="96.9" font-size="14" fill="#7f1d1d" text-anchor="middle" font-weight="500">91</text>
+<rect x="410" y="76" width="210" height="52" rx="10" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="515" y="97.8" font-size="13" fill="#78350f" text-anchor="middle"><tspan x="515" dy="0">根只有 2 个分支</tspan><tspan x="515" dy="17.6">→ 不是最佳归并树</tspan></text>
+<text x="320" y="378" font-size="14" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">WPL = (2+3+6)×3 + (9+12+17+24+18)×2 = 193</text>
+<text x="320" y="402" font-size="13" fill="#71717a" text-anchor="middle">磁盘 I/O 总次数 = 386；应先补虚段再按 3 路哈夫曼构造</text>
+</svg>

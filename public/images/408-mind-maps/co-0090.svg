@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="直接映射 Cache 的电路：行号直接定位，标记比较决定是否命中">
+<title>直接映射 Cache 的电路：行号直接定位，标记比较决定是否命中</title>
+<defs><marker id="a2f8f57" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#2f8f57"/></marker><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker><marker id="ac98a12" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#c98a12"/></marker><marker id="ad1493a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#d1493a"/></marker></defs>
+<rect x="0.75" y="0.75" width="758.5" height="398.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<rect x="80" y="70" width="140" height="32" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="150" y="90.5" font-size="13" fill="#1e3a8a" text-anchor="middle">标记</text>
+<rect x="220" y="70" width="80" height="32" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="260" y="90.5" font-size="13" fill="#78350f" text-anchor="middle">行号</text>
+<rect x="300" y="70" width="160" height="32" rx="0" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="380" y="90.5" font-size="13" fill="#18181b" text-anchor="middle">块内地址</text>
+<text x="150" y="62" font-size="11.5" fill="#71717a" text-anchor="middle">t bit</text>
+<text x="260" y="62" font-size="11.5" fill="#71717a" text-anchor="middle">c bit</text>
+<text x="380" y="62" font-size="11.5" fill="#71717a" text-anchor="middle">b bit</text>
+<path d="M80 50q0 -8 8 -8H182q8 0 8 -8q0 8 8 8H292q8 0 8 8" fill="none" stroke="#71717a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="190" y="21.6" font-size="13" fill="#71717a" text-anchor="middle">m bit（主存块号）</text>
+<rect x="110" y="200" width="70" height="28" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="145" y="218.2" font-size="12" fill="#1e3a8a" text-anchor="middle">标记</text>
+<rect x="180" y="200" width="160" height="28" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="110" y="228" width="70" height="28" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="145" y="246.2" font-size="12" fill="#1e3a8a" text-anchor="middle">标记</text>
+<rect x="180" y="228" width="160" height="28" rx="0" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<rect x="110" y="256" width="70" height="28" rx="0" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="145" y="274.2" font-size="12" fill="#3f3f46" text-anchor="middle">…</text>
+<rect x="180" y="256" width="160" height="28" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="110" y="284" width="70" height="28" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="145" y="302.2" font-size="12" fill="#1e3a8a" text-anchor="middle">标记</text>
+<rect x="180" y="284" width="160" height="28" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="260" y="188" font-size="11.5" fill="#71717a" text-anchor="middle">Cache 存储体</text>
+<ellipse cx="150" cy="154" rx="32" ry="16" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="150" y="158.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="500">比较</text>
+<path d="M150 104L150 136" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M150 198L150 172" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M260 104L260 124Q260 130 266 130L394 130Q400 130 400 136L400 236Q400 242 394 242L342 242" fill="none" stroke="#c98a12" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ac98a12)"/>
+<text x="408" y="160" font-size="11.5" fill="#c98a12">行号直接选中一行</text>
+<text x="108" y="150" font-size="11.5" fill="#2f8f57" text-anchor="end">相等</text>
+<text x="196" y="140" font-size="11.5" fill="#d1493a">不等</text>
+<path d="M118 154L96 154Q90 154 90 160L90 324Q90 330 96 330L180 330" fill="none" stroke="#2f8f57" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a2f8f57)"/>
+<text x="90" y="342" font-size="11.5" fill="#2f8f57">Cache 命中</text>
+<circle cx="196" cy="330" r="10" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="196" y="334.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="500">×</text>
+<path d="M196 312L196 320" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M196 340L196 368" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="204" y="360" font-size="11.5" fill="#3f3f46">Cache 读出</text>
+<path d="M182 154L514 154Q520 154 520 148L520 122Q520 116 514 116L468 116Q462 116 462 110L462 86" fill="none" stroke="#d1493a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<text x="530" y="150" font-size="11.5" fill="#d1493a">缺失 → 访问主存</text>
+<rect x="590" y="180" width="90" height="60" rx="4" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="635" y="214.6" font-size="13" fill="#14532d" text-anchor="middle">主存</text>
+<path d="M462 86L629 86Q635 86 635 92L635 178" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M635 242L635 368" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="644" y="330" font-size="11.5" fill="#3f3f46">主存读出</text>
+<rect x="60" y="372" width="660" height="16" rx="8" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.2"/>
+<text x="390" y="383.9" font-size="11" fill="#14532d" text-anchor="middle">数据总线</text>
+</svg>

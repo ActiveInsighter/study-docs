@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="两级页表的地址变换（含快表）">
+<title>两级页表的地址变换（含快表）</title>
+<defs><marker id="a2f8f57" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#2f8f57"/></marker><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker><marker id="ac98a12" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#c98a12"/></marker><marker id="ad1493a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#d1493a"/></marker></defs>
+<rect x="0.75" y="0.75" width="758.5" height="358.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">两级页表的地址变换</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="130" y="86" font-size="11.5" fill="#3f3f46" text-anchor="middle">页表寄存器</text>
+<rect x="30" y="94" width="110" height="26" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="85" y="110.8" font-size="11" fill="#18181b" text-anchor="middle">页表始址 F</text>
+<rect x="140" y="94" width="100" height="26" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="190" y="110.8" font-size="11" fill="#18181b" text-anchor="middle">页表长度 M</text>
+<circle cx="300" cy="107" r="13" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="300" y="111.5" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">&gt;</text>
+<path d="M300 94L300 60" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="300" y="52" font-size="11.5" fill="#d1493a" text-anchor="middle">越界中断</text>
+<path d="M242 107L286 107" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="560" y="82" font-size="11.5" fill="#3f3f46" text-anchor="middle">逻辑地址 A</text>
+<rect x="440" y="94" width="70" height="26" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="475" y="110.8" font-size="11" fill="#78350f" text-anchor="middle">一级 P1</text>
+<rect x="510" y="94" width="70" height="26" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="545" y="110.8" font-size="11" fill="#14532d" text-anchor="middle">二级 P2</text>
+<rect x="580" y="94" width="110" height="26" rx="0" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="635" y="110.8" font-size="11" fill="#18181b" text-anchor="middle">页内偏移量 W</text>
+<path d="M475 122L475 134Q475 140 469 140L306 140Q300 140 300 134L300 122" fill="none" stroke="#c98a12" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ac98a12)"/>
+<path d="M300 140L76 140Q70 140 70 146L70 157" fill="none" stroke="#c98a12" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ac98a12)"/>
+<circle cx="70" cy="170" r="13" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="70" y="174.9" font-size="14" fill="#18181b" text-anchor="middle" font-weight="500">+</text>
+<path d="M70 122L70 128" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="230" y="214" font-size="10.5" fill="#3f3f46">页号　块号</text>
+<text x="224" y="239.7" font-size="10.5" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<rect x="230" y="225" width="60" height="22" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="260" y="239.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
+<text x="224" y="261.7" font-size="10.5" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
+<rect x="230" y="247" width="60" height="22" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="260" y="261.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
+<text x="224" y="283.7" font-size="10.5" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">P1</text>
+<rect x="230" y="269" width="60" height="22" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="260" y="283.7" font-size="10.5" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">b</text>
+<text x="224" y="305.7" font-size="10.5" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
+<rect x="230" y="291" width="60" height="22" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="260" y="305.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
+<text x="260" y="326" font-size="11.5" fill="#3f3f46" text-anchor="middle">一级页表</text>
+<text x="400" y="214" font-size="10.5" fill="#3f3f46">页号　块号</text>
+<text x="394" y="239.7" font-size="10.5" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<rect x="400" y="225" width="60" height="22" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="430" y="239.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
+<text x="394" y="261.7" font-size="10.5" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
+<rect x="400" y="247" width="60" height="22" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="430" y="261.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
+<text x="394" y="283.7" font-size="10.5" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">P2</text>
+<rect x="400" y="269" width="60" height="22" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="430" y="283.7" font-size="10.5" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">c</text>
+<text x="394" y="305.7" font-size="10.5" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
+<rect x="400" y="291" width="60" height="22" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="430" y="305.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
+<text x="430" y="326" font-size="11.5" fill="#3f3f46" text-anchor="middle">二级页表</text>
+<path d="M70 184L70 274Q70 280 76 280L228 280" fill="none" stroke="#c98a12" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ac98a12)"/>
+<path d="M292 280L324 280Q330 280 330 274L330 246Q330 240 336 240L398 240" fill="none" stroke="#2f8f57" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a2f8f57)"/>
+<path d="M545 122L545 194Q545 200 539 200L366 200Q360 200 360 206L360 274Q360 280 366 280L398 280" fill="none" stroke="#2f8f57" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a2f8f57)"/>
+<rect x="600" y="266" width="60" height="26" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="630" y="283.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">c</text>
+<rect x="660" y="266" width="80" height="26" rx="0" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="700" y="283.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">W</text>
+<text x="670" y="308" font-size="11.5" fill="#3f3f46" text-anchor="middle">物理地址 E</text>
+<path d="M462 280L598 280" fill="none" stroke="#d1493a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<path d="M700 122L700 264" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="560" y="146" font-size="10" fill="#3f3f46">一级　二级　块号</text>
+<rect x="560" y="154" width="40" height="18" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="580" y="166.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
+<rect x="600" y="154" width="40" height="18" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="620" y="166.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
+<rect x="640" y="154" width="40" height="18" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="660" y="166.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
+<rect x="560" y="172" width="40" height="18" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="580" y="184.5" font-size="10" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">P1</text>
+<rect x="600" y="172" width="40" height="18" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="620" y="184.5" font-size="10" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">P2</text>
+<rect x="640" y="172" width="40" height="18" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="660" y="184.5" font-size="10" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">c</text>
+<rect x="560" y="190" width="40" height="18" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="580" y="202.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
+<rect x="600" y="190" width="40" height="18" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="620" y="202.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
+<rect x="640" y="190" width="40" height="18" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="660" y="202.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
+<text x="620" y="222" font-size="11" fill="#3b6fd4" text-anchor="middle">快表</text>
+<text x="380" y="350" font-size="10.5" fill="#71717a" text-anchor="middle">先查快表（P1、P2 一起作关键字）；未命中则 F + P1 查一级页表 → 二级页表地址 + P2 → 块号 c</text>
+</svg>

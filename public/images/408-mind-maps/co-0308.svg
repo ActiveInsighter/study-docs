@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 540" width="620" height="540" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="CM 中的微指令序列：取指、间址、中断周期为公共微程序，各指令有自己的执行周期微程序">
+<title>CM 中的微指令序列：取指、间址、中断周期为公共微程序，各指令有自己的执行周期微程序</title>
+<rect x="0.75" y="0.75" width="618.5" height="538.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">CM 中的微指令序列</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="70" y="66" font-size="11.5" fill="#3f3f46" text-anchor="middle"><tspan x="70" dy="0">微指令</tspan><tspan x="70" dy="13.8">存放地址</tspan></text>
+<text x="250" y="72" font-size="12" fill="#3f3f46" text-anchor="middle">微指令操作码</text>
+<text x="380" y="72" font-size="12" fill="#3f3f46" text-anchor="middle">下地址</text>
+<rect x="110" y="90" width="210" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="320" y="90" width="120" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="380" y="111.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="80" y="111" font-size="11.5" fill="#3b6fd4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<rect x="110" y="124" width="210" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="320" y="124" width="120" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="380" y="145.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<text x="80" y="145" font-size="11.5" fill="#3b6fd4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="110" y="158" width="210" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="320" y="158" width="120" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="380" y="179.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<text x="80" y="179" font-size="11.5" fill="#3b6fd4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<rect x="110" y="192" width="210" height="54" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="215" y="215.3" font-size="11.5" fill="#18181b" text-anchor="middle"><tspan x="215" dy="0">…</tspan><tspan x="215" dy="15.5">转执行周期</tspan></text>
+<rect x="320" y="192" width="120" height="54" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="80" y="223" font-size="11.5" fill="#3b6fd4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3…7</text>
+<rect x="110" y="246" width="210" height="54" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="215" y="269.3" font-size="11.5" fill="#18181b" text-anchor="middle"><tspan x="215" dy="0">…</tspan><tspan x="215" dy="15.5">转取指周期</tspan></text>
+<rect x="320" y="246" width="120" height="54" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="80" y="277" font-size="11.5" fill="#3b6fd4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8…12</text>
+<rect x="110" y="300" width="210" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="320" y="300" width="120" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="380" y="321.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">14</text>
+<text x="80" y="321" font-size="11.5" fill="#3b6fd4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">13</text>
+<rect x="110" y="334" width="210" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="320" y="334" width="120" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="380" y="355.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">15</text>
+<text x="80" y="355" font-size="11.5" fill="#3b6fd4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">14</text>
+<rect x="110" y="368" width="210" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="320" y="368" width="120" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="380" y="389.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="80" y="389" font-size="11.5" fill="#3b6fd4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">15</text>
+<rect x="110" y="402" width="210" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="320" y="402" width="120" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="380" y="423.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">17</text>
+<text x="80" y="423" font-size="11.5" fill="#3b6fd4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">16</text>
+<rect x="110" y="436" width="210" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="320" y="436" width="120" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="380" y="457.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">18</text>
+<text x="80" y="457" font-size="11.5" fill="#3b6fd4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">17</text>
+<rect x="110" y="470" width="210" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="320" y="470" width="120" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="380" y="491.2" font-size="12" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="80" y="491" font-size="11.5" fill="#3b6fd4" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">18</text>
+<path d="M110 192L440 192" fill="none" stroke="#2f8f57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M446 92q8 0 8 8V133q0 8 8 8q-8 0 -8 8V182q0 8 -8 8" fill="none" stroke="#2f8f57" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="468" y="145" font-size="11.5" fill="#2f8f57">取指周期 微程序</text>
+<path d="M110 246L440 246" fill="none" stroke="#c98a12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M446 194q8 0 8 8V211q0 8 8 8q-8 0 -8 8V236q0 8 -8 8" fill="none" stroke="#c98a12" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="468" y="223" font-size="11.5" fill="#c98a12">间址周期 微程序</text>
+<path d="M110 300L440 300" fill="none" stroke="#7856c9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M446 248q8 0 8 8V265q0 8 8 8q-8 0 -8 8V290q0 8 -8 8" fill="none" stroke="#7856c9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="468" y="277" font-size="11.5" fill="#7856c9">中断周期 微程序</text>
+<path d="M110 402L440 402" fill="none" stroke="#3b6fd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M446 302q8 0 8 8V343q0 8 8 8q-8 0 -8 8V392q0 8 -8 8" fill="none" stroke="#3b6fd4" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="468" y="355" font-size="11.5" fill="#3b6fd4">LDA 指令的执行周期微程序</text>
+<path d="M110 504L440 504" fill="none" stroke="#3b6fd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M446 404q8 0 8 8V445q0 8 8 8q-8 0 -8 8V494q0 8 -8 8" fill="none" stroke="#3b6fd4" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="468" y="457" font-size="11.5" fill="#3b6fd4">STA 指令的执行周期微程序</text>
+<rect x="110" y="504" width="330" height="26" rx="0" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="275" y="521.2" font-size="12" fill="#3f3f46" text-anchor="middle">⋮</text>
+</svg>

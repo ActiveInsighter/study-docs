@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 300" width="780" height="300" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="PPP 帧格式：F(7E) A(FF) C(03) 协议 信息 FCS F(7E)">
+<title>PPP 帧格式：F(7E) A(FF) C(03) 协议 信息 FCS F(7E)</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker><marker id="a3f3f46s" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10 0.8L1.5 5 10 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="778.5" height="298.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">PPP 帧格式（面向字节）</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="330" y="54" width="140" height="30" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="400" y="73.2" font-size="12" fill="#14532d" text-anchor="middle">IP 数据报</text>
+<path d="M400 86L400 110" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="70" y="120" width="50" height="40" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="95" y="136.1" font-size="12" fill="#1e3a8a" text-anchor="middle"><tspan x="95" dy="0">F</tspan><tspan x="95" dy="16.2">7E</tspan></text>
+<text x="95" y="112" font-size="11" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="120" y="120" width="50" height="40" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="145" y="136.1" font-size="12" fill="#1e3a8a" text-anchor="middle"><tspan x="145" dy="0">A</tspan><tspan x="145" dy="16.2">FF</tspan></text>
+<text x="145" y="112" font-size="11" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="170" y="120" width="50" height="40" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="195" y="136.1" font-size="12" fill="#1e3a8a" text-anchor="middle"><tspan x="195" dy="0">C</tspan><tspan x="195" dy="16.2">03</tspan></text>
+<text x="195" y="112" font-size="11" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="220" y="120" width="80" height="40" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="260" y="144.2" font-size="12" fill="#1e3a8a" text-anchor="middle">协议</text>
+<text x="260" y="112" font-size="11" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<rect x="300" y="120" width="200" height="40" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="400" y="144.2" font-size="12" fill="#14532d" text-anchor="middle">信息部分</text>
+<text x="400" y="112" font-size="11" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">不超过 1500 B</text>
+<rect x="500" y="120" width="80" height="40" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="540" y="144.2" font-size="12" fill="#1e3a8a" text-anchor="middle">FCS</text>
+<text x="540" y="112" font-size="11" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<rect x="580" y="120" width="50" height="40" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="605" y="136.1" font-size="12" fill="#1e3a8a" text-anchor="middle"><tspan x="605" dy="0">F</tspan><tspan x="605" dy="16.2">7E</tspan></text>
+<text x="605" y="112" font-size="11" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<path d="M70 112q0 -8 8 -8H177q8 0 8 -8q0 8 8 8H292q8 0 8 8" fill="none" stroke="#71717a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="185" y="83.6" font-size="13" fill="#71717a" text-anchor="middle">首部</text>
+<path d="M500 112q0 -8 8 -8H557q8 0 8 -8q0 8 8 8H622q8 0 8 8" fill="none" stroke="#71717a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="565" y="83.6" font-size="13" fill="#71717a" text-anchor="middle">尾部</text>
+<text x="36" y="137" font-size="10" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"><tspan x="36" dy="0">定界符</tspan><tspan x="36" dy="13">0111 1110</tspan></text>
+<text x="70" y="186" font-size="11" fill="#3f3f46">先发送 →</text>
+<text x="150" y="186" font-size="11" fill="#d1493a" text-anchor="middle">A、C 字段无实际用途</text>
+<text x="600" y="186" font-size="11" fill="#d1493a" text-anchor="middle">FCS：CRC 循环冗余检验（16 bit）</text>
+<text x="400" y="222" font-size="11.5" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">PPP 帧</text>
+<path d="M70 222L680 222" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="400" y="248" font-size="11" fill="#2f8f57" text-anchor="middle">信息部分中若出现 7E/7D，插入转义字符 7D（字节填充）；比特同步时用零比特填充（连续 5 个 1 后插 0）</text>
+<text x="400" y="276" font-size="11" fill="#71717a" text-anchor="middle">PPP 不使用 CSMA/CD，因此没有最短帧长限制</text>
+</svg>

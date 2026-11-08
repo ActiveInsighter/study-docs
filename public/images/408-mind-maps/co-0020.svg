@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="780" height="370" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="无符号数乘法电路的基本结构（4 位）">
+<title>无符号数乘法电路的基本结构（4 位）</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="778.5" height="368.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">无符号数乘法电路（4 位）</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="40" y="90" font-size="13" fill="#3f3f46"><tspan x="40" dy="0">被乘数 × 乘数 = 乘积</tspan><tspan x="40" dy="19.5">  13   ×  7   = 91</tspan></text>
+<text x="40" y="150" font-size="13" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"><tspan x="40" dy="0">    1101</tspan><tspan x="40" dy="16.9">  × 0111</tspan><tspan x="40" dy="16.9">────────</tspan><tspan x="40" dy="16.9">    1101</tspan><tspan x="40" dy="16.9">   1101</tspan><tspan x="40" dy="16.9">  1101</tspan><tspan x="40" dy="16.9"> 0000</tspan><tspan x="40" dy="16.9">────────</tspan><tspan x="40" dy="16.9"> 1011011</tspan></text>
+<rect x="330" y="66" width="30" height="28" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="360" y="66" width="30" height="28" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="390" y="66" width="30" height="28" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="420" y="66" width="30" height="28" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="330" y="66" width="120" height="28" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M360 66L360 94" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M390 66L390 94" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M420 66L420 94" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="345" y="84.5" font-size="13" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="375" y="84.5" font-size="13" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="405" y="84.5" font-size="13" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="435" y="84.5" font-size="13" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="480" y="84.2" font-size="12" fill="#71717a">被乘数寄存器 X</text>
+<path d="M290 130H420L404 168H384L355 152L326 168H306Z" fill="#fde7e4" stroke="#d1493a" stroke-width="1.4"/>
+<text x="355" y="148.2" font-size="12" fill="#7f1d1d" text-anchor="middle" font-weight="700">4 位 ALU</text>
+<path d="M390 94L390 128" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M355 168L355 214" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="260" y="216" width="26" height="28" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="273" y="234.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">C</text>
+<rect x="300" y="216" width="30" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="330" y="216" width="30" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="360" y="216" width="30" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="390" y="216" width="30" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="420" y="216" width="30" height="28" rx="0" fill="#fdf1d8" stroke="none" stroke-width="0"/>
+<rect x="450" y="216" width="30" height="28" rx="0" fill="#fdf1d8" stroke="none" stroke-width="0"/>
+<rect x="480" y="216" width="30" height="28" rx="0" fill="#fdf1d8" stroke="none" stroke-width="0"/>
+<rect x="510" y="216" width="30" height="28" rx="0" fill="#fdf1d8" stroke="none" stroke-width="0"/>
+<rect x="300" y="216" width="240" height="28" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M330 216L330 244" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M360 216L360 244" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M390 216L390 244" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M420 216L420 244" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M450 216L450 244" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M480 216L480 244" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M510 216L510 244" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="315" y="234.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="345" y="234.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="375" y="234.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="405" y="234.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="435" y="234.6" font-size="13" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="465" y="234.6" font-size="13" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="495" y="234.6" font-size="13" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="525" y="234.6" font-size="13" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="420" y="206" font-size="11.5" fill="#71717a" text-anchor="middle">乘积寄存器 P（8 位）</text>
+<path d="M272 216L272 156Q272 150 278 150L300 150" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M320 246L320 264Q320 270 314 270L246 270Q240 270 240 264L240 126Q240 120 246 120L312 120Q316 120 316 124L316 128" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<ellipse cx="640" cy="230" rx="70" ry="30" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="640" y="226.1" font-size="12" fill="#3b0764" text-anchor="middle" font-weight="500"><tspan x="640" dy="0">控制逻辑</tspan><tspan x="640" dy="16.2">计数器 C<tspan baseline-shift="-22%" font-size="72%">n</tspan></tspan></text>
+<path d="M570 222L542 222" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3" marker-end="url(#a3f3f46)"/>
+<text x="556" y="212" font-size="11" fill="#3f3f46" text-anchor="middle">右移</text>
+<path d="M570 240L542 240" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3" marker-end="url(#a3f3f46)"/>
+<text x="556" y="256" font-size="11" fill="#3f3f46" text-anchor="middle">写使能</text>
+<path d="M640 200L640 156Q640 150 634 150L424 150" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3" marker-end="url(#a3f3f46)"/>
+<text x="520" y="142" font-size="11" fill="#3f3f46" text-anchor="middle">加</text>
+<path d="M640 300L640 262" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="648" y="300" font-size="11" fill="#3f3f46">时钟</text>
+<text x="400" y="340" font-size="12" fill="#71717a" text-anchor="middle">控制逻辑发出“加法、右移、写使能”信号；计数器 C<tspan baseline-shift="-22%" font-size="72%">n</tspan> 从 4 开始计数，进行 4 轮加法与右移</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" width="700" height="400" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="页式虚拟存储器的地址转换：页表基址 + 虚页号 → 物理页号，拼接页内地址">
+<title>页式虚拟存储器的地址转换：页表基址 + 虚页号 → 物理页号，拼接页内地址</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="698.5" height="398.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">页式虚拟存储：地址转换</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="110" y="62" font-size="12.5" fill="#18181b" text-anchor="middle" font-weight="600">页表基址寄存器</text>
+<rect x="40" y="72" width="150" height="32" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="115" y="92.5" font-size="13" fill="#18181b" text-anchor="middle">页表基址</text>
+<text x="460" y="62" font-size="12.5" fill="#18181b" text-anchor="middle" font-weight="600">虚拟页号　页内地址</text>
+<rect x="400" y="72" width="100" height="32" rx="0" fill="#fdf1d8" stroke="none" stroke-width="0"/>
+<rect x="500" y="72" width="100" height="32" rx="0" fill="#efe9fb" stroke="none" stroke-width="0"/>
+<rect x="400" y="72" width="200" height="32" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M500 72L500 104" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="450" y="92.5" font-size="13" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">00000010</text>
+<text x="550" y="92.5" font-size="13" fill="#3b0764" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1010110</text>
+<text x="612" y="92.2" font-size="12" fill="#3f3f46">虚拟地址</text>
+<rect x="320" y="240" width="90" height="30" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<path d="M250 180V158Q250 150 258 150H402Q410 150 410 158V180Z" fill="#f4f4f5"/>
+<path d="M250 180L410 180" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250 210L410 210" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250 240L410 240" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250 270L410 270" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250 300L410 300" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250 330L410 330" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M320 150L320 360" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="250" y="150" width="160" height="210" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="285" y="169.6" font-size="13" fill="#18181b" text-anchor="middle" font-weight="600">装入位</text>
+<text x="365" y="169.6" font-size="13" fill="#18181b" text-anchor="middle" font-weight="600">物理页号</text>
+<text x="285" y="199.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="365" y="199.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">10101</text>
+<text x="285" y="229.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="365" y="229.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">*****</text>
+<text x="285" y="259.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="365" y="259.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">11010</text>
+<text x="285" y="289.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="365" y="289.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">00101</text>
+<text x="285" y="319.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="365" y="319.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">*****</text>
+<text x="285" y="349.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">⋮</text>
+<text x="365" y="349.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">⋮</text>
+<text x="330" y="372" font-size="12.5" fill="#3f3f46" text-anchor="middle">页表</text>
+<path d="M60 104L60 160Q60 166 66 166L248 166" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="50" y="126" font-size="13" fill="#3f3f46" text-anchor="end">①</text>
+<path d="M450 104L450 124Q450 130 444 130L226 130Q220 130 220 136L220 249Q220 255 226 255L248 255" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="462" y="124" font-size="13" fill="#3f3f46">②</text>
+<path d="M410 255L474 255Q480 255 480 261L480 298" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="440" y="246" font-size="13" fill="#3f3f46">③</text>
+<path d="M560 104L560 298" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="572" y="200" font-size="13" fill="#3f3f46">④</text>
+<rect x="430" y="300" width="90" height="32" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="520" y="300" width="90" height="32" rx="0" fill="#efe9fb" stroke="none" stroke-width="0"/>
+<rect x="430" y="300" width="180" height="32" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M520 300L520 332" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="475" y="320.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">11010</text>
+<text x="565" y="320.6" font-size="13" fill="#3b0764" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1010110</text>
+<text x="612" y="320.2" font-size="12" fill="#3f3f46">物理地址</text>
+<text x="475" y="350" font-size="11.5" fill="#71717a" text-anchor="middle">物理页号</text>
+<text x="565" y="350" font-size="11.5" fill="#71717a" text-anchor="middle">页内地址</text>
+</svg>

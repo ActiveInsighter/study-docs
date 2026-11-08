@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" width="600" height="280" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="完全二叉树：编号与满二叉树一一对应">
+<title>完全二叉树：编号与满二叉树一一对应</title>
+<rect x="0.75" y="0.75" width="598.5" height="278.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">完全二叉树（n = 12）</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M57.9 205.4L49.1 234.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M66.1 205.4L74.9 234.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M125.9 205.4L117.1 234.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M134.1 205.4L142.9 234.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M88.7 148L69.3 180" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M103.3 148L122.7 180" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M193.9 205.4L185.1 234.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M217.7 148.7L203.8 179.3" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M229.3 148.7L243.2 179.3" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M149.2 89.2L106.5 126.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M170.3 89.2L213 126.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="45" cy="248" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="45" y="252.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">8</text>
+<circle cx="79" cy="248" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="79" y="252.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">9</text>
+<circle cx="62" cy="192" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="62" y="196.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">4</text>
+<circle cx="113" cy="248" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="113" y="252.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">10</text>
+<circle cx="147" cy="248" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="147" y="252.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">11</text>
+<circle cx="130" cy="192" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="130" y="196.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">5</text>
+<circle cx="96" cy="136" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="96" y="140.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">2</text>
+<circle cx="181" cy="248" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="181" y="252.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">12</text>
+<circle cx="198" cy="192" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="198" y="196.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">6</text>
+<circle cx="249" cy="192" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="249" y="196.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">7</text>
+<circle cx="223.5" cy="136" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="223.5" y="140.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">3</text>
+<circle cx="159.8" cy="80" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="159.8" y="84.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">1</text>
+<text x="300" y="264" font-size="12.5" fill="#71717a" text-anchor="middle">只有最后一层可以不满，且结点都靠左排列</text>
+</svg>

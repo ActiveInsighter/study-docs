@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="有固定基础设施的 WLAN：基本服务集 BSS、扩展服务集 ESS、分配系统 DS、漫游">
+<title>有固定基础设施的 WLAN：基本服务集 BSS、扩展服务集 ESS、分配系统 DS、漫游</title>
+<defs><marker id="a18181b" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#18181b"/></marker><marker id="a3b6fd4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3b6fd4"/></marker><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="758.5" height="378.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">基本服务集和扩展服务集</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<ellipse cx="220" cy="250" rx="180" ry="90" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<ellipse cx="460" cy="240" rx="170" ry="96" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<rect x="130" y="54" width="80" height="26" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="170" y="71" font-size="11.5" fill="#78350f" text-anchor="middle">Portal</text>
+<path d="M128 67L40 67" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="40" y="56" font-size="10.5" fill="#3f3f46">至其他 802.x 局域网</text>
+<path d="M212 67L600 67" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="400" y="58" font-size="11.5" fill="#c98a12" text-anchor="middle" font-weight="600">分配系统 DS</text>
+<circle cx="660" cy="70" r="30" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="660" y="73.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500">因特网</text>
+<rect x="280" y="150" width="44" height="22" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="302" y="164.7" font-size="10.5" fill="#1e3a8a" text-anchor="middle">AP1</text>
+<rect x="470" y="150" width="44" height="22" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="492" y="164.7" font-size="10.5" fill="#1e3a8a" text-anchor="middle">AP2</text>
+<path d="M302 70L302 148" fill="none" stroke="#3b6fd4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<path d="M492 70L492 148" fill="none" stroke="#3b6fd4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="400" y="96" font-size="11" fill="#3b6fd4" text-anchor="middle">有线</text>
+<rect x="96" y="260" width="28" height="20" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<path d="M302 172L110 260" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<rect x="186" y="300" width="28" height="20" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<path d="M302 172L200 300" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<rect x="276" y="290" width="28" height="20" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<path d="M302 172L290 290" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<rect x="346" y="200" width="28" height="20" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<path d="M302 172L360 200" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<rect x="406" y="260" width="28" height="20" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<path d="M492 172L420 260" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<rect x="506" y="210" width="28" height="20" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<path d="M492 172L520 210" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<rect x="546" y="270" width="28" height="20" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<path d="M492 172L560 270" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<rect x="486" y="300" width="28" height="20" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<path d="M492 172L500 300" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<text x="110" y="296" font-size="12" fill="#18181b" text-anchor="middle" font-weight="700">A</text>
+<text x="500" y="336" font-size="12" fill="#18181b" text-anchor="middle" font-weight="700">A'</text>
+<text x="560" y="306" font-size="12" fill="#18181b" text-anchor="middle" font-weight="700">B</text>
+<text x="290" y="326" font-size="12" fill="#18181b" text-anchor="middle" font-weight="700">C</text>
+<path d="M124 272L486 312" fill="none" stroke="#18181b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 4" marker-end="url(#a18181b)"/>
+<text x="330" y="296" font-size="11.5" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">漫游</text>
+<rect x="150" y="200" width="101.3" height="23" rx="11.5" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.2"/>
+<text x="200.6" y="215.3" font-size="11" fill="#78350f" text-anchor="middle" font-weight="500">基本服务集 BSS</text>
+<rect x="510" y="180" width="101.3" height="23" rx="11.5" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.2"/>
+<text x="560.6" y="195.3" font-size="11" fill="#78350f" text-anchor="middle" font-weight="500">基本服务集 BSS</text>
+<text x="30" y="120" font-size="11.5" fill="#3b6fd4" font-weight="600">扩展的服务集 ESS</text>
+<text x="380" y="364" font-size="11" fill="#71717a" text-anchor="middle">移动站 A 从 BSS 漫游到 BSS′ 时，仍可保持与 B 的通信，但 A 使用的 AP 改变了</text>
+</svg>

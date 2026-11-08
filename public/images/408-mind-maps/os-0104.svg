@@ -1,0 +1,295 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="900" height="380" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="实例：UNIX 文件系统的目录与索引结点">
+<title>实例：UNIX 文件系统的目录与索引结点</title>
+<rect x="0.75" y="0.75" width="898.5" height="378.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">实例：UNIX 文件系统的目录 &amp; 索引结点</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M115.6 90.8L60.4 132.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M130 98L130 127" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M144.4 90.8L199.6 132.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="32" y="128" width="36" height="24" rx="4" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="50" y="143.5" font-size="10" fill="#3f3f46" text-anchor="middle">A</text>
+<rect x="112" y="128" width="36" height="24" rx="4" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="130" y="143.5" font-size="10" fill="#3f3f46" text-anchor="middle">B</text>
+<rect x="192" y="128" width="36" height="24" rx="4" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="210" y="143.5" font-size="10" fill="#3f3f46" text-anchor="middle">C</text>
+<rect x="109" y="68" width="42" height="24" rx="4" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="130" y="83.5" font-size="10" fill="#3f3f46" text-anchor="middle">根目录</text>
+<rect x="20" y="222" width="200" height="26" rx="0" fill="#fafafa" stroke="none" stroke-width="0"/>
+<path d="M20 196V178Q20 170 28 170H212Q220 170 220 178V196Z" fill="#e8effc"/>
+<path d="M20 196L220 196" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20 222L220 222" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20 248L220 248" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M120 170L120 274" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="20" y="170" width="200" height="104" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="70" y="187" font-size="11.5" fill="#1e3a8a" text-anchor="middle" font-weight="600">文件名（14B）</text>
+<text x="170" y="187" font-size="11.5" fill="#1e3a8a" text-anchor="middle" font-weight="600">inode 号（2B）</text>
+<text x="70" y="213" font-size="11.5" fill="#18181b" text-anchor="middle">A</text>
+<text x="170" y="213" font-size="11.5" fill="#18181b" text-anchor="middle">1</text>
+<text x="70" y="239" font-size="11.5" fill="#18181b" text-anchor="middle">B</text>
+<text x="170" y="239" font-size="11.5" fill="#18181b" text-anchor="middle">2</text>
+<text x="70" y="265" font-size="11.5" fill="#18181b" text-anchor="middle">C</text>
+<text x="170" y="265" font-size="11.5" fill="#18181b" text-anchor="middle">4</text>
+<text x="120" y="290" font-size="11" fill="#3f3f46" text-anchor="middle">根目录：包含 3 个目录项</text>
+<rect x="260" y="60" width="100" height="22" rx="0" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="310" y="74.8" font-size="11" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<rect x="262" y="84" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="295" y="95" font-size="8.5" fill="#18181b" text-anchor="middle">所有者</text>
+<rect x="328" y="84" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="262" y="100" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="295" y="111" font-size="8.5" fill="#18181b" text-anchor="middle">创建时间</text>
+<rect x="328" y="100" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="262" y="116" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="295" y="127" font-size="8.5" fill="#18181b" text-anchor="middle">总块数</text>
+<rect x="328" y="116" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="343" y="127.2" font-size="9" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="262" y="132" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="295" y="143" font-size="8.5" fill="#18181b" text-anchor="middle">共享计数</text>
+<rect x="328" y="132" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="262" y="148" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="295" y="159" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 0</text>
+<rect x="328" y="148" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="343" y="159.2" font-size="9" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">5</text>
+<rect x="262" y="164" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="295" y="175" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 1</text>
+<rect x="328" y="164" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="262" y="180" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="295" y="191" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 2</text>
+<rect x="328" y="180" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="262" y="196" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="295" y="207" font-size="8.5" fill="#78350f" text-anchor="middle">…</text>
+<rect x="328" y="196" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="262" y="212" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="295" y="223" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 9</text>
+<rect x="328" y="212" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="262" y="228" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="295" y="239" font-size="8.5" fill="#78350f" text-anchor="middle">一级间接</text>
+<rect x="328" y="228" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="262" y="244" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="295" y="255" font-size="8.5" fill="#78350f" text-anchor="middle">二级间接</text>
+<rect x="328" y="244" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="262" y="260" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="295" y="271" font-size="8.5" fill="#78350f" text-anchor="middle">三级间接</text>
+<rect x="328" y="260" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="310" y="290" font-size="9.5" fill="#d1493a" text-anchor="middle">根目录的 inode</text>
+<rect x="364" y="60" width="100" height="22" rx="0" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="414" y="74.8" font-size="11" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="366" y="84" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="399" y="95" font-size="8.5" fill="#18181b" text-anchor="middle">所有者</text>
+<rect x="432" y="84" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="366" y="100" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="399" y="111" font-size="8.5" fill="#18181b" text-anchor="middle">创建时间</text>
+<rect x="432" y="100" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="366" y="116" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="399" y="127" font-size="8.5" fill="#18181b" text-anchor="middle">总块数</text>
+<rect x="432" y="116" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="447" y="127.2" font-size="9" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<rect x="366" y="132" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="399" y="143" font-size="8.5" fill="#18181b" text-anchor="middle">共享计数</text>
+<rect x="432" y="132" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="366" y="148" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="399" y="159" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 0</text>
+<rect x="432" y="148" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="447" y="159.2" font-size="9" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6</text>
+<rect x="366" y="164" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="399" y="175" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 1</text>
+<rect x="432" y="164" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="447" y="175.2" font-size="9" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">7</text>
+<rect x="366" y="180" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="399" y="191" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 2</text>
+<rect x="432" y="180" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="366" y="196" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="399" y="207" font-size="8.5" fill="#78350f" text-anchor="middle">…</text>
+<rect x="432" y="196" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="366" y="212" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="399" y="223" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 9</text>
+<rect x="432" y="212" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="366" y="228" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="399" y="239" font-size="8.5" fill="#78350f" text-anchor="middle">一级间接</text>
+<rect x="432" y="228" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="366" y="244" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="399" y="255" font-size="8.5" fill="#78350f" text-anchor="middle">二级间接</text>
+<rect x="432" y="244" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="366" y="260" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="399" y="271" font-size="8.5" fill="#78350f" text-anchor="middle">三级间接</text>
+<rect x="432" y="260" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="414" y="290" font-size="9.5" fill="#d1493a" text-anchor="middle">文件 A 的 inode</text>
+<rect x="468" y="60" width="100" height="22" rx="0" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="518" y="74.8" font-size="11" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<rect x="470" y="84" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="503" y="95" font-size="8.5" fill="#18181b" text-anchor="middle">所有者</text>
+<rect x="536" y="84" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="470" y="100" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="503" y="111" font-size="8.5" fill="#18181b" text-anchor="middle">创建时间</text>
+<rect x="536" y="100" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="470" y="116" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="503" y="127" font-size="8.5" fill="#18181b" text-anchor="middle">总块数</text>
+<rect x="536" y="116" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="551" y="127.2" font-size="9" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<rect x="470" y="132" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="503" y="143" font-size="8.5" fill="#18181b" text-anchor="middle">共享计数</text>
+<rect x="536" y="132" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="470" y="148" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="503" y="159" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 0</text>
+<rect x="536" y="148" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="551" y="159.2" font-size="9" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">10</text>
+<rect x="470" y="164" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="503" y="175" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 1</text>
+<rect x="536" y="164" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="551" y="175.2" font-size="9" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">12</text>
+<rect x="470" y="180" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="503" y="191" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 2</text>
+<rect x="536" y="180" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="551" y="191.2" font-size="9" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8</text>
+<rect x="470" y="196" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="503" y="207" font-size="8.5" fill="#78350f" text-anchor="middle">…</text>
+<rect x="536" y="196" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="470" y="212" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="503" y="223" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 9</text>
+<rect x="536" y="212" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="470" y="228" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="503" y="239" font-size="8.5" fill="#78350f" text-anchor="middle">一级间接</text>
+<rect x="536" y="228" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="470" y="244" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="503" y="255" font-size="8.5" fill="#78350f" text-anchor="middle">二级间接</text>
+<rect x="536" y="244" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="470" y="260" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="503" y="271" font-size="8.5" fill="#78350f" text-anchor="middle">三级间接</text>
+<rect x="536" y="260" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="518" y="290" font-size="9.5" fill="#d1493a" text-anchor="middle">文件 B 的 inode</text>
+<rect x="572" y="60" width="100" height="22" rx="0" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="622" y="74.8" font-size="11" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<rect x="574" y="84" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="607" y="95" font-size="8.5" fill="#18181b" text-anchor="middle">所有者</text>
+<rect x="640" y="84" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="574" y="100" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="607" y="111" font-size="8.5" fill="#18181b" text-anchor="middle">创建时间</text>
+<rect x="640" y="100" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="574" y="116" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="607" y="127" font-size="8.5" fill="#18181b" text-anchor="middle">总块数</text>
+<rect x="640" y="116" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="574" y="132" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="607" y="143" font-size="8.5" fill="#18181b" text-anchor="middle">共享计数</text>
+<rect x="640" y="132" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="574" y="148" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="607" y="159" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 0</text>
+<rect x="640" y="148" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="574" y="164" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="607" y="175" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 1</text>
+<rect x="640" y="164" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="574" y="180" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="607" y="191" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 2</text>
+<rect x="640" y="180" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="574" y="196" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="607" y="207" font-size="8.5" fill="#78350f" text-anchor="middle">…</text>
+<rect x="640" y="196" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="574" y="212" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="607" y="223" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 9</text>
+<rect x="640" y="212" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="574" y="228" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="607" y="239" font-size="8.5" fill="#78350f" text-anchor="middle">一级间接</text>
+<rect x="640" y="228" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="574" y="244" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="607" y="255" font-size="8.5" fill="#78350f" text-anchor="middle">二级间接</text>
+<rect x="640" y="244" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="574" y="260" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="607" y="271" font-size="8.5" fill="#78350f" text-anchor="middle">三级间接</text>
+<rect x="640" y="260" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="622" y="290" font-size="9.5" fill="#2f8f57" text-anchor="middle">暂未使用</text>
+<rect x="676" y="60" width="100" height="22" rx="0" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="726" y="74.8" font-size="11" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
+<rect x="678" y="84" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="711" y="95" font-size="8.5" fill="#18181b" text-anchor="middle">所有者</text>
+<rect x="744" y="84" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="678" y="100" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="711" y="111" font-size="8.5" fill="#18181b" text-anchor="middle">创建时间</text>
+<rect x="744" y="100" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="678" y="116" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="711" y="127" font-size="8.5" fill="#18181b" text-anchor="middle">总块数</text>
+<rect x="744" y="116" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="759" y="127.2" font-size="9" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">12</text>
+<rect x="678" y="132" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="711" y="143" font-size="8.5" fill="#18181b" text-anchor="middle">共享计数</text>
+<rect x="744" y="132" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="678" y="148" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="711" y="159" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 0</text>
+<rect x="744" y="148" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="759" y="159.2" font-size="9" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">16</text>
+<rect x="678" y="164" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="711" y="175" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 1</text>
+<rect x="744" y="164" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="678" y="180" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="711" y="191" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 2</text>
+<rect x="744" y="180" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="678" y="196" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="711" y="207" font-size="8.5" fill="#78350f" text-anchor="middle">…</text>
+<rect x="744" y="196" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="678" y="212" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="711" y="223" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 9</text>
+<rect x="744" y="212" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="759" y="223.2" font-size="9" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">19</text>
+<rect x="678" y="228" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="711" y="239" font-size="8.5" fill="#78350f" text-anchor="middle">一级间接</text>
+<rect x="744" y="228" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="759" y="239.2" font-size="9" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">21</text>
+<rect x="678" y="244" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="711" y="255" font-size="8.5" fill="#78350f" text-anchor="middle">二级间接</text>
+<rect x="744" y="244" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="759" y="255.2" font-size="9" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">NULL</text>
+<rect x="678" y="260" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="711" y="271" font-size="8.5" fill="#78350f" text-anchor="middle">三级间接</text>
+<rect x="744" y="260" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="759" y="271.1" font-size="9" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">NULL</text>
+<text x="726" y="290" font-size="9.5" fill="#d1493a" text-anchor="middle">文件 C 的 inode</text>
+<rect x="780" y="60" width="100" height="22" rx="0" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="830" y="74.8" font-size="11" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">5</text>
+<rect x="782" y="84" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="815" y="95" font-size="8.5" fill="#18181b" text-anchor="middle">所有者</text>
+<rect x="848" y="84" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="782" y="100" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="815" y="111" font-size="8.5" fill="#18181b" text-anchor="middle">创建时间</text>
+<rect x="848" y="100" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="782" y="116" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="815" y="127" font-size="8.5" fill="#18181b" text-anchor="middle">总块数</text>
+<rect x="848" y="116" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="782" y="132" width="66" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="815" y="143" font-size="8.5" fill="#18181b" text-anchor="middle">共享计数</text>
+<rect x="848" y="132" width="30" height="16" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="782" y="148" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="815" y="159" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 0</text>
+<rect x="848" y="148" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="782" y="164" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="815" y="175" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 1</text>
+<rect x="848" y="164" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="782" y="180" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="815" y="191" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 2</text>
+<rect x="848" y="180" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="782" y="196" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="815" y="207" font-size="8.5" fill="#78350f" text-anchor="middle">…</text>
+<rect x="848" y="196" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="782" y="212" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="815" y="223" font-size="8.5" fill="#78350f" text-anchor="middle">直接索引 9</text>
+<rect x="848" y="212" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="782" y="228" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="815" y="239" font-size="8.5" fill="#78350f" text-anchor="middle">一级间接</text>
+<rect x="848" y="228" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="782" y="244" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="815" y="255" font-size="8.5" fill="#78350f" text-anchor="middle">二级间接</text>
+<rect x="848" y="244" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<rect x="782" y="260" width="66" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="815" y="271" font-size="8.5" fill="#78350f" text-anchor="middle">三级间接</text>
+<rect x="848" y="260" width="30" height="16" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="830" y="290" font-size="9.5" fill="#2f8f57" text-anchor="middle">暂未使用</text>
+<text x="62" y="325.4" font-size="10.5" fill="#3f3f46" text-anchor="end"><tspan x="62" dy="0">UNIX 文件</tspan><tspan x="62" dy="12.6">系统</tspan></text>
+<rect x="70" y="312" width="190" height="34" rx="0" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="165" y="332.9" font-size="11" fill="#18181b" text-anchor="middle">引导块（开机初始化 OS）</text>
+<rect x="260" y="312" width="60" height="34" rx="0" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="290" y="332.9" font-size="11" fill="#18181b" text-anchor="middle">超级块</text>
+<rect x="320" y="312" width="150" height="34" rx="0" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="395" y="332.9" font-size="11" fill="#18181b" text-anchor="middle">空闲空间管理（如位示图）</text>
+<rect x="470" y="312" width="70" height="34" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="505" y="332.9" font-size="11" fill="#78350f" text-anchor="middle">i 结点区</text>
+<rect x="540" y="312" width="70" height="34" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="575" y="332.9" font-size="11" fill="#1e3a8a" text-anchor="middle">根目录</text>
+<rect x="610" y="312" width="280" height="34" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="750" y="332.9" font-size="11" fill="#18181b" text-anchor="middle">其他文件、目录</text>
+</svg>

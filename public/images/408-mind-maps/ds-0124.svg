@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="并查集的存储结构：用森林表示，每个子集一棵树">
+<title>并查集的存储结构：用森林表示，每个子集一棵树</title>
+<rect x="0.75" y="0.75" width="638.5" height="298.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">用森林存储：每个子集是一棵树</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M71.1 222.6L60.9 247.4" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M84.9 222.6L95.1 247.4" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M104.5 163.3L87.5 190.7" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M123.5 163.3L140.5 190.7" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M114 108L114 130" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="54" cy="264" r="18" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="54" y="269.2" font-size="15" fill="#14532d" text-anchor="middle" font-weight="500">K</text>
+<circle cx="102" cy="264" r="18" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="102" y="269.2" font-size="15" fill="#14532d" text-anchor="middle" font-weight="500">L</text>
+<circle cx="78" cy="206" r="18" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="78" y="211.2" font-size="15" fill="#14532d" text-anchor="middle" font-weight="500">E</text>
+<circle cx="150" cy="206" r="18" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="150" y="211.2" font-size="15" fill="#14532d" text-anchor="middle" font-weight="500">F</text>
+<circle cx="114" cy="148" r="18" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="114" y="153.2" font-size="15" fill="#14532d" text-anchor="middle" font-weight="500">B</text>
+<circle cx="114" cy="90" r="18" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="114" y="95.2" font-size="15" fill="#14532d" text-anchor="middle" font-weight="500">A</text>
+<path d="M284 128L284 172" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="284" cy="190" r="18" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="284" y="195.2" font-size="15" fill="#3b0764" text-anchor="middle" font-weight="500">G</text>
+<circle cx="284" cy="110" r="18" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="284" y="115.2" font-size="15" fill="#3b0764" text-anchor="middle" font-weight="500">C</text>
+<path d="M390 184L390 214" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M437.9 113.3L402.1 152.7" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M450 118L450 148" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M462.1 113.3L497.9 152.7" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="390" cy="232" r="18" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="390" y="237.2" font-size="15" fill="#78350f" text-anchor="middle" font-weight="500">M</text>
+<circle cx="390" cy="166" r="18" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="390" y="171.2" font-size="15" fill="#78350f" text-anchor="middle" font-weight="500">H</text>
+<circle cx="450" cy="166" r="18" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="450" y="171.2" font-size="15" fill="#78350f" text-anchor="middle" font-weight="500">I</text>
+<circle cx="510" cy="166" r="18" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="510" y="171.2" font-size="15" fill="#78350f" text-anchor="middle" font-weight="500">J</text>
+<circle cx="450" cy="100" r="18" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="450" y="105.2" font-size="15" fill="#78350f" text-anchor="middle" font-weight="500">D</text>
+<text x="320" y="288" font-size="12.5" fill="#71717a" text-anchor="middle">同一棵树中的元素属于同一个集合；根结点代表该集合</text>
+</svg>

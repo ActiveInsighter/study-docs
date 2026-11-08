@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="二叉树的链式存储（二叉链表）">
+<title>二叉树的链式存储（二叉链表）</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="758.5" height="398.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">二叉链表</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M94.4 213L85.6 237" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M77.8 158L92.2 184" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M185.6 159L194.4 183" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M113.6 101.2L81.4 132.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M136.4 101.2L168.6 132.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="80" cy="252" r="16" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="80" y="257.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">6</text>
+<circle cx="100" cy="198" r="16" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="100" y="203.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">4</text>
+<circle cx="70" cy="144" r="16" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="70" y="149.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">2</text>
+<circle cx="200" cy="198" r="16" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="200" y="203.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">5</text>
+<circle cx="180" cy="144" r="16" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="180" y="149.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">3</text>
+<circle cx="125" cy="90" r="16" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="125" y="95.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">1</text>
+<rect x="425" y="76" width="30" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="455" y="76" width="30" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="485" y="76" width="30" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="425" y="76" width="90" height="26" rx="4" fill="none" stroke="#3f3f46" stroke-width="1.4"/>
+<path d="M455 76L455 102" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M485 76L485 102" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="440" cy="89" r="3.6" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<text x="470" y="93.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="500">1</text>
+<circle cx="500" cy="89" r="3.6" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<rect x="335" y="136" width="30" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="365" y="136" width="30" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="395" y="136" width="30" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="335" y="136" width="90" height="26" rx="4" fill="none" stroke="#3f3f46" stroke-width="1.4"/>
+<path d="M365 136L365 162" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M395 136L395 162" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="350" y="153.6" font-size="13" fill="#a1a1aa" text-anchor="middle">∧</text>
+<text x="380" y="153.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="500">2</text>
+<circle cx="410" cy="149" r="3.6" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<rect x="515" y="136" width="30" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="545" y="136" width="30" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="575" y="136" width="30" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="515" y="136" width="90" height="26" rx="4" fill="none" stroke="#3f3f46" stroke-width="1.4"/>
+<path d="M545 136L545 162" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M575 136L575 162" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="530" y="153.6" font-size="13" fill="#a1a1aa" text-anchor="middle">∧</text>
+<text x="560" y="153.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="500">3</text>
+<circle cx="590" cy="149" r="3.6" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<rect x="385" y="196" width="30" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="415" y="196" width="30" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="445" y="196" width="30" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="385" y="196" width="90" height="26" rx="4" fill="none" stroke="#3f3f46" stroke-width="1.4"/>
+<path d="M415 196L415 222" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M445 196L445 222" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="400" cy="209" r="3.6" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<text x="430" y="213.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="500">4</text>
+<text x="460" y="213.6" font-size="13" fill="#a1a1aa" text-anchor="middle">∧</text>
+<rect x="575" y="196" width="30" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="605" y="196" width="30" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="635" y="196" width="30" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="575" y="196" width="90" height="26" rx="4" fill="none" stroke="#3f3f46" stroke-width="1.4"/>
+<path d="M605 196L605 222" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M635 196L635 222" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="590" y="213.6" font-size="13" fill="#a1a1aa" text-anchor="middle">∧</text>
+<text x="620" y="213.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="500">5</text>
+<text x="650" y="213.6" font-size="13" fill="#a1a1aa" text-anchor="middle">∧</text>
+<rect x="335" y="256" width="30" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="365" y="256" width="30" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
+<rect x="395" y="256" width="30" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="335" y="256" width="90" height="26" rx="4" fill="none" stroke="#3f3f46" stroke-width="1.4"/>
+<path d="M365 256L365 282" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M395 256L395 282" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="350" y="273.6" font-size="13" fill="#a1a1aa" text-anchor="middle">∧</text>
+<text x="380" y="273.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="500">6</text>
+<text x="410" y="273.6" font-size="13" fill="#a1a1aa" text-anchor="middle">∧</text>
+<path d="M440 89L380 136" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M500 89L560 136" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M410 149L430 196" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M590 149L620 196" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M400 209L380 256" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="30" y="312" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">typedef struct BiTNode {</text>
+<text x="30" y="329.4" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">  ElemType data;                     </text>
+<text x="296.4" y="329.4" font-size="12" fill="#8b8b94" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">// 数据域</text>
+<text x="30" y="346.8" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">  struct BiTNode *lchild, *rchild;   </text>
+<text x="296.4" y="346.8" font-size="12" fill="#8b8b94" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">// 左、右孩子指针</text>
+<text x="30" y="364.2" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">} BiTNode, *BiTree;</text>
+</svg>

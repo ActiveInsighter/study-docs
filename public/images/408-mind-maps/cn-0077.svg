@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 380" width="820" height="380" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="若 A 向 B 发送信息的工作流程：ARP 广播请求、单播响应，再封装发送">
+<title>若 A 向 B 发送信息的工作流程：ARP 广播请求、单播响应，再封装发送</title>
+<rect x="0.75" y="0.75" width="818.5" height="378.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">ARP：A 向 B 发送信息</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M60 70L180 70" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M180 70L300 70" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M300 70L260 150" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M300 70L340 150" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M300 70L400 90" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M400 90L470 70" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M470 70L580 70" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M580 70L610 150" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M580 70L700 70" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="46" y="60" width="28" height="20" rx="3" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="60" y="73.8" font-size="11" fill="#134e4a" text-anchor="middle">1</text>
+<rect x="150" y="57" width="60" height="26" rx="3" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="180" y="73.8" font-size="11" fill="#1e3a8a" text-anchor="middle">集线器</text>
+<rect x="270" y="57" width="60" height="26" rx="3" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="300" y="73.8" font-size="11" fill="#1e3a8a" text-anchor="middle">交换机</text>
+<rect x="246" y="140" width="28" height="20" rx="3" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="260" y="153.8" font-size="11" fill="#134e4a" text-anchor="middle">2</text>
+<rect x="326" y="140" width="28" height="20" rx="3" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="340" y="153.8" font-size="11" fill="#134e4a" text-anchor="middle">3</text>
+<ellipse cx="400" cy="90" rx="16" ry="8" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<ellipse cx="470" cy="70" rx="16" ry="8" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<rect x="550" y="57" width="60" height="26" rx="3" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="580" y="73.8" font-size="11" fill="#1e3a8a" text-anchor="middle">交换机</text>
+<rect x="596" y="140" width="28" height="20" rx="3" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="610" y="153.8" font-size="11" fill="#134e4a" text-anchor="middle">4</text>
+<rect x="686" y="60" width="28" height="20" rx="3" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="700" y="73.8" font-size="11" fill="#134e4a" text-anchor="middle">5</text>
+<text x="300" y="44" font-size="10.5" fill="#3f3f46" text-anchor="middle">默认网关 IP6</text>
+<text x="400" y="112" font-size="9.5" fill="#71717a" text-anchor="middle">MAC6 MAC7</text>
+<text x="470" y="50" font-size="9.5" fill="#71717a" text-anchor="middle">MAC8 MAC9</text>
+<rect x="370" y="122" width="44" height="22" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="414" y="122" width="44" height="22" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="458" y="122" width="44" height="22" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="502" y="122" width="44" height="22" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="370" y="122" width="176" height="22" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M414 122L414 144" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M458 122L458 144" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M502 122L502 144" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="392" y="136.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">IP1</text>
+<text x="436" y="136.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">IP5</text>
+<text x="480" y="136.7" font-size="10.5" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">MAC7</text>
+<text x="524" y="136.7" font-size="10.5" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">MAC8</text>
+<rect x="30" y="108" width="140" height="34" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="100" y="121.9" font-size="9.5" fill="#18181b" text-anchor="middle"><tspan x="100" dy="0">ARP 高速缓存</tspan><tspan x="100" dy="12.8">（IP 地址与 MAC 地址的映射）</tspan></text>
+<rect x="40" y="210" width="80" height="26" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="80" y="226.8" font-size="11" fill="#78350f" text-anchor="middle">应用层</text>
+<rect x="40" y="236" width="80" height="26" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="80" y="252.8" font-size="11" fill="#78350f" text-anchor="middle">传输层</text>
+<rect x="40" y="262" width="80" height="26" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="80" y="278.9" font-size="11" fill="#78350f" text-anchor="middle">网络层</text>
+<rect x="40" y="288" width="80" height="26" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="80" y="304.9" font-size="11" fill="#78350f" text-anchor="middle">数据链路层</text>
+<rect x="40" y="314" width="80" height="26" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="80" y="330.9" font-size="11" fill="#78350f" text-anchor="middle">物理层</text>
+<rect x="130" y="210" width="26" height="22" rx="0" fill="#fde7e4" stroke="none" stroke-width="0"/>
+<rect x="130" y="210" width="26" height="22" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<text x="143" y="226.2" font-size="15" fill="#7f1d1d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="130" y="236" width="26" height="22" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="156" y="236" width="26" height="22" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="182" y="236" width="26" height="22" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="130" y="236" width="78" height="22" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M156 236L156 258" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M182 236L182 258" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="143" y="250.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="169" y="250.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<text x="195" y="250.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<rect x="130" y="262" width="36" height="22" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="166" y="262" width="36" height="22" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="202" y="262" width="36" height="22" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="130" y="262" width="108" height="22" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M166 262L166 284" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M202 262L202 284" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="148" y="276.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="184" y="276.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">IP1</text>
+<text x="220" y="276.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">IP5</text>
+<rect x="130" y="288" width="40" height="22" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="170" y="288" width="40" height="22" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="210" y="288" width="40" height="22" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="250" y="288" width="40" height="22" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="290" y="288" width="40" height="22" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="330" y="288" width="40" height="22" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
+<rect x="130" y="288" width="240" height="22" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M170 288L170 310" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M210 288L210 310" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250 288L250 310" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M290 288L290 310" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M330 288L330 310" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="302.5" font-size="10" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">FCS</text>
+<text x="190" y="302.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="230" y="302.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">IP1</text>
+<text x="270" y="302.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">IP5</text>
+<text x="310" y="302.5" font-size="10" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">MAC1</text>
+<text x="350" y="302.5" font-size="10" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">MAC6</text>
+<path d="M130 325h6v-8h6v8h6v-8h6v8h6v-8h6v8h6v-8h6v8h6v-8h6v8h6v-8h6v8h6v-8h6v8h6v-8h6v8h6v-8h6v8h6v-8h6v8h6v-8h6v8h6v-8h6v8h6v-8h6v8h6v-8h6v8" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="560" y="214" font-size="10.5" fill="#3f3f46" text-anchor="middle">广播 ARP 请求分组 →</text>
+<rect x="460" y="226" width="40" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="480" y="241.7" font-size="10.5" fill="#18181b" text-anchor="middle">IP1</text>
+<rect x="500" y="226" width="40" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="520" y="241.7" font-size="10.5" fill="#18181b" text-anchor="middle">IP6</text>
+<rect x="540" y="226" width="50" height="24" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="565" y="241.7" font-size="10.5" fill="#14532d" text-anchor="middle">MAC1</text>
+<rect x="590" y="226" width="150" height="24" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="665" y="241.7" font-size="10.5" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">FF-FF-FF-FF-FF-FF</text>
+<text x="560" y="276" font-size="10.5" fill="#3f3f46" text-anchor="middle">← 单播 ARP 响应分组</text>
+<rect x="460" y="288" width="40" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="480" y="303.7" font-size="10.5" fill="#18181b" text-anchor="middle">IP6</text>
+<rect x="500" y="288" width="50" height="24" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="525" y="303.7" font-size="10.5" fill="#14532d" text-anchor="middle">MAC6</text>
+<text x="410" y="362" font-size="11" fill="#71717a" text-anchor="middle">B 不在本网：A 用 ARP 得到默认网关（IP6）的 MAC6，帧的目的 MAC 写 MAC6；之后逐跳更换 MAC</text>
+</svg>

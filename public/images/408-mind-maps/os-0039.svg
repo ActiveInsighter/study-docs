@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" width="820" height="420" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="磁盘读写一个扇区的时间：启动时间 + 寻道时间 + 旋转延迟 + 传输时间">
+<title>磁盘读写一个扇区的时间：启动时间 + 寻道时间 + 旋转延迟 + 传输时间</title>
+<defs><marker id="a7856c9" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#7856c9"/></marker></defs>
+<rect x="0.75" y="0.75" width="818.5" height="418.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">磁盘的存取时间</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<circle cx="230" cy="220" r="160" fill="#e8effc" stroke="#3b6fd4" stroke-width="1"/>
+<circle cx="230" cy="220" r="136" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1"/>
+<circle cx="230" cy="220" r="112" fill="#e8effc" stroke="#3b6fd4" stroke-width="1"/>
+<circle cx="230" cy="220" r="88" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1"/>
+<circle cx="230" cy="220" r="64" fill="#e8effc" stroke="#3b6fd4" stroke-width="1"/>
+<circle cx="230" cy="220" r="44" fill="#ffffff" stroke="#52525b" stroke-width="1.2"/>
+<path d="M246.8 179.3L291.2 72.2" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M270.7 203.2L377.8 158.8" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M270.7 236.8L377.8 281.2" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M246.8 260.7L291.2 367.8" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M213.2 260.7L168.8 367.8" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M189.3 236.8L82.2 281.2" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M189.3 203.2L82.2 158.8" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M213.2 179.3L168.8 72.2" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="230" y="46.5" font-size="13" fill="#18181b" text-anchor="middle">7</text>
+<text x="355.9" y="98.7" font-size="13" fill="#18181b" text-anchor="middle">0</text>
+<text x="408" y="224.6" font-size="13" fill="#18181b" text-anchor="middle">1</text>
+<text x="355.9" y="350.4" font-size="13" fill="#18181b" text-anchor="middle">2</text>
+<text x="230" y="402.6" font-size="13" fill="#18181b" text-anchor="middle">3</text>
+<text x="104.1" y="350.4" font-size="13" fill="#18181b" text-anchor="middle">4</text>
+<text x="52" y="224.6" font-size="13" fill="#18181b" text-anchor="middle">5</text>
+<text x="104.1" y="98.7" font-size="13" fill="#18181b" text-anchor="middle">6</text>
+<path d="M390 218H306" fill="none" stroke="#7856c9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a7856c9)"/>
+<text x="380" y="206" font-size="11" fill="#7856c9" text-anchor="middle">② 寻道</text>
+<path d="M305.1 231.4A76 76 0 0 1 257.5 290.8" fill="none" stroke="#7856c9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a7856c9)"/>
+<text x="310" y="300" font-size="11" fill="#7856c9" text-anchor="middle">③ 旋转延迟</text>
+<path d="M242.9 294.9A76 76 0 0 1 164.9 259.2" fill="none" stroke="#d1493a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="140" y="290" font-size="11" fill="#d1493a" text-anchor="middle">④ 传输</text>
+<rect x="388" y="210" width="10" height="20" rx="1" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
+<text x="410" y="223.8" font-size="11" fill="#7856c9">① 启动</text>
+<text x="470" y="76" font-size="12.5" fill="#3f3f46">① 启动时间：s（约 2 ms）</text>
+<text x="470" y="106" font-size="12.5" fill="#3f3f46">② 寻找 / 寻道时间：m × n（跨越 n 条磁道，每条 m）</text>
+<text x="470" y="136" font-size="12.5" fill="#3f3f46">③ 旋转延迟时间 Tᵣ：转速为 r，平均转半圈</text>
+<text x="470" y="166" font-size="12.5" fill="#3f3f46">　 Tᵣ = (1/2) × (1/r) = 1/(2r)</text>
+<text x="470" y="196" font-size="12.5" fill="#3f3f46">　 硬盘 r = 5400 转/min → Tᵣ = 5.55 ms</text>
+<text x="470" y="226" font-size="12.5" fill="#3f3f46">　 软盘 r = 300~600 转/min → Tᵣ = 50~100 ms</text>
+<text x="470" y="256" font-size="12.5" fill="#3f3f46">④ 传输时间 Tₜ：读写 b 字节，每磁道 N 字节</text>
+<text x="470" y="286" font-size="12.5" fill="#3f3f46">　 Tₜ = (1/r) × (b/N) = b/(rN)</text>
+<text x="470" y="316" font-size="12.5" fill="#3f3f46"></text>
+<text x="470" y="346" font-size="14" fill="#d1493a" font-weight="700">Tₐ = s + m×n + 1/(2r) + b/(rN)</text>
+</svg>

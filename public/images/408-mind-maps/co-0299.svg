@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" width="520" height="300" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="多路选择器：k 个 n 位输入，m 位控制信号选择一个输出">
+<title>多路选择器：k 个 n 位输入，m 位控制信号选择一个输出</title>
+<defs><marker id="a3b6fd4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3b6fd4"/></marker><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="518.5" height="298.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<path d="M99.2 120H300.8L340 190H60Z" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="200" y="161.3" font-size="18" fill="#1e3a8a" text-anchor="middle" font-weight="700">MUX</text>
+<path d="M200 120L200 50" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M194 92L206 80" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="209" y="95" font-size="11" fill="#3f3f46">n</text>
+<text x="200" y="36" font-size="13" fill="#d1493a" text-anchor="middle" font-weight="600">单个输出（n bit）</text>
+<path d="M90 250L90 192" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M84 228L96 216" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="99" y="231" font-size="11" fill="#3f3f46">n</text>
+<path d="M130 250L130 192" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M124 228L136 216" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="139" y="231" font-size="11" fill="#3f3f46">n</text>
+<path d="M310 250L310 192" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M304 228L316 216" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="319" y="231" font-size="11" fill="#3f3f46">n</text>
+<text x="220" y="232" font-size="14" fill="#71717a" text-anchor="middle">……</text>
+<text x="200" y="282" font-size="13" fill="#d1493a" text-anchor="middle" font-weight="600">k 个 n bit 输入</text>
+<path d="M470 155L330 155" fill="none" stroke="#3b6fd4" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 4" marker-end="url(#a3b6fd4)"/>
+<path d="M404 161L416 149" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="412" y="145" font-size="11" fill="#3f3f46" text-anchor="middle">m</text>
+<text x="470" y="132" font-size="13" fill="#3b6fd4" text-anchor="end" font-weight="600">控制信号 m bit</text>
+<text x="470" y="182" font-size="12.5" fill="#71717a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">m ≥ ⌈log₂k⌉</text>
+</svg>

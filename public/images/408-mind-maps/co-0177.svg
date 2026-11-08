@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="内存映射 I/O 与独立编址 I/O 的对比">
+<title>内存映射 I/O 与独立编址 I/O 的对比</title>
+<rect x="0.75" y="0.75" width="758.5" height="418.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">内存映射 I/O vs 独立编址 I/O</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="170" y="64" font-size="14" fill="#18181b" text-anchor="middle" font-weight="700">内存映射 I/O</text>
+<text x="36" y="84" font-size="11" fill="#71717a" text-anchor="middle">地址</text>
+<rect x="60" y="90" width="140" height="90" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="130" y="139.6" font-size="13" fill="#1e3a8a" text-anchor="middle">内存</text>
+<rect x="60" y="180" width="60" height="24" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="90" y="195.7" font-size="10.5" fill="#78350f" text-anchor="middle">寄存器0</text>
+<text x="52" y="195.8" font-size="11" fill="#d1493a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">N</text>
+<rect x="60" y="204" width="60" height="24" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="90" y="219.7" font-size="10.5" fill="#78350f" text-anchor="middle">寄存器1</text>
+<text x="52" y="219.8" font-size="11" fill="#d1493a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">N+1</text>
+<rect x="60" y="228" width="60" height="24" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="90" y="243.7" font-size="10.5" fill="#78350f" text-anchor="middle">寄存器2</text>
+<text x="52" y="243.8" font-size="11" fill="#d1493a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">N+2</text>
+<rect x="120" y="180" width="80" height="96" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="160" y="224.4" font-size="11" fill="#78350f" text-anchor="middle"><tspan x="160" dy="0">设备控</tspan><tspan x="160" dy="14.9">制器0</tspan></text>
+<rect x="60" y="280" width="60" height="24" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="90" y="295.7" font-size="10.5" fill="#78350f" text-anchor="middle">寄存器0</text>
+<text x="52" y="295.9" font-size="11" fill="#d1493a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">N+3</text>
+<rect x="60" y="304" width="60" height="24" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="90" y="319.7" font-size="10.5" fill="#78350f" text-anchor="middle">寄存器1</text>
+<text x="52" y="319.9" font-size="11" fill="#d1493a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">N+4</text>
+<rect x="60" y="328" width="60" height="24" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="90" y="343.7" font-size="10.5" fill="#78350f" text-anchor="middle">寄存器2</text>
+<text x="52" y="343.9" font-size="11" fill="#d1493a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">N+5</text>
+<rect x="120" y="280" width="80" height="96" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="160" y="324.4" font-size="11" fill="#78350f" text-anchor="middle"><tspan x="160" dy="0">设备控</tspan><tspan x="160" dy="14.9">制器1</tspan></text>
+<text x="52" y="98" font-size="11" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="52" y="172" font-size="11" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">N−1</text>
+<text x="670" y="64" font-size="14" fill="#18181b" text-anchor="middle" font-weight="700">独立编址 I/O</text>
+<text x="536" y="84" font-size="11" fill="#71717a" text-anchor="middle">地址</text>
+<rect x="560" y="90" width="140" height="90" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="630" y="139.6" font-size="13" fill="#1e3a8a" text-anchor="middle">内存</text>
+<rect x="560" y="180" width="60" height="24" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="590" y="195.7" font-size="10.5" fill="#78350f" text-anchor="middle">寄存器0</text>
+<text x="552" y="195.8" font-size="11" fill="#d1493a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<rect x="560" y="204" width="60" height="24" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="590" y="219.7" font-size="10.5" fill="#78350f" text-anchor="middle">寄存器1</text>
+<text x="552" y="219.8" font-size="11" fill="#d1493a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="560" y="228" width="60" height="24" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="590" y="243.7" font-size="10.5" fill="#78350f" text-anchor="middle">寄存器2</text>
+<text x="552" y="243.8" font-size="11" fill="#d1493a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<rect x="620" y="180" width="80" height="96" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="660" y="224.4" font-size="11" fill="#78350f" text-anchor="middle"><tspan x="660" dy="0">设备控</tspan><tspan x="660" dy="14.9">制器0</tspan></text>
+<rect x="560" y="280" width="60" height="24" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="590" y="295.7" font-size="10.5" fill="#78350f" text-anchor="middle">寄存器0</text>
+<text x="552" y="295.9" font-size="11" fill="#d1493a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<rect x="560" y="304" width="60" height="24" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="590" y="319.7" font-size="10.5" fill="#78350f" text-anchor="middle">寄存器1</text>
+<text x="552" y="319.9" font-size="11" fill="#d1493a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="560" y="328" width="60" height="24" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="590" y="343.7" font-size="10.5" fill="#78350f" text-anchor="middle">寄存器2</text>
+<text x="552" y="343.9" font-size="11" fill="#d1493a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<rect x="620" y="280" width="80" height="96" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="660" y="324.4" font-size="11" fill="#78350f" text-anchor="middle"><tspan x="660" dy="0">设备控</tspan><tspan x="660" dy="14.9">制器1</tspan></text>
+<text x="552" y="98" font-size="11" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="552" y="172" font-size="11" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">N−1</text>
+<rect x="230" y="90" width="150" height="76" rx="8" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="305" y="124.4" font-size="11" fill="#18181b" text-anchor="middle"><tspan x="305" dy="0">控制器中的寄存器与</tspan><tspan x="305" dy="14.9">内存地址统一编址</tspan></text>
+<rect x="230" y="240" width="150" height="120" rx="8" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="305" y="281.6" font-size="11" fill="#14532d" text-anchor="middle"><tspan x="305" dy="0">优点：简化了指令，</tspan><tspan x="305" dy="14.9">可以采用对内存进行</tspan><tspan x="305" dy="14.9">操作的指令来对控制器</tspan><tspan x="305" dy="14.9">进行操作</tspan></text>
+<rect x="390" y="90" width="150" height="76" rx="8" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="465" y="117" font-size="11" fill="#18181b" text-anchor="middle"><tspan x="465" dy="0">寄存器独立编址：</tspan><tspan x="465" dy="14.9">控制器中的寄存器使用</tspan><tspan x="465" dy="14.9">单独的地址</tspan></text>
+<rect x="390" y="210" width="150" height="150" rx="8" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="465" y="259.2" font-size="11" fill="#7f1d1d" text-anchor="middle"><tspan x="465" dy="0">缺点：需要设置专门的</tspan><tspan x="465" dy="14.9">指令来实现对控制器的</tspan><tspan x="465" dy="14.9">操作；不仅要指明</tspan><tspan x="465" dy="14.9">寄存器的地址，还要</tspan><tspan x="465" dy="14.9">指明控制器的编号</tspan></text>
+</svg>

@@ -1,0 +1,15 @@
+LABEL = '串的四种顺序存储方案'
+F = Fig(760, 400, '串的四种顺序存储方案')
+def row(y, lab, vals, tones, note_l=None, note_r=None, rt='amber'):
+    F.text(84, y + 16, lab, 13.5, 'end', INK, 600, valign='middle')
+    F.cells(96, y, vals, 40, 32, tones, size=13)
+    if note_l: F.pill(96, y - 24, note_l, 'blue', 11.5)
+    if note_r: F.pill(96 + 40 * len(vals) - 10, y - 24, note_r, rt, 11.5, anchor='middle')
+s = list('STRING')
+row(90, '方案一', s + [''] * 4 + ['6'], {10: 'amber'}, 'char ch[10]', '变量 length')
+row(170, '方案二', ['6'] + s + [''] * 4, {0: 'amber'}, 'ch[0] 充当 length')
+row(250, '方案三', s + ['\\0'] + [''] * 4, {6: 'gray'})
+row(330, '方案四', [''] + s + [''] * 3 + ['6'], {0: 'light', 10: 'amber'}, 'ch[0] 废弃不用', '变量 length')
+F.text(560, 174, '优点：字符位序与\n数组下标相同', 12, 'start', INK2, lh=1.4)
+F.text(560, 254, '没有 length，用 \\0 表示结尾\n求串长需遍历', 12, 'start', INK2, lh=1.4)
+F.text(560, 340, '✓ 教材默认方案', 12.5, 'start', ACCENT['green'], 600)

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="RAM 的读周期时序：地址有效 → 片选有效 → 数据稳定">
+<title>RAM 的读周期时序：地址有效 → 片选有效 → 数据稳定</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker><marker id="a3f3f46s" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10 0.8L1.5 5 10 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="758.5" height="298.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">RAM 的读周期</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="90" y="144.6" font-size="13" fill="#18181b" text-anchor="end">地址</text>
+<path d="M100 140L112 128.0H148L160 140L148 152.0H112Z" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.3"/>
+<path d="M160 140L172 128.0H548L560 140L548 152.0H172Z" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.3"/>
+<path d="M560 140L572 128.0H708L720 140L708 152.0H572Z" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.3"/>
+<text x="90" y="204.6" font-size="13" fill="#18181b" text-anchor="end">CS̄</text>
+<path d="M100 188H230L246 212H430L446 188H720" fill="none" stroke="#d1493a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="90" y="260.6" font-size="13" fill="#18181b" text-anchor="end">D<tspan baseline-shift="-22%" font-size="72%">OUT</tspan></text>
+<path d="M100 256H330" fill="none" stroke="#a1a1aa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M330 256L342 244.0H588L600 256L588 268.0H342Z" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.3"/>
+<path d="M600 256H720" fill="none" stroke="#a1a1aa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M160 80L160 280" fill="none" stroke="#a1a1aa" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<path d="M560 80L560 280" fill="none" stroke="#a1a1aa" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<path d="M162 84L558 84" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="360" y="76" font-size="12" fill="#3f3f46" text-anchor="middle">t<tspan baseline-shift="-22%" font-size="72%">RC</tspan>：读周期</text>
+<path d="M162 108L330 108" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="246" y="102" font-size="12" fill="#3f3f46" text-anchor="middle">t<tspan baseline-shift="-22%" font-size="72%">A</tspan></text>
+<path d="M246 176L330 176" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="290" y="170" font-size="12" fill="#3f3f46" text-anchor="middle">t<tspan baseline-shift="-22%" font-size="72%">CO</tspan></text>
+<path d="M330 80L330 280" fill="none" stroke="#3b6fd4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<text x="160" y="288" font-size="11.5" fill="#71717a" text-anchor="middle">地址有效</text>
+<text x="330" y="288" font-size="11.5" fill="#71717a" text-anchor="middle">数据有效</text>
+<text x="560" y="288" font-size="11.5" fill="#71717a" text-anchor="middle">地址失效</text>
+</svg>
