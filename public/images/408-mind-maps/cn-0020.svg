@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="报文交换的发送流程：存储转发">
+<title>报文交换的发送流程：存储转发</title>
+<rect x="0.75" y="0.75" width="638.5" height="338.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">报文交换的原理</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M50 140L190 120" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M190 120L420 120" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M190 120L300 210" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M300 210L420 120" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M420 120L580 140" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="26" y="126" width="48" height="28" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="50" y="144.2" font-size="12" fill="#18181b" text-anchor="middle">源</text>
+<rect x="168" y="106" width="44" height="28" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="190" y="124.5" font-size="13" fill="#1e3a8a" text-anchor="middle">⇄</text>
+<text x="190" y="146" font-size="10.5" fill="#3f3f46" text-anchor="middle">交换设备 A</text>
+<rect x="278" y="196" width="44" height="28" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="300" y="214.6" font-size="13" fill="#1e3a8a" text-anchor="middle">⇄</text>
+<text x="300" y="236" font-size="10.5" fill="#3f3f46" text-anchor="middle">交换设备 B</text>
+<rect x="398" y="106" width="44" height="28" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="420" y="124.5" font-size="13" fill="#1e3a8a" text-anchor="middle">⇄</text>
+<text x="420" y="146" font-size="10.5" fill="#3f3f46" text-anchor="middle">交换设备 C</text>
+<rect x="556" y="126" width="48" height="28" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="580" y="144.2" font-size="12" fill="#18181b" text-anchor="middle">目的</text>
+<rect x="160" y="50" width="160" height="46" rx="6" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="240" y="69.8" font-size="10" fill="#14532d" text-anchor="middle"><tspan x="240" dy="0">② 输出线路空闲时，用路由</tspan><tspan x="240" dy="13.5">信息找到下一结点并传给它</tspan></text>
+<rect x="20" y="196" width="160" height="46" rx="6" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="100" y="215.8" font-size="10" fill="#14532d" text-anchor="middle"><tspan x="100" dy="0">① 每个结点收下整个报文，</tspan><tspan x="100" dy="13.5">暂存后检查有无错误</tspan></text>
+<rect x="360" y="196" width="190" height="56" rx="6" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="455" y="214.5" font-size="9.5" fill="#14532d" text-anchor="middle"><tspan x="455" dy="0">③ 两站点间的其他线路段，可传输</tspan><tspan x="455" dy="12.8">其他用户的报文，不像电路交换那样</tspan><tspan x="455" dy="12.8">必须占用端到端的全部信道</tspan></text>
+<text x="560" y="172" font-size="10" fill="#3f3f46" text-anchor="middle">报文（附目的 + 源地址）</text>
+<text x="320" y="300" font-size="11.5" fill="#3f3f46" text-anchor="middle">报文交换：无需在两个站点之间建立专用通路，数据单位是报文，采用存储转发方式</text>
+</svg>

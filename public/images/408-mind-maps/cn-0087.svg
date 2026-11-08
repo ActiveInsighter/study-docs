@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" width="560" height="240" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="光纤通信：利用光导纤维传递光脉冲，有光脉冲表示 1，无光脉冲表示 0">
+<title>光纤通信：利用光导纤维传递光脉冲，有光脉冲表示 1，无光脉冲表示 0</title>
+<rect x="0.75" y="0.75" width="558.5" height="238.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">光纤（光缆）</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="40" y="90" width="280" height="60" rx="30" fill="#e4e4e7" stroke="#71717a" stroke-width="1.4"/>
+<circle cx="334" cy="120" r="8" fill="#ffffff" stroke="#2f8f57" stroke-width="2"/>
+<path d="M342.0 120.0L500.0 60" fill="none" stroke="#2f8f57" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="500" cy="60" r="3" fill="#e8effc" stroke="#3b6fd4" stroke-width="0"/>
+<circle cx="327" cy="132.1" r="8" fill="#ffffff" stroke="#d1493a" stroke-width="2"/>
+<path d="M335.0 132.1L500.0 84" fill="none" stroke="#d1493a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="500" cy="84" r="3" fill="#e8effc" stroke="#3b6fd4" stroke-width="0"/>
+<circle cx="313" cy="132.1" r="8" fill="#ffffff" stroke="#3b6fd4" stroke-width="2"/>
+<path d="M321.0 132.1L500.0 108" fill="none" stroke="#3b6fd4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="500" cy="108" r="3" fill="#e8effc" stroke="#3b6fd4" stroke-width="0"/>
+<circle cx="306" cy="120" r="8" fill="#ffffff" stroke="#c98a12" stroke-width="2"/>
+<path d="M314.0 120.0L500.0 132" fill="none" stroke="#c98a12" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="500" cy="132" r="3" fill="#e8effc" stroke="#3b6fd4" stroke-width="0"/>
+<circle cx="313" cy="107.9" r="8" fill="#ffffff" stroke="#7856c9" stroke-width="2"/>
+<path d="M321.0 107.9L500.0 156" fill="none" stroke="#7856c9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="500" cy="156" r="3" fill="#e8effc" stroke="#3b6fd4" stroke-width="0"/>
+<circle cx="327" cy="107.9" r="8" fill="#ffffff" stroke="#23877c" stroke-width="2"/>
+<path d="M335.0 107.9L500.0 180" fill="none" stroke="#23877c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="500" cy="180" r="3" fill="#e8effc" stroke="#3b6fd4" stroke-width="0"/>
+<text x="280" y="220" font-size="11" fill="#71717a" text-anchor="middle">光脉冲有表示 1、无表示 0；损耗小、带宽大、抗电磁干扰</text>
+</svg>

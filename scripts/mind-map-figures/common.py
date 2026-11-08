@@ -799,3 +799,22 @@ def sine_path(x0, y, w, cycles, amp, step=2):
         x = x0 + i * step
         pts.append(f'{x:.1f} {y - amp * math.sin(2 * math.pi * cycles * i / n):.1f}')
     return 'M' + 'L'.join(pts)
+
+def switch_net(F, path=(), color=None, label_arrows=None, ox=0):
+    """Generic switch mesh between host A and host B; path: list of node names highlighted."""
+    color = color or ACCENT['amber']
+    N = {'A': (40, 150), 'S1': (140, 90), 'SA': (140, 150), 'S2': (140, 210), 'SB': (250, 110), 'S3': (250, 200), 'S4': (360, 100), 'SC': (360, 200), 'S5': (480, 70), 'SD': (480, 150), 'S6': (480, 230), 'B': (590, 150)}
+    E = [('S1', 'SA'), ('SA', 'S2'), ('S1', 'SB'), ('SA', 'S3'), ('S2', 'S3'), ('SB', 'S4'), ('SB', 'SC'), ('S3', 'SC'), ('S4', 'S5'), ('S4', 'SD'), ('SC', 'SD'), ('SC', 'S6'), ('S5', 'SD')]
+    for a, b in E: F.line(*N[a], *N[b], INK2, 1.1)
+    names = {'SA': '交换设备 A', 'SB': '交换设备 B', 'SC': '交换设备 C', 'SD': '交换设备 D'}
+    for k, (x, y) in N.items():
+        if k in ('A', 'B'): F.box(x - 18, y - 14, 36, 28, k, 'white', 12, 4)
+        else:
+            F.box(x - 22, y - 16, 44, 32, '', 'green' if k in names else 'blue', rx=4)
+            for dx in (-9, 9):
+                for dy in (-6, 6): F.circle(x + dx, y + dy, 4, '', 'white', sw=0.8)
+            if k in names: F.text(x, y - 22, names[k], 10, color=INK2)
+    for a, b in zip(path, path[1:]):
+        (x1, y1), (x2, y2) = N[a], N[b]
+        F.line(x1, y1, x2, y2, color, 3.2, arrow='end', gap=20, gap2=24)
+    return N
