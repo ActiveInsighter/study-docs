@@ -115,7 +115,7 @@ layout: mind-map
 
 - 程序直接控制
   - 图：
-    - <img src="/images/408-mind-maps/os-0068.png" alt="图：" width="170" height="220">
+    - <img src="/images/408-mind-maps/os-0068.svg" alt="图：" width="300" height="279">
 
       - CPU不停的进行轮询测试
   - CPU干预：
@@ -127,7 +127,7 @@ layout: mind-map
     - I/O控制器 -&gt; CPU -&gt; 内存
 - 中断驱动方式
   - 图：
-    - <img src="/images/408-mind-maps/os-0118.png" alt="图：" width="113" height="220">
+    - <img src="/images/408-mind-maps/os-0118.svg" alt="图：" width="300" height="279">
 
       - CPU中断去做其他事情
   - CPU干预：
@@ -142,7 +142,7 @@ layout: mind-map
     - 保存在执行程序的上下文，然后去执行中断处理程序
 - DMA方式
   - 图：
-    - <img src="/images/408-mind-maps/os-0131.png" alt="图：" width="240" height="218">
+    - <img src="/images/408-mind-maps/os-0131.svg" alt="图：" width="300" height="164">
 
   - DMA控制器的组成：
     - <img src="/images/408-mind-maps/os-0153.svg" alt="DMA控制器的组成：" width="300" height="118">
@@ -324,7 +324,13 @@ layout: mind-map
       - 图形学开篇，使用双缓冲来实现图像更换
   - 若无特殊说明，缓冲区大小为一个块
   - 高速缓存和缓冲区的对比
-    - <img src="/images/408-mind-maps/os-0042.png" alt="高速缓存和缓冲区的对比" width="240" height="66">
+    - 高速缓存与缓冲区的对比
+
+      ||高速缓存|缓冲区|
+      |---|---|---|
+      |相同点|都介于高速设备和低速设备之间|都介于高速设备和低速设备之间|
+      |存放数据|存放的是低速设备上某些数据的复制数据，即高速缓存上有的，低速设备上必然有|存放的是低速设备传递给高速设备的数据（或相反），这些数据在低速设备（或高速设备）上却不一定有备份，这些数据再从缓冲区传送到高速设备|
+      |目的|高速缓存存放的是高速设备经常要访问的数据；若高速设备要访问的数据不在高速缓存中，则高速设备就需要访问低速设备|高速设备和低速设备的通信都要经过缓冲区，高速设备永远不会直接去访问低速设备|
 
   - 预读 + 滞后写
     - 预读：读区域A的时候，把A的下一块也同时读入到buffer中
@@ -332,13 +338,16 @@ layout: mind-map
 - 缓冲技术
   - 注：
     - 下图中计算周期时假设的是工作区已经满了，所以设备 -&gt; 缓冲和工作区 -&gt; CPU可以同时运行，如果初始情况为空：
-      - <img src="/images/408-mind-maps/os-0035.png" alt="下图中计算周期时假设的是工作区已经满了，所以设备 -&amp;amp;gt; 缓冲和工作区 -&amp;amp;gt; CPU可以同时运行，如果初始情况为空：" width="240" height="96">
+      - <img src="/images/408-mind-maps/os-0035.svg" alt="下图中计算周期时假设的是工作区已经满了，所以设备 -&amp;amp;gt; 缓冲和工作区 -&amp;amp;gt; CPU可以同时运行，如果初始情况为空：" width="300" height="141">
 
   - 1\. 单缓冲
     - 流程图：
-      - <img src="/images/408-mind-maps/os-0093.png" alt="流程图：" width="240" height="194">
+      - <img src="/images/408-mind-maps/os-0093.svg" alt="流程图：" width="300" height="171">
 
-        - <img src="/images/408-mind-maps/os-0123.png" alt="流程图：" width="240" height="187">
+        - 单缓冲时间分析：初始时工作区已满、缓冲区为空；T 为设备输入到缓冲区的时间，M 为缓冲区传送到工作区的时间，C 为 CPU 处理时间
+          - ① T > C：CPU 处理完后要等缓冲区装满，一块的处理时间为 T + M
+          - ② C > T：缓冲区装满后要等 CPU 处理完才能传送，一块的处理时间为 C + M
+          - 结论：单缓冲每块数据的处理时间为 $\max(C, T) + M$
 
     - 描述：
       - 开始状态缓冲区的数据为空，工作区数据为满
@@ -349,9 +358,12 @@ layout: mind-map
 
   - 2\. 双缓冲
     - 流程图：
-      - <img src="/images/408-mind-maps/os-0112.png" alt="流程图：" width="240" height="136">
+      - <img src="/images/408-mind-maps/os-0112.svg" alt="流程图：" width="300" height="150">
 
-        - <img src="/images/408-mind-maps/os-0101.png" alt="流程图：" width="190" height="220">
+        - 双缓冲时间分析：设备交替向缓冲 1、缓冲 2 输入，M 为缓冲区 → 工作区，C 为 CPU 处理
+          - ① T > M + C：设备一直在工作，CPU 有空闲，处理一块数据的平均用时为 T
+          - ② T < M + C：设备需等待缓冲区空出，处理一块数据的平均用时为 M + C
+          - 结论：双缓冲每块数据的处理时间为 $\max(T, C + M)$
 
     - 描述：
       - 假设开始状态，工作区为空，缓冲区A为满，缓冲区B为空
@@ -365,24 +377,24 @@ layout: mind-map
     - 缓存通信
       - 如果两台机器都只有单缓冲
         - 只能单向传输
-          - <img src="/images/408-mind-maps/os-0030.png" alt="只能单向传输" width="240" height="200">
+          - <img src="/images/408-mind-maps/os-0030.svg" alt="只能单向传输" width="300" height="170">
 
       - 如果都有双缓冲
         - 可以实现双线传输
-          - <img src="/images/408-mind-maps/os-0045.png" alt="可以实现双线传输" width="240" height="193">
+          - <img src="/images/408-mind-maps/os-0045.svg" alt="可以实现双线传输" width="300" height="170">
 
     - ”管道“通信：
       - ”管道“通信就是一个缓冲区，要实现双向通信，就需要两个”管道“
   - 3\. 循环缓冲
     - 流程图：
-      - <img src="/images/408-mind-maps/os-0087.png" alt="流程图：" width="240" height="217">
+      - <img src="/images/408-mind-maps/os-0087.svg" alt="流程图：" width="300" height="254">
 
     - 描述：
       - 包含多个大小相等的缓冲区，形成循环链表的形式。另外有两个指针in/out，分别是输入指针和输出指针。in指向空缓冲，out指向满缓冲
   - 4\. 缓冲池
     - 组成：
       - 多个公共缓冲区组成缓冲池
-      - <img src="/images/408-mind-maps/os-0041.png" alt="组成：" width="240" height="149">
+      - <img src="/images/408-mind-maps/os-0041.svg" alt="组成：" width="300" height="163">
 
     - 三个队列：
       - 空缓冲队列
