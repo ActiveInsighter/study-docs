@@ -35,6 +35,10 @@ def apply():
     for p in sorted(glob.glob(f'{KIT}/figs/*.md')):
         fid = os.path.basename(p)[:-3]
         mds[fid] = open(p).read().rstrip('\n')
+    aliases = {}
+    for p in sorted(glob.glob(f'{KIT}/figs/*.alias')):
+        fid = os.path.basename(p)[:-6]
+        aliases[fid] = open(p).read().strip()
     changed = 0
     for path in glob.glob(f'{DOCS}/*/*.mdx'):
         lines = open(path).read().split('\n')
@@ -44,6 +48,12 @@ def apply():
             if not m:
                 out.append(line); continue
             fid, ext, alt = m.group(1), m.group(2), m.group(3)
+            if fid in aliases:
+                tgt = aliases[fid]
+                w, h = sizes[tgt]
+                out.append(line[:m.start()] + f'<img src="/images/408-mind-maps/{tgt}.svg" alt="{alt}" width="{w}" height="{h}">' + line[m.end():])
+                changed += 1
+                continue
             if fid in mds:
                 ind = len(line) - len(line.lstrip(' '))
                 label = (line[:m.start()] + line[m.end():]).strip()
@@ -64,7 +74,7 @@ def apply():
             else:
                 out.append(line)
         open(path, 'w').write('\n'.join(out))
-    for fid in list(sizes) + list(mds):
+    for fid in list(sizes) + list(mds) + list(aliases):
         p = f'{PUB}/{fid}.png'
         if os.path.exists(p): os.remove(p)
         if fid in mds and os.path.exists(f'{PUB}/{fid}.svg') and fid not in sizes:
