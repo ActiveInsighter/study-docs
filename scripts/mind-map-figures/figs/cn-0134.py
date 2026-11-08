@@ -1,0 +1,17 @@
+LABEL = '路由器体系结构：路由选择部分与分组转发部分'
+F = Fig(820, 360, '路由器体系结构')
+F.line(30, 140, 790, 140, INK2, 1.2, dash='6 4')
+F.box(320, 50, 170, 74, '', 'white', rx=4); F.text(405, 64, '路由选择处理机', 11.5, color=INK2); F.box(340, 74, 130, 22, '路由选择协议', 'white', 11, 2); F.box(370, 98, 70, 20, '路由表', 'white', 10.5, 2)
+F.text(780, 96, '路由选择', 12, 'end', INK, 700)
+F.box(320, 170, 170, 130, '', 'white', rx=4); F.box(350, 180, 110, 60, '', 'white', rx=2); F.text(405, 198, '分组处理', 11.5, color=INK); F.box(370, 212, 70, 20, '转发表', 'blue', 10, 2); F.text(405, 284, '交换结构', 12, color=INK2)
+F.line(405, 120, 405, 184, INK2, 1.4, arrow='end'); F.text(414, 156, '路由表生成转发表', 10.5, 'start', ACCENT['violet'])
+for k, y in enumerate((190, 250)):
+    F.text(170, y - 14, '输入端口', 11, color=INK2); F.rect(60, y, 220, 30, 'none', INK2, 1, 2)
+    for i in range(3): F.box(90 + i * 50, y + 5, 30, 20, str(3 - i) if False else str(i + 1), 'white', 10.5, 2)
+    F.line(30, y + 15, 58, y + 15, INK2, 1.2, arrow='end'); F.line(282, y + 15, 318, y + 15, INK2, 1.2, arrow='end')
+    F.text(640, y - 14, '输出端口', 11, color=INK2); F.rect(530, y, 220, 30, 'none', ACCENT['red'] if k == 0 else INK2, 1.2, 2)
+    for i in range(3): F.box(560 + i * 50, y + 5, 30, 20, str(3 - i), 'white', 10.5, 2)
+    F.line(492, y + 15, 528, y + 15, INK2, 1.2, arrow='end'); F.line(752, y + 15, 780, y + 15, INK2, 1.2, arrow='end')
+F.text(780, 226, '分组转发', 12, 'end', INK, 700)
+F.box(40, 50, 120, 60, '3：网络层\n2：数据链路层\n1：物理层', 'white', 10.5, 4)
+F.text(410, 336, '输出队列溢出是分组丢失的重要原因；交换结构把分组从输入端口转到合适的输出端口', 11, color=MUTED)
