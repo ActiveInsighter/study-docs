@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="FTP 的控制连接与数据连接">
+<title>FTP 的控制连接与数据连接</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="798.5" height="338.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">FTP：控制连接和数据连接</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="60" y="60" width="140" height="220" rx="4" fill="none" stroke="#3f3f46" stroke-width="1.2"/>
+<text x="130" y="296" font-size="11" fill="#3f3f46" text-anchor="middle">客户端</text>
+<rect x="80" y="74" width="100" height="30" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="130" y="93" font-size="11.5" fill="#18181b" text-anchor="middle">用户界面</text>
+<rect x="80" y="140" width="100" height="30" rx="4" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="130" y="159" font-size="11.5" fill="#14532d" text-anchor="middle">控制进程</text>
+<rect x="80" y="210" width="100" height="30" rx="4" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="130" y="228.8" font-size="11" fill="#14532d" text-anchor="middle">数据传送进程</text>
+<rect x="20" y="80" width="40" height="26" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<ellipse cx="40" cy="230" rx="20" ry="30" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<ellipse cx="400" cy="170" rx="110" ry="60" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="400" y="174.9" font-size="14" fill="#3f3f46" text-anchor="middle" font-weight="500">因特网</text>
+<rect x="580" y="100" width="140" height="160" rx="4" fill="none" stroke="#3f3f46" stroke-width="1.2"/>
+<text x="650" y="276" font-size="11" fill="#3f3f46" text-anchor="middle">服务器端</text>
+<rect x="600" y="120" width="100" height="30" rx="4" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="650" y="139" font-size="11.5" fill="#14532d" text-anchor="middle">控制进程</text>
+<rect x="600" y="200" width="100" height="30" rx="4" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="650" y="218.8" font-size="11" fill="#14532d" text-anchor="middle">数据传送进程</text>
+<ellipse cx="760" cy="215" rx="20" ry="30" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
+<text x="650" y="70" font-size="13" fill="#3b6fd4" text-anchor="middle" font-weight="700">FTP 服务器</text>
+<path d="M182 155L294.2 121.7Q300 120 306 120L494 120Q500 120 505.9 120.9L598 135" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="400" y="104" font-size="11" fill="#d1493a" text-anchor="middle">TCP 控制连接 端口 21</text>
+<path d="M182 225L294 239.2Q300 240 306 240L494 240Q500 240 505.8 238.5L598 215" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="400" y="262" font-size="11" fill="#d1493a" text-anchor="middle">TCP 数据连接 端口 20</text>
+<text x="400" y="84" font-size="11" fill="#d1493a" text-anchor="middle" font-weight="600">始终打开</text>
+<text x="400" y="284" font-size="11" fill="#d1493a" text-anchor="middle">只会保持一会，数据发送完就关闭</text>
+<text x="400" y="310" font-size="11" fill="#3b6fd4" text-anchor="middle">主动模式用 20 端口；被动模式由双方协商（&gt;1024），与传输模式有关</text>
+<text x="40" y="300" font-size="10.5" fill="#2f8f57">都属于从属进程</text>
+</svg>

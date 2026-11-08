@@ -13,21 +13,66 @@ layout: mind-map
 
 - 网络层全整理： <img src="/images/408-mind-maps/cn-0120.svg" alt="网络层全整理：" width="48" height="48">
 
-  - 总流程 <img src="/images/408-mind-maps/cn-0015.png" alt="总流程" width="240" height="186">
+  - 总流程
+    - 网络层总流程示例：AS1 中有主机 A、B、C 与路由器 R1、R2、R3（R3 为 BGP 发言人），AS2 中有 R4（BGP 发言人）、R5 与主机 D、E、F
+      - ① A 刚接入：A 用 DHCP 获取 IP（由 B 帮忙转发也可）
+      - ② A → B：A 查 ARP 缓存，有则直接发；没有则广播 ARP 请求，B 收到后单播 ARP 响应告知自己的 MAC
+      - ③ A → F：A 查 ARP 得到默认网关 R1 的 MAC，经 R1 → R2 → R3 → R4 → R5 → F
+        - 经过 NAT 时需要转换地址
+        - AS 内部用 OSPF 或 RIP 维护路由表；AS 之间 R3、R4 用 BGP 交换（BGP-4）
+        - 每一跳都要用 ARP 找下一跳的 MAC 地址
 
-  - 同一局域网内两主机数据交流 <img src="/images/408-mind-maps/cn-0156.png" alt="同一局域网内两主机数据交流" width="240" height="76">
+  - 同一局域网内两主机数据交流
+    - 同一子网内两主机交流：A 想发给 B
+      - ① A 先检查目的 IP 与自己是否在同一网络（网络号、子网号相同）：同网则查 ARP 高速缓存，有则直接发
+      - 没有就广播 ARP 请求报文，B 收到后回复自己的 MAC 地址，然后 A 再发送
+      - ② 若 A 发现目的主机在外网，用 ARP 找到默认网关（默认路由器，路由表中目的为 0.0.0.0 的项）的 MAC 地址，把帧发给它转发
 
-  - NAT转发流程（蓝字举例为：接受了一个来自WAN的帧） <img src="/images/408-mind-maps/cn-0126.png" alt="NAT转发流程（蓝字举例为：接受了一个来自WAN的帧）" width="240" height="119">
+  - NAT转发流程（蓝字举例为：接受了一个来自WAN的帧）
+    - NAT 转发：LAN 侧 `172.16.3.1:8080` ⇄ WAN 侧 `176.1.1.1:1010`
+      - 收到一个数据帧，若是局域网内的，就把 LAN 的 IP:Port 转为 WAN 的 IP:Port 发出；若是 WAN 发来的，则按转换表把 WAN 的 IP:Port 换回 LAN 的
+      - 注 ①：私有地址范围 A `10.x.x.x`，B `172.16.0.0 ~ 172.31.255.255`，C `192.168.x.x`
+      - 注 ②：NAT 的 LAN / WAN 主机号不是全 0；NAT 中的每个 LAN 是一个主机（看作一个 port）
+      - 注 ③：涉及端口，是传输层的内容（NAPT）
 
-  - 子网掩码转发 <img src="/images/408-mind-maps/cn-0102.png" alt="子网掩码转发" width="240" height="116">
+  - 子网掩码转发
+    - 子网掩码转发（路由器收到 IP 数据报后）
+      - ① 提取目的 IP 地址
+      - ② 检查是否直接交付：用本路由器各网络的子网掩码与目的 IP 相与，看是否属于直连网络
+      - ③ 是否为“特定主机”路由（主机路由）
+      - ④ 查找所有其他 IP 路径：对路由表中每一项，用其子网掩码与目的 IP 相与，与目的网络地址比较（最长前缀匹配）
+      - ⑤ 都没有则交付给默认路由
+      - ⑥ TTL = 0 时丢弃
 
-  - ARP转发 <img src="/images/408-mind-maps/cn-0048.png" alt="ARP转发" width="240" height="219">
+  - ARP转发
+    - ARP 转发：IP 和自己在同一子网 / 不在同一子网分别如何处理（A、B 在同一子网，C 在 R2 之后）
+      - 在同一子网（A 发 B）
+        - ① A 发给 B：若 A 的 ARP 表中有 B 的 MAC，则直接封装到链路层进行发送；若没有，则广播 ARP 请求：`IP A | IP B | MAC A | FF-FF-FF-FF-FF-FF`
+        - ② B 收到请求后，回送一个单播响应：`IP B | MAC B`
+        - ③ A 把帧组成发送到物理层：`FCS | IP 报 | MAC A | MAC B | IP A | IP B`
+      - 不在同一子网（A 发 C）
+        - ① 使用同样步骤获得默认网关的 MAC（即 MAC1）
+        - ② R1 收到后，转发数据：IP A → WAN 的 IP A′，IP C 不变，源 MAC 是 MAC2；若 R1 和 R2 是 PPP，则目的 MAC 为全 1，否则为 MAC3（新的 ARP 请求）
+        - ③ R2 发现主机 C 在同一网内，则使用同样的步骤
+        - ④ 主机 C 收到后返回 `IP C | MAC C`
 
-  - DHCP <img src="/images/408-mind-maps/cn-0080.png" alt="DHCP" width="240" height="100">
+  - DHCP
+    - DHCP：自己刚上网，如何获得 IP？
+      - ① 刚到的主机：不知道服务器在哪里，广播“DHCP 发现”报文（基于 UDP）
+      - ② 服务器收到，回复“提供”报文（给出可用 IP）
+      - ③ 主机选择一个服务器，广播“DHCP 请求”报文
+      - ④ 服务器收到后确认，分配 IP：你的 IP 是 x.x.x.x（DHCP 确认），可能还需要中继代理转发
 
-  - IGP <img src="/images/408-mind-maps/cn-0008.png" alt="IGP" width="240" height="74">
+  - IGP
+    - IGP：用于生成本 AS 内的路由表
+      - 方法 1：RIP，路由表形如 ⟨目的 IP，下一跳 MAC，跳数⟩，基于 UDP
+      - 方法 2：OSPF，路由器中存有全网拓扑图，基于 IP
 
-  - AS、BGP、IGP（如果使用OSPF，那大型网络还可以被划分） <img src="/images/408-mind-maps/cn-0052.png" alt="AS、BGP、IGP（如果使用OSPF，那大型网络还可以被划分）" width="240" height="130">
+  - AS、BGP、IGP（如果使用OSPF，那大型网络还可以被划分）
+    - AS、BGP、IGP：不同内部协议的网络怎么互联？
+      - 每个 AS 内部使用自己的 IGP（如 AS1 用 OSPF，AS2 用 RIP），OSPF 时大型网络还可以划分区域
+      - 各 AS 选出 BGP 发言人，发言人之间基于 TCP 交换 BGP 路由信息
+      - BGP 路由表：⟨网络前缀，下一跳，所经 AS 序列⟩
 
 ## 功能
 
@@ -90,7 +135,7 @@ layout: mind-map
 
 ## IPv4、子网划分
 
-- IPv4 数据报格式 <img src="/images/408-mind-maps/cn-0109.png" alt="IPv4 数据报格式" width="240" height="178">
+- IPv4 数据报格式 <img src="/images/408-mind-maps/cn-0109.svg" alt="IPv4 数据报格式" width="300" height="154">
 
   - 单位总结：
     - 一种首饰八片
@@ -138,7 +183,7 @@ layout: mind-map
     - 分片后【只能在目的主机中】组装
 - IP地址分类
   - ABCDE类
-    - A: 1 ~ 126 / B: 128 ~ 191 /C : 192 ~ 223 D: 224 ~ 239/ E: 240 ~ 255 <img src="/images/408-mind-maps/cn-0125.png" alt="A: 1 ~ 126 / B: 128 ~ 191 /C : 192 ~ 223 D: 224 ~ 239/ E: 240 ~ 255" width="240" height="98">
+    - A: 1 ~ 126 / B: 128 ~ 191 /C : 192 ~ 223 D: 224 ~ 239/ E: 240 ~ 255 <img src="/images/408-mind-maps/cn-0125.svg" alt="A: 1 ~ 126 / B: 128 ~ 191 /C : 192 ~ 223 D: 224 ~ 239/ E: 240 ~ 255" width="300" height="138">
 
       - IPv4 的地址范围
 
@@ -259,7 +304,7 @@ layout: mind-map
           - 其他主机收到【ARP响应】后，也会把B的IP和MAC建立在ARP高速缓存中。
         - 批注：MAC广播地址：FF-FF-FF-FF-FF-FF
     - 主机A收到响应分组后，写入到自己的ARP片中，然后发送MAC帧
-    - <img src="/images/408-mind-maps/cn-0077.png" alt="若A向B发送信息，工作流程：" width="240" height="97">
+    - <img src="/images/408-mind-maps/cn-0077.svg" alt="若A向B发送信息，工作流程：" width="300" height="139">
 
   - 所以ARP请求是广播的，ARP响应的单播的
   - 总结四种情况

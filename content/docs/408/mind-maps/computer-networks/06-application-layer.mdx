@@ -115,7 +115,7 @@ layout: mind-map
   - 概要：配图
     概要范围：[递归查询](#focus=%E9%80%92%E5%BD%92%E6%9F%A5%E8%AF%A2)、[递归+迭代](#focus=%E9%80%92%E5%BD%92%2B%E8%BF%AD%E4%BB%A3)
 
-    - <img src="/images/408-mind-maps/cn-0037.png" alt="域名解析" width="240" height="105">
+    - <img src="/images/408-mind-maps/cn-0037.svg" alt="域名解析" width="300" height="126">
 
 - 域名解析的步骤
   - 1\. 客户机向本地域名服务器发送DNS请求
@@ -134,7 +134,7 @@ layout: mind-map
 
 ## FTP传输
 
-- <img src="/images/408-mind-maps/cn-0128.png" alt="FTP传输" width="240" height="105">
+- <img src="/images/408-mind-maps/cn-0128.svg" alt="FTP传输" width="300" height="128">
 
 - 采用C/S模型、先建立TCP连接，连接端口 21，数据端口 20
   - 数据端口（主动情况20，被动情况 1024 ~ 65535）
@@ -323,9 +323,9 @@ layout: mind-map
 - HTTP报文
   - 请求报文/响应报文
     - HTTP 是面向文本的(Text-Oriented），因此报文中的每个字段都是一些 ASCII 码串，并且每 个字段的长度都是不确定的。有两类HTTP 报文：
-      - 请求报文：从客户向服务器发送的请求报文 <img src="/images/408-mind-maps/cn-0010.png" alt="请求报文：从客户向服务器发送的请求报文" width="240" height="176">
+      - 请求报文：从客户向服务器发送的请求报文 <img src="/images/408-mind-maps/cn-0010.svg" alt="请求报文：从客户向服务器发送的请求报文" width="300" height="208">
 
-        - 响应报文：从服务器到客户的回答 <img src="/images/408-mind-maps/cn-0095.png" alt="响应报文：从服务器到客户的回答" width="240" height="189">
+        - 响应报文：从服务器到客户的回答 <img src="/images/408-mind-maps/cn-0095.svg" alt="响应报文：从服务器到客户的回答" width="300" height="208">
 
     - 开始行 = 请求行/状态行
       - 用于区分是请求报文还是响应报文
@@ -339,7 +339,10 @@ layout: mind-map
         - keep-alive
           - 持续
   - 具体示例
-    - <img src="/images/408-mind-maps/cn-0063.png" alt="具体示例" width="240" height="159">
+    - 具体示例：在浏览器开发者工具（Network 面板）中查看一次 HTTP 请求的首部
+      - General：Request URL `https://www.bilibili.com/`，Request Method `GET`，Status Code `302`，Remote Address `124.239.244.17:443`，Referrer Policy `strict-origin-when-cross-origin`
+      - Response Headers：`Cache-Control: no-cache`、`Content-Length: 77`、`Content-Type: text/html; charset=utf-8`、`Date`、`Expires`、`Location: https://m.bilibili.com/`、`Vary: Origin,Accept-Encoding` 等
+      - 302 表示重定向：浏览器根据 Location 再去请求新的地址
 
       - 以太网帧中
         - 1~6 B 是目的MAC
