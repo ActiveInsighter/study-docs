@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="指令执行过程图：用于分析指令执行过程及影响流水线的因素">
+<title>指令执行过程图：用于分析指令执行过程及影响流水线的因素</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="718.5" height="298.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">指令执行过程图</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="180" y="210" width="70" height="28" rx="0" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="215" y="228.2" font-size="12" fill="#3b0764" text-anchor="middle">取指 k</text>
+<rect x="250" y="210" width="70" height="28" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="285" y="228.2" font-size="12" fill="#1e3a8a" text-anchor="middle">分析 k</text>
+<rect x="320" y="210" width="70" height="28" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="355" y="228.2" font-size="12" fill="#78350f" text-anchor="middle">执行 k</text>
+<text x="170" y="228.2" font-size="12" fill="#3f3f46" text-anchor="end">第 k 条指令 I<tspan baseline-shift="-22%" font-size="72%">k</tspan></text>
+<rect x="250" y="176" width="70" height="28" rx="0" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="285" y="194.2" font-size="12" fill="#3b0764" text-anchor="middle">取指 k+1</text>
+<rect x="320" y="176" width="70" height="28" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="355" y="194.2" font-size="12" fill="#1e3a8a" text-anchor="middle">分析 k+1</text>
+<rect x="390" y="176" width="70" height="28" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="425" y="194.2" font-size="12" fill="#78350f" text-anchor="middle">执行 k+1</text>
+<text x="170" y="194.2" font-size="12" fill="#3f3f46" text-anchor="end">第 k+1 条指令 I<tspan baseline-shift="-22%" font-size="72%">k+1</tspan></text>
+<rect x="320" y="142" width="70" height="28" rx="0" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="355" y="160.2" font-size="12" fill="#3b0764" text-anchor="middle">取指 k+2</text>
+<rect x="390" y="142" width="70" height="28" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="425" y="160.2" font-size="12" fill="#1e3a8a" text-anchor="middle">分析 k+2</text>
+<rect x="460" y="142" width="70" height="28" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="495" y="160.2" font-size="12" fill="#78350f" text-anchor="middle">执行 k+2</text>
+<text x="170" y="160.2" font-size="12" fill="#3f3f46" text-anchor="end">第 k+2 条指令 I<tspan baseline-shift="-22%" font-size="72%">k+2</tspan></text>
+<rect x="460" y="68" width="70" height="28" rx="0" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<rect x="530" y="68" width="70" height="28" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<rect x="600" y="68" width="70" height="28" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="140" y="120" font-size="12" fill="#71717a" text-anchor="middle">……</text>
+<text x="460" y="126" font-size="12" fill="#71717a" text-anchor="middle">……</text>
+<path d="M176 242L680 242" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M176 242L176 70" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="184" y="72" font-size="11.5" fill="#3f3f46">指令序列</text>
+<text x="430" y="280" font-size="11.5" fill="#71717a" text-anchor="middle">横轴为时间，纵轴为指令序列</text>
+</svg>

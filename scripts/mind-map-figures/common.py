@@ -593,3 +593,52 @@ def cu_full(F, hl=None, ox=0, oy=0):
     F.text(X(365), Y(350), '……', 11, color=ACCENT['red'])
     F.text(X(350), Y(402), '每个输出的控制信号对应一个微命令；如 C₁ 对应 (PC)→MAR，就让 C₁ 接到 PCout 和 MARin 上', 10.5, color=ACCENT['red'])
     F.items.append('</g>')
+
+def pipe_row(F, x, y, segs, w=84, h=30):
+    """segs: list of (label, tone)."""
+    for i, (lab, t) in enumerate(segs):
+        F.box(x + i * w, y, w, h, lab, t, 12, 0)
+
+STG = [('取指', 'violet'), ('分析', 'blue'), ('执行', 'amber')]
+
+def spacetime(F, x0, y0, rows, cols, cw=42, rh=30, fills=None, labels=None, tone=None):
+    """Grid space-time diagram: rows from bottom; fills: {(r,c): text}."""
+    for (r, c), t in fills.items():
+        tt = tone(r, c, t) if tone else 'white'
+        F.box(x0 + c * cw, y0 - (r + 1) * rh, cw, rh, t, tt, 12, 0, True)
+    if labels:
+        for r, l in enumerate(labels):
+            F.text(x0 - 10, y0 - r * rh - rh / 2, l, 12, 'end', INK2, valign='middle')
+    F.line(x0, y0 + 2, x0 + cols * cw + 30, y0 + 2, INK2, 1.3, arrow='end'); F.text(x0 + cols * cw + 36, y0 + 2, 't', 12, 'start', INK, valign='middle')
+    F.line(x0, y0 + 2, x0, y0 - len(labels or []) * rh - 30, INK2, 1.3, arrow='end')
+
+def datapath5(F, idle=(), green=False, wrpc=None, ox=0, oy=0):
+    """5-stage pipeline datapath. idle: stages drawn as '空段' arrows; wrpc: stage index writing PC."""
+    X = lambda v: v + ox
+    Y = lambda v: v + oy
+    names = [('IF', 'Fetch'), ('ID', 'Decode'), ('EX', 'Execute'), ('M', 'Memory'), ('WB', 'WriteBack')]
+    bx = [40, 170, 300, 430, 560, 690]
+    for i, (a, b) in enumerate(names):
+        F.text(X((bx[i] + bx[i + 1]) / 2), Y(64), a, 13, color=ACCENT['red'], weight=700); F.text(X((bx[i] + bx[i + 1]) / 2), Y(80), b, 10.5, color=MUTED)
+    for x in bx: F.line(X(x), Y(90), X(x), Y(300), LINE, 1, dash='4 4')
+    F.box(X(48), Y(110), 18, 150, '', 'white', rx=2); F.text(X(57), Y(185), 'PC', 10, color=INK, valign='middle', rotate=-90)
+    F.box(X(80), Y(120), 70, 120, '指令\nCache', 'violet', 11.5, 4)
+    for x in (164, 294, 424, 554): F.box(X(x), Y(110), 12, 160, '', 'gray', rx=2)
+    F.box(X(190), Y(160), 80, 90, '寄存器堆', 'green', 11.5, 4)
+    F.items.append(f'<path d="M{X(330)} {Y(140)}L{X(372)} {Y(162)}V{Y(184)}L{X(362)} {Y(192)}L{X(372)} {Y(200)}V{Y(222)}L{X(330)} {Y(244)}Z" fill="#fde7e4" stroke="#d1493a" stroke-width="1.3"/>')
+    F.text(X(354), Y(192), 'ALU', 10.5, color='#7f1d1d', weight=700, valign='middle', rotate=-90)
+    F.box(X(460), Y(130), 80, 110, '数据\nCache', 'amber', 11.5, 4)
+    for (a, b, y) in ((66, 78, 180), (150, 162, 180), (176, 188, 200), (270, 292, 180), (270, 292, 220), (306, 328, 170), (306, 328, 214), (372, 422, 192), (436, 458, 185), (540, 552, 185), (566, 610, 185)):
+        F.line(X(a), Y(y), X(b), Y(y), INK2, 1.2, arrow='end')
+    F.poly([(X(610), Y(185)), (X(640), Y(185)), (X(640), Y(290)), (X(230), Y(290)), (X(230), Y(252))], INK2, 1.2, arrow='end')
+    if green:
+        F.poly([(X(270), Y(230)), (X(282), Y(230)), (X(282), Y(270)), (X(400), Y(270)), (X(400), Y(150)), (X(458), Y(150))], ACCENT['green'], 2, arrow='end')
+        F.text(X(400), Y(282), 'B 中的数据送 Store', 10.5, color=ACCENT['green'])
+    for s in idle:
+        xa, xb = bx[s] + 14, bx[s + 1] - 4
+        F.items.append(f'<path d="M{X(xa)} {Y(170)}H{X(xb - 24)}V{Y(156)}L{X(xb)} {Y(190)}L{X(xb - 24)} {Y(224)}V{Y(210)}H{X(xa)}Z" fill="#d4d4d8" fill-opacity="0.85" stroke="#71717a" stroke-width="1.2"/>')
+        F.text(X((xa + xb) / 2 - 8), Y(190), '空段', 11.5, color=INK, weight=600, valign='middle')
+    if wrpc is not None:
+        xs = (bx[wrpc] + bx[wrpc + 1]) / 2
+        F.poly([(X(xs), Y(250)), (X(xs), Y(312)), (X(57), Y(312)), (X(57), Y(262))], ACCENT['blue'], 1.6, arrow='end', dash='5 4')
+        F.text(X((xs + 57) / 2), Y(326), '目标 PC 值写回 PC', 11, color=ACCENT['blue'])

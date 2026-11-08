@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 312" width="700" height="312" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="共享存储多处理（SMP）系统：多核处理器共享 LLC 与主存">
+<title>共享存储多处理（SMP）系统：多核处理器共享 LLC 与主存</title>
+<rect x="0.75" y="0.75" width="698.5" height="310.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">共享存储多处理（SMP）系统 / 多核处理器</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="20" y="56" width="520" height="210" rx="10" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="280" y="72" font-size="11.5" fill="#18181b" text-anchor="middle" font-weight="600">处理器</text>
+<text x="95" y="92" font-size="10.5" fill="#71717a" text-anchor="middle">核 core</text>
+<rect x="35" y="100" width="140" height="110" rx="6" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="43" y="110" width="58" height="32" rx="3" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="72" y="122.9" font-size="9.5" fill="#78350f" text-anchor="middle"><tspan x="72" dy="0">数据寄</tspan><tspan x="72" dy="12.8">存器组</tspan></text>
+<rect x="109" y="110" width="58" height="32" rx="3" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="138" y="122.9" font-size="9.5" fill="#14532d" text-anchor="middle"><tspan x="138" dy="0">地址寄</tspan><tspan x="138" dy="12.8">存器组</tspan></text>
+<path d="M81.0 152H129.0L119.0 170H91.0Z" fill="#e0f3f1" stroke="#23877c" stroke-width="1.2"/>
+<text x="105" y="164.3" font-size="9.5" fill="#134e4a" text-anchor="middle" font-weight="700">ALU</text>
+<rect x="55" y="180" width="100" height="22" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="105" y="194.5" font-size="10" fill="#18181b" text-anchor="middle">CU</text>
+<rect x="129" y="183" width="22" height="16" rx="2" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="140" y="194" font-size="8.5" fill="#7f1d1d" text-anchor="middle">PC</text>
+<text x="255" y="92" font-size="10.5" fill="#71717a" text-anchor="middle">核 core</text>
+<rect x="195" y="100" width="140" height="110" rx="6" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="203" y="110" width="58" height="32" rx="3" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="232" y="122.9" font-size="9.5" fill="#78350f" text-anchor="middle"><tspan x="232" dy="0">数据寄</tspan><tspan x="232" dy="12.8">存器组</tspan></text>
+<rect x="269" y="110" width="58" height="32" rx="3" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="298" y="122.9" font-size="9.5" fill="#14532d" text-anchor="middle"><tspan x="298" dy="0">地址寄</tspan><tspan x="298" dy="12.8">存器组</tspan></text>
+<path d="M241.0 152H289.0L279.0 170H251.0Z" fill="#e0f3f1" stroke="#23877c" stroke-width="1.2"/>
+<text x="265" y="164.3" font-size="9.5" fill="#134e4a" text-anchor="middle" font-weight="700">ALU</text>
+<rect x="215" y="180" width="100" height="22" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="265" y="194.5" font-size="10" fill="#18181b" text-anchor="middle">CU</text>
+<rect x="289" y="183" width="22" height="16" rx="2" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="300" y="194" font-size="8.5" fill="#7f1d1d" text-anchor="middle">PC</text>
+<text x="415" y="92" font-size="10.5" fill="#71717a" text-anchor="middle">核 core</text>
+<rect x="355" y="100" width="140" height="110" rx="6" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="363" y="110" width="58" height="32" rx="3" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="392" y="122.9" font-size="9.5" fill="#78350f" text-anchor="middle"><tspan x="392" dy="0">数据寄</tspan><tspan x="392" dy="12.8">存器组</tspan></text>
+<rect x="429" y="110" width="58" height="32" rx="3" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="458" y="122.9" font-size="9.5" fill="#14532d" text-anchor="middle"><tspan x="458" dy="0">地址寄</tspan><tspan x="458" dy="12.8">存器组</tspan></text>
+<path d="M401.0 152H449.0L439.0 170H411.0Z" fill="#e0f3f1" stroke="#23877c" stroke-width="1.2"/>
+<text x="425" y="164.3" font-size="9.5" fill="#134e4a" text-anchor="middle" font-weight="700">ALU</text>
+<rect x="375" y="180" width="100" height="22" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="425" y="194.5" font-size="10" fill="#18181b" text-anchor="middle">CU</text>
+<rect x="449" y="183" width="22" height="16" rx="2" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="460" y="194" font-size="8.5" fill="#7f1d1d" text-anchor="middle">PC</text>
+<rect x="60" y="222" width="440" height="26" rx="4" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="280" y="239" font-size="11.5" fill="#7f1d1d" text-anchor="middle">LLC（Last-Level Cache，共享）</text>
+<rect x="570" y="56" width="80" height="200" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="610" y="160.2" font-size="12" fill="#1e3a8a" text-anchor="middle">主存储器</text>
+<path d="M20 282L680 282" fill="none" stroke="#3f3f46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="350" y="296" font-size="10.5" fill="#71717a" text-anchor="middle">总线</text>
+<path d="M280 266L280 282" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M610 256L610 282" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="610" y="46" font-size="10.5" fill="#71717a" text-anchor="middle">如 Intel i5、i7</text>
+</svg>
