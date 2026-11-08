@@ -389,7 +389,7 @@ layout: mind-map
       - 每两个扇区之间的间隙
     - 未命名主题
     - 柱面
-      - 多个磁盘垂直叠在一起时，所有磁道组成的垂直面就是柱面 <img src="/images/408-mind-maps/co-0038.png" alt="多个磁盘垂直叠在一起时，所有磁道组成的垂直面就是柱面" width="240" height="217">
+      - 多个磁盘垂直叠在一起时，所有磁道组成的垂直面就是柱面 <img src="/images/408-mind-maps/co-0038.svg" alt="多个磁盘垂直叠在一起时，所有磁道组成的垂直面就是柱面" width="300" height="169">
 
     - 块
       - 物理块
@@ -401,7 +401,7 @@ layout: mind-map
     - 概要：配图
       概要范围：[磁道](#focus=%E7%A3%81%E9%81%93)、[磁道间隙](#focus=%E7%A3%81%E9%81%93%E9%97%B4%E9%9A%99)、[扇区](#focus=%E6%89%87%E5%8C%BA)、[扇区间隙](#focus=%E6%89%87%E5%8C%BA%E9%97%B4%E9%9A%99)
 
-      - <img src="/images/408-mind-maps/co-0181.png" alt="磁盘的概念" width="240" height="214">
+      - <img src="/images/408-mind-maps/co-0181.svg" alt="磁盘的概念" width="300" height="204">
 
   - 磁盘地址形式：
     - &lt;柱面、盘面、扇区&gt;
@@ -422,11 +422,22 @@ layout: mind-map
   - 基于闪存的存储器
     - 存储介质：NAND颗粒
   - 读写速度比较：
-    - <img src="/images/408-mind-maps/co-0101.png" alt="读写速度比较：" width="240" height="99">
+    - AS SSD Benchmark 实测（顺序 / 4K 随机读写）
+
+      |项目|机械硬盘|860 EVO（SATA3）|970 EVO Plus（M.2 NVMe）|
+      |---|---|---|---|
+      |连续读|165.92 MB/s|513.21 MB/s|2974.60 MB/s|
+      |连续写|159.01 MB/s|487.98 MB/s|2145.97 MB/s|
+      |4K 读|0.68 MB/s|42.25 MB/s|61.62 MB/s|
+      |4K 写|1.96 MB/s|128.04 MB/s|200.74 MB/s|
+      |访问时间（读）|15.019 ms|0.030 ms|0.033 ms|
+      |总分|43|1261|5037|
+
+      - 机械硬盘的随机读写尤其慢：磁头寻道和旋转延迟是主要开销
 
       - （硬件茶谈）
   - 组成：
-    - 闪存翻译层 + 多个闪存芯片 <img src="/images/408-mind-maps/co-0082.png" alt="闪存翻译层 + 多个闪存芯片" width="240" height="145">
+    - 闪存翻译层 + 多个闪存芯片 <img src="/images/408-mind-maps/co-0082.svg" alt="闪存翻译层 + 多个闪存芯片" width="300" height="147">
 
       - 读写单位
         - CPU下令要读取一个块的内容
@@ -481,7 +492,7 @@ layout: mind-map
         ```
 
         - 分析：
-          - <img src="/images/408-mind-maps/co-0109.png" alt="分析：" width="98" height="220">
+          - <img src="/images/408-mind-maps/co-0109.svg" alt="分析：" width="300" height="365">
 
   - 上述问题的三个其他点：
     - 数组访问的时间局部性：
@@ -491,7 +502,7 @@ layout: mind-map
   - 操作系统采用页式存储
     - &lt;页号、偏置值&gt;
 - Cache的基本工作原理
-  - <img src="/images/408-mind-maps/co-0263.png" alt="Cache的基本工作原理" width="240" height="123">
+  - <img src="/images/408-mind-maps/co-0263.svg" alt="Cache的基本工作原理" width="300" height="140">
 
     - Cache中的内容是主存的复制（缓冲区\_\_\_\_\_\_\_）
       - 可以将局部性好的内容放入到Cache中
@@ -502,9 +513,13 @@ layout: mind-map
       - 现代计算机把Cache集成在了CPU的内部
     - 速度快、成本高、集成度低
 - 大题看到题目第一步怎么做：
-  - 下面那个地址可以不画 <img src="/images/408-mind-maps/co-0191.png" alt="下面那个地址可以不画" width="240" height="138">
+  - 下面那个地址可以不画
+    - 举例：主存地址空间 256 MB，按字节编址；数据 Cache 有 8 个 Cache 行，行长 64 B（Cache 块与主存块大小相等）
+      - ① 256 MB = $2^8 \times 2^{20}$ B = $2^{28}$ B，按字节寻址，地址有 28 bit
+      - ② Cache 有 $2^3$ 行，每行 $2^6$ B，共 $2^9$ B
+      - ③ 主存有 $2^{28} \div 2^6 = 2^{22}$ 块：主存地址 = 块号 22 bit + 块内地址 6 bit
 
-- Cache和主存的映射关系 <img src="/images/408-mind-maps/co-0168.png" alt="Cache和主存的映射关系" width="45" height="45">
+- Cache和主存的映射关系 <img src="/images/408-mind-maps/co-0168.svg" alt="Cache和主存的映射关系" width="48" height="48">
 
   - Cache每一行的内容
     - (计数位 + 脏位) + 有效位+标记+存储的内容

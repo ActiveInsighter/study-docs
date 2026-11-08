@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="提示图标">
+<title>提示图标</title>
+<rect x="2" y="2" width="44" height="44" rx="11" fill="#f4f4f5" stroke="#d4d4d8" stroke-width="1"/>
+<circle cx="24" cy="24" r="14" fill="#ffffff" stroke="#52525b" stroke-width="2"/>
+<circle cx="24" cy="17" r="1.8" fill="#27272a" stroke="#27272a" stroke-width="0"/>
+<path d="M24 22V32" fill="none" stroke="#3f3f46" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
