@@ -8,7 +8,7 @@ for i in range(4):
     F.ellipse(222, y, 18, 6, '', 'white')
     F.text(64, y, f'{i} 号盘面', 12, 'end', INK2, valign='middle')
     F.box(312, y - 24 + 10, 18, 8, '', 'dark', rx=1); F.box(312, y + 6, 18, 8, '', 'dark', rx=1)
-F.line(321, 60, 321, 300, INK2, 2); 
+F.line(321, 60, 321, 300, INK2, 2);
 F.line(392, 60, 330, 60, ACCENT['red'], 1.6, arrow='both'); F.text(400, 64, '磁头臂整体移动', 12, 'start', ACCENT['red'])
 F.text(400, 110, '每个盘面对应一个磁头；', 12, 'start', INK2)
 F.text(400, 132, '所有磁头连在同一个磁臂上，', 12, 'start', INK2)

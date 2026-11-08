@@ -86,7 +86,7 @@ jobs:
           from pathlib import Path
           import xml.etree.ElementTree as ET
 
-          courses = ('computer-network', 'computer-organization', 'operating-system')
+          courses = ('computer-network', 'computer-organization', 'operating-system', '408-mind-maps')
           files = sorted([
               *(
                   path
