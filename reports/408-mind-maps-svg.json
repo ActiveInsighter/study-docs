@@ -1,0 +1,4838 @@
+{
+  "files": 616,
+  "beforeBytes": 1900597666,
+  "afterBytes": 1494324967,
+  "allGeometryUnchanged": true,
+  "allBelow25MB": true,
+  "details": [
+    {
+      "file": "cn-0001.svg",
+      "pathsVerified": 6714,
+      "beforeBytes": 2144888,
+      "afterBytes": 1651943,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0002.svg",
+      "pathsVerified": 8219,
+      "beforeBytes": 2581157,
+      "afterBytes": 2012285,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0004.svg",
+      "beforeBytes": 17418,
+      "afterBytes": 17418,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "cn-0006.svg",
+      "pathsVerified": 1648,
+      "beforeBytes": 337112,
+      "afterBytes": 271399,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0008.svg",
+      "pathsVerified": 17815,
+      "beforeBytes": 3936716,
+      "afterBytes": 3110433,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0009.svg",
+      "pathsVerified": 6040,
+      "beforeBytes": 2477066,
+      "afterBytes": 1855386,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0010.svg",
+      "pathsVerified": 2609,
+      "beforeBytes": 923582,
+      "afterBytes": 709834,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0012.svg",
+      "pathsVerified": 39065,
+      "beforeBytes": 9321042,
+      "afterBytes": 7305333,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0014.svg",
+      "pathsVerified": 19663,
+      "beforeBytes": 4881519,
+      "afterBytes": 3821209,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0015.svg",
+      "pathsVerified": 95292,
+      "beforeBytes": 21136482,
+      "afterBytes": 16953634,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0016.svg",
+      "pathsVerified": 6856,
+      "beforeBytes": 2257539,
+      "afterBytes": 1765771,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0019.svg",
+      "pathsVerified": 35912,
+      "beforeBytes": 9877608,
+      "afterBytes": 7921484,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0020.svg",
+      "pathsVerified": 35044,
+      "beforeBytes": 9269055,
+      "afterBytes": 7287162,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0022.svg",
+      "pathsVerified": 7510,
+      "beforeBytes": 2131611,
+      "afterBytes": 1672928,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0024.svg",
+      "pathsVerified": 5536,
+      "beforeBytes": 1218376,
+      "afterBytes": 955146,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0025.svg",
+      "pathsVerified": 2596,
+      "beforeBytes": 830500,
+      "afterBytes": 645947,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0026.svg",
+      "pathsVerified": 37715,
+      "beforeBytes": 9357187,
+      "afterBytes": 7361059,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0027.svg",
+      "beforeBytes": 4960,
+      "afterBytes": 4960,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "cn-0032.svg",
+      "beforeBytes": 4473,
+      "afterBytes": 4473,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "cn-0033.svg",
+      "pathsVerified": 32548,
+      "beforeBytes": 7556039,
+      "afterBytes": 6070833,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0034.svg",
+      "pathsVerified": 47970,
+      "beforeBytes": 10271547,
+      "afterBytes": 8562711,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0035.svg",
+      "pathsVerified": 77594,
+      "beforeBytes": 18061878,
+      "afterBytes": 14992220,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0037.svg",
+      "pathsVerified": 25326,
+      "beforeBytes": 6846535,
+      "afterBytes": 5302187,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0038.svg",
+      "pathsVerified": 2570,
+      "beforeBytes": 711251,
+      "afterBytes": 554569,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0040.svg",
+      "pathsVerified": 20492,
+      "beforeBytes": 6358993,
+      "afterBytes": 4883593,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0042.svg",
+      "pathsVerified": 18577,
+      "beforeBytes": 4341786,
+      "afterBytes": 3532800,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0043.svg",
+      "pathsVerified": 9894,
+      "beforeBytes": 1598139,
+      "afterBytes": 1254885,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0044.svg",
+      "pathsVerified": 20046,
+      "beforeBytes": 5876914,
+      "afterBytes": 4471560,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0045.svg",
+      "pathsVerified": 35568,
+      "beforeBytes": 4331713,
+      "afterBytes": 3665703,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0046.svg",
+      "pathsVerified": 10356,
+      "beforeBytes": 2734758,
+      "afterBytes": 2163810,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0047.svg",
+      "pathsVerified": 8910,
+      "beforeBytes": 4520520,
+      "afterBytes": 3367896,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0048.svg",
+      "beforeBytes": 28719561,
+      "afterBytes": 22021964,
+      "geometryUnchanged": true,
+      "method": "exact-relative-coordinates-pilot"
+    },
+    {
+      "file": "cn-0049.svg",
+      "pathsVerified": 32887,
+      "beforeBytes": 7934952,
+      "afterBytes": 6397577,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0052.svg",
+      "pathsVerified": 26749,
+      "beforeBytes": 6195063,
+      "afterBytes": 4873213,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0053.svg",
+      "pathsVerified": 21582,
+      "beforeBytes": 4539908,
+      "afterBytes": 3704437,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0054.svg",
+      "pathsVerified": 7775,
+      "beforeBytes": 3074747,
+      "afterBytes": 2370248,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0055.svg",
+      "pathsVerified": 47612,
+      "beforeBytes": 13468931,
+      "afterBytes": 10552439,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0056.svg",
+      "beforeBytes": 11161,
+      "afterBytes": 11161,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "cn-0059.svg",
+      "pathsVerified": 9606,
+      "beforeBytes": 2329406,
+      "afterBytes": 1849287,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0062.svg",
+      "beforeBytes": 3205,
+      "afterBytes": 3205,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "cn-0063.svg",
+      "pathsVerified": 75299,
+      "beforeBytes": 9961100,
+      "afterBytes": 8617250,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0064.svg",
+      "pathsVerified": 21248,
+      "beforeBytes": 5743626,
+      "afterBytes": 4512666,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0065.svg",
+      "pathsVerified": 2667,
+      "beforeBytes": 808583,
+      "afterBytes": 618173,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0066.svg",
+      "beforeBytes": 2561,
+      "afterBytes": 2561,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "cn-0071.svg",
+      "pathsVerified": 12518,
+      "beforeBytes": 3518328,
+      "afterBytes": 2615068,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0072.svg",
+      "beforeBytes": 12834,
+      "afterBytes": 12834,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "cn-0073.svg",
+      "pathsVerified": 14033,
+      "beforeBytes": 4182651,
+      "afterBytes": 3203733,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0074.svg",
+      "beforeBytes": 7966,
+      "afterBytes": 7966,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "cn-0076.svg",
+      "pathsVerified": 26309,
+      "beforeBytes": 6745380,
+      "afterBytes": 5226320,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0077.svg",
+      "pathsVerified": 25996,
+      "beforeBytes": 6613020,
+      "afterBytes": 5203190,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0079.svg",
+      "pathsVerified": 37147,
+      "beforeBytes": 10398053,
+      "afterBytes": 8061247,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0080.svg",
+      "pathsVerified": 25455,
+      "beforeBytes": 5668673,
+      "afterBytes": 4457091,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0081.svg",
+      "pathsVerified": 32830,
+      "beforeBytes": 9634757,
+      "afterBytes": 7451566,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0082.svg",
+      "pathsVerified": 37141,
+      "beforeBytes": 10700850,
+      "afterBytes": 8448790,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0084.svg",
+      "pathsVerified": 8603,
+      "beforeBytes": 3383734,
+      "afterBytes": 2574014,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0085.svg",
+      "beforeBytes": 12140,
+      "afterBytes": 12140,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "cn-0086.svg",
+      "beforeBytes": 1513,
+      "afterBytes": 1513,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "cn-0087.svg",
+      "pathsVerified": 29420,
+      "beforeBytes": 3053302,
+      "afterBytes": 2775892,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0089.svg",
+      "pathsVerified": 27610,
+      "beforeBytes": 6474826,
+      "afterBytes": 5177990,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0091.svg",
+      "pathsVerified": 25570,
+      "beforeBytes": 5594780,
+      "afterBytes": 4478154,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0093.svg",
+      "pathsVerified": 10181,
+      "beforeBytes": 3610586,
+      "afterBytes": 2762145,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0095.svg",
+      "pathsVerified": 3897,
+      "beforeBytes": 1509750,
+      "afterBytes": 1146789,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0096.svg",
+      "pathsVerified": 7839,
+      "beforeBytes": 2428350,
+      "afterBytes": 1861630,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0098.svg",
+      "pathsVerified": 42651,
+      "beforeBytes": 10816796,
+      "afterBytes": 8573879,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0099.svg",
+      "pathsVerified": 31993,
+      "beforeBytes": 7986211,
+      "afterBytes": 6405580,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0101.svg",
+      "beforeBytes": 1676,
+      "afterBytes": 1676,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "cn-0102.svg",
+      "pathsVerified": 19656,
+      "beforeBytes": 4357043,
+      "afterBytes": 3473404,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0103.svg",
+      "pathsVerified": 74008,
+      "beforeBytes": 10858850,
+      "afterBytes": 9189561,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0104.svg",
+      "beforeBytes": 7926,
+      "afterBytes": 7926,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "cn-0105.svg",
+      "pathsVerified": 10013,
+      "beforeBytes": 3121563,
+      "afterBytes": 2294722,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0107.svg",
+      "pathsVerified": 5796,
+      "beforeBytes": 1856691,
+      "afterBytes": 1428797,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0108.svg",
+      "pathsVerified": 29145,
+      "beforeBytes": 6445030,
+      "afterBytes": 5169327,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0109.svg",
+      "pathsVerified": 24281,
+      "beforeBytes": 6852766,
+      "afterBytes": 5240354,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0113.svg",
+      "pathsVerified": 5820,
+      "beforeBytes": 2088182,
+      "afterBytes": 1590205,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0114.svg",
+      "pathsVerified": 22052,
+      "beforeBytes": 6179798,
+      "afterBytes": 4838145,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0115.svg",
+      "pathsVerified": 9669,
+      "beforeBytes": 3036293,
+      "afterBytes": 2372728,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0118.svg",
+      "pathsVerified": 4347,
+      "beforeBytes": 1500839,
+      "afterBytes": 1146363,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0119.svg",
+      "pathsVerified": 12766,
+      "beforeBytes": 3454520,
+      "afterBytes": 2619047,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0120.svg",
+      "beforeBytes": 3314,
+      "afterBytes": 3314,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "cn-0121.svg",
+      "pathsVerified": 6989,
+      "beforeBytes": 1105840,
+      "afterBytes": 906792,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0125.svg",
+      "pathsVerified": 3628,
+      "beforeBytes": 1287680,
+      "afterBytes": 979713,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0126.svg",
+      "pathsVerified": 31647,
+      "beforeBytes": 7182562,
+      "afterBytes": 5666789,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0128.svg",
+      "pathsVerified": 35893,
+      "beforeBytes": 8628011,
+      "afterBytes": 6937486,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0134.svg",
+      "pathsVerified": 47208,
+      "beforeBytes": 12976762,
+      "afterBytes": 10275381,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0136.svg",
+      "pathsVerified": 18778,
+      "beforeBytes": 4686945,
+      "afterBytes": 3657969,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0137.svg",
+      "pathsVerified": 44850,
+      "beforeBytes": 11208360,
+      "afterBytes": 8957911,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0139.svg",
+      "pathsVerified": 5004,
+      "beforeBytes": 1849219,
+      "afterBytes": 1381234,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0140.svg",
+      "pathsVerified": 8426,
+      "beforeBytes": 3384365,
+      "afterBytes": 2603551,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0142.svg",
+      "pathsVerified": 8651,
+      "beforeBytes": 2907348,
+      "afterBytes": 2120912,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0143.svg",
+      "pathsVerified": 4466,
+      "beforeBytes": 1531051,
+      "afterBytes": 1160556,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0146.svg",
+      "pathsVerified": 4049,
+      "beforeBytes": 1096887,
+      "afterBytes": 860384,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0148.svg",
+      "pathsVerified": 9006,
+      "beforeBytes": 3177919,
+      "afterBytes": 2395506,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0150.svg",
+      "pathsVerified": 14789,
+      "beforeBytes": 2240268,
+      "afterBytes": 1836114,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0151.svg",
+      "pathsVerified": 9179,
+      "beforeBytes": 2771300,
+      "afterBytes": 2162128,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0154.svg",
+      "pathsVerified": 49182,
+      "beforeBytes": 12332274,
+      "afterBytes": 9850325,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0155.svg",
+      "pathsVerified": 28771,
+      "beforeBytes": 6288073,
+      "afterBytes": 5162544,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0156.svg",
+      "pathsVerified": 17708,
+      "beforeBytes": 4731384,
+      "afterBytes": 3693618,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0159.svg",
+      "pathsVerified": 2618,
+      "beforeBytes": 690295,
+      "afterBytes": 542344,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "cn-0161.svg",
+      "pathsVerified": 18287,
+      "beforeBytes": 4563828,
+      "afterBytes": 3592634,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0001.svg",
+      "pathsVerified": 5704,
+      "beforeBytes": 2029009,
+      "afterBytes": 1588957,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0002.svg",
+      "pathsVerified": 1471,
+      "beforeBytes": 534751,
+      "afterBytes": 408051,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0003.svg",
+      "pathsVerified": 3075,
+      "beforeBytes": 1062212,
+      "afterBytes": 817695,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0004.svg",
+      "pathsVerified": 20522,
+      "beforeBytes": 5505610,
+      "afterBytes": 4331633,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0006.svg",
+      "pathsVerified": 1240,
+      "beforeBytes": 363041,
+      "afterBytes": 286830,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0007.svg",
+      "pathsVerified": 5927,
+      "beforeBytes": 2142602,
+      "afterBytes": 1688937,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0008.svg",
+      "pathsVerified": 4189,
+      "beforeBytes": 1555610,
+      "afterBytes": 1186813,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0009.svg",
+      "beforeBytes": 5454,
+      "afterBytes": 5454,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0010.svg",
+      "pathsVerified": 1932,
+      "beforeBytes": 603653,
+      "afterBytes": 471557,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0011.svg",
+      "pathsVerified": 2562,
+      "beforeBytes": 1459563,
+      "afterBytes": 1093887,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0013.svg",
+      "pathsVerified": 4733,
+      "beforeBytes": 1954362,
+      "afterBytes": 1492725,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0014.svg",
+      "pathsVerified": 1807,
+      "beforeBytes": 678950,
+      "afterBytes": 514379,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0015.svg",
+      "beforeBytes": 3916,
+      "afterBytes": 3916,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0016.svg",
+      "pathsVerified": 9741,
+      "beforeBytes": 2542815,
+      "afterBytes": 1980217,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0017.svg",
+      "beforeBytes": 2871,
+      "afterBytes": 2871,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0018.svg",
+      "pathsVerified": 6016,
+      "beforeBytes": 2314251,
+      "afterBytes": 1778572,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0019.svg",
+      "pathsVerified": 2578,
+      "beforeBytes": 1050466,
+      "afterBytes": 795248,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0020.svg",
+      "pathsVerified": 5247,
+      "beforeBytes": 2102363,
+      "afterBytes": 1613882,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0021.svg",
+      "pathsVerified": 1208,
+      "beforeBytes": 308624,
+      "afterBytes": 239617,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0022.svg",
+      "beforeBytes": 19720,
+      "afterBytes": 19720,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0023.svg",
+      "pathsVerified": 25901,
+      "beforeBytes": 7087024,
+      "afterBytes": 5355593,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0024.svg",
+      "pathsVerified": 2911,
+      "beforeBytes": 1081454,
+      "afterBytes": 843344,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0025.svg",
+      "beforeBytes": 6024,
+      "afterBytes": 6024,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0026.svg",
+      "pathsVerified": 3908,
+      "beforeBytes": 1527411,
+      "afterBytes": 1169818,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0027.svg",
+      "beforeBytes": 6394,
+      "afterBytes": 6394,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0028.svg",
+      "pathsVerified": 1989,
+      "beforeBytes": 539586,
+      "afterBytes": 418876,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0029.svg",
+      "pathsVerified": 3657,
+      "beforeBytes": 1394982,
+      "afterBytes": 1071842,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0030.svg",
+      "pathsVerified": 8637,
+      "beforeBytes": 3307091,
+      "afterBytes": 2534522,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0032.svg",
+      "pathsVerified": 10673,
+      "beforeBytes": 2737284,
+      "afterBytes": 2164893,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0033.svg",
+      "beforeBytes": 6632,
+      "afterBytes": 6632,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0034.svg",
+      "pathsVerified": 53305,
+      "beforeBytes": 13218929,
+      "afterBytes": 11043190,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0035.svg",
+      "beforeBytes": 2867,
+      "afterBytes": 2867,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0036.svg",
+      "pathsVerified": 2850,
+      "beforeBytes": 1090809,
+      "afterBytes": 834037,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0037.svg",
+      "pathsVerified": 4737,
+      "beforeBytes": 1495577,
+      "afterBytes": 1183213,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0038.svg",
+      "pathsVerified": 20481,
+      "beforeBytes": 6028774,
+      "afterBytes": 4672584,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0039.svg",
+      "pathsVerified": 8974,
+      "beforeBytes": 3413531,
+      "afterBytes": 2631093,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0042.svg",
+      "beforeBytes": 6010,
+      "afterBytes": 6010,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0043.svg",
+      "beforeBytes": 43296,
+      "afterBytes": 43296,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0044.svg",
+      "pathsVerified": 4402,
+      "beforeBytes": 1216090,
+      "afterBytes": 986679,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0045.svg",
+      "pathsVerified": 3455,
+      "beforeBytes": 1234170,
+      "afterBytes": 964206,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0046.svg",
+      "pathsVerified": 27013,
+      "beforeBytes": 6653485,
+      "afterBytes": 5495505,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0048.svg",
+      "pathsVerified": 2376,
+      "beforeBytes": 651292,
+      "afterBytes": 512629,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0049.svg",
+      "beforeBytes": 2027,
+      "afterBytes": 2027,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0050.svg",
+      "pathsVerified": 1200,
+      "beforeBytes": 354159,
+      "afterBytes": 277841,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0051.svg",
+      "pathsVerified": 11252,
+      "beforeBytes": 4902510,
+      "afterBytes": 3794581,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0052.svg",
+      "beforeBytes": 29420,
+      "afterBytes": 29420,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0053.svg",
+      "pathsVerified": 1630,
+      "beforeBytes": 690355,
+      "afterBytes": 521822,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0055.svg",
+      "pathsVerified": 789,
+      "beforeBytes": 234777,
+      "afterBytes": 191638,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0056.svg",
+      "pathsVerified": 1115,
+      "beforeBytes": 521230,
+      "afterBytes": 395291,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0058.svg",
+      "pathsVerified": 4657,
+      "beforeBytes": 1547207,
+      "afterBytes": 1190568,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0059.svg",
+      "pathsVerified": 5083,
+      "beforeBytes": 2197288,
+      "afterBytes": 1693292,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0060.svg",
+      "pathsVerified": 2571,
+      "beforeBytes": 778585,
+      "afterBytes": 616623,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0061.svg",
+      "pathsVerified": 40857,
+      "beforeBytes": 12419398,
+      "afterBytes": 9327748,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0062.svg",
+      "pathsVerified": 9757,
+      "beforeBytes": 3086813,
+      "afterBytes": 2395273,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0063.svg",
+      "pathsVerified": 3037,
+      "beforeBytes": 1707254,
+      "afterBytes": 1329014,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0065.svg",
+      "pathsVerified": 4020,
+      "beforeBytes": 1316966,
+      "afterBytes": 1026645,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0066.svg",
+      "pathsVerified": 4072,
+      "beforeBytes": 1490872,
+      "afterBytes": 1155852,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0067.svg",
+      "pathsVerified": 9478,
+      "beforeBytes": 2470132,
+      "afterBytes": 1927958,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0069.svg",
+      "pathsVerified": 148177,
+      "beforeBytes": 27553662,
+      "afterBytes": 21637134,
+      "geometryUnchanged": true
+    },
+    {
+      "file": "co-0070.svg",
+      "pathsVerified": 12454,
+      "beforeBytes": 3097729,
+      "afterBytes": 2457109,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0071.svg",
+      "pathsVerified": 3691,
+      "beforeBytes": 1579988,
+      "afterBytes": 1176801,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0073.svg",
+      "pathsVerified": 32753,
+      "beforeBytes": 7939300,
+      "afterBytes": 6443937,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0074.svg",
+      "pathsVerified": 2115,
+      "beforeBytes": 589523,
+      "afterBytes": 470778,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0075.svg",
+      "pathsVerified": 4060,
+      "beforeBytes": 1639439,
+      "afterBytes": 1263991,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0076.svg",
+      "pathsVerified": 930,
+      "beforeBytes": 285193,
+      "afterBytes": 220134,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0077.svg",
+      "pathsVerified": 5545,
+      "beforeBytes": 1966155,
+      "afterBytes": 1537421,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0078.svg",
+      "pathsVerified": 1572,
+      "beforeBytes": 476632,
+      "afterBytes": 367829,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0079.svg",
+      "pathsVerified": 59468,
+      "beforeBytes": 13106417,
+      "afterBytes": 10289330,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0080.svg",
+      "pathsVerified": 908,
+      "beforeBytes": 209948,
+      "afterBytes": 161075,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0082.svg",
+      "pathsVerified": 7368,
+      "beforeBytes": 2331134,
+      "afterBytes": 1839883,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0083.svg",
+      "pathsVerified": 4111,
+      "beforeBytes": 1449490,
+      "afterBytes": 1109416,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0084.svg",
+      "pathsVerified": 1470,
+      "beforeBytes": 415470,
+      "afterBytes": 320172,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0085.svg",
+      "beforeBytes": 9170,
+      "afterBytes": 9170,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0086.svg",
+      "pathsVerified": 24888,
+      "beforeBytes": 6266976,
+      "afterBytes": 5194036,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0087.svg",
+      "pathsVerified": 457,
+      "beforeBytes": 99187,
+      "afterBytes": 78526,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0088.svg",
+      "beforeBytes": 4499,
+      "afterBytes": 4499,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0089.svg",
+      "pathsVerified": 3793,
+      "beforeBytes": 953756,
+      "afterBytes": 774631,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0090.svg",
+      "pathsVerified": 20352,
+      "beforeBytes": 5318082,
+      "afterBytes": 4206803,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0091.svg",
+      "beforeBytes": 1249,
+      "afterBytes": 1249,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0092.svg",
+      "pathsVerified": 29025,
+      "beforeBytes": 6290041,
+      "afterBytes": 4891030,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0093.svg",
+      "pathsVerified": 7866,
+      "beforeBytes": 1390458,
+      "afterBytes": 1105036,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0094.svg",
+      "pathsVerified": 3107,
+      "beforeBytes": 993981,
+      "afterBytes": 786958,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0095.svg",
+      "pathsVerified": 1675,
+      "beforeBytes": 701217,
+      "afterBytes": 537181,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0096.svg",
+      "pathsVerified": 6148,
+      "beforeBytes": 2617814,
+      "afterBytes": 1996092,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0097.svg",
+      "beforeBytes": 4413,
+      "afterBytes": 4413,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0099.svg",
+      "pathsVerified": 29147,
+      "beforeBytes": 7968722,
+      "afterBytes": 6246944,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0100.svg",
+      "pathsVerified": 27502,
+      "beforeBytes": 7301089,
+      "afterBytes": 5724467,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0101.svg",
+      "pathsVerified": 64548,
+      "beforeBytes": 7830378,
+      "afterBytes": 6788970,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0102.svg",
+      "pathsVerified": 85469,
+      "beforeBytes": 24161744,
+      "afterBytes": 18942735,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0103.svg",
+      "pathsVerified": 5226,
+      "beforeBytes": 1464853,
+      "afterBytes": 1161947,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0104.svg",
+      "pathsVerified": 43617,
+      "beforeBytes": 11512234,
+      "afterBytes": 8920311,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0106.svg",
+      "pathsVerified": 7747,
+      "beforeBytes": 3146345,
+      "afterBytes": 2471469,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0107.svg",
+      "pathsVerified": 3734,
+      "beforeBytes": 1387591,
+      "afterBytes": 1060574,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0108.svg",
+      "pathsVerified": 8794,
+      "beforeBytes": 2636528,
+      "afterBytes": 2046609,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0109.svg",
+      "pathsVerified": 3377,
+      "beforeBytes": 1062497,
+      "afterBytes": 813149,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0110.svg",
+      "pathsVerified": 1994,
+      "beforeBytes": 552178,
+      "afterBytes": 450831,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0112.svg",
+      "pathsVerified": 1494,
+      "beforeBytes": 752704,
+      "afterBytes": 573861,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0113.svg",
+      "pathsVerified": 2428,
+      "beforeBytes": 788966,
+      "afterBytes": 604177,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0114.svg",
+      "pathsVerified": 30371,
+      "beforeBytes": 5649550,
+      "afterBytes": 4598876,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0115.svg",
+      "pathsVerified": 3957,
+      "beforeBytes": 1750496,
+      "afterBytes": 1310291,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0116.svg",
+      "pathsVerified": 5108,
+      "beforeBytes": 1775031,
+      "afterBytes": 1401186,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0117.svg",
+      "pathsVerified": 4751,
+      "beforeBytes": 1734225,
+      "afterBytes": 1355529,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0118.svg",
+      "pathsVerified": 25072,
+      "beforeBytes": 8007084,
+      "afterBytes": 6184660,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0119.svg",
+      "pathsVerified": 3418,
+      "beforeBytes": 1285149,
+      "afterBytes": 998841,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0120.svg",
+      "pathsVerified": 2369,
+      "beforeBytes": 822677,
+      "afterBytes": 646230,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0122.svg",
+      "pathsVerified": 1932,
+      "beforeBytes": 828786,
+      "afterBytes": 623281,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0123.svg",
+      "pathsVerified": 806,
+      "beforeBytes": 276760,
+      "afterBytes": 210484,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0124.svg",
+      "pathsVerified": 5011,
+      "beforeBytes": 1982110,
+      "afterBytes": 1473889,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0125.svg",
+      "pathsVerified": 22047,
+      "beforeBytes": 5101232,
+      "afterBytes": 4170317,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0126.svg",
+      "pathsVerified": 10339,
+      "beforeBytes": 4262914,
+      "afterBytes": 3234811,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0127.svg",
+      "pathsVerified": 5613,
+      "beforeBytes": 1734895,
+      "afterBytes": 1369594,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0128.svg",
+      "beforeBytes": 1993,
+      "afterBytes": 1993,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0129.svg",
+      "beforeBytes": 34000,
+      "afterBytes": 34000,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0130.svg",
+      "pathsVerified": 2573,
+      "beforeBytes": 802432,
+      "afterBytes": 617238,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0132.svg",
+      "pathsVerified": 7799,
+      "beforeBytes": 2854020,
+      "afterBytes": 2144138,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0133.svg",
+      "pathsVerified": 3397,
+      "beforeBytes": 1528333,
+      "afterBytes": 1132345,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0134.svg",
+      "pathsVerified": 10943,
+      "beforeBytes": 2086713,
+      "afterBytes": 1654229,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0135.svg",
+      "beforeBytes": 7439,
+      "afterBytes": 7439,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0136.svg",
+      "pathsVerified": 20969,
+      "beforeBytes": 6029783,
+      "afterBytes": 4572197,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0137.svg",
+      "pathsVerified": 5803,
+      "beforeBytes": 1483449,
+      "afterBytes": 1145935,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0138.svg",
+      "pathsVerified": 4251,
+      "beforeBytes": 1322088,
+      "afterBytes": 1073030,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0139.svg",
+      "pathsVerified": 22174,
+      "beforeBytes": 4448773,
+      "afterBytes": 3699896,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0141.svg",
+      "pathsVerified": 5960,
+      "beforeBytes": 2217391,
+      "afterBytes": 1720196,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0142.svg",
+      "pathsVerified": 4283,
+      "beforeBytes": 1574839,
+      "afterBytes": 1201559,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0143.svg",
+      "pathsVerified": 4653,
+      "beforeBytes": 1808809,
+      "afterBytes": 1366649,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0144.svg",
+      "beforeBytes": 17967,
+      "afterBytes": 17967,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0145.svg",
+      "beforeBytes": 1688,
+      "afterBytes": 1688,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0148.svg",
+      "pathsVerified": 3592,
+      "beforeBytes": 1264440,
+      "afterBytes": 981739,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0149.svg",
+      "pathsVerified": 2831,
+      "beforeBytes": 1114415,
+      "afterBytes": 858011,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0150.svg",
+      "pathsVerified": 8929,
+      "beforeBytes": 1281014,
+      "afterBytes": 1017023,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0151.svg",
+      "pathsVerified": 10565,
+      "beforeBytes": 4043290,
+      "afterBytes": 3106752,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0152.svg",
+      "beforeBytes": 4262,
+      "afterBytes": 4262,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0153.svg",
+      "pathsVerified": 607,
+      "beforeBytes": 176776,
+      "afterBytes": 137874,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0155.svg",
+      "pathsVerified": 4034,
+      "beforeBytes": 1446510,
+      "afterBytes": 1121847,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0157.svg",
+      "pathsVerified": 3659,
+      "beforeBytes": 1162238,
+      "afterBytes": 898577,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0158.svg",
+      "pathsVerified": 3736,
+      "beforeBytes": 1341461,
+      "afterBytes": 1021437,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0159.svg",
+      "pathsVerified": 1350,
+      "beforeBytes": 438442,
+      "afterBytes": 340902,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0161.svg",
+      "pathsVerified": 11692,
+      "beforeBytes": 4641729,
+      "afterBytes": 3551023,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0162.svg",
+      "pathsVerified": 5276,
+      "beforeBytes": 1996686,
+      "afterBytes": 1535304,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0164.svg",
+      "beforeBytes": 2463,
+      "afterBytes": 2463,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0165.svg",
+      "beforeBytes": 6704,
+      "afterBytes": 6704,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0166.svg",
+      "beforeBytes": 10680,
+      "afterBytes": 10680,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0168.svg",
+      "beforeBytes": 4685,
+      "afterBytes": 4685,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0169.svg",
+      "pathsVerified": 34123,
+      "beforeBytes": 8250506,
+      "afterBytes": 6463825,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0170.svg",
+      "pathsVerified": 2958,
+      "beforeBytes": 1329460,
+      "afterBytes": 1019558,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0171.svg",
+      "beforeBytes": 5914,
+      "afterBytes": 5914,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0173.svg",
+      "pathsVerified": 13535,
+      "beforeBytes": 4403796,
+      "afterBytes": 3395639,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0175.svg",
+      "pathsVerified": 1835,
+      "beforeBytes": 508114,
+      "afterBytes": 397643,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0176.svg",
+      "pathsVerified": 2185,
+      "beforeBytes": 739868,
+      "afterBytes": 593554,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0177.svg",
+      "pathsVerified": 10762,
+      "beforeBytes": 3781175,
+      "afterBytes": 2968450,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0178.svg",
+      "pathsVerified": 2744,
+      "beforeBytes": 1137066,
+      "afterBytes": 883170,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0180.svg",
+      "pathsVerified": 2534,
+      "beforeBytes": 1064804,
+      "afterBytes": 793544,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0181.svg",
+      "pathsVerified": 15251,
+      "beforeBytes": 6296469,
+      "afterBytes": 4651127,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0182.svg",
+      "beforeBytes": 13142,
+      "afterBytes": 13142,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0183.svg",
+      "beforeBytes": 58005,
+      "afterBytes": 58005,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0184.svg",
+      "pathsVerified": 2906,
+      "beforeBytes": 989131,
+      "afterBytes": 768610,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0185.svg",
+      "pathsVerified": 1634,
+      "beforeBytes": 633036,
+      "afterBytes": 506794,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0186.svg",
+      "beforeBytes": 14672,
+      "afterBytes": 14672,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0187.svg",
+      "pathsVerified": 21654,
+      "beforeBytes": 5924580,
+      "afterBytes": 4640551,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0190.svg",
+      "pathsVerified": 1912,
+      "beforeBytes": 662438,
+      "afterBytes": 509785,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0191.svg",
+      "pathsVerified": 60617,
+      "beforeBytes": 15239019,
+      "afterBytes": 11985228,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0192.svg",
+      "pathsVerified": 3218,
+      "beforeBytes": 1246265,
+      "afterBytes": 976110,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0193.svg",
+      "pathsVerified": 1706,
+      "beforeBytes": 749109,
+      "afterBytes": 588342,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0194.svg",
+      "pathsVerified": 2538,
+      "beforeBytes": 671070,
+      "afterBytes": 534133,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0196.svg",
+      "pathsVerified": 3771,
+      "beforeBytes": 1477356,
+      "afterBytes": 1147868,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0197.svg",
+      "pathsVerified": 23852,
+      "beforeBytes": 6157445,
+      "afterBytes": 5056441,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0199.svg",
+      "pathsVerified": 2297,
+      "beforeBytes": 952787,
+      "afterBytes": 728345,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0200.svg",
+      "pathsVerified": 4593,
+      "beforeBytes": 1593786,
+      "afterBytes": 1248112,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0202.svg",
+      "beforeBytes": 1736,
+      "afterBytes": 1736,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0203.svg",
+      "pathsVerified": 601,
+      "beforeBytes": 245153,
+      "afterBytes": 184597,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0204.svg",
+      "pathsVerified": 3929,
+      "beforeBytes": 1382170,
+      "afterBytes": 1065947,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0205.svg",
+      "pathsVerified": 4912,
+      "beforeBytes": 1661773,
+      "afterBytes": 1284954,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0206.svg",
+      "pathsVerified": 5461,
+      "beforeBytes": 1608260,
+      "afterBytes": 1238547,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0207.svg",
+      "beforeBytes": 2315,
+      "afterBytes": 2315,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0208.svg",
+      "pathsVerified": 24508,
+      "beforeBytes": 7190623,
+      "afterBytes": 5394705,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0209.svg",
+      "pathsVerified": 2808,
+      "beforeBytes": 923443,
+      "afterBytes": 715423,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0210.svg",
+      "pathsVerified": 2193,
+      "beforeBytes": 954536,
+      "afterBytes": 720172,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0211.svg",
+      "beforeBytes": 6693,
+      "afterBytes": 6693,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0212.svg",
+      "pathsVerified": 4754,
+      "beforeBytes": 1491423,
+      "afterBytes": 1158424,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0216.svg",
+      "pathsVerified": 3695,
+      "beforeBytes": 1404229,
+      "afterBytes": 1092961,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0217.svg",
+      "beforeBytes": 6400,
+      "afterBytes": 6400,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0218.svg",
+      "pathsVerified": 8924,
+      "beforeBytes": 3104233,
+      "afterBytes": 2388396,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0219.svg",
+      "pathsVerified": 1853,
+      "beforeBytes": 641764,
+      "afterBytes": 485426,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0220.svg",
+      "pathsVerified": 53818,
+      "beforeBytes": 10422599,
+      "afterBytes": 8329437,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0221.svg",
+      "beforeBytes": 4897,
+      "afterBytes": 4897,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0223.svg",
+      "pathsVerified": 9766,
+      "beforeBytes": 2662655,
+      "afterBytes": 2063777,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0224.svg",
+      "pathsVerified": 3067,
+      "beforeBytes": 1203546,
+      "afterBytes": 908862,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0225.svg",
+      "pathsVerified": 20679,
+      "beforeBytes": 5182955,
+      "afterBytes": 3963184,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0226.svg",
+      "pathsVerified": 1051,
+      "beforeBytes": 288468,
+      "afterBytes": 226032,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0227.svg",
+      "pathsVerified": 1773,
+      "beforeBytes": 655404,
+      "afterBytes": 497703,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0228.svg",
+      "pathsVerified": 2538,
+      "beforeBytes": 875948,
+      "afterBytes": 661484,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0229.svg",
+      "pathsVerified": 8556,
+      "beforeBytes": 2602185,
+      "afterBytes": 1988369,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0230.svg",
+      "pathsVerified": 64985,
+      "beforeBytes": 9293542,
+      "afterBytes": 7957252,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0231.svg",
+      "pathsVerified": 3841,
+      "beforeBytes": 1420315,
+      "afterBytes": 1093058,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0232.svg",
+      "pathsVerified": 32609,
+      "beforeBytes": 8420415,
+      "afterBytes": 6697394,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0233.svg",
+      "pathsVerified": 2155,
+      "beforeBytes": 622911,
+      "afterBytes": 489609,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0234.svg",
+      "beforeBytes": 2125,
+      "afterBytes": 2125,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0235.svg",
+      "pathsVerified": 2149,
+      "beforeBytes": 803798,
+      "afterBytes": 620775,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0237.svg",
+      "pathsVerified": 3719,
+      "beforeBytes": 1437558,
+      "afterBytes": 1127859,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0238.svg",
+      "pathsVerified": 3576,
+      "beforeBytes": 1361226,
+      "afterBytes": 1051443,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0239.svg",
+      "pathsVerified": 9123,
+      "beforeBytes": 3327502,
+      "afterBytes": 2461018,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0241.svg",
+      "pathsVerified": 14162,
+      "beforeBytes": 4000916,
+      "afterBytes": 3000070,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0242.svg",
+      "beforeBytes": 6575,
+      "afterBytes": 6575,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0243.svg",
+      "pathsVerified": 5169,
+      "beforeBytes": 1546990,
+      "afterBytes": 1240498,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0244.svg",
+      "pathsVerified": 11606,
+      "beforeBytes": 2868602,
+      "afterBytes": 2261408,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0245.svg",
+      "pathsVerified": 10276,
+      "beforeBytes": 2301489,
+      "afterBytes": 1816652,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0246.svg",
+      "pathsVerified": 1767,
+      "beforeBytes": 608359,
+      "afterBytes": 465036,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0247.svg",
+      "beforeBytes": 3451,
+      "afterBytes": 3451,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0248.svg",
+      "beforeBytes": 5229,
+      "afterBytes": 5229,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0249.svg",
+      "pathsVerified": 48164,
+      "beforeBytes": 14283041,
+      "afterBytes": 11007806,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0250.svg",
+      "pathsVerified": 1895,
+      "beforeBytes": 677782,
+      "afterBytes": 519222,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0252.svg",
+      "pathsVerified": 815,
+      "beforeBytes": 224185,
+      "afterBytes": 173838,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0253.svg",
+      "pathsVerified": 8179,
+      "beforeBytes": 1996386,
+      "afterBytes": 1585241,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0254.svg",
+      "pathsVerified": 55212,
+      "beforeBytes": 13932313,
+      "afterBytes": 10850155,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0257.svg",
+      "pathsVerified": 3879,
+      "beforeBytes": 1322230,
+      "afterBytes": 1039053,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0258.svg",
+      "pathsVerified": 5574,
+      "beforeBytes": 2014978,
+      "afterBytes": 1553517,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0259.svg",
+      "pathsVerified": 790,
+      "beforeBytes": 229228,
+      "afterBytes": 184384,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0261.svg",
+      "pathsVerified": 1303,
+      "beforeBytes": 503402,
+      "afterBytes": 383222,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0262.svg",
+      "pathsVerified": 23414,
+      "beforeBytes": 7053191,
+      "afterBytes": 5451600,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0263.svg",
+      "pathsVerified": 6640,
+      "beforeBytes": 2693491,
+      "afterBytes": 2076581,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0264.svg",
+      "pathsVerified": 3419,
+      "beforeBytes": 1374211,
+      "afterBytes": 1097195,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0265.svg",
+      "pathsVerified": 520,
+      "beforeBytes": 133905,
+      "afterBytes": 105755,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0268.svg",
+      "pathsVerified": 7426,
+      "beforeBytes": 2527558,
+      "afterBytes": 1964955,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0269.svg",
+      "pathsVerified": 8870,
+      "beforeBytes": 3420111,
+      "afterBytes": 2665538,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0271.svg",
+      "beforeBytes": 3429,
+      "afterBytes": 3429,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0272.svg",
+      "pathsVerified": 2198,
+      "beforeBytes": 809820,
+      "afterBytes": 628067,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0273.svg",
+      "pathsVerified": 3880,
+      "beforeBytes": 1205967,
+      "afterBytes": 930907,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0274.svg",
+      "pathsVerified": 1685,
+      "beforeBytes": 713424,
+      "afterBytes": 548956,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0275.svg",
+      "pathsVerified": 4425,
+      "beforeBytes": 1660787,
+      "afterBytes": 1257170,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0276.svg",
+      "pathsVerified": 9427,
+      "beforeBytes": 3787560,
+      "afterBytes": 2908478,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0277.svg",
+      "pathsVerified": 2392,
+      "beforeBytes": 515524,
+      "afterBytes": 421016,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0278.svg",
+      "pathsVerified": 49830,
+      "beforeBytes": 12535984,
+      "afterBytes": 9655596,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0281.svg",
+      "pathsVerified": 2856,
+      "beforeBytes": 955574,
+      "afterBytes": 751000,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0282.svg",
+      "pathsVerified": 5648,
+      "beforeBytes": 2163410,
+      "afterBytes": 1640116,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0284.svg",
+      "pathsVerified": 8092,
+      "beforeBytes": 2937066,
+      "afterBytes": 2296489,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0286.svg",
+      "pathsVerified": 5169,
+      "beforeBytes": 1988710,
+      "afterBytes": 1539205,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0287.svg",
+      "pathsVerified": 2290,
+      "beforeBytes": 791936,
+      "afterBytes": 629028,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0288.svg",
+      "pathsVerified": 3267,
+      "beforeBytes": 1173897,
+      "afterBytes": 918010,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0289.svg",
+      "pathsVerified": 455,
+      "beforeBytes": 108093,
+      "afterBytes": 85793,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0290.svg",
+      "pathsVerified": 1829,
+      "beforeBytes": 632580,
+      "afterBytes": 486904,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0291.svg",
+      "pathsVerified": 2765,
+      "beforeBytes": 839674,
+      "afterBytes": 654895,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0293.svg",
+      "beforeBytes": 1250,
+      "afterBytes": 1250,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0294.svg",
+      "pathsVerified": 6689,
+      "beforeBytes": 2749552,
+      "afterBytes": 2017439,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0295.svg",
+      "pathsVerified": 5104,
+      "beforeBytes": 2133233,
+      "afterBytes": 1633613,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0296.svg",
+      "pathsVerified": 4996,
+      "beforeBytes": 1894813,
+      "afterBytes": 1439516,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0297.svg",
+      "pathsVerified": 7469,
+      "beforeBytes": 2689470,
+      "afterBytes": 2070183,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0298.svg",
+      "pathsVerified": 6935,
+      "beforeBytes": 2252941,
+      "afterBytes": 1784423,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0299.svg",
+      "pathsVerified": 8938,
+      "beforeBytes": 2357762,
+      "afterBytes": 1839822,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0300.svg",
+      "pathsVerified": 1485,
+      "beforeBytes": 398313,
+      "afterBytes": 311365,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0301.svg",
+      "pathsVerified": 2520,
+      "beforeBytes": 774812,
+      "afterBytes": 622846,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0302.svg",
+      "pathsVerified": 2533,
+      "beforeBytes": 768574,
+      "afterBytes": 588424,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0303.svg",
+      "pathsVerified": 1704,
+      "beforeBytes": 667044,
+      "afterBytes": 517478,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0306.svg",
+      "pathsVerified": 10893,
+      "beforeBytes": 3013449,
+      "afterBytes": 2375076,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0307.svg",
+      "pathsVerified": 3453,
+      "beforeBytes": 1421087,
+      "afterBytes": 1078355,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0308.svg",
+      "pathsVerified": 4455,
+      "beforeBytes": 1701716,
+      "afterBytes": 1334733,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0309.svg",
+      "pathsVerified": 2437,
+      "beforeBytes": 888904,
+      "afterBytes": 681667,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0310.svg",
+      "pathsVerified": 2635,
+      "beforeBytes": 859416,
+      "afterBytes": 661813,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0311.svg",
+      "pathsVerified": 49564,
+      "beforeBytes": 11394412,
+      "afterBytes": 8898556,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0313.svg",
+      "pathsVerified": 2073,
+      "beforeBytes": 751107,
+      "afterBytes": 576914,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0314.svg",
+      "pathsVerified": 3538,
+      "beforeBytes": 1130255,
+      "afterBytes": 907765,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0317.svg",
+      "beforeBytes": 26634,
+      "afterBytes": 26634,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0318.svg",
+      "pathsVerified": 5229,
+      "beforeBytes": 1809707,
+      "afterBytes": 1410450,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0319.svg",
+      "pathsVerified": 61256,
+      "beforeBytes": 15385660,
+      "afterBytes": 12092897,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0320.svg",
+      "pathsVerified": 48741,
+      "beforeBytes": 12422576,
+      "afterBytes": 9883062,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "co-0321.svg",
+      "beforeBytes": 3247,
+      "afterBytes": 3247,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "co-0322.svg",
+      "pathsVerified": 5134,
+      "beforeBytes": 1661000,
+      "afterBytes": 1299077,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0003.svg",
+      "pathsVerified": 28268,
+      "beforeBytes": 6161521,
+      "afterBytes": 4682438,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0004.svg",
+      "beforeBytes": 2252,
+      "afterBytes": 2252,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "ds-0007.svg",
+      "pathsVerified": 1183,
+      "beforeBytes": 573374,
+      "afterBytes": 429372,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0009.svg",
+      "beforeBytes": 1424,
+      "afterBytes": 1424,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "ds-0010.svg",
+      "pathsVerified": 8013,
+      "beforeBytes": 1930654,
+      "afterBytes": 1527737,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0011.svg",
+      "pathsVerified": 11939,
+      "beforeBytes": 2751185,
+      "afterBytes": 2168178,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0013.svg",
+      "pathsVerified": 7152,
+      "beforeBytes": 1227737,
+      "afterBytes": 997493,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0014.svg",
+      "pathsVerified": 27938,
+      "beforeBytes": 3560844,
+      "afterBytes": 2922660,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0015.svg",
+      "pathsVerified": 9059,
+      "beforeBytes": 2327127,
+      "afterBytes": 1831916,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0018.svg",
+      "pathsVerified": 19684,
+      "beforeBytes": 2600115,
+      "afterBytes": 2122937,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0019.svg",
+      "pathsVerified": 3133,
+      "beforeBytes": 1415145,
+      "afterBytes": 1046237,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0020.svg",
+      "pathsVerified": 5154,
+      "beforeBytes": 2125752,
+      "afterBytes": 1604339,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0021.svg",
+      "pathsVerified": 63686,
+      "beforeBytes": 12958426,
+      "afterBytes": 10690014,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0022.svg",
+      "pathsVerified": 1110,
+      "beforeBytes": 429426,
+      "afterBytes": 323561,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0023.svg",
+      "pathsVerified": 25469,
+      "beforeBytes": 8384501,
+      "afterBytes": 6185080,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0025.svg",
+      "pathsVerified": 2292,
+      "beforeBytes": 953520,
+      "afterBytes": 697752,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0028.svg",
+      "pathsVerified": 1791,
+      "beforeBytes": 711242,
+      "afterBytes": 559182,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0029.svg",
+      "pathsVerified": 34000,
+      "beforeBytes": 7487165,
+      "afterBytes": 5885102,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0031.svg",
+      "pathsVerified": 4367,
+      "beforeBytes": 1777106,
+      "afterBytes": 1419718,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0032.svg",
+      "pathsVerified": 1453,
+      "beforeBytes": 782218,
+      "afterBytes": 579988,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0033.svg",
+      "pathsVerified": 4710,
+      "beforeBytes": 1964348,
+      "afterBytes": 1456877,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0035.svg",
+      "pathsVerified": 4725,
+      "beforeBytes": 1812104,
+      "afterBytes": 1380351,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0036.svg",
+      "pathsVerified": 14092,
+      "beforeBytes": 3492893,
+      "afterBytes": 2740268,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0039.svg",
+      "pathsVerified": 12628,
+      "beforeBytes": 1778587,
+      "afterBytes": 1466160,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0041.svg",
+      "pathsVerified": 5024,
+      "beforeBytes": 1669034,
+      "afterBytes": 1304300,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0042.svg",
+      "pathsVerified": 4019,
+      "beforeBytes": 1375457,
+      "afterBytes": 1058251,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0044.svg",
+      "pathsVerified": 5374,
+      "beforeBytes": 909806,
+      "afterBytes": 732905,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0045.svg",
+      "pathsVerified": 6982,
+      "beforeBytes": 3016301,
+      "afterBytes": 2244849,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0047.svg",
+      "pathsVerified": 6919,
+      "beforeBytes": 1205533,
+      "afterBytes": 947817,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0048.svg",
+      "pathsVerified": 4337,
+      "beforeBytes": 2052235,
+      "afterBytes": 1528059,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0049.svg",
+      "pathsVerified": 7557,
+      "beforeBytes": 3106679,
+      "afterBytes": 2356660,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0050.svg",
+      "beforeBytes": 2798,
+      "afterBytes": 2798,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "ds-0052.svg",
+      "pathsVerified": 2349,
+      "beforeBytes": 1175744,
+      "afterBytes": 853098,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0054.svg",
+      "pathsVerified": 6103,
+      "beforeBytes": 2716710,
+      "afterBytes": 2077262,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0055.svg",
+      "pathsVerified": 24777,
+      "beforeBytes": 7949693,
+      "afterBytes": 5855901,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0056.svg",
+      "pathsVerified": 52436,
+      "beforeBytes": 15711001,
+      "afterBytes": 12074585,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0057.svg",
+      "pathsVerified": 10897,
+      "beforeBytes": 3911248,
+      "afterBytes": 3081392,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0059.svg",
+      "pathsVerified": 99372,
+      "beforeBytes": 20288530,
+      "afterBytes": 16843066,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0061.svg",
+      "beforeBytes": 4264,
+      "afterBytes": 4264,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "ds-0062.svg",
+      "pathsVerified": 6201,
+      "beforeBytes": 4319177,
+      "afterBytes": 3105402,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0063.svg",
+      "pathsVerified": 4560,
+      "beforeBytes": 1744497,
+      "afterBytes": 1318530,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0064.svg",
+      "pathsVerified": 8718,
+      "beforeBytes": 2634803,
+      "afterBytes": 2030218,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0067.svg",
+      "pathsVerified": 1117,
+      "beforeBytes": 500766,
+      "afterBytes": 380767,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0070.svg",
+      "pathsVerified": 3305,
+      "beforeBytes": 2371518,
+      "afterBytes": 1703620,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0071.svg",
+      "pathsVerified": 27445,
+      "beforeBytes": 3485831,
+      "afterBytes": 2822131,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0072.svg",
+      "pathsVerified": 15863,
+      "beforeBytes": 3859236,
+      "afterBytes": 3035920,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0073.svg",
+      "pathsVerified": 6088,
+      "beforeBytes": 1076848,
+      "afterBytes": 868042,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0074.svg",
+      "pathsVerified": 6245,
+      "beforeBytes": 2311326,
+      "afterBytes": 1762139,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0075.svg",
+      "pathsVerified": 20885,
+      "beforeBytes": 6024943,
+      "afterBytes": 4490472,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0076.svg",
+      "pathsVerified": 5646,
+      "beforeBytes": 2565803,
+      "afterBytes": 1977235,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0078.svg",
+      "pathsVerified": 29864,
+      "beforeBytes": 5684098,
+      "afterBytes": 4388025,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0079.svg",
+      "pathsVerified": 21227,
+      "beforeBytes": 3306735,
+      "afterBytes": 2636238,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0080.svg",
+      "pathsVerified": 2016,
+      "beforeBytes": 795253,
+      "afterBytes": 603955,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0081.svg",
+      "pathsVerified": 39684,
+      "beforeBytes": 9029123,
+      "afterBytes": 7210959,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0083.svg",
+      "pathsVerified": 5403,
+      "beforeBytes": 1017953,
+      "afterBytes": 819466,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0084.svg",
+      "pathsVerified": 3908,
+      "beforeBytes": 1530150,
+      "afterBytes": 1153855,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0090.svg",
+      "pathsVerified": 38908,
+      "beforeBytes": 11308729,
+      "afterBytes": 8455091,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0093.svg",
+      "beforeBytes": 1532,
+      "afterBytes": 1532,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "ds-0094.svg",
+      "pathsVerified": 1708,
+      "beforeBytes": 765885,
+      "afterBytes": 593281,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0097.svg",
+      "pathsVerified": 16093,
+      "beforeBytes": 2047579,
+      "afterBytes": 1660230,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0099.svg",
+      "pathsVerified": 1844,
+      "beforeBytes": 1204901,
+      "afterBytes": 864315,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0100.svg",
+      "pathsVerified": 25641,
+      "beforeBytes": 4265591,
+      "afterBytes": 3435546,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0101.svg",
+      "pathsVerified": 2956,
+      "beforeBytes": 1532221,
+      "afterBytes": 1155056,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0103.svg",
+      "pathsVerified": 13872,
+      "beforeBytes": 3562131,
+      "afterBytes": 2783341,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0104.svg",
+      "pathsVerified": 12192,
+      "beforeBytes": 1915237,
+      "afterBytes": 1577761,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0106.svg",
+      "pathsVerified": 6052,
+      "beforeBytes": 2700799,
+      "afterBytes": 2062754,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0107.svg",
+      "pathsVerified": 1962,
+      "beforeBytes": 594483,
+      "afterBytes": 462306,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0109.svg",
+      "pathsVerified": 2869,
+      "beforeBytes": 1309989,
+      "afterBytes": 981861,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0111.svg",
+      "pathsVerified": 18519,
+      "beforeBytes": 2987996,
+      "afterBytes": 2369375,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0121.svg",
+      "pathsVerified": 10145,
+      "beforeBytes": 2255342,
+      "afterBytes": 1725053,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0122.svg",
+      "pathsVerified": 4983,
+      "beforeBytes": 2073249,
+      "afterBytes": 1654085,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0123.svg",
+      "pathsVerified": 19665,
+      "beforeBytes": 6924707,
+      "afterBytes": 5334286,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0124.svg",
+      "pathsVerified": 2930,
+      "beforeBytes": 780273,
+      "afterBytes": 594176,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0126.svg",
+      "pathsVerified": 24639,
+      "beforeBytes": 6801922,
+      "afterBytes": 5098177,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0128.svg",
+      "pathsVerified": 27069,
+      "beforeBytes": 3499330,
+      "afterBytes": 2829416,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0129.svg",
+      "pathsVerified": 10489,
+      "beforeBytes": 4585118,
+      "afterBytes": 3499419,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0132.svg",
+      "pathsVerified": 20782,
+      "beforeBytes": 4484666,
+      "afterBytes": 3545169,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0133.svg",
+      "pathsVerified": 1360,
+      "beforeBytes": 564591,
+      "afterBytes": 427063,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0134.svg",
+      "pathsVerified": 7844,
+      "beforeBytes": 2577622,
+      "afterBytes": 1884520,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0136.svg",
+      "pathsVerified": 3995,
+      "beforeBytes": 1378943,
+      "afterBytes": 1060756,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0137.svg",
+      "pathsVerified": 6074,
+      "beforeBytes": 3465272,
+      "afterBytes": 2563891,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0138.svg",
+      "beforeBytes": 1368,
+      "afterBytes": 1368,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "ds-0140.svg",
+      "pathsVerified": 5475,
+      "beforeBytes": 2058621,
+      "afterBytes": 1630907,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0142.svg",
+      "pathsVerified": 3698,
+      "beforeBytes": 1428492,
+      "afterBytes": 1139646,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0143.svg",
+      "pathsVerified": 27586,
+      "beforeBytes": 4189376,
+      "afterBytes": 3310240,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0145.svg",
+      "pathsVerified": 4967,
+      "beforeBytes": 2344137,
+      "afterBytes": 1779988,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0146.svg",
+      "beforeBytes": 3453,
+      "afterBytes": 3453,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "ds-0148.svg",
+      "pathsVerified": 23282,
+      "beforeBytes": 4942516,
+      "afterBytes": 3830881,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0150.svg",
+      "pathsVerified": 7921,
+      "beforeBytes": 2412521,
+      "afterBytes": 1820077,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0151.svg",
+      "pathsVerified": 107246,
+      "beforeBytes": 17418022,
+      "afterBytes": 15598652,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0152.svg",
+      "pathsVerified": 3910,
+      "beforeBytes": 1111272,
+      "afterBytes": 845768,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0157.svg",
+      "pathsVerified": 7499,
+      "beforeBytes": 3606831,
+      "afterBytes": 2722097,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0158.svg",
+      "pathsVerified": 67917,
+      "beforeBytes": 15550550,
+      "afterBytes": 12539691,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0159.svg",
+      "pathsVerified": 26787,
+      "beforeBytes": 3449326,
+      "afterBytes": 2790472,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0161.svg",
+      "pathsVerified": 2640,
+      "beforeBytes": 1310876,
+      "afterBytes": 951623,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0162.svg",
+      "pathsVerified": 22584,
+      "beforeBytes": 6412895,
+      "afterBytes": 4768349,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0165.svg",
+      "pathsVerified": 2240,
+      "beforeBytes": 869405,
+      "afterBytes": 651410,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0168.svg",
+      "pathsVerified": 3503,
+      "beforeBytes": 1756465,
+      "afterBytes": 1299536,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0170.svg",
+      "pathsVerified": 27904,
+      "beforeBytes": 4284667,
+      "afterBytes": 3376606,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0172.svg",
+      "pathsVerified": 8340,
+      "beforeBytes": 3694514,
+      "afterBytes": 2816914,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0174.svg",
+      "pathsVerified": 5845,
+      "beforeBytes": 3162232,
+      "afterBytes": 2297235,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0175.svg",
+      "pathsVerified": 30324,
+      "beforeBytes": 3865741,
+      "afterBytes": 3101916,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0176.svg",
+      "beforeBytes": 5285,
+      "afterBytes": 5285,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "ds-0177.svg",
+      "pathsVerified": 7008,
+      "beforeBytes": 2731439,
+      "afterBytes": 2064713,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0178.svg",
+      "pathsVerified": 4132,
+      "beforeBytes": 1489216,
+      "afterBytes": 1186262,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0183.svg",
+      "pathsVerified": 11798,
+      "beforeBytes": 2799388,
+      "afterBytes": 2205500,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0184.svg",
+      "pathsVerified": 14857,
+      "beforeBytes": 2406829,
+      "afterBytes": 1985974,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0186.svg",
+      "pathsVerified": 8271,
+      "beforeBytes": 1668284,
+      "afterBytes": 1318646,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0187.svg",
+      "pathsVerified": 3309,
+      "beforeBytes": 1267352,
+      "afterBytes": 919625,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0189.svg",
+      "pathsVerified": 5128,
+      "beforeBytes": 2557941,
+      "afterBytes": 1929406,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0190.svg",
+      "pathsVerified": 6940,
+      "beforeBytes": 1218863,
+      "afterBytes": 988801,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0199.svg",
+      "pathsVerified": 29456,
+      "beforeBytes": 3379625,
+      "afterBytes": 2760290,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0200.svg",
+      "pathsVerified": 39706,
+      "beforeBytes": 4830792,
+      "afterBytes": 3892902,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0202.svg",
+      "pathsVerified": 4701,
+      "beforeBytes": 1614156,
+      "afterBytes": 1227298,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0205.svg",
+      "pathsVerified": 22613,
+      "beforeBytes": 3626379,
+      "afterBytes": 2920380,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0206.svg",
+      "pathsVerified": 11978,
+      "beforeBytes": 4668621,
+      "afterBytes": 3600656,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0207.svg",
+      "pathsVerified": 11280,
+      "beforeBytes": 3346951,
+      "afterBytes": 2502399,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0209.svg",
+      "pathsVerified": 26520,
+      "beforeBytes": 3099916,
+      "afterBytes": 2536481,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0210.svg",
+      "pathsVerified": 5029,
+      "beforeBytes": 2230825,
+      "afterBytes": 1743975,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0212.svg",
+      "pathsVerified": 2097,
+      "beforeBytes": 1261378,
+      "afterBytes": 929526,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0213.svg",
+      "pathsVerified": 4570,
+      "beforeBytes": 912271,
+      "afterBytes": 724709,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0215.svg",
+      "pathsVerified": 8897,
+      "beforeBytes": 3062176,
+      "afterBytes": 2323054,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0218.svg",
+      "pathsVerified": 3234,
+      "beforeBytes": 1195102,
+      "afterBytes": 911686,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0219.svg",
+      "pathsVerified": 6843,
+      "beforeBytes": 3002092,
+      "afterBytes": 2262139,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "ds-0220.svg",
+      "pathsVerified": 995,
+      "beforeBytes": 386667,
+      "afterBytes": 291763,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0002.svg",
+      "pathsVerified": 22879,
+      "beforeBytes": 4775321,
+      "afterBytes": 3748103,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0003.svg",
+      "pathsVerified": 14639,
+      "beforeBytes": 3384804,
+      "afterBytes": 2723397,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0004.svg",
+      "beforeBytes": 5520,
+      "afterBytes": 5520,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0005.svg",
+      "pathsVerified": 49081,
+      "beforeBytes": 9554835,
+      "afterBytes": 7700692,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0006.svg",
+      "pathsVerified": 15410,
+      "beforeBytes": 4153802,
+      "afterBytes": 3289550,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0009.svg",
+      "pathsVerified": 12651,
+      "beforeBytes": 5199958,
+      "afterBytes": 3949536,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0010.svg",
+      "beforeBytes": 14864,
+      "afterBytes": 14864,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0011.svg",
+      "pathsVerified": 4357,
+      "beforeBytes": 1586956,
+      "afterBytes": 1199213,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0012.svg",
+      "beforeBytes": 2774,
+      "afterBytes": 2774,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0013.svg",
+      "beforeBytes": 25933,
+      "afterBytes": 25933,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0017.svg",
+      "pathsVerified": 2738,
+      "beforeBytes": 1030664,
+      "afterBytes": 783710,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0018.svg",
+      "pathsVerified": 8874,
+      "beforeBytes": 3091018,
+      "afterBytes": 2336774,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0020.svg",
+      "beforeBytes": 6925,
+      "afterBytes": 6925,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0021.svg",
+      "beforeBytes": 6766,
+      "afterBytes": 6766,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0022.svg",
+      "pathsVerified": 8536,
+      "beforeBytes": 2855136,
+      "afterBytes": 2218586,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0023.svg",
+      "beforeBytes": 7713,
+      "afterBytes": 7713,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0024.svg",
+      "beforeBytes": 24530,
+      "afterBytes": 24530,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0025.svg",
+      "beforeBytes": 2680,
+      "afterBytes": 2680,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0026.svg",
+      "pathsVerified": 2078,
+      "beforeBytes": 1114765,
+      "afterBytes": 817665,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0028.svg",
+      "pathsVerified": 4756,
+      "beforeBytes": 2053955,
+      "afterBytes": 1525992,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0030.svg",
+      "pathsVerified": 1198,
+      "beforeBytes": 319110,
+      "afterBytes": 255494,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0032.svg",
+      "pathsVerified": 4721,
+      "beforeBytes": 1641226,
+      "afterBytes": 1263412,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0033.svg",
+      "pathsVerified": 27644,
+      "beforeBytes": 7130729,
+      "afterBytes": 5858863,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0034.svg",
+      "pathsVerified": 3209,
+      "beforeBytes": 1375443,
+      "afterBytes": 1030512,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0035.svg",
+      "pathsVerified": 3191,
+      "beforeBytes": 1118431,
+      "afterBytes": 858087,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0036.svg",
+      "pathsVerified": 50687,
+      "beforeBytes": 15110827,
+      "afterBytes": 11632229,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0039.svg",
+      "pathsVerified": 56361,
+      "beforeBytes": 15157754,
+      "afterBytes": 11680898,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0040.svg",
+      "beforeBytes": 7422,
+      "afterBytes": 7422,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0041.svg",
+      "pathsVerified": 2810,
+      "beforeBytes": 1250166,
+      "afterBytes": 990124,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0042.svg",
+      "pathsVerified": 12454,
+      "beforeBytes": 4578144,
+      "afterBytes": 3463523,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0043.svg",
+      "pathsVerified": 1851,
+      "beforeBytes": 565791,
+      "afterBytes": 434290,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0044.svg",
+      "pathsVerified": 12950,
+      "beforeBytes": 3763725,
+      "afterBytes": 2947478,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0045.svg",
+      "pathsVerified": 1706,
+      "beforeBytes": 570980,
+      "afterBytes": 440423,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0046.svg",
+      "pathsVerified": 4089,
+      "beforeBytes": 1285718,
+      "afterBytes": 976376,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0048.svg",
+      "beforeBytes": 3818,
+      "afterBytes": 3818,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0050.svg",
+      "pathsVerified": 4584,
+      "beforeBytes": 1336794,
+      "afterBytes": 1022622,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0051.svg",
+      "pathsVerified": 3854,
+      "beforeBytes": 1167801,
+      "afterBytes": 925281,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0053.svg",
+      "pathsVerified": 27870,
+      "beforeBytes": 4203607,
+      "afterBytes": 3513277,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0054.svg",
+      "beforeBytes": 6314,
+      "afterBytes": 6314,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0056.svg",
+      "pathsVerified": 7864,
+      "beforeBytes": 2117342,
+      "afterBytes": 1630834,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0057.svg",
+      "pathsVerified": 34776,
+      "beforeBytes": 4678439,
+      "afterBytes": 3865621,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0059.svg",
+      "pathsVerified": 4940,
+      "beforeBytes": 2377317,
+      "afterBytes": 1821232,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0061.svg",
+      "pathsVerified": 4520,
+      "beforeBytes": 1770339,
+      "afterBytes": 1340112,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0062.svg",
+      "beforeBytes": 4159,
+      "afterBytes": 4159,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0063.svg",
+      "pathsVerified": 14607,
+      "beforeBytes": 3979197,
+      "afterBytes": 3100063,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0065.svg",
+      "beforeBytes": 6521,
+      "afterBytes": 6521,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0066.svg",
+      "pathsVerified": 32706,
+      "beforeBytes": 7920296,
+      "afterBytes": 6453442,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0067.svg",
+      "pathsVerified": 3394,
+      "beforeBytes": 1061153,
+      "afterBytes": 845288,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0068.svg",
+      "pathsVerified": 22656,
+      "beforeBytes": 5726214,
+      "afterBytes": 4505266,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0069.svg",
+      "beforeBytes": 7273,
+      "afterBytes": 7273,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0070.svg",
+      "beforeBytes": 8635,
+      "afterBytes": 8635,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0071.svg",
+      "pathsVerified": 12557,
+      "beforeBytes": 3698660,
+      "afterBytes": 2893625,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0072.svg",
+      "pathsVerified": 4821,
+      "beforeBytes": 1378678,
+      "afterBytes": 1099390,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0074.svg",
+      "pathsVerified": 37033,
+      "beforeBytes": 9079480,
+      "afterBytes": 7502789,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0075.svg",
+      "pathsVerified": 3272,
+      "beforeBytes": 1253528,
+      "afterBytes": 947495,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0077.svg",
+      "pathsVerified": 4601,
+      "beforeBytes": 1989808,
+      "afterBytes": 1505344,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0080.svg",
+      "beforeBytes": 8646,
+      "afterBytes": 8646,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0081.svg",
+      "pathsVerified": 34100,
+      "beforeBytes": 9042992,
+      "afterBytes": 7269893,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0082.svg",
+      "pathsVerified": 2325,
+      "beforeBytes": 932230,
+      "afterBytes": 732168,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0084.svg",
+      "pathsVerified": 5318,
+      "beforeBytes": 2043943,
+      "afterBytes": 1566484,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0085.svg",
+      "pathsVerified": 15737,
+      "beforeBytes": 3745087,
+      "afterBytes": 2970737,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0086.svg",
+      "beforeBytes": 2156,
+      "afterBytes": 2156,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0087.svg",
+      "beforeBytes": 2872,
+      "afterBytes": 2872,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0088.svg",
+      "beforeBytes": 13685,
+      "afterBytes": 13685,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0089.svg",
+      "pathsVerified": 5719,
+      "beforeBytes": 1991474,
+      "afterBytes": 1540656,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0091.svg",
+      "pathsVerified": 14964,
+      "beforeBytes": 4538471,
+      "afterBytes": 3533531,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0092.svg",
+      "pathsVerified": 3363,
+      "beforeBytes": 1308707,
+      "afterBytes": 998941,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0093.svg",
+      "pathsVerified": 2711,
+      "beforeBytes": 1225082,
+      "afterBytes": 911135,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0094.svg",
+      "beforeBytes": 21141,
+      "afterBytes": 21141,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0096.svg",
+      "pathsVerified": 49116,
+      "beforeBytes": 13299180,
+      "afterBytes": 10735132,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0097.svg",
+      "pathsVerified": 18910,
+      "beforeBytes": 4619154,
+      "afterBytes": 3588831,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0098.svg",
+      "pathsVerified": 3726,
+      "beforeBytes": 1562559,
+      "afterBytes": 1156001,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0099.svg",
+      "pathsVerified": 1604,
+      "beforeBytes": 660385,
+      "afterBytes": 487108,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0100.svg",
+      "beforeBytes": 30853,
+      "afterBytes": 30853,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0101.svg",
+      "pathsVerified": 22694,
+      "beforeBytes": 5559683,
+      "afterBytes": 4268205,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0102.svg",
+      "pathsVerified": 29165,
+      "beforeBytes": 9252120,
+      "afterBytes": 7075629,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0103.svg",
+      "pathsVerified": 3594,
+      "beforeBytes": 1060681,
+      "afterBytes": 849130,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0104.svg",
+      "pathsVerified": 50368,
+      "beforeBytes": 13545142,
+      "afterBytes": 10836514,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0105.svg",
+      "pathsVerified": 22428,
+      "beforeBytes": 4757583,
+      "afterBytes": 3878656,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0109.svg",
+      "beforeBytes": 6397,
+      "afterBytes": 6397,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0110.svg",
+      "beforeBytes": 5284,
+      "afterBytes": 5284,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0111.svg",
+      "pathsVerified": 10896,
+      "beforeBytes": 3295147,
+      "afterBytes": 2552528,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0112.svg",
+      "pathsVerified": 4264,
+      "beforeBytes": 1630389,
+      "afterBytes": 1257888,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0113.svg",
+      "pathsVerified": 14355,
+      "beforeBytes": 2211776,
+      "afterBytes": 1901185,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0114.svg",
+      "pathsVerified": 6731,
+      "beforeBytes": 2294117,
+      "afterBytes": 1743223,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0115.svg",
+      "pathsVerified": 34034,
+      "beforeBytes": 6634373,
+      "afterBytes": 5589084,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0116.svg",
+      "pathsVerified": 443,
+      "beforeBytes": 144846,
+      "afterBytes": 110146,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0118.svg",
+      "pathsVerified": 17568,
+      "beforeBytes": 5096351,
+      "afterBytes": 3966791,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0120.svg",
+      "pathsVerified": 2737,
+      "beforeBytes": 1156385,
+      "afterBytes": 865120,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0121.svg",
+      "pathsVerified": 2183,
+      "beforeBytes": 1050544,
+      "afterBytes": 769862,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0122.svg",
+      "pathsVerified": 97996,
+      "beforeBytes": 23582738,
+      "afterBytes": 19137340,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0123.svg",
+      "pathsVerified": 19403,
+      "beforeBytes": 5796436,
+      "afterBytes": 4472971,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0124.svg",
+      "beforeBytes": 14637,
+      "afterBytes": 14637,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0125.svg",
+      "beforeBytes": 4087,
+      "afterBytes": 4087,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0127.svg",
+      "pathsVerified": 16336,
+      "beforeBytes": 4661281,
+      "afterBytes": 3454187,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0128.svg",
+      "beforeBytes": 3398,
+      "afterBytes": 3398,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0131.svg",
+      "pathsVerified": 27311,
+      "beforeBytes": 7899161,
+      "afterBytes": 6319086,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0132.svg",
+      "pathsVerified": 3023,
+      "beforeBytes": 1070082,
+      "afterBytes": 823491,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0133.svg",
+      "pathsVerified": 19003,
+      "beforeBytes": 3068812,
+      "afterBytes": 2492279,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0135.svg",
+      "pathsVerified": 37401,
+      "beforeBytes": 8966424,
+      "afterBytes": 7167492,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0136.svg",
+      "pathsVerified": 10462,
+      "beforeBytes": 2538747,
+      "afterBytes": 1999507,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0139.svg",
+      "pathsVerified": 3094,
+      "beforeBytes": 1036139,
+      "afterBytes": 792354,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0140.svg",
+      "pathsVerified": 33571,
+      "beforeBytes": 6273649,
+      "afterBytes": 5162612,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0142.svg",
+      "pathsVerified": 1662,
+      "beforeBytes": 640750,
+      "afterBytes": 486910,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0143.svg",
+      "pathsVerified": 13705,
+      "beforeBytes": 3466285,
+      "afterBytes": 2752957,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0144.svg",
+      "beforeBytes": 3423,
+      "afterBytes": 3423,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0145.svg",
+      "pathsVerified": 13380,
+      "beforeBytes": 5252231,
+      "afterBytes": 4023902,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0146.svg",
+      "pathsVerified": 3341,
+      "beforeBytes": 1279045,
+      "afterBytes": 966918,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0148.svg",
+      "pathsVerified": 34543,
+      "beforeBytes": 5445113,
+      "afterBytes": 4551776,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0149.svg",
+      "beforeBytes": 6858,
+      "afterBytes": 6858,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0150.svg",
+      "beforeBytes": 5203,
+      "afterBytes": 5203,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0151.svg",
+      "pathsVerified": 6713,
+      "beforeBytes": 2553573,
+      "afterBytes": 1896712,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0152.svg",
+      "pathsVerified": 35623,
+      "beforeBytes": 7929102,
+      "afterBytes": 6382818,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0153.svg",
+      "pathsVerified": 15441,
+      "beforeBytes": 3770355,
+      "afterBytes": 3010065,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0154.svg",
+      "pathsVerified": 7982,
+      "beforeBytes": 3242473,
+      "afterBytes": 2478206,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0155.svg",
+      "pathsVerified": 6196,
+      "beforeBytes": 2334780,
+      "afterBytes": 1785342,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0156.svg",
+      "beforeBytes": 7827,
+      "afterBytes": 7827,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0158.svg",
+      "pathsVerified": 10091,
+      "beforeBytes": 3111227,
+      "afterBytes": 2402766,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0159.svg",
+      "pathsVerified": 4269,
+      "beforeBytes": 1804649,
+      "afterBytes": 1347203,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0160.svg",
+      "pathsVerified": 8295,
+      "beforeBytes": 2590437,
+      "afterBytes": 1931586,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0161.svg",
+      "pathsVerified": 3147,
+      "beforeBytes": 1367828,
+      "afterBytes": 1042720,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0162.svg",
+      "beforeBytes": 2248,
+      "afterBytes": 2248,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    },
+    {
+      "file": "os-0163.svg",
+      "pathsVerified": 6543,
+      "beforeBytes": 2748604,
+      "afterBytes": 2104060,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0164.svg",
+      "pathsVerified": 3272,
+      "beforeBytes": 1271611,
+      "afterBytes": 979301,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0168.svg",
+      "pathsVerified": 20844,
+      "beforeBytes": 5505976,
+      "afterBytes": 4322975,
+      "geometryUnchanged": true,
+      "method": "lexical-only"
+    },
+    {
+      "file": "os-0169.svg",
+      "beforeBytes": 7533,
+      "afterBytes": 7533,
+      "geometryUnchanged": true,
+      "method": "unchanged"
+    }
+  ]
+}

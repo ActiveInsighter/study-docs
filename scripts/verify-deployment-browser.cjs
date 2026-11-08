@@ -35,7 +35,20 @@ async function homepage(page, base) {
 function homeLink(href) {
   return async (page, base) => {
     await page.goto(base + '/', { waitUntil: 'networkidle2', timeout: 120000 });
-    await page.click(`a[href="${href}"]`);
+    // The homepage keeps separate desktop and mobile module links in the DOM.
+    // Select the visible one instead of assuming the first selector match is clickable.
+    const link = await page.evaluateHandle(
+      (target) =>
+        Array.from(document.querySelectorAll(`a[href="${target}"]`)).find(
+          (element) =>
+            element.getClientRects().length > 0 &&
+            getComputedStyle(element).visibility !== 'hidden',
+        ) ?? null,
+      href,
+    );
+    const element = link.asElement();
+    if (!element) throw new Error('Homepage has no visible link to ' + href);
+    await element.click();
     await page.waitForFunction(
       (expected, notFound) => location.pathname === expected || document.body.innerText.includes(notFound),
       { timeout: 120000 },

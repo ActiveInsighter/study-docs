@@ -79,7 +79,7 @@ jobs:
         shell: bash
         run: node scripts/normalize-strong-boundaries.mjs --check
 
-      - name: Validate themed SVG XML
+      - name: Validate study diagrams SVG XML
         shell: bash
         run: |
           python3 - <<'PY'
@@ -87,11 +87,14 @@ jobs:
           import xml.etree.ElementTree as ET
 
           courses = ('computer-network', 'computer-organization', 'operating-system')
-          files = sorted(
-              path
-              for course in courses
-              for path in (Path('public/images') / course).rglob('*.svg')
-          )
+          files = sorted([
+              *(
+                  path
+                  for course in courses
+                  for path in (Path('public/images') / course).rglob('*.svg')
+              ),
+              *Path('public/images/408-mind-maps').rglob('*.svg'),
+          ])
           errors = []
           for path in files:
               try:

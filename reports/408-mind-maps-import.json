@@ -1,0 +1,193 @@
+{
+  "courses": 4,
+  "chapters": 26,
+  "svgAssets": 616,
+  "svgOccurrences": 675,
+  "sourceAnchors": 481,
+  "markdownImages": 230,
+  "source": "四门课 XMind 已核验 Markdown 与 SVG 优化版",
+  "chaptersDetail": [
+    {
+      "course": "数据结构",
+      "chapter": "第一章 绪论",
+      "sourceAnchors": 14,
+      "images": 2,
+      "characters": 3505
+    },
+    {
+      "course": "数据结构",
+      "chapter": "第二章 线性表",
+      "sourceAnchors": 4,
+      "images": 0,
+      "characters": 3956
+    },
+    {
+      "course": "数据结构",
+      "chapter": "第三章 栈、队列与数组",
+      "sourceAnchors": 8,
+      "images": 8,
+      "characters": 5165
+    },
+    {
+      "course": "数据结构",
+      "chapter": "第四章 串",
+      "sourceAnchors": 1,
+      "images": 7,
+      "characters": 4773
+    },
+    {
+      "course": "数据结构",
+      "chapter": "第五章 树与二叉树",
+      "sourceAnchors": 12,
+      "images": 29,
+      "characters": 17159
+    },
+    {
+      "course": "数据结构",
+      "chapter": "第六章 图",
+      "sourceAnchors": 12,
+      "images": 21,
+      "characters": 13566
+    },
+    {
+      "course": "数据结构",
+      "chapter": "第七章 查找",
+      "sourceAnchors": 11,
+      "images": 35,
+      "characters": 17231
+    },
+    {
+      "course": "数据结构",
+      "chapter": "第八章 排序",
+      "sourceAnchors": 5,
+      "images": 28,
+      "characters": 17952
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter": "第一章 计算机系统概论",
+      "sourceAnchors": 20,
+      "images": 14,
+      "characters": 9388
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter": "第二章 数据的表示和运算",
+      "sourceAnchors": 26,
+      "images": 63,
+      "characters": 32634
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter": "第三章 存储系统",
+      "sourceAnchors": 28,
+      "images": 70,
+      "characters": 31639
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter": "第四章 指令系统",
+      "sourceAnchors": 9,
+      "images": 18,
+      "characters": 8962
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter": "第五章 中央处理器",
+      "sourceAnchors": 38,
+      "images": 73,
+      "characters": 40253
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter": "第六章 总线",
+      "sourceAnchors": 8,
+      "images": 9,
+      "characters": 6317
+    },
+    {
+      "course": "计算机组成原理",
+      "chapter": "第七章 输入输出系统",
+      "sourceAnchors": 34,
+      "images": 28,
+      "characters": 17268
+    },
+    {
+      "course": "操作系统",
+      "chapter": "第一章 操作系统概述",
+      "sourceAnchors": 24,
+      "images": 20,
+      "characters": 11352
+    },
+    {
+      "course": "操作系统",
+      "chapter": "第二章 进程管理",
+      "sourceAnchors": 27,
+      "images": 29,
+      "characters": 30724
+    },
+    {
+      "course": "操作系统",
+      "chapter": "第三章 内存管理",
+      "sourceAnchors": 25,
+      "images": 24,
+      "characters": 16153
+    },
+    {
+      "course": "操作系统",
+      "chapter": "第四章 文件管理",
+      "sourceAnchors": 41,
+      "images": 35,
+      "characters": 23320
+    },
+    {
+      "course": "操作系统",
+      "chapter": "第五章 输入输出管理",
+      "sourceAnchors": 40,
+      "images": 39,
+      "characters": 23325
+    },
+    {
+      "course": "计算机网络",
+      "chapter": "第一章 计算机网络体系结构",
+      "sourceAnchors": 14,
+      "images": 15,
+      "characters": 8402
+    },
+    {
+      "course": "计算机网络",
+      "chapter": "第二章 物理层",
+      "sourceAnchors": 13,
+      "images": 34,
+      "characters": 21127
+    },
+    {
+      "course": "计算机网络",
+      "chapter": "第三章 数据链路层",
+      "sourceAnchors": 14,
+      "images": 23,
+      "characters": 18918
+    },
+    {
+      "course": "计算机网络",
+      "chapter": "第四章 网络层",
+      "sourceAnchors": 13,
+      "images": 29,
+      "characters": 22527
+    },
+    {
+      "course": "计算机网络",
+      "chapter": "第五章 传输层",
+      "sourceAnchors": 7,
+      "images": 11,
+      "characters": 9167
+    },
+    {
+      "course": "计算机网络",
+      "chapter": "第六章 应用层",
+      "sourceAnchors": 33,
+      "images": 11,
+      "characters": 11028
+    }
+  ]
+}

@@ -60,13 +60,16 @@ export default async function Page({ params }: PageParameters) {
   const MDX = data.body;
   const markdownUrl = toMarkdownPath(page.url);
   const isVocabularyPage = page.path.startsWith('english/vocabulary/');
-  const useFullPage = Boolean(page.data.full) || isVocabularyPage;
+  const is408MindMapPage = page.path.startsWith('408/mind-maps/');
+  const useFullPage = Boolean(page.data.full) || isVocabularyPage || is408MindMapPage;
   const pageComponents = getPageMDXComponents(page.path);
 
   return (
     <DocsPage
-      toc={data.toc}
+      toc={is408MindMapPage ? [] : data.toc}
       full={useFullPage}
+      tableOfContent={is408MindMapPage ? { enabled: false } : undefined}
+      tableOfContentPopover={is408MindMapPage ? { enabled: false } : undefined}
     >
       <DocsTitle className="docs-page-title font-medium">{page.data.title}</DocsTitle>
       <DocsDescription className="mb-1 font-normal">
@@ -89,7 +92,7 @@ export default async function Page({ params }: PageParameters) {
       <WordCardsProvider>
         <DocsBody
           id="docs-body"
-          className={`pb-10 pt-4${isVocabularyPage ? ' vocabulary-docs-body' : ''}`}
+          className={`pb-10 pt-4${isVocabularyPage ? ' vocabulary-docs-body' : ''}${is408MindMapPage ? ' mind-map-wide-page' : ''}`}
         >
           <MDX
             components={getMDXComponents({

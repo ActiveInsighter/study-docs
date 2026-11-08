@@ -153,3 +153,31 @@
     transition: none;
   }
 }
+
+/* 408 chapter maps are primary content, not small embedded illustrations.
+   Keep other document and mathematics mind maps at their original sizes. */
+#docs-body.mind-map-wide-page .mind-map {
+  margin-block: 1.25rem 2.5rem;
+}
+
+#docs-body.mind-map-wide-page .mind-map-stage {
+  height: clamp(34rem, 78dvh, 70rem);
+  min-height: 34rem;
+}
+
+#docs-body.mind-map-wide-page .mind-map:fullscreen .mind-map-stage {
+  height: auto;
+  min-height: 0;
+  flex: 1;
+}
+
+@media (max-width: 640px) {
+  #docs-body.mind-map-wide-page .mind-map {
+    margin-block: 1rem 2rem;
+  }
+
+  #docs-body.mind-map-wide-page .mind-map-stage {
+    height: clamp(28rem, 72dvh, 48rem);
+    min-height: 28rem;
+  }
+}
