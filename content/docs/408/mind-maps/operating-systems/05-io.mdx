@@ -9,7 +9,7 @@ layout: mind-map
 
 [查看关联主题：第一章 操作系统概述](/docs/408/mind-maps/operating-systems/01-overview)
 
-## I/O设备分类 <img src="/images/408-mind-maps/thumb/os-0024.webp" alt="I/O设备分类" width="48" height="48">
+## I/O设备分类
 
 - 特性分类
   - 人机交互类
@@ -63,7 +63,7 @@ layout: mind-map
   - 阻塞IO
     - 阻塞IO是调用IO的时候，阻塞进程
 
-## I/O控制器 <img src="/images/408-mind-maps/thumb/co-0234.webp" alt="I/O控制器" width="48" height="48">
+## I/O控制器
 
 - I/O接口
   - I/O控制器
@@ -111,7 +111,7 @@ layout: mind-map
   - 内存映射I/O简化了指令
   - 寄存器独立编址让指令设计变得复杂，需要单独设计和read write相区别的指令(input output)
 
-## I/O控制方式 <img src="/images/408-mind-maps/thumb/os-0040.webp" alt="I/O控制方式" width="48" height="48">
+## I/O控制方式
 
 - 程序直接控制
   - 图：
@@ -200,7 +200,7 @@ layout: mind-map
   - 通道控制方式
     - 中断发生的时机：CPU向通道指明通道程序在内存中的地址，通道执行完通道程序后，通道向CPU发出中断信号
 
-## I/O软件层级结构 <img src="/images/408-mind-maps/thumb/co-0015.webp" alt="I/O软件层级结构" width="48" height="48">
+## I/O软件层级结构
 
 分组说明：I/O子系统；对应：[设备独立性软件](#focus=%E8%AE%BE%E5%A4%87%E7%8B%AC%E7%AB%8B%E6%80%A7%E8%BD%AF%E4%BB%B6)、[设备驱动程序](#focus=%E8%AE%BE%E5%A4%87%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F)、[中断处理程序](#focus=%E4%B8%AD%E6%96%AD%E5%A4%84%E7%90%86%E7%A8%8B%E5%BA%8F)
 
@@ -293,7 +293,7 @@ layout: mind-map
       - 文件保护
     - 差错处理
 
-## 高速缓存和缓冲区 <img src="/images/408-mind-maps/thumb/co-0033.webp" alt="高速缓存和缓冲区" width="48" height="48">
+## 高速缓存和缓冲区
 
 - 磁盘高速缓存
   - Disk Cache
@@ -403,7 +403,7 @@ layout: mind-map
       - 输入进程获得输出：
         - 把输出队列队首缓冲区提出，作为sout，用完后把它挂到空缓冲队列中
 
-## 设备的分配和回收 <img src="/images/408-mind-maps/thumb/co-0017.webp" alt="设备的分配和回收" width="48" height="48">
+## 设备的分配和回收
 
 - 三种分类：
   - 独占
@@ -507,7 +507,7 @@ layout: mind-map
     - 多用户：
       - 每个用户在登录时，系统会给用户【创建一个进程和一个LUT】，这个LUT会放入到PCB中
 
-## SPOOLing技术 <img src="/images/408-mind-maps/thumb/co-0182.webp" alt="SPOOLing技术" width="48" height="48">
+## SPOOLing技术
 
 - 体现操作系统：虚拟性
 - SPOOLing和缓冲区的区别
@@ -545,7 +545,7 @@ layout: mind-map
 - 考频：中
   - 09、11-13、15、16、20、22
 
-## 磁盘的结构 <img src="/images/408-mind-maps/thumb/co-0017.webp" alt="磁盘的结构" width="48" height="48">
+## 磁盘的结构
 
 - 磁盘的概念
   - 磁道
@@ -602,7 +602,7 @@ layout: mind-map
   - 此处和PV互斥有些不一样，例如读磁盘是多读者，那么对应过来多个进程可以在自己的运行时间内访问磁盘
     - 而如果是写磁盘，那么PV信号量会控制其他正在处理机上的进程不能使用该磁盘
 
-## 磁盘的管理 <img src="/images/408-mind-maps/thumb/os-0125.webp" alt="磁盘的管理" width="48" height="48">
+## 磁盘的管理
 
 - 磁盘初始化
   [查看关联主题：第一章 操作系统概述](/docs/408/mind-maps/operating-systems/01-overview)
@@ -659,7 +659,7 @@ layout: mind-map
   - 复杂磁盘
     - 磁盘控制器维护一个磁盘坏块链表，同时会有一些块用来作为备用（扇区备用）
 
-## 磁盘调度算法 <img src="/images/408-mind-maps/thumb/os-0004.webp" alt="磁盘调度算法" width="48" height="48">
+## 磁盘调度算法
 
 - 考频：高
   - 09、15、17\*2、18、21、10大、19大、21大
@@ -725,7 +725,7 @@ layout: mind-map
   - 不同盘面
     - 同柱面不同盘面的扇区错位编号，可以缩短连续读写两个相邻盘面的时间
 
-## 固态硬盘SSD <img src="/images/408-mind-maps/thumb/os-0070.webp" alt="固态硬盘SSD" width="45" height="46">
+## 固态硬盘SSD
 
 - 基于闪存的存储器
   - 存储介质：NAND颗粒

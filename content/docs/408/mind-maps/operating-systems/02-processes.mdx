@@ -9,7 +9,7 @@ layout: mind-map
 
 [查看关联主题：第一章 操作系统概述](/docs/408/mind-maps/operating-systems/01-overview)
 
-## 进程的概念 <img src="/images/408-mind-maps/thumb/os-0040.webp" alt="进程的概念" width="48" height="48">
+## 进程的概念
 
 - 临界资源：
   - 一次只能由一个进程使用的资源，例如：打印机
@@ -45,7 +45,7 @@ layout: mind-map
 - 考频：低
   - 11、19、20
 
-## 进程操作： <img src="/images/408-mind-maps/thumb/co-0152.webp" alt="进程操作：" width="48" height="48">
+## 进程操作：
 
 分组说明：题目中出现，找最对最错，都要考虑；对应：[广义狭义的进程调度](#focus=%E5%B9%BF%E4%B9%89%E7%8B%AD%E4%B9%89%E7%9A%84%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6)
 
@@ -107,7 +107,7 @@ layout: mind-map
   - 4\. 更新数据结构
   - 5\. 恢复CPU环境
 
-## 进程组织 <img src="/images/408-mind-maps/thumb/co-0015.webp" alt="进程组织" width="48" height="48">
+## 进程组织
 
 - 进程控制块（PCB）
   - PCB创建后常驻内存，任意时刻都可以存取，进程结束时删除
@@ -152,7 +152,7 @@ layout: mind-map
 
   - 例：父子进程，代码段相同，地址段不同（不可以共享同一片虚拟地址空间）
 
-## 进程通信： <img src="/images/408-mind-maps/thumb/os-0023.webp" alt="进程通信：" width="48" height="48">
+## 进程通信：
 
 - 考频：低
   - 14
@@ -188,7 +188,7 @@ layout: mind-map
   - 概要：管：软件
     概要范围：[管道：pipe文件，信息传递用，半双工](#focus=%E7%AE%A1%E9%81%93%EF%BC%9Apipe%E6%96%87%E4%BB%B6%EF%BC%8C%E4%BF%A1%E6%81%AF%E4%BC%A0%E9%80%92%E7%94%A8%EF%BC%8C%E5%8D%8A%E5%8F%8C%E5%B7%A5)、[管程：在进程互斥机制中对PV操作进行管理的数据结构](#focus=%E7%AE%A1%E7%A8%8B%EF%BC%9A%E5%9C%A8%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5%E6%9C%BA%E5%88%B6%E4%B8%AD%E5%AF%B9PV%E6%93%8D%E4%BD%9C%E8%BF%9B%E8%A1%8C%E7%AE%A1%E7%90%86%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)
 
-## 线程： <img src="/images/408-mind-maps/thumb/os-0065.webp" alt="线程：" width="48" height="48">
+## 线程：
 
 - 轻量级进程，CPU的最小执行单位
 - 进程作为CPU外资源的最小调度单位，线程作为CPU的最小调度单位
@@ -259,7 +259,7 @@ layout: mind-map
         - 解决1:1的开销大和N:1的并发度不高，又有他们的优点。
   - 批注：线程与线程
 
-## 进程与线程 <img src="/images/408-mind-maps/thumb/os-0100.webp" alt="进程与线程" width="45" height="46">
+## 进程与线程
 
 - 考频：低
   - 12
@@ -334,7 +334,7 @@ layout: mind-map
     - 4\. 更新数据结构
     - 5\. 恢复CPU环境
 
-## 处理机调度 <img src="/images/408-mind-maps/thumb/os-0144.webp" alt="处理机调度" width="48" height="48">
+## 处理机调度
 
 - 处理机调度是多道程序操作系统的基础
 - 三种调度：
@@ -468,7 +468,7 @@ layout: mind-map
 - 考频：超高
   - 09、11、12\*2、13、14、16、17\*2、18-20、21\*2、22、16大
 
-## 同步与互斥 <img src="/images/408-mind-maps/thumb/os-0054.webp" alt="同步与互斥" width="48" height="48">
+## 同步与互斥
 
 - 同步的基本概念
   - 临界资源：
@@ -575,7 +575,7 @@ layout: mind-map
     - 多处理器：
       - 不错的方法，因为可能在自己这个时间片另一个CPU上的进程把锁release了
 
-## 信号量： <img src="/images/408-mind-maps/thumb/os-0124.webp" alt="信号量：" width="48" height="48">
+## 信号量：
 
 分组说明：题目不说，默认是对记录型信号量处理；对应：[记录性信号量：](#focus=%E8%AE%B0%E5%BD%95%E6%80%A7%E4%BF%A1%E5%8F%B7%E9%87%8F%EF%BC%9A)
 
@@ -617,7 +617,7 @@ layout: mind-map
       - ...
   - <img src="/images/408-mind-maps/thumb/os-0025.webp" alt="信号量实现前驱关系：" width="240" height="141">
 
-## 管程： <img src="/images/408-mind-maps/thumb/os-0109.webp" alt="管程：" width="48" height="48">
+## 管程：
 
 - 管程最开始是在Pascal语言中引入的
   - 管程就像是一种语法，就像C里面类似static、const等，可以使用也可以不使用，但不可以创建和撤销
@@ -733,7 +733,7 @@ layout: mind-map
   }
   ```
 
-## 经典同步问题： <img src="/images/408-mind-maps/thumb/os-0149.webp" alt="经典同步问题：" width="48" height="48">
+## 经典同步问题：
 
 分组说明：重要考点；对应：[大题总结：](#focus=%E5%A4%A7%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%9A)
 
@@ -1038,7 +1038,7 @@ layout: mind-map
 - 考频：超高
   - 10\*2、11、16\*3、18\*3、20、09大、11大、13-15大、17大、19-22大
 
-## 死锁 <img src="/images/408-mind-maps/thumb/os-0110.webp" alt="死锁" width="48" height="48">
+## 死锁
 
 - 考频：超高
   - 09、11-16、18-22
