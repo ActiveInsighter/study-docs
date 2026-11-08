@@ -1,11 +1,13 @@
-import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join, resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 // @ts-expect-error The deployment helper is intentionally a Node.js ESM script.
 import {
   buildCloudflareAssetsIgnore,
   buildCloudflareHeaders,
   buildCloudflareRedirects,
+  canonicalizeAssetNames,
   CLOUDFLARE_DYNAMIC_REDIRECT_LIMIT,
 } from '../scripts/prepare-cloudflare-static-assets.mjs';
 
@@ -83,5 +85,38 @@ describe('Cloudflare Workers Static Assets deployment', () => {
 
   it('excludes EdgeOne deployment metadata from Cloudflare asset upload', () => {
     expect(buildCloudflareAssetsIgnore()).toContain('\nedgeone.json\n');
+  });
+
+  it('renames $ segment payloads and rewrites both requested spellings with 200s', async () => {
+    const root = mkdtempSync(join(tmpdir(), 'cf-assets-'));
+    try {
+      const page = '__next.docs.$oc$slug.__PAGE__.txt';
+      for (const dir of ['docs', 'docs/408/mind-maps', 'docs/politics']) {
+        mkdirSync(join(root, dir), { recursive: true });
+        writeFileSync(join(root, dir, page), dir);
+      }
+      writeFileSync(join(root, '__next.!KGhvbWUp.__PAGE__.txt'), 'home');
+
+      const { renamed, rewrites } = await canonicalizeAssetNames(root);
+      expect(renamed).toBe(3);
+      expect(existsSync(join(root, 'docs/408/mind-maps', page))).toBe(false);
+      expect(readFileSync(join(root, 'docs/408/mind-maps/__next.docs.~oc~slug.__PAGE__.txt'), 'utf8')).toBe(
+        'docs/408/mind-maps',
+      );
+      // `!` is already served as is and stays untouched.
+      expect(existsSync(join(root, '__next.!KGhvbWUp.__PAGE__.txt'))).toBe(true);
+
+      const redirects = buildCloudflareRedirects(rewrites);
+      expect(redirects).toContain(
+        '/docs/*/__next.docs.$oc$slug.__PAGE__.txt /docs/:splat/__next.docs.~oc~slug.__PAGE__.txt 200',
+      );
+      expect(redirects).toContain(
+        '/docs/*/__next.docs.%24oc%24slug.__PAGE__.txt /docs/:splat/__next.docs.~oc~slug.__PAGE__.txt 200',
+      );
+      expect(redirects).toContain('/docs/__next.docs.$oc$slug.__PAGE__.txt /docs/__next.docs.~oc~slug.__PAGE__.txt 200');
+      expect(rewrites).toHaveLength(4);
+    } finally {
+      rmSync(root, { recursive: true, force: true });
+    }
   });
 });

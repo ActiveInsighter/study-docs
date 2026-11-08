@@ -1,4 +1,4 @@
-import { copyFile, readFile, stat, writeFile } from 'node:fs/promises';
+import { copyFile, readdir, readFile, rename, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -58,6 +58,68 @@ export function buildCloudflareAssetsIgnore() {
   ].join('\n');
 }
 
+/**
+ * Characters Next.js puts in segment-prefetch file names that Workers Static
+ * Assets serves only under another spelling. The Next client requests
+ * `__next.docs.$oc$slug.__PAGE__.txt` with a literal `$`, and the asset server
+ * answers 307 → `%24`, so every prefetch paid an extra round trip.
+ */
+const NON_CANONICAL_NAME_CHARACTER = '$';
+const CANONICAL_REPLACEMENT = '~';
+
+async function listFiles(directory, prefix = '') {
+  const files = [];
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const relative = prefix ? `${prefix}/${entry.name}` : entry.name;
+    if (entry.isDirectory()) files.push(...(await listFiles(path.join(directory, entry.name), relative)));
+    else if (entry.isFile()) files.push(relative);
+  }
+  return files;
+}
+
+/**
+ * Rename `$` in file names to `~` (unreserved, so never redirected) and return
+ * 200 rewrites from the spellings clients request: one splat rule per top-level
+ * directory and file name, plus exact rules for files directly inside it.
+ */
+export async function canonicalizeAssetNames(outputRoot) {
+  const rewrites = new Map();
+  let renamed = 0;
+  const addRewrite = (source, destination) => {
+    for (const spelling of [source, source.replaceAll('$', '%24')]) {
+      rewrites.set(spelling, { source: spelling, destination });
+    }
+  };
+
+  for (const relative of await listFiles(outputRoot)) {
+    const name = path.posix.basename(relative);
+    if (!name.includes(NON_CANONICAL_NAME_CHARACTER)) continue;
+
+    const canonicalName = name.replaceAll(NON_CANONICAL_NAME_CHARACTER, CANONICAL_REPLACEMENT);
+    const directory = path.posix.dirname(relative);
+    const target = path.join(outputRoot, directory, canonicalName);
+    try {
+      await stat(target);
+      throw new Error(`Cannot rename ${relative}: ${directory}/${canonicalName} already exists.`);
+    } catch (error) {
+      if (error?.code !== 'ENOENT') throw error;
+    }
+    await rename(path.join(outputRoot, relative), target);
+    renamed++;
+
+    const [top, ...rest] = directory === '.' ? [] : directory.split('/');
+    if (!top) {
+      addRewrite(`/${name}`, `/${canonicalName}`);
+    } else if (rest.length === 0) {
+      addRewrite(`/${top}/${name}`, `/${top}/${canonicalName}`);
+    } else {
+      addRewrite(`/${top}/*/${name}`, `/${top}/:splat/${canonicalName}`);
+    }
+  }
+
+  return { renamed, rewrites: [...rewrites.values()] };
+}
+
 async function ensureRootIndex(outputRoot) {
   const rootIndexPath = path.join(outputRoot, 'index.html');
 
@@ -80,7 +142,8 @@ export async function prepareCloudflareStaticAssets(outputRoot = path.resolve('.
   const notFoundPath = path.join(outputRoot, '404.html');
 
   const edgeOneConfig = JSON.parse(await readFile(edgeOneConfigPath, 'utf8'));
-  const redirects = buildCloudflareRedirects(edgeOneConfig.rewrites);
+  const canonicalNames = await canonicalizeAssetNames(outputRoot);
+  const redirects = buildCloudflareRedirects([...edgeOneConfig.rewrites, ...canonicalNames.rewrites]);
 
   await stat(notFoundPath);
   const restoredRootIndex = await ensureRootIndex(outputRoot);
@@ -93,6 +156,9 @@ export async function prepareCloudflareStaticAssets(outputRoot = path.resolve('.
   console.log(`[cloudflare-assets] Wrote ${redirectsPath}.`);
   console.log(`[cloudflare-assets] Wrote ${headersPath} with UTF-8 Markdown Content-Type.`);
   console.log('[cloudflare-assets] Translated EdgeOne RSC rewrites to Cloudflare 200 proxy rewrites.');
+  console.log(
+    `[cloudflare-assets] Renamed ${canonicalNames.renamed} files with '$' in their names; added ${canonicalNames.rewrites.length} rewrites for their requested spellings.`,
+  );
   console.log('[cloudflare-assets] Confirmed 404.html for not_found_handling=404-page.');
   if (restoredRootIndex) {
     console.log('[cloudflare-assets] Restored missing root index.html from docs/index.html.');
