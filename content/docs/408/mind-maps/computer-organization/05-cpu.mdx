@@ -379,16 +379,41 @@ layout: mind-map
 
 - 如何通过要素 确定微指令：
   - 考虑所有可能的指令情况，写出对应的微操作所需要的四要素：
-    - 例如：取指周期T0时刻的(PC) -&gt; MAR <img src="/images/408-mind-maps/co-0014.png" alt="例如：取指周期T0时刻的(PC) -&amp;amp;gt; MAR" width="240" height="124">
+    - 例如：取指周期T0时刻的(PC) -&gt; MAR <img src="/images/408-mind-maps/co-0014.svg" alt="例如：取指周期T0时刻的(PC) -&amp;amp;gt; MAR" width="300" height="138">
 
       - 然后把所有情况考虑充分后。举个例子：可能出现的所有M(MAR) -&gt; MDR的情况：
-      - 例如：M(MAR) -&gt; MDR <img src="/images/408-mind-maps/co-0162.png" alt="例如：M(MAR) -&amp;amp;gt; MDR" width="240" height="114">
+      - 例如：M(MAR) -&gt; MDR <img src="/images/408-mind-maps/co-0162.svg" alt="例如：M(MAR) -&amp;amp;gt; MDR" width="300" height="135">
 
       - 批注：此处C1就对应了PCout和MARin
 - 操作时间表：
-  - <img src="/images/408-mind-maps/co-0307.png" alt="操作时间表：" width="240" height="133">
+  - 操作时间表（取指 FE 与间址 IND 周期）：表中 1 表示该指令需要这个微操作
 
-  - <img src="/images/408-mind-maps/co-0063.png" alt="操作时间表：" width="240" height="136">
+    |周期|节拍|状态条件|微操作命令信号|CLA COM SHR CSL STP|ADD STA LDA JMP BAN|
+    |---|---|---|---|---|---|
+    |FE 取指|T₀||PC→MAR；1→R|1|1|
+    ||T₁||M(MAR)→MDR；(PC)+1→PC|1|1|
+    ||T₂||MDR→IR；OP(IR)→ID|1|1|
+    |||I|I→IND（需间址）||1|
+    |||¬I|I→EX（无需间址）|1|1|
+    |IND 间址|T₀||Ad(IR)→MAR；1→R||1|
+    ||T₁||M(MAR)→MDR||1|
+    ||T₂||MDR→Ad(IR)||1|
+    |||¬IND|I→EX||1|
+
+  - 操作时间表（执行 EX 周期）：每条指令在各节拍需要的微操作
+
+    |指令|T₀|T₁|T₂|
+    |---|---|---|---|
+    |CLA（清 AC）|||0→AC|
+    |COM（取反）|||¬AC→AC|
+    |SHR（算术右移）|||L(AC)→R(AC)，AC₀ 不变|
+    |CSL（循环左移）|||ρ⁻¹(AC)|
+    |STP（停机）|||0→G|
+    |ADD|Ad(IR)→MAR；1→R|M(MAR)→MDR|(AC)+(MDR)→AC|
+    |STA|Ad(IR)→MAR；1→W|AC→MDR|MDR→M(MAR)|
+    |LDA|Ad(IR)→MAR；1→R|M(MAR)→MDR|MDR→AC|
+    |JMP|||Ad(IR)→PC|
+    |BAN（A₀ = 1 时转移）|||A₀·Ad(IR)→PC|
 
   - 概要：了解即可
     概要范围：[配图／公式](#focus=%E9%85%8D%E5%9B%BE%EF%BC%8F%E5%85%AC%E5%BC%8F)、[配图／公式](#focus=%E9%85%8D%E5%9B%BE%EF%BC%8F%E5%85%AC%E5%BC%8F)
@@ -418,7 +443,7 @@ layout: mind-map
       - 微操作、微命令：
         - 微命令是微操作的控制信号；微操作是微命令的执行过程。 \[ 例如（PC)-&gt;MAR \]
 - 微指令的结构
-  - <img src="/images/408-mind-maps/co-0190.png" alt="微指令的结构" width="240" height="83">
+  - <img src="/images/408-mind-maps/co-0190.svg" alt="微指令的结构" width="300" height="107">
 
     - 控制信号 + 下地址
 - 微程序控制器 （微CPU）部件
@@ -433,7 +458,7 @@ layout: mind-map
     - 连接有：CLK
       - 时钟信号
   - CM - 控制存储器
-    - 控存，由ROM组成，用来存各种指令的微程序段（就像存在内存中的程序的指令一样） <img src="/images/408-mind-maps/co-0049.png" alt="控存，由ROM组成，用来存各种指令的微程序段（就像存在内存中的程序的指令一样）" width="240" height="110">
+    - 控存，由ROM组成，用来存各种指令的微程序段（就像存在内存中的程序的指令一样） <img src="/images/408-mind-maps/co-0049.svg" alt="控存，由ROM组成，用来存各种指令的微程序段（就像存在内存中的程序的指令一样）" width="300" height="139">
 
   - CMAR - 微地址寄存器
     - 别名：μPC，是 MAR 和 PC 功能的结合体
@@ -442,7 +467,7 @@ layout: mind-map
   - CMDR - 微指令寄存器
     - 别名：μIR，是 MDR 和 IR 功能的结合体，CMDR的【位数】和【最长的微指令的字长】应该相同
 - 微程序控制器 的处理流程：
-  - <img src="/images/408-mind-maps/co-0204.png" alt="微程序控制器 的处理流程：" width="240" height="174">
+  - <img src="/images/408-mind-maps/co-0204.svg" alt="微程序控制器 的处理流程：" width="300" height="208">
 
     - 1\. 获得【IR中的OP部分】
     - 2.【微地址形成部件和顺序逻辑配合】生成了微程序的起始地址，放入到CMAR中
@@ -454,7 +479,7 @@ layout: mind-map
       - 下地址
         - 指明下一条需要执行的微指令地址
 - CM中的微指令序列
-  - <img src="/images/408-mind-maps/co-0308.png" alt="CM中的微指令序列" width="201" height="220">
+  - <img src="/images/408-mind-maps/co-0308.svg" alt="CM中的微指令序列" width="300" height="261">
 
     - 特点
       - 取指周期、间址周期、中断周期是所有指令共享的
@@ -510,14 +535,14 @@ layout: mind-map
 - 微指令的编码方式
   - μOP部分
     - 直接编码方式
-      - 一个bit的 0、1对应一个微操作的运行和不运行 <img src="/images/408-mind-maps/co-0159.png" alt="一个bit的 0、1对应一个微操作的运行和不运行" width="240" height="71">
+      - 一个bit的 0、1对应一个微操作的运行和不运行 <img src="/images/408-mind-maps/co-0159.svg" alt="一个bit的 0、1对应一个微操作的运行和不运行" width="300" height="102">
 
       - 优点：
         - 简单直观、执行速度快、操作并行性好
       - 缺点：
         - 微指令过长，如果有n条微操作，就需要n个bit位
     - 字段编码方式
-      - <img src="/images/408-mind-maps/co-0185.png" alt="字段编码方式" width="240" height="152">
+      - <img src="/images/408-mind-maps/co-0185.svg" alt="字段编码方式" width="300" height="145">
 
         - 如果一个类中的bit数为3，则说明该类一共可以对应 8 个微操作（其中一定包含一个空操作），故有7条有效微操作
         - 每个小段信息位不要太多，不然译码难度大
@@ -529,7 +554,7 @@ layout: mind-map
       - 缺点：
         - 每个微指令都必须通过译码后才能产生微操作，速度比直接编码慢
     - 字段间接编码方式 （隐式编码）
-      - 字段编码方式中，译码后不会直接发出微命令，而是需要多个译码结果来决定 <img src="/images/408-mind-maps/co-0287.png" alt="字段编码方式中，译码后不会直接发出微命令，而是需要多个译码结果来决定" width="240" height="164">
+      - 字段编码方式中，译码后不会直接发出微命令，而是需要多个译码结果来决定 <img src="/images/408-mind-maps/co-0287.svg" alt="字段编码方式中，译码后不会直接发出微命令，而是需要多个译码结果来决定" width="300" height="155">
 
       - 优点：
         - 进一步缩短字长
@@ -540,7 +565,7 @@ layout: mind-map
       - 下地址写的哪条就运行哪条
     - 根据OP形成
       - 根据【机器指令】的OP部分来指明操作码
-        - 就是这个 <img src="/images/408-mind-maps/co-0203.png" alt="就是这个" width="240" height="191">
+        - 就是这个 <img src="/images/408-mind-maps/co-0203.svg" alt="就是这个" width="300" height="170">
 
     - 增量计数法
       - (CMAR) + 1 -&gt; CMAR
@@ -553,7 +578,7 @@ layout: mind-map
 
         - 根据各种标记决定是否转移
     - 测试网络
-      - 顺序逻辑部件就是测试网络 <img src="/images/408-mind-maps/co-0120.png" alt="顺序逻辑部件就是测试网络" width="240" height="114">
+      - 顺序逻辑部件就是测试网络 <img src="/images/408-mind-maps/co-0120.svg" alt="顺序逻辑部件就是测试网络" width="300" height="135">
 
         - 测试网络可以决定是否有间址、中断操作
     - 硬件产生
@@ -591,9 +616,20 @@ layout: mind-map
   - 概要：配图
     概要范围：[3. 写出......对应的节拍](#focus=3.%20%E5%86%99%E5%87%BA......%E5%AF%B9%E5%BA%94%E7%9A%84%E8%8A%82%E6%8B%8D)、[配图／公式](#focus=%E9%85%8D%E5%9B%BE%EF%BC%8F%E5%85%AC%E5%BC%8F)
 
-    - <img src="/images/408-mind-maps/co-0297.png" alt="设计一个微程序控制单元" width="240" height="152">
+    - 设计微程序控制单元：对比取指周期在两种控制器中的节拍安排
 
-    - <img src="/images/408-mind-maps/co-0204.png" alt="设计一个微程序控制单元" width="240" height="174">
+      |硬布线控制器|微程序控制器|
+      |---|---|
+      |T₀：PC→MAR；1→R|T₀：PC→MAR；1→R（微指令 a）|
+      |T₁：M(MAR)→MDR；(PC)+1→PC|T₁：Ad(CMDR)→CMAR（用 T₁ 节拍确定下一条微指令的地址）|
+      |T₂：MDR→IR；OP(IR)→ID|T₂：M(MAR)→MDR；(PC)+1→PC（微指令 b）|
+      ||T₃：Ad(CMDR)→CMAR|
+      ||T₄：MDR→IR；OP(IR)→微地址形成部件（微指令 c）|
+      ||T₅：微地址形成部件→CMAR（根据 OP 确定执行周期微程序的首地址）|
+
+      - 微程序控制器每条微指令后都要多一个节拍去取下一条微指令，所以更慢
+
+    - <img src="/images/408-mind-maps/co-0204.svg" alt="设计一个微程序控制单元" width="300" height="208">
 
   - 概要：确定总位数
     概要范围：[4. 确定微指令格式](#focus=4.%20%E7%A1%AE%E5%AE%9A%E5%BE%AE%E6%8C%87%E4%BB%A4%E6%A0%BC%E5%BC%8F)
@@ -626,11 +662,18 @@ layout: mind-map
 - 总结：
 
   - 微程序模式
-    - <img src="/images/408-mind-maps/co-0061.png" alt="微程序模式" width="175" height="220">
+    - 微程序模式下的层次（以 X₁ = X₁ + X₂ 为例）
+      - ① 高级代码 `X1 = X1 + X2` → 一对多 → 机器指令（汇编）`LDA …`、`ADD R1, R2`：执行一条机器指令的时间是一个指令周期
+      - ② 机器指令 `ADD R1, R2` → 一对一 → 微程序：取指周期、间址周期、执行周期、中断周期 → 一对多 → 微程序组 A、B、C、D：执行一个微程序组的时间是一个机器周期
+      - ③ 微程序组（如执行周期）→ 一对多 → 微指令（μOP + 下地址，存放在 CM 的 0、1、2 号单元）：执行一条微指令的时间是一个节拍 / 时钟周期
+      - ④ 微指令 → 一对多（μOP 部分）→ 微操作 / 微命令：`(PC)→MAR`、`1→R`，在同一个节拍内完成
 
   - &lt; --- &gt;
   - 硬布线模式
-    - <img src="/images/408-mind-maps/co-0208.png" alt="硬布线模式" width="240" height="186">
+    - 硬布线模式下的层次（以 X₁ = X₁ + X₂ 为例）
+      - ① 高级代码 `X1 = X1 + X2` → 一对多 → 机器指令（汇编）`LDA …`、`ADD R1, R2`：执行一条机器指令的时间是一个指令周期
+      - ② 机器指令 `ADD R1, R2` → 一对多 → 不同阶段：取指周期 FE、间址周期 IND、执行周期 EX、中断周期 INT：执行一个阶段的时间是一个机器周期
+      - ③ 通过 ① FE/IND/EX/INT ② 节拍 ③ OP(IR) ④ 状态信息，用电路逻辑表达式决定执行哪个微命令（如 (PC)→MAR）
 
 ## 指令流水线
 
