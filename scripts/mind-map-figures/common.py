@@ -485,3 +485,22 @@ def cache_part(F, ox=0, oy=0):
     F.poly([(X(215), Y(384)), (X(215), Y(370)), (X(20), Y(370)), (X(20), Y(224)), (X(150), Y(224))], INK2, 1.1)
     F.text(X(320), Y(428), '物理地址 ⇕', 11.5, 'start', MUTED)
     F.cells(X(180), Y(440), ['实页号', '页内地址（12 位）'], [0] and 0, 0) if False else (F.box(X(180), Y(440), 100, 26, '实页号', 'blue', 11.5, 0), F.box(X(280), Y(440), 120, 26, '页内地址（12 位）', 'gray', 11, 0))
+
+def instr(F, x, y, op='OP', mode='', addr='A', w=(70, 50, 60), h=30, label=True):
+    F.box(x, y, w[0], h, op, 'teal', 13, 0, True)
+    F.box(x + w[0], y, w[1], h, mode, 'dark', 13, 0, True)
+    F.box(x + w[0] + w[1], y, w[2], h, addr, 'teal', 13, 0, True)
+    if label:
+        F.brace(x + w[0], x + w[0] + w[1], y - 4, '寻址特征', down=False, size=11.5)
+    return (x + w[0] + w[1] + w[2] / 2, y + h)
+
+def memcol(F, x, y, rows, w=90, rh=30, title='主存', hl=None, labels=None):
+    """rows: list of cell texts ('' blank, '⋮'); hl: index to tone."""
+    hl = hl or {}
+    if title: F.text(x + w / 2, y - 10, title, 12.5, color=INK2, weight=600)
+    for i, r in enumerate(rows):
+        F.box(x, y + i * rh, w, rh, r, hl.get(i, 'white' if r != '⋮' else 'light'), 12.5, 0)
+    if labels:
+        for i, l in labels.items():
+            F.text(x - 8, y + i * rh + rh / 2, l, 12, 'end', INK2, valign='middle', mono=True)
+    return [(x, y + i * rh + rh / 2) for i in range(len(rows))]
