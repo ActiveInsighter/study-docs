@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" width="640" height="380" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="SPOOLing 系统的组成：输入井、输出井、输入 / 输出缓冲区、输入 / 输出进程">
+<title>SPOOLing 系统的组成：输入井、输出井、输入 / 输出缓冲区、输入 / 输出进程</title>
+<defs><marker id="a3b6fd4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3b6fd4"/></marker></defs>
+<rect x="0.75" y="0.75" width="638.5" height="378.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">SPOOLing 系统的组成</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="130" y="70" width="270" height="230" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.3"/>
+<text x="265" y="60" font-size="13" fill="#18181b" text-anchor="middle" font-weight="600">内存</text>
+<rect x="130" y="70" width="135" height="36" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="197.5" y="92.2" font-size="12" fill="#1e3a8a" text-anchor="middle">输入进程 SPᵢ</text>
+<rect x="265" y="70" width="135" height="36" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="332.5" y="92.2" font-size="12" fill="#1e3a8a" text-anchor="middle">输出进程 SPₒ</text>
+<rect x="180" y="140" width="150" height="36" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="255" y="162.2" font-size="12" fill="#78350f" text-anchor="middle">输入缓冲区 Bᵢ</text>
+<rect x="180" y="216" width="150" height="36" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="255" y="238.2" font-size="12" fill="#78350f" text-anchor="middle">输出缓冲区 Bₒ</text>
+<rect x="450" y="110" width="160" height="190" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.3"/>
+<text x="530" y="100" font-size="13" fill="#18181b" text-anchor="middle" font-weight="600">磁盘</text>
+<rect x="480" y="140" width="100" height="36" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="530" y="162.4" font-size="12.5" fill="#14532d" text-anchor="middle">输入井</text>
+<rect x="480" y="216" width="100" height="36" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="530" y="238.4" font-size="12.5" fill="#14532d" text-anchor="middle">输出井</text>
+<text x="60" y="120" font-size="12.5" fill="#3f3f46" text-anchor="middle">输入设备</text>
+<path d="M40 136H80V176H48L40 168Z" fill="#fff" stroke="#3f3f46" stroke-width="1.3"/>
+<text x="60" y="200" font-size="12.5" fill="#3f3f46" text-anchor="middle">输出设备</text>
+<path d="M40 212H80V248Q70 242 60 248T40 248Z" fill="#fff" stroke="#3f3f46" stroke-width="1.3"/>
+<path d="M80 158L178 158" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M332 158L478 158" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M80 234L178 234" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M332 234L478 234" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M370 106L370 316" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="370" y="334" font-size="12" fill="#3b6fd4" text-anchor="middle">模拟外围控制机</text>
+<path d="M530 252L530 316" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<text x="530" y="334" font-size="12" fill="#3b6fd4" text-anchor="middle">模拟“磁带”</text>
+</svg>

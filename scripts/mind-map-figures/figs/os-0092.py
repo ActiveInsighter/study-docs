@@ -1,0 +1,12 @@
+LABEL = 'SPOOLing 系统的组成：输入井、输出井、输入 / 输出缓冲区、输入 / 输出进程'
+F = Fig(640, 380, 'SPOOLing 系统的组成')
+F.rect(130, 70, 270, 230, 'none', INK2, 1.3, 0); F.text(265, 60, '内存', 13, color=INK, weight=600)
+F.box(130, 70, 135, 36, '输入进程 SPᵢ', 'blue', 12, 0); F.box(265, 70, 135, 36, '输出进程 SPₒ', 'blue', 12, 0)
+F.box(180, 140, 150, 36, '输入缓冲区 Bᵢ', 'amber', 12, 0); F.box(180, 216, 150, 36, '输出缓冲区 Bₒ', 'amber', 12, 0)
+F.rect(450, 110, 160, 190, 'none', INK2, 1.3, 0); F.text(530, 100, '磁盘', 13, color=INK, weight=600)
+F.box(480, 140, 100, 36, '输入井', 'green', 12.5, 0); F.box(480, 216, 100, 36, '输出井', 'green', 12.5, 0)
+F.text(60, 120, '输入设备', 12.5, color=INK2); F.items.append('<path d="M40 136H80V176H48L40 168Z" fill="#fff" stroke="#3f3f46" stroke-width="1.3"/>')
+F.text(60, 200, '输出设备', 12.5, color=INK2); F.items.append('<path d="M40 212H80V248Q70 242 60 248T40 248Z" fill="#fff" stroke="#3f3f46" stroke-width="1.3"/>')
+F.line(80, 158, 178, 158, INK2, 1.2); F.line(332, 158, 478, 158, INK2, 1.2); F.line(80, 234, 178, 234, INK2, 1.2); F.line(332, 234, 478, 234, INK2, 1.2)
+F.line(370, 106, 370, 316, ACCENT['blue'], 1.2, arrow='end'); F.text(370, 334, '模拟外围控制机', 12, color=ACCENT['blue'])
+F.line(530, 252, 530, 316, ACCENT['blue'], 1.2, arrow='end'); F.text(530, 334, '模拟“磁带”', 12, color=ACCENT['blue'])
