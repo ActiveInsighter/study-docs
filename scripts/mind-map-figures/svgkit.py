@@ -26,6 +26,8 @@ TONES = {
     'red': ('#fde7e4', '#d1493a', '#7f1d1d'),
     'violet': ('#efe9fb', '#7856c9', '#3b0764'),
     'teal': ('#e0f3f1', '#23877c', '#134e4a'),
+    'rbred': ('#d1493a', '#b83b2e', '#ffffff'),
+    'rbblack': ('#27272a', '#18181b', '#ffffff'),
 }
 ACCENT = {k: v[1] for k, v in TONES.items()}
 ACCENT.update(ink=INK, ink2=INK2, muted=MUTED, line=LINE)
@@ -358,14 +360,23 @@ class Fig:
         hb = (bh or 30) / 2
         for k, (x1, y1), (x2, y2) in edges:
             if shape == 'circle':
-                self.line(x1, y1, x2, y2, edge_color, 1.5, gap=r, gap2=r)
+                self.line(x1, y1, x2, y2, edge_color, 1.5, gap=r, gap2=((8 if k[1:].split('#')[0].strip() == '' else 13) if k.startswith('□') else r))
             else:
                 self.line(x1, y1 + hb, x2, y2 - hb, edge_color, 1.5)
         for k, (cx, cy) in pos.items():
             lab = labels.get(k, k) if labels else k
             lab = re.sub(r'#\d+$', '', lab)
             t = tones.get(k, tone)
-            if shape == 'circle':
+            if k.startswith('□'):
+                lab = lab[1:]
+                w = max(36, text_width(lab, size - 2, mono) + 12)
+                if lab.strip() == '':
+                    self.rect(cx - 7, cy - 7, 14, 14, '#fafafa', '#71717a', 1.2, 2)
+                elif lab == 'NIL':
+                    self.box(cx - 13, cy - 9, 26, 18, 'NIL', 'rbblack', 9, 3, True)
+                else:
+                    self.box(cx - w / 2, cy - 12, w, 24, lab, 'light', size - 2, 4, mono)
+            elif shape == 'circle':
                 self.circle(cx, cy, r, lab, t, size, mono=mono)
             else:
                 w = bw or max(40, text_width(lab, size, mono) + 18)

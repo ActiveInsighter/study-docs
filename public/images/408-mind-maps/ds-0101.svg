@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 370" width="800" height="370" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="红黑树查找：与 BST 相同，左小右大，查到 NIL 即失败">
+<title>红黑树查找：与 BST 相同，左小右大，查到 NIL 即失败</title>
+<rect x="0.75" y="0.75" width="798.5" height="368.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">红黑树的查找</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M115.2 274.5L99.5 308.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M128.8 274.5L144.5 308.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M70.8 213.1L45.5 249.3" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M89.2 213.1L112.8 246.9" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M227.2 214.5L211.5 248.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M240.8 214.5L256.5 248.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M144.4 149.8L92.6 190.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M169.6 149.8L221.4 190.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M339.2 214.5L323.5 248.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M352.8 214.5L368.5 248.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M451.2 274.5L435.5 308.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M464.8 274.5L480.5 308.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M563.2 274.5L547.5 308.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M576.8 274.5L592.5 308.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M503.1 211.7L468.9 248.3" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M524.9 211.7L559.1 248.3" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M417 149.3L359 190.7" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M443 149.3L501 190.7" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M278.9 86.4L171.6 133.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M308.1 86.4L415.4 133.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="25" y="251" width="26" height="18" rx="3" fill="#27272a" stroke="#18181b" stroke-width="1.5"/>
+<text x="38" y="263.1" font-size="9" fill="#ffffff" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">NIL</text>
+<rect x="81" y="311" width="26" height="18" rx="3" fill="#27272a" stroke="#18181b" stroke-width="1.5"/>
+<text x="94" y="323.1" font-size="9" fill="#ffffff" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">NIL</text>
+<rect x="137" y="311" width="26" height="18" rx="3" fill="#27272a" stroke="#18181b" stroke-width="1.5"/>
+<text x="150" y="323.1" font-size="9" fill="#ffffff" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">NIL</text>
+<circle cx="122" cy="260" r="16" fill="#d1493a" stroke="#b83b2e" stroke-width="1.5"/>
+<text x="122" y="264.6" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6</text>
+<circle cx="80" cy="200" r="16" fill="#27272a" stroke="#18181b" stroke-width="1.5"/>
+<text x="80" y="204.6" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="193" y="251" width="26" height="18" rx="3" fill="#27272a" stroke="#18181b" stroke-width="1.5"/>
+<text x="206" y="263.1" font-size="9" fill="#ffffff" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">NIL</text>
+<rect x="249" y="251" width="26" height="18" rx="3" fill="#27272a" stroke="#18181b" stroke-width="1.5"/>
+<text x="262" y="263.1" font-size="9" fill="#ffffff" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">NIL</text>
+<circle cx="234" cy="200" r="16" fill="#27272a" stroke="#18181b" stroke-width="1.5"/>
+<text x="234" y="204.6" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">11</text>
+<circle cx="157" cy="140" r="16" fill="#d1493a" stroke="#b83b2e" stroke-width="1.5"/>
+<text x="157" y="144.6" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8</text>
+<rect x="305" y="251" width="26" height="18" rx="3" fill="#27272a" stroke="#18181b" stroke-width="1.5"/>
+<text x="318" y="263.1" font-size="9" fill="#ffffff" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">NIL</text>
+<rect x="361" y="251" width="26" height="18" rx="3" fill="#27272a" stroke="#18181b" stroke-width="1.5"/>
+<text x="374" y="263.1" font-size="9" fill="#ffffff" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">NIL</text>
+<circle cx="346" cy="200" r="16" fill="#27272a" stroke="#18181b" stroke-width="1.5"/>
+<text x="346" y="204.6" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">15</text>
+<rect x="417" y="311" width="26" height="18" rx="3" fill="#27272a" stroke="#18181b" stroke-width="1.5"/>
+<text x="430" y="323.1" font-size="9" fill="#ffffff" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">NIL</text>
+<rect x="473" y="311" width="26" height="18" rx="3" fill="#27272a" stroke="#18181b" stroke-width="1.5"/>
+<text x="486" y="323.1" font-size="9" fill="#ffffff" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">NIL</text>
+<circle cx="458" cy="260" r="16" fill="#d1493a" stroke="#b83b2e" stroke-width="1.5"/>
+<text x="458" y="264.6" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">22</text>
+<rect x="529" y="311" width="26" height="18" rx="3" fill="#27272a" stroke="#18181b" stroke-width="1.5"/>
+<text x="542" y="323.1" font-size="9" fill="#ffffff" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">NIL</text>
+<rect x="585" y="311" width="26" height="18" rx="3" fill="#27272a" stroke="#18181b" stroke-width="1.5"/>
+<text x="598" y="323.1" font-size="9" fill="#ffffff" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">NIL</text>
+<circle cx="570" cy="260" r="16" fill="#d1493a" stroke="#b83b2e" stroke-width="1.5"/>
+<text x="570" y="264.6" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">27</text>
+<circle cx="514" cy="200" r="16" fill="#27272a" stroke="#18181b" stroke-width="1.5"/>
+<text x="514" y="204.6" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">25</text>
+<circle cx="430" cy="140" r="16" fill="#d1493a" stroke="#b83b2e" stroke-width="1.5"/>
+<text x="430" y="144.6" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">17</text>
+<circle cx="293.5" cy="80" r="16" fill="#27272a" stroke="#18181b" stroke-width="1.5"/>
+<text x="293.5" y="84.5" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">13</text>
+<text x="400" y="356" font-size="12.5" fill="#71717a" text-anchor="middle">从根出发，左小右大；走到 NIL（空叶结点）则查找失败</text>
+</svg>

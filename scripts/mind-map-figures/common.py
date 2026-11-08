@@ -222,3 +222,66 @@ def disk_blocks(F, x, y, rows, cw=26, ch=24, gap=8, tones=None, group=3, rgap=8)
             t = tones.get((r, b), 'violet')
             F.cells(cx, y + r * (ch + rgap), blk, cw, ch, {i: t for i in range(len(blk))}, size=12, rx=4)
             cx += len(blk) * cw + gap
+
+def trace(F, x, y, rows, cw=44, ch=30, lw=86, gap=10, size=13, mono=True):
+    """rows: [(label, values, tones{idx:tone}, extra)] ; '_' = hole (dashed)."""
+    for r, row in enumerate(rows):
+        lab, vals = row[0], row[1]
+        tones = row[2] if len(row) > 2 else {}
+        yy = y + r * (ch + gap)
+        F.text(x + lw - 12, yy + ch / 2, lab, 12.5, 'end', INK2, 500, valign='middle')
+        shown = ['' if v == '_' else v for v in vals]
+        F.cells(x + lw, yy, shown, cw, ch, tones, size=size, mono=mono)
+        for i, v in enumerate(vals):
+            if v == '_':
+                F.rect(x + lw + i * cw + 4, yy + 4, cw - 8, ch - 8, 'none', LINE, 1, 4, dash='3 3')
+    return y + len(rows) * (ch + gap)
+
+def groups_row(F, x, y, groups, cw=40, ch=30, ggap=14, tone='white', size=13):
+    cx = x
+    for g in groups:
+        F.cells(cx, y, g, cw, ch, {i: tone for i in range(len(g))}, size=size, rx=5)
+        cx += len(g) * cw + ggap
+
+def heap_tree(F, x, y, arr, unit=40, levelh=50, r=15, tones=None, size=12, cut=0):
+    """Complete binary tree from array (1-based semantics). cut: last `cut` items drawn ghosted."""
+    n = len(arr)
+    def build(i):
+        if i > n:
+            return None
+        l, rr = build(2 * i), build(2 * i + 1)
+        key = f'{arr[i - 1]}#{i}'
+        if l is None and rr is None:
+            return key
+        return (key, [l, rr] if rr is not None else [l, None])
+    tones = tones or {}
+    tk = {f'{arr[i - 1]}#{i}': t for i, t in tones.items()}
+    return F.tree(x, y, build(1), unit=unit, levelh=levelh, r=r, size=size, tones=tk, mono=True)
+
+def bp_node(F, x, y, keys, tone='green', kw=26, h=24, size=12):
+    """B+ tree node: contiguous key cells. Returns (x, y, w, h) and centres."""
+    cs = F.cells(x, y, keys, kw, h, {i: tone for i in range(len(keys))}, size=size, rx=3)
+    return cs
+
+def records(F, cx, y, n=1, w=18, h=34):
+    F.line(cx, y, cx, y + 12, INK2, 1.1, arrow='end')
+    F.rect(cx - w / 2, y + 14, w, h, '#fafafa', '#a1a1aa', 1, 3)
+    F.text(cx, y + 14 + h / 2, '记\n录', 9.5, color=MUTED, valign='middle', lh=1.15)
+
+def rb(F, x, y, t, unit=44, levelh=58, r=16, nil=True, size=13, labels=None):
+    """t = (key, 'R'|'B', left, right) or None. Draws NIL leaves as small boxes when nil=True."""
+    tones = {}
+    cnt = [0]
+    def conv(n):
+        if n is None:
+            cnt[0] += 1
+            return f'□NIL#{cnt[0]}' if nil else None
+        k, c, l, rr = n
+        key = str(k)
+        tones[key] = 'rbred' if c == 'R' else 'rbblack'
+        kids = [conv(l), conv(rr)]
+        if all(kk is None for kk in kids):
+            return key
+        return (key, kids)
+    pos = F.tree(x, y, conv(t), unit=unit, levelh=levelh, r=r, size=size, tones=tones, mono=True)
+    return pos

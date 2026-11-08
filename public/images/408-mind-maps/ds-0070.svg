@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 520" width="660" height="520" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="堆排序：输出堆顶后把最后一个元素换到堆顶并向下调整">
+<title>堆排序：输出堆顶后把最后一个元素换到堆顶并向下调整</title>
+<rect x="0.75" y="0.75" width="658.5" height="518.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">堆排序：输出堆顶 → 调整成新堆</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M47.4 201.2L40.6 220.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M69.5 154.4L58.5 175.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M82.5 154.4L93.5 175.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M143.4 155.2L136.6 174.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M152.6 155.2L159.4 174.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M103.4 107L84.6 131" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M120.6 107L139.4 131" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="36" cy="234" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="36" y="237.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">09</text>
+<circle cx="52" cy="188" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="52" y="191.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">32</text>
+<circle cx="100" cy="188" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="100" y="191.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">17</text>
+<circle cx="76" cy="142" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="76" y="145.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">45</text>
+<circle cx="132" cy="188" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="132" y="191.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">65</text>
+<circle cx="164" cy="188" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="164" y="191.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">53</text>
+<circle cx="148" cy="142" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="148" y="145.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">78</text>
+<circle cx="112" cy="96" r="14" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="112" y="99.8" font-size="11" fill="#7f1d1d" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">87</text>
+<text x="164" y="264" font-size="12.5" fill="#3f3f46" text-anchor="middle">大根堆</text>
+<path d="M367.4 155.2L360.6 174.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M376.6 155.2L383.4 174.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M431.4 155.2L424.6 174.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M440.6 155.2L447.4 174.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M396 107.5L380 130.5" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M412 107.5L428 130.5" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="356" cy="188" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="356" y="191.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">32</text>
+<circle cx="388" cy="188" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="388" y="191.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">17</text>
+<circle cx="372" cy="142" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="372" y="145.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">45</text>
+<circle cx="420" cy="188" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="420" y="191.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">65</text>
+<circle cx="452" cy="188" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="452" y="191.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">53</text>
+<circle cx="436" cy="142" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="436" y="145.8" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">78</text>
+<circle cx="404" cy="96" r="14" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="404" y="99.8" font-size="11" fill="#7f1d1d" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">09</text>
+<text x="484" y="264" font-size="12.5" fill="#3f3f46" text-anchor="middle">87 与 09 交换并断开</text>
+<path d="M47.4 371.2L40.6 390.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M56.6 371.2L63.4 390.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M111.4 371.2L104.6 390.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M120.6 371.2L127.4 390.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M76 323.5L60 346.5" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M92 323.5L108 346.5" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="36" cy="404" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="36" y="407.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">32</text>
+<circle cx="68" cy="404" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="68" y="407.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">17</text>
+<circle cx="52" cy="358" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="52" y="361.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">45</text>
+<circle cx="100" cy="404" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="100" y="407.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">65</text>
+<circle cx="132" cy="404" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="132" y="407.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">53</text>
+<circle cx="116" cy="358" r="14" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="116" y="361.9" font-size="11" fill="#7f1d1d" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">09</text>
+<circle cx="84" cy="312" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="84" y="315.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">78</text>
+<text x="164" y="480" font-size="12.5" fill="#3f3f46" text-anchor="middle">09 与较大孩子 78 交换</text>
+<path d="M367.4 371.2L360.6 390.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M376.6 371.2L383.4 390.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M431.4 371.2L424.6 390.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M440.6 371.2L447.4 390.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M396 323.5L380 346.5" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M412 323.5L428 346.5" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="356" cy="404" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="356" y="407.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">32</text>
+<circle cx="388" cy="404" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="388" y="407.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">17</text>
+<circle cx="372" cy="358" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="372" y="361.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">45</text>
+<circle cx="420" cy="404" r="14" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="420" y="407.9" font-size="11" fill="#7f1d1d" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">09</text>
+<circle cx="452" cy="404" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="452" y="407.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">53</text>
+<circle cx="436" cy="358" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="436" y="361.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">65</text>
+<circle cx="404" cy="312" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="404" y="315.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">78</text>
+<text x="484" y="480" font-size="12.5" fill="#3f3f46" text-anchor="middle">09 与 65 交换，新堆</text>
+<text x="630" y="60" font-size="12.5" fill="#2f8f57" text-anchor="end" font-weight="600">已输出：87</text>
+</svg>

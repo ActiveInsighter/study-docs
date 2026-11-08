@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="有序顺序表上的顺序查找判定树">
+<title>有序顺序表上的顺序查找判定树</title>
+<rect x="0.75" y="0.75" width="718.5" height="418.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">有序表顺序查找判定树（10, 20, 30, 40, 50, 60）</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<circle cx="110" cy="84" r="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="110" y="88.9" font-size="14" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">10</text>
+<path d="M125.9 92.5L180.1 121.5" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="162" y="102" font-size="12" fill="#71717a" text-anchor="middle">&gt;</text>
+<path d="M97.3 96.7L74 120" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="40" y="120" width="72" height="24" rx="4" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="76" y="136.2" font-size="12" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">(−∞,10)</text>
+<circle cx="196" cy="130" r="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="196" y="134.9" font-size="14" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">20</text>
+<path d="M211.9 138.5L266.1 167.5" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="248" y="148" font-size="12" fill="#71717a" text-anchor="middle">&gt;</text>
+<path d="M183.3 142.7L160 166" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="126" y="166" width="72" height="24" rx="4" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="162" y="182.2" font-size="12" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">(10,20)</text>
+<circle cx="282" cy="176" r="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="282" y="180.9" font-size="14" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">30</text>
+<path d="M297.9 184.5L352.1 213.5" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="334" y="194" font-size="12" fill="#71717a" text-anchor="middle">&gt;</text>
+<path d="M269.3 188.7L246 212" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="212" y="212" width="72" height="24" rx="4" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="248" y="228.2" font-size="12" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">(20,30)</text>
+<circle cx="368" cy="222" r="18" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="368" y="226.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">40</text>
+<path d="M383.9 230.5L438.1 259.5" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="420" y="240" font-size="12" fill="#71717a" text-anchor="middle">&gt;</text>
+<path d="M355.3 234.7L332 258" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="298" y="258" width="72" height="24" rx="4" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="334" y="274.2" font-size="12" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">(30,40)</text>
+<circle cx="454" cy="268" r="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="454" y="272.9" font-size="14" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">50</text>
+<path d="M469.9 276.5L524.1 305.5" fill="none" stroke="#3f3f46" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="506" y="286" font-size="12" fill="#71717a" text-anchor="middle">&gt;</text>
+<path d="M441.3 280.7L418 304" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="384" y="304" width="72" height="24" rx="4" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="420" y="320.2" font-size="12" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">(40,50)</text>
+<circle cx="540" cy="314" r="18" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="540" y="318.9" font-size="14" fill="#18181b" text-anchor="middle" font-weight="500" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">60</text>
+<path d="M527.3 326.7L504 350" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="470" y="350" width="72" height="24" rx="4" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="506" y="366.2" font-size="12" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">(50,60)</text>
+<path d="M553.7 325.7L566.3 336.3" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="560" y="350" width="64" height="24" rx="4" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="592" y="366.2" font-size="12" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">(60,∞)</text>
+<text x="420" y="116" font-size="12.5" fill="#d1493a">查找 25：25&gt;10, 25&gt;20, 25&lt;30 → 失败于 (20,30)</text>
+<text x="420" y="84" font-size="12.5" fill="#3b6fd4">查找 40：40&gt;10, 40&gt;20, 40&gt;30, 40=40 → 成功</text>
+<text x="360" y="406" font-size="12.5" fill="#71717a" text-anchor="middle">有序表中查找失败不必比到表尾：遇到比 key 大的元素即可停止</text>
+</svg>
