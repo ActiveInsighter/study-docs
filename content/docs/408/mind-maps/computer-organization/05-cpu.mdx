@@ -223,7 +223,7 @@ layout: mind-map
     - 各个部件对于总线的使用是独占的，同一时刻只能两个部件进行数据交换（一个in，一个out）
     - <img src="/images/408-mind-maps/co-0273.svg" alt="CPU内部单总线方式" width="300" height="321">
 
-      - <img src="/images/408-mind-maps/co-0103.png" alt="CPU内部单总线方式" width="108" height="220">
+      - <img src="/images/408-mind-maps/co-0103.svg" alt="CPU内部单总线方式" width="300" height="350">
 
         - 其中所有的寄存器的in out控制命令全是由CU发出的
         - 寄存器之间的数据流动
@@ -266,9 +266,9 @@ layout: mind-map
     - 多个总线可以一定程度提升效率
   - CPU专用数据通路方式
     - 造价比较高，但是可以支持指令流水线
-    - 基本结构 + 一个取指周期的例子 <img src="/images/408-mind-maps/co-0059.png" alt="基本结构 + 一个取指周期的例子" width="240" height="120">
+    - 基本结构 + 一个取指周期的例子 <img src="/images/408-mind-maps/co-0059.svg" alt="基本结构 + 一个取指周期的例子" width="300" height="139">
 
-      - 例题 <img src="/images/408-mind-maps/co-0193.png" alt="例题" width="240" height="216">
+      - 例题 <img src="/images/408-mind-maps/co-0193.svg" alt="例题" width="300" height="252">
 
         - 确定蓝色是哪个？MAR、PC、IR、MDR
           - A：MDR
@@ -290,7 +290,7 @@ layout: mind-map
 - 考频：低
   - 17、19、21
 - CPU的三总线结构
-  - 数据总线DB、地址总线AB、控制总线CB <img src="/images/408-mind-maps/co-0127.png" alt="数据总线DB、地址总线AB、控制总线CB" width="240" height="133">
+  - 数据总线DB、地址总线AB、控制总线CB <img src="/images/408-mind-maps/co-0127.svg" alt="数据总线DB、地址总线AB、控制总线CB" width="300" height="142">
 
     - 运算器部件
       - 通过数据总线连接
@@ -349,33 +349,33 @@ layout: mind-map
   - 特点三：使用定长的节拍来进行微操作的设计
     - 一个机器周期三个节拍
 - 确定一条微指令 四大要素：
-  - 微操作通过【指令的OP部分、当前处于哪个机器周期、当前机器周期的节拍号、PSW的状态】来确定 <img src="/images/408-mind-maps/co-0151.png" alt="微操作通过【指令的OP部分、当前处于哪个机器周期、当前机器周期的节拍号、PSW的状态】来确定" width="240" height="113">
+  - 微操作通过【指令的OP部分、当前处于哪个机器周期、当前机器周期的节拍号、PSW的状态】来确定 <img src="/images/408-mind-maps/co-0151.svg" alt="微操作通过【指令的OP部分、当前处于哪个机器周期、当前机器周期的节拍号、PSW的状态】来确定" width="300" height="139">
 
   - 确定指令操作码：
-    - <img src="/images/408-mind-maps/co-0290.png" alt="确定指令操作码：" width="161" height="220">
+    - <img src="/images/408-mind-maps/co-0290.svg" alt="确定指令操作码：" width="300" height="154">
 
       - 把IR通过OP译码器连接到CU上，使得CU可以得知当前是哪一个操作指令
         - 如何对应，可以参考（译码器）：
           [查看关联主题：第三章 存储系统](/docs/408/mind-maps/computer-organization/03-memory-system)
 
   - 确定机器周期：
-    - <img src="/images/408-mind-maps/co-0002.png" alt="确定机器周期：" width="240" height="65">
+    - <img src="/images/408-mind-maps/co-0002.svg" alt="确定机器周期：" width="300" height="154">
 
       - 通过在CU内部的四个触发器的值来确定
       - 根据四个触发器哪个值为1来确定
   - 确定节拍号：
-    - <img src="/images/408-mind-maps/co-0149.png" alt="确定节拍号：" width="240" height="142">
+    - <img src="/images/408-mind-maps/co-0149.svg" alt="确定节拍号：" width="300" height="154">
 
       - 通过连接的节拍发生器，来得知当前是哪一个节拍，且节拍不停的循环往复发出
   - 确定标志信息：
-    - <img src="/images/408-mind-maps/co-0210.png" alt="确定标志信息：" width="240" height="59">
+    - <img src="/images/408-mind-maps/co-0210.svg" alt="确定标志信息：" width="300" height="154">
 
       - 来自PSW、ACC等，也可能来自IO、主存
   - 最后CU输出微操作：
-    - <img src="/images/408-mind-maps/co-0115.png" alt="最后CU输出微操作：" width="240" height="162">
+    - <img src="/images/408-mind-maps/co-0115.svg" alt="最后CU输出微操作：" width="300" height="154">
 
   - 完整图
-    - <img src="/images/408-mind-maps/co-0284.png" alt="完整图" width="240" height="123">
+    - <img src="/images/408-mind-maps/co-0284.svg" alt="完整图" width="300" height="154">
 
 - 如何通过要素 确定微指令：
   - 考虑所有可能的指令情况，写出对应的微操作所需要的四要素：

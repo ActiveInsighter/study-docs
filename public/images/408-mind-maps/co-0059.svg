@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 380" width="820" height="380" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="CPU 专用数据通路方式：寄存器之间有专门的通路，由控制信号 Ci 控制">
+<title>CPU 专用数据通路方式：寄存器之间有专门的通路，由控制信号 Ci 控制</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="818.5" height="378.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">专用数据通路方式</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="60" y="60" width="50" height="70" rx="4" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="85" y="99.4" font-size="12.5" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">MDR</text>
+<rect x="60" y="250" width="50" height="70" rx="4" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="85" y="289.4" font-size="12.5" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">MAR</text>
+<rect x="240" y="160" width="70" height="30" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="275" y="179.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">PC</text>
+<rect x="380" y="160" width="70" height="30" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="415" y="179.4" font-size="12.5" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">IR</text>
+<rect x="380" y="260" width="70" height="30" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="415" y="279.4" font-size="12.5" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">CU</text>
+<rect x="560" y="80" width="70" height="30" rx="4" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="595" y="99.4" font-size="12.5" fill="#7f1d1d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">AC</text>
+<rect x="560" y="180" width="70" height="30" rx="4" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="595" y="199.4" font-size="12.5" fill="#7f1d1d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">ALU</text>
+<path d="M110 80L600 80" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="560" cy="80" r="4" fill="#ffffff" stroke="#52525b" stroke-width="1.2"/>
+<text x="568" y="72" font-size="10" fill="#3f3f46">C₁₁</text>
+<path d="M275 80L275 158" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="275" cy="130" r="4" fill="#ffffff" stroke="#52525b" stroke-width="1.2"/>
+<text x="283" y="122" font-size="10" fill="#3f3f46">C₆</text>
+<path d="M415 80L415 158" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="415" cy="130" r="4" fill="#ffffff" stroke="#52525b" stroke-width="1.2"/>
+<text x="423" y="122" font-size="10" fill="#3f3f46">C₇</text>
+<path d="M415 190L415 258" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="415" cy="226" r="4" fill="#ffffff" stroke="#52525b" stroke-width="1.2"/>
+<text x="423" y="218" font-size="10" fill="#3f3f46">C₄</text>
+<path d="M275 190L275 279Q275 285 269 285L112 285" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="220" cy="285" r="4" fill="#ffffff" stroke="#52525b" stroke-width="1.2"/>
+<text x="228" y="277" font-size="10" fill="#3f3f46">C₀</text>
+<path d="M595 110L595 178" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="595" cy="144" r="4" fill="#ffffff" stroke="#52525b" stroke-width="1.2"/>
+<text x="603" y="136" font-size="10" fill="#3f3f46">C₉</text>
+<path d="M630 195L674 195Q680 195 680 189L680 101Q680 95 674 95L632 95" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="680" cy="140" r="4" fill="#ffffff" stroke="#52525b" stroke-width="1.2"/>
+<text x="688" y="132" font-size="10" fill="#3f3f46">C₈</text>
+<path d="M110 110L514 110Q520 110 520 116L520 184Q520 190 526 190L558 190" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="520" cy="150" r="4" fill="#ffffff" stroke="#52525b" stroke-width="1.2"/>
+<text x="528" y="142" font-size="10" fill="#3f3f46">C₅</text>
+<path d="M30 70L58 70" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="40" cy="70" r="4" fill="#ffffff" stroke="#52525b" stroke-width="1.2"/>
+<text x="48" y="62" font-size="10" fill="#3f3f46">C₂</text>
+<path d="M58 110L30 110" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="40" cy="110" r="4" fill="#ffffff" stroke="#52525b" stroke-width="1.2"/>
+<text x="48" y="102" font-size="10" fill="#3f3f46">C₁₃</text>
+<path d="M58 290L26 290" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="40" cy="290" r="4" fill="#ffffff" stroke="#52525b" stroke-width="1.2"/>
+<text x="48" y="282" font-size="10" fill="#3f3f46">C₁</text>
+<rect x="330" y="330" width="50" height="24" rx="4" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="355" y="345.9" font-size="11" fill="#3b0764" text-anchor="middle">时钟</text>
+<path d="M380 342L412 342" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M412 342L412 292" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="470" y="275" font-size="11" fill="#3f3f46">标志</text>
+<text x="415" y="312" font-size="10.5" fill="#71717a" text-anchor="middle">控制信号</text>
+<rect x="560" y="230" width="240" height="130" rx="8" fill="#ffffff" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="574" y="252" font-size="12" fill="#18181b" font-weight="600">举例（取指周期）：</text>
+<text x="574" y="272" font-size="10.5" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">(PC) → MAR</text>
+<text x="690" y="272" font-size="10.5" fill="#3b6fd4">C₀ 有效</text>
+<text x="574" y="287" font-size="10.5" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">(MAR) → 主存</text>
+<text x="690" y="287" font-size="10.5" fill="#3b6fd4">C₁ 有效</text>
+<text x="574" y="302" font-size="10.5" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1 → R</text>
+<text x="690" y="302" font-size="10.5" fill="#3b6fd4">控制单元向主存发读命令</text>
+<text x="574" y="317" font-size="10.5" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">M(MAR) → MDR</text>
+<text x="690" y="317" font-size="10.5" fill="#3b6fd4">C₂ 有效</text>
+<text x="574" y="332" font-size="10.5" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">(MDR) → IR</text>
+<text x="690" y="332" font-size="10.5" fill="#3b6fd4">C₃ 有效</text>
+<text x="574" y="347" font-size="10.5" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">OP(IR) → CU</text>
+<text x="690" y="347" font-size="10.5" fill="#3b6fd4">C₄ 有效</text>
+</svg>

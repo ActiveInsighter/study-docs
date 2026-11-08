@@ -549,3 +549,47 @@ def cpu_flow(F, steps, regs=('PC', 'MAR', 'CU', 'IR', 'MDR'), extra=None):
         mx, my = pts[-2] if len(pts) > 2 else pts[0]
         lx, ly = (pts[0][0] + pts[1][0]) / 2, (pts[0][1] + pts[1][1]) / 2
         F.circle(lx, ly - 10, 8, num, 'white', 10.5, sw=1)
+
+def cu_full(F, hl=None, ox=0, oy=0):
+    """Hardwired CU: IR -> OP decoder, CLK -> beat generator, FE/IND/EX/INT, flags -> CU -> C0..Ck.
+    hl: one of 'op','cycle','beat','flag','out' to emphasise; others dimmed."""
+    X = lambda x: x + ox
+    Y = lambda y: y + oy
+    op = lambda k: None if hl in (None, k) else 0.28
+    F.items.append(f'<g opacity="{op("op") or 1}">')
+    F.box(X(240), Y(60), 220, 32, '指令寄存器 IR', 'white', 13, 4)
+    F.line(X(350), Y(92), X(350), Y(110), INK2, 1.4, arrow='end'); F.text(X(360), Y(102), 'n 位操作码', 11, 'start', INK2)
+    F.box(X(240), Y(112), 220, 30, '操作码译码器', 'blue', 13, 4)
+    for x, l in ((X(260), '0'), (X(290), '1'), (X(440), '2ⁿ−1')):
+        F.line(x, Y(142), x, Y(168), ACCENT['blue'], 1.4, arrow='end'); F.text(x + 4, Y(156), l, 10.5, 'start', ACCENT['blue'])
+    F.text(X(365), Y(156), '……', 11, color=ACCENT['blue'])
+    F.items.append('</g>')
+    F.box(X(240), Y(170), 220, 160, '控制单元\nCU', 'white', 16, 4, weight=700)
+    F.items.append(f'<g opacity="{op("beat") or 1}">')
+    F.box(X(40), Y(190), 46, 26, '时钟', 'violet', 11.5, 4)
+    F.path(f'M{X(30)} {Y(250)}' + ''.join(f'h6v-14h8v14' for _ in range(5)) + 'h8', ACCENT['violet'], 1.4)
+    F.text(X(64), Y(272), 'CLK（主频）', 11, color=INK2)
+    F.box(X(130), Y(180), 30, 140, '节\n拍\n发\n生\n器', 'amber', 11, 4)
+    F.line(X(108), Y(244), X(128), Y(244), ACCENT['violet'], 1.3, arrow='end')
+    for i, t in enumerate(('T₀', 'T₁', 'T₂', '⋮', 'Tₘ')):
+        y = Y(190 + i * 28)
+        if t != '⋮': F.line(X(160), y, X(238), y, ACCENT['amber'], 1.3, arrow='end')
+        F.text(X(200), y - 6, t, 11, color=ACCENT['amber'])
+    F.text(X(145), Y(346), '每个时钟周期发出一个节拍信号（循环）', 10.5, color=ACCENT['amber'])
+    F.items.append('</g>')
+    F.items.append(f'<g opacity="{op("cycle") or 1}">')
+    F.line(X(620), Y(186), X(462), Y(186), ACCENT['amber'], 1.4, arrow='end'); F.text(X(560), Y(176), 'FE、IND、EX、INT', 11, color=ACCENT['amber'])
+    F.text(X(560), Y(204), '（机器周期标志，集成在 CU 内）', 10, color=MUTED)
+    F.items.append('</g>')
+    F.items.append(f'<g opacity="{op("flag") or 1}">')
+    for i, y in enumerate((240, 262, 300)):
+        F.line(X(620), Y(y), X(462), Y(y), ACCENT['green'], 1.3, arrow='end')
+    F.text(X(540), Y(286), '⋮', 11, color=ACCENT['green'])
+    F.text(X(640), Y(262), '标志（来自执行单元\n的反馈：PSW、ACC、\nI/O 设备、主存等）', 10.5, 'start', ACCENT['green'], lh=1.4)
+    F.items.append('</g>')
+    F.items.append(f'<g opacity="{op("out") or 1}">')
+    for x, l in ((X(270), 'C₀'), (X(300), 'C₁'), (X(430), 'Cₖ')):
+        F.line(x, Y(330), x, Y(364), ACCENT['red'], 1.4, arrow='end'); F.text(x, Y(380), l, 12, color=ACCENT['red'])
+    F.text(X(365), Y(350), '……', 11, color=ACCENT['red'])
+    F.text(X(350), Y(402), '每个输出的控制信号对应一个微命令；如 C₁ 对应 (PC)→MAR，就让 C₁ 接到 PCout 和 MARin 上', 10.5, color=ACCENT['red'])
+    F.items.append('</g>')

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 380" width="820" height="380" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="微操作的确定：由指令 OP、所处机器周期、节拍号与 PSW 状态共同决定">
+<title>微操作的确定：由指令 OP、所处机器周期、节拍号与 PSW 状态共同决定</title>
+<rect x="0.75" y="0.75" width="818.5" height="378.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">一条指令 → 若干机器周期 → 若干节拍 → 微操作</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="20" y="150" width="90" height="50" rx="6" fill="#ffffff" stroke="#52525b" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="65" y="171.1" font-size="12" fill="#18181b" text-anchor="middle"><tspan x="65" dy="0">高级语言</tspan><tspan x="65" dy="16.2">代码</tspan></text>
+<rect x="150" y="66" width="70" height="30" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="185" y="85" font-size="11.5" fill="#18181b" text-anchor="middle">指令 1</text>
+<rect x="150" y="110" width="70" height="30" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="185" y="129" font-size="11.5" fill="#78350f" text-anchor="middle">指令 2</text>
+<rect x="150" y="154" width="70" height="30" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="185" y="173" font-size="11.5" fill="#18181b" text-anchor="middle">指令 3</text>
+<rect x="150" y="198" width="70" height="30" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="185" y="217" font-size="11.5" fill="#18181b" text-anchor="middle">指令 4</text>
+<rect x="150" y="242" width="70" height="30" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="185" y="261" font-size="11.5" fill="#18181b" text-anchor="middle">指令 5</text>
+<rect x="150" y="286" width="70" height="30" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="185" y="305" font-size="11.5" fill="#18181b" text-anchor="middle">指令 6</text>
+<path d="M110 175L148 125" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M110 175L148 300" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="270" y="66" width="90" height="50" rx="4" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="315" y="87.4" font-size="11" fill="#14532d" text-anchor="middle"><tspan x="315" dy="0">取指周期</tspan><tspan x="315" dy="14.9">(FE = 1)</tspan></text>
+<rect x="270" y="136" width="90" height="50" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="315" y="157.4" font-size="11" fill="#78350f" text-anchor="middle"><tspan x="315" dy="0">间址周期</tspan><tspan x="315" dy="14.9">(IND = 1)</tspan></text>
+<rect x="270" y="206" width="90" height="50" rx="4" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="315" y="227.4" font-size="11" fill="#3b0764" text-anchor="middle"><tspan x="315" dy="0">执行周期</tspan><tspan x="315" dy="14.9">(EX = 1)</tspan></text>
+<rect x="270" y="276" width="90" height="50" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="315" y="297.4" font-size="11" fill="#1e3a8a" text-anchor="middle"><tspan x="315" dy="0">中断周期</tspan><tspan x="315" dy="14.9">(INT = 1)</tspan></text>
+<path d="M222 125L268 91" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M222 125L268 300" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="410" y="62" width="170" height="58" rx="4" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="422" y="80.5" font-size="10.5" fill="#14532d"><tspan x="422" dy="0">T₀：微操作 1、微操作 2</tspan><tspan x="422" dy="14.2">T₁：微操作 3</tspan><tspan x="422" dy="14.2">T₂：微操作 4</tspan></text>
+<path d="M360 91L408 91" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="410" y="132" width="170" height="58" rx="4" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="422" y="150.5" font-size="10.5" fill="#78350f"><tspan x="422" dy="0">T₀：微操作 5、微操作 2</tspan><tspan x="422" dy="14.2">T₁：微操作 6</tspan><tspan x="422" dy="14.2">T₂：微操作 7</tspan></text>
+<path d="M360 161L408 161" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="410" y="202" width="170" height="58" rx="4" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="422" y="220.5" font-size="10.5" fill="#3b0764"><tspan x="422" dy="0">T₀：</tspan><tspan x="422" dy="14.2">T₁：微操作 8</tspan><tspan x="422" dy="14.2">T₂：微操作 9、微操作 6</tspan></text>
+<path d="M360 231L408 231" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="410" y="272" width="170" height="58" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="422" y="290.5" font-size="10.5" fill="#1e3a8a"><tspan x="422" dy="0">T₀：</tspan><tspan x="422" dy="14.2">T₁：微操作 10</tspan><tspan x="422" dy="14.2">T₂：微操作 11</tspan></text>
+<path d="M360 301L408 301" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="600" y="66" width="210" height="44" rx="4" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="705" y="84.6" font-size="10.5" fill="#7f1d1d" text-anchor="middle"><tspan x="705" dy="0">① 一个节拍内可并行完成</tspan><tspan x="705" dy="14.2">多个“相容”的操作</tspan></text>
+<rect x="600" y="136" width="210" height="44" rx="4" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="705" y="154.6" font-size="10.5" fill="#7f1d1d" text-anchor="middle"><tspan x="705" dy="0">② 同一个微操作可在</tspan><tspan x="705" dy="14.2">不同指令中被使用</tspan></text>
+<rect x="600" y="206" width="210" height="44" rx="4" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="705" y="224.6" font-size="10.5" fill="#7f1d1d" text-anchor="middle"><tspan x="705" dy="0">③ 选择定长的机器周期，</tspan><tspan x="705" dy="14.2">以最大节拍数为准</tspan></text>
+<rect x="600" y="276" width="210" height="44" rx="4" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="705" y="294.6" font-size="10.5" fill="#7f1d1d" text-anchor="middle"><tspan x="705" dy="0">④ 所需节拍较少时，可将</tspan><tspan x="705" dy="14.2">微操作放在后几个节拍</tspan></text>
+</svg>
