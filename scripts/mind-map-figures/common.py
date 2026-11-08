@@ -746,3 +746,17 @@ def xlate(F, kind, ox=0, oy=0):
     F.line(X(242), Y(107), X(286), Y(107), INK2, 1.2, arrow='end')
     F.circle(X(70), Y(170), 13, '+', 'white', 14)
     F.line(X(70), Y(122), X(70), Y(156), INK2, 1.2, arrow='end')
+
+def disk_grid(F, x, y, n=32, cols=4, hl=None, labels=True, cw=26, ch=16, dx=50, dy=32, tones=None):
+    """Disk drawn as numbered small blocks. hl: {block: (tone, text)}. Returns centres."""
+    hl = hl or {}
+    F.items.append(f'<path d="M{x} {y}Q{x + cols * dx / 2} {y + 16} {x + cols * dx} {y}V{y + (n // cols) * dy + 26}Q{x + cols * dx / 2} {y + (n // cols) * dy + 42} {x} {y + (n // cols) * dy + 26}Z" fill="#fafafa" stroke="#71717a" stroke-width="1.3"/>')
+    cs = {}
+    for b in range(n):
+        r, c = divmod(b, cols)
+        bx, by = x + 22 + c * dx, y + 20 + r * dy
+        tone, t = hl.get(b, ('white', ''))
+        F.box(bx, by, cw, ch, t, tone, 10, 2, True)
+        if labels: F.text(bx - 3, by + ch / 2, str(b), 10, 'end', INK2, mono=True, valign='middle')
+        cs[b] = (bx + cw / 2, by + ch / 2)
+    return cs

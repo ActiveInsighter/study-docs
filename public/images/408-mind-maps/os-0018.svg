@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 260" width="620" height="260" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="树形目录结构">
+<title>树形目录结构</title>
+<rect x="0.75" y="0.75" width="618.5" height="258.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">树形目录结构</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M104.7 168.9L79.3 211.1" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M127.3 168.9L152.7 211.1" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M260 172L260 208" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M392.7 168.9L367.3 211.1" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M415.3 168.9L440.7 211.1" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M548 172L548 208" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M311.4 77.6L128.2 145.5" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M317.3 86.4L268.7 140.3" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M346.7 86.4L395.3 140.3" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M352.6 77.6L535.8 145.5" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="68" cy="230" r="22" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="68" y="234.6" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">fd0</text>
+<circle cx="164" cy="230" r="22" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="164" y="234.6" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">hda</text>
+<rect x="98" y="138" width="36" height="24" rx="4" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="116" y="153.8" font-size="11" fill="#3f3f46" text-anchor="middle">dev</text>
+<circle cx="260" cy="230" r="22" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="260" y="234.6" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">…</text>
+<rect x="240.6" y="138" width="38.8" height="24" rx="4" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="260" y="153.8" font-size="11" fill="#3f3f46" text-anchor="middle">home</text>
+<circle cx="356" cy="230" r="22" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="356" y="234.6" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">ls</text>
+<circle cx="452" cy="230" r="22" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="452" y="234.6" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">cp</text>
+<rect x="386" y="138" width="36" height="24" rx="4" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="404" y="153.8" font-size="11" fill="#3f3f46" text-anchor="middle">bin</text>
+<circle cx="548" cy="230" r="22" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="548" y="234.6" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">…</text>
+<rect x="530" y="138" width="36" height="24" rx="4" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="548" y="153.8" font-size="11" fill="#3f3f46" text-anchor="middle">usr</text>
+<rect x="314" y="58" width="36" height="24" rx="4" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="332" y="73.8" font-size="11" fill="#3f3f46" text-anchor="middle">/</text>
+</svg>

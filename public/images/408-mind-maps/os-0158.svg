@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" width="560" height="380" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="无环图目录结构：允许多个目录项指向同一个共享文件 count">
+<title>无环图目录结构：允许多个目录项指向同一个共享文件 count</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="558.5" height="378.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">无环图目录结构</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="240" y="50" width="30" height="30" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="270" y="50" width="30" height="30" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="240" y="50" width="60" height="30" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M270 50L270 80" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="255" y="68.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="285" y="68.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="312" y="70.2" font-size="12" fill="#3f3f46">root</text>
+<rect x="60" y="120" width="30" height="30" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="90" y="120" width="30" height="30" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="120" y="120" width="30" height="30" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="150" y="120" width="30" height="30" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="60" y="120" width="120" height="30" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M90 120L90 150" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M120 120L120 150" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M150 120L150 150" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="75" y="138.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="105" y="138.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="135" y="138.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="165" y="138.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="184" y="140.2" font-size="12" fill="#3f3f46">dict</text>
+<rect x="380" y="120" width="30" height="30" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="410" y="120" width="30" height="30" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="440" y="120" width="30" height="30" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="380" y="120" width="90" height="30" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M410 120L410 150" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M440 120L440 150" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="395" y="138.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="425" y="138.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="455" y="138.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="474" y="140.2" font-size="12" fill="#3f3f46">spell</text>
+<path d="M255 80L120 118" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M285 80L420 118" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="75" cy="200" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="75" y="226" font-size="11.5" fill="#3f3f46" text-anchor="middle">list</text>
+<path d="M75 150L75 186" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="270" cy="200" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="270" y="226" font-size="11.5" fill="#3b6fd4" text-anchor="middle" font-weight="600">count</text>
+<rect x="246" y="176" width="48" height="58" rx="4" fill="none" stroke="#3b6fd4" stroke-width="1.2" stroke-dasharray="3 3"/>
+<path d="M135 150L258 190" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M395 150L282 190" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="460" cy="200" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="460" y="226" font-size="11.5" fill="#3f3f46" text-anchor="middle">list</text>
+<path d="M455 150L460 186" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="220" y="250" width="30" height="30" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="250" y="250" width="30" height="30" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="280" y="250" width="30" height="30" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
+<rect x="220" y="250" width="90" height="30" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+<path d="M250 250L250 280" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M280 250L280 280" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="235" y="268.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="265" y="268.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="295" y="268.5" font-size="10" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace"></text>
+<text x="316" y="270.2" font-size="12" fill="#3f3f46">p</text>
+<path d="M165 150L240 248" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M425 150L280 248" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="220" cy="330" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="220" y="360" font-size="11" fill="#3f3f46" text-anchor="middle">root</text>
+<path d="M235 280L220 316" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="260" cy="330" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="260" y="360" font-size="11" fill="#3f3f46" text-anchor="middle">rade</text>
+<path d="M265 280L260 316" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="300" cy="330" r="14" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="300" y="360" font-size="11" fill="#3f3f46" text-anchor="middle">W7</text>
+<path d="M295 280L300 316" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M105 150L220 316" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+</svg>

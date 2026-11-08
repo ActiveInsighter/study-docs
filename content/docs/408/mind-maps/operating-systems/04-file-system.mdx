@@ -91,7 +91,7 @@ layout: mind-map
 - 打开(目录)文件
   - 主要工作：
     - 1\. 找到文件对应的目录项
-    - 2\. 把目录项复制到内存中的打开文件表中 <img src="/images/408-mind-maps/os-0145.png" alt="2. 把目录项复制到内存中的打开文件表中" width="240" height="139">
+    - 2\. 把目录项复制到内存中的打开文件表中 <img src="/images/408-mind-maps/os-0145.svg" alt="2. 把目录项复制到内存中的打开文件表中" width="300" height="139">
 
     - 3\. 随后用户就可以使用打开文件表中的编号来指明要操作的文件
     - 把文件目录调入到内存中（调入 --- 复制到内存中）
@@ -177,7 +177,7 @@ layout: mind-map
     - 索引文件
 
       - 示意图：
-        - <img src="/images/408-mind-maps/os-0103.png" alt="示意图：" width="240" height="115">
+        - <img src="/images/408-mind-maps/os-0103.svg" alt="示意图：" width="300" height="131">
 
       - 【索引表】的物理存储类型：
         - 顺序结构、顺序存储、定长的顺序文件
@@ -198,7 +198,7 @@ layout: mind-map
       - 此处也可以设计多级索引（因为是数据结构），但是书上没说过
     - 索引顺序文件
       - 示意图：
-        - <img src="/images/408-mind-maps/os-0132.png" alt="示意图：" width="240" height="121">
+        - <img src="/images/408-mind-maps/os-0132.svg" alt="示意图：" width="300" height="141">
 
       - 前提：
         - 顺序文件
@@ -235,7 +235,7 @@ layout: mind-map
   - 09\*2、10、12、13\*3、14、15、17、18、20\*2、14大、16大、18大、22大
 - 文件在外存中具体的存储方式（文件的物理结构）
 - 连续分配
-  - <img src="/images/408-mind-maps/os-0140.png" alt="连续分配" width="240" height="198">
+  - <img src="/images/408-mind-maps/os-0140.svg" alt="连续分配" width="300" height="184">
 
   - 原理：
     - 每个文件在磁盘上占有一组连续的块，在外存中是【连续分配】
@@ -258,7 +258,7 @@ layout: mind-map
     - 顺序访问
       - 不能直接访问
   - 隐式链接
-    - 在每一个盘块的末尾都存有一个【指向下一个盘块】的指针 <img src="/images/408-mind-maps/os-0152.png" alt="在每一个盘块的末尾都存有一个【指向下一个盘块】的指针" width="240" height="197">
+    - 在每一个盘块的末尾都存有一个【指向下一个盘块】的指针 <img src="/images/408-mind-maps/os-0152.svg" alt="在每一个盘块的末尾都存有一个【指向下一个盘块】的指针" width="300" height="184">
 
     - 目录表：
       - &lt;文件名、起始盘块号、末尾盘块号&gt;
@@ -267,7 +267,7 @@ layout: mind-map
       - 指针会消耗空间
       - 只能顺序访问，有大量的IO，很费事
   - 显式链接
-    - FAT表 <img src="/images/408-mind-maps/os-0136.png" alt="FAT表" width="240" height="209">
+    - FAT表 <img src="/images/408-mind-maps/os-0136.svg" alt="FAT表" width="300" height="188">
 
     - 目录表：
       - 文件名、起始盘块号
@@ -286,7 +286,7 @@ layout: mind-map
       - 磁盘章节，-2就是空闲盘块
 - 索引分配
 
-  - <img src="/images/408-mind-maps/os-0135.png" alt="索引分配" width="240" height="183">
+  - <img src="/images/408-mind-maps/os-0135.svg" alt="索引分配" width="300" height="178">
 
   - 原理：
     - 【每个文件对应有一个索引表】，内存中的文件目录表存的是每个文件对应的索引表块号，当要访问一个文件的时候，首先把该文件【的索引表从外存读入内存】
@@ -308,7 +308,7 @@ layout: mind-map
       - 和多级页表一样，首先访问一级索引表，然后再访问二级索引表
     - 混合索引
 - 混合索引：
-  - <img src="/images/408-mind-maps/os-0003.png" alt="混合索引：" width="240" height="218">
+  - <img src="/images/408-mind-maps/os-0003.svg" alt="混合索引：" width="300" height="186">
 
     - 一个索引表中，存在
     - 1\. 直接地址（直接指向一个块）
@@ -409,14 +409,14 @@ layout: mind-map
   - 四种目录结构
     - 单/一级目录结构
       - 示意图：
-        - <img src="/images/408-mind-maps/os-0099.png" alt="示意图：" width="240" height="66">
+        - <img src="/images/408-mind-maps/os-0099.svg" alt="示意图：" width="300" height="96">
 
       - 缺点：
         - 不允许重名
         - 不适用于多用户
     - 两级目录结构
       - 示意图：
-        - <img src="/images/408-mind-maps/os-0026.png" alt="示意图：" width="240" height="79">
+        - <img src="/images/408-mind-maps/os-0026.svg" alt="示意图：" width="300" height="92">
 
         - 分为主文件目录、用户文件目录
       - 缺点：
@@ -425,7 +425,7 @@ layout: mind-map
         - 不能对文件分类
     - 多级/树形目录结构
       - 示意图：
-        - <img src="/images/408-mind-maps/os-0018.png" alt="示意图：" width="240" height="110">
+        - <img src="/images/408-mind-maps/os-0018.svg" alt="示意图：" width="300" height="126">
 
       - 树形目录结构，现代OS都在用
       - 绝对路径、相对路径：
@@ -439,7 +439,7 @@ layout: mind-map
         - 搜索路径长，增加了磁盘访问次数
     - 无环图目录结构
       - 示意图：
-        - <img src="/images/408-mind-maps/os-0158.png" alt="示意图：" width="240" height="186">
+        - <img src="/images/408-mind-maps/os-0158.svg" alt="示意图：" width="300" height="204">
 
           - DAG图
       - 共享计数器：
@@ -491,7 +491,7 @@ layout: mind-map
     - 采用哈希函数来快速定位文件
 - 共享
   - 硬链接
-    - 文件指向同一个inode <img src="/images/408-mind-maps/os-0067.png" alt="文件指向同一个inode" width="240" height="130">
+    - 文件指向同一个inode <img src="/images/408-mind-maps/os-0067.svg" alt="文件指向同一个inode" width="300" height="146">
 
       - 索引节点的两大功能
         分组说明：索引节点中；对应：[访问计数](#focus=%E8%AE%BF%E9%97%AE%E8%AE%A1%E6%95%B0)
@@ -504,7 +504,7 @@ layout: mind-map
         - 访问计数
           - 在内存中运行时的访问计数
   - 软链接
-    - 使用符号链，创建一个LINK类新文件 <img src="/images/408-mind-maps/os-0133.png" alt="使用符号链，创建一个LINK类新文件" width="240" height="131">
+    - 使用符号链，创建一个LINK类新文件 <img src="/images/408-mind-maps/os-0133.svg" alt="使用符号链，创建一个LINK类新文件" width="300" height="146">
 
       - 新文件：
         - 创建一个LINK类型的新文件
@@ -526,7 +526,7 @@ layout: mind-map
 
 - OS管理外存的空闲盘块、分区、VFS等
 - 文件系统结构：
-  - <img src="/images/408-mind-maps/os-0142.png" alt="文件系统结构：" width="93" height="220">
+  - <img src="/images/408-mind-maps/os-0142.svg" alt="文件系统结构：" width="300" height="420">
 
     - 4\. 逻辑文件系统
       - 管理元数据信息
@@ -559,7 +559,7 @@ layout: mind-map
   - 空闲表法
     - 分配方式：
       - 连续分配
-        - <img src="/images/408-mind-maps/os-0066.png" alt="连续分配" width="240" height="169">
+        - <img src="/images/408-mind-maps/os-0066.svg" alt="连续分配" width="300" height="141">
 
     - 空闲盘块表：
       - &lt;空闲盘块号、空闲盘块数&gt;
@@ -573,7 +573,7 @@ layout: mind-map
       概要范围：[分配算法：](#focus=%E5%88%86%E9%85%8D%E7%AE%97%E6%B3%95%EF%BC%9A)、[存储回收：](#focus=%E5%AD%98%E5%82%A8%E5%9B%9E%E6%94%B6%EF%BC%9A)
 
   - 空闲链表法
-    - <img src="/images/408-mind-maps/os-0074.png" alt="空闲链表法" width="240" height="154">
+    - <img src="/images/408-mind-maps/os-0074.svg" alt="空闲链表法" width="300" height="146">
 
     - 空闲盘块链：
       - 分配模式：
@@ -594,7 +594,7 @@ layout: mind-map
       - 回收算法：
         - 将回收区和相邻的空闲盘区合并
   - 位示图法
-    - <img src="/images/408-mind-maps/os-0057.png" alt="位示图法" width="240" height="76">
+    - <img src="/images/408-mind-maps/os-0057.svg" alt="位示图法" width="300" height="116">
 
       - 字号、位号和盘块号进行转化
     - 分配算法：
@@ -612,9 +612,9 @@ layout: mind-map
     - 超级块
       - 成组链接法的第一块
     - 图示：
-      - <img src="/images/408-mind-maps/os-0154.png" alt="图示：" width="240" height="140">
+      - <img src="/images/408-mind-maps/os-0154.svg" alt="图示：" width="300" height="150">
 
-        - <img src="/images/408-mind-maps/os-0091.png" alt="图示：" width="240" height="120">
+        - <img src="/images/408-mind-maps/os-0091.svg" alt="图示：" width="300" height="150">
 
           - 批注：天勤b站视频链接
             [参考链接](<https://www.bilibili.com/video/av71840093/?vd_source=d75b38061e3b7a39145438daf0bed0fe>)

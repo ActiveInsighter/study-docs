@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 380" width="820" height="380" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="打开文件表：进程的打开文件表指向系统打开文件表">
+<title>打开文件表：进程的打开文件表指向系统打开文件表</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="818.5" height="378.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">进程打开文件表 → 系统打开文件表</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="20" y="172" width="340" height="26" rx="0" fill="#fafafa" stroke="none" stroke-width="0"/>
+<path d="M20 146V128Q20 120 28 120H352Q360 120 360 128V146Z" fill="#e8effc"/>
+<path d="M20 146L360 146" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20 172L360 172" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20 198L360 198" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M64 120L64 224" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M134 120L134 224" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M204 120L204 224" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M274 120L274 224" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="20" y="120" width="340" height="104" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="42" y="136.7" font-size="10.5" fill="#1e3a8a" text-anchor="middle" font-weight="600">编号</text>
+<text x="99" y="136.7" font-size="10.5" fill="#1e3a8a" text-anchor="middle" font-weight="600">文件名</text>
+<text x="169" y="136.7" font-size="10.5" fill="#1e3a8a" text-anchor="middle" font-weight="600">读写指针</text>
+<text x="239" y="136.7" font-size="10.5" fill="#1e3a8a" text-anchor="middle" font-weight="600">访问权限</text>
+<text x="317" y="136.7" font-size="10.5" fill="#1e3a8a" text-anchor="middle" font-weight="600">系统表索引号</text>
+<text x="42" y="162.7" font-size="10.5" fill="#18181b" text-anchor="middle">1</text>
+<text x="99" y="162.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="169" y="162.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="239" y="162.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="317" y="162.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="42" y="188.7" font-size="10.5" fill="#18181b" text-anchor="middle">2</text>
+<text x="99" y="188.7" font-size="10.5" fill="#18181b" text-anchor="middle">test.txt</text>
+<text x="169" y="188.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="239" y="188.7" font-size="10.5" fill="#18181b" text-anchor="middle">只读</text>
+<text x="317" y="188.7" font-size="10.5" fill="#18181b" text-anchor="middle">k</text>
+<text x="42" y="214.7" font-size="10.5" fill="#18181b" text-anchor="middle">3</text>
+<text x="99" y="214.7" font-size="10.5" fill="#18181b" text-anchor="middle"></text>
+<text x="169" y="214.7" font-size="10.5" fill="#18181b" text-anchor="middle"></text>
+<text x="239" y="214.7" font-size="10.5" fill="#18181b" text-anchor="middle"></text>
+<text x="317" y="214.7" font-size="10.5" fill="#18181b" text-anchor="middle"></text>
+<text x="190" y="240" font-size="11" fill="#3f3f46" text-anchor="middle">用户进程 A 的“打开文件表”</text>
+<path d="M20 296V278Q20 270 28 270H352Q360 270 360 278V296Z" fill="#e8effc"/>
+<path d="M20 296L360 296" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M64 270L64 322" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M134 270L134 322" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M204 270L204 322" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M274 270L274 322" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="20" y="270" width="340" height="52" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="42" y="286.7" font-size="10.5" fill="#1e3a8a" text-anchor="middle" font-weight="600">编号</text>
+<text x="99" y="286.7" font-size="10.5" fill="#1e3a8a" text-anchor="middle" font-weight="600">文件名</text>
+<text x="169" y="286.7" font-size="10.5" fill="#1e3a8a" text-anchor="middle" font-weight="600">读写指针</text>
+<text x="239" y="286.7" font-size="10.5" fill="#1e3a8a" text-anchor="middle" font-weight="600">访问权限</text>
+<text x="317" y="286.7" font-size="10.5" fill="#1e3a8a" text-anchor="middle" font-weight="600">系统表索引号</text>
+<text x="42" y="312.7" font-size="10.5" fill="#18181b" text-anchor="middle">1</text>
+<text x="99" y="312.7" font-size="10.5" fill="#18181b" text-anchor="middle">test.txt</text>
+<text x="169" y="312.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="239" y="312.7" font-size="10.5" fill="#18181b" text-anchor="middle">读和写</text>
+<text x="317" y="312.7" font-size="10.5" fill="#18181b" text-anchor="middle">k</text>
+<text x="190" y="334" font-size="11" fill="#3f3f46" text-anchor="middle">用户进程 B 的“打开文件表”</text>
+<rect x="470" y="162" width="304" height="26" rx="0" fill="#fafafa" stroke="none" stroke-width="0"/>
+<rect x="470" y="214" width="304" height="26" rx="0" fill="#fafafa" stroke="none" stroke-width="0"/>
+<path d="M470 136V118Q470 110 478 110H766Q774 110 774 118V136Z" fill="#e3f4e8"/>
+<path d="M470 136L774 136" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M470 162L774 162" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M470 188L774 188" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M470 214L774 214" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M514 110L514 240" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M584 110L584 240" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M624 110L624 240" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M694 110L694 240" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="470" y="110" width="304" height="130" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="492" y="126.7" font-size="10.5" fill="#14532d" text-anchor="middle" font-weight="600">编号</text>
+<text x="549" y="126.7" font-size="10.5" fill="#14532d" text-anchor="middle" font-weight="600">文件名</text>
+<text x="604" y="126.7" font-size="10.5" fill="#14532d" text-anchor="middle" font-weight="600">…</text>
+<text x="659" y="126.7" font-size="10.5" fill="#14532d" text-anchor="middle" font-weight="600">外存地址</text>
+<text x="734" y="126.7" font-size="10.5" fill="#14532d" text-anchor="middle" font-weight="600">打开计数器</text>
+<text x="492" y="152.7" font-size="10.5" fill="#18181b" text-anchor="middle">1</text>
+<text x="549" y="152.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="604" y="152.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="659" y="152.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="734" y="152.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="492" y="178.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="549" y="178.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="604" y="178.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="659" y="178.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="734" y="178.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="492" y="204.7" font-size="10.5" fill="#18181b" text-anchor="middle">k</text>
+<text x="549" y="204.7" font-size="10.5" fill="#18181b" text-anchor="middle">test.txt</text>
+<text x="604" y="204.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="659" y="204.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="734" y="204.7" font-size="10.5" fill="#18181b" text-anchor="middle">2</text>
+<text x="492" y="230.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="549" y="230.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="604" y="230.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="659" y="230.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="734" y="230.7" font-size="10.5" fill="#18181b" text-anchor="middle">…</text>
+<text x="622" y="252" font-size="11" fill="#3f3f46" text-anchor="middle">系统的打开文件表（整个系统只有一张）</text>
+<path d="M360 185L468 201" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M360 309L468 205" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<rect x="20" y="52" width="150" height="50" rx="8" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="95" y="73.8" font-size="10" fill="#14532d" text-anchor="middle"><tspan x="95" dy="0">读写指针记录该进程对文件</tspan><tspan x="95" dy="13.5">的读 / 写操作进行到的位置</tspan></text>
+<rect x="190" y="52" width="170" height="50" rx="8" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="275" y="73.8" font-size="10" fill="#14532d" text-anchor="middle"><tspan x="275" dy="0">打开文件时声明“只读”，</tspan><tspan x="275" dy="13.5">则该进程不能写文件</tspan></text>
+<rect x="620" y="52" width="170" height="44" rx="8" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="705" y="70.8" font-size="10" fill="#78350f" text-anchor="middle"><tspan x="705" dy="0">记录此时有多少个</tspan><tspan x="705" dy="13.5">进程打开了此文件</tspan></text>
+<rect x="470" y="270" width="330" height="64" rx="8" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="635" y="298.6" font-size="10.5" fill="#14532d" text-anchor="middle"><tspan x="635" dy="0">可以方便实现某些文件管理功能：如删除文件前检查</tspan><tspan x="635" dy="14.2">打开计数器，若仍有进程在使用则暂时无法删除</tspan></text>
+</svg>
