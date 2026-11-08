@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 330" width="560" height="330" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="线程三状态模型：就绪、运行、阻塞">
+<title>线程三状态模型：就绪、运行、阻塞</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="558.5" height="328.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">线程的状态与转换</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<ellipse cx="90" cy="110" rx="56" ry="30" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="90" y="115.2" font-size="15" fill="#1e3a8a" text-anchor="middle" font-weight="500">就绪</text>
+<ellipse cx="470" cy="110" rx="56" ry="30" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="470" y="115.2" font-size="15" fill="#14532d" text-anchor="middle" font-weight="500">运行</text>
+<ellipse cx="280" cy="270" rx="56" ry="30" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="280" y="275.2" font-size="15" fill="#78350f" text-anchor="middle" font-weight="500">阻塞</text>
+<path d="M146 100L412 100" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="280" y="88" font-size="12.5" fill="#3f3f46" text-anchor="middle">(3) 被调度程序选中</text>
+<path d="M412 120L146 120" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="280" y="140" font-size="12.5" fill="#3f3f46" text-anchor="middle">(2) 时间用完</text>
+<path d="M440 136L316 244" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="440" y="200" font-size="12.5" fill="#3f3f46">(1) 等待某事件</text>
+<path d="M244 244L118 136" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="120" y="200" font-size="12.5" fill="#3f3f46" text-anchor="end">(4) 等待的事件发生</text>
+</svg>

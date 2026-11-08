@@ -682,3 +682,57 @@ def dmac(F, hl=False):
     F.box(470, 330, 50, 50, '设备', 'gray', 11, 6)
     F.line(530, 276, 530, 328, ACCENT['green'] if hl else INK2, 2, arrow='both')
     F.poly([(470, 355), (270, 355), (270, 278)], ACCENT['green'] if hl else INK2, 1.3, arrow='end')
+
+def thread_glyph(F, x, y, color=None, s=1.0):
+    color = color or ACCENT['green']
+    F.path(f'M{x} {y - 14 * s}c{-8 * s} {6 * s} {8 * s} {10 * s} 0 {14 * s}s{8 * s} {10 * s} 0 {14 * s}', color, 1.8)
+
+def threads_model(F, kind, ox=0, oy=0, title=''):
+    """kind: 'user' (many-to-one) | 'kernel' (one-to-one) | 'combo' (many-to-many)."""
+    X = lambda v: v + ox; Y = lambda v: v + oy
+    F.text(X(110), Y(56), title, 12, color=INK, weight=600)
+    ut = {'user': [60, 100, 140], 'kernel': [60, 110, 160], 'combo': [40, 75, 110, 170]}[kind]
+    for x in ut: thread_glyph(F, X(x), Y(84), INK2)
+    F.line(X(10), Y(130), X(210), Y(130), INK2, 1.2); F.text(X(210), Y(122), '用户空间', 10, 'end', MUTED); F.text(X(210), Y(142), '内核空间', 10, 'end', MUTED)
+    kt = {'user': [100], 'kernel': [60, 110, 160], 'combo': [60, 110, 160]}[kind]
+    if kind in ('user', 'combo'):
+        F.box(X(20), Y(112), 90, 20, '线程库', 'white', 10, 2)
+    for x in kt:
+        F.circle(X(x), Y(176), 13, '', 'blue', sw=1.2); thread_glyph(F, X(x), Y(176), ACCENT['blue'], 0.6)
+    if kind == 'user':
+        for x in ut: F.line(X(x), Y(100), X(65), Y(112), INK2, 1)
+        F.line(X(65), Y(132), X(100), Y(162), INK2, 1)
+    elif kind == 'kernel':
+        for a, b in zip(ut, kt): F.line(X(a), Y(100), X(b), Y(162), INK2, 1)
+    else:
+        for x in ut[:3]: F.line(X(x), Y(100), X(65), Y(112), INK2, 1)
+        for x in kt[:2]: F.line(X(65), Y(132), X(x), Y(162), INK2, 1)
+        F.line(X(170), Y(100), X(160), Y(162), INK2, 1)
+    procs = {'user': [100], 'kernel': [110], 'combo': [80, 150]}[kind]
+    for p in procs:
+        F.circle(X(p), Y(232), 15, '', 'green', sw=1.2); thread_glyph(F, X(p), Y(232), ACCENT['green'], 0.7)
+    if kind == 'user': F.line(X(100), Y(190), X(100), Y(216), INK2, 1)
+    elif kind == 'kernel':
+        for x in kt: F.line(X(x), Y(190), X(110), Y(216), INK2, 1)
+    else:
+        for x, p in ((60, 80), (110, 80), (110, 150), (160, 150)): F.line(X(x), Y(190), X(p), Y(216), INK2, 1)
+
+def proc_space(F, ox, oy, kind, sched=False):
+    """User-level vs kernel-level thread layout with TCB/PCB tables."""
+    X = lambda v: v + ox; Y = lambda v: v + oy
+    F.rect(X(40), Y(60), 460, 290, 'none', INK2, 1.3, 0); F.line(X(40), Y(250), X(500), Y(250), INK2, 1.3)
+    F.text(X(28), Y(150), '用\n户\n空\n间', 11, 'middle', INK2, lh=1.2, valign='middle'); F.text(X(28), Y(300), '内\n核\n空\n间', 11, 'middle', INK2, lh=1.2, valign='middle')
+    for k, (cx, n) in enumerate(((160, 3), (380, 4))):
+        F.circle(X(cx), Y(155), 86, '', 'amber', sw=1.2)
+        for i in range(n): thread_glyph(F, X(cx - 30 + i * 22 - (10 if n == 4 else 0)), Y(120))
+        if kind == 'user':
+            F.box(X(cx - 60), Y(150), 70, 72, '调度\n程序' if (sched and k == 0) else '', 'red' if (sched and k == 0) else 'blue', 10.5, 0)
+            for j in range(n): F.box(X(cx + 10), Y(150 + j * 72 / n), 50, 72 / n, f'TCB{j + 1}', 'blue', 10, 0)
+    F.text(X(270), Y(300), '内核', 12, color=INK2)
+    if kind == 'kernel':
+        for j in range(7): F.box(X(240), Y(262 + j * 10), 60, 10, f'TCB{j + 1}', 'blue', 7.5, 0)
+        F.text(X(270), Y(352 + 12), '线程表', 11, color=INK2)
+    F.box(X(420), Y(268), 60, 22, 'PCB1', 'violet', 11, 0); F.box(X(420), Y(290), 60, 22, 'PCB2', 'violet', 11, 0)
+    F.text(X(470), Y(366), '进程表', 11, color=INK2); F.line(X(460), Y(356), X(450), Y(314), INK2, 1.1, arrow='end')
+    F.text(X(110), Y(40), '进程', 11.5, color=INK2); F.line(X(110), Y(46), X(100), Y(86), ACCENT['amber'], 1.1, arrow='end')
+    F.text(X(210), Y(40), '线程', 11.5, color=INK2); F.line(X(206), Y(46), X(170), Y(104), ACCENT['green'], 1.1, arrow='end')
