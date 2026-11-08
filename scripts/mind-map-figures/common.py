@@ -530,3 +530,22 @@ def wave_level(F, pts, color, sw=1.8):
             px, pl = pts[i - 1]
             d += f'L{x - 8} {pl}L{x} {lv}' if pl != lv else f'L{x} {lv}'
     F.path(d, color, sw)
+
+def cpu_flow(F, steps, regs=('PC', 'MAR', 'CU', 'IR', 'MDR'), extra=None):
+    """CPU (PC, MAR, CU, IR, MDR) + three buses + memory; steps: list of (num, pts) arrows."""
+    F.rect(30, 60, 330, 230, 'none', INK2, 1.3, 10); F.pill(38, 50, 'CPU', 'violet', 11.5)
+    P = {'PC': (60, 90), 'MAR': (230, 90), 'CU': (230, 160), 'IR': (60, 230), 'MDR': (230, 230), 'SP': (60, 90)}
+    tones = {'PC': 'blue', 'MAR': 'green', 'CU': 'amber', 'IR': 'red', 'MDR': 'green', 'SP': 'blue'}
+    for r in regs:
+        x, y = P[r]
+        F.box(x, y, 90, 32, r, tones[r], 13, 4, True)
+    for i, lab in enumerate(('地址总线', '数据总线', '控制总线')):
+        x = 410 + i * 40
+        F.line(x, 60, x, 300, INK, 4)
+        F.text(x + 12, 280, lab, 10.5, 'start', MUTED, rotate=-90)
+    F.box(560, 140, 100, 70, '存储器', 'violet', 14, 6)
+    for num, pts, col in steps:
+        F.poly(pts, ACCENT.get(col, col), 1.5, arrow='end')
+        mx, my = pts[-2] if len(pts) > 2 else pts[0]
+        lx, ly = (pts[0][0] + pts[1][0]) / 2, (pts[0][1] + pts[1][1]) / 2
+        F.circle(lx, ly - 10, 8, num, 'white', 10.5, sw=1)

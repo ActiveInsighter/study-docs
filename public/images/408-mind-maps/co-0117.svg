@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" width="700" height="360" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="不同指令的指令周期：取指、执行、间址、中断周期的组合">
+<title>不同指令的指令周期：取指、执行、间址、中断周期的组合</title>
+<defs><marker id="aa1a1aa" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#a1a1aa"/></marker><marker id="aa1a1aas" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10 0.8L1.5 5 10 9.2z" fill="#a1a1aa"/></marker></defs>
+<rect x="0.75" y="0.75" width="698.5" height="358.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">指令周期 = 若干机器周期</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="140" y="88.4" font-size="12.5" fill="#18181b" text-anchor="end" font-weight="600">空指令 NOP</text>
+<rect x="160" y="70" width="120" height="28" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="220" y="88.2" font-size="12" fill="#1e3a8a" text-anchor="middle">取指周期</text>
+<path d="M160 108L280 108" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)" marker-start="url(#aa1a1aas)"/>
+<text x="220" y="116" font-size="10.5" fill="#71717a" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">指令周期</text>
+<text x="140" y="140.4" font-size="12.5" fill="#18181b" text-anchor="end" font-weight="600">加法指令 ADD</text>
+<rect x="160" y="122" width="120" height="28" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="220" y="140.2" font-size="12" fill="#1e3a8a" text-anchor="middle">取指周期</text>
+<rect x="280" y="122" width="120" height="28" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="340" y="140.2" font-size="12" fill="#14532d" text-anchor="middle">执行周期</text>
+<path d="M160 160L400 160" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)" marker-start="url(#aa1a1aas)"/>
+<text x="280" y="168" font-size="10.5" fill="#71717a" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">指令周期</text>
+<text x="140" y="192.4" font-size="12.5" fill="#18181b" text-anchor="end" font-weight="600">乘法指令 MUL</text>
+<rect x="160" y="174" width="120" height="28" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="220" y="192.2" font-size="12" fill="#1e3a8a" text-anchor="middle">取指周期</text>
+<rect x="280" y="174" width="220" height="28" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="390" y="192.2" font-size="12" fill="#14532d" text-anchor="middle">执行周期（多个）</text>
+<path d="M160 212L500 212" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)" marker-start="url(#aa1a1aas)"/>
+<text x="330" y="220" font-size="10.5" fill="#71717a" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">指令周期</text>
+<text x="140" y="244.4" font-size="12.5" fill="#18181b" text-anchor="end" font-weight="600">间接寻址指令</text>
+<rect x="160" y="226" width="120" height="28" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="220" y="244.2" font-size="12" fill="#1e3a8a" text-anchor="middle">取指周期</text>
+<rect x="280" y="226" width="120" height="28" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="340" y="244.2" font-size="12" fill="#78350f" text-anchor="middle">间址周期</text>
+<rect x="400" y="226" width="120" height="28" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="460" y="244.2" font-size="12" fill="#14532d" text-anchor="middle">执行周期</text>
+<path d="M160 264L520 264" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)" marker-start="url(#aa1a1aas)"/>
+<text x="340" y="272" font-size="10.5" fill="#71717a" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">指令周期</text>
+<text x="140" y="296.4" font-size="12.5" fill="#18181b" text-anchor="end" font-weight="600">有中断的间址指令</text>
+<rect x="160" y="278" width="120" height="28" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="220" y="296.2" font-size="12" fill="#1e3a8a" text-anchor="middle">取指周期</text>
+<rect x="280" y="278" width="120" height="28" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
+<text x="340" y="296.2" font-size="12" fill="#78350f" text-anchor="middle">间址周期</text>
+<rect x="400" y="278" width="120" height="28" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="460" y="296.2" font-size="12" fill="#14532d" text-anchor="middle">执行周期</text>
+<rect x="520" y="278" width="120" height="28" rx="0" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="580" y="296.2" font-size="12" fill="#7f1d1d" text-anchor="middle">中断周期</text>
+<path d="M160 316L640 316" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)" marker-start="url(#aa1a1aas)"/>
+<text x="400" y="324" font-size="10.5" fill="#71717a" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">指令周期</text>
+<text x="350" y="348" font-size="12" fill="#71717a" text-anchor="middle">只有检测到中断请求才进入中断周期（在执行周期末尾检测）</text>
+</svg>

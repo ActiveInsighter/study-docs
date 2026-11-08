@@ -120,9 +120,9 @@ layout: mind-map
             - 未命名主题
               - 未命名主题
   - 其中：
-    - 定长的机器周期 <img src="/images/408-mind-maps/co-0176.png" alt="定长的机器周期" width="240" height="64">
+    - 定长的机器周期 <img src="/images/408-mind-maps/co-0176.svg" alt="定长的机器周期" width="300" height="91">
 
-    - 不定长的机器周期 <img src="/images/408-mind-maps/co-0303.png" alt="不定长的机器周期" width="240" height="86">
+    - 不定长的机器周期 <img src="/images/408-mind-maps/co-0303.svg" alt="不定长的机器周期" width="300" height="91">
 
     - 概要：两个注意点
       概要范围：[定长的机器周期](#focus=%E5%AE%9A%E9%95%BF%E7%9A%84%E6%9C%BA%E5%99%A8%E5%91%A8%E6%9C%9F)、[不定长的机器周期](#focus=%E4%B8%8D%E5%AE%9A%E9%95%BF%E7%9A%84%E6%9C%BA%E5%99%A8%E5%91%A8%E6%9C%9F)
@@ -130,7 +130,7 @@ layout: mind-map
       - 1\. 不定长：两个机器周期的时钟周期数也不一定相同（例如一个只需三个节拍，一个需要四个节拍）
       - 2\. 不同指令的指令周期中可能含有不同的机器周期（例如一个指令有间址周期，一个没有）
   - 举例：
-    - 取指、执行、多执行、间址、中断 <img src="/images/408-mind-maps/co-0117.png" alt="取指、执行、多执行、间址、中断" width="240" height="150">
+    - 取指、执行、多执行、间址、中断 <img src="/images/408-mind-maps/co-0117.svg" alt="取指、执行、多执行、间址、中断" width="300" height="154">
 
       - 每个指令周期内的机器周期数可以不等，每个机器周期内的节拍数也可以不等。
       - 只有检测到了中断请求，才会有“中断周期”
@@ -150,7 +150,7 @@ layout: mind-map
     同一节拍内的串行安排以硬件传播延迟满足节拍时长为前提。
 
 - 取指周期
-  - 取值周期控制流 <img src="/images/408-mind-maps/co-0209.png" alt="取值周期控制流" width="240" height="122">
+  - 取值周期控制流 <img src="/images/408-mind-maps/co-0209.svg" alt="取值周期控制流" width="300" height="141">
 
     - 1\. (PC) -&gt; MAR --- ①
       - 把PC寄存器中的值读入到MAR中
@@ -163,11 +163,11 @@ layout: mind-map
     - 5\. (PC) + 1 -&gt; PC --- ⑨
       - CU发出控制指令，PC自增
 - 间址周期
-  - 一次间址周期数据流 <img src="/images/408-mind-maps/co-0291.png" alt="一次间址周期数据流" width="240" height="119">
+  - 一次间址周期数据流 <img src="/images/408-mind-maps/co-0291.svg" alt="一次间址周期数据流" width="300" height="141">
 
     - 1\. Ad(IR)/Ad(MDR) -&gt; MAR --- ①
       - 这里也可以是Ad(MDR) -&gt; MAR？可以，在唐朔飞计算机组成原理中（第三版），有Ad(MDR)的原图和原描述
-        - <img src="/images/408-mind-maps/co-0102.png" alt="这里也可以是Ad(MDR) -&amp;amp;gt; MAR？可以，在唐朔飞计算机组成原理中（第三版），有Ad(MDR)的原图和原描述" width="240" height="148">
+        - <img src="/images/408-mind-maps/co-0102.svg" alt="这里也可以是Ad(MDR) -&amp;amp;gt; MAR？可以，在唐朔飞计算机组成原理中（第三版），有Ad(MDR)的原图和原描述" width="300" height="141">
 
         - 配图
 
@@ -181,7 +181,7 @@ layout: mind-map
 - 执行周期
   - 不同指令的周期不同，没有固定的
 - 中断周期
-  - <img src="/images/408-mind-maps/co-0184.png" alt="中断周期" width="240" height="125">
+  - <img src="/images/408-mind-maps/co-0184.svg" alt="中断周期" width="300" height="141">
 
     - 1\. (SP) - 1 -&gt; SP，(SP) -&gt; MAR --- ①②
       - 检测到中断信号后，首先CU先让堆栈顶部SP-1，然后CU把SP中存的当前的地址送入到MAR中
@@ -221,7 +221,7 @@ layout: mind-map
 - 数据通路的基本结构
   - CPU内部单总线方式
     - 各个部件对于总线的使用是独占的，同一时刻只能两个部件进行数据交换（一个in，一个out）
-    - <img src="/images/408-mind-maps/co-0273.png" alt="CPU内部单总线方式" width="115" height="220">
+    - <img src="/images/408-mind-maps/co-0273.svg" alt="CPU内部单总线方式" width="300" height="321">
 
       - <img src="/images/408-mind-maps/co-0103.png" alt="CPU内部单总线方式" width="108" height="220">
 
