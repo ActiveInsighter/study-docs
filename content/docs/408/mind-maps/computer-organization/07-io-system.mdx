@@ -58,7 +58,7 @@ layout: mind-map
     - 电子部件
       - 藏起来的电路板
   - I/O控制器组成
-    - <img src="/images/408-mind-maps/co-0320.png" alt="I/O控制器组成" width="240" height="144">
+    - <img src="/images/408-mind-maps/co-0320.svg" alt="I/O控制器组成" width="300" height="150">
 
       - 由图可知：
       - 1\. 一个I/O控制器，管理多个IO设备
@@ -69,7 +69,7 @@ layout: mind-map
         - 这里的I/O逻辑到设备的接口模型和CPU到I/O控制器的模型基本一致
     - 批注：from OS
   - 计组书上的图
-    - <img src="/images/408-mind-maps/co-0079.png" alt="计组书上的图" width="240" height="132">
+    - <img src="/images/408-mind-maps/co-0079.svg" alt="计组书上的图" width="300" height="142">
 
   - I/O控制器功能
     - CPU无法直接控制I/O设备中的机器部件，所以I/O设备中还要有一个电子部件来作为中介
@@ -90,11 +90,11 @@ layout: mind-map
   - I/O 端口
     - 设备控制器中可被CPU直接访问的寄存器
       - OS图中的白框
-    - 独立编址I/O <img src="/images/408-mind-maps/co-0293.png" alt="独立编址I/O" width="240" height="184">
+    - 独立编址I/O <img src="/images/408-mind-maps/co-0293.svg" alt="独立编址I/O" width="300" height="208">
 
-      - 统一编址 = 内存映射I/O <img src="/images/408-mind-maps/co-0091.png" alt="统一编址 = 内存映射I/O" width="240" height="184">
+      - 统一编址 = 内存映射I/O <img src="/images/408-mind-maps/co-0091.svg" alt="统一编址 = 内存映射I/O" width="300" height="208">
 
-        - <img src="/images/408-mind-maps/co-0177.png" alt="统一编址 = 内存映射I/O" width="240" height="135">
+        - <img src="/images/408-mind-maps/co-0177.svg" alt="统一编址 = 内存映射I/O" width="300" height="166">
 
     - 内存映射I/O简化了指令
     - 寄存器独立编址让指令设计变得复杂，需要单独设计和read write相区别的指令(input output)
@@ -164,7 +164,7 @@ layout: mind-map
     - 因为他们的异常处理过程是基本一样的
 - 程序查询方式
   - 步骤：
-    - <img src="/images/408-mind-maps/co-0019.png" alt="步骤：" width="75" height="220">
+    - <img src="/images/408-mind-maps/co-0019.svg" alt="步骤：" width="300" height="371">
 
       - 独占查询，一直一直问
       - 如果设备未就绪，CPU就一直卡在这里
@@ -182,12 +182,17 @@ layout: mind-map
 
     - 如果此时外设没有准备好，那么CPU就一直等待
   - 特点：
-    - 快速设备不要用程序查询/程序中断！ <img src="/images/408-mind-maps/co-0249.png" alt="快速设备不要用程序查询/程序中断！" width="240" height="146">
+    - 快速设备不要用程序查询/程序中断！
+      - 例题：程序查询方式中，每个查询操作需要 100 个时钟周期，CPU 时钟频率为 50 MHz。现有鼠标和硬盘两个设备，CPU 每秒对鼠标查询 30 次；硬盘以 32 位字长为单位传输，即每 32 位被 CPU 查询一次，传输率为 2 × 2²⁰ B/s。求 CPU 对这两个设备查询所花费的时间比率
+        - ① 每次查询 10² CLK，CPU 每秒 5 × 10⁷ CLK
+        - ② 鼠标：$\frac{30 \times 10^2}{5 \times 10^7} = 6 \times 10^{-5} = 0.006\%$，远小于 100%
+        - ③ 硬盘：每秒 $2^{21}$ B = $2^{24}$ bit，每 $2^5$ bit 查询一次 → 每秒查询 $2^{19}$ 次；$\frac{2^{19} \times 10^2}{5 \times 10^7} \approx 105\%$ > 100%
+        - 结论：快速设备不能用程序查询方式（CPU 根本忙不过来）
 
 - 程序中断方式
   - 大致流程：
     - 图：
-      - <img src="/images/408-mind-maps/co-0288.png" alt="图：" width="153" height="220">
+      - <img src="/images/408-mind-maps/co-0288.svg" alt="图：" width="300" height="343">
 
         - 执行中断服务程序时可以被中断
         - 如果去掉中间两个开关中断、屏蔽字、现场保护就是【单中断】
@@ -202,7 +207,7 @@ layout: mind-map
           - 例如掉电、关机等
       - 2\. CPU进行中断判优
         - 设置一系列的INTR（中断请求标记寄存器），给每一个外设都分配一个寄存器，如果寄存器值为 1，则说明进行了请求
-        - 在INTR中加入硬件排队器/查询程序，来获得当前的最优先请求 <img src="/images/408-mind-maps/co-0075.png" alt="在INTR中加入硬件排队器/查询程序，来获得当前的最优先请求" width="240" height="102">
+        - 在INTR中加入硬件排队器/查询程序，来获得当前的最优先请求 <img src="/images/408-mind-maps/co-0075.svg" alt="在INTR中加入硬件排队器/查询程序，来获得当前的最优先请求" width="300" height="135">
 
           - 硬件排队器比查询程序速度快很多
           - 优先级的设置：
@@ -230,7 +235,7 @@ layout: mind-map
             - 概要：配图
               概要范围：[2. 通过一个【中断向量地址形成部件】获得排队器的输出结果写入到【向量地址】](#focus=2.%20%E9%80%9A%E8%BF%87%E4%B8%80%E4%B8%AA%E3%80%90%E4%B8%AD%E6%96%AD%E5%90%91%E9%87%8F%E5%9C%B0%E5%9D%80%E5%BD%A2%E6%88%90%E9%83%A8%E4%BB%B6%E3%80%91%E8%8E%B7%E5%BE%97%E6%8E%92%E9%98%9F%E5%99%A8%E7%9A%84%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E5%86%99%E5%85%A5%E5%88%B0%E3%80%90%E5%90%91%E9%87%8F%E5%9C%B0%E5%9D%80%E3%80%91)、[3. 通过【向量地址/中断类型号】找到主存中对应的【中断向量】](#focus=3.%20%E9%80%9A%E8%BF%87%E3%80%90%E5%90%91%E9%87%8F%E5%9C%B0%E5%9D%80%2F%E4%B8%AD%E6%96%AD%E7%B1%BB%E5%9E%8B%E5%8F%B7%E3%80%91%E6%89%BE%E5%88%B0%E4%B8%BB%E5%AD%98%E4%B8%AD%E5%AF%B9%E5%BA%94%E7%9A%84%E3%80%90%E4%B8%AD%E6%96%AD%E5%90%91%E9%87%8F%E3%80%91)
 
-              - <img src="/images/408-mind-maps/co-0110.png" alt="硬件向量法" width="240" height="111">
+              - <img src="/images/408-mind-maps/co-0110.svg" alt="硬件向量法" width="300" height="141">
 
           - 软件查询法
             - 不过多介绍
@@ -244,7 +249,8 @@ layout: mind-map
         - 中断返回
           - 弹出PC，恢复PC
     - PSW到底在哪里保存？？？
-      - 《计算机组成原理》第3版，唐朔飞 <img src="/images/408-mind-maps/co-0139.png" alt="《计算机组成原理》第3版，唐朔飞" width="220" height="220">
+      - 《计算机组成原理》第3版，唐朔飞
+        - 参考教材：《计算机组成原理》（第 3 版），唐朔飞，高等教育出版社
 
         - 配图
 
@@ -267,7 +273,8 @@ layout: mind-map
         - 概要：结论：PC用硬件，PSW和通用寄存器用软件
           概要范围：[配图／公式](#focus=%E9%85%8D%E5%9B%BE%EF%BC%8F%E5%85%AC%E5%BC%8F)、[配图／公式](#focus=%E9%85%8D%E5%9B%BE%EF%BC%8F%E5%85%AC%E5%BC%8F)
 
-      - 《计算机操作系统》第4版，汤小丹 <img src="/images/408-mind-maps/co-0134.png" alt="《计算机操作系统》第4版，汤小丹" width="220" height="220">
+      - 《计算机操作系统》第4版，汤小丹
+        - 参考教材：《计算机操作系统》（第 4 版），汤小丹等，西安电子科技大学出版社
 
         - 配图
 
@@ -291,7 +298,7 @@ layout: mind-map
       - 在中断处理程序中，在执行中断处理程序时，选择为在【开中断模式】下执行，同时保存【程序的屏蔽字】
         - 这样就可以使得在低级中断处理中如果遇到了更高级的中断处理请求，也可以执行
       - 硬件排队器的改进：
-        - MASK为该中断的中断屏蔽字 <img src="/images/408-mind-maps/co-0238.png" alt="MASK为该中断的中断屏蔽字" width="240" height="178">
+        - MASK为该中断的中断屏蔽字 <img src="/images/408-mind-maps/co-0238.svg" alt="MASK为该中断的中断屏蔽字" width="300" height="159">
 
           - 先屏蔽，在排队
             - 配图
@@ -332,7 +339,7 @@ layout: mind-map
     - 概要：配图
       概要范围：[一个混淆项：](#focus=%E4%B8%80%E4%B8%AA%E6%B7%B7%E6%B7%86%E9%A1%B9%EF%BC%9A)
 
-      - <img src="/images/408-mind-maps/co-0060.png" alt="多重中断与屏蔽字" width="240" height="120">
+      - <img src="/images/408-mind-maps/co-0060.svg" alt="多重中断与屏蔽字" width="300" height="141">
 
       - 批注：请求优先级：1=2=3=4 响应优先级：1&gt;2&gt;3&gt;4 处理优先级：3&gt;1&gt;4&gt;2
 
@@ -341,12 +348,12 @@ layout: mind-map
 - 考频：超高
   - 09、10、11\*2、12-15、17、18、19\*2、20\*3、21、22、09大、12大、16大、18大、22大
 - 形如：
-  - <img src="/images/408-mind-maps/co-0093.png" alt="形如：" width="240" height="146">
+  - 外形示例：DMA 控制器、网卡等 I/O 控制部件通常集成在主板或扩展卡上（原图为一台介质转换器的实物照片）
 
 - OS中的内容
   - CPU向DMA控制器指明要输入or输出，然后指明 1. 要传送多少个数据（块） 2. 主存地址、外设中的地址
 - DMAC
-  - （单总线结构） <img src="/images/408-mind-maps/co-0295.png" alt="（单总线结构）" width="240" height="159">
+  - （单总线结构） <img src="/images/408-mind-maps/co-0295.svg" alt="（单总线结构）" width="300" height="146">
 
     - HRQ
       - DMA发送的总线请求
@@ -357,7 +364,7 @@ layout: mind-map
     - DMA请求触发器
       - 当【设备】输入完成了一个字的数据，就给DMA请求触发器发出一个控制信号，使DMA请求触发器置位（改为 1）
         - 所以是外设发出的DMA请求
-          - <img src="/images/408-mind-maps/co-0313.png" alt="所以是外设发出的DMA请求" width="240" height="63">
+          - <img src="/images/408-mind-maps/co-0313.svg" alt="所以是外设发出的DMA请求" width="300" height="85">
 
     - 主存地址计数器(AR)
       - 存放交换数据的主存地址
@@ -388,7 +395,7 @@ layout: mind-map
   - 概要：配图
     概要范围：[数据传输： 继续执行主程序 同时完成一批数据的传送](#focus=%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%EF%BC%9A%E7%BB%A7%E7%BB%AD%E6%89%A7%E8%A1%8C%E4%B8%BB%E7%A8%8B%E5%BA%8F%E5%90%8C%E6%97%B6%E5%AE%8C%E6%88%90%E4%B8%80%E6%89%B9%E6%95%B0%E6%8D%AE%E7%9A%84%E4%BC%A0%E9%80%81)
 
-    - <img src="/images/408-mind-maps/co-0039.png" alt="DMA传送过程" width="240" height="153">
+    - <img src="/images/408-mind-maps/co-0039.svg" alt="DMA传送过程" width="300" height="157">
 
 - 和程序控制、程序中断的区别
   - 1\. DMA方式不需要CPU参与数据的搬运，CPU只是被剥夺了总线的访问权，依然可以在CPU中进行其他操作（前面两种CPU需要参与到数据运输）
@@ -399,20 +406,20 @@ layout: mind-map
   - 如果采用单总线结构，那么CPU和主存、主存和DMA的交互是冲突的
     - CPU决定了是否把总线的控制权交给DMA
   - 优化  ↓
-  - 采用三总线结构，可以使IO和主机并行工作 <img src="/images/408-mind-maps/co-0227.png" alt="采用三总线结构，可以使IO和主机并行工作" width="240" height="75">
+  - 采用三总线结构，可以使IO和主机并行工作 <img src="/images/408-mind-maps/co-0227.svg" alt="采用三总线结构，可以使IO和主机并行工作" width="300" height="107">
 
     - 现在的计算机基本都有DMA总线的
     - 【如果主存不是双端口主存】且此时如果CPU和DMA同时都想要访问主存，该怎么办？
 - CPU的DMA的访问冲突：
-  - 方法一：DMA访问时主存不访问 <img src="/images/408-mind-maps/co-0006.png" alt="方法一：DMA访问时主存不访问" width="240" height="78">
+  - 方法一：DMA访问时主存不访问 <img src="/images/408-mind-maps/co-0006.svg" alt="方法一：DMA访问时主存不访问" width="300" height="105">
 
     - 还不如不用三总线呢
-  - 方法二：DMA和主存始终交替访问 <img src="/images/408-mind-maps/co-0113.png" alt="方法二：DMA和主存始终交替访问" width="240" height="100">
+  - 方法二：DMA和主存始终交替访问 <img src="/images/408-mind-maps/co-0113.svg" alt="方法二：DMA和主存始终交替访问" width="300" height="105">
 
     - 不需要总线使用权的申请、建立和归还过程
     - 硬件逻辑更为复杂
     - 交替轮着来
-  - 方法三：周期窃取 <img src="/images/408-mind-maps/co-0277.png" alt="方法三：周期窃取" width="240" height="82">
+  - 方法三：周期窃取 <img src="/images/408-mind-maps/co-0277.svg" alt="方法三：周期窃取" width="300" height="105">
 
     - DMA访问主存的三种可能：
       - CPU不访存

@@ -642,3 +642,43 @@ def datapath5(F, idle=(), green=False, wrpc=None, ox=0, oy=0):
         xs = (bx[wrpc] + bx[wrpc + 1]) / 2
         F.poly([(X(xs), Y(250)), (X(xs), Y(312)), (X(57), Y(312)), (X(57), Y(262))], ACCENT['blue'], 1.6, arrow='end', dash='5 4')
         F.text(X((xs + 57) / 2), Y(326), '目标 PC 值写回 PC', 11, color=ACCENT['blue'])
+
+def flow(F, x, y, items, w=170, h=36, gap=22, tone='white'):
+    """Vertical flowchart; items: (text, kind) kind in box/diamond. Returns centres."""
+    cs = []
+    for i, (t, k) in enumerate(items):
+        yy = y + i * (h + gap)
+        if k == 'diamond':
+            F.items.append(f'<path d="M{x + w / 2} {yy - 6}L{x + w + 10} {yy + h / 2}L{x + w / 2} {yy + h + 6}L{x - 10} {yy + h / 2}Z" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.3"/>')
+            F.text(x + w / 2, yy + h / 2, t, 12.5, color='#78350f', valign='middle')
+        else:
+            F.box(x, yy, w, h, t, k if k != 'box' else tone, 12.5, 6)
+        if i: F.line(x + w / 2, yy - gap + (6 if items[i - 1][1] == 'diamond' else 0), x + w / 2, yy - (6 if k == 'diamond' else 0) - 1, INK2, 1.3, arrow='end')
+        cs.append((x + w / 2, yy + h / 2, yy, yy + h))
+    return cs
+
+def dmac(F, hl=False):
+    """DMA controller on a single system bus."""
+    F.line(30, 50, 790, 50, INK, 3); F.text(36, 40, '系统总线', 12, 'start', INK, 600)
+    F.box(40, 130, 46, 140, '主\n存', 'blue', 12, 4); F.box(110, 130, 46, 140, 'CPU', 'violet', 12, 4)
+    for x in (63, 133): F.line(x, 54, x, 128, INK2, 2.2, arrow='both')
+    F.rect(190, 90, 590, 220, 'none', INK2, 1.2, 8, dash='5 4'); F.text(770, 300, 'DMAC', 12, 'end', INK, 700)
+    t = lambda a, b: a if hl else b
+    F.box(220, 160, 110, 34, '控制 / 状态逻辑', t('green', 'white'), 11.5, 4)
+    F.box(220, 236, 100, 40, 'DMA 请求\n触发器', t('green', 'white'), 11, 4)
+    F.box(370, 100, 90, 30, '中断机构', t('red', 'white'), 11.5, 4)
+    F.box(560, 120, 160, 30, '主存地址计数器 AR', 'white', 11.5, 4); F.box(560, 170, 160, 30, '传送长度计数器 WC', 'white', 11.5, 4)
+    F.box(450, 240, 160, 34, '数据缓冲寄存器 DR', t('green', 'white'), 11.5, 4); F.box(640, 220, 50, 26, 'DAR', 'blue', 11, 3); F.box(640, 256, 70, 26, '设备选择', 'white', 10.5, 3)
+    F.text(700, 233, '目的地址\n计数器', 9.5, 'start', MUTED, lh=1.2)
+    F.line(158, 168, 218, 168, INK2, 1.3, arrow='end' if not hl else 'end', gap=0); F.text(170, 160, 'HRQ', 10.5, 'start', ACCENT['red'] if hl else INK2)
+    F.line(218, 186, 158, 186, INK2, 1.3, arrow='end'); F.text(170, 200, 'HLDA', 10.5, 'start', ACCENT['blue'] if hl else INK2)
+    F.line(275, 158, 275, 54, ACCENT['red'] if hl else INK2, 2.2 if hl else 1.5, arrow='end'); F.text(282, 76, '控制线', 10.5, 'start', INK2)
+    F.line(415, 98, 415, 54, ACCENT['red'] if hl else INK2, 1.5, arrow='end'); F.text(422, 76, '中断请求', 10.5, 'start', INK2)
+    F.line(530, 54, 530, 238, ACCENT['red'] if hl else INK2, 2.2 if hl else 1.5, arrow='both'); F.text(536, 76, '数据线', 10.5, 'start', INK2)
+    F.line(640, 118, 640, 54, ACCENT['red'] if hl else INK2, 2.2 if hl else 1.5, arrow='end'); F.text(646, 76, '地址线', 10.5, 'start', INK2)
+    F.poly([(560, 185), (500, 185), (500, 115), (462, 115)], INK2, 1.2, arrow='end'); F.text(470, 150, '溢出信号', 10, 'start', INK2)
+    F.circle(750, 160, 11, '+1', 'white', 10); F.poly([(750, 149), (750, 135), (722, 135)], INK2, 1.1, arrow='end'); F.poly([(750, 171), (750, 185), (722, 185)], INK2, 1.1, arrow='end')
+    F.poly([(270, 234), (270, 196)], INK2, 1.2, arrow='end')
+    F.box(470, 330, 50, 50, '设备', 'gray', 11, 6)
+    F.line(530, 276, 530, 328, ACCENT['green'] if hl else INK2, 2, arrow='both')
+    F.poly([(470, 355), (270, 355), (270, 278)], ACCENT['green'] if hl else INK2, 1.3, arrow='end')
