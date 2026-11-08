@@ -116,7 +116,7 @@ layout: mind-map
 - 分布式操作系统
   - 每台主机都有同等地位，不存在主机从机
 - 个人计算机操作系统
-  - <img src="/images/408-mind-maps/thumb/os-0163.webp" alt="个人计算机操作系统" width="240" height="81">
+  - <img src="/images/408-mind-maps/os-0163.png" alt="个人计算机操作系统" width="240" height="81">
 
 - 多任务（现代计算机）操作系统：
   - 并发 + 并行
@@ -212,17 +212,17 @@ layout: mind-map
 ## 操作系统结构
 
 - 分层法
-  - <img src="/images/408-mind-maps/thumb/os-0151.webp" alt="分层法" width="240" height="169">
+  - <img src="/images/408-mind-maps/os-0151.png" alt="分层法" width="240" height="169">
 
   - 优点
     - 1\. 简化了系统设计和实现，编程方便，便于调试 2. 便于扩充和维护
   - 缺点
     - 1\. 定义各层比较困难 2. 效率差
 - 模块化
-  - <img src="/images/408-mind-maps/thumb/os-0089.webp" alt="模块化" width="240" height="103">
+  - <img src="/images/408-mind-maps/os-0089.png" alt="模块化" width="240" height="103">
 
     - 分块标准
-      - 高内聚低耦合 <img src="/images/408-mind-maps/thumb/os-0121.webp" alt="高内聚低耦合" width="240" height="124">
+      - 高内聚低耦合 <img src="/images/408-mind-maps/os-0121.png" alt="高内聚低耦合" width="240" height="124">
 
       - 模块内紧密度要高，模块间的联系影响要小
   - 优点
@@ -235,7 +235,7 @@ layout: mind-map
   - 优点：
     - 速度快
   - 缺点：
-    - 一个模块奔溃导致整个核崩溃 <img src="/images/408-mind-maps/thumb/os-0053.webp" alt="一个模块奔溃导致整个核崩溃" width="240" height="139">
+    - 一个模块奔溃导致整个核崩溃 <img src="/images/408-mind-maps/os-0053.png" alt="一个模块奔溃导致整个核崩溃" width="240" height="139">
 
   - 在桌面OS中宏内核取得很大成功
     - 例如Windows、MacOS、Linux、iOS、Android等等
@@ -243,7 +243,7 @@ layout: mind-map
     概要范围：[OS的所有功能模块全都在内核态](#focus=OS%E7%9A%84%E6%89%80%E6%9C%89%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E5%85%A8%E9%83%BD%E5%9C%A8%E5%86%85%E6%A0%B8%E6%80%81)
 
 - 微内核
-  - 把部分内核OS代码移出内核，采用C/S模式进行执行 <img src="/images/408-mind-maps/thumb/os-0161.webp" alt="把部分内核OS代码移出内核，采用C/S模式进行执行" width="240" height="79">
+  - 把部分内核OS代码移出内核，采用C/S模式进行执行 <img src="/images/408-mind-maps/os-0161.png" alt="把部分内核OS代码移出内核，采用C/S模式进行执行" width="240" height="79">
 
   - 内核代码：
     - 1\. 与硬件紧密相连的 2. 一些较为基本的功能 3. 客户服务器的通信功能
@@ -279,10 +279,10 @@ layout: mind-map
     - 物理格式化
     - 逻辑格式化
   - RAM和ROM
-    - <img src="/images/408-mind-maps/thumb/os-0043.webp" alt="RAM和ROM" width="178" height="220">
+    - <img src="/images/408-mind-maps/os-0043.png" alt="RAM和ROM" width="178" height="220">
 
 - 步骤图示：
-  - <img src="/images/408-mind-maps/thumb/os-0105.webp" alt="步骤图示：" width="240" height="95">
+  - <img src="/images/408-mind-maps/os-0105.png" alt="步骤图示：" width="240" height="95">
 
     - MBR中的标志信息位：
       - 告诉主机这个磁盘是不是引导盘（分区中至少有一个分区是活动分区、有操作系统）
@@ -313,11 +313,11 @@ layout: mind-map
       - PBR：引导块
       - 寻找并激活根目录
     - 加载启动管理器
-      - <img src="/images/408-mind-maps/thumb/os-0113.webp" alt="加载启动管理器" width="240" height="134">
+      - <img src="/images/408-mind-maps/os-0113.png" alt="加载启动管理器" width="240" height="134">
 
   - ④ RAM读操作系统
     - 从根目录处加载操作系统
-      - 例如MAC的boot根目录 <img src="/images/408-mind-maps/thumb/os-0056.webp" alt="例如MAC的boot根目录" width="240" height="148">
+      - 例如MAC的boot根目录 <img src="/images/408-mind-maps/os-0056.png" alt="例如MAC的boot根目录" width="240" height="148">
 
 ## 虚拟机
 
@@ -327,7 +327,7 @@ layout: mind-map
   - 逻辑的计算机，通过隐藏特定计算平台来为用户提供抽象、统一、模拟的计算环境
 - 第一类
   - 第一类虚拟机是运行在裸机上的OS，它的工作是支持真实硬件的多个虚拟机拷贝，类似于不同操作系统支持的进程。
-    - 例如Xen、Hyper-V、vSphere <img src="/images/408-mind-maps/thumb/os-0034.webp" alt="例如Xen、Hyper-V、vSphere" width="240" height="157">
+    - 例如Xen、Hyper-V、vSphere <img src="/images/408-mind-maps/os-0034.png" alt="例如Xen、Hyper-V、vSphere" width="240" height="157">
 
       - 批注：腾讯云就是用的Xen
   - 虚拟内核态
@@ -339,7 +339,7 @@ layout: mind-map
   - 批注：裸金属架构
 - 第二类
   - 第二类虚拟机是运行在宿主操作系统上的，进程调度、资源分配等是依赖于其他OS的
-    - 例如VMware <img src="/images/408-mind-maps/thumb/os-0159.webp" alt="例如VMware" width="228" height="220">
+    - 例如VMware <img src="/images/408-mind-maps/os-0159.png" alt="例如VMware" width="228" height="220">
 
   - 批注：寄居架构
 
@@ -371,7 +371,7 @@ layout: mind-map
       - 输入输出
       - 开关中断
 
-- <img src="/images/408-mind-maps/thumb/co-0022.webp" alt="END" width="48" height="48">
+- <img src="/images/408-mind-maps/co-0022.png" alt="END" width="48" height="48">
 
 ## 原图关联关系
 

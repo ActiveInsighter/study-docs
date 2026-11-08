@@ -41,7 +41,7 @@ layout: mind-map
   - 概要：配图
     概要范围：[复用+分用](#focus=%E5%A4%8D%E7%94%A8%2B%E5%88%86%E7%94%A8)
 
-    - <img src="/images/408-mind-maps/thumb/cn-0016.webp" alt="功能" width="240" height="155">
+    - <img src="/images/408-mind-maps/cn-0016.png" alt="功能" width="240" height="155">
 
 - 可以提供可靠通信 --- TCP，和不可靠通信 --- UDP
 
@@ -110,7 +110,7 @@ layout: mind-map
         - MAC帧首部 6+6+2 B，FCS为 4 B
         - PPP帧 F+A+C+协议+FCS+F
           - 1+1+1+2+2+1 B
-          - <img src="/images/408-mind-maps/thumb/cn-0033.webp" alt="PPP帧 F+A+C+协议+FCS+F" width="240" height="77">
+          - <img src="/images/408-mind-maps/cn-0033.png" alt="PPP帧 F+A+C+协议+FCS+F" width="240" height="77">
 
         - DHCP帧 F+A+C+FCS+F
           - 1+1+1+2+1 B
@@ -130,7 +130,7 @@ layout: mind-map
   - UDP不保证可靠交付
     - 所以应用层需要自行进行传输可靠性的维护
 - UDP首部格式
-  - <img src="/images/408-mind-maps/thumb/cn-0025.webp" alt="UDP首部格式" width="240" height="89">
+  - <img src="/images/408-mind-maps/cn-0025.png" alt="UDP首部格式" width="240" height="89">
 
     - UDP部分：
       - 源端口：需要回信的时候选用
@@ -140,9 +140,9 @@ layout: mind-map
     - 源端口和校验和是可选的，不想要就全设置为0
 - UDP校验和
   - 步骤：
-    - 伪首部：目的源IP+0+17+UDP长度 <img src="/images/408-mind-maps/thumb/cn-0091.webp" alt="伪首部：目的源IP+0+17+UDP长度" width="240" height="117">
+    - 伪首部：目的源IP+0+17+UDP长度 <img src="/images/408-mind-maps/cn-0091.png" alt="伪首部：目的源IP+0+17+UDP长度" width="240" height="117">
 
-    - 计算UDP校验和（注意红色字） <img src="/images/408-mind-maps/thumb/cn-0047.webp" alt="计算UDP校验和（注意红色字）" width="240" height="146">
+    - 计算UDP校验和（注意红色字） <img src="/images/408-mind-maps/cn-0047.png" alt="计算UDP校验和（注意红色字）" width="240" height="146">
 
       - 发送端：
         - 1\. 加入伪首部
@@ -191,7 +191,7 @@ layout: mind-map
   - TCP --- 根据接受窗口和拥塞情况决定
 - TCP首部
 
-  - <img src="/images/408-mind-maps/thumb/cn-0076.webp" alt="TCP首部" width="240" height="160">
+  - <img src="/images/408-mind-maps/cn-0076.png" alt="TCP首部" width="240" height="160">
 
     - 数据偏移
       - = IP首部的”长度”
@@ -218,13 +218,13 @@ layout: mind-map
       - 4B + 4B + 1B + 1B + 2B
     - （不是固定首部了）选项：
       - 因为TCP只规定了一种选项，就是MSS（最大报文长度）
-        - 选项字段可以like <img src="/images/408-mind-maps/thumb/cn-0093.webp" alt="选项字段可以like" width="240" height="213">
+        - 选项字段可以like <img src="/images/408-mind-maps/cn-0093.png" alt="选项字段可以like" width="240" height="213">
 
 - TCP连接
   - TCP连接的端口是socket套接字
   - 建立阶段（三次握手）
 
-    - <img src="/images/408-mind-maps/thumb/cn-0161.webp" alt="建立阶段（三次握手）" width="240" height="160">
+    - <img src="/images/408-mind-maps/cn-0161.png" alt="建立阶段（三次握手）" width="240" height="160">
 
       - 注意：发送的帧中的各标记位的值、客户机服务器的阶段（CLOSED、SYN-SENT、ESTABLISHED、LISTEN、SYN-RCVD、ESTABLISHED）
       - 在服务器进入SYN-RCVD阶段时已经为该TCP连接分配了缓存和变量了
@@ -233,7 +233,7 @@ layout: mind-map
           - 以及和之前学的ACK n区分
   - 释放连接（四次挥手）
 
-    - <img src="/images/408-mind-maps/thumb/cn-0098.webp" alt="释放连接（四次挥手）" width="240" height="174">
+    - <img src="/images/408-mind-maps/cn-0098.png" alt="释放连接（四次挥手）" width="240" height="174">
 
       - MSL：最大报文生存时间
       - 注意客户机的半关闭状态和等待重传
@@ -282,7 +282,7 @@ layout: mind-map
       - 是发送端根据【当前网络】的拥塞情况设置的窗口值
     - 发送窗口大小 = min(rwnd, cwnd)
   - 慢开始+拥塞避免：
-    - 【每个RTT】会发送【MSS个数据】，每个RTT中可能会有【多个序号】的数据报 <img src="/images/408-mind-maps/thumb/cn-0053.webp" alt="【每个RTT】会发送【MSS个数据】，每个RTT中可能会有【多个序号】的数据报" width="240" height="164">
+    - 【每个RTT】会发送【MSS个数据】，每个RTT中可能会有【多个序号】的数据报 <img src="/images/408-mind-maps/cn-0053.png" alt="【每个RTT】会发送【MSS个数据】，每个RTT中可能会有【多个序号】的数据报" width="240" height="164">
 
       - 最大报文段长度（MSS）
       - 慢开始指数增长的本质：
@@ -301,7 +301,7 @@ layout: mind-map
 
     - 批注：网络拥塞
   - 快重传+快恢复：
-    - 【快开始+快恢复】是在”慢开始+拥塞避免“的一种对冗余ACK的优化，【快开始】就是检测到3个重复ACK后不用等计时器，直接重传。【快恢复】就是把cwnd和ssthresh直接减到cwnd的一半，开始【拥塞避免】 <img src="/images/408-mind-maps/thumb/cn-0099.webp" alt="【快开始+快恢复】是在”慢开始+拥塞避免“的一种对冗余ACK的优化，【快开始】就是检测到3个重复ACK后不用等计时器，直接重传。【快恢复】就是把cwnd和ssthresh直接减到cwnd的一半，开始【" width="240" height="137">
+    - 【快开始+快恢复】是在”慢开始+拥塞避免“的一种对冗余ACK的优化，【快开始】就是检测到3个重复ACK后不用等计时器，直接重传。【快恢复】就是把cwnd和ssthresh直接减到cwnd的一半，开始【拥塞避免】 <img src="/images/408-mind-maps/cn-0099.png" alt="【快开始+快恢复】是在”慢开始+拥塞避免“的一种对冗余ACK的优化，【快开始】就是检测到3个重复ACK后不用等计时器，直接重传。【快恢复】就是把cwnd和ssthresh直接减到cwnd的一半，开始【" width="240" height="137">
 
     - 批注：冗余ACK
 
