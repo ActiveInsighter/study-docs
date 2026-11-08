@@ -1,0 +1,4156 @@
+---
+title: "操作系统思维导图"
+description: "操作系统完整章节思维导图，按知识点层级整理概念、公式、算法与配图。"
+---
+
+按章节查看完整知识结构。点击节点圆点展开或收起分支；使用右下角工具栏缩放、适应窗口或全屏查看。配图可点击打开原尺寸 SVG。
+
+<a id="topic-b9aa22deba98b3b20c7ac8aca2" />
+<a id="topic-a2284019-c97d-4a14-af44-7ba0ca7eab40" />
+<a id="topic-193b56735e689ae86a01d91513" />
+<a id="topic-35a78ebe-be39-4bce-b906-df4da3046cb5" />
+<a id="topic-be955543-2f9a-43ed-9d13-c58b612dec3c" />
+<a id="topic-07bba7a6bbbb12bd5eecf9c3fd" />
+<a id="topic-7df861f92789c992d40a5be279" />
+<a id="topic-e8282e433279fe30cd90290694" />
+<a id="topic-10eaab2d04693eb909bf59f42c" />
+<a id="topic-2c9a7c34ce0b82d80f56985ed4" />
+<a id="topic-f6f846f8ba1940547fffdaed87" />
+<a id="topic-6b9b20f1023b634ca9098864d4" />
+<a id="topic-ab394dba8a9bce2540eb9b6ea7" />
+<a id="topic-7c3ab845dcea04b19a32b96ad0" />
+<a id="topic-20280b9c96a9474a2689d81dbc" />
+<a id="topic-9d2a7ff2be499b282bd5dbaac4" />
+<a id="topic-8ab808cdfdcbb861f190f98fe8" />
+<a id="topic-b859ccb2e218d898d9b09a0a57" />
+<a id="topic-be8a748f718a13fc2871ea0c7c" />
+<a id="topic-2f5a6b5823fabbed30fb7a782b" />
+<a id="topic-a334a572-990e-42f0-954a-139689842995" />
+<a id="topic-715b79f8-7c94-4d5e-a549-997eb549541c" />
+<a id="topic-4d513043-bd66-4e35-90f2-eb558e4ddd06" />
+<a id="topic-8dc69d3a-ebbb-454a-ae93-c2d0ad3a2192" />
+## 第一章 操作系统概述
+
+````mindmap
+# 第一章 操作系统概述
+
+[查看关联主题](#topic-a2284019-c97d-4a14-af44-7ba0ca7eab40)
+
+## 操作系统基本概念
+
+<a href="/images/408-mind-maps/co-0085.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0085.svg" alt="操作系统基本概念" width="48" height="48" loading="lazy" /></a>
+
+- 操作系统概念
+  - 操作系统（operating system，简称OS）是管理【计算机硬件】与【软件资源】的【计算机程序】。操作系统需要处理如管理与配置内存、决定系统资源供需的优先次序、控制输入设备与输出设备、操作网络与管理文件系统等基本事务。操作系统也提供一个让用户与系统交互的操作界面。
+- 四大特征
+  - 并发
+    - 两个或多个事件在同一时间间隔发生
+    - 并行
+      - 多流水线或者多CPU可以实现并行
+      - 在同一时间同一时刻
+    - 引入进程目的就是让程序可以并发
+    - 【宏观并行，微观并发】
+      - 并发：两个程序一个CPU，依次轮询使用1ms，宏观上看是同时处理了两个程序
+    - 并发是资源共享的基础，若OS不支持并发，则不存在共享
+      - A在使用资源，此时A还没有结束进程，B就想来使用，A让给了B：【能并发、有共享】
+    - 概要：单核CPU基本都是并发，多核CPU/多CPU基本都是并行+并发
+      概要范围：[并行](#topic-e8282e433279fe30cd90290694)
+
+  - 共享
+    - 指资源共享
+    - 互斥资源共享
+      - 在一段时间内，无论宏观微观都不可以同时访问
+      - 如打印机、磁带机
+      - 互斥式共享
+        - 进程A访问完才可以释放，才允许另一进程访问
+      - 独占资源/临界资源
+        - 一段时间内只允许一个进程访问的
+    - 同时访问方式
+      - 在一段时间内，宏观上同时访问微观上分时访问
+    - OS对共享资源的管理会影响到并发执行的情况
+  - 虚拟
+    - 把一个物理实体变为若干逻辑上的对应物
+    - 虚拟处理器
+      - 利用多道程序设计技术把一个物理上的CPU虚拟为多个逻辑上的CPU
+        - 通过并发
+    - 虚拟内存
+      - 虚拟存储器
+      - 把物理存储器转变为虚拟存储器，以从逻辑上扩充存储器容量
+    - 虚拟外部设备
+      - 将一台物理IO设备虚拟为多台逻辑IO设备
+        - Spooling技术
+  - 异步
+    - 进程是以不可预知的速度向前推进的，这就是进程的异步性
+  - 概要：两个最基本的特征
+    概要范围：[并发](#topic-7df861f92789c992d40a5be279)、[共享](#topic-10eaab2d04693eb909bf59f42c)
+
+- 目标和功能
+  - 系统资源的管理者
+    - 处理机管理
+      - 进程
+    - 存储器管理
+      - 内存
+    - 文件管理
+      - 文件
+    - 设备管理
+      - IO
+  - 用户和硬件的接口
+    - 命令接口
+      - 联机
+      - 脱机
+    - 程序接口
+      - 使用GUI
+  - 用作扩充机器
+    - 没有任何软件支持的计算机称为裸机
+    - 覆盖了软件的机器为扩充机器、虚拟机
+- 考频：低
+  - 09、10、13、22
+
+## 操作系统的发展和分类
+
+<a href="/images/408-mind-maps/os-0062.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0062.svg" alt="操作系统的发展和分类" width="48" height="48" loading="lazy" /></a>
+
+- 考频：低
+  - 16、17、18
+- 手工操作
+  - 需要大量的时间进行人工处理，输入输出以及计算机计算的时候微乎其微
+  - 缺点：
+    - 用户独占全部、资源利用率低、CPU等待手工操作、CPU利用不充分
+- 批处理阶段
+  - 单道批
+    - 自动性、顺序性、单道性
+      分组说明：改进；对应：[比手工操作的人工处理时间更少](#topic-2c9a7c34ce0b82d80f56985ed4)
+
+      - 比手工操作的人工处理时间更少
+  - 多道批
+    - 多道、宏观并行、微观串行
+      - 实现了并发
+  - 缺点：
+    - 不提供人机交互
+      - 优点：
+        - 资源利用率高<br>更能保持忙碌情况
+  - 批注：从批处理开始就已经算是操作系统了
+- 分时操作系统
+  - 同时性、交互性、独立性、及时性
+    - 独立性：多个用户可以不被干扰的控制计算机
+  - 会浪费一定的资源利用率来完成分时操作
+  - 缺点：
+    - 缺乏对紧急事件的处理能力
+      分组说明：改进；对应：[优点：可以人工交互](#topic-f6f846f8ba1940547fffdaed87)
+
+      - 优点：可以人工交互
+- 实时操作系统
+  - 硬实时
+    - 某个动作必须提供绝对的保证，在某个特定时间内完成
+  - 软实时
+    - 可以偶尔违背一下时间规定的
+- 网络操作系统
+  - 网络中的各种资源共享和多台计算机进行通信
+- 分布式操作系统
+  - 每台主机都有同等地位，不存在主机从机
+- 个人计算机操作系统
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0163.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0163.svg" alt="个人计算机操作系统" width="240" height="81" loading="lazy" /></a>
+
+- 多任务（现代计算机）操作系统：
+  - 并发 + 并行
+- 概要：有点像CS模式和P2P模式
+  概要范围：[网络操作系统](#topic-6b9b20f1023b634ca9098864d4)、[分布式操作系统](#topic-ab394dba8a9bce2540eb9b6ea7)
+
+## 操作系统运行环境
+
+<a href="/images/408-mind-maps/co-0017.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0017.svg" alt="操作系统运行环境" width="48" height="48" loading="lazy" /></a>
+
+- 处理器运行模式
+  - 特权指令/非特权指令
+    - 特权指令：是指不允许用户直接使用的指令，如I/O指令、置中断指令
+    - 非特权指令：是指允许用户直接使用的指令，它不能直接访问系统中的软硬件资源，仅限于访问用户的地址空间，这也是为了防止用户程序对系统造成破坏
+  - 内核态和用户态
+    - PSW = 1，即在内核态（管态）
+    - PSW = 0，即在用户态（目态）
+    - 广义指令 = 系统调用
+      - 广义指令在用户态下调用，内核态下执行
+- 4方面内容：
+  - 时钟管理
+    - 功能：计时、切换进程
+  - 中断机制
+    - 引入中断提高CPU利用率，提高外部设备利用率
+  - 原语
+    - 处于操作系统最底层
+    - 具有原子性，一气呵成
+    - 运行时间短，调用频繁
+  - 系统控制的数据结构和处理
+    - 进程管理
+    - 存储器管理
+    - 设备管理
+- 中断和异常
+  - 中断
+    - 内中断
+      - 来自CPU内部的
+      - 故障 fault
+        - fault是可以被修复的异常
+        - 非法操作码、缺页、除数为0、溢出
+      - 自陷 trap
+        - trap指令
+        - 安排好的时间，在用户态下调用操作系统内核程序
+      - 终止 abort
+        - abort是十分严重的异常
+        - 使CPU无法执行的硬件故障，例如控制器出错了、存储器校验错等
+      - 概要：软件中断
+        概要范围：[故障 fault](#topic-9d2a7ff2be499b282bd5dbaac4)、[自陷 trap](#topic-8ab808cdfdcbb861f190f98fe8)
+
+      - 概要：硬件中断
+        概要范围：[终止 abort](#topic-b859ccb2e218d898d9b09a0a57)
+
+      - 批注：异常
+    - 外中断
+      - 通常处理IO
+      - 可屏蔽中断 INTR
+        - 通过改变屏蔽字实现多重中断
+      - 不可屏蔽中断 NMI
+        - 紧急的硬件故障
+  - 中断处理：
+    - OS检测到中断后，就会查询系统中断向量表，找到应该执行的中断处理程序
+      - 通过中断向量地址 ---&gt;  中断向量 ---&gt; 处理程序
+        - 批注：计组重难点
+  - 中断处理过程：
+    - 中断隐指令
+      - 1\. 关中断
+      - 2\. 保存断点
+        - 即PC寄存器的内容
+      - 3\. 中断服务程序寻址
+      - 批注：纯硬件
+    - 中断程序
+      - 4\. 保护现场和屏蔽字
+        - 现场信息：
+          - PSW程序状态字寄存器
+          - 通用寄存器内容
+        - 屏蔽字：
+          - 硬件实现、软件实现（计组）
+      - 5\. 开中断
+        - 如果不支持多重中断，则没有这里的开关中断（计组）
+      - 6\. 执行中断处理程序
+      - 7\. 关中断
+      - 8\. 恢复现场屏蔽字
+      - 9\. 开中断
+      - 10\. 中断返回
+      - 批注：软件
+    - 概要：结合计组
+      概要范围：[中断隐指令](#topic-be8a748f718a13fc2871ea0c7c)、[中断程序](#topic-2f5a6b5823fabbed30fb7a782b)
+
+- 系统调用
+  - 系统调用可视为特殊的公共子程序
+  - 分为五类
+    - 设备管理、文件管理、进程控制、进程通信、内存管理
+- 考频：高
+  - 11、12\*2、13、14、15\*2、16-22
+
+## 操作系统结构
+
+<a href="/images/408-mind-maps/os-0080.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0080.svg" alt="操作系统结构" width="45" height="46" loading="lazy" /></a>
+
+- 分层法
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0151.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0151.svg" alt="分层法" width="240" height="169" loading="lazy" /></a>
+
+  - 优点
+    - 1\. 简化了系统设计和实现，编程方便，便于调试 2. 便于扩充和维护
+  - 缺点
+    - 1\. 定义各层比较困难 2. 效率差
+- 模块化
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0089.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0089.svg" alt="模块化" width="240" height="103" loading="lazy" /></a>
+
+    - 分块标准
+      - 高内聚低耦合
+
+        <a href="/images/408-mind-maps/os-0121.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0121.svg" alt="高内聚低耦合" width="240" height="124" loading="lazy" /></a>
+
+      - 模块内紧密度要高，模块间的联系影响要小
+  - 优点
+    - 1\. 提高了OS的正确性、可理解性、可维护性 2. 可适应性高 3， 加速的开发过程（可以不同模块不同团队同时开发）
+  - 缺点
+    - 1\. 【模块间】的接口规定很难满足对接口的需求 2. 各模块开发者难以找到一个可靠的决定顺序
+- 宏内核
+  - 单内核、大内核
+  - OS的所有功能模块全都在内核态
+  - 优点：
+    - 速度快
+  - 缺点：
+    - 一个模块奔溃导致整个核崩溃
+
+      <a href="/images/408-mind-maps/os-0053.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0053.svg" alt="一个模块奔溃导致整个核崩溃" width="240" height="139" loading="lazy" /></a>
+
+  - 在桌面OS中宏内核取得很大成功
+    - 例如Windows、MacOS、Linux、iOS、Android等等
+  - 概要：OS服务越来越复杂，OS面临着”软件危机“
+    概要范围：[OS的所有功能模块全都在内核态](#topic-a334a572-990e-42f0-954a-139689842995)
+
+- 微内核
+  - 把部分内核OS代码移出内核，采用C/S模式进行执行
+
+    <a href="/images/408-mind-maps/os-0161.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0161.svg" alt="把部分内核OS代码移出内核，采用C/S模式进行执行" width="240" height="79" loading="lazy" /></a>
+
+  - 内核代码：
+    - 1\. 与硬件紧密相连的 2. 一些较为基本的功能 3. 客户服务器的通信功能
+  - 用户的服务器：
+    - 这些服务器本质上就是一个进程，借助微内核的消息传递机制进行交互的
+  - 基本功能：
+    - 线程管理、低级存储器管理、中断和陷入处理
+  - 优点
+    - 1\. 扩展+灵活（新增内容加个服务器就好）
+    - 2\. 可靠+安全（一个模块崩溃就重启那个模块就好）
+    - 3\. 可移植性好（服务器的具体细节与硬件无关）
+    - 4\. 分布式计算，可以很好的支持分布式系统和网络系统
+  - 缺点
+    - 慢
+    - 概要：解决办法之一：把用的频繁的服务器加到内核
+      概要范围：[慢](#topic-715b79f8-7c94-4d5e-a549-997eb549541c)
+
+  - 在实时、工业、军事、航空等特别流行
+    - 谷歌的Fuchsia、鸿蒙OS
+- 外核
+  - 外核是提高'虚拟机’效率的
+    - 外核可以使一个应用进程直接获得访问内核的权利
+  - 优点
+    - 1\. 减少了映射层
+      - 磁盘的一个部分的盘块就直接分配给了这个虚拟机，这样虚拟机间就不会发生冲突了
+      - 如果不采用外核：那么多个虚拟机使用同一个内存，每个虚拟机进程需要维护一个映射表格
+    - 2\. 把多道程序（外核外）与OS代码（用户空间）加以分离
+
+## OS引导
+
+<a href="/images/408-mind-maps/os-0020.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0020.svg" alt="OS引导" width="45" height="46" loading="lazy" /></a>
+
+- 前提
+  - 磁盘的格式化
+    - 物理格式化
+    - 逻辑格式化
+  - RAM和ROM
+    - 配图
+
+      <a href="/images/408-mind-maps/os-0043.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0043.svg" alt="RAM和ROM" width="178" height="220" loading="lazy" /></a>
+
+- 步骤图示：
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0105.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0105.svg" alt="步骤图示：" width="240" height="95" loading="lazy" /></a>
+
+    - MBR中的标志信息位：
+      - 告诉主机这个磁盘是不是引导盘（分区中至少有一个分区是活动分区、有操作系统）
+    - CPU读ROM进行自检、找OS的
+    - 引导块：
+      - 如果该磁盘分区有OS，则引导块不为空；如果没有OS，则为引导块内没有实际内容
+- 步骤：
+  - ① CPU读ROM
+    - 激活CPU
+      - CPU读取ROM里的boot程序，IR置为BIOS的第一条指令（开始运行BIOS）
+    - 硬件自检
+      - 启动BIOS程序，硬件开始自检，检查是否有故障
+    - 带有OS的硬盘
+      - BIOS读取Boot Sequence
+        - Boot Sequence是一个在CMOS中的设置启动顺序的元件
+      - BIOS找到了设置的第一顺序的存储设备，然后把这个设备的【引导扇区内容（MBR）】加载入内存
+  - ② RAM读MBR
+    - 加载主引导记录MBR
+      - 硬盘以特定标识符来区分引导和非引导盘。遍历每一个，直到发现引导盘
+        - MBR作用：告诉CPU去哪个主分区找操作系统
+    - 加载硬件分区表
+      - 找哪个磁盘分区中装有操作系统，所以需要扫描MBR中的硬件分区表
+  - ③ RAM读活动分区
+    - 加载磁盘活动分区
+      - 活动分区：装有OS的分区就是活动分区
+      - MBR找到了对应的OS分区后，把这分区读入RAM
+    - 加载分区引导记录PBR
+      - PBR：引导块
+      - 寻找并激活根目录
+    - 加载启动管理器
+      - 配图
+
+        <a href="/images/408-mind-maps/os-0113.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0113.svg" alt="加载启动管理器" width="240" height="134" loading="lazy" /></a>
+
+  - ④ RAM读操作系统
+    - 从根目录处加载操作系统
+      - 例如MAC的boot根目录
+
+        <a href="/images/408-mind-maps/os-0056.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0056.svg" alt="例如MAC的boot根目录" width="240" height="148" loading="lazy" /></a>
+
+## 虚拟机
+
+<a href="/images/408-mind-maps/os-0094.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0094.svg" alt="虚拟机" width="45" height="46" loading="lazy" /></a>
+
+- 考频：低
+  - 22
+- 计算环境
+  - 逻辑的计算机，通过隐藏特定计算平台来为用户提供抽象、统一、模拟的计算环境
+- 第一类
+  - 第一类虚拟机是运行在裸机上的OS，它的工作是支持真实硬件的多个虚拟机拷贝，类似于不同操作系统支持的进程。
+    - 例如Xen、Hyper-V、vSphere
+
+      <a href="/images/408-mind-maps/os-0034.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0034.svg" alt="例如Xen、Hyper-V、vSphere" width="240" height="157" loading="lazy" /></a>
+
+      - 批注：腾讯云就是用的Xen
+  - 虚拟内核态
+    - OS认为自己运行在内核态，但其实不是内核态
+    - OS上的用户进程认为自己执行在用户态，事实也如此
+    - 概要：故虚拟机是不允许执行敏感指令的
+      概要范围：[OS认为自己运行在内核态，但其实不是内核态](#topic-8dc69d3a-ebbb-454a-ae93-c2d0ad3a2192)
+
+  - 批注：裸金属架构
+- 第二类
+  - 第二类虚拟机是运行在宿主操作系统上的，进程调度、资源分配等是依赖于其他OS的
+    - 例如VMware
+
+      <a href="/images/408-mind-maps/os-0159.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0159.svg" alt="例如VMware" width="228" height="220" loading="lazy" /></a>
+
+  - 批注：寄居架构
+
+## 做题遇到的概念
+
+<a href="/images/408-mind-maps/co-0097.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0097.svg" alt="做题遇到的概念" width="48" height="48" loading="lazy" /></a>
+
+- 硬件支持
+  - 需要硬件支持
+    - 地址映射
+      - 地址映射需要重定位，需要访问存储单元
+    - 时钟管理
+    - 中断系统
+  - 不需要硬件支持
+    - 进程调度
+- 用户态和内核态
+  - 执行程序or发生情况：
+    - 用户态下
+      - 缺页
+      - 系统调用
+        - 访管指令
+      - 广义指令的调用
+      - 外部中断
+      - 命令解释程序
+    - 内核态下
+      - 进程切换
+      - 缺页处理程序
+      - 进程调度
+      - 时钟中断
+      - 广义指令的执行
+      - 输入输出
+      - 开关中断
+
+<a href="/images/408-mind-maps/co-0022.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0022.svg" alt="END" width="48" height="48" loading="lazy" /></a>
+
+## 原图关联关系
+
+- [PSW = 0，即在用户态（目态）](#topic-20280b9c96a9474a2689d81dbc) → [PSW = 1，即在内核态（管态）](#topic-7c3ab845dcea04b19a32b96ad0)：是由硬件完成的
+
+## 课程总览
+
+画布中心主题：🖥操作系统
+
+### 基本概念
+
+[查看关联主题](#topic-07bba7a6bbbb12bd5eecf9c3fd)
+
+### 进程管理
+
+[查看关联主题](#topic-6ceaf460346ab77f696cebc0cf)
+
+### 内存管理
+
+[查看关联主题](#topic-bf58d12bd5489ee4093d39481d)
+
+### 文件管理
+
+[查看关联主题](#topic-9b795769bb79592d3c519ac14c)
+
+### I/O管理
+
+[查看关联主题](#topic-7f2b43614e7932310d72fad486)
+````
+
+<a id="topic-6ceaf460346ab77f696cebc0cf" />
+<a id="topic-1cd264b9-f199-4db9-8160-c038603de537" />
+<a id="topic-abe77592-128f-403a-a55b-2638ce72c108" />
+<a id="topic-8a8d797b-a99a-40b2-8111-bf83c243a0f8" />
+<a id="topic-8190baca-c6f2-43fd-b2e4-26c2024533f7" />
+<a id="topic-060312c8-a732-4f61-a97c-8fe0d1e0d52d" />
+<a id="topic-b29ed31f-2d3e-4d02-8943-60177eff362a" />
+<a id="topic-25434aeb-3f2b-4fdd-80a3-f3366da88afd" />
+<a id="topic-803f2660-4d7a-4e78-9990-eeb5344a3ebf" />
+<a id="topic-a0cb60e8-131e-4765-98da-e98155bed287" />
+<a id="topic-68d33468-7769-4d76-927b-20546a7810ef" />
+<a id="topic-3d79f212-9dec-43fc-8eb6-71add89ea4eb" />
+<a id="topic-10a727f9-ffa5-41e4-899d-3822ffa9e532" />
+<a id="topic-ae36bbd1-d0f2-42ec-a004-47edecd8b659" />
+<a id="topic-10e23742-8bf6-4f1d-8e82-f07316a5528b" />
+<a id="topic-fc895498-15a0-4688-bebf-08e08b36c8f1" />
+<a id="topic-5effe7ee-ece4-44f6-a83d-537e78f39865" />
+<a id="topic-fa5c0bc8-0700-4237-b315-ad74e2ba996c" />
+<a id="topic-b08836f7-736f-4d83-bee6-6b077b39399b" />
+<a id="topic-4c32273f-43e6-4f77-beed-94a433d777fc" />
+<a id="topic-0dbd0d4f-6f20-415b-b163-37958501ba8e" />
+<a id="topic-2f893505-1497-47b8-8bf0-b9bafce1802a" />
+<a id="topic-1c09ba92-b7c9-4f3a-bf15-19cf24a2721f" />
+<a id="topic-739900e7-784b-4ed0-a1fe-7a9fd417c333" />
+<a id="topic-ded8062f-d776-45d2-a219-1f5a65949843" />
+<a id="topic-64234ada-7387-44ff-affc-629166437286" />
+<a id="topic-f056f7e4-3589-4d51-aa73-6e55a7c31103" />
+## 第二章 进程管理
+
+````mindmap
+# 第二章 进程管理
+
+[查看关联主题](#topic-193b56735e689ae86a01d91513)
+
+## 进程的概念
+
+<a href="/images/408-mind-maps/os-0040.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0040.svg" alt="进程的概念" width="48" height="48" loading="lazy" /></a>
+
+- 临界资源：
+  - 一次只能由一个进程使用的资源，例如：打印机
+- 临界区：
+  - 临界区是一段访问共用资源（例如：共用设备或是共用存储器）的【程序片段】
+- 程序与进程
+  - 程序是静态的（就是一段代码块）
+  - 进程是动态的
+  - 进程实体是进程某一个时刻的“快照”，静态的
+- PCB
+  - PCB是进程存在的唯一标识（像身份证那样，PID像身份证号）
+  - PCB中有【PID + 资源分配清单 + 进程控制/管理信息】
+    - 其中UID为---哪一个用户在使用
+    - 其中PID为---进程的身份证
+- 进程是进程实体的运行过程，是系统进行【资源】分配和调度的基本单位
+  - 线程是CPU调度的最小单位
+- 进程的特征
+  - 动态性
+    - 进程是动态地产生、变化和消亡的。动态性是进程的【最基本特征】
+  - 并发性
+    - 引入进程就是为了使进程可以与其他进程并发执行
+  - 独立性
+    - 进程实体，独立获得资源，独立接受调度
+  - 异步性
+    - 进程间相互制约，具有执行的间断性，进程间以独立的、不可预知的速度向前推进
+  - 结构性
+    - 每个进程都配置了一个PCB
+- 其他特性
+  - 封闭性
+    - 进程的运行结果只取决于进程本身，于进程执行的速度无关
+  - 进程是【一个】程序在【一个】数据集上运行的过程
+    - 如果这两个【一个】发生改变，则进程为不同进程
+- 考频：低
+  - 11、19、20
+
+## 进程操作：
+
+<a href="/images/408-mind-maps/co-0152.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0152.svg" alt="进程操作：" width="48" height="48" loading="lazy" /></a>
+
+分组说明：题目中出现，找最对最错，都要考虑；对应：[广义狭义的进程调度](#topic-1cd264b9-f199-4db9-8160-c038603de537)
+
+- 考频：中
+  - 10 \*2、14、15、18、19、21、22
+- 进程的七状态模型：
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0160.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0160.svg" alt="进程的七状态模型：" width="240" height="108" loading="lazy" /></a>
+
+    - 配图
+
+      <a href="/images/408-mind-maps/os-0036.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0036.svg" alt="进程的七状态模型：" width="240" height="109" loading="lazy" /></a>
+
+    - 由运行结束或者发生异常到终止态：撤销
+    - 图中还有可能从运行态到就绪挂起（当运行的程序在内存中的空间被抢占后）
+    - 如果在运行过程中自己发生了缺页，那就是到阻塞态
+- 广义狭义的进程调度
+  - 狭义的进程调度
+    - 从就绪态到运行态
+  - 狭义的进程切换
+    - 一个进程从运行态到就绪态，另一个进程从就绪态到运行态
+  - 广义的进程调度
+    - 上面两个之和
+- 进程的创建：
+  - 内容
+    - 创建者为父进程，被创建者为子进程
+    - 终端用户登录系统、作业调度、系统提供服务、打开应用程序都会创建进程
+  - 步骤
+    - 1\. 给新进程分配一个标识符PID，申请一个空白PCB
+      - PCB申请失败，创建失败
+    - 2\. 给进程分配内存资源（为程序、数据、用户栈分配必要内存空间）
+      - 资源不足则进入阻塞态
+    - 3\. 初始化PCB
+      - 初始化标识信息
+      - 初始化处理机控制信息
+      - 设置进程优先级
+    - 4\. 待就绪队列可以接纳新进程，将新进程插入就绪队列
+- 进程的终止：
+  - 1\. 通过PCB找到该进程的状态
+  - 2\. 终止进程执行
+  - 3\. 终止所有子孙进程
+  - 4\. 把所有资源都归还给父进程或操作系统
+  - 5\. 把PCB删除
+- 进程的阻塞：
+  - 又称：睡眠等待状态
+  - 1\. 找到对应PCB
+  - 2\. 若进程在运行态，则保护现场，将其转为阻塞态，停止运行
+  - 3\. PCB插入【相应事件】的等待队列
+- 进程的唤醒：
+  - 1\. 找到对应PCB
+  - 2\. 将其从等待队列中移出，把状态设置为就绪态
+  - 3\. PCB插入就绪队列，等待CPU调度
+  - 例子：
+    - IO结束
+      - IO结束后，等待这个IO的进程会被唤醒
+    - 进程退出临界区
+      - 进程A想要访问有进程B在访问的的临界区 --- A进入阻塞，进程B访问完临界区 --- A回到就绪
+- 进程的切换：
+  - 1\. 保存CPU环境
+  - 2\. 更新PCB
+  - 3\. 把PCB移入到对应队列
+  - 4\. 更新数据结构
+  - 5\. 恢复CPU环境
+
+## 进程组织
+
+<a href="/images/408-mind-maps/co-0015.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0015.svg" alt="进程组织" width="48" height="48" loading="lazy" /></a>
+
+- 进程控制块（PCB）
+  - PCB创建后常驻内存，任意时刻都可以存取，进程结束时删除
+  - 需要访问PCB的情况
+    - 1\. OS想要调度某进程运行
+      - 调度
+    - 2\. 调度到某进程后，根据PCB所保存的处理机状态信息恢复现场
+      - 恢复
+    - 3\. 运行过程中，当需要与之合作的进程实现同步、通信时要访问PCB
+      - 合作
+    - 4\. 进程由于某些原因暂停时，会将其断点处的处理机环境保存在PCB中
+      - 暂停
+  - 在整个生命期中，系统总是通过PCB来对进程进行控制，系统唯有通过PCB才能感知进程存在
+  - 配图
+
+
+
+    |进程描述信息|进程控制和管理信息|资源分配清单|处理机相关信息|
+    |---|---|---|---|
+    |进程标识符 PID|进程当前状态|代码段指针|通用寄存器值|
+    |用户标识符 UID|进程优先级|数据段指针|地址寄存器值|
+    |—|代码运行入口地址|堆栈段指针|控制寄存器值|
+    |—|程序的外存地址|文件描述符|标志寄存器值|
+    |—|进入内存时间|键盘|状态字|
+    |—|处理机占用时间|鼠标|—|
+    |—|信号量使用|—|—|
+
+
+
+    - 1\. PID标志各个进程，UID标志进程归属的用户
+    - 2\. 描述进程的状态信息，描述进程抢占处理机的优先级
+    - 3\. 有关内存地址、虚拟内存地址有关的内容、打开文件列表、IO设备信息
+    - 4\. 处理机中的各种寄存器的值
+  - 各进程PCB结构的数据结构
+    - 链接方式
+      - 把不同状态的PCB链接成一个链表
+    - 索引方式
+      - 把不同状态的PCB组成一个索引表
+- 程序段
+  - 程序段可以被多个进程共享
+  - 多个进程运行同一个程序
+- 数据段
+  - 数据段是进程的数据段
+- 概要：故同一程序不同进程：其PCB不同、程序段相同、数据段不同
+  概要范围：[程序段](#topic-abe77592-128f-403a-a55b-2638ce72c108)、[数据段](#topic-8a8d797b-a99a-40b2-8111-bf83c243a0f8)
+
+  - 例：父子进程，代码段相同，地址段不同（不可以共享同一片虚拟地址空间）
+
+## 进程通信：
+
+<a href="/images/408-mind-maps/os-0023.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0023.svg" alt="进程通信：" width="48" height="48" loading="lazy" /></a>
+
+- 考频：低
+  - 14
+- 共享存储
+  - 通过一块可以直接访问的共享空间，通过对这片空间的读写来实现信息交换
+  - 低级方式
+    - 基于数据结构
+  - 高级方式
+    - 基于存储块
+- 消息传递
+  - 数据交换以格式化信息为单位，若通信进程无可直接访问的空间，则OS会通过发送原语和接受原语来传递数据
+  - 直接通信
+    - 通过共享空间（缓冲区，输入输出队列）来进行直接通信
+  - 间接通信
+    - 把信息发到某个中间实体
+    - 又称：
+      - 信箱通信、电子邮件系统
+- 管道通信
+  - 使用pipe文件来进行信息传递，属于半双工通信
+  - 两个特点：
+    - 1\. 管道写满，write()阻塞；管道变空，read()阻塞。
+    - 2\. 数据一旦被读出，就会被抛弃，故只能有一个读进程
+- 通道、管道、管程
+  - 通道：硬件IO技术，用来进行快速的、多个块的IO传输
+    - 比DMA牛逼
+  - 管道：pipe文件，信息传递用，半双工
+    - 信息传输
+  - 管程：在进程互斥机制中对PV操作进行管理的数据结构
+    - 信号量、PV
+  - 概要：通：硬件
+    概要范围：[通道：硬件IO技术，用来进行快速的、多个块的IO传输](#topic-8190baca-c6f2-43fd-b2e4-26c2024533f7)
+
+  - 概要：管：软件
+    概要范围：[管道：pipe文件，信息传递用，半双工](#topic-060312c8-a732-4f61-a97c-8fe0d1e0d52d)、[管程：在进程互斥机制中对PV操作进行管理的数据结构](#topic-b29ed31f-2d3e-4d02-8943-60177eff362a)
+
+## 线程：
+
+<a href="/images/408-mind-maps/os-0065.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0065.svg" alt="线程：" width="48" height="48" loading="lazy" /></a>
+
+- 轻量级进程，CPU的最小执行单位
+- 进程作为CPU外资源的最小调度单位，线程作为CPU的最小调度单位
+  - 也称为程序执行流的最小单元
+  - 进程 --- 资源调度和分派
+  - 线程 --- 处理机调度和分派
+- 进程和线程的区别
+  - 1\. 进程仍是资源分配的最小单位，线程不拥有系统资源，线程可以访问隶属进程的系统资源
+    - 线程也可以分配资源，但是仅仅是CPU资源的情况
+  - 2\. 在引入线程的OS中，多进程、多线程都可以并发执行
+  - 3\. 创建、撤销、切换进程时都会有较大的消耗，而对于线程就不会有较大的消耗
+  - 4\. 进程空间相互独立，进程内的线程对其他进程不可见
+- 内核级线程：
+  - 只有内核有线程管理的代码
+- 用户级线程：
+  - 用户自行进行线程管理
+- 线程实现方式：
+  - OS会给每一个内核线程分配一个TCB（Thread Control Block)
+
+    <a href="/images/408-mind-maps/os-0097.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0097.svg" alt="OS会给每一个内核线程分配一个TCB（Thread Control Block)" width="240" height="118" loading="lazy" /></a>
+
+    - 用户级方式
+      - 用户级线程 ULT
+      - 一个系统进程多个用户线程
+      - 一个线程被阻塞，整个进程被阻塞
+    - 内核级方式
+      - 内核级线程 KLT
+      - 一个系统进程一个用户线程
+      - 资源浪费大
+    - 组合方式
+      - 组合模式
+      - 多个系统进程多个用户线程
+  - 批注：进程与线程
+- 多线程模型：
+  - 考虑红框部分
+
+    <a href="/images/408-mind-maps/os-0114.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0114.svg" alt="考虑红框部分" width="240" height="121" loading="lazy" /></a>
+
+    - 一对一模型
+      - 一个用户级线程
+        - 对应
+          - 一个内核级线程
+          - 概要：1:1
+            概要范围：[一个内核级线程](#topic-25434aeb-3f2b-4fdd-80a3-f3366da88afd)
+
+      - 优点：
+        - 一个线程阻塞，可以调度另一个线程，并发能力强
+      - 缺点：
+        - 每来一个用户级线程都要创建一个内核级线程
+          - 开销大
+    - 多对一模型
+      - 多个用户级线程
+        - 对应
+          - 一个内核级线程
+          - 概要：N:1
+            概要范围：[一个内核级线程](#topic-803f2660-4d7a-4e78-9990-eeb5344a3ebf)
+
+      - 优点：
+        - 线程管理在用户空间，效率高
+      - 缺点：
+        - 一个线程阻塞，整个进程阻塞
+        - 每个进程同时只能有一个线程访问内核
+          - 并发度不高
+    - 多对多模型
+      - 多个用户级线程
+        - 对应
+          - 多个内核级线程
+          - 概要：N:M (N&gt;=M)
+            概要范围：[多个内核级线程](#topic-a0cb60e8-131e-4765-98da-e98155bed287)
+
+      - 优点：
+        - 解决1:1的开销大和N:1的并发度不高，又有他们的优点。
+  - 批注：线程与线程
+
+## 进程与线程
+
+<a href="/images/408-mind-maps/os-0100.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0100.svg" alt="进程与线程" width="45" height="46" loading="lazy" /></a>
+
+- 考频：低
+  - 12
+- 线程的状态和转换
+  - 线程三状态模型
+
+    <a href="/images/408-mind-maps/os-0046.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0046.svg" alt="线程三状态模型" width="240" height="146" loading="lazy" /></a>
+
+- 线程库
+  - 线程的实现
+    - 常见线程库（Thread Library）：例如POSIX标准的Pthreads线程库
+    - 通过调用线程库提供的函数来创建用户线程，线程的控制（状态转换）由运行时系统负责
+
+      <a href="/images/408-mind-maps/os-0028.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0028.svg" alt="通过调用线程库提供的函数来创建用户线程，线程的控制（状态转换）由运行时系统负责" width="240" height="194" loading="lazy" /></a>
+
+      - 通过系统调用来创建内核线程，线程的控制（状态转换）由内核负责
+
+        <a href="/images/408-mind-maps/os-0098.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0098.svg" alt="通过系统调用来创建内核线程，线程的控制（状态转换）由内核负责" width="240" height="202" loading="lazy" /></a>
+
+        - 用户级线程
+          - 由内核维护PCB进程表
+          - 由线程库来实现进程中的TCB线程表
+        - 内核级线程
+          - 不论PCB还是TCB都是内核进行维护
+- 线程的组织与控制
+  - 线程表
+
+
+
+    **线程表（thread table）**
+
+    ```text
+    TCB1
+    TCB2
+    TCB3
+    …
+    ```
+
+    可将多个 TCB 组织成一张线程表。
+
+
+
+    - TCB
+
+      <a href="/images/408-mind-maps/os-0084.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0084.svg" alt="TCB" width="240" height="131" loading="lazy" /></a>
+
+      - PC：每个线程共享一个进程代码片段，所以需要保存自己的PC
+      - 其他寄存器、堆栈指针：同理
+- 调度器/调度程序
+  - 区别在于是否支持内核级线程
+
+    <a href="/images/408-mind-maps/os-0077.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0077.svg" alt="区别在于是否支持内核级线程" width="240" height="201" loading="lazy" /></a>
+
+- 闲逛进程
+  - idle进程，在系统中没有其他进程的时候运行idle进程，每个指令周期只需进行中断检查就行
+    - idle进程的优先级最低
+    - 任何进程进来都可以抢占idle进程的时间片
+- 内核和用户级线程调度
+  - 用户级线程的调度
+    - 线程切换代价：低，不需要切换完整的上下文<br>并发/并行度：低，一个阻塞整个进程阻塞
+
+      <a href="/images/408-mind-maps/os-0155.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0155.svg" alt="线程切换代价：低，不需要切换完整的上下文 并发/并行度：低，一个阻塞整个进程阻塞" width="240" height="181" loading="lazy" /></a>
+
+      - 用户级线程
+        - 内核不知道线程的存在，所以内核是调度进程
+        - 优点：
+          - 线程在用户态切换
+          - 进程可以根据自身需求选择不同算法<br>方便在不同系统上实现
+        - 缺点：
+          - 进程中的一个线程阻塞了整个进程也会阻塞
+          - 如果是多处理器，那么无法发挥其并行优势（例如一个进程8个线程）
+  - 内核级线程的调度
+    - 线程切换的代价：高，需转为内核态、切换完整上下文<br>并发/并行度：高，一个阻塞其他线程仍可运行
+
+      <a href="/images/408-mind-maps/os-0011.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0011.svg" alt="线程切换的代价：高，需转为内核态、切换完整上下文 并发/并行度：高，一个阻塞其他线程仍可运行" width="240" height="211" loading="lazy" /></a>
+
+      - 内核级线程
+        - 内核选择线程进行运行，不用考虑属于哪一个进程，调度线程
+        - 优点：
+          - 多处理器，内核调度同个进程的多个线程
+          - 进程的一个线程被阻塞，内核可以调度该进程的其他线程
+          - 内核进程自己本身也可以采用多线程技术
+        - 缺点：
+          - 性能低，有若干数量级的延迟
+- 上下文及其切换机制
+  - 进程/内核级线程的切换：
+    - 1\. 保存CPU环境
+    - 2\. 更新TCB
+    - 3\. 把TCB移入到对应队列
+    - 4\. 更新数据结构
+    - 5\. 恢复CPU环境
+
+## 处理机调度
+
+<a href="/images/408-mind-maps/os-0144.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0144.svg" alt="处理机调度" width="48" height="48" loading="lazy" /></a>
+
+- 处理机调度是多道程序操作系统的基础
+- 三种调度：
+  - 作业调度
+    - 高级调度
+      - 把外存上处于后备状态的作业中挑选一个，给他们分配内存、输入/输出设备等资源，并建立相应的进程
+    - 外存 -&gt; 内存
+    - 调度的频率低，一般几分钟一次
+  - 内存调度
+    - 中级调度
+      - 把暂时无法执行的进程放到【外存的挂起队列中】，但是其PCB亦然保留在内存
+    - 挂起态 -&gt; 内存 / 内存 -&gt; 挂起态
+    - 例如：
+      - 进程在内存中，出现了其他进程来抢占内存资源，导致进程被移出内存，就会变成挂起态
+      - 内存有了空间，就会把挂起态中的进程调入内存
+  - 进程调度
+    - 低级调度
+      - 按照某种方法和策略从【就绪队列】中选一个进程，将处理机分配给它
+    - 内存 -&gt; CPU
+    - 频率高，几十ms一次
+    - 批注：最关键，不可或缺
+  - 三种调度的联系：
+    - 【进程调度】使进程正常活动起来
+    - 【作业调度】为进程活动做准备
+    - 【中级调度】将暂时不能运行的进程挂起
+- 调度的时机、切换、过程
+  - 什么时候不可调度
+    - 处理中断
+      - 多重中断中间可以调度
+    - 进程在内核程序临界区
+      - 因为临界区只能有一个进程访问，所以访问时一定要加锁。解锁前不应切换到其他进程运行，以加快共享数据的释放
+    - 完全屏蔽中断的原子操作
+  - 什么时候可以调度
+    - 进程处在非内核程序临界区
+    - 发生了引起调度条件且当前进程无法运行下去时
+      - 可以马上进行调度和切换
+      - 为非剥夺方式
+    - 中断处理结束/trap处理结束，返回前请求调度，可以马上进行进程调度切换
+      - 剥夺方式
+- 调度基本准则
+  - CPU利用率
+  - 系统吞吐量
+  - 周转时间
+    - 周转时间：
+      - 公式
+
+
+
+        $t_{周转} = t_{完成} - t_{提交}$
+
+    - 平均周转时间：
+      - 公式
+
+
+
+        $t_{平均周转} = \frac{\sum t_{周转}}{n}$
+
+    - 带权周转时间：
+      - 公式
+
+
+
+        $t_{带权周转} = \frac{t_{周转}}{t_{实际运行}}$
+
+        - 带权周转 &gt;= 1.0
+    - 平均带权周转时间：
+      - 公式
+
+
+
+        $t_{平均带权周转} = \frac{\sum t_{带权周转}}{n}$
+
+  - 等待时间
+    - 等待处理机状态的时间之和
+  - 响应时间
+    - 从用户提交到系统首次产生响应所用的时间
+- 调度的实现
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0051.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0051.svg" alt="调度的实现" width="240" height="116" loading="lazy" /></a>
+
+    - 排队器：
+      - 将系统中的所有就绪进程按照一定的策略排成一个或多个队列，以便于调度程序选择。
+      - （变为就绪态就插入到就绪队列中）
+    - 分派器：
+      - 调度程序选择进程，分派器从就绪队列中取出
+    - 上下文切换器：
+      - 1\. 将当前进程的上下文保存到其PCB中，再装入分派程序的上下文，以便分派程序运行
+      - 2\. 移出分派程序的上下文，将新选进程的CPU现场信息装入处理机的各个相应寄存器
+- 调度算法：
+  - FCFS
+    - 先来先服务
+      - FIFO队列
+    - 有利于CPU繁忙型，不利于IO繁忙型
+  - SJF
+    - 短作业优先
+    - 饥饿，对长作业不利
+    - 通过计算得出的进程所需的时间，不一定准确
+  - 优先级：
+    - 剥夺式/非剥夺式
+    - 静态优先级/动态优先级
+      - 静态：
+        - 创建进程时确定的
+      - 动态：
+        - 运行时确定的
+    - 优先级：
+      - 系统 &gt; 用户
+      - 交互 &gt; 非交互
+      - I/O &gt; 计算
+  - 高响应比：
+    - 响应比越高，优先级越高
+
+
+
+      $响应比R_p = \frac{t_{等待} + t_{要求服务}}{t_{要求服务}}$
+
+      - 永远 &gt; 1
+  - 时间片轮转：
+    - 一个进程时间片到了就换一个进程运行
+    - 目的：
+      - 创造【实时系统】，让多个用户可以及时干预系统
+  - 多级队列调度：
+    - 配图
+
+      <a href="/images/408-mind-maps/os-0050.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0050.svg" alt="多级队列调度：" width="240" height="125" loading="lazy" /></a>
+
+      - 把进程就绪队列从一个拆分为多个（根据进程的性质）
+      - 多个就绪队列都一定的优先级
+      - 不同就绪队列的调度算法可以不一样
+  - 多级反馈队列：
+    - 配图
+
+      <a href="/images/408-mind-maps/os-0072.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0072.svg" alt="多级反馈队列：" width="240" height="99" loading="lazy" /></a>
+
+      - 1）设置多个就绪队列，不同队列优先级不同，时间片也不同。
+      - 2）除了最后一个队列是FCFS + RR，其他都是FCFS
+      - 3）按队列优先级调度。
+      - 概要：可以获得较好的I/O设备利用率和缩短响应时间而照顾I/O型进程
+        概要范围：[1）设置多个就绪队列，不同队列优先级不同，时间片也不同。](#topic-ae36bbd1-d0f2-42ec-a004-47edecd8b659)、[2）除了最后一个队列是FCFS + RR，其他都是FCFS](#topic-10e23742-8bf6-4f1d-8e82-f07316a5528b)、[3）按队列优先级调度。](#topic-fc895498-15a0-4688-bebf-08e08b36c8f1)
+
+  - 比较表格：
+    - 配图
+
+
+
+      |比较项|先来先服务|短作业优先|高响应比优先|时间片轮转|多级反馈队列|
+      |---|---|---|---|---|---|
+      |能否抢占|否|存在抢占变体（最短剩余时间优先）|否|是|依具体规则|
+      |能否非抢占|是|是|是|否|依具体规则|
+      |优点|公平、简单|平均等待时间小，效率高|兼顾长短作业|兼顾长短作业|兼顾长短作业，响应时间好，可行性强|
+      |缺点|不利于短作业|长作业可能饥饿，估计时间不易确定|计算响应比的开销大|平均等待时间较长，上下文切换消耗时间|原图未列出|
+      |适用于|原图未列出|作业调度、批处理系统|原图未列出|分时系统|通用|
+      |默认决策模式|非抢占|非抢占|非抢占|抢占|抢占|
+
+      校正：原图把高响应比优先标为“可抢占”，与其“默认非抢占”一栏矛盾；常规 HRRN 调度为非抢占式。短作业优先与其抢占变体在表中明确区分。
+
+      > 整理说明：明确纠正原图中 HRRN 可抢占的标记，并区分 SJF 与 SRTF。
+
+
+
+- 考频：超高
+  - 09、11、12\*2、13、14、16、17\*2、18-20、21\*2、22、16大
+
+## 同步与互斥
+
+<a href="/images/408-mind-maps/os-0054.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0054.svg" alt="同步与互斥" width="48" height="48" loading="lazy" /></a>
+
+- 同步的基本概念
+  - 临界资源：
+    - 一次只能有一个进程所用的资源
+    - 访问过程
+      - 进入区
+        - 上锁
+      - 临界区、<br>临界(代码)段
+        - 进程中访问临界资源的那一段代码
+      - 退出区
+        - 解锁
+      - 剩余区
+    - 例如：
+      - 公用队列
+    - 反例：
+      - 磁盘、内存、私有数据、可重入程序代码
+  - 同步：
+    - 破坏异步性，进程间的制约关系，用来协调进程的工作次序
+    - 批注：制约关系
+  - 互斥：
+    - 四大原则
+      - 空闲让进
+        - 临界区空闲时，可以允许一个请求进入临界区使用临界资源
+      - 忙则等待
+        - 有进程在临界区其他进程必须等待
+      - 有限等待
+        - 保证有限时间内可以进入临界区
+      - 让权等待
+        - 当进程不能进入临界区时，应该释放处理机，防止忙等
+          - 不是按次序进入哦
+- 临界区互斥：
+  - 软件实现
+    - 单标志法：
+      - 共享一个整形变量turn，turn = 0 则A进程使用，turn = 1 则B进程使用
+        - 等turn = 0后，A进行运行，运行后turn = 1，但是B不运行，则A无法进行下次的运行
+      - 违背空闲让进，如果一个不运行，另一个永远无法运行
+    - 双标志先检查：
+      - 设置一个flag\[\]来进行标明哪个进程正在临界区中
+        - Pi:<br>while(flag\[j\]);<br>flag\[i\] = TRUE;<br>do ... ;<br>flag\[i\] = FALSE;<br>remainder section;
+          - Pj:<br>while(flag\[i\]);<br>flag\[j\] = TRUE;<br>do ... ;<br>flag\[j\] = FALSE;<br>remainder section;
+        - AB可能同时进入临界区（A设置了flag\[j\]后B立马就进入）
+      - 违背忙则等待，可能同时进入临界区
+      - 使用原语来完成检查+处理
+    - 双标志后检查：
+      - 相比较双标志先检测，把设置flag\[\]改到前面
+        - Pi:<br>flag\[i\] = TRUE;<br>while(flag\[j\]);<br>do ... ;<br>flag\[i\] = FALSE
+          - Pj:<br>flag\[j\] = TRUE;<br>while(flag\[i\]);<br>do ... ;<br>flag\[j\] = FALSE
+        - AB若同时设置flag，则谁也进不了do
+      - 会引发饥饿，两个进程同时设置了flag，导致双方都无法进入
+    - Peterson算法：
+
+      - 一个flag，一个turn
+        - Pi:<br>flag\[i\] = TRUE; turn = j;<br>while(flag\[j\] &amp;&amp; turn == j);<br>do ... ;<br>flag\[i\] = FALSE
+          - Pj:<br>flag\[j\] = TRUE; turn = i;<br>while(flag\[i\] &amp;&amp; turn == i);<br>do ... ;<br>flag\[j\] = FALSE
+      - 主动争取 + 主动谦让 + 检测
+        - 无法解决让权等待(不停的while，累死cpu)
+  - 硬件实现
+    - 中断屏蔽方法：
+      - 使用关中断+临界区+开中断
+      - 优缺点：
+        - 优点
+          - 简单高效
+        - 缺点
+          - 只适用单系统，只能用于内核程序
+    - 硬件指令方法：
+      - TestAndSet：先检测后上锁（原语）
+        - 原语中查看之前的lock，并修改为自己的
+        - bool TestAndSet(bool \*lock)\{<br>     bool old;<br>     old = \*lock;<br>     \*lock = true;<br>     return old;<br>\}
+          - while(TestAndSet(&amp;lock));<br>执行;<br>lock = false;<br>其他代码;
+        - 将双标志后检查法，进行原语实现
+          - 无法解决让权等待
+      - Swap：交换两个字内容（原语）
+        - lock是全局的false，key是局部的true。在原语中，交换lock和key。
+        - Swap(bool \*a, bool \*b)\{<br>// 交换AB<br>\}
+          - key = true;<br>while(key != false)<br>    Swap(&amp;lock, &amp;key);<br>do....<br>lock = false;<br>...
+        - 原理和TestAndSet一个样子
+          - 无法解决让权等待
+      - 优缺点：
+        - 优点
+          - 简单容易、支持进程内有多个临界区，只需要给每一个临界区设置一个bool就可以
+        - 缺点
+          - 进程等待的时候饥饿，无法解决让权等待
+      - 信号量机制
+- 互斥锁：
+  - 这个的缺点就是【忙等】，会一直占用处理机进行循环
+
+
+
+    ```text
+    acquire() {
+        while (!available)
+            ;                    // 忙等
+        available = false;       // 获得锁
+    }
+
+    release() {
+        available = true;        // 释放锁
+    }
+    ```
+
+    > 校注：原图为锁的概念伪代码；实际多线程实现需要原子操作，普通变量的检查和赋值并不保证互斥。
+
+
+
+    - acquire()和release()都是原子操作
+    - 单处理器：
+      - 很蠢的方法，会一直占用CPU又无法解决
+    - 多处理器：
+      - 不错的方法，因为可能在自己这个时间片另一个CPU上的进程把锁release了
+
+## 信号量：
+
+<a href="/images/408-mind-maps/os-0124.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0124.svg" alt="信号量：" width="48" height="48" loading="lazy" /></a>
+
+分组说明：题目不说，默认是对记录型信号量处理；对应：[记录性信号量：](#topic-5effe7ee-ece4-44f6-a83d-537e78f39865)
+
+- 信号量可以用于解决互斥和同步问题，只能被Wait和Signal访问
+  - Wait --- P，Signal --- V
+  - Wait：等待S大于零的时候执行；可执行时S--
+    - Signal：S++
+  - PV操作是一种【低级进程通信原语】
+    - 而不是系统调用命令
+- 整形信号量：
+  - wait(S) 和 signal(S)，<br>其中S是一个int数。
+    - wait：S -= 1
+    - signal：S += 1
+  - 优点：
+    - 解决了同步互斥
+  - 缺点：
+    - 不满足让权等待
+- 记录性信号量：
+  - int + 链表
+    - wait: S -= 1; 把进程加入等待队列; 阻塞进程
+    - signal: S += 1; 把进程从等待队列中移出; 唤醒进程
+  - 满足了让权等待
+- Swait和Ssignal
+  - 格式为：Swait(Si, ti, di; ...)
+    - 对于信号量Si， 每次分配di（即Si = Si - di），如果Si &lt; ti了就不予以分配
+- 信号量实现同步：
+  - s = 0
+    - A:<br>do x ....<br>V(s)
+      - B:<br>P(s)<br>do x ....
+  - 两个进程，先V后P，实现同步
+- 信号量实现互斥：
+  - s = 1
+    - A:<br>P(s)<br>do xxx ...<br>V(s)
+      - B:<br>P(s)<br>do xxx ...<br>V(s)
+  - 进程用PV上锁，实现互斥
+- 信号量实现前驱关系：
+  - A:<br>P(s1)<br>do xxx ...<br>V(s2)<br>V(s3)
+    - B:<br>P(s2)<br>do xxx ...<br>V(s4)<br>V(s5)
+      - ...
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0025.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0025.svg" alt="信号量实现前驱关系：" width="240" height="141" loading="lazy" /></a>
+
+## 管程：
+
+<a href="/images/408-mind-maps/os-0109.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0109.svg" alt="管程：" width="48" height="48" loading="lazy" /></a>
+
+- 管程最开始是在Pascal语言中引入的
+  - 管程就像是一种语法，就像C里面类似static、const等，可以使用也可以不使用，但不可以创建和撤销
+- 作用：
+  - 大量的PV操作给OS的管理带来了麻烦，同步操作不当非常容易死锁。
+  - 管程的特性保证了进程互斥，而无须程序员自己实现互斥，从而降低了死锁的可能性
+  - 通过入口才能访问数据
+  - 每次仅允许一个进程在管程内执行
+- 定义：
+  - 1\. 管程名称
+  - 2\. 共享数据结构
+  - 3\. 对该数据结构进行操作的一组过程
+  - 4\. 对局部于管程内部的共享数据设置初始值
+- 类似class数据结构，管程的变量全是private类型
+- 未命名主题
+- 未命名主题
+- 未命名主题
+- 设置条件变量：
+  - 配图
+
+
+
+    ```text
+    monitor Demo {
+        共享数据结构 S;
+        condition x;  // 条件变量
+        init_code() { ... }
+
+        take_away() {
+            if (S <= 0) x.wait();  // 资源不足，在条件变量上阻塞等待
+            资源足够，分配资源，做一系列相应处理;
+        }
+
+        give_back() {
+            归还资源，做一系列相应处理;
+            if (有进程在等待) x.signal();  // 唤醒一个阻塞进程
+        }
+    }
+    ```
+
+
+
+  - 使用x来对阻塞队列进行挂载
+    - x.wait()
+      - 当x对应的条件不满足时，正在调用管程的进程调用x.wait将自己插入x条件的等待队列，并释放管程。此时其他进程可以使用该管程。
+    - x.signal()
+      - x对应的条件发生了变化，则调用x.signal,唤醒一个因x条件而阻塞的进程。
+  - 注意管程的wait、signal和PV操作的区别：
+    - PV操作一定会使信号量++或者--（不论是记录型还是整形）
+    - 而管程的signal和wait只负责唤醒、阻塞进程（从阻塞队列中进行唤醒或插入到阻塞队列），不一定会有++--
+  - 可以有多个condition x
+    - 可以在一个管程中，管理多个共享资源
+- 管程对于生产者<br>消费者问题的改进：
+  [查看关联主题](#topic-4c32273f-43e6-4f77-beed-94a433d777fc)
+
+  - 配图
+
+
+
+    ```text
+    monitor ProducerConsumer {
+        condition full, empty;  // 控制缓冲区满、空
+        int count = 0;         // 缓冲区中的产品数
+
+        void insert(Item item) {
+            if (count == n) wait(full);
+            count++;
+            insert_item(item);
+            if (count == 1) signal(empty);
+        }
+
+        Item remove() {
+            if (count == 0) wait(empty);
+            count--;
+            if (count == n - 1) signal(full);
+            return remove_item();
+        }
+    }
+
+    producer() {
+        while (1) {
+            item = 生产一个产品;
+            ProducerConsumer.insert(item);
+        }
+    }
+
+    consumer() {
+        while (1) {
+            item = ProducerConsumer.remove();
+            消费产品 item;
+        }
+    }
+    ```
+
+    > 校注：保留教材式管程伪代码。条件等待的具体语义依赖管程模型；使用 Mesa 语义实现时需在循环中重新检查条件。
+
+
+
+  - 批注：管程考的都是选择题
+- 概要：每次只能一个进程访问管程函数
+  概要范围：[定义：](#topic-fa5c0bc8-0700-4237-b315-ad74e2ba996c)
+
+
+
+  ```text
+  monitor Demo {
+      共享数据结构 S;
+
+      init_code() {
+          S = 5;  // 初始化共享资源
+      }
+
+      take_away() {  // 申请一个资源
+          对共享数据结构的一系列处理;
+          S--;     // 可用资源数减 1
+          ...
+      }
+
+      give_back() {  // 归还一个资源
+          对共享数据结构的一系列处理;
+          S++;     // 可用资源数加 1
+          ...
+      }
+  }
+  ```
+
+
+
+## 经典同步问题：
+
+<a href="/images/408-mind-maps/os-0149.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0149.svg" alt="经典同步问题：" width="48" height="48" loading="lazy" /></a>
+
+分组说明：重要考点；对应：[大题总结：](#topic-1c09ba92-b7c9-4f3a-bf15-19cf24a2721f)
+
+- 生产者消费者
+  - 问题描述：一组生产者进程和一组消费者进程共享一个初始为空、大小为n的缓冲区，只有 缓冲区没满时，生产者才能把消息放入缓冲区，否则必须等待；只有缓冲区不空时，消费者才能 从中取出消息，否则必须等待。由于缓冲区是临界资源；它只允许一个生产者放入消息，或一个消费者从中取出消息。
+  - 生产者和消费者是合作协作的关系、同时生产者和消费者对缓冲区是互斥关系
+  - 思路：使用两个信号量控制empty和full，一个信号量控制mutex互斥关系即可，缓冲区大小 &gt; 1
+  - 配图
+
+
+
+    ```text
+    semaphore mutex = 1;  // 互斥访问缓冲区
+    semaphore empty = n;  // 空缓冲区数，n 为缓冲区容量
+    semaphore full = 0;   // 非空缓冲区数
+
+    producer() {
+        while (1) {
+            produce an item in nextp;
+            P(empty);
+            P(mutex);
+            add nextp to buffer;
+            V(mutex);
+            V(full);
+        }
+    }
+
+    consumer() {
+        while (1) {
+            P(full);
+            P(mutex);
+            remove an item from buffer;
+            V(mutex);
+            V(empty);
+            consume the item;
+        }
+    }
+    ```
+
+
+
+- 多生产者消费者问题
+  - 问题描述：桌上有个盘子，每次只能放一个水果。爸爸只放苹果，麻麻只放橘子，儿砸只橘子，女儿只吃苹果。盘子为空才可放，盘子有水果才可拿
+  - 思路：两个生产者两个消费者，所有进程都互斥访问缓冲区，生产者和消费者为合作关系，缓冲区大小为 1
+    - 使用apple、orange、plate三个信号量即可
+    - 缓冲区大小为 1 可以只用一个信号量， &gt; 1 需要full + empty 两个信号量
+  - 配图
+
+
+
+    ```text
+    semaphore plate = 1, apple = 0, orange = 0;
+
+    dad() {
+        while (1) {
+            prepare an apple;
+            P(plate);
+            put the apple on the plate;
+            V(apple);
+        }
+    }
+
+    mom() {
+        while (1) {
+            prepare an orange;
+            P(plate);
+            put the orange on the plate;
+            V(orange);
+        }
+    }
+
+    son() {
+        while (1) {
+            P(orange);
+            take an orange from the plate;
+            V(plate);
+            eat the orange;
+        }
+    }
+
+    daughter() {
+        while (1) {
+            P(apple);
+            take an apple from the plate;
+            V(plate);
+            eat the apple;
+        }
+    }
+    ```
+
+
+
+  - 使用管程实现
+    [查看关联主题](#topic-b08836f7-736f-4d83-bee6-6b077b39399b)
+
+- 读写者问题
+  分组说明：读写公平法；对应：[问题：可能会出现写者饿死的情况](#topic-0dbd0d4f-6f20-415b-b163-37958501ba8e)、[解决办法：写者申请写入后，读者便不可申请读](#topic-2f893505-1497-47b8-8bf0-b9bafce1802a)
+
+  - 问题描述：有读者写者两个进程，共享文件。多个读者可以同时读文件。只能又一个写者写文件。存在有读者读文件时，不允许写者写。必须写者写完后才可以读。
+  - 思路：写者比较简单，写者两两互斥，待读者全退出后写。读者两两不互斥，待写者写毕后进行读取
+    - 1\. 使用 int 计数器来记录当前读者情况
+    - 2\. 使用 信号量 来互斥访问计数器
+    - 3\. 使用 信号量 来控制写者能否写入
+  - 配图
+
+
+
+    ```text
+    int count = 0;        // 记录当前读者数
+    semaphore mutex = 1;  // 保护共享变量 count
+    semaphore rw = 1;     // 控制对共享文件的互斥访问
+
+    writer() {
+        while (1) {
+            P(rw);
+            writing;
+            V(rw);
+        }
+    }
+
+    reader() {
+        while (1) {
+            P(mutex);
+            if (count == 0) P(rw);  // 第一个读者阻止写者
+            count++;
+            V(mutex);
+            reading;
+            P(mutex);
+            count--;
+            if (count == 0) V(rw);  // 最后一个读者允许写者进入
+            V(mutex);
+        }
+    }
+    ```
+
+
+
+  - 问题：可能会出现写者饿死的情况
+    - 不停的有读者到来
+  - 解决办法：写者申请写入后，读者便不可申请读
+    - 配图
+
+
+
+      ```text
+      int count = 0;
+      semaphore mutex = 1;
+      semaphore rw = 1;
+      semaphore w = 1;  // 控制读、写请求进入次序
+
+      writer() {
+          while (1) {
+              P(w);
+              P(rw);
+              writing;
+              V(rw);
+              V(w);
+          }
+      }
+
+      reader() {
+          while (1) {
+              P(w);
+              P(mutex);
+              if (count == 0) P(rw);
+              count++;
+              V(mutex);
+              V(w);
+              reading;
+              P(mutex);
+              count--;
+              if (count == 0) V(rw);
+              V(mutex);
+          }
+      }
+      ```
+
+
+
+- 哲学家进餐
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0148.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0148.svg" alt="哲学家进餐" width="240" height="71" loading="lazy" /></a>
+
+  - 思路：
+    - 哲学家（较多的进程）和筷子（较少的资源），且进程需要持有两个资源
+      - 设计算法来保证不会发生死锁
+  - 有纰漏的做法：
+
+
+
+    ```text
+    Semaphore chopstick[5] = {1, 1, 1, 1, 1};
+    Pi() {
+        do {
+            P(chopstick[i]);            // 取左边筷子
+            P(chopstick[(i + 1) % 5]);  // 取右边筷子
+            Eat;
+            V(chopstick[i]);
+            V(chopstick[(i + 1) % 5]);
+            Think;
+        } while (1);
+    }
+    ```
+
+    > 校注：此图是可能死锁的基础方案，不能将其当作无死锁解法。
+
+
+
+    - 这里存在死锁情况，需要➕两点
+    - 1\. 要么最多只有4个可以同时进餐
+    - 2\. 只有两边筷子都有才可进餐
+  - 正确做法 1 ：只有两边筷子都有才可进餐（每次只有一个哲学家可以拿筷子）
+
+
+
+    ```text
+    Semaphore chopstick[5] = {1, 1, 1, 1, 1};
+    Semaphore mutex = 1;  // 保护取筷过程
+    Pi() {
+        do {
+            P(mutex);
+            P(chopstick[i]);
+            P(chopstick[(i + 1) % 5]);
+            V(mutex);
+            Eat;
+            V(chopstick[i]);
+            V(chopstick[(i + 1) % 5]);
+            Think;
+        } while (1);
+    }
+    ```
+
+
+
+    - 正确做法 2：最多允许4名哲学家拿筷子
+
+
+
+      ```text
+      semaphore chopstick[5] = {1, 1, 1, 1, 1};
+      semaphore count = 4;
+      Pi() {
+          do {
+              P(count);  // 最多允许 4 位哲学家同时尝试取筷
+              P(chopstick[i]);
+              P(chopstick[(i + 1) % 5]);
+              // 吃饭
+              V(chopstick[i]);
+              V(chopstick[(i + 1) % 5]);
+              V(count);
+              // 思考
+          } while (1);
+      }
+      ```
+
+
+
+  - 哲学家算法是贪心算法的反面
+- 吸烟者
+  - 问题描述：假设一个系统有三个抽烟者进程和一个供应者进程。每个抽烟者不停地卷烟并抽掉它，但要卷起并抽掉一支烟，抽烟者需要有三种材料：烟草、纸和胶水。三个抽烟者中，第一个拥有烟草，第二个拥有纸，第三个拥有胶水。供应者进程无限地提供三种材料，供应者每次将两种材料放到桌子上，拥有剩下那种材料的抽烟者卷一根烟并抽掉它，并给供应者一个信号告诉已完成，此时供应者就会将另外两种材料放到桌上，如此重复(让三个抽烟者轮流地抽烟)。
+  - 分析：
+    - 三种消费者分别只持有A, B, C三种资源，当有任意两种资源可使用时，哪个消费者应该去获得资源
+  - 生产者：轮流产生（也可以使用random()来随机)
+
+
+
+    ```text
+    int num = 0;           // 当前轮换序号
+    semaphore offer1 = 0;  // 烟草和纸
+    semaphore offer2 = 0;  // 烟草和胶水
+    semaphore offer3 = 0;  // 纸和胶水
+    semaphore finish = 0;  // 是否抽完
+
+    process P1() {  // 供应者
+        while (1) {
+            num++;
+            num = num % 3;
+            if (num == 0) {
+                将烟草和纸放在桌子上;
+                V(offer1);
+            } else if (num == 1) {
+                将烟草和胶水放在桌子上;
+                V(offer2);
+            } else {
+                将纸和胶水放在桌子上;
+                V(offer3);
+            }
+            P(finish);
+        }
+    }
+    ```
+
+    > 整理说明：原图把发出 offer 信号写在放置材料之前；改为先放好相应两种材料，再发对应信号，避免消费者提前被唤醒。
+
+
+
+    - 消费者：
+
+
+
+      ```text
+      process P2() {  // 拥有烟草者
+          while (1) {
+              P(offer3);
+              拿纸和胶水，卷成烟，抽掉;
+              V(finish);
+          }
+      }
+
+      process P3() {  // 拥有纸者
+          while (1) {
+              P(offer2);
+              拿烟草和胶水，卷成烟，抽掉;
+              V(finish);
+          }
+      }
+
+      process P4() {  // 拥有胶水者
+          while (1) {
+              P(offer1);
+              拿烟草和纸，卷成烟，抽掉;
+              V(finish);
+          }
+      }
+      ```
+
+
+
+- 大题总结：
+  - 【2014年 连续取问题】<br>题中有消费者连续取10件后才能让另一个取
+    - 不能通过while + count 的方法，会死锁。应该直接for(i = 1...10)
+  - 【2015年 基本mutex问题】<br>题中说有AB两人，都可以操作AB的信箱
+    - 注意AB的信箱都是临界资源（在考题中出现了现实生活中的内容，记得分辨清楚）
+  - 【2017年 3线程复数相加问题】<br>在考察死锁的同时，AB线程是读者，C线程是写者。故AB线程和C线程应该有互斥关系，而AB之间无互斥关系
+    - 注意答案不是“公平读写”
+  - 【2019年 哲学家 + 碗问题】<br>n个哲学家，m个碗
+    - 1\. 哲学家问题的最优解是同时只让 n-1 个哲学家拿筷子
+      - 次优解是每次只能一个哲学家拿筷子
+    - 2\. 碗可以用来控制哲学家拿筷子的最大并发数。这里的碗如果多了，就只能 n-1 个拿。如果少了，那么就直接用碗就可以了
+- 考频：超高
+  - 10\*2、11、16\*3、18\*3、20、09大、11大、13-15大、17大、19-22大
+
+## 死锁
+
+<a href="/images/408-mind-maps/os-0110.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0110.svg" alt="死锁" width="48" height="48" loading="lazy" /></a>
+
+- 考频：超高
+  - 09、11-16、18-22
+- 死锁概念：
+  分组说明：都是OS分配资源不合理导致；对应：[两个或两个以上的进程争夺资源](#topic-739900e7-784b-4ed0-a1fe-7a9fd417c333)、[两大原因：](#topic-ded8062f-d776-45d2-a219-1f5a65949843)
+
+  - 两个或两个以上的进程争夺资源
+    - 饥饿只是一个进程得不到资源
+  - 两大原因：
+    - 资源分配不合理
+    - 进程推进顺序非法
+- 产生的必要条件：<br>（死锁一定满足这四个，<br>这四个不可反推死锁）
+  - 互斥条件
+    - 资源不可同时被访问
+      - 反例：扬声器、内存
+  - 不剥夺
+    - 未使用完时，不能被抢走
+  - 请求+保持
+    - 如果P1持有了A，P1也想要B；此时P1堵塞，也不释放A
+  - 循环等待
+    - 在资源分配途中，存在资源循环链
+- 四种处理策略
+  - 死锁预防
+    - 破坏互斥：
+      - SPOOLing技术
+      - 缺点：
+        - 有些资源根本不可以共享
+    - 破坏不剥夺：
+      - 可以进行剥夺
+        - 自己堵塞，全部释放
+        - 自己想要，强行抢占
+      - 缺点：
+        - 实现复杂，反复的申请和释放资源会增加系统开销
+      - 特点：
+        - 这种方法适用于【状态易于保护和恢复的资源】，例如CPU、内存等等
+    - 破坏请求保持：
+      - 一次申请完。不够就不要，够就直接运行
+      - 缺点：
+        - 系统资源容易被浪费，有些资源可能只有进程最开始用一下，后续也不释放
+        - 导致饥饿
+    - 破坏循环等待：
+      - 给系统资源编号
+      - 缺点：
+        - 编号必须相对稳定
+        - 经常会发生作业使用资源顺序和系统规定顺序不同，造成浪费
+        - 按规定次序申请，会很难coding
+    - 批注：事先预防(事先破坏)
+  - 死锁避免
+    - 银行家算法
+      - 配图
+
+
+
+        |Process|Allocation|Need|Available|
+        |---|---|---|---|
+        |P0|0 0 3 2|0 0 1 2|1 6 2 2|
+        |P1|1 0 0 0|1 7 5 0|—|
+        |P2|1 3 5 4|2 3 5 6|—|
+        |P3|0 3 3 2|0 6 5 2|—|
+        |P4|0 0 1 4|0 6 5 6|—|
+
+
+
+    - 批注：动态侦查
+  - 死锁检测
+    - 资源分配图找安全序列
+
+      <a href="/images/408-mind-maps/os-0162.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0162.svg" alt="资源分配图找安全序列" width="240" height="175" loading="lazy" /></a>
+
+      - 如果图不可简化，则为死锁
+    - 批注：动态检测
+  - 死锁解除
+    - 资源剥夺法
+      - 挂起某些死锁进程，剥夺资源分配给其他死锁进程。注意防止被挂起进程饥饿
+    - 撤销进程法
+      - 强制撤销部分/全部死锁进程并剥夺这些进程的资源。代价大，撤销按进程优先级进行
+    - 进程回退法
+      - 让一个或多个进程回退到足以避免的时刻。系统需要保持进程的历史情况
+    - 批注：解除手段
+  - 感觉死锁避免和检测的灵活性不够，银行家算法这种算法完全可以检测到死锁的，资源有向图这种数据结构也是完全可以提供进程使用资源的顺序的
+  - 概要：系统只是提供检测和解除手段，不会有任何实质上的措施
+    概要范围：[死锁检测](#topic-64234ada-7387-44ff-affc-629166437286)、[死锁解除](#topic-f056f7e4-3589-4d51-aa73-6e55a7c31103)
+
+- 死锁与不安全态：
+  - 不安全态 &gt; 死锁，如果系统中现在有些进程持有了很多资源正在运行，而且现在系统中的资源无法进行正常分配（不安全）。但是这些进程运行完毕释放资源后，就可以正常分配资源了（非死锁）
+
+## 原图关联关系
+
+- [进程处在非内核程序临界区](#topic-10a727f9-ffa5-41e4-899d-3822ffa9e532) → [进程在内核程序临界区](#topic-3d79f212-9dec-43fc-8eb6-71add89ea4eb)
+````
+
+<a id="topic-bf58d12bd5489ee4093d39481d" />
+<a id="topic-245522b8-ec39-455a-bba2-c90fef9e3a8a" />
+<a id="topic-13eb999960da13f08e91693e86" />
+<a id="topic-31baf3afe8794c8ee93928cac0" />
+<a id="topic-7118cccc0d293adf5ddf392232" />
+<a id="topic-1098924386389a3f0661e907ba" />
+<a id="topic-72eb8a2eec889bd095238910c5" />
+<a id="topic-b9b8ae620c9901e00e82ab56f2" />
+<a id="topic-5513bb3e-fa4a-4526-bb99-427df688483e" />
+<a id="topic-84653115-a8ed-4207-a8f8-2dd198c905d1" />
+<a id="topic-d1ba3098-0c5e-41bf-a1f8-b17c064fcbf4" />
+<a id="topic-4d9b529f-a968-43cf-9c7c-0ed075520228" />
+<a id="topic-ff647a53-943f-42f7-bef9-5e4ebfaa9a4c" />
+<a id="topic-33082e69-32db-4335-b31e-0ad239f87215" />
+<a id="topic-8c060148-60be-4d71-8573-4c881b912511" />
+<a id="topic-3c80ad87-deb3-4973-8b0b-3f7e62485a72" />
+<a id="topic-4612f6a1-880c-4e10-bf77-9906dbc04f13" />
+<a id="topic-af16649f-b034-473f-b1b3-ded2b016ba09" />
+<a id="topic-085c5da7-4fb5-4fe6-8f57-897773b17273" />
+<a id="topic-e9641430-9227-4b12-b98b-871677a4a9ee" />
+<a id="topic-16961122-73fe-4af4-b9ba-cc222b9aac5a" />
+<a id="topic-7b4cb26b-b605-4358-a1cc-6320e4c7b82e" />
+<a id="topic-d71be280-7338-491d-a3c5-386c8821fea1" />
+<a id="topic-d1984a29-3ffd-4a55-b10d-a4a5e6b5a855" />
+<a id="topic-293f8f1f-3303-4081-9c62-ed1f0732435e" />
+## 第三章 内存管理
+
+````mindmap
+# 第三章 内存管理
+
+查看关联主题（原图链接目标缺失：`xmind:#67ddbcb1-85c9-4478-a0aa-580e9fdcd971`）
+
+## 作用：
+
+<a href="/images/408-mind-maps/os-0128.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0128.svg" alt="作用：" width="48" height="48" loading="lazy" /></a>
+
+- 内存空间的分配和回收
+  - OS决定的如何分配回收
+- 地址转换
+  - 逻辑地址转为物理地址
+- 内存空间的扩充
+  - 利用例如：覆盖、交换、虚拟存储的技术来实现内存扩充
+- 存储保护
+  - 保证各个作业在不同的存储空间内运行，不受干扰
+- 考频：低
+  - 无
+
+## 内存管理的基本原理和要求
+
+<a href="/images/408-mind-maps/os-0012.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0012.svg" alt="内存管理的基本原理和要求" width="48" height="48" loading="lazy" /></a>
+
+- 考频：低
+  - 09
+- 流程：
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0085.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0085.svg" alt="流程：" width="240" height="97" loading="lazy" /></a>
+
+- 编译
+  - 编译的步骤：
+    - 源代码文件 .c
+      - 预处理 -&gt; .i
+        - 编译 -&gt; .s
+          - 汇编 -&gt; .o
+            - 链接 -&gt; .exe
+            - 概要：ci,so,exe
+              概要范围：[链接 -&gt; .exe](#topic-245522b8-ec39-455a-bba2-c90fef9e3a8a)
+
+  - 编译后产生的目标模块地址都是从0开始的相对地址
+- 链接
+  - 概念
+    - 由链接程序把库函数和目标模块连着一起
+      - 库代码也需要新分配空间
+  - 静态链接
+    - 程序运行前，把目标模块、库文件链接成同一个完整的装配模块，后不再拆开
+  - 装入时动态链接
+    - 程序在装入内存时，边进行装入边链接
+    - 易于修改和更新，便于共享
+  - 运行时动态链接
+    - 程序装入时不进行链接，运行时才链接（动态链接库DLL）
+    - 在执行过程中未被用到的目标模块，都不会被调入内存和被链接到装入模块上
+    - 优点是能加快程序的装入过程， 还可节省大量的内存空间。
+- 装入
+  - 概念
+    - 从逻辑地址更改到物理地址
+  - 绝对装入
+    - 代码中的逻辑地址与物理地址相同，编译时装入（只适用单道程序）
+  - 可重定位装入<br>（静态重定位）
+    - 程序执行之前，完成逻辑地址和物理地址的转换，运行时内存不移动也不再申请空间。
+  - 动态运行时装入<br>（动态重定位）
+    - 运行时才进行逻辑地址到物理地址的转化
+    - 整个系统中只设计一个重定位寄存器，所有进程共享使用
+  - 概要：只有装入到连续地址空间中，不能修改
+    概要范围：[绝对装入](#topic-13eb999960da13f08e91693e86)、[可重定位装入<br>（静态重定位）](#topic-31baf3afe8794c8ee93928cac0)
+
+  - 概要：不连续空间，装入部分代码即可运行，动态分配内存
+    概要范围：[动态运行时装入<br>（动态重定位）](#topic-7118cccc0d293adf5ddf392232)
+
+- 逻辑地址与物理地址
+  - 通过MMU（内存管理部件）将逻辑地址转为物理地址
+- 程序运行的内存映像和地址空间
+  - 内存中程序几大部分
+    - 只读代码段（可被共享）
+    - 数据段（保存全局和静态变量）
+    - PCB进程控制块（放在系统区，由操作系统控制）
+    - 堆（存放动态分配的变量）
+    - 栈（实现函数调用）
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0009.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0009.svg" alt="程序运行的内存映像和地址空间" width="240" height="195" loading="lazy" /></a>
+
+  - MMU（内存管理部件）
+    - 一个把虚拟地址转为物理地址的程序
+  - 在虚拟存储系统中，每个进程都有独立的地址空间，空间中的地址为虚拟地址
+    - 可以通过MMU来转为物理地址
+- 内存保护
+  - 方法一：上下限寄存器
+  - 方法二：重定位 + 届地址寄存器
+    - better
+- 内存共享：
+  - 后面细讲
+    [查看关联主题](#topic-d1984a29-3ffd-4a55-b10d-a4a5e6b5a855)
+
+- 内存分配和回收
+
+## 覆盖和交换
+
+<a href="/images/408-mind-maps/os-0156.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0156.svg" alt="覆盖和交换" width="48" height="48" loading="lazy" /></a>
+
+- 覆盖和交换
+  - 覆盖：
+    - 把内存分为固定区 + 覆盖区
+      - 经常活跃的部分放在固定区中
+      - 即将访问的段放在覆盖区中，其他放在外存
+    - 固定区就是不可被覆盖的
+    - 用于单一连续存储管理
+  - 交换：
+    - 换出：把处于等待状态的程序从内存移到辅存，就可以把内存空间腾出来
+    - 换入：把准备好竞争CPU进程从辅存移动到内存
+      - 中级调度
+        [查看关联主题](#topic-68d33468-7769-4d76-927b-20546a7810ef)
+
+    - 不同状态的进程<br>能否交换：
+      - 创建态，可以
+        - 即创建态 -&gt; 挂起态
+      - 死锁，可以
+        - 非常好
+      - 处于临界区，不行
+        - 因为这片临界区的访问会一直阻塞，直到该被挂起的进程重新恢复
+      - 正在IO操作，不行
+        - 如果是A进程Input阶段，则可能造成新的B进程交换后，输入设备覆盖掉了B进程的指令
+- 可重入程序：
+  - 法一：共享使用同一块存储空间
+  - 法二：通过动态链接的方式将所需的程序段映射到相关的进程中
+    - 最大的优点：减少了程序段的调入调出
+- 考频：低
+  - 无
+
+## 连续分配
+
+<a href="/images/408-mind-maps/os-0048.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0048.svg" alt="连续分配" width="48" height="48" loading="lazy" /></a>
+
+- 连续分配和非连续分配：装入
+- 内部、外部碎片
+  - 程序使用的空间、程序申请的空间、内存总空间
+  - 内部碎片：程序申请空间 - 程序使用的空间
+  - 外部碎片：内存总空间 - 程序申请空间
+- 单一连续分配
+  - 一个内存空间只给一个进程使用
+  - 优点：
+    - 简单、无外部碎片、采用覆盖技术
+  - 缺点：
+    - 单用户、单任务、有内部碎片、利用率低
+- 固定分区分配
+  - 分区大小相同
+    - 将内存空间划分为若干固定大小的区域
+  - 分区大小不同
+    - 划分为多个小分区、适中中分区、少量大分区
+  - 分区说明表
+    - （分区号） \| 大小/KB 、始址/KB、状态
+
+
+
+      **分区使用表**
+
+      |分区号|大小 / KB|起址 / KB|状态|
+      |---:|---:|---:|---|
+      |1|12|20|已分配|
+      |2|32|32|已分配|
+      |3|64|64|已分配|
+      |4|128|128|未分配|
+
+      **空间分配情况（地址向下递增）**：OS 从 0 开始；作业 A 从 20 开始；作业 B 从 32 开始；作业 C 从 64 开始；128～256 为未分配区。
+
+
+
+  - 优点：
+    - 多道程序设计、无外部碎片
+  - 缺点：
+    - 程序太大，分区装不下
+    - 主存利用率低，很多内部碎片
+    - 没有内存共享能力
+- 动态分区分配
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0061.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0061.svg" alt="动态分区分配" width="240" height="74" loading="lazy" /></a>
+
+  - 记录存储内存使用情况
+    - 内存分区链、内存分区块
+    - 分区表
+      - (分区号) \| 大小/KB、始址/KB、状态
+  - 分配回收
+    - 动态分区分配算法
+      - 首次适应
+        - 找到第一个满足的就行
+          - 最好的
+      - 最佳适应
+        - 找到最小满足的一个（排序）
+      - 最坏适应
+        - 找到最大满足的一个（排序）
+      - 邻近适应
+        - 首次适应 + 指针不回溯
+    - 回收（4种）
+      - 紧凑技术
+      - 分区前面有一块
+        - 改前一块的大小
+      - 分区后面有一块
+        - 改后一块的大小 + 始址
+      - 分区前后都有
+        - 合并前后两块，改大小
+      - 分区前后都无
+        - 新增一块
+  - 分配流程：
+    - 系统在初始化后除操作系统占据一部分内存外，其余部分都是【自由空间】。作业申请内存时候，OS分配一个大小相当的内存过去，将作业创建为进程，在作业运行完毕后，在释放内存
+      - 申请内存阶段就是装入阶段
+
+## 非连续分配
+
+<a href="/images/408-mind-maps/os-0069.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0069.svg" alt="非连续分配" width="48" height="48" loading="lazy" /></a>
+
+- 概念
+  - 页、页表、页框、页帧、块、页面、内存块、物理块、物理页面、页表项、段、段表、段表项
+    - 对应关系
+      - 进程的
+        - 页、页面
+      - 内存的
+        - 页框、页帧、块、内存块、物理块、物理页面
+      - 外存的
+        - 块、外存块
+      - 其他的
+        - 页表、页表项、段表、段表项
+  - 非连续分配：
+    - 把主存空间划分为大小相等且固定的块，块相对较小，作为主存的基本单位。每个进程也以块为单位进行划分，进程在执行时，以块为单位逐个申请主存中的块空间。
+- 分页存储
+  - 基本分页存储管理
+    - 原理
+      - 把内存划分为数个大小相同且固定的块、块相对较小、作为主存的基本单位
+      - 页面和内存块的完全大小相同
+      - 配图
+
+        <a href="/images/408-mind-maps/os-0017.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0017.svg" alt="原理" width="188" height="220" loading="lazy" /></a>
+
+    - 转换
+      - 内存总大小为 4GB, 内存块大小为4KB, 所以内存中一共可以有 2^20个内存块，内存块编号为0 ~ 2^20 - 1
+        - 由此可知【页表项中的块号】至少需要20bit来存储，即至少需要3B来存储（如果需要填充为B）
+    - 数据结构
+      - 逻辑地址
+        - 页号、偏置值
+          - 硬件划分
+          - 链接后产生的
+          - 使用2^n B来设计页面大小，很方便快捷
+          - 按字节寻址 -&gt; 偏置值W的bit数就为 n
+      - 页表寄存器（PTR)
+        - 页表始址、页表长度
+      - 页表项结构
+        - （页号）块号
+          - 页号并不占用存储空间
+    - 基本地址变换机构：<br>得到一个逻辑地址，操作流程
+      - 对逻辑地址A的页号先进行越界检查，确认不会中断，与页表始址进行相加（块号地址 = F + P \* 页表项所占地址个数），就可以对应到块号了。物理地址 = 块号 拼接上(concat) 偏置值
+
+        <a href="/images/408-mind-maps/os-0071.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0071.svg" alt="对逻辑地址A的页号先进行越界检查，确认不会中断，与页表始址进行相加（块号地址 = F + P \* 页表项所占地址个数），就可以对应到块号了。物理地址 = 块号 拼接上(concat) 偏置值" width="240" height="136" loading="lazy" /></a>
+
+        - 两次内存访问
+        - 一次越界检测
+    - 访问内存次数：
+      - 两次
+        - 访问页表
+        - 访问内存中对应的位置
+  - 快表分页存储
+    - 配图
+
+      <a href="/images/408-mind-maps/os-0044.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0044.svg" alt="快表分页存储" width="240" height="136" loading="lazy" /></a>
+
+    - 多了一个TLB
+      - 相联存储器、快表
+      - 快表中存储了页号 + 对应块号
+        - 像计网中的路由器的特殊路径一样
+    - 命中率
+      - 90%左右
+        - 就有90%的访问只需要访问一次内存即可
+    - 操作流程的改进
+      - 进行越界判断，再查快表。如果快表中没有，查慢表
+        - 也可以快表慢表同时查
+  - 两级页表<br>（升级版）
+    - 逻辑地址结构
+      - 一级页号、二级页号、页内偏移
+    - 第一级页表的名称
+      - 页目录表/顶级页表/外层页表/一级页表
+    - 第二级页表的名称
+      - 二级页表
+    - 操作流程
+      - 获得逻辑地址的一级页号，一级页号进行溢出检测，通过访问一级页表找到对应的二级页表对应的块号。然后先对二级页号进行溢出检测，通过二级页号在二级页表中查找内存块号。找到内存块号就可以访问啦
+
+        <a href="/images/408-mind-maps/os-0059.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0059.svg" alt="获得逻辑地址的一级页号，一级页号进行溢出检测，通过访问一级页表找到对应的二级页表对应的块号。然后先对二级页号进行溢出检测，通过二级页号在二级页表中查找内存块号。找到内存块号就可以访问啦" width="240" height="186" loading="lazy" /></a>
+
+        - 配图
+
+          <a href="/images/408-mind-maps/os-0063.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0063.svg" alt="获得逻辑地址的一级页号，一级页号进行溢出检测，通过访问一级页表找到对应的二级页表对应的块号。然后先对二级页号进行溢出检测，通过二级页号在二级页表中查找内存块号。找到内存块号就可以访问啦" width="240" height="135" loading="lazy" /></a>
+
+          - 三次内存访问
+          - 两次越界查看
+          - 概要：如果是N级页表，则为N+1次内存访问，N次越界检测
+            概要范围：[三次内存访问](#topic-84653115-a8ed-4207-a8f8-2dd198c905d1)、[两次越界查看](#topic-d1ba3098-0c5e-41bf-a1f8-b17c064fcbf4)
+
+    - 特点（了解）：
+      - 页目录表中的表项个数<br>和<br>二级页表的表项个数可以不同
+        - 例如：OS中一个顶级页表，一共有2^7个二级页表，每个二级页表可以存储2^9个页表项，每个页面大小为2^10
+          - 则逻辑地址中：页目录号为7bit，页号为9bit，偏置值为10bit
+- 分段存储
+  - 分段储存和分页存储出发点上的不同
+    - 分段存储：分段存储是给程序员设计的
+      - 段：信息的逻辑单位，用户可见
+    - 分页存储：是为操作系统设计的
+      - 页：信息的物理单位，用户不可见
+  - 基本分段存储
+    - 逻辑地址结构
+      - 段号 + 偏置值
+    - 段表寄存器
+      - 段表始址 + 段表长度
+    - 段表项
+      - （段号）\| 段长、始址（没有内存块咯）
+    - 操作流程
+      - 首先获得逻辑地址，判断段号是否越界，然后访问段表，查看对应段的偏置值有无越界，随后即可访问
+
+        <a href="/images/408-mind-maps/os-0111.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0111.svg" alt="首先获得逻辑地址，判断段号是否越界，然后访问段表，查看对应段的偏置值有无越界，随后即可访问" width="240" height="143" loading="lazy" /></a>
+
+        - 两次内存访问
+        - 两次越界检测
+    - 分段的地址是二维的（了解）
+  - 段页存储方式<br>（升级版）
+    分组说明：有变化；对应：[段表项](#topic-4d9b529f-a968-43cf-9c7c-0ed075520228)
+
+    - 逻辑地址结构
+      - 段号、页号、偏置值
+        - 在程序员设计分段时，还是太大了
+    - 段表项
+      - （段号）、页表长度、页表始址
+    - 页表项
+      - （页号）、块号
+    - 操作流程
+      - 首先获得逻辑地址，判断段号是否越界，访问段表项，判断页号是否越界，就页表始址+偏置值
+
+        <a href="/images/408-mind-maps/os-0168.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0168.svg" alt="首先获得逻辑地址，判断段号是否越界，访问段表项，判断页号是否越界，就页表始址+偏置值" width="240" height="144" loading="lazy" /></a>
+
+        - 三次内存访问
+        - 两次检测
+    - 引入快表
+      - 关键字：段号、页号
+        - 值：页帧号、保护码
+  - 采用分页/分段管理（了解）
+    - 提供给用户的物理空间 = 总空间 - 段表/页表空间
+      - 所以分页、分段无法确定要分配多少空间给用户
+- 考频：超高
+  - 09、10\*2、14\*2、16、17、19\*3、21、13大
+
+## 虚拟内存
+
+<a href="/images/408-mind-maps/os-0124.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0124.svg" alt="虚拟内存" width="48" height="48" loading="lazy" /></a>
+
+- 考频：超高
+  - 11\*2、12、13、14\*2、15\*2、16\*2、19、20、21\*2、22\*2、09大、10大、12大、15大、17大、18大、20大
+- 为什么使用虚拟内存
+  - 若同时运行的进程太多，则需要很多的内存，当一个程序没有内存空间可用时，那么它甚至无法运行。 所以，在物理上扩展内存相对有限的条件下，应尝试以一些其他可行的方式在逻辑上扩充内存。
+- 虚拟内存的空间大小约束
+  - 实际容量 ≤ 内存+外存
+    - 硬件硬性要求
+  - 最大容量 ≤ 计算机地址位数容纳的最大容量
+    - 例如32位地址系统，虚存最大为2^\{32\} B
+  - 概要：需要两种都满足
+    概要范围：[实际容量 ≤ 内存+外存](#topic-ff647a53-943f-42f7-bef9-5e4ebfaa9a4c)、[最大容量 ≤ 计算机地址位数容纳的最大容量](#topic-33082e69-32db-4335-b31e-0ad239f87215)
+
+- 虚存的好处和缺点
+  - 好处：使用了外存空间扩充了内存空间，通过一定程度的换入换出使得整个系统在逻辑上能够使用一个远远超出其物理内存大小的内存容量
+  - 缺点：虚拟内存技术调换页面时需要访问外存，会导致平均访存时间增加，若使用了不合适的替换算法，则会大大降低系统性能
+- 虚拟内存的基本概念
+  - 传统存储管理方式
+    - 一次性
+      - 程序一次性全部装入内存
+        - 程序大，运行不了
+        - 程序多，并发度低
+    - 驻留性
+      - 程序直至运行结束才会被换出内存
+  - 局部性原理
+    - 时间局部性
+      - 某条指令被执行，不久会再被执行
+    - 空间局部性
+      - 访问了某条指令，其相邻的代码/指令也会很快被访问
+  - 虚拟存储器的定义和特征
+    - 特点：
+      - 分内余外
+        - 部分装入内存，其余留在外存
+      - 内需调入
+        - 程序执行过程中，所访问的信息不在内存，需要OS把信息调入到内存中
+      - 空闲调出
+        - OS将内存中暂时不需要的内容换出到外存
+    - 多次性
+      - 作业无须运行时全部装入内存，可以分多次完成装入
+    - 对换性
+      - 作业无须常驻内存，可以在运行过程中换入换出
+    - 虚拟性
+      - 逻辑上扩充内存的容量
+  - 虚拟内存技术的实现
+    - 要建立在
+      - 非连续分配的情况下
+    - 三大虚拟内存实现方式
+      - 请求分页存储
+      - 请求分段存储
+      - 请求段页式存储
+      - 概要：与非请求模式的区别：采用了虚拟内存的技术，不需要把页/页面全部都先放入内存中，而是在运行中检测到缺页再去外存中读取
+        概要范围：[请求分页存储](#topic-8c060148-60be-4d71-8573-4c881b912511)、[请求分段存储](#topic-3c80ad87-deb3-4973-8b0b-3f7e62485a72)、[请求段页式存储](#topic-4612f6a1-880c-4e10-bf77-9906dbc04f13)
+
+    - 需要的四个硬件支持
+      - 一定的内外存
+      - 页表/段表数据结构
+      - 中断机制
+      - 地址变换
+- 请求分页管理
+  - 页表机制
+    分组说明：在非虚拟存储的页表、段表是基本固定的，而虚拟存储的页表要实时记得要不要修改页表项；对应：[配图／公式](#topic-af16649f-b034-473f-b1b3-ded2b016ba09)
+
+    - 配图
+
+      <a href="/images/408-mind-maps/os-0120.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0120.svg" alt="页表机制" width="240" height="41" loading="lazy" /></a>
+
+  - 缺页中断机构
+    - 内存有空闲块
+      - 直接分配空闲块给缺页部分，修改【页表】
+    - 内存无空闲块
+      - 通过算法淘汰某页
+        分组说明：容易忘；对应：[【若被修改了，写回外存】](#topic-085c5da7-4fb5-4fe6-8f57-897773b17273)、[【若该页也存在于快表中，一并删除】](#topic-e9641430-9227-4b12-b98b-871677a4a9ee)
+
+        - 【若被修改了，写回外存】
+        - 【若该页也存在于快表中，一并删除】
+  - 地址变化机构
+    - 配图
+
+      <a href="/images/408-mind-maps/os-0081.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0081.svg" alt="地址变化机构" width="240" height="199" loading="lazy" /></a>
+
+- 页面分配策略
+  - 调入页面的时机
+    - 预调页
+      - 根据局部性原理，一次调入若干相邻的页
+      - 成功率不高，进程首次调入时，由程序员指定预调页
+    - 请求调页
+      - 运行时进行调页
+  - 从何处调用页面
+    - 外存结构
+      - 对换区 + 文件区
+        - 对换区是连续分配
+        - 文件区是离散分配
+    - 系统有足够对换区
+      - 直接 内存 ↔ 对换区
+    - 系统没有足够对换区
+      - 不会被修改的：文件区 → 内存
+      - 会被修改的：对换区 ↔ 内存
+    - Unix方式
+      - 首次都是 文件区 → 内存
+      - 其余 对换区 ↔ 内存
+      - 配图
+
+        <a href="/images/408-mind-maps/os-0116.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0116.svg" alt="Unix方式" width="240" height="175" loading="lazy" /></a>
+
+  - 驻留集大小
+    - 驻留集：
+      - 分配给进程的物理块大小（OS概念）
+    - 固定分配 VS 可变分配
+      - 固定：每个进程的驻留集刚开始就确定
+      - 可变：每个进驻留集是可变的
+    - 局部置换 VS 全局置换
+      - 局部：缺页时，进程先自己进行页面置换，OS不干预。根据进程的缺页率，OS再进行空闲块分配的
+      - 全局：进程缺页，OS直接送一块
+        - 如果没有空闲块，就选择”未锁定”的页面置出外存
+    - 联合：
+      - 固定分配局部置换
+        - 驻留集大小不变，自己内部置换
+      - 可变分配全局置换
+        - 驻留集大小可变，缺页就给你新的
+      - 可变分配局部置换
+        - 最好，灵活调配，缺页率高就给新的，低就拿走
+  - 批注：页框分配
+- 页面置换算法
+  - OPT
+    - 最佳置换算法
+    - 无法实现、找最长时间不被访问的块置换（作为算法的评价标准）
+  - FIFO
+    - 先进先出
+      - 队列类算法
+        - 会出现Belady异常：总分配的内存物理块（内存块）数增加，导致缺页率也会增加
+    - 实现简单，性能差
+    - 与首次适应进行区分
+      [查看关联主题](#topic-5513bb3e-fa4a-4526-bb99-427df688483e)
+
+  - LRU
+    - LAST RECENTLY USED
+    - 实现困难，需要硬件支持、开销大
+    - 使用堆栈进行模拟
+      分组说明：区别：考试做法这里面不考虑页面对应哪一个物理块。；对应：[堆栈上方的是新的，下方的是旧的，pop从下面pop出现，上面push进入](#topic-16961122-73fe-4af4-b9ba-cc222b9aac5a)
+
+      - 堆栈上方的是新的，下方的是旧的，pop从下面pop出现，上面push进入
+
+        <a href="/images/408-mind-maps/os-0127.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0127.svg" alt="堆栈上方的是新的，下方的是旧的，pop从下面pop出现，上面push进入" width="240" height="140" loading="lazy" /></a>
+
+        - 王道的做法是底层实现的方法。（用访问字段的值来模拟堆栈）
+
+          <a href="/images/408-mind-maps/os-0139.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0139.svg" alt="王道的做法是底层实现的方法。（用访问字段的值来模拟堆栈）" width="240" height="80" loading="lazy" /></a>
+
+          - 批注：底层实现
+        - 批注：考试做法
+  - CLOCK
+    - 简单CLOCK（NRU算法）
+      - 只使用访问位
+        - 第一轮扫描的时候，把访问位为0的换出，边扫描边把访问位全部置为0。进行第二轮扫描
+    - 改进CLOCK置换算法
+      - 使用访问位 + 修改位
+        - 优先淘汰没有被修改过的页面
+        - 四级访问：
+          - （书中的P用的A来表示）
+          - P = 0，M = 0
+            - 未访问，未修改
+          - P = 0，M = 1
+            - 未访问，有修改
+              - 本次扫描结束后把所有的P都改为0，然后重复扫描
+          - P = 1，M = 0
+            - 访问过，未修改
+          - P = 1， M = 1
+            - 访问过，修改过
+          - 概要：如果会搜到这里，P其实已经更改为0了
+            概要范围：[P = 1，M = 0](#topic-7b4cb26b-b605-4358-a1cc-6320e4c7b82e)、[P = 1， M = 1](#topic-d71be280-7338-491d-a3c5-386c8821fea1)
+
+- 抖动 &amp; 工作集
+  - 抖动定义
+    - 刚换出的马上要换入主存，刚换入的马上要换出
+    - 产生原因：
+      - 某个进程频繁访问的页面数目高于可用的物理页面帧数
+    - 解决办法：
+      - 工作集
+  - 工作集W和时间t和工作窗口大小delta
+    - 基于局部性原理，OS实时跟踪进程，用最近访问过的页面来确定工作集。例如在t1时刻，工作集窗口大小为5，窗口内的页面是2, 3, 5, 3, 2，此时工作集为\{2, 3, 5\}
+      - 随后操作系统为进程分配【 &gt; 工作集的驻留集】大小，就会保证不抖动
+      - 拓展：
+        - 有些OS会根据工作集来设计页面置换算法，根据进程近期访问的页面来确定换什么页面
+  - 工作集和驻留集关系
+    - 工作集  &lt; 驻留集
+- 内存共享、内存映射文件
+  - 页框分配：
+    - 即页面分配策略，连续、非连续分配
+  - 内存映射文件：
+    - mmp, Memory-Mapped File
+    - 通过内存映射，使得多个进程的某一个虚拟进程地址区域对应内存中同一个物理地址区域
+  - 虚存性能因素：
+    - 缺页率是影响虚存性能的最主要因素
+    - 提高性能的办法
+      - 设置好页面大小
+        - 太大会增加内部碎片
+        - 太小会使得缺页率高、页表过长
+      - 设置好工作集、驻留集
+      - 设置好LRU、CLOCK置换算法
+      - 提高程序的局部性
+    - 概要：TLB、Cache命中率都没有这么主要
+      概要范围：[缺页率是影响虚存性能的最主要因素](#topic-293f8f1f-3303-4081-9c62-ed1f0732435e)
+
+- 地址翻译：
+  - 详细看计组
+  - 虚地址 -&gt; 物理地址
+
+    <a href="/images/408-mind-maps/os-0143.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0143.svg" alt="虚地址 -&amp;gt; 物理地址" width="228" height="220" loading="lazy" /></a>
+
+    - 物理地址 -&gt; 数据
+
+      <a href="/images/408-mind-maps/os-0006.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0006.svg" alt="物理地址 -&amp;gt; 数据" width="216" height="220" loading="lazy" /></a>
+
+<a href="/images/408-mind-maps/os-0088.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0088.svg" alt="END" width="48" height="48" loading="lazy" /></a>
+
+## 原图关联关系
+
+- [分区说明表](#topic-72eb8a2eec889bd095238910c5) → [分区大小不同](#topic-1098924386389a3f0661e907ba)
+````
+
+<a id="topic-9b795769bb79592d3c519ac14c" />
+<a id="topic-b7f9fa700cb86831eb33882eef" />
+<a id="topic-d8686039872b05bd29adab0024" />
+<a id="topic-3033e06e-b7c0-4693-b866-918c4926dd7a" />
+<a id="topic-a5f711d2-ec40-4f6f-90d2-5b8ba0361bab" />
+<a id="topic-3fd88bd47d2a95e31c3d0969c2" />
+<a id="topic-58f85d64f6e9b2f488d2eb239d" />
+<a id="topic-b73a0f2132e9883830a2992d3a" />
+<a id="topic-3c7a28f69ddab0de4e0849abd1" />
+<a id="topic-624b1ba87e5a35a7eedcfba5f8" />
+<a id="topic-136b3d008cb8e5450eda4bc1b8" />
+<a id="topic-dd5a67c15b9ac14d4b93bb6631" />
+<a id="topic-2415e2c8-8ee5-4506-8b8b-6e374eb63054" />
+<a id="topic-bd6acc6ffd39c0d226933aa394" />
+<a id="topic-f158ca057e5b4e6e9a1c480b05" />
+<a id="topic-507b619fb5d9684641409938cb" />
+<a id="topic-5dba684f922bbb599f73682652" />
+<a id="topic-456b69e7333bdb7fd463b9e956" />
+<a id="topic-833b101635b8724c3fbc7a115f" />
+<a id="topic-a84c8d37-21c7-45f6-bf8b-bc3d873a55f5" />
+<a id="topic-be2b69d0a93ab928db8f597ddb" />
+<a id="topic-067b4ed7fb58410475d31bc967" />
+<a id="topic-714c4a0f-0f48-42db-bb8c-597b43829ef7" />
+<a id="topic-61a5f04e-e9fc-4308-9d09-ec125b0f528d" />
+<a id="topic-06d8585e032b3b7203755b6da8" />
+<a id="topic-68e85063ead970e53869193465" />
+<a id="topic-6069104764b92b9915c139633e" />
+<a id="topic-94f93926462b5d7c991f5b6e93" />
+<a id="topic-dc67be4d-2571-4a02-99ba-8c8ea3a09305" />
+<a id="topic-93fd0103-b519-4be5-92b0-b1117b49edca" />
+<a id="topic-e7d35491-adca-4fcf-8309-07c40e013d31" />
+<a id="topic-a4ff8c69-8258-49c5-82c0-90f3a814bb33" />
+<a id="topic-52a0ab73-cdd9-489e-9f56-ba136efc1172" />
+<a id="topic-e00cbca9-9e81-4156-bc10-eb67940dabab" />
+<a id="topic-1c3192e2-4b19-44ae-adae-be7e74477a96" />
+<a id="topic-a4779db2-b8ad-4025-9b6a-a9ec0312617f" />
+<a id="topic-42c2f796-044a-4167-bbde-cee6f637840d" />
+<a id="topic-a5529ab9-0e3a-4b85-9033-b785203e3d12" />
+<a id="topic-4f663e8e-69a1-4489-aaa3-aa3c83682406" />
+<a id="topic-4a7e8c08-7329-4611-8c2b-b6c19478d3c2" />
+<a id="topic-cbcb2654-f283-4e5b-9039-118706fefc58" />
+## 第四章 文件管理
+
+````mindmap
+# 第四章 文件管理
+
+[查看关联主题](#topic-35a78ebe-be39-4bce-b906-df4da3046cb5)
+
+## 文件
+
+<a href="/images/408-mind-maps/os-0086.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0086.svg" alt="文件" width="48" height="48" loading="lazy" /></a>
+
+- 定义
+  - 信息集合、文本文档图片程序...
+- 在用户角度中：
+  - OS引入文件系统的目的是可以让用户实现按名存取
+  - 文件系统的设计是为了方便用户的
+- 属性
+  - 又称：文件元数据
+  - 名称、标志符、类型、位置、大小、保护、时间、日期、用户标识 等
+  - 文件名
+    - 同一目录下，文件名称唯一。是用户搜索的主要内容
+  - 标识符
+    - 每个文件都由一个的唯一标签，人不可读
+  - 保护信息
+    - 访问控制信息
+  - 其他属性
+    - 类型、位置、大小、时间
+- 文件控制块、索引节点：
+  [查看关联主题](#topic-dd5a67c15b9ac14d4b93bb6631)
+
+- 结构
+  - 数据项
+    - 基本数据项
+      - 原子数据，不可再分
+    - 组合数据项
+      - 多个基本数据项组成
+  - 记录
+    - 相关的数据项的集合
+  - 文件
+    - 记录式文件
+      - 由众多记录的集合
+    - 流式文件
+      - 无结构文件组成字符流
+- 保护
+  - 口令保护
+    - 优点：
+      - 口令开销小
+    - 缺点：
+      - 保存在内存中，很不安全
+  - 加密保护
+    - 优点：
+      - 保密性强
+    - 缺点：
+      - 编码、译码需要一定时间
+  - 访问控制
+    - 访问控制列表：
+      - 英文：
+        - ACL
+      - 根据用户身份进行控制，给每个文件和目录增加ACL，规定了不同的用户的访问类型。
+      - 【精简】的访问控制列表：
+        - 拥有者
+          - 创建文件的用户
+        - 组
+          - 需要共享文件且具有类似访问的用户
+        - 其他
+          - 系统内的所有其他用户
+    - 缺点：
+      - 内容太多，使用精简可以解决问题
+    - 相比加密保护保密性更差，但更灵活
+    - 访问文件的限制因素：
+      - 用户访问权限 + 文件属性
+      - 用户优先级与能否访问文件无关
+  - 系统级安全管理：
+    - 登录注册
+
+## 文件操作
+
+<a href="/images/408-mind-maps/os-0013.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0013.svg" alt="文件操作" width="45" height="45" loading="lazy" /></a>
+
+- 最后看看
+- 创建
+  - 从外存中找到文件对应大小的【磁盘空间】
+  - 创建该文件对应的【目录项】
+- 删除文件
+  - 如果存在其他硬链接：
+    - 修改FCB的文件链接数
+  - 不存在硬链接：
+    - 删除文件的目录项
+    - 删除该文件的FCB
+    - 释放与此文件相关的内存缓冲区
+    - 回收文件磁盘空间
+- 打开(目录)文件
+  - 主要工作：
+    - 1\. 找到文件对应的目录项
+    - 2\. 把目录项复制到内存中的打开文件表中
+
+      <a href="/images/408-mind-maps/os-0145.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0145.svg" alt="2. 把目录项复制到内存中的打开文件表中" width="240" height="139" loading="lazy" /></a>
+
+    - 3\. 随后用户就可以使用打开文件表中的编号来指明要操作的文件
+    - 把文件目录调入到内存中（调入 --- 复制到内存中）
+  - 指令：
+    - open(char\* path, char\* fname, int access) -&gt; int
+      - path：文件路径
+      - fname：文件名
+      - access：指明了是只读、只写、读和写
+      - 返回的int：文件唯一标识符fd
+- 关闭
+  - 回收分配给文件的【内存空间】
+  - 系统中的“打开文件表“中count - 1。如果count == 0，则删除对应表项
+- 读文件
+  - 通过文件的目录结构，如果找到了文件的逻辑地址（即已经在内存中了），直接访问内存
+  - 通过文件的目录结构，发现数据不在内存中，则进程进入到阻塞态，请求调页。
+  - 指令：
+    - read(int fd, int\* buf, int n)
+      - fd：文件唯一标识符
+      - buf：缓冲区始址
+      - n：读入的字节数
+- 写
+  - 找到文件、打开文件、读取文件（记事本需要显示已记录的内容）
+  - 在内存区域中修改了文件数据后，使用write系统调用写入到磁盘中
+- 复制
+  - 文件在同一个OS中复制时，应保证逻辑结构不变，但物理结构可变
+- 重定位
+  - 按某条件搜索目录，将当前文件位置设为给定值，并且不会读、 写文件。
+- 截断
+  - 允许文件所有属性不变，并删除文件内容，即将其长度设为0并释放其空间。
+- 提高文件访问速度
+  - 下列优化方法中，可以提高文件访问速度的
+  - 提前读
+    - 提前读是指在读当前盘块时，将下一个可能要 访问的盘块数据读入缓冲区，以便需要时直接从缓冲区中读取，提高了文件的访问速度
+  - 为文件分配连续的簇
+    - ✅
+  - 延迟写
+    - 延迟写是指先将数据写入缓冲区，并置上“延迟写"标志，以备不久之后访问，当缓冲区需要再次 被分配出去时，才将缓冲区数据写入磁盘，减少了访问磁盘的次数，提高了文件的访问速度
+  - 采用磁盘高速缓存
+    - ✅
+
+## 文件的逻辑结构
+
+<a href="/images/408-mind-maps/os-0169.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0169.svg" alt="文件的逻辑结构" width="48" height="48" loading="lazy" /></a>
+
+- 文件+索引方式
+  - 文件
+    - 无结构
+      - 顺序遍历
+    - 有结构
+      - 不定长
+        - 顺序遍历
+      - 定长
+        分组说明：物理结构；对应：[链式存储](#topic-3033e06e-b7c0-4693-b866-918c4926dd7a)、[顺序存储](#topic-a5f711d2-ec40-4f6f-90d2-5b8ba0361bab)
+
+        - 链式存储
+          - 顺序遍历
+        - 顺序存储
+          - 顺序结构
+            - 以设定的关键字为key遍历
+          - 串结构
+            - 以时间为key遍历
+- 无结构文件(流式文件)
+  - 访问记录的方法：
+    - 遍历所有，找到其中一个
+  - 例如：
+    - 源程序
+    - 代码文件
+    - txt文本
+- 有结构文件(记录式文件)
+  - 例如：
+    - 数据库
+  - 文件分类
+    - 顺序文件
+      - 存储方式
+        - 顺序存储
+          - 物理上相邻
+        - 链表式存储
+          - 物理上不相邻
+      - 结构
+        - 顺序结构
+          - 以关键字为key
+        - 串结构
+          - 以时间为key
+      - 最方便去支持视频文件的（视频是顺序播放的）
+    - 索引文件
+      [查看关联主题](#topic-136b3d008cb8e5450eda4bc1b8)
+
+      - 示意图：
+        - 配图
+
+          <a href="/images/408-mind-maps/os-0103.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0103.svg" alt="示意图：" width="240" height="115" loading="lazy" /></a>
+
+      - 【索引表】的物理存储类型：
+        - 顺序结构、顺序存储、定长的顺序文件
+
+
+
+          **顺序结构**：以设定的关键字作为 key 存储。
+
+
+
+      - 索引表项：
+        - 索引号、长度、逻辑地址（指针）
+          - 注意此处的指针是逻辑地址，因为是逻辑结构结构
+      - 定长/不定长：
+        - 定长可以通过 A = i \* L 来直接找到
+        - 不定长要通过 A = ∑Li + 1来找
+        - 概要：因为索引表中含有表长，所以支持随机存储
+          概要范围：[定长可以通过 A = i \* L 来直接找到](#topic-58f85d64f6e9b2f488d2eb239d)、[不定长要通过 A = ∑Li + 1来找](#topic-b73a0f2132e9883830a2992d3a)
+
+      - 目的：
+        - 成百上千倍提高访问speed
+      - 此处也可以设计多级索引（因为是数据结构），但是书上没说过
+    - 索引顺序文件
+      - 示意图：
+        - 配图
+
+          <a href="/images/408-mind-maps/os-0132.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0132.svg" alt="示意图：" width="240" height="121" loading="lazy" /></a>
+
+      - 前提：
+        - 顺序文件
+          - 【索引文件】中的逻辑文件可以不是顺序结构的
+      - 索引表：
+        - key + 【逻辑地址】
+      - 关键字规则：
+        - 组间递增
+        - 组内无序
+      - 如果有N条记录，那么平均查找次数的提升：
+        - 公式
+
+
+
+          **索引顺序文件的平均查找次数（ASL）**
+
+          原图的量级比较：平均查找次数从约 $N/2$ 降低到 $\sqrt N$ 量级。
+
+          这里讨论的是索引顺序文件分组查找的平均查找次数，具体常数与分组数量和查找约定有关，不是 AVL 树的操作复杂度。
+
+          > 整理说明：原图公式源码误写 AVL；根据所在节点“索引顺序文件／平均查找次数”，明确为平均查找长度 ASL，保留 N/2 与 √N 的量级比较。
+
+
+
+    - 直接文件/散列文件
+      - 直接文件
+        - 关键字本身就含有物理地址的信息
+      - 哈希文件
+        - 使用哈希映射能够找到对应的物理地址
+      - 概要：搜索速度都很快，但是太浪费空间，一般不用
+        概要范围：[直接文件](#topic-3c7a28f69ddab0de4e0849abd1)、[哈希文件](#topic-624b1ba87e5a35a7eedcfba5f8)
+
+- 逻辑结构是用户自己定义的数据结构，和文件具体的存储方式没有半点关系，和内存管理也没有半点关系
+
+## 文件分配方式（物理结构）
+
+<a href="/images/408-mind-maps/co-0152.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0152.svg" alt="文件分配方式（物理结构）" width="48" height="48" loading="lazy" /></a>
+
+- 考频：超高
+  - 09\*2、10、12、13\*3、14、15、17、18、20\*2、14大、16大、18大、22大
+- 文件在外存中具体的存储方式（文件的物理结构）
+- 连续分配
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0140.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0140.svg" alt="连续分配" width="240" height="198" loading="lazy" /></a>
+
+  - 原理：
+    - 每个文件在磁盘上占有一组连续的块，在外存中是【连续分配】
+  - 目录表：
+    - &lt;文件名、起始盘块号、长度&gt;
+  - 支持的访问类型：
+    - 顺序访问、直接访问
+  - 优点：
+    - 寻道数、寻道时间最短
+      - 磁盘章节
+  - 缺点：
+    - 文件长度不可动态增加
+    - 只适用于长度固定的文件
+  - 只有连续分配会出现碎片
+    - 谈速度时，连续分配不管是顺序存取还是随机存取都是最快的
+- 链接分配
+  - 原理：
+    - 从起始盘块号开始访问，一块一块的找，采用离散分配的思路查找文件
+  - 支持的访问类型：
+    - 顺序访问
+      - 不能直接访问
+  - 隐式链接
+    - 在每一个盘块的末尾都存有一个【指向下一个盘块】的指针
+
+      <a href="/images/408-mind-maps/os-0152.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0152.svg" alt="在每一个盘块的末尾都存有一个【指向下一个盘块】的指针" width="240" height="197" loading="lazy" /></a>
+
+    - 目录表：
+      - &lt;文件名、起始盘块号、末尾盘块号&gt;
+    - 缺点：
+      - 稳定性不够，容易丢失数据
+      - 指针会消耗空间
+      - 只能顺序访问，有大量的IO，很费事
+  - 显式链接
+    - FAT表
+
+      <a href="/images/408-mind-maps/os-0136.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0136.svg" alt="FAT表" width="240" height="209" loading="lazy" /></a>
+
+    - 目录表：
+      - 文件名、起始盘块号
+    - 文件分配表：
+      - 英文：
+        - FAT
+      - 内容：
+        - 下一块的号码
+          - 不存有盘块号
+        - 如果是最后一块就是-1，如果没有被分配就是-2
+    - FAT在启动时：
+      - 和文件目录表一样，刚启动就被导入内存，所以很明显的提高了检索速度
+    - 缺点：
+      - 每次启动的时候都要把FAT读入内存，若FAT很大，则会占用大量的内存
+    - 身兼数职，还可以负责管理磁盘的空闲空间
+      - 磁盘章节，-2就是空闲盘块
+- 索引分配
+  [查看关联主题](#topic-3fd88bd47d2a95e31c3d0969c2)
+
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0135.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0135.svg" alt="索引分配" width="240" height="183" loading="lazy" /></a>
+
+  - 原理：
+    - 【每个文件对应有一个索引表】，内存中的文件目录表存的是每个文件对应的索引表块号，当要访问一个文件的时候，首先把该文件【的索引表从外存读入内存】
+  - 目录表：
+    - &lt;文件名、索引表块号&gt;
+  - 索引表：
+    - 顺序地存有文件的块号
+  - 优缺点：
+    - 优点：
+      - 支持随机、顺序存取
+      - 文件拓展很方便
+      - 比起显示链接，不需要把索引表同时存入到内存中
+    - 缺点：
+      - 如果程序很大的话，一个块大小的索引表不够用
+  - 缺点优化：
+    - 链接方案：
+      - 如果一个块大小的索引表存不够，那么索引表最后就指向下一个索引表的块
+    - 多层索引：
+      - 和多级页表一样，首先访问一级索引表，然后再访问二级索引表
+    - 混合索引
+- 混合索引：
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0003.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0003.svg" alt="混合索引：" width="240" height="218" loading="lazy" /></a>
+
+    - 一个索引表中，存在
+    - 1\. 直接地址（直接指向一个块）
+      - i.addr(0) ~ i.addr(9)
+    - 2\. 一级间接（指向一个索引表）
+      - i.addr(10)
+    - 3\. 二级间接（指向一个二级索引表）
+  - 批注：inode
+- 如果访问一个文件中第n块中的记录：
+  - 连续分配
+    - 只需访问一次磁盘
+  - 链接分配
+    - 隐性
+      - 需要访问n次磁盘
+    - 显性
+      - 需要访问1次磁盘
+  - 索引分配
+    - 访问两次磁盘（一次读索引表，一次读文件）
+    - 可能存在超过两次访问（如果索引表一块磁盘装不下）
+
+## 文件的目录结构
+
+<a href="/images/408-mind-maps/os-0021.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0021.svg" alt="文件的目录结构" width="48" height="48" loading="lazy" /></a>
+
+- 文件目录项
+  - 文件控制块
+    - 缩写
+      - FCB
+    - 存储方式
+      - 顺序存储、顺序文件
+    - 包含信息
+      - 基本信息
+        - 文件名、物理位置、逻辑结构、物理结构
+      - 存取信息
+        - 存取权限
+      - 使用信息
+        - 建立时间、修改时间
+  - 索引节点
+    - 作用
+      - 用来“瘦身”
+        - 存放在内存中
+        - FCB = &lt;文件名&gt; + &lt;索引节点&gt;
+      - 因为在查找的时候只有对应文件名的目录项才有用处，所以没必要把所有FCB都读进来，用一个索引节点（指针）来代替FCB的包含信息就可以了
+      - 概要：故访问一次FCB需要访问两次内存
+        概要范围：[用来“瘦身”](#topic-2415e2c8-8ee5-4506-8b8b-6e374eb63054)、[因为在查找的时候只有对应文件名的目录项才有用处，所以没必要把所有FCB都读进来，用一个索引](#topic-bd6acc6ffd39c0d226933aa394)
+
+        - 但是总体平均来说，因为一个盘块能够存储的FCB数量大大增加，所以系统开销减小
+    - 磁盘索引节点
+      - 存放位置：
+        - 外存中
+      - 每个文件的磁盘索引节点唯一
+      - 包括的内容
+        - 主标识符
+          - 拥有该文件的个人/小组标识符
+        - 类型
+          - 普通文件/目录文件/特别文件
+        - 存取权限
+          - 各类用户对文件的权限
+        - 物理地址
+          - 每个索引节点有13个地址项， iaddr(0) ~ iaddr(12)， 可以直接或间接给出数据所在盘块编号
+            - 0~9 直接地址
+            - 10 一级页表
+            - 11 二级页表
+            - 12 三级页表
+          - 概要：inode
+            概要范围：[每个索引节点有13个地址项， iaddr(0) ~ iaddr(12)， 可以直接或间接给](#topic-f158ca057e5b4e6e9a1c480b05)
+
+        - 文件长度
+          - ✅
+        - 文件链接数
+          - 所有指向该文件的指针数
+        - 文件存取时间
+          - ✅
+      - 文件调入内存
+        - 文件调入前：
+          - 文件调入内存以前仅存放在磁盘中，调入内存后，复制磁盘索引节点，增加以下内容，形成了(内存)索引节点
+        - 索引节点增加的内容：
+          - 索引节点编号
+            - 用于标识内存的索引节点
+          - 状态
+            - 是否上锁/被修改
+          - 访问计数
+            - 有多少进程现在正在访问
+          - 逻辑设备号
+            - 文件所属文件系统的逻辑设备号
+          - 链接指针
+            - 指向空闲链表和散列队列的指针
+          - 概要：用于管理文件的重要内容
+            概要范围：[索引节点编号](#topic-507b619fb5d9684641409938cb)、[状态](#topic-5dba684f922bbb599f73682652)、[访问计数](#topic-456b69e7333bdb7fd463b9e956)、[逻辑设备号](#topic-833b101635b8724c3fbc7a115f)
+
+      - 主类存物文文文，号状访计逻设针
+    - 索引节点 = 磁盘索引节点 + 附加内容
+- 目录结构
+  - （搜索、创建文件、删除文件、显示目录、修改目录）对目录结构的影响
+    - 搜索文件时，要【查找目录】
+    - 创建文件时【创建】对应目录项
+    - 删除文件时【删除】对应目录项
+    - 【显示当前界面中所有的目录项的内容】，包括文件属性...
+    - 修改文件的同时也要【修改相应的目录】
+  - 四种目录结构
+    - 单/一级目录结构
+      - 示意图：
+        - 配图
+
+          <a href="/images/408-mind-maps/os-0099.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0099.svg" alt="示意图：" width="240" height="66" loading="lazy" /></a>
+
+      - 缺点：
+        - 不允许重名
+        - 不适用于多用户
+    - 两级目录结构
+      - 示意图：
+        - 配图
+
+          <a href="/images/408-mind-maps/os-0026.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0026.svg" alt="示意图：" width="240" height="79" loading="lazy" /></a>
+
+        - 分为主文件目录、用户文件目录
+      - 缺点：
+        - 缺乏灵活性
+        - 不能共享文件
+        - 不能对文件分类
+    - 多级/树形目录结构
+      - 示意图：
+        - 配图
+
+          <a href="/images/408-mind-maps/os-0018.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0018.svg" alt="示意图：" width="240" height="110" loading="lazy" /></a>
+
+      - 树形目录结构，现代OS都在用
+      - 绝对路径、相对路径：
+        - 绝对路径就是从根出发的整个目录结构
+        - 相对路径就是从当前文件夹出发的整个目录结构
+        - 概要：当前工作目录
+          概要范围：[相对路径就是从当前文件夹出发的整个目录结构](#topic-a84c8d37-21c7-45f6-bf8b-bc3d873a55f5)
+
+      - 缺点
+        - 不能共享文件
+        - 搜索路径长，增加了磁盘访问次数
+    - 无环图目录结构
+      - 示意图：
+        - 配图
+
+          <a href="/images/408-mind-maps/os-0158.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0158.svg" alt="示意图：" width="240" height="186" loading="lazy" /></a>
+
+          - DAG图
+      - 共享计数器：
+        - 每有一个进程访问该文件，计数器就++
+        - 少一个就--
+        - =0，就退出内存
+- 目录操作
+  - 配图
+
+
+
+    **普通文件的操作**：创建 `create`、删除 `delete`、打开 `open`、关闭 `close`、读 `read`、写 `write`。
+
+    **目录文件的操作**：
+
+    - `create`：创建目录，创建一个新目录文件并为之分配磁盘空间。
+    - `delete`：删除目录；只有空目录可以删除。
+    - `opendir`：打开目录，类似打开普通文件，将目录文件的 FCB 读入内存；目录读操作的粒度不同。
+    - `readdir`：读目录，按次序返回已打开目录文件的下一个目录项。
+    - `rename`：重命名或移动目录项。
+    - `link`：建立硬链接；新建一个指向已有 inode 的目录项，并增加 inode 的链接计数。
+    - `unlink`：解除硬链接，将指定文件的 inode 共享计数器减 1；若计数器为 0，则删除文件数据。
+
+    注：原图将 `rename` 与建立硬链接的说明混写，此处分别列明。
+
+    > 整理说明：对原图混淆 rename 与 link 的说明增加显式勘误，保留原文便于核对。
+
+
+
+    - create
+      - 指明新建文件A属于哪个path(父目录B是谁)。创建后B的目录会新建一个指向A的FCB
+      - create创建的初始目录中包含有. 和 .. 两个文件
+        - cd ./child\_file
+          - . 即本文件目录
+        - cd ../father\_file2
+          - .. 即父文件目录
+    - delete
+      - 删除FCB、回收空间；如果删除非空目录，则其中所有的文件都要被删除
+    - opendir
+      - 把目录的所有FCB读入到内存中
+    - readdir
+      - 从opendir中的FCB中找文件的对应fd
+    - rename
+      - 本质是修改指向这个目录文件的FCB中的名字
+    - link
+      - 硬链接
+    - unlink
+      - 解除硬链接
+- 目录的物理实现：
+  - 线性列表
+    - 对应线性查找
+  - 哈希表
+    - 采用哈希函数来快速定位文件
+- 共享
+  - 硬链接
+    - 文件指向同一个inode
+
+      <a href="/images/408-mind-maps/os-0067.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0067.svg" alt="文件指向同一个inode" width="240" height="130" loading="lazy" /></a>
+
+      - 索引节点的两大功能
+        分组说明：索引节点中；对应：[访问计数](#topic-067b4ed7fb58410475d31bc967)
+
+        分组说明：磁盘索引节点中；对应：[文件链接数](#topic-be2b69d0a93ab928db8f597ddb)
+
+        - 文件链接数
+          - 在采用索引节点存储方式的OS中，文件目录可以指向同一个索引节点，文件链接数就保存这个值
+          - 链接数!=0，不能删除文件
+        - 访问计数
+          - 在内存中运行时的访问计数
+  - 软链接
+    - 使用符号链，创建一个LINK类新文件
+
+      <a href="/images/408-mind-maps/os-0133.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0133.svg" alt="使用符号链，创建一个LINK类新文件" width="240" height="131" loading="lazy" /></a>
+
+      - 新文件：
+        - 创建一个LINK类型的新文件
+        - LINK中只存储符号链
+      - 软链接特点：
+        - 软链接文件只存储路径
+        - 不知道文件是否被删除
+          - 一访问就知道
+- 文件的目录结构是文件的目录的结构信息，例如：单极、多级目录
+- 考频：中
+  - 09、10、17、20、21
+
+## 文件系统
+
+<a href="/images/408-mind-maps/os-0010.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0010.svg" alt="文件系统" width="48" height="48" loading="lazy" /></a>
+
+- 考频：低
+  - 15、19
+  - 概要：新考点
+    概要范围：[15、19](#topic-714c4a0f-0f48-42db-bb8c-597b43829ef7)
+
+- OS管理外存的空闲盘块、分区、VFS等
+- 文件系统结构：
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0142.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0142.svg" alt="文件系统结构：" width="93" height="220" loading="lazy" /></a>
+
+    - 4\. 逻辑文件系统
+      - 管理元数据信息
+      - 包括文件所有结构，不包括实际数据（文件内容）
+      - 管理目录结构，通过文件控制块维护文件结构、文件保护
+    - 3\. 文件组织模块
+      - 组织文件、文件的逻辑块和物理块
+      - 可以把逻辑地址转为物理地址
+      - 包括空闲空间管理器，跟踪没有被分配的块
+    - 2\. 基本文件系统
+      - 向对应的设备驱动程序发送通用命令，以读取和写入磁盘的物理块。
+      - 管理内存缓冲区，保存各种文件系统、目录、数据块缓存。
+    - 1\. I/O控制
+      - 包括设备驱动程序和中断处理程序，在内存和磁盘系统之间传输信息
+      - 将输入命令翻译成硬件指令
+- 划分和初始化
+  - 划分：
+    - 超大型文件卷可以有多个物理盘
+    - 一个物理盘可以分为多个卷
+    - 每个卷可以分为目录区+文件区
+      - 目录区：
+        - 存放FCB（文件控制块）
+        - 磁盘存储空间管理的信息
+      - 文件区：
+        - 存储文件数据
+    - 概要：就是Windows系统的CDE盘
+      概要范围：[超大型文件卷可以有多个物理盘](#topic-06d8585e032b3b7203755b6da8)、[一个物理盘可以分为多个卷](#topic-68e85063ead970e53869193465)
+
+- 外存空闲空间管理
+  - 空闲表法
+    - 分配方式：
+      - 连续分配
+        - 配图
+
+          <a href="/images/408-mind-maps/os-0066.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0066.svg" alt="连续分配" width="240" height="169" loading="lazy" /></a>
+
+    - 空闲盘块表：
+      - &lt;空闲盘块号、空闲盘块数&gt;
+    - 分配算法：
+      - 最佳、首次、最坏、临近
+        [查看关联主题](#topic-b9b8ae620c9901e00e82ab56f2)
+
+    - 存储回收：
+      - 和动态分区分配内存回收算法一致
+    - 概要：动态分区分配在内存管理的【连续分配】是高效的办法，比较低效是固定大小分区、直接分配
+      概要范围：[分配算法：](#topic-6069104764b92b9915c139633e)、[存储回收：](#topic-94f93926462b5d7c991f5b6e93)
+
+  - 空闲链表法
+    - 配图
+
+      <a href="/images/408-mind-maps/os-0074.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0074.svg" alt="空闲链表法" width="240" height="154" loading="lazy" /></a>
+
+    - 空闲盘块链：
+      - 分配模式：
+        - 离散分配
+      - 数据结构：
+        - 每一个盘块都有指针、一个链头、一个链尾
+      - 分配算法：
+        - 从链头拿k个块，分配给进程
+      - 回收算法：
+        - 把回收的盘块，放到链尾
+    - 空闲盘区链：
+      - 分配模式：
+        - 离散分配+连续分配
+      - 数据结构：
+        - 每一个盘区由相邻的盘块组成，每个盘区有一个链头、一个链尾、本盘区大小
+      - 分配算法：
+        - 和内存的动态分区分配一样，通常采用首次适应算法
+      - 回收算法：
+        - 将回收区和相邻的空闲盘区合并
+  - 位示图法
+    - 配图
+
+      <a href="/images/408-mind-maps/os-0057.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0057.svg" alt="位示图法" width="240" height="76" loading="lazy" /></a>
+
+      - 字号、位号和盘块号进行转化
+    - 分配算法：
+      - 如何分配：
+        - 需要M个，就顺序扫描位示图，找到M个0就行（无所谓连续与否）
+      - 如何找k个连续的
+        - 在二进制数组中找到k个相邻的空闲块（k个连续0）
+        - 然后把这个k个二进制位改为1
+    - 回收算法：
+      - 首先获得盘块号，然后推出位示图的行号和列号
+      - 修改位示图，把对应的二进制位改为0
+  - 成组链接法
+    - 上述算法的缺点：
+      - 无法适用于大型文件系统，因为会导致空闲表和空闲链表太大
+    - 超级块
+      - 成组链接法的第一块
+    - 图示：
+      - 配图
+
+        <a href="/images/408-mind-maps/os-0154.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0154.svg" alt="图示：" width="240" height="140" loading="lazy" /></a>
+
+        - 配图
+
+          <a href="/images/408-mind-maps/os-0091.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0091.svg" alt="图示：" width="240" height="120" loading="lazy" /></a>
+
+          - 批注：天勤b站视频链接
+            [参考链接](<https://www.bilibili.com/video/av71840093/?vd_source=d75b38061e3b7a39145438daf0bed0fe>)
+
+    - 分配算法：
+      - 需要小于当前空闲块号：
+        - 分配块出去，修改超级块的 1. 空闲块数 2. 空闲块号信息
+      - 需要超过当前空闲块号：
+        - 把下一个分组的块号表复制到这个超级快中，分配出去当前所有的空闲块号，如果还不够继续复制+分配
+    - 回收算法：
+      - 如果有位置就填入到超级块当中
+      - 如果位置满了，就新建一个“成组链块”，指向现在满的这个超级块
+- 虚拟文件系统
+  - 虚拟文件系统采用了面向对象的思想，它抽象出一个通用的文件系统模型，定义了通用文件系统都支持的接口。新的文件系统只要支持并实现这些接口，即可安装和使用。
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0002.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0002.svg" alt="虚拟文件系统" width="198" height="220" loading="lazy" /></a>
+
+    分组说明：Linux中调用write()的例子：；对应：[write()](#topic-a4ff8c69-8258-49c5-82c0-90f3a814bb33)
+
+    - ① 向上给进程提供一个统一的read、open调用
+    - ② 向下规定所有文件系统提供统一的打开、读、写、格式化等操作
+    - ③ VFS维护自己的在内存中的vnode，来表示文件，无论文件存储在哪一个文件系统中
+    - write()
+      - sys\_write()
+        - 文件系统的写方法
+          - 物理介质
+          - 批注：具体某个文件系统
+        - 批注：VFS
+      - 批注：用户空间
+    - 概要：配图
+      概要范围：[① 向上给进程提供一个统一的read、open调用](#topic-dc67be4d-2571-4a02-99ba-8c8ea3a09305)、[② 向下规定所有文件系统提供统一的打开、读、写、格式化等操作](#topic-93fd0103-b519-4be5-92b0-b1117b49edca)、[③ VFS维护自己的在内存中的vnode，来表示文件，无论文件存储在哪一个文件系统中](#topic-e7d35491-adca-4fcf-8309-07c40e013d31)
+
+
+
+      **vnode（v 结点）包含的信息**
+
+      - 文件名
+      - 文件大小
+      - 创建者
+      - 文件格式
+      - ……
+      - 函数功能指针
+
+
+
+      - 当文件读入内存后，文件的各种信息会被复制+转化为vnode对应的数据结构（构造）
+      - 函数功能指针指向的是对应文件系统中的函数
+        - UFS：
+          - 配图
+
+            <a href="/images/408-mind-maps/os-0146.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0146.svg" alt="UFS：" width="240" height="171" loading="lazy" /></a>
+
+        - FAT：
+          - 配图
+
+            <a href="/images/408-mind-maps/os-0075.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0075.svg" alt="FAT：" width="240" height="169" loading="lazy" /></a>
+
+  - Linux抽象的四种对象类型
+    - 配图
+
+      <a href="/images/408-mind-maps/os-0032.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0032.svg" alt="Linux抽象的四种对象类型" width="240" height="145" loading="lazy" /></a>
+
+      - 超级块对象
+        - 表示一个已安装（挂载）的特定文件系统
+        - 对应磁盘中扇区的文件系统超级块，存储已安装文件系统的元信息
+        - 有对超级块进行更改的操作函数，例如分配、销毁、读写inode等
+      - 索引结点对象
+        - 表示一个特定的文件
+        - 文件系统处理文件所需要的所有信息，都放在里面，索引结点对文件是唯一的
+        - 操作例如创建索引节点、硬链接、新目录等
+      - 目录项对象
+        - 表示一个特定的进程
+        - 由于VFS经常执行切换到某个目录这种操作，为了提高效率，便引入了目录项的概念
+      - 文件对象
+        - 表示一个与进程相关的已打开文件
+        - 文件对象代表进程打开的一个文件，open()调用打开，close()调用关闭
+- 分区、安装
+  - 分区：
+    - 一个磁盘可以划分为多个分区，每个分区可以创建单独的文件系统，也可以有不同的操作系统
+      - （例：装双系统）
+    - 配图
+
+
+
+      **典型 Linux 分区的排列**
+
+      `引导块 → 超级块 → i 结点 → 数据块 → 数据块 → 数据块 → … → 数据块`
+
+
+
+    - 引导块：
+      - 存储引导信息，存储一系列连续的代码，可以启动一个具体操作系统的引导程序。
+    - 超级块：
+      - 存储和文件系统有关信息，例如文件系统类型、i结点的个数、数据块个数等。
+    - i 结点：
+      - inode，有多个，每个文件对应一个
+    - 数据块：
+      - 存文件数据
+  - 安装：
+    - 安装 ↔ 挂载
+      - 例如：插入U盘
+    - WINDOWS/MAC自动发现设备，安装找到的文件系统
+    - UNIX需要自行挂载文件系统：
+      - mount -t ex2 /dev/fd0 /flp
+        - umount进行解除
+        - 批注：在/dev/fd0 软盘上的ext2文件系统通过mount命令安装到/flp
+- 概要：之前的图
+  概要范围：[文件系统结构：](#topic-61a5f04e-e9fc-4308-9d09-ec125b0f528d)
+
+  <a href="/images/408-mind-maps/os-0164.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0164.svg" alt="之前的图" width="170" height="220" loading="lazy" /></a>
+
+  分组说明：可以不记；对应：[1. 用户调用接口](#topic-52a0ab73-cdd9-489e-9f56-ba136efc1172)、[2. 文件目录系统](#topic-e00cbca9-9e81-4156-bc10-eb67940dabab)、[3. 存取控制验证模块](#topic-1c3192e2-4b19-44ae-adae-be7e74477a96)、[4. 逻辑文件系统<br>    和文件信息缓存区](#topic-a4779db2-b8ad-4025-9b6a-a9ec0312617f)、[5. 物理文件系统](#topic-42c2f796-044a-4167-bbde-cee6f637840d)、[6. 辅助分配模块](#topic-a5529ab9-0e3a-4b85-9033-b785203e3d12)、[7. 设备管理程序模块](#topic-4f663e8e-69a1-4489-aaa3-aa3c83682406)
+
+  - 1\. 用户调用接口
+    - 功能：
+      - 系统提供与文件和目录有关的调用
+        - 例如：新建删除复制etc
+    - 此层由若干程序模块组成，每个模块对应一条系统调用，用户发出系统调用时，控制即转为相应的模块
+  - 2\. 文件目录系统
+    - 功能：
+      - 管理文件目录
+    - 任务：
+      - 管理活跃文件目录表
+        - 管理读写状态信息表
+      - 管理用户打开进程表
+        - 管理文件目录结构
+          - 调用下一级的模块
+  - 3\. 存取控制验证模块
+    - 功能：
+      - 确认访问的合法性
+    - 把用户访问要求和FCB的指示访问控制权限进行比较
+  - 4\. 逻辑文件系统<br>    和文件信息缓存区
+    - 功能：
+      - 将用户要读写的逻辑记录转为逻辑结构
+    - 文件信息缓冲区
+      - 再查索引文件时，要先把索引表调入缓冲区中
+  - 5\. 物理文件系统
+    - 功能：
+      - 把逻辑地址转为物理地址
+  - 6\. 辅助分配模块
+    - 功能：
+      - 负责分配辅存空间和回收存储空间
+  - 7\. 设备管理程序模块
+    - 功能：
+      - 给设备（特殊文件）分配：缓冲区、磁盘调度、启动设备、处理设备中断、释放设备等
+
+## 两个补充
+
+<a href="/images/408-mind-maps/co-0317.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0317.svg" alt="两个补充" width="45" height="45" loading="lazy" /></a>
+
+- UNIX文件系统
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0104.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0104.svg" alt="UNIX文件系统" width="240" height="89" loading="lazy" /></a>
+
+- 全局结构Layout/<br>文件在内存中的结构
+  - 概念：
+    - 目录缓存：
+      - 把最近读入过的目录文件的数据保存在内存中
+    - 系统打开文件表：
+      - 保存一个系统中现在打开的文件，已经打开过多少次
+    - 进程打开文件表：
+      - 保存一个进程打开了哪些文件，记录在进程的PCB中
+  - 图示：
+    - 配图
+
+      <a href="/images/408-mind-maps/os-0022.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0022.svg" alt="图示：" width="240" height="133" loading="lazy" /></a>
+
+      - ① 使用open调用把文件目录调入内存
+      - ② 根据open中的文件名参数，在内存的目录缓存中找到对应的文件，记录其FCB等信息
+      - ③ 打开这个文件的进程同样需要把这个文件信息写入到自己的打开文件表中
+      - 如果用户要读一个文件
+        - 用户使用read(fd, xx, xx)来 1. 找进程打开文件表 2. 系统打开文件表 3. 访问外存
+      - 概要：区别：【系统的打开文件表】记录的是文件在外存中的【地址】；而【进程的打开文件表】记录的是系统打开文件表的【索引号】
+        概要范围：[② 根据open中的文件名参数，在内存的目录缓存中找到对应的文件，记录其FCB等信息](#topic-4a7e8c08-7329-4611-8c2b-b6c19478d3c2)、[③ 打开这个文件的进程同样需要把这个文件信息写入到自己的打开文件表中](#topic-cbcb2654-f283-4e5b-9039-118706fefc58)
+
+<a href="/images/408-mind-maps/os-0150.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0150.svg" alt="END" width="48" height="48" loading="lazy" /></a>
+
+## 独立主题：自由主题
+
+## 原图关联关系
+
+- [内容太多，使用精简可以解决问题](#topic-d8686039872b05bd29adab0024) → [【精简】的访问控制列表：](#topic-b7f9fa700cb86831eb33882eef)
+````
+
+<a id="topic-7f2b43614e7932310d72fad486" />
+<a id="topic-737a82c679aadeb064d61b7de7" />
+<a id="topic-426a34e02c986d127e5ce9ec71" />
+<a id="topic-9e788de5a589482d30aac821c4" />
+<a id="topic-fcf9829b6d8b5405f30f7a92b0" />
+<a id="topic-f599b47a60f8f4e996b48a775c" />
+<a id="topic-2a9817fd-f7fc-4c30-860d-9da1f08b9c3d" />
+<a id="topic-f54fb409-a159-45ec-8673-c2514d52f95d" />
+<a id="topic-cd29cdfd-2929-4a4c-bc3a-823fd57b3a2e" />
+<a id="topic-effd6a0e-dd21-4301-b5b0-6fdfb69c72de" />
+<a id="topic-6e787a53-f80f-46b4-a026-a31bfb51b66c" />
+<a id="topic-1b9a870115f9def009186847be" />
+<a id="topic-278a7f38ad7a6e3d44c9fa401f" />
+<a id="topic-9159898c0589fe90f2e1e9a8da" />
+<a id="topic-eb68a188dcf9164a87cfdac332" />
+<a id="topic-694897136dd86209129f08ecda" />
+<a id="topic-35e1176d-9d9e-4d3b-8d3f-12629c5802fd" />
+<a id="topic-a122091e-1cc7-474e-8cd6-c1b4dc3db650" />
+<a id="topic-3d3afb0f-7606-4cde-89df-8472a844c42c" />
+<a id="topic-688ab472-5c48-4269-8b59-8eb83d305c77" />
+<a id="topic-b884c34d-e8ac-4e77-a8cd-0d83bdbf074e" />
+<a id="topic-7be2ee9f-9697-4b15-9d56-6aa15a1a4067" />
+<a id="topic-c4a865d716a932a8c2beea7671" />
+<a id="topic-d5fb12b89b193509c6137b4481" />
+<a id="topic-85e992bb1488ab7eb20dda63ec" />
+<a id="topic-f87ee7a8-0246-43d5-9b97-d244d1013ed1" />
+<a id="topic-ecf05c35-d25e-4290-8e2f-942bd26a7d05" />
+<a id="topic-4da3a1cc-6709-482a-b9c5-e065610acc27" />
+<a id="topic-8e88aae4-52b8-44af-802b-d4c31ad8c41c" />
+<a id="topic-b4c2573e-c87a-4929-8486-93ad5332f359" />
+<a id="topic-8abfc589-0b5e-4fa6-ab05-cbd4eb70fdb0" />
+<a id="topic-3826d35c-8d33-4b5a-82c4-1ce22b548012" />
+<a id="topic-1cdf1634-5cde-41ab-9c51-3e6560868c71" />
+<a id="topic-ba7b1621-8375-4377-a612-309b4e08e20c" />
+<a id="topic-392c13a5-25b7-47f0-acd8-4d5feb6ff662" />
+<a id="topic-31475d43-cff5-4838-aedf-ea7aacf767ce" />
+<a id="topic-af51976e-c5c8-4747-bc67-b862affcc446" />
+<a id="topic-c0e9a5c0-53dc-43f8-9f33-0720e4ef46a4" />
+<a id="topic-2cffbf74-50e9-4b52-8c52-0c55730676ac" />
+<a id="topic-4cb781e0-0e11-4194-a174-fd1081dd0f1a" />
+## 第五章 输入输出管理
+
+````mindmap
+# 第五章 输入输出管理
+
+[查看关联主题](#topic-be955543-2f9a-43ed-9d13-c58b612dec3c)
+
+## I/O设备分类
+
+<a href="/images/408-mind-maps/os-0024.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0024.svg" alt="I/O设备分类" width="48" height="48" loading="lazy" /></a>
+
+- 特性分类
+  - 人机交互类
+    - 如：打印机、显示器、键盘、鼠标
+    - 交互速度较慢，一般是以字节为单位交换的
+  - 存储设备
+    - 如：磁盘、磁带、光盘
+    - 交互速度快，一般以多字节组成的一个块来进行交换的
+  - 网络通信
+    - 如：网络接口、调制解调器
+    - 速度居中
+- 传输速率分类
+  - 低速设备
+    - 几B到几百B/s
+    - 键盘、鼠标
+  - 中速
+    - 几千B到几万B/s
+    - 打印机
+  - 高速
+    - 兆B/s
+    - 磁盘、U盘
+- 信息交换分类
+  - 块设备：
+    - 单位：
+      - 以数据块为单位存取
+        - 可寻址、支持随机存取
+    - 随机：
+      - 可寻址，可随机存取
+    - 例如：
+      - 磁盘
+  - 字符设备：
+    - 单位：
+      - 字符
+        - 不可寻址、不可随机存取，使用中断驱动
+    - 随机：
+      - 不可寻址
+    - 例如：
+      - 打印机
+    - 批注：因为其传输的基本单位是字符
+- IO应用程序接口
+  - 字符设备接口
+    - 例如：键盘、打印机
+    - 输入输出：get、put指令
+      - IO设备内部用一个字符缓冲区
+    - 控制：in-control指令
+  - 块设备接口
+    - 交换数据块、例如：磁盘
+    - 通常使用DMA的IO方式
+  - 网络接口
+    - 网络通信接口、例如socket
+  - 阻塞IO
+    - 阻塞IO是调用IO的时候，阻塞进程
+
+## I/O控制器
+
+<a href="/images/408-mind-maps/co-0234.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0234.svg" alt="I/O控制器" width="48" height="48" loading="lazy" /></a>
+
+- I/O接口
+  - I/O控制器
+    - 设备控制器
+- I/O内部
+  - 机械部件
+    - 看得见摸得着的实体
+  - 电子部件
+    - 藏起来的电路板
+- I/O控制器组成
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0122.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0122.svg" alt="I/O控制器组成" width="240" height="143" loading="lazy" /></a>
+
+    - 由图可知：
+    - 1\. 一个I/O控制器，管理多个IO设备
+      - 一个I/O设备中，也可以连接多个I/O控制器（多通路IO系统）
+    - 2\. 每个I/O控制器中可以有多个(相同或不同的)寄存器。
+    - 3\. 一个I/O控制器中有一个I/O逻辑，负责接受和识别CPU的命令，通过这个I/O逻辑，可以使这个I/O控制器管理的设备和CPU能够进行交互
+    - 4\. I/O逻辑把命令发送到对应的接口处，由接口处的线来进行数据、控制的发送。同时也可以获得设备发来的状态
+      - 这里的I/O逻辑到设备的接口模型和CPU到I/O控制器的模型基本一致
+- I/O控制器功能
+  - CPU无法直接控制I/O设备中的机器部件，所以I/O设备中还要有一个电子部件来作为中介
+  - 又称：
+    - 设备控制器
+  - 功能：
+    - 接受和识别CPU命令
+      - 把CPU的命令：例如read/write，放到【控制寄存器】中，同时通过【控制线】告知I/O设备发送了命令
+    - 向CPU报告设备状态
+      - 【状态寄存器】，表示空闲忙碌
+    - 数据交换
+      - 读写数据都放到【数据寄存器】
+    - 地址识别
+      - 把逻辑IO寄存器地址翻译为物理地址，通过【地址线】进行传输
+    - 概要：【数据寄存器】<br>【控制寄存器】<br>【状态寄存器】<br>【地址线】<br>【控制线】
+      概要范围：[接受和识别CPU命令](#topic-426a34e02c986d127e5ce9ec71)、[向CPU报告设备状态](#topic-9e788de5a589482d30aac821c4)、[数据交换](#topic-fcf9829b6d8b5405f30f7a92b0)、[地址识别](#topic-f599b47a60f8f4e996b48a775c)
+
+- I/O 端口
+  - 设备控制器中可被CPU直接访问的寄存器
+    - 上面白框
+  - 独立编址I/O
+
+    <a href="/images/408-mind-maps/co-0293.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0293.svg" alt="独立编址I/O" width="240" height="184" loading="lazy" /></a>
+
+    - 统一编址 = 内存映射I/O
+
+      <a href="/images/408-mind-maps/co-0091.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0091.svg" alt="统一编址 = 内存映射I/O" width="240" height="184" loading="lazy" /></a>
+
+      - 配图
+
+        <a href="/images/408-mind-maps/os-0096.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0096.svg" alt="统一编址 = 内存映射I/O" width="240" height="130" loading="lazy" /></a>
+
+  - 内存映射I/O简化了指令
+  - 寄存器独立编址让指令设计变得复杂，需要单独设计和read write相区别的指令(input output)
+
+## I/O控制方式
+
+<a href="/images/408-mind-maps/os-0040.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0040.svg" alt="I/O控制方式" width="48" height="48" loading="lazy" /></a>
+
+- 程序直接控制
+  - 图：
+    - 配图
+
+      <a href="/images/408-mind-maps/os-0068.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0068.svg" alt="图：" width="170" height="220" loading="lazy" /></a>
+
+      - CPU不停的进行轮询测试
+  - CPU干预：
+    - 非常大
+  - 读写单位：
+    - 字 word
+      - NOT 字节byte（因为读取的单位是按数据总线的位数决定的）
+  - 数据流向：
+    - I/O控制器 -&gt; CPU -&gt; 内存
+- 中断驱动方式
+  - 图：
+    - 配图
+
+      <a href="/images/408-mind-maps/os-0118.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0118.svg" alt="图：" width="113" height="220" loading="lazy" /></a>
+
+      - CPU中断去做其他事情
+  - CPU干预：
+    - 不高，可以切换到其他进程
+  - 读写单位：
+    - 字
+  - 数据流向：
+    - I/O控制器 -&gt; CPU -&gt; 内存
+  - 何时检查中断：
+    - 在指令周期的末尾的时候进行检测
+  - 中断时，CPU：
+    - 保存在执行程序的上下文，然后去执行中断处理程序
+- DMA方式
+  - 图：
+    - 配图
+
+      <a href="/images/408-mind-maps/os-0131.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0131.svg" alt="图：" width="240" height="218" loading="lazy" /></a>
+
+  - DMA控制器的组成：
+    - 配图
+
+      <a href="/images/408-mind-maps/os-0153.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0153.svg" alt="DMA控制器的组成：" width="240" height="94" loading="lazy" /></a>
+
+      - 四个寄存器的作用：
+      - DR：
+        - Data Register，用于暂存设备和内存交换的数据
+      - MAR：
+        - Memory Address Register，指明内存的起始地址
+      - DC：
+        - Data Count，存在本次要传送的字数（或字节数，都可以）
+      - CR：
+        - Command Register，用于接受CPU发来的命令
+  - CPU干预：
+    - 很低
+      - CPU指明内存的哪个部分和磁盘的哪个部分需要进行数据交换
+  - 读写单位：
+    - 一个块
+  - 数据流向：
+    - 内存 &lt;-&gt; I/O
+  - 缺点：
+    - 一次只能读一个/多个连续块
+    - 读写多个离散的块很麻烦
+  - 例如：
+    - 磁盘
+- 通道方式
+  - 通道技术是一种硬件机制
+    - 在计组中有学，例如有通道三总线模型等等
+  - 将众多指令直接编写在通道文件中，CPU交付于I/O处理，I/O将指令执行完成后再通知CPU
+  - 又称为
+    - I/O处理机
+  - CPU干预：
+    - 最低
+  - 读写单位：
+    - 多组连续的块 = 一组离散的块
+  - 数据流向：
+    - 内存 &lt;-&gt; I/O
+  - 通道分类（拓展）
+    - 字节多路通道
+      - 大量的低速、中速I/O设备
+    - 数组选择通道
+      - 少量的高速I/O设备
+    - 数组多路通道
+      - 大量的高速I/O设备
+  - 通道控制设备控制器，设备控制器控制设备
+    - DCT、COCT、CHCT、SDT
+  - 批注：\*
+- 总结：中断时机
+  - 程序直接控制方式
+    - 没有中断：CPU定期轮询检查I/O操作是否完成
+  - 中断控制方式
+    - 中断发生的时机：每完成一个字的读写（CPU完成的读写），I/O控制器向CPU发出一个中断信号
+  - DMA控制方式
+    - 中断发生的时机：CPU向DMA控制器指明读写操作相关参数，每完成一整块数据的读写（DMA完成的读写），DMA控制器向CPU发出中断信号
+  - 通道控制方式
+    - 中断发生的时机：CPU向通道指明通道程序在内存中的地址，通道执行完通道程序后，通道向CPU发出中断信号
+
+## I/O软件层级结构
+
+<a href="/images/408-mind-maps/co-0015.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0015.svg" alt="I/O软件层级结构" width="48" height="48" loading="lazy" /></a>
+
+分组说明：I/O子系统；对应：[设备独立性软件](#topic-1b9a870115f9def009186847be)、[设备驱动程序](#topic-278a7f38ad7a6e3d44c9fa401f)、[中断处理程序](#topic-9159898c0589fe90f2e1e9a8da)
+
+分组说明：直接处理硬件；对应：[设备驱动程序](#topic-278a7f38ad7a6e3d44c9fa401f)、[中断处理程序](#topic-9159898c0589fe90f2e1e9a8da)
+
+- 考频：低
+  - 10-13、17
+- 一共有五层
+  - 用户层I/O软件
+  - 设备独立性软件
+  - 设备驱动程序
+  - 中断处理程序
+  - 硬件
+  - 概要：未命名主题
+    概要范围：[用户层I/O软件](#topic-2a9817fd-f7fc-4c30-860d-9da1f08b9c3d)、[设备独立性软件](#topic-f54fb409-a159-45ec-8673-c2514d52f95d)、[设备驱动程序](#topic-cd29cdfd-2929-4a4c-bc3a-823fd57b3a2e)、[中断处理程序](#topic-effd6a0e-dd21-4301-b5b0-6fdfb69c72de)、[硬件](#topic-6e787a53-f80f-46b4-a026-a31bfb51b66c)
+
+    - 四个软件
+      - 用户 -&gt; 用户无关/设备独立/系统调用 -&gt; 设备驱动 -&gt; 中断处理  （程序）
+    - 一个硬件
+      - 硬件设备
+- 用户层I/O软件
+
+  - 向上：
+    - 实现和用户交互的【接口】
+    - 可以直接调用提供和IO有关的【库函数】
+  - 向下：
+    - 将用户请求【翻译】为格式化的IO请求，通过【系统调用】请求OS提供服务
+- 设备独立性软件
+
+  - 又称：
+    - 设备无关程序、系统调用处理程序
+  - 向上：
+    - 提供read/write调用
+      - 即提供把系统指令翻译为设备操作命令
+    - 提供设备保护
+      - 即文件保护
+    - 差错处理
+      - 不会考
+    - 设备分配和回收
+      - 即文件的分配与回收
+    - 数据缓冲区管理
+      - 屏蔽设备之间的传输差异
+    - 建立逻辑设备名
+      - 逻辑设备名是用户提供的，而设备只有物理设备名，故系统中有一个LUT(Logic Unit Table)逻辑设备表来根据逻辑设备来映射到一个物理设备上
+        - LUT存在每个用户的PCB中（在多用户中）
+        - 使用逻辑设备名的好处
+          - 增加了设备分配的灵活性
+          - 易于实现I/O重定位
+        - LUT在有些题目中又叫做DMT(device mirror table)
+  - 计算机在对一个设备进行了区分和识别过后，会分配给它一个”绝对号”
+  - 高速缓存、SPOOLing技术等也是这个部分的知识点
+- 设备驱动程序
+
+  - 例：
+    - 第一次插上键盘，安装”驱动程序“
+  - 根据商家的驱动程序，把逻辑地址转为物理地址
+  - 每一类设备需要设置一个驱动程序
+    - 例如系统中有2个绘图机3个打印机，只需要两个驱动程序即可
+- 中断处理程序
+
+  - 用来保存被中断的CPU环境
+  - 执行进程上下文的切换、对中断信号进行测试、读取设备状态和修改进程状态
+- 硬件设备
+
+  - 两个部件：
+    - 机械部件
+    - 电子部件
+      - 设备控制器（设备适配器）
+        [查看关联主题](#topic-737a82c679aadeb064d61b7de7)
+
+- I/O子系统概述
+
+  <a href="/images/408-mind-maps/co-0247.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0247.svg" alt="I/O子系统概述" width="48" height="48" loading="lazy" /></a>
+
+  - 层次：
+    - 设备无关性软件
+      - 逻辑设备到物理设备的映射，也同样要找到设备的驱动程序
+    - 设备驱动程序
+    - 中断处理程序
+  - 功能：
+    - I/O调度：
+      - 磁盘调度算法（打印机也可以用
+        查看关联主题（原图链接目标缺失：`xmind:#c398212844a9a94ac04f5b132e`）
+
+      - OS开发人员为每一个设备都维护了一个请求队列来实现调度
+    - 缓冲与高速缓存：
+      - 缓冲区
+    - 设备分配与回收：
+      - 文件的分配和回收
+    - 假脱机：
+      - SPOOLing技术，在I/O子系统层中，现实生活中在用户层
+    - 设备保护：
+      - 文件保护
+    - 差错处理
+
+## 高速缓存和缓冲区
+
+<a href="/images/408-mind-maps/co-0033.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0033.svg" alt="高速缓存和缓冲区" width="48" height="48" loading="lazy" /></a>
+
+- 磁盘高速缓存
+  - Disk Cache
+  - 概念：
+    - 将一个指令又存在内存中，又存在磁盘中
+  - 作用：
+    - 提高I/O的速度，访问更高效
+      - 例如进程的指令既在磁盘中，也在内存中，同时还在CPU一级二级cache中
+  - 形式：
+    - 1\. 在内存中【单独开辟空间】，大小固定
+    - 2\. 把未利用的内存空间作为【缓冲池】，供请求分页和IO共享
+- 缓冲区
+  - 目的：
+    - 1\. 缓和CPU和I/O的速度矛盾
+    - 2\. 减少CPU中断频率
+    - 3\. 解决数据粒度不同
+      - 例如CPU一次产生一个块，I/O一次只能读一次char
+    - 4\. 提供CPU和I/O的并行
+  - 实现方法：
+    - 使用硬件缓冲区，成本太高，一般不用
+    - 采用内存缓冲区
+      - 采用缓冲技术
+  - 需要缓冲的例子：
+    - 鼠标、键盘
+      - 若有更高优先级的进程到来，鼠标点击事件不应被丢失，则放在buffer中
+    - 多任务的磁盘驱动器、磁带驱动器
+    - 图形卡
+      - 图形学开篇，使用双缓冲来实现图像更换
+  - 若无特殊说明，缓冲区大小为一个块
+  - 高速缓存和缓冲区的对比
+    - 配图
+
+      <a href="/images/408-mind-maps/os-0042.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0042.svg" alt="高速缓存和缓冲区的对比" width="240" height="66" loading="lazy" /></a>
+
+  - 预读 + 滞后写
+    - 预读：读区域A的时候，把A的下一块也同时读入到buffer中
+    - 滞后写：在需要把A写回时，先不写回，先挂载到buffer中，直到这块buffer需要使用再写回
+- 缓冲技术
+  - 注：
+    - 下图中计算周期时假设的是工作区已经满了，所以设备 -&gt; 缓冲和工作区 -&gt; CPU可以同时运行，如果初始情况为空：
+      - 配图
+
+        <a href="/images/408-mind-maps/os-0035.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0035.svg" alt="下图中计算周期时假设的是工作区已经满了，所以设备 -&amp;gt; 缓冲和工作区 -&amp;gt; CPU可以同时运行，如果初始情况为空：" width="240" height="96" loading="lazy" /></a>
+
+  - 1\. 单缓冲
+    - 流程图：
+      - 配图
+
+        <a href="/images/408-mind-maps/os-0093.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0093.svg" alt="流程图：" width="240" height="194" loading="lazy" /></a>
+
+        - 配图
+
+          <a href="/images/408-mind-maps/os-0123.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0123.svg" alt="流程图：" width="240" height="187" loading="lazy" /></a>
+
+    - 描述：
+      - 开始状态缓冲区的数据为空，工作区数据为满
+      - CPU处理工作区时间为C，设备把数据写入到缓冲区的时间为T
+      - 缓存区写满 + CPU处理完毕后，然后缓冲区中的数据传入到工作区中（不由CPU参与）
+      - 概要：总时间：max(T, C) + M
+        概要范围：[开始状态缓冲区的数据为空，工作区数据为满](#topic-35e1176d-9d9e-4d3b-8d3f-12629c5802fd)、[CPU处理工作区时间为C，设备把数据写入到缓冲区的时间为T](#topic-a122091e-1cc7-474e-8cd6-c1b4dc3db650)、[缓存区写满 + CPU处理完毕后，然后缓冲区中的数据传入到工作区中（不由CPU参与）](#topic-3d3afb0f-7606-4cde-89df-8472a844c42c)
+
+  - 2\. 双缓冲
+    - 流程图：
+      - 配图
+
+        <a href="/images/408-mind-maps/os-0112.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0112.svg" alt="流程图：" width="240" height="136" loading="lazy" /></a>
+
+        - 配图
+
+          <a href="/images/408-mind-maps/os-0101.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0101.svg" alt="流程图：" width="190" height="220" loading="lazy" /></a>
+
+    - 描述：
+      - 假设开始状态，工作区为空，缓冲区A为满，缓冲区B为空
+      - 那么可以同时进行 ：
+        - 缓冲区A -&gt; 工作区（时间M）
+        - I/O设备 -&gt; 缓冲区B（时间T）
+      - 根据上述情况做完以后来进行CPU对工作区的处理（时间C），根据这个时间的长短来决定周期
+      - 概要：总时间：max(T, M+C)
+        概要范围：[假设开始状态，工作区为空，缓冲区A为满，缓冲区B为空](#topic-688ab472-5c48-4269-8b59-8eb83d305c77)、[那么可以同时进行 ：](#topic-b884c34d-e8ac-4e77-a8cd-0d83bdbf074e)、[根据上述情况做完以后来进行CPU对工作区的处理（时间C），根据这个时间的长短来决定周期](#topic-7be2ee9f-9697-4b15-9d56-6aa15a1a4067)
+
+    - 缓存通信
+      - 如果两台机器都只有单缓冲
+        - 只能单向传输
+          - 配图
+
+            <a href="/images/408-mind-maps/os-0030.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0030.svg" alt="只能单向传输" width="240" height="200" loading="lazy" /></a>
+
+      - 如果都有双缓冲
+        - 可以实现双线传输
+          - 配图
+
+            <a href="/images/408-mind-maps/os-0045.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0045.svg" alt="可以实现双线传输" width="240" height="193" loading="lazy" /></a>
+
+    - ”管道“通信：
+      - ”管道“通信就是一个缓冲区，要实现双向通信，就需要两个”管道“
+  - 3\. 循环缓冲
+    - 流程图：
+      - 配图
+
+        <a href="/images/408-mind-maps/os-0087.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0087.svg" alt="流程图：" width="240" height="217" loading="lazy" /></a>
+
+    - 描述：
+      - 包含多个大小相等的缓冲区，形成循环链表的形式。另外有两个指针in/out，分别是输入指针和输出指针。in指向空缓冲，out指向满缓冲
+  - 4\. 缓冲池
+    - 组成：
+      - 多个公共缓冲区组成缓冲池
+      - 配图
+
+        <a href="/images/408-mind-maps/os-0041.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0041.svg" alt="组成：" width="240" height="149" loading="lazy" /></a>
+
+    - 三个队列：
+      - 空缓冲队列
+      - 输入队列
+      - 输出队列
+    - 四种缓冲区：
+      - 收容输入数据缓冲区 hin
+      - 提取输入数据缓冲区 sin
+      - 收容输出数据缓冲区 hout
+      - 提取输出数据缓冲区 sout
+    - 四种操作：
+      - 输入进程进行输入：
+        - 从空缓冲队列中提取一个缓冲区，将其作为hin，把数据输入，“装满后”挂到输入队列队尾
+      - 计算进程读取输入：
+        - 把输入队列队首缓冲区提出，作为sin，用完后把它挂到空缓冲队列中
+      - 计算进程提供输出：
+        - 从空缓冲队列中提取一个缓冲区，将其作为hout，把数据输入，“装满后”挂到输出队列队尾
+      - 输入进程获得输出：
+        - 把输出队列队首缓冲区提出，作为sout，用完后把它挂到空缓冲队列中
+
+## 设备的分配和回收
+
+<a href="/images/408-mind-maps/co-0017.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0017.svg" alt="设备的分配和回收" width="48" height="48" loading="lazy" /></a>
+
+- 三种分类：
+  - 独占
+    - 打印机
+  - 共享
+    - 磁盘
+  - 虚拟
+    - SPOOLing技术
+- 数据结构：
+  - DCT：
+    - 一个DCT表就表征一个设备，表中内容就是设备的各个属性
+    - 称为：
+      - Device Control Table 设备控制表
+    - 内容：
+      - 设备类型type
+      - 设备标识符: deviceid
+        - 唯一id
+      - 设备状态：等待/空闲
+      - 指向控制器的指针
+        - 用来找该设备对应的I/O控制器
+          - 父级指针
+      - 重复执行次数或时间
+        - I/O设备会在自己发现执行失败了很多次以后才会认定为I/O失败
+      - 设备队列的队首指针
+        - 指向正在等待该设备的【进程队列】
+          - 如果一个进程想要使用这个设备，那么就把该进程的PCB插入到该设备对应的DCT的设备队列中
+  - COCT：
+    - 用来管理众多DCT，因为【一个控制器会管理多个设备】
+    - 称为：
+      - Controller Control Table 控制器控制表
+    - 内容：
+      - 设备标识符: controllerid
+      - 设备状态：等待/空闲
+      - 指向通道的指针
+        - 父级指针
+      - 控制器队列的队首指针
+      - 控制器队列的队尾指针
+      - 概要：指向正在等待该控制器的【进程队列】
+        概要范围：[控制器队列的队首指针](#topic-c4a865d716a932a8c2beea7671)、[控制器队列的队尾指针](#topic-d5fb12b89b193509c6137b4481)
+
+        - 如何插入的不做深究
+  - CHCT：
+    - 用来管理众多COCH的，一个通道管理很多个控制器
+    - 称为：
+      - Channel Control Table 通道控制表
+    - 内容：
+      - 设备标识符: channelid
+      - 设备状态：等待/空闲
+      - 控制器队列的首地址
+        - 孩子节点，找到第一个相连的控制器
+      - 通道队列的队首指针
+      - 通道队列的队尾指针
+  - SDT：
+    - 整个系统只有一个SDT表，管理所有物理设备
+    - 称为：
+      - System Device Table 系统设备表
+    - SDT是一个表，每一个设备就占一个表项（前面的同理）
+    - 内容：
+      - 设备类型
+      - 设备标识符
+        - 物理设备名
+      - DCT
+      - 驱动程序入口
+  - 设备分配的步骤：
+    - 1\. 根据进程请求的【物理设备号】去查SDT的【设备标识符】，获得对应DCT
+      - 如果请求的是【逻辑设备号】，就去查SDT的【设备类型】
+    - 2\. 找到DCT，如果设备忙碌(【设备状态】)就挂到等待队列，如果不忙碌就获得该设备
+      - 将该逻辑设备的&lt;逻辑设备名、物理设备名、驱动程序入口地址&gt;加入到LUT表中
+    - 3\. 根据DCT去找【父指针】，找到COCT，控制器忙碌就挂，不忙就用
+    - 4\. 根据COCT去找【父指针】，找到CHCT，忙挂闲用
+    - 只有上述四个步骤都分配完成才算成功
+      - 使用【物理设备号】请求不如【逻辑设备号】好
+  - 概要：配图
+    概要范围：[SDT：](#topic-85e992bb1488ab7eb20dda63ec)
+
+    <a href="/images/408-mind-maps/os-0082.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0082.svg" alt="数据结构：" width="240" height="160" loading="lazy" /></a>
+
+- 设备分配策略：
+  - 设备分配方式：
+    - 静态分配
+      - 作用：
+        - OS一次性分配该作业需要的所有设备、控制器、通道信息
+      - 死锁：
+        - 不会”死锁“，破坏了”请求保持“
+    - 动态分配
+      - 作用：
+        - 通过进程需求来提供设备
+      - 死锁：
+        - 有可能”死锁”
+  - 设备分配算法：
+    - 先请求先分配
+    - 优先级高优先
+- 逻辑名到物理名的映射：
+  - LUT：
+    - 名称：
+      - 逻辑设备表
+    - 表项：
+      - 逻辑设备名、物理设备名、驱动程序入口
+    - 单用户：
+      - 每个设备都在这个LUT中，不运行出现相同的逻辑设备名
+    - 多用户：
+      - 每个用户在登录时，系统会给用户【创建一个进程和一个LUT】，这个LUT会放入到PCB中
+
+## SPOOLing技术
+
+<a href="/images/408-mind-maps/co-0182.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0182.svg" alt="SPOOLing技术" width="48" height="48" loading="lazy" /></a>
+
+- 体现操作系统：虚拟性
+- SPOOLing和缓冲区的区别
+  - CSDN
+    [参考链接](<https://ask.csdn.net/questions/698957>)
+
+  - 缓冲区：
+    - 为了能够尽快的利用分到的时间片资源，往往大家都是将任务写入buffer，然后等buffer满了在一次性提交任务。这样的批处理能够减少申请资源的次数
+  - SPOOLing：
+    - spooling技术本质上是添加了一个消息队列+异步执行+完成回调，可以让一个独占资源变成共享资源的一个功能
+- 用空间换时间的技术
+  - vs 请求分页系统：时间换空间
+- 脱机技术：
+  - 批处理阶段引入了脱机输入/输出技术（用磁带完成）
+
+    <a href="/images/408-mind-maps/os-0115.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0115.svg" alt="批处理阶段引入了脱机输入/输出技术（用磁带完成）" width="240" height="91" loading="lazy" /></a>
+
+- SPOOLING技术
+  - 配图
+
+    <a href="/images/408-mind-maps/os-0092.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0092.svg" alt="SPOOLING技术" width="240" height="145" loading="lazy" /></a>
+
+    - 共享打印机：
+      - 当系统同意其打印时：有用户（输出进程）开辟一个空闲磁盘区
+      - 步骤：
+        - 1\. 输出进程在输出井中给用户进程分配一个空闲磁盘块
+        - 2\. 输出进程为用户进程申请一个空白的“用户请求分页表”，将用户的打印填入其中，再将表挂到请求打印队列上
+    - 特点：
+      - 提高了IO速度
+      - 将独占设备改造为了共享设备
+      - 实现了虚拟设备功能
+- SPOOLing的外围控制机
+  - SPOOLing需要利用【专门的外围控制机】
+    - 这里的外围控制机指使用软件模拟的外围控制机，而非物理上的
+      - 输入和输出进程来模拟外围控制机
+      - 批注：故：SPOOLing需要外围计算机❌
+  - SPOOLing需要专门的【外存设备】
+    - SPOOLing需要磁盘上的输入井和输出井
+- 考频：中
+  - 09、11-13、15、16、20、22
+
+## 磁盘的结构
+
+<a href="/images/408-mind-maps/co-0017.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0017.svg" alt="磁盘的结构" width="48" height="48" loading="lazy" /></a>
+
+- 磁盘的概念
+  - 磁道
+    - 一个又一个的【同心圆】
+  - 磁道间隙
+    - 每两个同心圆之间的【间隙】
+  - 扇区
+    - 一个磁道可以分为若干个【扇区】
+    - 又称：磁盘块（物理上）
+  - 扇区间隙
+    - 每两个扇区之间的间隙
+  - 未命名主题
+  - 柱面
+    - 多个磁盘垂直叠在一起时，所有磁道组成的垂直面就是柱面
+
+      <a href="/images/408-mind-maps/os-0005.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0005.svg" alt="多个磁盘垂直叠在一起时，所有磁道组成的垂直面就是柱面" width="240" height="217" loading="lazy" /></a>
+
+  - 块
+    - 物理块
+      - 扇区
+      - 物理上读写一次的基本单位
+    - 逻辑块
+      - 簇
+      - OS中存储空间分配的最小单位
+  - 磁盘地址形式：
+    - &lt;柱面、盘面、扇区&gt;
+      - 因为移动磁头是需要很多时间的
+  - 概要：配图
+    概要范围：[磁道](#topic-4da3a1cc-6709-482a-b9c5-e065610acc27)、[磁道间隙](#topic-8e88aae4-52b8-44af-802b-d4c31ad8c41c)、[扇区](#topic-b4c2573e-c87a-4929-8486-93ad5332f359)、[扇区间隙](#topic-8abfc589-0b5e-4fa6-ab05-cbd4eb70fdb0)
+
+    <a href="/images/408-mind-maps/os-0102.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0102.svg" alt="磁盘的概念" width="222" height="220" loading="lazy" /></a>
+
+- 磁盘的类型
+  - 磁头
+    - 固定头磁盘
+      - 每个磁道一个磁头
+    - 活动头磁盘
+      - 每个磁盘一个磁头，磁头可以来回移动
+  - 磁盘
+    - 固定盘磁盘
+      - 磁盘永久固定
+    - 可换盘磁盘
+      - 磁盘可以移动和更换
+- 存储介质
+  - 可以随机存储的：
+    - 光盘
+    - 磁盘
+    - U盘
+    - 概要：存储原理类似，一个用磁性物质存，一个用光学物质存
+      概要范围：[光盘](#topic-3826d35c-8d33-4b5a-82c4-1ce22b548012)、[磁盘](#topic-1cdf1634-5cde-41ab-9c51-3e6560868c71)
+
+  - 只能顺序存储的：
+    - 磁带
+- 磁盘是共享设备
+  - 但是同一时刻只有一个进程/作业可以启动磁盘
+  - 此处和PV互斥有些不一样，例如读磁盘是多读者，那么对应过来多个进程可以在自己的运行时间内访问磁盘
+    - 而如果是写磁盘，那么PV信号量会控制其他正在处理机上的进程不能使用该磁盘
+
+## 磁盘的管理
+
+<a href="/images/408-mind-maps/os-0125.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0125.svg" alt="磁盘的管理" width="48" height="48" loading="lazy" /></a>
+
+- 磁盘初始化
+  [查看关联主题](#topic-4d513043-bd66-4e35-90f2-eb558e4ddd06)
+
+  - 第一步：
+    - 名称：
+      - 低级格式化
+        - 分磁道、分扇区
+    - 内容：
+      - 在出厂之前把磁盘的各个磁道分为扇区。
+    - 每个扇区分为：
+      - 数据区域
+      - 头、尾包含磁盘控制器<br>所需要的信息例如：
+        - 数据结构
+        - 扇区校验码
+  - 第二步：
+    - 做法：
+      - 将磁盘分区，每个分区由若干柱面组成
+        - 分柱面
+    - 例如：
+      - 分为CDEF盘
+    - 物理地址：
+      - 因为是&lt;柱面、盘号、磁道号&gt;
+  - 第三步：
+    - 名称：
+      - 逻辑格式化
+        - 创建文件系统
+    - 作用：
+      - 创建文件系统
+        - 根目录
+        - 管理空闲磁盘块<br>的数据结构，如：
+          - 位示图
+          - 空闲表
+          - 空闲盘块链
+          - 空闲盘区链
+          - 超级块
+- 引导块
+  - 概念：
+    - 计算机启动时会从引导块中读入一个初始化程序（自举程序）
+  - 初始化程序作用：
+    - 初始化程序可以初始CPU、寄存器、设备控制器、内存etc，然后可以启动操作系统
+  - 自举程序存储位置：
+    - 【自举程序】存在ROM中<br> 或：<br>【自举装入程序】在ROM中，完整的自举程序在磁盘启动块（引导块）上，一般是在一个固定的位置
+  - 拓展
+    - 引导控制块
+      - 包含OS从该分区引导OS所需要的信息
+      - UFS中称为引导块，NTFS中称为分区引导扇区
+    - 分区控制块
+      - 包含分区信息（分区块数、块大小、空闲块情况）、空闲FCB数量、指针
+      - UFS称为超级块、NTFS称为主控文件表
+- 坏块
+  - 简单磁盘
+    - 在FAT中标明，程序不会使用它
+  - 复杂磁盘
+    - 磁盘控制器维护一个磁盘坏块链表，同时会有一些块用来作为备用（扇区备用）
+
+## 磁盘调度算法
+
+<a href="/images/408-mind-maps/os-0004.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0004.svg" alt="磁盘调度算法" width="48" height="48" loading="lazy" /></a>
+
+- 考频：高
+  - 09、15、17\*2、18、21、10大、19大、21大
+- 图示+公式：
+  - 1\. 启动时间  2. 寻找/寻道时间  3. 旋转【延迟】时间  4. 传输时间
+
+    <a href="/images/408-mind-maps/os-0039.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0039.svg" alt="1. 启动时间 2. 寻找/寻道时间 3. 旋转【延迟】时间 4. 传输时间" width="240" height="144" loading="lazy" /></a>
+
+    - 批注：注意：今年将①和②时间统称为寻找时间
+- 可以优化的
+  - 延迟时间
+    - 平均：
+      - 1/2r
+    - 有关：
+      - 磁盘空闲空间分配程序
+        - 是否错位编号
+          - 程序规定的分配方式是直接分配相邻块（每次读取的旋转时延为一整圈）
+          - 若是相邻一个分配（每次读取的旋转时延为一个簇）
+      - 物理结构
+        - 是连续分配还是链接分配
+        - 连续分配：可以只转圈
+        - 链接分配：可能需要换柱换盘块
+    - 数据处理时间的影响：
+      - 会影响间隙大小，其实影响不大
+  - 寻道时间
+    - 有关：
+      - 磁盘调度算法
+- 调度算法
+  - FCFS算法
+    - 根据进程请求访问磁盘的先后顺序进行调度
+    - 优点
+      - 公平、简单
+    - 缺点
+      - 平均寻道距离大，I/O较少可以使用
+  - SSTF算法
+    - 调度处理的磁道是与当前磁头所在磁道距离最近的磁道
+    - 优点
+      - 性能比FCFS好（贪心算法）
+    - 缺点
+      - 可能出现“饥饿”现象
+  - SCAN算法
+    - （电梯调度算法）
+    - 磁头【当前移动方向】上选择与当前磁头所在磁道距离最近的请求作为下一次服务的对象
+    - 优点
+      - 性能好，不会有“饥饿”
+    - 缺点
+      - 不利于远离磁头一端的访问
+    - LOOK调度
+      - 不用扫到两端，扫到最左/最右的磁盘请求就行
+  - C-SCAN算法
+    - 回返时直接快速移动至起始端而不服务任何请求
+    - 优点
+      - 磁道请求公平
+    - C-LOOK调度
+      - 同理
+  - 磁臂黏着
+    - 只有FCFS没有，如果在算法访问某个磁道时，这个磁道又进行了请求，就会一直被访问
+      - 很诡异，记住就行
+  - 概要：若无特殊说明，默认采用LOOK而不是SCAN（C-LOOK / C-SCAN）
+    概要范围：[SCAN算法](#topic-31475d43-cff5-4838-aedf-ea7aacf767ce)、[C-SCAN算法](#topic-af51976e-c5c8-4747-bc67-b862affcc446)
+
+- 错位编号
+  - 同一盘面
+    - 同一盘面，物理地址相邻的扇区，在磁盘中应交错存放（留一些处理时间给磁头）
+  - 不同盘面
+    - 同柱面不同盘面的扇区错位编号，可以缩短连续读写两个相邻盘面的时间
+
+## 固态硬盘SSD
+
+<a href="/images/408-mind-maps/os-0070.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0070.svg" alt="固态硬盘SSD" width="45" height="46" loading="lazy" /></a>
+
+- 基于闪存的存储器
+  - 存储介质：NAND颗粒
+- 读写速度比较：
+  - 配图
+
+    <a href="/images/408-mind-maps/co-0101.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0101.svg" alt="读写速度比较：" width="240" height="99" loading="lazy" /></a>
+
+    - （硬件茶谈）
+- 组成：
+  - 闪存翻译层 + 多个闪存芯片
+
+    <a href="/images/408-mind-maps/os-0033.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0033.svg" alt="闪存翻译层 + 多个闪存芯片" width="240" height="142" loading="lazy" /></a>
+
+    - 读写单位
+      - CPU下令要读取一个块的内容
+      - SSD的读取单位：一个页
+        - SSD接受到这个块的地址
+        - SSD的闪存翻译层把它翻译为SSD中对应的数个页的地址
+        - SSD把这些页的数据发到IO总线上，返回CPU
+      - 具体大小：机械磁盘的一个块大小可能在1KB；SSD的一个页大小是512B~4KB，一个块中有32~128个页
+    - 批注：市面上的厂家的SSD都有一个缓存
+- 读写原则：
+  - 读：以一个页为单位来读 ✅
+  - 写：以一个页为单位来写
+    - 擦除：以一个块的单位来擦除
+    - 擦除方法：先把要写那页的整块复制到另一块，然后再擦除原来那块
+      - 复制过后，在闪存翻译层中会建立新的： ‘逻辑地址’ —— ‘物理地址’ 的转换关系
+    - 擦除的缺点：
+      - 擦除多了会造成磨损
+- 平均磨损
+  - 静态平均：
+    - SSD在进行擦除后的数据迁移的时候，会让寿命比较老的闪存块担任“读”的责任，让新的闪存块担任“写”的责任
+  - 动态平均：
+    - 在SSD写入新数据的时候，会优先选择磨损次数少的块进行写入
+  - 概要：静态平均的效果比动态平均效果更好
+    概要范围：[静态平均：](#topic-4cb781e0-0e11-4194-a174-fd1081dd0f1a)
+
+- 考频：低
+  - 无
+
+<a href="/images/408-mind-maps/co-0242.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0242.svg" alt="END" width="48" height="48" loading="lazy" /></a>
+
+## 原图关联关系
+
+- [2. 把未利用的内存空间作为【缓冲池】，供请求分页和IO共享](#topic-eb68a188dcf9164a87cfdac332) → [缓冲区](#topic-694897136dd86209129f08ecda)
+- [使用【物理设备号】请求不如【逻辑设备号】好](#topic-ecf05c35-d25e-4290-8e2f-942bd26a7d05) → [如果请求的是【逻辑设备号】，就去查SDT的【设备类型】](#topic-f87ee7a8-0246-43d5-9b97-d244d1013ed1)
+- [寻道时间](#topic-ba7b1621-8375-4377-a612-309b4e08e20c) → [调度算法](#topic-392c13a5-25b7-47f0-acd8-4d5feb6ff662)
+- [CPU下令要读取一个块的内容](#topic-c0e9a5c0-53dc-43f8-9f33-0720e4ef46a4) → [SSD的读取单位：一个页](#topic-2cffbf74-50e9-4b52-8c52-0c55730676ac)：闪存翻译层
+````
