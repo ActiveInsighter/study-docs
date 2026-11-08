@@ -973,8 +973,6 @@ layout: mind-map
     - float = 1 + 8 + 23（有效数字 24 位），double = 1 + 11 + 52（有效数字 53 位）
     - 表中 long 按 64 位计；若 long 为 32 位，int ↔ long 之间不会溢出
 
-- <img src="/images/408-mind-maps/co-0202.svg" alt="END" width="48" height="48">
-
 ## 原图关联关系
 
 - [【原码乘法】 符号另算。多次累加，通过MQ最后一位来判断是否让ACC加X，每次都让右移，最后结果ACC为高位，MQ为低位](#focus=%E3%80%90%E5%8E%9F%E7%A0%81%E4%B9%98%E6%B3%95%E3%80%91%E7%AC%A6%E5%8F%B7%E5%8F%A6%E7%AE%97%E3%80%82%E5%A4%9A%E6%AC%A1%E7%B4%AF%E5%8A%A0%EF%BC%8C%E9%80%9A%E8%BF%87MQ%E6%9C%80%E5%90%8E%E4%B8%80%E4%BD%8D%E6%9D%A5%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E8%AE%A9ACC%E5%8A%A0X%EF%BC%8C%E6%AF%8F%E6%AC%A1%E9%83%BD%E8%AE%A9%E5%8F%B3%E7%A7%BB%EF%BC%8C%E6%9C%80%E5%90%8E%E7%BB%93%E6%9E%9CACC%E4%B8%BA%E9%AB%98%E4%BD%8D%EF%BC%8CMQ%E4%B8%BA%E4%BD%8E%E4%BD%8D) → [【补码乘法】 符号参与运算，双符号位，MQ多一个辅助位，ACC是+/- X或者不变看MQ后两位之差，然后位移。【最后还有一次加法】](#focus=%E3%80%90%E8%A1%A5%E7%A0%81%E4%B9%98%E6%B3%95%E3%80%91%E7%AC%A6%E5%8F%B7%E5%8F%82%E4%B8%8E%E8%BF%90%E7%AE%97%EF%BC%8C%E5%8F%8C%E7%AC%A6%E5%8F%B7%E4%BD%8D%EF%BC%8CMQ%E5%A4%9A%E4%B8%80%E4%B8%AA%E8%BE%85%E5%8A%A9%E4%BD%8D%EF%BC%8CACC%E6%98%AF%2B%2F-%20X%E6%88%96%E8%80%85%E4%B8%8D%E5%8F%98%E7%9C%8BMQ%E5%90%8E%E4%B8%A4%E4%BD%8D%E4%B9%8B%E5%B7%AE%EF%BC%8C%E7%84%B6%E5%90%8E%E4%BD%8D%E7%A7%BB%E3%80%82%E3%80%90%E6%9C%80%E5%90%8E%E8%BF%98%E6%9C%89%E4%B8%80%E6%AC%A1%E5%8A%A0%E6%B3%95%E3%80%91)：1. 多了辅助位 2. 加法规则变了 3. 多了一次加法

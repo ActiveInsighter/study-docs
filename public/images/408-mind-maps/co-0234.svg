@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="控制器图标">
-<title>控制器图标</title>
-<rect x="2" y="2" width="44" height="44" rx="11" fill="#f4f4f5" stroke="#d4d4d8" stroke-width="1"/>
-<rect x="11" y="15" width="26" height="18" rx="3" fill="#ffffff" stroke="#3f3f46" stroke-width="1.8"/>
-<path d="M16 33V38M16 10V15" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M22 33V38M22 10V15" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M28 33V38M28 10V15" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="31" cy="24" r="2" fill="#27272a" stroke="#27272a" stroke-width="0"/>
-</svg>

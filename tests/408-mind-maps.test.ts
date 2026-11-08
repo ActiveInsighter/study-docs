@@ -104,7 +104,7 @@ describe('408 chapter mind maps', () => {
     // scripts/mind-map-figures (some figures became Markdown tables or code).
     expect(readdirSync(assetRoot).sort()).toEqual([...referencedAssets].sort());
     expect(readdirSync(assetRoot).every((name) => name.endsWith('.svg'))).toBe(true);
-    expect(referencedAssets.size).toBe(471);
+    expect(referencedAssets.size).toBe(452);
     for (const filename of referencedAssets) {
       const svg = readFileSync(join(assetRoot, filename), 'utf8');
       expect(svg.startsWith('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ')).toBe(true);
