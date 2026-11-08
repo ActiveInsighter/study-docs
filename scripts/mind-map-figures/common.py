@@ -504,3 +504,29 @@ def memcol(F, x, y, rows, w=90, rh=30, title='主存', hl=None, labels=None):
         for i, l in labels.items():
             F.text(x - 8, y + i * rh + rh / 2, l, 12, 'end', INK2, valign='middle', mono=True)
     return [(x, y + i * rh + rh / 2) for i in range(len(rows))]
+
+def wave_clock(F, x0, y, n, T, hi=22, color=INK):
+    d = f'M{x0} {y}'
+    x = x0
+    for i in range(n):
+        d += f'H{x + T * 0.15}V{y - hi}H{x + T * 0.65}V{y}H{x + T}'
+        x += T
+    F.path(d, color, 1.6)
+
+def wave_bus(F, y, segs, tone, h=20, x_end=None):
+    """segs: list of (x1, x2, label) valid windows drawn as hexagons, rest as line."""
+    f, s, t = TONES[tone]
+    for x1, x2, lab in segs:
+        F.items.append(f'<path d="M{x1} {y}L{x1 + 8} {y - h / 2}H{x2 - 8}L{x2} {y}L{x2 - 8} {y + h / 2}H{x1 + 8}Z" fill="{f}" stroke="{s}" stroke-width="1.4"/>')
+        if lab: F.text((x1 + x2) / 2, y, lab, 11, color=t, valign='middle')
+
+def wave_level(F, pts, color, sw=1.8):
+    """pts: [(x, level)] level 0/1; draws step waveform with slanted edges."""
+    d = ''
+    for i, (x, lv) in enumerate(pts):
+        if i == 0:
+            d = f'M{x} {lv}'
+        else:
+            px, pl = pts[i - 1]
+            d += f'L{x - 8} {pl}L{x} {lv}' if pl != lv else f'L{x} {lv}'
+    F.path(d, color, sw)

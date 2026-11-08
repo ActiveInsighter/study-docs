@@ -37,7 +37,7 @@ layout: mind-map
 - 总线的分类
   - 片内总线
     - 芯片内部的总线，是CPU内部：寄存器与寄存器之间、寄存器与ALU之间的线
-      - 这里面所有的线 <img src="/images/408-mind-maps/co-0094.png" alt="这里面所有的线" width="240" height="101">
+      - 这里面所有的线 <img src="/images/408-mind-maps/co-0094.svg" alt="这里面所有的线" width="300" height="117">
 
   - 系统总线
     - 数据总线 DB
@@ -56,7 +56,7 @@ layout: mind-map
     - 并行总线的传输速度不一定比串行高，因为并行总线间的码间串扰现象很严重
 - 总线结构
   - 单总线结构
-    - CPU、主存、IO全都挂载到一组总线上 <img src="/images/408-mind-maps/co-0164.png" alt="CPU、主存、IO全都挂载到一组总线上" width="240" height="103">
+    - CPU、主存、IO全都挂载到一组总线上 <img src="/images/408-mind-maps/co-0164.svg" alt="CPU、主存、IO全都挂载到一组总线上" width="300" height="103">
 
     - 优点：
       - 结构简单、成本低、容易接入新设备
@@ -65,7 +65,7 @@ layout: mind-map
       - 不支持并发传送操作
         - 这里的并发其实指 “并行”
   - 双总线结构
-    - 一条是主存总线，另一条是IO总线 <img src="/images/408-mind-maps/co-0056.png" alt="一条是主存总线，另一条是IO总线" width="240" height="182">
+    - 一条是主存总线，另一条是IO总线 <img src="/images/408-mind-maps/co-0056.svg" alt="一条是主存总线，另一条是IO总线" width="300" height="160">
 
       - 主存总线在CPU、主存、通道之间传送数据，IO设备通过IO总线和通道进行数据交互
     - 优点：
@@ -73,7 +73,7 @@ layout: mind-map
     - 缺点：
       - 需要增加通道硬件
   - 三总线结构
-    - 一条主存总线、一条IO总线、一条DMA <img src="/images/408-mind-maps/co-0053.png" alt="一条主存总线、一条IO总线、一条DMA" width="240" height="155">
+    - 一条主存总线、一条IO总线、一条DMA <img src="/images/408-mind-maps/co-0053.svg" alt="一条主存总线、一条IO总线、一条DMA" width="300" height="155">
 
       - CPU通过IO总线和低速外设进行数据交互，主存通过DMA总线和高速外设进行数据交互
     - 优点：
@@ -148,7 +148,7 @@ layout: mind-map
 - 总线定时
   - 同步定时
     - CPU采用完全统一的时钟，适用于总线长度短、总线所接部件的存取时间很接近的系统
-    - <img src="/images/408-mind-maps/co-0194.png" alt="同步定时" width="240" height="211">
+    - <img src="/images/408-mind-maps/co-0194.svg" alt="同步定时" width="300" height="169">
 
       - T1: CPU给出地址信息
       - T2: CPU给出读命令（低电平有效），与地址信息相符合的输入设备按命令进行一系列的内部操作。
@@ -168,21 +168,21 @@ layout: mind-map
         - 回答：
           - 要读出的数据
       - 不互锁方式
-        - <img src="/images/408-mind-maps/co-0087.png" alt="不互锁方式" width="240" height="161">
+        - <img src="/images/408-mind-maps/co-0087.svg" alt="不互锁方式" width="300" height="173">
 
           - 最快、最不可靠
           - 主设备发出【请求】，不用等到从设备的【回答】，经过一段时间自行撒销【请求】。
           - 从设备收到【请求】后，发出【回答】信号，经过一段时间自动撒销【回答】。
           - 双方不存在互锁关系
       - 半互锁方式
-        - <img src="/images/408-mind-maps/co-0289.png" alt="半互锁方式" width="240" height="165">
+        - <img src="/images/408-mind-maps/co-0289.svg" alt="半互锁方式" width="300" height="173">
 
           - 主设备发出【请求】，等到从设备的【回答】，后撤销【请求】。
             - 主设备有互锁关系
           - 从设备收到【请求】，发送【回答】，过一段时间自行撤销【回答】。
             - 从设备不存在互锁
       - 全互锁方式
-        - <img src="/images/408-mind-maps/co-0265.png" alt="全互锁方式" width="240" height="161">
+        - <img src="/images/408-mind-maps/co-0265.svg" alt="全互锁方式" width="300" height="173">
 
           - 最慢、最可靠
           - 主设备发出【请求】，等到从设备的【回答】，后撤销【请求】。
@@ -198,7 +198,7 @@ layout: mind-map
 
 - 半同步通信
   - 同步 + 异步
-    - <img src="/images/408-mind-maps/co-0089.png" alt="同步 + 异步" width="240" height="177">
+    - <img src="/images/408-mind-maps/co-0089.svg" alt="同步 + 异步" width="300" height="171">
 
       - 在同步方式中，如果主设备在T2发出了读，但是从设备知道自己无法在T3给出数据，就会在T3发出WAIT命令
 - 分离式通信
