@@ -18,7 +18,11 @@ layout: mind-map
   - 使用有两个稳定状态的物理器件就可以表示二进制的每一位了
   - 逻辑运算方便
   - 逻辑门电路设计方便
-- 二进制、八进制、十六进制、十进制相互转化 <img src="/images/408-mind-maps/co-0241.png" alt="二进制、八进制、十六进制、十进制相互转化" width="240" height="204">
+- 二进制、八进制、十六进制、十进制相互转化
+  - 例：十进制 18.375 的转换
+    - 二进制：$18 = 16 + 2 = 2^4 + 2^1$，$0.375 = 0.25 + 0.125 = 2^{-2} + 2^{-3}$ ⇒ $(10010.011)_2$
+    - 八进制：从小数点向两边每 3 位一组，不足补 0：010 010 . 011 ⇒ $(22.3)_8$
+    - 十六进制：每 4 位一组，不足补 0：0001 0010 . 0110 ⇒ $(12.6)_{16}$
 
   - 注意八进制和十六进制要补位
 - 真值、机器数
@@ -39,18 +43,18 @@ layout: mind-map
 - 无符号数
   - unsigned int、 unsigned long
     - 无符号数没有小数
-  - 【没有符号位】，有n个bit，则数的表示范围为：( 0 ~ 2^n - 1 ) <img src="/images/408-mind-maps/co-0123.png" alt="【没有符号位】，有n个bit，则数的表示范围为：( 0 ~ 2^n - 1 )" width="240" height="76">
+  - 【没有符号位】，有n个bit，则数的表示范围为：( 0 ~ 2^n - 1 ) <img src="/images/408-mind-maps/co-0123.svg" alt="【没有符号位】，有n个bit，则数的表示范围为：( 0 ~ 2^n - 1 )" width="300" height="91">
 
     - 指针、表示地址
 - 定点数
   - 小数点位置是固定的
     - 即小数点前面和后面的位数是固定的
   - 定点小数
-    - <img src="/images/408-mind-maps/co-0032.png" alt="定点小数" width="240" height="79">
+    - <img src="/images/408-mind-maps/co-0032.svg" alt="定点小数" width="300" height="92">
 
       - 只表示正的、负的小数
   - 定点整数
-    - <img src="/images/408-mind-maps/co-0244.png" alt="定点整数" width="240" height="76">
+    - <img src="/images/408-mind-maps/co-0244.svg" alt="定点整数" width="300" height="92">
 
       - 只表示正的、负的整数
 - 浮点数 --- 小数点位置是不固定的
@@ -201,7 +205,7 @@ layout: mind-map
     - GB2312-(19)80
       - 汉字 + 各种符号一共7445个
       - 一共16bit来存储，分为区号(8bit) + 位号(8bit)
-      - <img src="/images/408-mind-maps/co-0206.png" alt="GB2312-(19)80" width="223" height="220">
+      - <img src="/images/408-mind-maps/co-0206.svg" alt="GB2312-(19)80" width="300" height="180">
 
         - 区位码 = 区号 + 位号
         - 国标码 = 区位码 + 2020H
@@ -257,14 +261,14 @@ layout: mind-map
 - 考频：低
   - 18（标志位）、20大（ALU）
 - （补充）门电路和摩根定律
-  - <img src="/images/408-mind-maps/co-0322.png" alt="（补充）门电路和摩根定律" width="240" height="158">
+  - <img src="/images/408-mind-maps/co-0322.svg" alt="（补充）门电路和摩根定律" width="300" height="147">
 
-    - <img src="/images/408-mind-maps/co-0272.png" alt="（补充）门电路和摩根定律" width="211" height="220">
+    - <img src="/images/408-mind-maps/co-0272.svg" alt="（补充）门电路和摩根定律" width="300" height="188">
 
 - 一位全加器
-  - <img src="/images/408-mind-maps/co-0282.png" alt="一位全加器" width="240" height="121">
+  - <img src="/images/408-mind-maps/co-0282.svg" alt="一位全加器" width="300" height="133">
 
-    - 逻辑符号（简化） <img src="/images/408-mind-maps/co-0145.png" alt="逻辑符号（简化）" width="240" height="164">
+    - 逻辑符号（简化） <img src="/images/408-mind-maps/co-0145.svg" alt="逻辑符号（简化）" width="300" height="163">
 
       - 结构
         - 三个输入
@@ -284,31 +288,31 @@ layout: mind-map
           > 整理说明：修复 XMind 公式源码中无效的 array 列格式 {**l**}，改为 {l}；不改变公式数值。
 
 - 串行加法器
-  - 串行加法器：循环使用一位全加器 <img src="/images/408-mind-maps/co-0036.png" alt="串行加法器：循环使用一位全加器" width="240" height="161">
+  - 串行加法器：循环使用一位全加器 <img src="/images/408-mind-maps/co-0036.svg" alt="串行加法器：循环使用一位全加器" width="300" height="160">
 
     - 如果操作数长n位，加法就要分n次进行，每次产生一位和，并且串行逐位地送回寄存器。
     - 问题：每一位的运算必须基于上一次的运算才能进行，非常浪费时间
 - 串行进位加法器
-  - 把多个全加器串在一起，和串行加法器问题一致，速度一样的慢 <img src="/images/408-mind-maps/co-0122.png" alt="把多个全加器串在一起，和串行加法器问题一致，速度一样的慢" width="240" height="92">
+  - 把多个全加器串在一起，和串行加法器问题一致，速度一样的慢 <img src="/images/408-mind-maps/co-0122.svg" alt="把多个全加器串在一起，和串行加法器问题一致，速度一样的慢" width="300" height="103">
 
     - 串行进位的并行加法器：把n个全加器串接起来，就可进行两个n位数的相加。
     - 串行进位又称为行波进位，每一级进位直接依赖于前一级的进位，即进位信号是【逐级形成】。
 - 并行进位加法器
   - 理论依据
-    - 相互间的进位没有依赖关系，只要同时到达，可以同时生成C1~C3 <img src="/images/408-mind-maps/co-0058.png" alt="相互间的进位没有依赖关系，只要同时到达，可以同时生成C1~C3" width="240" height="56">
+    - 相互间的进位没有依赖关系，只要同时到达，可以同时生成C1~C3 <img src="/images/408-mind-maps/co-0058.svg" alt="相互间的进位没有依赖关系，只要同时到达，可以同时生成C1~C3" width="300" height="111">
 
       - 先行进位、超前进位
   - 四位CLA部件/CLA电路
-    - <img src="/images/408-mind-maps/co-0257.png" alt="四位CLA部件/CLA电路" width="240" height="110">
+    - <img src="/images/408-mind-maps/co-0257.svg" alt="四位CLA部件/CLA电路" width="300" height="126">
 
   - 四位全先行进位加法器
-    - <img src="/images/408-mind-maps/co-0264.png" alt="四位全先行进位加法器" width="240" height="86">
+    - <img src="/images/408-mind-maps/co-0264.svg" alt="四位全先行进位加法器" width="300" height="124">
 
       - 简化
-        - 把几(4)个加法器串在一起，这样可以并发的计算4bit的数据 <img src="/images/408-mind-maps/co-0128.png" alt="把几(4)个加法器串在一起，这样可以并发的计算4bit的数据" width="240" height="188">
+        - 把几(4)个加法器串在一起，这样可以并发的计算4bit的数据 <img src="/images/408-mind-maps/co-0128.svg" alt="把几(4)个加法器串在一起，这样可以并发的计算4bit的数据" width="300" height="171">
 
 - 多级并行进位加法器
-  - <img src="/images/408-mind-maps/co-0051.png" alt="多级并行进位加法器" width="240" height="162">
+  - <img src="/images/408-mind-maps/co-0051.svg" alt="多级并行进位加法器" width="300" height="164">
 
 - 带标记加法器
   - 标志位的生成

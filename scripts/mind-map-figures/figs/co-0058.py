@@ -1,0 +1,13 @@
+LABEL = '先行进位的理论依据：进位产生函数 G 与进位传递函数 P'
+F = Fig(760, 280, '先行（超前）进位：C_{i} = G_{i} + P_{i}C_{i−1}')
+F.box(30, 70, 300, 120, '', 'light', rx=12)
+F.text(180, 98, '进位来源', 14, color=INK, weight=700)
+F.text(50, 130, 'G_{i} = A_{i}B_{i}', 14, 'start', ACCENT['green'], 600, mono=True); F.text(200, 130, '本级产生（进位产生）', 12, 'start', MUTED)
+F.text(50, 162, 'P_{i} = A_{i} ⊕ B_{i}', 14, 'start', ACCENT['red'], 600, mono=True); F.text(200, 162, '低位传递（进位传递）', 12, 'start', MUTED)
+F.box(370, 70, 360, 150, '', 'blue', rx=12)
+F.text(390, 102, 'C_{1} = G_{1} + P_{1}C_{0}', 14, 'start', INK, mono=True)
+F.text(390, 134, 'C_{2} = G_{2} + P_{2}G_{1} + P_{2}P_{1}C_{0}', 14, 'start', INK, mono=True)
+F.text(390, 166, 'C_{3} = G_{3} + P_{3}G_{2} + P_{3}P_{2}G_{1}', 14, 'start', INK, mono=True)
+F.text(390, 192, '      + P_{3}P_{2}P_{1}C_{0}', 14, 'start', INK, mono=True)
+F.line(332, 130, 368, 130, LINE, 1.6, arrow='end')
+F.text(380, 256, '展开后各 C_{i} 只依赖 A、B 和 C_{0}：输入同时到达即可同时求出 C_{1} ~ C_{3}', 12.5, color=INK2)

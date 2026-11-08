@@ -74,9 +74,9 @@ layout: mind-map
       - 指令和数据均用【二进制】表示
       - 指令由【&lt;操作码 、地址码&gt;】组成
       - 指令在存储器中【顺序存放】
-      - 早期冯诺依曼机是以【运算器】作为核心的 <img src="/images/408-mind-maps/co-0232.png" alt="早期冯诺依曼机是以【运算器】作为核心的" width="240" height="110">
+      - 早期冯诺依曼机是以【运算器】作为核心的 <img src="/images/408-mind-maps/co-0232.svg" alt="早期冯诺依曼机是以【运算器】作为核心的" width="300" height="130">
 
-        - 冯诺依曼模型机（虚线：控制信号） <img src="/images/408-mind-maps/co-0243.png" alt="冯诺依曼模型机（虚线：控制信号）" width="240" height="115">
+        - 冯诺依曼模型机（虚线：控制信号） <img src="/images/408-mind-maps/co-0243.svg" alt="冯诺依曼模型机（虚线：控制信号）" width="300" height="136">
 
     - 其他考点：
       - 单处理机
@@ -97,7 +97,7 @@ layout: mind-map
     - 以【存储器】为核心
       - 现代计算机的数据处理量增大、运算器和控制器合并、存储器的容量大、I/O尽可能绕过CPU
     - 图示：
-      - <img src="/images/408-mind-maps/co-0187.png" alt="图示：" width="240" height="183">
+      - <img src="/images/408-mind-maps/co-0187.svg" alt="图示：" width="300" height="159">
 
   - 各个设备的内容：
     - 请看后续章节
@@ -159,7 +159,7 @@ layout: mind-map
 - 考频：中
   - 09、15、16、19、22
 - 多层结构图：
-  - 还有M5是应用程序层（执行的操作是需要先转为M4来对应到高级语言的某段代码的） <img src="/images/408-mind-maps/co-0108.png" alt="还有M5是应用程序层（执行的操作是需要先转为M4来对应到高级语言的某段代码的）" width="240" height="214">
+  - 还有M5是应用程序层（执行的操作是需要先转为M4来对应到高级语言的某段代码的） <img src="/images/408-mind-maps/co-0108.svg" alt="还有M5是应用程序层（执行的操作是需要先转为M4来对应到高级语言的某段代码的）" width="300" height="194">
 
     - M2  - 混合层
     - 没有软件的系统：裸机（即只有M0、M1)
@@ -173,7 +173,7 @@ layout: mind-map
       - 取操作数，执行
         - 送结果
 - 从源程序到可执行程序：
-  - <img src="/images/408-mind-maps/co-0073.png" alt="从源程序到可执行程序：" width="240" height="48">
+  - <img src="/images/408-mind-maps/co-0073.svg" alt="从源程序到可执行程序：" width="300" height="77">
 
   - 预处理阶段：
     - 预处理器（cpp）对源程序中以字符#开头的命令进行处理。
@@ -213,9 +213,9 @@ layout: mind-map
       }
       ```
 
-  - ①：键盘将char逐个送到CPU中 ②：CPU把char送到主存缓冲区中，等待回车 （程序中断方式：IO-&gt;CPU-&gt;内存） <img src="/images/408-mind-maps/co-0077.png" alt="①：键盘将char逐个送到CPU中 ②：CPU把char送到主存缓冲区中，等待回车 （程序中断方式：IO-&amp;amp;gt;CPU-&amp;amp;gt;内存）" width="240" height="171">
+  - ①：键盘将char逐个送到CPU中 ②：CPU把char送到主存缓冲区中，等待回车 （程序中断方式：IO-&gt;CPU-&gt;内存） <img src="/images/408-mind-maps/co-0077.svg" alt="①：键盘将char逐个送到CPU中 ②：CPU把char送到主存缓冲区中，等待回车 （程序中断方式：IO-&amp;amp;gt;CPU-&amp;amp;gt;内存）" width="300" height="178">
 
-    - ③：shell收到回车后，调用OS内核程序，把test文件从磁盘加载到主存 ④：主存中有了程序，逐条执行代码（#include还需要从磁盘读代码），执行到printf需要输出，就把对应的string放入到CPU中 ⑤：CPU发送到显示上中（不用掌握） <img src="/images/408-mind-maps/co-0001.png" alt="③：shell收到回车后，调用OS内核程序，把test文件从磁盘加载到主存 ④：主存中有了程序，逐条执行代码（#include还需要从磁盘读代码），执行到printf需要输出，就把对应的string放" width="240" height="172">
+    - ③：shell收到回车后，调用OS内核程序，把test文件从磁盘加载到主存 ④：主存中有了程序，逐条执行代码（#include还需要从磁盘读代码），执行到printf需要输出，就把对应的string放入到CPU中 ⑤：CPU发送到显示上中（不用掌握） <img src="/images/408-mind-maps/co-0001.svg" alt="③：shell收到回车后，调用OS内核程序，把test文件从磁盘加载到主存 ④：主存中有了程序，逐条执行代码（#include还需要从磁盘读代码），执行到printf需要输出，就把对应的string放" width="300" height="178">
 
 - 指令执行描述
   - 取指令
@@ -272,7 +272,15 @@ layout: mind-map
 
     - 公式 $IPS = I/S = \frac{I}{S} =  \frac{C}{S} \div \frac{C}{I} = 主频 \div CPI$
 
-      - <img src="/images/408-mind-maps/co-0220.png" alt="MIPS" width="240" height="177">
+      - 性能指标速记（c：cycle 时钟周期数，I：instructions 指令条数，s：second 秒）
+        - 吉普森法：$T_m = \sum_{i=1}^{n} f_i t_i$
+        - MIPS（Million IPS）：每秒执行多少百万条指令
+        - CPI：每条指令所需时钟周期数 $= \frac{c}{I} = \frac{主频}{IPS}$
+        - FLOPS：每秒执行浮点运算的次数
+        - $IPS = \frac{I}{s}$，主频 $= \frac{c}{s}$
+        - CPU 运算时间 $=$ 指令条数 $\times \frac{1}{IPS} =$ 指令条数 $\times \frac{CPI}{主频}$
+        - CPU 运算所需时钟周期数 $=$ 指令条数 $\times CPI$
+        - $IPS = \frac{主频}{CPI} = \frac{c}{s} \div \frac{c}{I}$
 
   - FLOPS
     - FLoating-point Operation Per Second，每秒执行的浮点运算数

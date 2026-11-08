@@ -300,3 +300,73 @@ def avl_node(F, x, y, k, bf=None, tone='blue'):
 
 def edge(F, a, b, r1=16, r2=0):
     F.line(a[0], a[1], b[0], b[1], INK2, 1.4, gap=r1, gap2=r2)
+
+def sysbus(F, hl_paths=(), notes=None):
+    """Bus-structured computer: CPU, IO bridge, memory, IO bus with USB/display/disk controllers.
+    hl_paths: list of (tone, [points]) polylines to highlight data flow."""
+    F.rect(24, 64, 300, 140, 'none', ACCENT['blue'], 1.3, 12, dash='5 4')
+    F.pill(36, 54, 'CPU', 'blue', 11.5)
+    F.box(40, 84, 70, 26, '控制器', 'white', 12, 5)
+    F.box(120, 80, 70, 56, '寄存器组', 'gray', 12, 5)
+    F.items.append('<path d="M226 80L262 94V128L226 142L226 120L236 111L226 102Z" fill="#fde7e4" stroke="#d1493a" stroke-width="1.3"/>')
+    F.text(246, 112, 'ALU', 11, color='#7f1d1d', weight=700, valign='middle')
+    F.box(40, 160, 110, 28, '总线接口', 'white', 12, 5)
+    F.box(380, 140, 90, 44, 'I/O 桥接器', 'gray', 12, 6)
+    F.box(600, 140, 100, 44, '主存储器', 'green', 13, 6)
+    F.line(150, 174, 378, 162, INK2, 2, arrow='both'); F.text(260, 158, '处理器总线', 11, color=MUTED, halo=True)
+    F.line(470, 162, 598, 162, INK2, 2, arrow='both'); F.text(534, 152, '存储器总线', 11, color=MUTED, halo=True)
+    F.rect(40, 236, 640, 12, '#e4e4e7', '#71717a', 1.2, 6); F.text(50, 228, 'I/O 总线', 11.5, 'start', MUTED)
+    F.line(425, 184, 425, 234, INK2, 2, arrow='both')
+    for x, lab in ((130, 'USB\n控制器'), (330, '显示\n适配卡'), (560, '磁盘\n控制器')):
+        F.line(x, 248, x, 278, INK2, 1.6, arrow='end')
+        F.box(x - 42, 280, 84, 44, lab, 'white', 12, 6)
+    F.text(105, 364, '鼠标', 12, color=INK2); F.text(155, 364, '键盘', 12, color=INK2)
+    F.line(105, 350, 105, 326, INK2, 1.3, arrow='end'); F.line(155, 350, 155, 326, INK2, 1.3, arrow='end')
+    F.line(330, 324, 330, 350, INK2, 1.3, arrow='end'); F.text(330, 364, '显示器', 12, color=INK2)
+    F.line(560, 324, 560, 344, INK2, 1.3, arrow='both')
+    F.ellipse(560, 350, 26, 7, '', 'white'); F.rect(534, 350, 52, 18, '#fff', 'none', 0, 0)
+    F.path('M534 350V368M586 350V368', INK2, 1.3); F.ellipse(560, 368, 26, 7, '', 'white'); F.text(560, 388, '磁盘', 12, color=INK2)
+    for tone, pts in hl_paths:
+        F.poly(pts, ACCENT[tone], 2.4, arrow='end')
+
+GATE_SYM = {'and': '&', 'or': '≥1', 'xor': '=1', 'not': '1', 'nand': '&', 'nor': '≥1', 'xnor': '=', 'buf': '1'}
+
+def gate(F, x, y, kind, n=2, w=34, label=None, tone='white', pitch=14):
+    """IEC-style gate box at top-left (x, y). Returns (inputs[], output)."""
+    h = max(28, pitch * (n + 1))
+    F.box(x, y, w, h, GATE_SYM.get(kind, kind) if label is None else label, tone, 12.5, 3, weight=600)
+    ins = [(x, y + h * (i + 1) / (n + 1)) for i in range(n)]
+    neg = kind in ('nand', 'nor', 'not', 'xnor') and kind != 'xnor'
+    out = (x + w + (7 if neg else 0), y + h / 2)
+    if neg:
+        F.circle(x + w + 3.5, y + h / 2, 3.5, '', 'white', sw=1.3)
+    return ins, out
+
+def wire(F, pts, color=INK2, sw=1.3, dot=None, arrow=None):
+    F.poly(pts, color, sw, arrow=arrow, r=0.01)
+    for p in (dot or []):
+        F.circle(p[0], p[1], 2.6, '', 'dark', sw=0)
+
+def bitfield(F, x, y, cells, widths, tones=None, size=14, h=40, mono=False):
+    tones = tones or {}
+    cx = x
+    pos = []
+    for i, (c, w) in enumerate(zip(cells, widths)):
+        F.box(cx, y, w, h, c, tones.get(i, 'white'), size, 0, mono)
+        pos.append((cx, cx + w))
+        cx += w
+    return pos
+
+def block(F, x, y, w, h, label, tone='blue', size=14, top=None, bottoms=(), left=None, right=None, lsize=13, L=30):
+    """Block with labelled signal arrows: top = output up, bottoms = inputs from below, left = output to the left, right = input from the right."""
+    F.box(x, y, w, h, label, tone, size, 8, weight=600)
+    if top:
+        F.line(x + w / 2, y, x + w / 2, y - L, INK2, 1.4, arrow='end'); F.text(x + w / 2, y - L - 8, top, lsize, color=INK, valign='middle')
+    n = len(bottoms)
+    for i, b in enumerate(bottoms):
+        bx = x + w * (i + 1) / (n + 1)
+        F.line(bx, y + h + L, bx, y + h, INK2, 1.4, arrow='end'); F.text(bx, y + h + L + 12, b, lsize, color=INK, valign='middle')
+    if left:
+        F.line(x, y + h / 2, x - L, y + h / 2, INK2, 1.4, arrow='end'); F.text(x - L - 6, y + h / 2, left, lsize, 'end', INK, valign='middle')
+    if right:
+        F.line(x + w + L, y + h / 2, x + w, y + h / 2, INK2, 1.4, arrow='end'); F.text(x + w + L + 6, y + h / 2, right, lsize, 'start', INK, valign='middle')
