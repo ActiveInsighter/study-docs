@@ -255,8 +255,8 @@ async function rscPrefetch(page, base) {
   let payloads = 0;
   page.on('response', (response) => {
     if (!response.url().includes('/__next.')) return;
-    if (response.status() >= 300 && response.status() < 400) {
-      redirected.push(`${response.status()} ${response.url()} -> ${response.headers().location}`);
+    if (response.status() >= 300) {
+      redirected.push(`${response.status()} ${response.url()} -> ${response.headers().location ?? ''}`);
     } else if (response.ok()) {
       payloads++;
     }
@@ -270,7 +270,7 @@ async function rscPrefetch(page, base) {
     await settle(page);
   }
   if (redirected.length || failed.length) {
-    throw new Error(`RSC prefetch was redirected or failed:\n${[...redirected, ...failed].slice(0, 10).join('\n')}`);
+    throw new Error(`RSC prefetch was redirected, missing or failed:\n${[...redirected, ...failed].slice(0, 10).join('\n')}`);
   }
   if (payloads === 0) throw new Error('No RSC prefetch payloads were requested.');
   return `payloads=${payloads}`;
