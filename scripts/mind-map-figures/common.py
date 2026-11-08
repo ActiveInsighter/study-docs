@@ -398,3 +398,23 @@ def mux_shape(F, x, y, w, h, label='MUX', tone='blue', size=14, vertical=False):
         k = h * 0.16
         F.items.append(f'<path d="M{x} {y}L{x + w} {y + k}V{y + h - k}L{x} {y + h}Z" fill="{f}" stroke="{s}" stroke-width="1.5" stroke-linejoin="round"/>')
         F.text(x + w / 2, y + h / 2, label, size, color=t, weight=700, valign='middle', rotate=90)
+
+def datapath(F, top_reg, left_reg, right_reg, alu='32 位 ALU', w=32, op='加', reg_w=150, y0=60, left_tone='amber', right_tone='amber', shift='右移', note=None):
+    """Shared multiplier/divider datapath: top register, ALU, 2w-bit register pair, control counter."""
+    F.box(150, y0, 170, 30, top_reg, 'blue', 12.5, 5)
+    ax = 120
+    F.items.append(f'<path d="M{ax} {y0 + 70}H{ax + 160}L{ax + 144} {y0 + 110}H{ax + 120}L{ax + 80} {y0 + 92}L{ax + 40} {y0 + 110}H{ax + 16}Z" fill="#fde7e4" stroke="#d1493a" stroke-width="1.4"/>')
+    F.text(ax + 80, y0 + 84, alu, 12, color='#7f1d1d', weight=700, valign='middle')
+    F.line(ax + 120, y0 + 32, ax + 120, y0 + 68, INK2, 1.3, arrow='end'); F.text(ax + 128, y0 + 50, str(w), 11, 'start', INK2)
+    F.line(ax + 80, y0 + 110, ax + 80, y0 + 154, INK2, 1.3, arrow='end'); F.text(ax + 88, y0 + 136, str(w), 11, 'start', INK2)
+    ry = y0 + 156
+    F.box(100, ry, reg_w, 30, left_reg, left_tone, 12.5, 0); F.box(100 + reg_w, ry, reg_w, 30, right_reg, right_tone, 12.5, 0)
+    F.text(100 + reg_w, ry - 10, f'{2 * w} 位', 11, color=MUTED)
+    F.poly([(130, ry + 32), (130, ry + 60), (60, ry + 60), (60, y0 + 56), (ax + 40, y0 + 56), (ax + 40, y0 + 68)], INK2, 1.2, arrow='end')
+    cx = 100 + 2 * reg_w + 110
+    F.ellipse(cx, ry + 15, 74, 30, '控制逻辑\n计数器 C_{n}', 'violet', 12)
+    F.line(cx - 74, ry + 8, 100 + 2 * reg_w + 2, ry + 8, INK2, 1.2, dash='4 3', arrow='end'); F.text(cx - 54, ry - 2, shift, 11, color=INK2)
+    F.line(cx - 74, ry + 22, 100 + 2 * reg_w + 2, ry + 22, INK2, 1.2, dash='4 3', arrow='end'); F.text(cx - 54, ry + 40, '写使能', 11, color=INK2)
+    F.poly([(cx, ry - 15), (cx, y0 + 90), (ax + 154, y0 + 90)], INK2, 1.2, dash='4 3', arrow='end'); F.text(ax + 200, y0 + 82, op, 11, color=INK2)
+    F.line(cx, ry + 80, cx, ry + 46, INK2, 1.2, arrow='end'); F.text(cx + 8, ry + 78, '时钟', 11, 'start', INK2)
+    return ry

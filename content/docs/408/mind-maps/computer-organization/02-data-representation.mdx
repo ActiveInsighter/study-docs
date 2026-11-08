@@ -606,7 +606,7 @@ layout: mind-map
           [参考链接](<https://zhuanlan.zhihu.com/p/139173424>)
 
   - 有符号数
-    - 补码一位乘法逻辑结构图 <img src="/images/408-mind-maps/co-0100.png" alt="补码一位乘法逻辑结构图" width="240" height="129">
+    - 补码一位乘法逻辑结构图 <img src="/images/408-mind-maps/co-0100.svg" alt="补码一位乘法逻辑结构图" width="300" height="133">
 
       - 注意事项：这里电路（MIPS）中的【补码】乘法是单符号位的，n次加移就够了
         - 上面学的双符号位【补码】乘法要n+1次加法、n次移位
@@ -630,7 +630,7 @@ layout: mind-map
   - 【原码除法】 先商一，然后相减后发现是负数了，再处理，逐渐左移，最后MQ是商，ACC是余数
     - 恢复余数法
       - 硬件构成
-        - <img src="/images/408-mind-maps/co-0276.png" alt="硬件构成" width="240" height="143">
+        - <img src="/images/408-mind-maps/co-0276.svg" alt="硬件构成" width="300" height="124">
 
           - ACC有n+1位，MQ也有n+1位
       - 运算流程：
@@ -650,11 +650,26 @@ layout: mind-map
       - 概要：配图
         概要范围：[运算流程：](#focus=%E8%BF%90%E7%AE%97%E6%B5%81%E7%A8%8B%EF%BC%9A)
 
-        - <img src="/images/408-mind-maps/co-0030.png" alt="恢复余数法" width="240" height="140">
+        - 原码恢复余数法（手算）：n = 4，x = 0.1011，y = 0.1101；$[|y|]_补 = 0.1101$，$[-|y|]_补 = 1.0011$
+          - 每步：余数 −|除数| = 新余数；新余数为负则商 0 并 +|y| 恢复，为正则商 1；然后余数逻辑左移
+
+            |操作|被除数 / 余数|商|说明|
+            |---|---|---|---|
+            |$+[-\lvert y\rvert]_补$|0.1011 + 1.0011 = 1.1110||余数为负|
+            |$+[\lvert y\rvert]_补$|1.1110 + 0.1101 = 0.1011|0|商 0，恢复余数|
+            |左移，$+[-\lvert y\rvert]_补$|1.0110 + 1.0011 = 0.1001|01|余数为正，商 1|
+            |左移，$+[-\lvert y\rvert]_补$|1.0010 + 1.0011 = 0.0101|011|商 1|
+            |左移，$+[-\lvert y\rvert]_补$|0.1010 + 1.0011 = 1.1101||余数为负|
+            |$+[\lvert y\rvert]_补$|1.1101 + 0.1101 = 0.1010|0110|商 0，恢复余数|
+            |左移，$+[-\lvert y\rvert]_补$|1.0100 + 1.0011 = 0.0111|01101|商 1|
+
+          - 左移 n 次，上商 n + 1 次；最后一次上商后余数不左移
+          - 结果：商 $Q = +0.1101$，余数 $R = 0.0111 \times 2^{-4}$
 
     - 加减交替法
       - 优化思路：
-        - <img src="/images/408-mind-maps/co-0158.png" alt="优化思路：" width="240" height="101">
+        - 设某步余数 a 为负：恢复余数法先恢复 b = a + |y|，再左移并减 |y|：$(a + |y|) \times 2 - |y| = 2a + |y|$
+          - 所以余数为负时，可直接商 0，并让余数左移一位再加上 |除数|，省去“恢复”这一步 —— 这就是加减交替法
 
         - 不进行恢复余数的操作，将操作更改如下
           - 计算机每次都默认商 1，然后进行补码减法，对于减法后的结果，如果结果为正，则移位进行下一次商操作。
@@ -668,10 +683,36 @@ layout: mind-map
       - 概要：配图
         概要范围：[优化思路：](#focus=%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF%EF%BC%9A)、[其他特点：](#focus=%E5%85%B6%E4%BB%96%E7%89%B9%E7%82%B9%EF%BC%9A)
 
-        - <img src="/images/408-mind-maps/co-0161.png" alt="加减交替法" width="240" height="126">
+        - 原码加减交替法（不恢复余数法）：n = 4，x = 0.1011，y = 0.1101
+          - 余数为正：商 1，余数左移一位再减 |除数|；余数为负：商 0，余数左移一位再加 |除数|
+
+            |操作|被除数 / 余数|商|ACC|MQ|
+            |---|---|---|---|---|
+            |起始|0.1011||01011|00000|
+            |$+[-\lvert y\rvert]_补$|1.1110|0|11110|00000|
+            |左移，$+[\lvert y\rvert]_补$|1.1100 + 0.1101 = 0.1001|01|01001|00001|
+            |左移，$+[-\lvert y\rvert]_补$|1.0010 + 1.0011 = 0.0101|011|00101|00011|
+            |左移，$+[-\lvert y\rvert]_补$|0.1010 + 1.0011 = 1.1101|0110|11101|00110|
+            |左移，$+[\lvert y\rvert]_补$|1.1010 + 0.1101 = 0.0111|01101|00111|01101|
+
+          - 若最后余数为负，还需 +|y| 得到正确余数
+          - 结果：$Q_s = 0 \oplus 0 = 0$，$x / y = +0.1101$，余数 $0.0111 \times 2^{-4}$
 
   - 【补码除法】 符号位参与运算，如果X和ACC异号，则左移后相加，如果X和ACC同号，则左移后相减
-    - <img src="/images/408-mind-maps/co-0126.png" alt="【补码除法】 符号位参与运算，如果X和ACC异号，则左移后相加，如果X和ACC同号，则左移后相减" width="240" height="122">
+    - 补码加减交替法：n = 4，x = +0.1000，y = −0.1011
+      - $[x]_补 = 00.1000$，$[y]_补 = 11.0101$，$[-y]_补 = 00.1011$；符号位参与运算，被除数/余数、除数用双符号位
+      - 第一步：被除数与除数同号则减除数，异号则加除数
+      - 之后：余数与除数同号，商 1，余数左移一位减除数；异号，商 0，余数左移一位加除数；重复 n 次，末位商恒置 1（精度误差不超过 $2^{-n}$）
+
+        |操作|被除数 / 余数|商（MQ）|
+        |---|---|---|
+        |异号，$+[y]_补$|00.1000 + 11.0101 = 11.1101|00001（同号，商 1）|
+        |左移，$+[-y]_补$|11.1010 + 00.1011 = 00.0101|00010（异号，商 0）|
+        |左移，$+[y]_补$|00.1010 + 11.0101 = 11.1111|00101（同号，商 1）|
+        |左移，$+[-y]_补$|11.1110 + 00.1011 = 00.1001|01010（异号，商 0）|
+        |左移，$+[y]_补$|01.0010 + 11.0101 = 00.0111|10101（末位恒置 1）|
+
+      - 结果：$[x/y]_补 = 1.0101$，即商 −0.1011，余数 $0.0111 \times 2^{-4}$
 
       - 原码除法采用默认商 1
         - 如果结果为正：左移 + X
@@ -685,13 +726,13 @@ layout: mind-map
         - 如果ACC和X的符号同号，则商 1
           - (ACC, MQ)左移一位， - X
 - 除法电路
-  - R ÷ Y = Q...R / ACC ÷ X = MQ ... ACC <img src="/images/408-mind-maps/co-0013.png" alt="R ÷ Y = Q...R / ACC ÷ X = MQ ... ACC" width="240" height="140">
+  - R ÷ Y = Q...R / ACC ÷ X = MQ ... ACC <img src="/images/408-mind-maps/co-0013.svg" alt="R ÷ Y = Q...R / ACC ÷ X = MQ ... ACC" width="300" height="133">
 
     - 定点小数
-      - <img src="/images/408-mind-maps/co-0008.png" alt="定点小数" width="240" height="121">
+      - <img src="/images/408-mind-maps/co-0008.svg" alt="定点小数" width="300" height="123">
 
     - 定点整数
-      - <img src="/images/408-mind-maps/co-0142.png" alt="定点整数" width="240" height="145">
+      - <img src="/images/408-mind-maps/co-0142.svg" alt="定点整数" width="300" height="123">
 
     - 批注：复习：Q中写值0或1，然后左移
 - 总结：
@@ -706,7 +747,22 @@ layout: mind-map
 - 强制类型转化
   - 原则：不改变具体数值，只改变解释方式
   - 例如：
-    - <img src="/images/408-mind-maps/co-0092.png" alt="例如：" width="240" height="138">
+    - 实验：无符号数与有符号数之间的强制转换
+
+      ```cpp
+      #include <iostream>
+      int main() {
+          unsigned int x = 0x80000001;
+          int x1 = x;
+          printf("(%lu) - %u", sizeof(unsigned int), x);   // (4) - 2147483649
+          printf(" - (%lu) - %d\n", sizeof(int), x1);      // (4) - -2147483647
+          unsigned int y = 0xFFFFFFFF;
+          int y1 = y;
+          printf("(%lu) - %u", sizeof(unsigned int), y);   // (4) - 4294967295
+          printf(" - (%lu) - %d\n", sizeof(int), y1);      // (4) - -1
+      }
+      // 结论：unsigned int 转 int，机器数不变，直接按补码解释
+      ```
 
 - 长整数变短整数
   - 高位截断，低位保留
@@ -715,7 +771,19 @@ layout: mind-map
     - unsigned 就是直接补0
     - short/int/long 就是按正负补0/补 1
   - 由 short 变为 unsigned int 的过程
-    - 首先先把short【扩展】为int类型，然后再【转为】unsigned int的【表示方法】 <img src="/images/408-mind-maps/co-0239.png" alt="首先先把short【扩展】为int类型，然后再【转为】unsigned int的【表示方法】" width="240" height="214">
+    - 首先先把short【扩展】为int类型，然后再【转为】unsigned int的【表示方法】
+      - 实验：short 变 unsigned int 时先符号扩展为 int，再按无符号解释
+
+        ```c
+        #include <stdio.h>
+        int main() {
+            short x = 0xf000;
+            unsigned short num1 = (unsigned short) x;               // 0xf000 = 61440，2B
+            int num2 = (int) x;                                     // 0xfffff000 = -4096
+            unsigned int num3 = (unsigned int) x;                   // 0xfffff000 = 4294963200
+            unsigned int num4 = (unsigned int)((unsigned short) x); // 0xf000 = 61440，4B
+        }
+        ```
 
       - 如果自己手动修改转化的方式：先转为unsigned再扩展，就会很系统默认的不一样
 - 数据存储
@@ -757,12 +825,12 @@ layout: mind-map
 
   - 边界对齐
     - 边界对齐方式
-      - 边界对齐方式，最大可能满足一次访存可以直接获得一个字的数据 <img src="/images/408-mind-maps/co-0048.png" alt="边界对齐方式，最大可能满足一次访存可以直接获得一个字的数据" width="240" height="125">
+      - 边界对齐方式，最大可能满足一次访存可以直接获得一个字的数据 <img src="/images/408-mind-maps/co-0048.svg" alt="边界对齐方式，最大可能满足一次访存可以直接获得一个字的数据" width="300" height="160">
 
         - 空间换时间
         - RISC通常采用边界对齐，可以适应指令流水
     - 边界不对齐方式
-      - 边界不对齐方式可能2B的半字都需要2次访存 <img src="/images/408-mind-maps/co-0300.png" alt="边界不对齐方式可能2B的半字都需要2次访存" width="240" height="89">
+      - 边界不对齐方式可能2B的半字都需要2次访存 <img src="/images/408-mind-maps/co-0300.svg" alt="边界不对齐方式可能2B的半字都需要2次访存" width="300" height="122">
 
         - 时间换空间
 - 考频：高
@@ -779,7 +847,7 @@ layout: mind-map
     - E为定点整数，M为定点小数
     - 其中E和M可以用补码或原码来表示
       - 注意计算十进制值的时候补码为负要转为对应真值在写值
-  - 一般格式 <img src="/images/408-mind-maps/co-0004.png" alt="一般格式" width="240" height="75">
+  - 一般格式 <img src="/images/408-mind-maps/co-0004.svg" alt="一般格式" width="300" height="97">
 
   - 尾数规格化
     - 原码

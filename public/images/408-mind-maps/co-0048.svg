@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 330" width="620" height="330" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="边界对齐：半字地址为 2 的倍数，字地址为 4 的倍数，不足处填充">
+<title>边界对齐：半字地址为 2 的倍数，字地址为 4 的倍数，不足处填充</title>
+<rect x="0.75" y="0.75" width="618.5" height="328.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">边界对齐方式（32 位字）</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="110" y="64" width="100" height="30" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="160" y="83.5" font-size="13" fill="#1e3a8a" text-anchor="middle">字节1</text>
+<rect x="210" y="64" width="100" height="30" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="260" y="83.5" font-size="13" fill="#1e3a8a" text-anchor="middle">字节2</text>
+<rect x="310" y="64" width="100" height="30" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="360" y="83.5" font-size="13" fill="#1e3a8a" text-anchor="middle">字节3</text>
+<rect x="410" y="64" width="100" height="30" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="460" y="83.5" font-size="13" fill="#18181b" text-anchor="middle">填充</text>
+<text x="100" y="82.8" font-size="11" fill="#71717a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<rect x="110" y="94" width="200" height="30" rx="0" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="210" y="113.5" font-size="13" fill="#134e4a" text-anchor="middle">半字1</text>
+<rect x="310" y="94" width="200" height="30" rx="0" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="410" y="113.5" font-size="13" fill="#134e4a" text-anchor="middle">半字2</text>
+<text x="100" y="112.8" font-size="11" fill="#71717a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
+<rect x="110" y="124" width="200" height="30" rx="0" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="210" y="143.6" font-size="13" fill="#134e4a" text-anchor="middle">半字3</text>
+<rect x="310" y="124" width="200" height="30" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="410" y="143.6" font-size="13" fill="#18181b" text-anchor="middle">填充</text>
+<text x="100" y="142.8" font-size="11" fill="#71717a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8</text>
+<rect x="110" y="154" width="400" height="30" rx="0" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="310" y="173.6" font-size="13" fill="#3b0764" text-anchor="middle">字1</text>
+<text x="100" y="172.8" font-size="11" fill="#71717a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">12</text>
+<rect x="110" y="184" width="100" height="30" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="160" y="203.6" font-size="13" fill="#1e3a8a" text-anchor="middle">字节4</text>
+<rect x="210" y="184" width="100" height="30" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="260" y="203.6" font-size="13" fill="#18181b" text-anchor="middle">填充</text>
+<rect x="310" y="184" width="200" height="30" rx="0" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="410" y="203.6" font-size="13" fill="#134e4a" text-anchor="middle">半字4</text>
+<text x="100" y="202.8" font-size="11" fill="#71717a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">16</text>
+<rect x="110" y="214" width="100" height="30" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="160" y="233.6" font-size="13" fill="#1e3a8a" text-anchor="middle">字节5</text>
+<rect x="210" y="214" width="100" height="30" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="260" y="233.6" font-size="13" fill="#1e3a8a" text-anchor="middle">字节6</text>
+<rect x="310" y="214" width="100" height="30" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="360" y="233.6" font-size="13" fill="#1e3a8a" text-anchor="middle">字节7</text>
+<rect x="410" y="214" width="100" height="30" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="460" y="233.6" font-size="13" fill="#18181b" text-anchor="middle">填充</text>
+<text x="100" y="232.8" font-size="11" fill="#71717a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">20</text>
+<rect x="110" y="244" width="200" height="30" rx="0" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="210" y="263.6" font-size="13" fill="#134e4a" text-anchor="middle">半字5</text>
+<rect x="310" y="244" width="200" height="30" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="410" y="263.6" font-size="13" fill="#18181b" text-anchor="middle">填充</text>
+<text x="100" y="262.9" font-size="11" fill="#71717a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">24</text>
+<rect x="110" y="274" width="400" height="30" rx="0" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
+<text x="310" y="293.6" font-size="13" fill="#3b0764" text-anchor="middle">字2</text>
+<text x="100" y="292.9" font-size="11" fill="#71717a" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">28</text>
+<text x="310" y="320" font-size="12.5" fill="#71717a" text-anchor="middle">一次访存即可取得一个对齐的字；代价是浪费填充空间</text>
+</svg>

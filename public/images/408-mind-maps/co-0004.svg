@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 200" width="620" height="200" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="浮点数的一般格式：阶码 E（阶符 + 阶码数值）与尾数 M（数符 + 尾数数值）">
+<title>浮点数的一般格式：阶码 E（阶符 + 阶码数值）与尾数 M（数符 + 尾数数值）</title>
+<rect x="0.75" y="0.75" width="618.5" height="198.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<rect x="30" y="70" width="60" height="44" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="60" y="97.2" font-size="15" fill="#14532d" text-anchor="middle">J<tspan baseline-shift="-22%" font-size="72%">f</tspan></text>
+<rect x="90" y="70" width="190" height="44" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="185" y="97.2" font-size="15" fill="#14532d" text-anchor="middle">J<tspan baseline-shift="-22%" font-size="72%">1</tspan>J<tspan baseline-shift="-22%" font-size="72%">2</tspan>…J<tspan baseline-shift="-22%" font-size="72%">m</tspan></text>
+<rect x="280" y="70" width="60" height="44" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="310" y="97.2" font-size="15" fill="#1e3a8a" text-anchor="middle">S<tspan baseline-shift="-22%" font-size="72%">f</tspan></text>
+<rect x="340" y="70" width="250" height="44" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="465" y="97.2" font-size="15" fill="#1e3a8a" text-anchor="middle">S<tspan baseline-shift="-22%" font-size="72%">1</tspan>S<tspan baseline-shift="-22%" font-size="72%">2</tspan>…S<tspan baseline-shift="-22%" font-size="72%">n</tspan></text>
+<path d="M30 62q0 -8 8 -8H147q8 0 8 -8q0 8 8 8H272q8 0 8 8" fill="none" stroke="#71717a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="124.5" y="20" width="61" height="25" rx="12.5" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.2"/>
+<text x="155" y="37" font-size="13" fill="#14532d" text-anchor="middle" font-weight="500">阶码 E</text>
+<path d="M280 62q0 -8 8 -8H427q8 0 8 -8q0 8 8 8H582q8 0 8 8" fill="none" stroke="#71717a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="403" y="20" width="63.9" height="25" rx="12.5" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.2"/>
+<text x="435" y="37" font-size="13" fill="#1e3a8a" text-anchor="middle" font-weight="500">尾数 M</text>
+<text x="60" y="140" font-size="12.5" fill="#3f3f46" text-anchor="middle">阶符</text>
+<text x="185" y="140" font-size="12.5" fill="#3f3f46" text-anchor="middle">阶码数值部分</text>
+<text x="370" y="140" font-size="12.5" fill="#3f3f46" text-anchor="middle">数符</text>
+<text x="465" y="140" font-size="12.5" fill="#3f3f46" text-anchor="middle">尾数数值部分</text>
+<text x="310" y="180" font-size="12.5" fill="#71717a" text-anchor="middle">N = r<tspan baseline-shift="38%" font-size="72%">E</tspan> × M：阶码决定范围，尾数决定精度，数符决定正负</text>
+</svg>
