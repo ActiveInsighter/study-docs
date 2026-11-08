@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" width="820" height="520" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="森林与二叉树的相互转换">
+<title>森林与二叉树的相互转换</title>
+<defs><marker id="aa1a1aa" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#a1a1aa"/></marker></defs>
+<rect x="0.75" y="0.75" width="818.5" height="518.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">森林 ⇄ 二叉树</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<text x="30" y="82" font-size="13" fill="#71717a">① 森林（三棵树）</text>
+<path d="M83.2 128.6L60.8 157.4" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M93 132L93 154" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M102.8 128.6L125.2 157.4" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="51" cy="170" r="16" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="51" y="174.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-weight="500">B</text>
+<circle cx="93" cy="170" r="16" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="93" y="174.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-weight="500">C</text>
+<circle cx="135" cy="170" r="16" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="135" y="174.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-weight="500">D</text>
+<circle cx="93" cy="116" r="16" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="93" y="120.5" font-size="13" fill="#1e3a8a" text-anchor="middle" font-weight="500">A</text>
+<path d="M211 132L211 154" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="211" cy="170" r="16" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="211" y="174.6" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">F</text>
+<circle cx="211" cy="116" r="16" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="211" y="120.5" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">E</text>
+<path d="M304.2 130.9L294.8 155.1" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M315.8 130.9L325.2 155.1" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="289" cy="170" r="16" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="289" y="174.6" font-size="13" fill="#14532d" text-anchor="middle" font-weight="500">H</text>
+<circle cx="331" cy="170" r="16" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="331" y="174.6" font-size="13" fill="#14532d" text-anchor="middle" font-weight="500">I</text>
+<circle cx="310" cy="116" r="16" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="310" y="120.5" font-size="13" fill="#14532d" text-anchor="middle" font-weight="500">G</text>
+<path d="M190 196L190 236" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<text x="204" y="222" font-size="12.5" fill="#71717a">每棵树：左孩子、右兄弟</text>
+<text x="30" y="262" font-size="13" fill="#71717a">② 每棵树各自转成二叉树</text>
+<path d="M99.8 418.9L109.2 443.1" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M70.6 363.8L85.9 390.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M99.2 308L73 338" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="115" cy="458" r="16" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="115" y="462.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-weight="500">D</text>
+<circle cx="94" cy="404" r="16" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="94" y="408.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-weight="500">C</text>
+<circle cx="62.5" cy="350" r="16" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="62.5" y="354.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-weight="500">B</text>
+<circle cx="109.8" cy="296" r="16" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="109.8" y="300.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-weight="500">A</text>
+<path d="M226.2 310.9L216.8 335.1" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="211" cy="350" r="16" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="211" y="354.6" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">F</text>
+<circle cx="232" cy="296" r="16" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="232" y="300.6" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">E</text>
+<path d="M337.8 364.9L347.2 389.1" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M355.4 309.8L340.1 336.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="353" cy="404" r="16" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="353" y="408.6" font-size="13" fill="#14532d" text-anchor="middle" font-weight="500">I</text>
+<circle cx="332" cy="350" r="16" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="332" y="354.6" font-size="13" fill="#14532d" text-anchor="middle" font-weight="500">H</text>
+<circle cx="363.5" cy="296" r="16" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="363.5" y="300.6" font-size="13" fill="#14532d" text-anchor="middle" font-weight="500">G</text>
+<path d="M127 296L203 296" fill="none" stroke="#d1493a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<path d="M249 296L335 296" fill="none" stroke="#d1493a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<text x="220" y="480" font-size="12.5" fill="#d1493a" text-anchor="middle">③ 把后一棵树的根作为前一棵树根的右孩子（虚线）</text>
+<path d="M420 300L460 260" fill="none" stroke="#a1a1aa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
+<text x="620" y="82" font-size="13" fill="#71717a" text-anchor="middle">④ 对应的二叉树</text>
+<path d="M559.8 238.9L569.2 263.1" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M530.6 183.8L545.9 210.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M685.8 292.9L695.2 317.1" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M703.4 237.8L688.1 264.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M653.7 182L627.5 212" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M674.8 182L701 212" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M580.6 125.7L535.2 160.3" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M606.1 125.7L651.5 160.3" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="575" cy="278" r="16" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="575" y="282.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-weight="500">D</text>
+<circle cx="554" cy="224" r="16" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="554" y="228.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-weight="500">C</text>
+<circle cx="522.5" cy="170" r="16" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="522.5" y="174.6" font-size="13" fill="#1e3a8a" text-anchor="middle" font-weight="500">B</text>
+<circle cx="617" cy="224" r="16" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="617" y="228.6" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">F</text>
+<circle cx="701" cy="332" r="16" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="701" y="336.6" font-size="13" fill="#14532d" text-anchor="middle" font-weight="500">I</text>
+<circle cx="680" cy="278" r="16" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="680" y="282.6" font-size="13" fill="#14532d" text-anchor="middle" font-weight="500">H</text>
+<circle cx="711.5" cy="224" r="16" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="711.5" y="228.6" font-size="13" fill="#14532d" text-anchor="middle" font-weight="500">G</text>
+<circle cx="664.2" cy="170" r="16" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="664.2" y="174.6" font-size="13" fill="#18181b" text-anchor="middle" font-weight="500">E</text>
+<circle cx="593.4" cy="116" r="16" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="593.4" y="120.5" font-size="13" fill="#1e3a8a" text-anchor="middle" font-weight="500">A</text>
+<text x="630" y="480" font-size="12.5" fill="#3f3f46" text-anchor="middle">逆过程：沿根的右链断开，各自还原成树</text>
+</svg>

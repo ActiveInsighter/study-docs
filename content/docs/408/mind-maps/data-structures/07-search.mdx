@@ -208,7 +208,7 @@ layout: mind-map
     - BST每次把搜索域分为两个部分，B树把搜索域分为m个部分
   - 例：
     - 五叉查找树
-      - <img src="/images/408-mind-maps/ds-0010.png" alt="五叉查找树" width="240" height="111">
+      - <img src="/images/408-mind-maps/ds-0010.svg" alt="五叉查找树" width="300" height="173">
 
         - 例：查9
           - 22 -&gt; 5 -&gt; 6 -&gt; 8 -&gt; 9
@@ -253,40 +253,40 @@ layout: mind-map
 - B树的操作
 
   - 插入
-    - 插入到【终端节点】，【插满了】就从中间⌈m/2⌉ 分裂，分裂的结点送到父节点中去 <img src="/images/408-mind-maps/ds-0018.png" alt="插入到【终端节点】，【插满了】就从中间⌈m/2⌉ 分裂，分裂的结点送到父节点中去" width="240" height="69">
+    - 插入到【终端节点】，【插满了】就从中间⌈m/2⌉ 分裂，分裂的结点送到父节点中去 <img src="/images/408-mind-maps/ds-0018.svg" alt="插入到【终端节点】，【插满了】就从中间⌈m/2⌉ 分裂，分裂的结点送到父节点中去" width="300" height="115">
 
-      - 第一次分裂 <img src="/images/408-mind-maps/ds-0178.png" alt="第一次分裂" width="240" height="45">
+      - 第一次分裂 <img src="/images/408-mind-maps/ds-0178.svg" alt="第一次分裂" width="300" height="108">
 
-      - 第二次分裂 <img src="/images/408-mind-maps/ds-0142.png" alt="第二次分裂" width="240" height="70">
+      - 第二次分裂 <img src="/images/408-mind-maps/ds-0142.svg" alt="第二次分裂" width="300" height="126">
 
   - 删除
     - 够删
       - 删终端
-        - 直接删 <img src="/images/408-mind-maps/ds-0122.png" alt="直接删" width="240" height="75">
+        - 直接删 <img src="/images/408-mind-maps/ds-0122.svg" alt="直接删" width="300" height="129">
 
           - 若被删除关键字在终端节点，则直接删除该关键字 (要注意节点关键字个数是否低于下限⌈m/2⌉ -1)
       - 删非终端
-        - 找直接前驱或直接后继来进行顶替 <img src="/images/408-mind-maps/ds-0140.png" alt="找直接前驱或直接后继来进行顶替" width="240" height="72">
+        - 找直接前驱或直接后继来进行顶替 <img src="/images/408-mind-maps/ds-0140.svg" alt="找直接前驱或直接后继来进行顶替" width="300" height="129">
 
           - 若被删除关键字在非终端节点，则用直接前驱或直接后继来替代被删除的关键字 （直接前驱：当前关键字左侧指针所指子树中“最右下”的元素）
     - 删终端后低于下限了
       - 1\. 兄弟够借
         - 借右：借后继和后继的后继
-          - 借前 <img src="/images/408-mind-maps/ds-0073.png" alt="借前" width="240" height="82">
+          - 借前 <img src="/images/408-mind-maps/ds-0073.svg" alt="借前" width="300" height="166">
 
-            - 借后 <img src="/images/408-mind-maps/ds-0083.png" alt="借后" width="240" height="93">
+            - 借后 <img src="/images/408-mind-maps/ds-0083.svg" alt="借后" width="300" height="166">
 
         - 借左：借前驱和前驱的前驱
-          - 借前 <img src="/images/408-mind-maps/ds-0013.png" alt="借前" width="240" height="85">
+          - 借前 <img src="/images/408-mind-maps/ds-0013.svg" alt="借前" width="300" height="166">
 
-            - 借后 <img src="/images/408-mind-maps/ds-0190.png" alt="借后" width="240" height="88">
+            - 借后 <img src="/images/408-mind-maps/ds-0190.svg" alt="借后" width="300" height="166">
 
       - 2\. 兄弟不够借：兄弟合并
-        - 合并前 <img src="/images/408-mind-maps/ds-0028.png" alt="合并前" width="240" height="103">
+        - 合并前 <img src="/images/408-mind-maps/ds-0028.svg" alt="合并前" width="300" height="166">
 
-          - 合并后 <img src="/images/408-mind-maps/ds-0044.png" alt="合并后" width="240" height="92">
+          - 合并后 <img src="/images/408-mind-maps/ds-0044.svg" alt="合并后" width="300" height="166">
 
-            - 此时在进行一次合并 <img src="/images/408-mind-maps/ds-0213.png" alt="此时在进行一次合并" width="240" height="98">
+            - 此时在进行一次合并 <img src="/images/408-mind-maps/ds-0213.svg" alt="此时在进行一次合并" width="300" height="118">
 
 - 是二叉查找的一种升级优化，重点是查是否有某个值
   - 或者把其记录理解为这样 <img src="/images/408-mind-maps/ds-0067.png" alt="或者把其记录理解为这样" width="240" height="112">
@@ -433,7 +433,7 @@ layout: mind-map
         - n、m和冲突都没有关系，反而是装填因子可以影响冲突的概率
 - 冲突的探讨
   - 非同义词会不会引起冲突？
-  - <img src="/images/408-mind-maps/ds-0021.png" alt="冲突的探讨" width="240" height="179">
+  - 参考教材：《数据结构（C 语言版）》严蔚敏、吴伟民，清华大学出版社
 
     - 252页
 

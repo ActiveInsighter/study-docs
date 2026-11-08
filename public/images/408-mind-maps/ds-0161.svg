@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" width="560" height="380" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="3 路最佳归并树：每次取权值最小的三个结点合并">
+<title>3 路最佳归并树：每次取权值最小的三个结点合并</title>
+<rect x="0.75" y="0.75" width="558.5" height="378.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">3 路最佳归并树</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M164.3 250.2L135.7 289.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M176 254L176 286" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M187.7 250.2L216.3 289.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M239.3 175.6L190.7 220.4" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M260.8 180.8L273.2 215.2" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M268.7 175.6L317.3 220.4" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M424.3 178.2L395.7 217.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M436 182L436 214" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M447.7 178.2L476.3 217.8" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M235.4 97.4L90.6 154.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M254 110L254 142" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M272.6 97.4L417.4 154.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="72" cy="162" r="20" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="72" y="166.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">30</text>
+<circle cx="124" cy="306" r="20" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="124" y="310.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">2</text>
+<circle cx="176" cy="306" r="20" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="176" y="310.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">3</text>
+<circle cx="228" cy="306" r="20" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="228" y="310.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">6</text>
+<circle cx="176" cy="234" r="20" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="176" y="238.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="500">11</text>
+<circle cx="280" cy="234" r="20" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="280" y="238.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">9</text>
+<circle cx="332" cy="234" r="20" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="332" y="238.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">12</text>
+<circle cx="254" cy="162" r="20" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="254" y="166.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="500">32</text>
+<circle cx="384" cy="234" r="20" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="384" y="238.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">17</text>
+<circle cx="436" cy="234" r="20" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="436" y="238.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">24</text>
+<circle cx="488" cy="234" r="20" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="488" y="238.9" font-size="14" fill="#14532d" text-anchor="middle" font-weight="500">18</text>
+<circle cx="436" cy="162" r="20" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="436" y="166.9" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="500">59</text>
+<circle cx="254" cy="90" r="20" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="254" y="94.9" font-size="14" fill="#7f1d1d" text-anchor="middle" font-weight="500">121</text>
+<text x="280" y="356" font-size="13.5" fill="#3f3f46" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">WPL<tspan baseline-shift="-22%" font-size="72%">min</tspan> = (2+3+6)×3 + (9+12+17+24+18)×2 + 30×1 = 223</text>
+</svg>

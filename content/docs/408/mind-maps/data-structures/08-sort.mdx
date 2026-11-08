@@ -563,16 +563,16 @@ layout: mind-map
 - 概念
   - 外部排序重点优化的是外存调入内存的次数
   - 归并段：
-    - 初始情况 <img src="/images/408-mind-maps/ds-0212.png" alt="初始情况" width="240" height="147">
+    - 初始情况 <img src="/images/408-mind-maps/ds-0212.svg" alt="初始情况" width="300" height="145">
 
-      - 完成一次归并排序后的新的数据段 <img src="/images/408-mind-maps/ds-0076.png" alt="完成一次归并排序后的新的数据段" width="240" height="95">
+      - 完成一次归并排序后的新的数据段 <img src="/images/408-mind-maps/ds-0076.svg" alt="完成一次归并排序后的新的数据段" width="300" height="105">
 
-        - 也可以是归并段和归并段形成新的归并段 <img src="/images/408-mind-maps/ds-0210.png" alt="也可以是归并段和归并段形成新的归并段" width="240" height="82">
+        - 也可以是归并段和归并段形成新的归并段 <img src="/images/408-mind-maps/ds-0210.svg" alt="也可以是归并段和归并段形成新的归并段" width="300" height="114">
 
 - 归并排序
-  - 采用三个缓冲区即可完成二路归并排序 <img src="/images/408-mind-maps/ds-0220.png" alt="采用三个缓冲区即可完成二路归并排序" width="240" height="100">
+  - 采用三个缓冲区即可完成二路归并排序 <img src="/images/408-mind-maps/ds-0220.svg" alt="采用三个缓冲区即可完成二路归并排序" width="300" height="133">
 
-    - 加大输入缓冲区的数目可以实现多路归并 <img src="/images/408-mind-maps/ds-0097.png" alt="加大输入缓冲区的数目可以实现多路归并" width="240" height="70">
+    - 加大输入缓冲区的数目可以实现多路归并 <img src="/images/408-mind-maps/ds-0097.svg" alt="加大输入缓冲区的数目可以实现多路归并" width="300" height="137">
 
 - 归并排序的复杂度：
   - 增大归并路数能减少归并趟数，但会增加内部排序的时间
@@ -585,18 +585,18 @@ layout: mind-map
     - 优化：采用败者树
   - 构造流程
     - 初始情况：
-      - <img src="/images/408-mind-maps/ds-0035.png" alt="初始情况：" width="240" height="138">
+      - <img src="/images/408-mind-maps/ds-0035.svg" alt="初始情况：" width="300" height="178">
 
     - 构造过程：
-      - <img src="/images/408-mind-maps/ds-0106.png" alt="构造过程：" width="240" height="128">
+      - <img src="/images/408-mind-maps/ds-0106.svg" alt="构造过程：" width="300" height="178">
 
         - 只有胜者才有资格进行向上继续竞争，输掉的就保留在当前黑色节点中
     - 构造完成：
-      - <img src="/images/408-mind-maps/ds-0054.png" alt="构造完成：" width="240" height="124">
+      - <img src="/images/408-mind-maps/ds-0054.svg" alt="构造完成：" width="300" height="178">
 
         - 结点记录来自哪个归并段（index），而不是具体的值
     - 下次比较：
-      - <img src="/images/408-mind-maps/ds-0172.png" alt="下次比较：" width="240" height="141">
+      - <img src="/images/408-mind-maps/ds-0172.svg" alt="下次比较：" width="300" height="182">
 
         - 新的结点和树上各层的胜者进行比拼，最后选出一个新的胜者
   - 复杂度：
@@ -609,7 +609,7 @@ layout: mind-map
   - 思路：
     - 尝试构造最大的初始归并段
   - 示意图：
-    - <img src="/images/408-mind-maps/ds-0042.png" alt="示意图：" width="240" height="64">
+    - <img src="/images/408-mind-maps/ds-0042.svg" alt="示意图：" width="300" height="91">
 
       - MINIMAX为当前生成的归并段的最大值
     - 配图
@@ -626,19 +626,19 @@ layout: mind-map
   - 最佳归并树
     - 归并排序的IO次数：
       - 二路归并
-        - <img src="/images/408-mind-maps/ds-0219.png" alt="二路归并" width="240" height="147">
+        - <img src="/images/408-mind-maps/ds-0219.svg" alt="二路归并" width="300" height="171">
 
-          - 最佳归并树（哈夫曼树） <img src="/images/408-mind-maps/ds-0025.png" alt="最佳归并树（哈夫曼树）" width="223" height="220">
+          - 最佳归并树（哈夫曼树） <img src="/images/408-mind-maps/ds-0025.svg" alt="最佳归并树（哈夫曼树）" width="300" height="230">
 
     - 三路归并
-      - <img src="/images/408-mind-maps/ds-0019.png" alt="三路归并" width="240" height="97">
+      - <img src="/images/408-mind-maps/ds-0019.svg" alt="三路归并" width="300" height="167">
 
-        - 用类似哈夫曼树的方法构造：每次找权值最小的三个结点来归并 <img src="/images/408-mind-maps/ds-0161.png" alt="用类似哈夫曼树的方法构造：每次找权值最小的三个结点来归并" width="240" height="150">
+        - 用类似哈夫曼树的方法构造：每次找权值最小的三个结点来归并 <img src="/images/408-mind-maps/ds-0161.svg" alt="用类似哈夫曼树的方法构造：每次找权值最小的三个结点来归并" width="300" height="204">
 
       - 如果没有足够的归并段如何处理
-        - <img src="/images/408-mind-maps/ds-0015.png" alt="如果没有足够的归并段如何处理" width="240" height="149">
+        - <img src="/images/408-mind-maps/ds-0015.svg" alt="如果没有足够的归并段如何处理" width="300" height="202">
 
-          - 补充长度为0的虚段来凑归并段 <img src="/images/408-mind-maps/ds-0052.png" alt="补充长度为0的虚段来凑归并段" width="240" height="151">
+          - 补充长度为0的虚段来凑归并段 <img src="/images/408-mind-maps/ds-0052.svg" alt="补充长度为0的虚段来凑归并段" width="300" height="204">
 
         - 应该补充多少个归并段呢
           - 公式法：
@@ -648,10 +648,15 @@ layout: mind-map
 
               - 需要补充的虚段个数： $u = (n_0-1)\%(k-1), 补充 (k-1) - u个$
 
-                - <img src="/images/408-mind-maps/ds-0029.png" alt="需要补充的虚段个数：" width="240" height="146">
+                - <img src="/images/408-mind-maps/ds-0029.svg" alt="需要补充的虚段个数：" width="300" height="146">
 
           - 考场现推法：
-            - <img src="/images/408-mind-maps/ds-0162.png" alt="考场现推法：" width="240" height="215">
+            - 例：n₀ = 112 个初始归并段做 11 路归并，需补多少个虚段？
+              - 公式：$(n_0-1)\%(k-1) = 111\%10 = 1 \ne 0$，补 $(k-1)-1 = 9$ 个
+              - 现推：设 112 个结点权值都为 1，每 11 个合并为 1 个
+                - 112 = 11 × 10 + 2：第一次合并生成 10 个结点，剩下 2 个权值为 1 的结点
+                - 这 2 个结点再凑成一组需要 11 个，所以在最底层补 9 个虚段
+              - 再练：n₀ = 111 时 $110\%10=0$，不需补；n₀ = 122 时 $121\%10=1$，补 9 个
 
     - 批注：置换选择后长度不均
 ````

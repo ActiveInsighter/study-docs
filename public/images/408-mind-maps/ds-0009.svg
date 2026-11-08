@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" width="460" height="300" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="非强连通的有向图示例">
+<title>非强连通的有向图示例</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="458.5" height="298.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<path d="M106 80L332 80" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<circle cx="80" cy="80" r="26" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="80" y="85.2" font-size="15" fill="#18181b" text-anchor="middle" font-weight="500">A</text>
+<circle cx="360" cy="80" r="26" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="360" y="85.2" font-size="15" fill="#1e3a8a" text-anchor="middle" font-weight="500">B</text>
+<circle cx="220" cy="220" r="26" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="220" y="225.2" font-size="15" fill="#1e3a8a" text-anchor="middle" font-weight="500">C</text>
+<path d="M336.7 94.8L236.3 195.3" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M243.3 205.2L343.7 104.7" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<text x="80" y="136" font-size="13" fill="#71717a" text-anchor="middle">只出不进</text>
+<text x="310" y="172" font-size="13" fill="#3b6fd4">B ⇄ C 互通</text>
+<text x="230" y="284" font-size="13" fill="#3f3f46" text-anchor="middle">A 不能从 B、C 到达 → 不是强连通图</text>
+</svg>
