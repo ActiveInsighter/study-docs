@@ -24,9 +24,7 @@ layout: mind-map
   - 每一帧都确认，确认完后才发下一帧
   - 如：通信要求高的
 - 数据链路层到底负不负责"可靠传输"？
-  - 举证：
-
-    <a href="/images/408-mind-maps/cn-0103.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0103.svg" alt="举证：" width="220" height="220" loading="lazy" /></a>
+  - 举证： <img src="/images/408-mind-maps/thumb/cn-0103.webp" alt="举证：" width="220" height="220">
 
     - 配图
 
@@ -91,9 +89,7 @@ layout: mind-map
     - 1 的个数为偶数
 - CRC循环冗余码
   - 模二除法
-  - 如何计算（k阶数、最后的k-1位余数）
-
-    <a href="/images/408-mind-maps/cn-0105.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0105.svg" alt="如何计算（k阶数、最后的k-1位余数）" width="240" height="198" loading="lazy" /></a>
+  - 如何计算（k阶数、最后的k-1位余数） <img src="/images/408-mind-maps/thumb/cn-0105.webp" alt="如何计算（k阶数、最后的k-1位余数）" width="240" height="198">
 
   - CRC具有纠错能力，不过链路层不使用其纠错能力
 - 海明码
@@ -106,9 +102,7 @@ layout: mind-map
       - 若要纠错：海明距离应为2d+1位
   - 海明码的海明距离一定大于等于3
   - 位数确定：
-    - 有效信息n位，检验位的位数k位，则有不等式：
-
-      $n + k \leq2^k - 1$
+    - 有效信息n位，检验位的位数k位，则有不等式： $n + k \leq2^k - 1$
 
   - 编写校验位：（发出前）
     - 确定校验位位置
@@ -136,9 +130,7 @@ layout: mind-map
   - 都是发完一帧开启一个计时器
   - 滑动窗口如果大小为一，则上下界相同
   - 滑动窗口如何算完美：
-    - 分析两种情况，如果接收端所有ACK全部正常抵达和ACK全部丢失的情况下，会不会出现“误解”
-
-      <a href="/images/408-mind-maps/cn-0073.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0073.svg" alt="分析两种情况，如果接收端所有ACK全部正常抵达和ACK全部丢失的情况下，会不会出现“误解”" width="240" height="148" loading="lazy" /></a>
+    - 分析两种情况，如果接收端所有ACK全部正常抵达和ACK全部丢失的情况下，会不会出现“误解” <img src="/images/408-mind-maps/thumb/cn-0073.webp" alt="分析两种情况，如果接收端所有ACK全部正常抵达和ACK全部丢失的情况下，会不会出现“误解”" width="240" height="148">
 
       - 此时接收方收到0怎么办
     - 批注：要求理解+记住
@@ -149,7 +141,7 @@ layout: mind-map
   - ACK0 + ACK1 就足够了
   - 发送方和接受方都需要设置一个帧缓冲区
     - 作用：发送方发送完帧后，必须在缓存中保留此数据的帧副本，只有收到ACK时才可以丢弃
-- GBN协议<br>(累计确认)
+- GBN协议 (累计确认)
   - 总窗口数：N，发送窗口数：N-1，接受窗口数 ： 1
   - 帧序列号n位，则发送窗口大小 &lt;= 2^n - 1
     - 为什么呢：例如窗口大小为4编号从0~3，则第一批0~3成功发送，接收方也返回了ACK3，那么下一轮发送的就应该是0~3。可是，如果这个ACK3丢失了，那么接收方就不知道发送方又发一遍了吗
@@ -164,9 +156,7 @@ layout: mind-map
   - 如果接受方怀疑帧出错，就返回一个NAK n给发送端，发送端重传
     - NAK会指定要重传哪个帧
 - 链路利用率如何求解：
-  - 例如：从1中进行延伸求解
-
-    <a href="/images/408-mind-maps/cn-0012.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0012.svg" alt="例如：从1中进行延伸求解" width="240" height="104" loading="lazy" /></a>
+  - 例如：从1中进行延伸求解 <img src="/images/408-mind-maps/thumb/cn-0012.webp" alt="例如：从1中进行延伸求解" width="240" height="104">
 
 ## 介质访问（算）
 
@@ -212,9 +202,7 @@ layout: mind-map
       - 拿到就发
     - 冲突策略：
       - 发现冲突，等待一个随机时间在重发，重次往复
-    - 最大吞吐量：0.184
-
-      $S = Ge^{-2G}, G = 0.5$
+    - 最大吞吐量：0.184 $S = Ge^{-2G}, G = 0.5$
 
   - 时隙ALOHA
     - 收到等一会就发
@@ -223,14 +211,12 @@ layout: mind-map
       - 固定有一个时隙T0，帧到达后在缓存中等待一个&lt;T0的时间，然后等到下一个时隙开始再发
     - 冲突策略：
       - 和ALOHA一样
-    - 最大吞吐量：0.368
-
-      $S = Ge^{-G}, G = 1.0$
+    - 最大吞吐量：0.368 $S = Ge^{-G}, G = 1.0$
 
   - CSMA
     - 先听再发，发完不管
 
-    - Carrier Sense Multiple Access<br>载波侦听多路访问
+    - Carrier Sense Multiple Access 载波侦听多路访问
     - 策略
       - 三种坚持CSMA
         - 1-坚持
@@ -254,9 +240,7 @@ layout: mind-map
     - 记一个重要公式
       - 最小帧长 = 2 \* 传播时延 \* 传输速率
         - 其中 传播时延 = 总线长度 / 电磁波的发送速率
-      - 公式
-
-        $L_帧 = 2* v_传 * t_线\ (t_线 = \frac{L_线}{v_{电磁波}})$
+      - 公式 $L_帧 = 2* v_传 * t_线\ (t_线 = \frac{L_线}{v_{电磁波}})$
 
     - 先听后发，边听边发，冲突停发，随机重发
       - 争议期（冲突窗口、碰撞窗口）：最远两端点之间的往返时延
@@ -295,9 +279,7 @@ layout: mind-map
         - 发送站收到确认ACK，就说明正确接受，如果还要发送第二帧，就重新设置【回退值】
         - 发送站没收到ACK，就重新从开头进行征用信道。如果重传若干次失败，则放弃
       - 批注：了解
-    - 配图
-
-      <a href="/images/408-mind-maps/cn-0155.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0155.svg" alt="CSMA/CA" width="163" height="220" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/cn-0155.webp" alt="CSMA/CA" width="163" height="220">
 
       - DRS.CS.DSA - 当然是测试电视啊
       - DIFS：
@@ -358,13 +340,9 @@ layout: mind-map
       - 无线局域网
         - IEEE802.11
   - 一图记忆：
-    - 配图
+    - <img src="/images/408-mind-maps/thumb/cn-0079.webp" alt="一图记忆：" width="240" height="108">
 
-      <a href="/images/408-mind-maps/cn-0079.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0079.svg" alt="一图记忆：" width="240" height="108" loading="lazy" /></a>
-
-      - 配图
-
-        <a href="/images/408-mind-maps/cn-0142.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0142.svg" alt="一图记忆：" width="240" height="119" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/cn-0142.webp" alt="一图记忆：" width="240" height="119">
 
 - IEEE802的局域网标准
   - 将数据链路层分为了LLC和MAC
@@ -373,7 +351,7 @@ layout: mind-map
   - 提供物理层接口：
     - MAC：组帧和拆卸帧、比特传输、差错检测、透明传输
   - 批注：这个也只是规定，以太网太牛逼了，导致IEEE802只有MAC协议被装入了网卡中
-- 以太网<br>IEEE 802.3
+- 以太网 IEEE 802.3
 
   - 重要特点
     - 使用CSMA/CD
@@ -386,26 +364,20 @@ layout: mind-map
     - 3\.  比令牌环网、ATM便宜
     - 4\. 满足网络要求：10Mb/s - 100Mb/s
   - 传输介质
-    - 要求全部记住，因为是考点
-
-      <a href="/images/408-mind-maps/cn-0026.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0026.svg" alt="要求全部记住，因为是考点" width="240" height="70" loading="lazy" /></a>
+    - 要求全部记住，因为是考点 <img src="/images/408-mind-maps/thumb/cn-0026.webp" alt="要求全部记住，因为是考点" width="240" height="70">
 
   - 网卡（网络接口卡/网络适配器）
     - 功能：实现与局域网传输介质间的物理连接和电信号匹配涉及帧的发送接受封装拆解等等
     - 每块网卡在出厂时就有一个MAC地址
     - 网卡工作在物理层，只关注比特流
-  - MAC帧详解
-
-    <a href="/images/408-mind-maps/cn-0066.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0066.svg" alt="MAC帧详解" width="48" height="48" loading="lazy" /></a>
+  - MAC帧详解 <img src="/images/408-mind-maps/thumb/cn-0066.webp" alt="MAC帧详解" width="48" height="48">
 
     - MAC地址：6B = 48 bit = 12个16进制数。
       - 例如：1A-2B-3C-4D-5E-6F
       - 高24b为厂商编码
       - 低24b为厂商的网卡序号
     - 故局域网中指定接受方使用的是MAC地址
-    - 图中每一句话都重要，细看
-
-      <a href="/images/408-mind-maps/cn-0137.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0137.svg" alt="图中每一句话都重要，细看" width="240" height="97" loading="lazy" /></a>
+    - 图中每一句话都重要，细看 <img src="/images/408-mind-maps/thumb/cn-0137.webp" alt="图中每一句话都重要，细看" width="240" height="97">
 
       - 6 6 2 4
       - 第一个是目的，TCP、IP、UDP的第一个都是源
@@ -423,7 +395,7 @@ layout: mind-map
       - 概要：现在很少用CSMA/CD了，因为现在都是全双工，不需要考虑冲突碰撞了
         概要范围：[CSMA/CD（only in 半）](#focus=CSMA%2FCD%EF%BC%88only%20in%20%E5%8D%8A%EF%BC%89)
 
-    - 吉比特以太网<br>（千兆以太网）
+    - 吉比特以太网 （千兆以太网）
       - 速度是1Gb/s
       - 其他和 100Base-T 一样
     - 10吉比特以太网
@@ -434,9 +406,7 @@ layout: mind-map
   - 用于无线局域网WLAN
     - WiFi
   - 帧头以及各功能内容：
-    - 配图
-
-      <a href="/images/408-mind-maps/cn-0096.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0096.svg" alt="帧头以及各功能内容：" width="240" height="112" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/cn-0096.webp" alt="帧头以及各功能内容：" width="240" height="112">
 
   - 专有名词
     - 802.11 a/b/g/n
@@ -447,9 +417,7 @@ layout: mind-map
       - ESS：扩展服务集
         - Port：门桥
   - 有固定基础设施的WLAN
-    - 配图
-
-      <a href="/images/408-mind-maps/cn-0035.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0035.svg" alt="有固定基础设施的WLAN" width="240" height="111" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/cn-0035.webp" alt="有固定基础设施的WLAN" width="240" height="111">
 
   - 无固定基础设置的WLAN
     - 无AP，由平等状态的一系列移动站组成
@@ -467,9 +435,7 @@ layout: mind-map
 
 - 因特网是世界上范围最大的广域网
 - 特点：
-  - 广域网是连接众多局域网的网络
-
-    <a href="/images/408-mind-maps/cn-0049.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0049.svg" alt="广域网是连接众多局域网的网络" width="240" height="78" loading="lazy" /></a>
+  - 广域网是连接众多局域网的网络 <img src="/images/408-mind-maps/thumb/cn-0049.webp" alt="广域网是连接众多局域网的网络" width="240" height="78">
 
   - != 互联网，互联网=广域网+局域网
   - 广域网采用【结点交换机】在单个网络中转发分组，功能很类似路由器
@@ -497,13 +463,9 @@ layout: mind-map
   - PPP帧和以太网帧、HDLC帧都是不一样的，只有信息部分是一样的
     - PCI不一样
   - 位置：
-    - 两个路由器之间的帧数据可以是PPP帧
+    - 两个路由器之间的帧数据可以是PPP帧 <img src="/images/408-mind-maps/thumb/cn-0086.webp" alt="两个路由器之间的帧数据可以是PPP帧" width="240" height="63">
 
-      <a href="/images/408-mind-maps/cn-0086.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0086.svg" alt="两个路由器之间的帧数据可以是PPP帧" width="240" height="63" loading="lazy" /></a>
-
-      - 但如果两个路由器之间有一个交换机，则一定不是PPP帧而是以太网帧
-
-        <a href="/images/408-mind-maps/cn-0038.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0038.svg" alt="但如果两个路由器之间有一个交换机，则一定不是PPP帧而是以太网帧" width="240" height="91" loading="lazy" /></a>
+      - 但如果两个路由器之间有一个交换机，则一定不是PPP帧而是以太网帧 <img src="/images/408-mind-maps/thumb/cn-0038.webp" alt="但如果两个路由器之间有一个交换机，则一定不是PPP帧而是以太网帧" width="240" height="91">
 
   - 特点：
     - 简单！
@@ -520,9 +482,7 @@ layout: mind-map
       概要范围：[面向字节的协议：](#focus=%E9%9D%A2%E5%90%91%E5%AD%97%E8%8A%82%E7%9A%84%E5%8D%8F%E8%AE%AE%EF%BC%9A)
 
   - PPP帧格式
-    - 配图
-
-      <a href="/images/408-mind-maps/cn-0089.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0089.svg" alt="PPP帧格式" width="240" height="76" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/cn-0089.webp" alt="PPP帧格式" width="240" height="76">
 
       - A字段是Address，但是PPP帧是点对点的，不需要说明地址信息，所以A字段就是无用字段
       - 例如协议是0x21，就是IP数据报
@@ -536,9 +496,7 @@ layout: mind-map
         - 等于是建立了逻辑连接
     - 把IP数据报封装为PPP帧发到串行链路上
   - PPP协议的工作流程：
-    - 配图
-
-      <a href="/images/408-mind-maps/cn-0002.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0002.svg" alt="PPP协议的工作流程：" width="240" height="142" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/cn-0002.webp" alt="PPP协议的工作流程：" width="240" height="142">
 
       - 简单来讲就是：你点击上网，最开始是没有链路的。
       - 1\. 在物理层上建立连接，此时还不算完全连接成功
@@ -574,9 +532,7 @@ layout: mind-map
     - 异步响应方式：
       - 非平衡，从站未受主站允许也可以传输
   - HDLC帧格式：
-    - 配图
-
-      <a href="/images/408-mind-maps/cn-0136.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0136.svg" alt="HDLC帧格式：" width="240" height="85" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/cn-0136.webp" alt="HDLC帧格式：" width="240" height="85">
 
       - 控制C：
         - 无编号帧（U)
@@ -608,7 +564,7 @@ layout: mind-map
     - 增大了时延
       - MAC没有流量控制
         - 传播过多的信息可能引起广播风暴
-- 网桥路径<br>选择算法
+- 网桥路径 选择算法
   - 透明网桥
     - 即插即用，自学习算法
       - 选择的不是最佳路由
@@ -653,23 +609,17 @@ layout: mind-map
       - 先将帧存储在高速缓存器中，进行数据正确性检测，发现无误后传输，否则丢弃
       - 延迟大、可靠性高、支持不同速率的端口交换
 - 好题：
-  - 配图
-
-    <a href="/images/408-mind-maps/cn-0107.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0107.svg" alt="好题：" width="240" height="110" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/cn-0107.webp" alt="好题：" width="240" height="110">
 
     - D
 
 ## VLAN
 
 - 概念：
-  - 配图
-
-    <a href="/images/408-mind-maps/cn-0084.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0084.svg" alt="概念：" width="240" height="124" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/cn-0084.webp" alt="概念：" width="240" height="124">
 
 - 基于接口的VLAN技术：
-  - 配图
-
-    <a href="/images/408-mind-maps/cn-0113.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0113.svg" alt="基于接口的VLAN技术：" width="240" height="98" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/cn-0113.webp" alt="基于接口的VLAN技术：" width="240" height="98">
 
 - 基于MAC的VLAN技术：
   - 配图
@@ -697,9 +647,7 @@ layout: mind-map
   - Truck端口
     - 在不同交换机进行数据传输的时候，交换机之间都是使用的Truck端口，所以不会把tag信息给去掉
   - VLAN帧：
-    - 配图
-
-      <a href="/images/408-mind-maps/cn-0148.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0148.svg" alt="VLAN帧：" width="240" height="118" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/cn-0148.webp" alt="VLAN帧：" width="240" height="118">
 
     - 特点一：
       - VLAN标记的有效VID范围是1~4094
@@ -707,11 +655,9 @@ layout: mind-map
       - IEEE802.1Q帧是交换机处理的，用户主机发送给交换机的帧仍然是普通的以太网帧，由交换机插入了Tag字段后通过Truck端口发给下一个交换机
         - 下一个交换机收到后，把Tag字段去掉后，发给对应VLAN中的主机
 - 练习题：
-  - 配图
+  - <img src="/images/408-mind-maps/thumb/cn-0064.webp" alt="练习题：" width="240" height="95">
 
-    <a href="/images/408-mind-maps/cn-0064.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/cn-0064.svg" alt="练习题：" width="240" height="95" loading="lazy" /></a>
-
-    - Q1: 可以<br>Q2: DH可以。A和D、A和H不可以，不同VLAN直接的主机想要互通只能通过”路由器 or 三层交换机“才能完成互通
+    - Q1: 可以 Q2: DH可以。A和D、A和H不可以，不同VLAN直接的主机想要互通只能通过”路由器 or 三层交换机“才能完成互通
   - 配图
 
     以下关于虚拟局域网特性的描述中，错误的是（ ）。

@@ -1,86 +1,26 @@
 /*
- * Markmap mind maps (components/mdx/mind-map.tsx).
+ * Frame for Markmap mind maps (components/mdx/mind-map.tsx).
  *
- * Two variants share one canvas:
+ * The map itself — nodes, links, notes, toolbar — uses Markmap's built-in
+ * `classic` theme and its official toolbar styles; light / dark follows the
+ * site theme through the `colorScheme` option. This file only sizes the
+ * canvas and places the overlays.
+ *
  * - `embedded`: a bordered card inside an article;
  * - `page`: dedicated chapter pages (`layout: mind-map`), where the canvas
- *   fills the docs panel and the title floats over it.
- *
- * Markmap embeds its own stylesheet scoped to `.markmap`; the overrides below
- * use `.mind-map .mind-map-svg` so they win without !important.
+ *   fills the docs panel and the chapter title floats over it.
  */
-
-:root {
-  --mind-map-canvas: #fcfcfd;
-  --mind-map-dot: rgb(24 24 27 / 0.075);
-  --mind-map-surface: rgb(255 255 255 / 0.82);
-  --mind-map-border: rgb(24 24 27 / 0.1);
-  --mind-map-shadow: 0 1px 2px rgb(24 24 27 / 0.05), 0 10px 30px -18px rgb(24 24 27 / 0.28);
-  --mind-map-text: #1f2328;
-  --mind-map-muted: #6b7280;
-  --mind-map-accent: #4f6bed;
-  --mind-map-code-bg: #f6f7f9;
-  --mind-map-code-border: rgb(24 24 27 / 0.08);
-  --mind-map-inline-code-bg: rgb(24 24 27 / 0.06);
-  --mind-map-table-header: #f3f4f6;
-  --mind-map-table-border: rgb(24 24 27 / 0.12);
-  --mind-map-mark: #fff1a8;
-  --mind-map-highlight: rgb(79 107 237 / 0.14);
-  --mind-map-image-bg: #ffffff;
-
-  /* highlight.js tokens (GitHub light). */
-  --mind-map-hl-comment: #6e7781;
-  --mind-map-hl-keyword: #cf222e;
-  --mind-map-hl-type: #8250df;
-  --mind-map-hl-title: #6639ba;
-  --mind-map-hl-string: #0a3069;
-  --mind-map-hl-number: #0550ae;
-  --mind-map-hl-builtin: #953800;
-  --mind-map-hl-meta: #116329;
-}
-
-.dark {
-  --mind-map-canvas: #0c0c0e;
-  --mind-map-dot: rgb(244 244 245 / 0.06);
-  --mind-map-surface: rgb(24 24 27 / 0.78);
-  --mind-map-border: rgb(244 244 245 / 0.1);
-  --mind-map-shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 12px 32px -18px rgb(0 0 0 / 0.75);
-  --mind-map-text: #e6e7ea;
-  --mind-map-muted: #9ca3af;
-  --mind-map-accent: #8ea2ff;
-  --mind-map-code-bg: #16171b;
-  --mind-map-code-border: rgb(244 244 245 / 0.08);
-  --mind-map-inline-code-bg: rgb(244 244 245 / 0.09);
-  --mind-map-table-header: #1b1c21;
-  --mind-map-table-border: rgb(244 244 245 / 0.14);
-  --mind-map-mark: #5c4d12;
-  --mind-map-highlight: rgb(142 162 255 / 0.18);
-  /* Diagrams are drawn black-on-transparent; keep a light mat behind them. */
-  --mind-map-image-bg: #f4f4f5;
-
-  /* highlight.js tokens (GitHub dark). */
-  --mind-map-hl-comment: #8b949e;
-  --mind-map-hl-keyword: #ff7b72;
-  --mind-map-hl-type: #d2a8ff;
-  --mind-map-hl-title: #d2a8ff;
-  --mind-map-hl-string: #a5d6ff;
-  --mind-map-hl-number: #79c0ff;
-  --mind-map-hl-builtin: #ffa657;
-  --mind-map-hl-meta: #7ee787;
-}
-
-/* ---------- Frame ---------- */
 
 .mind-map {
   --mind-map-height: clamp(22rem, 62vh, 38rem);
+  --mind-map-border: color-mix(in oklab, var(--color-fd-foreground) 12%, transparent);
   position: relative;
   margin-block: 1.75rem;
   overflow: hidden;
   border: 1px solid var(--mind-map-border);
-  border-radius: 0.875rem;
-  background: var(--mind-map-canvas);
-  box-shadow: var(--mind-map-shadow);
-  color: var(--mind-map-text);
+  border-radius: 0.75rem;
+  background: var(--color-fd-background);
+  color: var(--color-fd-foreground);
 }
 
 .mind-map-stage {
@@ -89,355 +29,112 @@
   min-height: 20rem;
   overflow: hidden;
   touch-action: none;
-  background-color: var(--mind-map-canvas);
-  background-image: radial-gradient(var(--mind-map-dot) 1px, transparent 1.2px);
-  background-size: 18px 18px;
 }
 
-.mind-map-svg {
+.mind-map-surface-host,
+.mind-map-surface {
   display: block;
   width: 100%;
   height: 100%;
-  cursor: grab;
 }
 
-.mind-map-svg:active {
-  cursor: grabbing;
-}
-
-/* ---------- Markmap theme ---------- */
-
-.mind-map .mind-map-svg {
-  --markmap-font: 400 14px/1.6 var(--font-inter), 'PingFang SC', 'Microsoft YaHei',
-    'Noto Sans CJK SC', system-ui, sans-serif;
-  --markmap-text-color: var(--mind-map-text);
-  --markmap-a-color: var(--mind-map-accent);
-  --markmap-a-hover-color: var(--mind-map-accent);
-  --markmap-code-bg: var(--mind-map-inline-code-bg);
-  --markmap-code-color: inherit;
-  --markmap-highlight-bg: var(--mind-map-mark);
-  --markmap-circle-open-bg: var(--mind-map-canvas);
-  --markmap-table-border: 1px solid var(--mind-map-table-border);
-  --markmap-highlight-node-bg: var(--mind-map-highlight);
-}
-
-.mind-map .mind-map-svg .markmap-link {
-  stroke-linecap: round;
-  stroke-opacity: 0.72;
-}
-
-.mind-map .mind-map-svg .markmap-node > line {
-  stroke-linecap: round;
-}
-
-.mind-map .mind-map-svg .markmap-node > circle {
-  stroke-width: 2px;
-  transition: r 150ms ease;
-}
-
-.mind-map .mind-map-svg .markmap-node > circle:hover {
-  r: 7.5;
-}
-
-.mind-map .mind-map-svg .markmap-node > circle:focus-visible {
-  outline: none;
-  stroke-width: 3.5px;
-  r: 8;
-}
-
-.mind-map .mind-map-svg .markmap-highlight rect {
-  rx: 10px;
-}
-
-.mind-map .mind-map-svg .markmap-foreign {
-  cursor: default;
-}
-
-/* Root and first-level labels carry the structure. */
-.mind-map .mind-map-svg .markmap-node[data-depth='0'] > .markmap-foreign {
-  font-size: 18px;
-  font-weight: 650;
-  letter-spacing: -0.01em;
-}
-
-.mind-map .mind-map-svg .markmap-node[data-depth='1'] > .markmap-foreign {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.mind-map .mind-map-svg .markmap-foreign p {
-  margin: 0;
-}
-
-.mind-map .mind-map-svg .markmap-foreign p + p {
-  margin-top: 0.375rem;
-}
-
-.mind-map .mind-map-svg .markmap-foreign a {
-  text-decoration: underline;
-  text-decoration-color: color-mix(in oklab, currentColor 35%, transparent);
-  text-underline-offset: 3px;
-}
-
-.mind-map .mind-map-svg .markmap-foreign a:hover {
-  text-decoration-color: currentColor;
-}
-
-.mind-map .mind-map-svg .markmap-foreign strong {
-  font-weight: 650;
-}
-
-.mind-map .mind-map-svg .markmap-foreign mark {
-  border-radius: 3px;
-  padding-inline: 2px;
-  color: inherit;
-}
-
-/* Rich nodes (code, tables, display math) size to their content instead of
-   the plain-text wrap width, up to a readable cap. */
-.mind-map .mind-map-svg .markmap-foreign > div:has(pre, table, .katex-display, .katex-block) {
-  width: max-content;
-  max-width: 760px;
-}
-
-/* Inline code */
-.mind-map .mind-map-svg .markmap-foreign :not(pre) > code {
-  padding: 0.1em 0.38em;
-  border-radius: 5px;
-  font-family: var(--font-mono, ui-monospace), 'SFMono-Regular', Menlo, Consolas, monospace;
-  font-size: 0.86em;
-}
-
-/* Code blocks */
-.mind-map .mind-map-svg .markmap-foreign pre {
-  margin: 0.375rem 0 0.125rem;
-  padding: 0.625rem 0.875rem;
-  border: 1px solid var(--mind-map-code-border);
-  border-radius: 0.625rem;
-  background: var(--mind-map-code-bg);
-  font-size: 12.5px;
-  line-height: 1.6;
-  tab-size: 4;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-}
-
-.mind-map .mind-map-svg .markmap-foreign pre > code {
-  padding: 0;
-  border-radius: 0;
-  background: none;
-  color: var(--mind-map-text);
-  font-family: var(--font-mono, ui-monospace), 'SFMono-Regular', Menlo, Consolas, monospace;
-  font-size: inherit;
-}
-
-.mind-map .hljs-comment,
-.mind-map .hljs-quote {
-  color: var(--mind-map-hl-comment);
-  font-style: italic;
-}
-
-.mind-map .hljs-keyword,
-.mind-map .hljs-selector-tag,
-.mind-map .hljs-literal,
-.mind-map .hljs-doctag {
-  color: var(--mind-map-hl-keyword);
-}
-
-.mind-map .hljs-type,
-.mind-map .hljs-class .hljs-title,
-.mind-map .hljs-title.class_ {
-  color: var(--mind-map-hl-type);
-}
-
-.mind-map .hljs-title,
-.mind-map .hljs-title.function_,
-.mind-map .hljs-section {
-  color: var(--mind-map-hl-title);
-}
-
-.mind-map .hljs-string,
-.mind-map .hljs-regexp,
-.mind-map .hljs-char {
-  color: var(--mind-map-hl-string);
-}
-
-.mind-map .hljs-number,
-.mind-map .hljs-variable,
-.mind-map .hljs-attr,
-.mind-map .hljs-attribute {
-  color: var(--mind-map-hl-number);
-}
-
-.mind-map .hljs-built_in,
-.mind-map .hljs-params,
-.mind-map .hljs-symbol {
-  color: var(--mind-map-hl-builtin);
-}
-
-.mind-map .hljs-meta,
-.mind-map .hljs-addition {
-  color: var(--mind-map-hl-meta);
-}
-
-/* Tables */
-.mind-map .mind-map-svg .markmap-foreign table {
-  margin: 0.375rem 0 0.125rem;
-  border-collapse: separate;
-  border-spacing: 0;
-  overflow: hidden;
-  border: 1px solid var(--mind-map-table-border);
-  border-radius: 0.5rem;
-  font-size: 12.5px;
-  line-height: 1.5;
-  font-variant-numeric: tabular-nums;
-}
-
-.mind-map .mind-map-svg .markmap-foreign th,
-.mind-map .mind-map-svg .markmap-foreign td {
-  padding: 0.3125rem 0.625rem;
-  border: 0;
-  border-right: 1px solid var(--mind-map-table-border);
-  border-bottom: 1px solid var(--mind-map-table-border);
-  vertical-align: top;
-}
-
-.mind-map .mind-map-svg .markmap-foreign :is(th, td):last-child {
-  border-right: 0;
-}
-
-.mind-map .mind-map-svg .markmap-foreign tbody tr:last-child > td {
-  border-bottom: 0;
-}
-
-.mind-map .mind-map-svg .markmap-foreign th {
-  background: var(--mind-map-table-header);
-  font-weight: 600;
-  text-align: left;
-}
-
-/* Formulas: KaTeX HTML is rendered at build time; fonts and base styles come
-   from the site's katex.css. */
-.mind-map .mind-map-svg .markmap-foreign .katex {
-  font-size: 1.06em;
-  line-height: 1.3;
-}
-
-.mind-map .mind-map-svg .markmap-foreign :is(.katex-display, .katex-block) {
-  margin: 0.25rem 0;
-  text-align: left;
-}
-
-.mind-map .mind-map-svg .markmap-foreign .katex-display > .katex {
-  text-align: left;
-}
-
-/* Images: intrinsic size from width/height attributes; click to enlarge. */
-.mind-map .mind-map-svg .markmap-foreign img {
-  display: inline-block;
-  max-width: none;
-  height: auto;
-  margin-block: 0.25rem;
-  padding: 0.25rem;
-  border: 1px solid var(--mind-map-border);
-  border-radius: 0.5rem;
-  background: var(--mind-map-image-bg);
-  vertical-align: middle;
-  cursor: zoom-in;
-  transition: box-shadow 150ms ease, border-color 150ms ease;
-}
-
-.mind-map .mind-map-svg .markmap-foreign img:hover {
-  border-color: color-mix(in oklab, var(--mind-map-accent) 55%, transparent);
-  box-shadow: 0 0 0 3px color-mix(in oklab, var(--mind-map-accent) 18%, transparent);
-}
-
-/* Small inline icons (heading glyphs) stay unframed. */
-.mind-map .mind-map-svg .markmap-foreign img[width='48'] {
-  padding: 0;
-  border: 0;
-  background: none;
-}
-
-.mind-map .mind-map-svg .markmap-foreign a:has(> img) {
-  text-decoration: none;
-}
-
-/* ---------- Toolbar (official markmap-toolbar, restyled) ---------- */
+/* ---------- Overlays ---------- */
 
 .mind-map-toolbar-host {
   position: absolute;
-  right: 0.875rem;
-  bottom: 0.875rem;
+  right: 0.75rem;
+  bottom: 0.75rem;
   z-index: 3;
-}
-
-.mind-map .mm-toolbar {
-  display: flex;
-  align-items: center;
-  gap: 0.125rem;
-  padding: 0.25rem;
-  border: 1px solid var(--mind-map-border);
-  border-radius: 0.875rem;
-  background: var(--mind-map-surface);
-  box-shadow: var(--mind-map-shadow);
-  color: var(--mind-map-muted);
-  user-select: none;
-  backdrop-filter: blur(14px) saturate(1.4);
-  -webkit-backdrop-filter: blur(14px) saturate(1.4);
-}
-
-.mind-map .mm-toolbar-item {
-  position: relative;
-  display: inline-grid;
-  width: 2.125rem;
-  height: 2.125rem;
-  margin: 0;
-  place-items: center;
-  border-radius: 0.625rem;
-  color: var(--mind-map-muted);
-  cursor: pointer;
-  transition: background-color 150ms ease, color 150ms ease;
-}
-
-.mind-map .mm-toolbar-item > svg {
-  display: block;
-  width: 1.0625rem;
-  height: 1.0625rem;
-}
-
-.mind-map .mm-toolbar-item:hover {
-  background: color-mix(in oklab, var(--mind-map-text) 8%, transparent);
-  color: var(--mind-map-text);
-}
-
-.mind-map .mm-toolbar-item:focus-visible {
-  outline: 2px solid var(--mind-map-accent);
-  outline-offset: 1px;
-}
-
-.mind-map .mm-toolbar-item.active {
-  background: color-mix(in oklab, var(--mind-map-accent) 16%, transparent);
-  color: var(--mind-map-accent);
-}
-
-.mind-map .mm-toolbar-item[data-separated='true'] {
-  margin-left: 0.5625rem;
-}
-
-.mind-map .mm-toolbar-item[data-separated='true']::before {
-  position: absolute;
-  top: 0.5rem;
-  bottom: 0.5rem;
-  left: -0.375rem;
-  width: 1px;
-  background: var(--mind-map-border);
-  content: '';
 }
 
 .mind-map[data-status='loading'] .mind-map-toolbar-host,
 .mind-map[data-status='error'] .mind-map-toolbar-host {
   display: none;
+}
+
+.mind-map-header {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 3;
+  max-width: min(28rem, calc(100% - 1.5rem));
+  pointer-events: none;
+}
+
+.mind-map-page-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.375rem 0.375rem 0.375rem 0.75rem;
+  border: 1px solid var(--mind-map-border);
+  border-radius: 0.625rem;
+  background: var(--color-fd-background);
+  pointer-events: auto;
+}
+
+.mind-map-page-heading {
+  display: grid;
+  min-width: 0;
+}
+
+.mind-map-page-course {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.mind-map-page-course:hover {
+  color: var(--color-fd-foreground);
+}
+
+.mind-map-page-position {
+  font-variant-numeric: tabular-nums;
+}
+
+.mind-map-page-position::before {
+  content: '· ';
+}
+
+#docs-body .mind-map-page-title {
+  margin: 0;
+  overflow: hidden;
+  font-size: 0.9375rem;
+  font-weight: 600 !important;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mind-map-page-nav {
+  display: flex;
+  flex: none;
+}
+
+.mind-map-page-nav-link {
+  display: inline-grid;
+  width: 1.75rem;
+  height: 1.75rem;
+  place-items: center;
+  border-radius: 0.375rem;
+  color: var(--color-fd-muted-foreground);
+}
+
+.mind-map-page-nav-link svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.mind-map-page-nav-link:not([data-disabled]):hover {
+  background: var(--color-fd-accent);
+  color: var(--color-fd-accent-foreground);
+}
+
+.mind-map-page-nav-link[data-disabled] {
+  opacity: 0.35;
 }
 
 /* ---------- Status ---------- */
@@ -446,12 +143,10 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.625rem;
+  display: grid;
+  place-items: center;
   padding: 1rem;
-  color: var(--mind-map-muted);
+  color: var(--color-fd-muted-foreground);
   font-size: 0.875rem;
   pointer-events: none;
   text-align: center;
@@ -461,20 +156,6 @@
   color: var(--color-fd-error, #dc2626);
 }
 
-.mind-map-spinner {
-  width: 1rem;
-  height: 1rem;
-  border: 2px solid color-mix(in oklab, var(--mind-map-muted) 30%, transparent);
-  border-top-color: var(--mind-map-accent);
-  border-radius: 999px;
-  animation: mind-map-spin 800ms linear infinite;
-}
-
-@keyframes mind-map-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .mind-map-sr-only {
   position: absolute;
@@ -488,119 +169,17 @@
   border: 0;
 }
 
-/* ---------- Header overlay (page variant) ---------- */
-
-.mind-map-header {
-  position: absolute;
-  top: 0.875rem;
-  left: 0.875rem;
-  z-index: 3;
-  max-width: min(28rem, calc(100% - 1.75rem));
-  pointer-events: none;
-}
-
-.mind-map-page-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.5rem 0.5rem 0.5rem 0.875rem;
-  border: 1px solid var(--mind-map-border);
-  border-radius: 0.875rem;
-  background: var(--mind-map-surface);
-  box-shadow: var(--mind-map-shadow);
-  pointer-events: auto;
-  backdrop-filter: blur(14px) saturate(1.4);
-  -webkit-backdrop-filter: blur(14px) saturate(1.4);
-}
-
-.mind-map-page-heading {
-  display: grid;
-  min-width: 0;
-  gap: 0.0625rem;
-}
-
-.mind-map-page-course {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.375rem;
-  color: var(--mind-map-muted);
-  font-size: 0.75rem;
-  font-weight: 500;
-  line-height: 1.3;
-  text-decoration: none;
-}
-
-.mind-map-page-course:hover {
-  color: var(--mind-map-accent);
-}
-
-.mind-map-page-position {
-  padding: 0 0.375rem;
-  border-radius: 999px;
-  background: color-mix(in oklab, var(--mind-map-text) 7%, transparent);
-  font-variant-numeric: tabular-nums;
-}
-
-.mind-map-page-title {
-  margin: 0;
-  overflow: hidden;
-  color: var(--mind-map-text);
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.35;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.mind-map-page-nav {
-  display: flex;
-  flex: none;
-  gap: 0.125rem;
-}
-
-.mind-map-page-nav-link {
-  display: inline-grid;
-  width: 2rem;
-  height: 2rem;
-  place-items: center;
-  border-radius: 0.625rem;
-  color: var(--mind-map-muted);
-  transition: background-color 150ms ease, color 150ms ease;
-}
-
-.mind-map-page-nav-link svg {
-  width: 1.125rem;
-  height: 1.125rem;
-}
-
-.mind-map-page-nav-link:not([data-disabled]):hover {
-  background: color-mix(in oklab, var(--mind-map-text) 8%, transparent);
-  color: var(--mind-map-text);
-}
-
-.mind-map-page-nav-link:focus-visible {
-  outline: 2px solid var(--mind-map-accent);
-  outline-offset: 1px;
-}
-
-.mind-map-page-nav-link[data-disabled] {
-  opacity: 0.35;
-}
-
 /* ---------- Page variant: the map is the page ---------- */
 
 .mind-map[data-variant='page'] {
   margin: 0;
   border: 0;
   border-radius: 0;
-  box-shadow: none;
-  background: var(--color-fd-background, var(--mind-map-canvas));
 }
 
 .mind-map[data-variant='page'] .mind-map-stage {
   height: calc(100dvh - var(--fd-header-height, 3.5rem));
   min-height: 24rem;
-  background-color: var(--color-fd-background, var(--mind-map-canvas));
 }
 
 #nd-page.mind-map-article {
@@ -611,12 +190,6 @@
 #docs-body.mind-map-page-body {
   margin: 0;
   padding: 0;
-}
-
-#docs-body .mind-map-page-title {
-  font-size: 1rem;
-  font-weight: 600 !important;
-  line-height: 1.35;
 }
 
 @media (max-width: 767.98px) {
@@ -631,21 +204,10 @@
     display: none;
   }
 
-  .mind-map-header {
-    top: 0.625rem;
-    left: 0.625rem;
-    max-width: calc(100% - 1.25rem);
-  }
-
   .mind-map-toolbar-host {
     right: 50%;
     bottom: max(0.75rem, env(safe-area-inset-bottom));
     transform: translateX(50%);
-  }
-
-  .mind-map .mm-toolbar-item {
-    width: 2.25rem;
-    height: 2.25rem;
   }
 }
 
@@ -691,16 +253,6 @@
   flex: 1;
 }
 
-.mind-map:fullscreen .mind-map-header {
-  top: max(0.875rem, env(safe-area-inset-top));
-  left: max(0.875rem, env(safe-area-inset-left));
-}
-
-.mind-map:fullscreen .mind-map-toolbar-host {
-  right: max(0.875rem, env(safe-area-inset-right));
-  bottom: max(0.875rem, env(safe-area-inset-bottom));
-}
-
 /* ---------- Image preview ---------- */
 
 .mind-map-lightbox {
@@ -709,27 +261,22 @@
   margin: auto;
   padding: 0;
   overflow: hidden;
-  border: 1px solid var(--mind-map-border);
-  border-radius: 1rem;
-  background: var(--mind-map-image-bg);
+  border: 0;
+  border-radius: 0.75rem;
+  background: #fff;
   box-shadow: 0 24px 64px -24px rgb(0 0 0 / 0.5);
-  color: #18181b;
 }
 
 .mind-map-lightbox::backdrop {
-  background: rgb(9 9 11 / 0.55);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: rgb(9 9 11 / 0.6);
 }
 
 .mind-map-lightbox-image {
   display: block;
   width: auto;
-  min-width: min(28rem, 80vw);
-  max-width: min(88vw, 1240px);
+  max-width: min(92vw, 1280px);
   height: auto;
-  max-height: 86dvh;
-  padding: 2.75rem 1.5rem 1.5rem;
+  max-height: 92dvh;
   object-fit: contain;
 }
 
@@ -748,14 +295,14 @@
   place-items: center;
   border: 0;
   border-radius: 0.5rem;
-  background: rgb(24 24 27 / 0.06);
-  color: #3f3f46;
+  background: rgb(255 255 255 / 0.85);
+  color: #27272a;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.15);
   cursor: pointer;
 }
 
 .mind-map-lightbox-button:hover {
-  background: rgb(24 24 27 / 0.12);
-  color: #18181b;
+  background: #fff;
 }
 
 .mind-map-lightbox-button svg {
@@ -766,18 +313,5 @@
 @media (max-width: 640px) {
   .mind-map {
     --mind-map-height: clamp(22rem, 64vh, 34rem);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .mind-map .mm-toolbar-item,
-  .mind-map-page-nav-link,
-  .mind-map .mind-map-svg .markmap-node > circle,
-  .mind-map .mind-map-svg .markmap-foreign img {
-    transition: none;
-  }
-
-  .mind-map-spinner {
-    animation-duration: 2400ms;
   }
 }

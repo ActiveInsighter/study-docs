@@ -19,9 +19,7 @@ layout: mind-map
   - 数据元素
   - 数据项
   - 图片
-    - 配图
-
-      <a href="/images/408-mind-maps/ds-0157.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0157.svg" alt="图片" width="240" height="176" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/ds-0157.webp" alt="图片" width="240" height="176">
 
 - 数据类型
   分组说明：一个完整的ADT可以定义一个数据结构；对应：[抽象数据类型（ADT）](#focus=%E6%8A%BD%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%88ADT%EF%BC%89)
@@ -81,7 +79,7 @@ layout: mind-map
         - 无向图
 - 数据的运算
 
-- 物理结构<br>【类比OS中的<br>文件物理结构<br>来理解】
+- 物理结构 【类比OS中的 文件物理结构 来理解】
 
   - 线性存储
     - （OS文件：顺序存储），在物理上相邻的存放
@@ -99,9 +97,7 @@ layout: mind-map
   - 逻辑结构是设计者独立思考后采用的抽象表示方式，独立于存储结构
   - 存储结构是逻辑结构在计算机上的映射，它不能独立于逻辑结构而存在
     - 例如int\[\]就是连续空间，ListNode就是离散空间
-  - 配图
-
-    <a href="/images/408-mind-maps/ds-0056.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/ds-0056.svg" alt="关系：" width="240" height="159" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/ds-0056.webp" alt="关系：" width="240" height="159">
 
 ## 算法
 
@@ -129,23 +125,15 @@ layout: mind-map
 - 时间复杂度
   - 计算：
     - 1\. 找到基本操作（最深层的循环）
-    - 2\. 分析该基本操作的执行次数 x 和问题的规模 n 的数学形式关系
-
-      $x = f(n)$
+    - 2\. 分析该基本操作的执行次数 x 和问题的规模 n 的数学形式关系 $x = f(n)$
 
     - 3\. x 的数量级 O(x) 是算法时间复杂度 T(n)
   - 常用技巧：
-    - 加法规则
+    - 加法规则 $O(f(n)) + O(g(n)) = O(max(f(n), g(n)))$
 
-      $O(f(n)) + O(g(n)) = O(max(f(n), g(n)))$
+    - 乘法规则 $O(f(n)) \times O(g(n)) = O(f(n) \times g(n))$
 
-    - 乘法规则
-
-      $O(f(n)) \times O(g(n)) = O(f(n) \times g(n))$
-
-    - 咸鱼口诀：“常对幂指阶”
-
-      $O(1) < O(log_2n) < O(n) < O(nlog_2n)<O(n^2)<O(n^3)<O(2^n) < O(n!) < O(n^n)$
+    - 咸鱼口诀：“常对幂指阶” $O(1) < O(log_2n) < O(n) < O(nlog_2n)<O(n^2)<O(n^3)<O(2^n) < O(n!) < O(n^n)$
 
   - 三种复杂度：
     - 最坏时间复杂度：考虑输入数据“最坏”的情况
@@ -154,9 +142,7 @@ layout: mind-map
 - 空间复杂度
   - 如何计算
     - 1\. 算法空间大小和问题规模的关系
-    - 2\. 数学形式分析：空间x，问题规模n
-
-      $x = f(n)$
+    - 2\. 数学形式分析：空间x，问题规模n $x = f(n)$
 
     - 3\. x 的数量级 O(x) 就是算法的空间复杂度S(n)
     - 注：如果是递归程序，则各层算法所需存储空间不同，分析方法有所区别

@@ -9,9 +9,7 @@ layout: mind-map
 
 [查看关联主题：第一章 操作系统概述](/docs/408/mind-maps/operating-systems/01-overview)
 
-## I/O设备分类
-
-<a href="/images/408-mind-maps/os-0024.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0024.svg" alt="I/O设备分类" width="48" height="48" loading="lazy" /></a>
+## I/O设备分类 <img src="/images/408-mind-maps/thumb/os-0024.webp" alt="I/O设备分类" width="48" height="48">
 
 - 特性分类
   - 人机交互类
@@ -65,9 +63,7 @@ layout: mind-map
   - 阻塞IO
     - 阻塞IO是调用IO的时候，阻塞进程
 
-## I/O控制器
-
-<a href="/images/408-mind-maps/co-0234.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0234.svg" alt="I/O控制器" width="48" height="48" loading="lazy" /></a>
+## I/O控制器 <img src="/images/408-mind-maps/thumb/co-0234.webp" alt="I/O控制器" width="48" height="48">
 
 - I/O接口
   - I/O控制器
@@ -78,9 +74,7 @@ layout: mind-map
   - 电子部件
     - 藏起来的电路板
 - I/O控制器组成
-  - 配图
-
-    <a href="/images/408-mind-maps/os-0122.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0122.svg" alt="I/O控制器组成" width="240" height="143" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/os-0122.webp" alt="I/O控制器组成" width="240" height="143">
 
     - 由图可知：
     - 1\. 一个I/O控制器，管理多个IO设备
@@ -102,36 +96,26 @@ layout: mind-map
       - 读写数据都放到【数据寄存器】
     - 地址识别
       - 把逻辑IO寄存器地址翻译为物理地址，通过【地址线】进行传输
-    - 概要：【数据寄存器】<br>【控制寄存器】<br>【状态寄存器】<br>【地址线】<br>【控制线】
+    - 概要：【数据寄存器】 【控制寄存器】 【状态寄存器】 【地址线】 【控制线】
       概要范围：[接受和识别CPU命令](#focus=%E6%8E%A5%E5%8F%97%E5%92%8C%E8%AF%86%E5%88%ABCPU%E5%91%BD%E4%BB%A4)、[向CPU报告设备状态](#focus=%E5%90%91CPU%E6%8A%A5%E5%91%8A%E8%AE%BE%E5%A4%87%E7%8A%B6%E6%80%81)、[数据交换](#focus=%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2)、[地址识别](#focus=%E5%9C%B0%E5%9D%80%E8%AF%86%E5%88%AB)
 
 - I/O 端口
   - 设备控制器中可被CPU直接访问的寄存器
     - 上面白框
-  - 独立编址I/O
+  - 独立编址I/O <img src="/images/408-mind-maps/thumb/co-0293.webp" alt="独立编址I/O" width="240" height="184">
 
-    <a href="/images/408-mind-maps/co-0293.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0293.svg" alt="独立编址I/O" width="240" height="184" loading="lazy" /></a>
+    - 统一编址 = 内存映射I/O <img src="/images/408-mind-maps/thumb/co-0091.webp" alt="统一编址 = 内存映射I/O" width="240" height="184">
 
-    - 统一编址 = 内存映射I/O
-
-      <a href="/images/408-mind-maps/co-0091.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0091.svg" alt="统一编址 = 内存映射I/O" width="240" height="184" loading="lazy" /></a>
-
-      - 配图
-
-        <a href="/images/408-mind-maps/os-0096.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0096.svg" alt="统一编址 = 内存映射I/O" width="240" height="130" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/os-0096.webp" alt="统一编址 = 内存映射I/O" width="240" height="130">
 
   - 内存映射I/O简化了指令
   - 寄存器独立编址让指令设计变得复杂，需要单独设计和read write相区别的指令(input output)
 
-## I/O控制方式
-
-<a href="/images/408-mind-maps/os-0040.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0040.svg" alt="I/O控制方式" width="48" height="48" loading="lazy" /></a>
+## I/O控制方式 <img src="/images/408-mind-maps/thumb/os-0040.webp" alt="I/O控制方式" width="48" height="48">
 
 - 程序直接控制
   - 图：
-    - 配图
-
-      <a href="/images/408-mind-maps/os-0068.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0068.svg" alt="图：" width="170" height="220" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/os-0068.webp" alt="图：" width="170" height="220">
 
       - CPU不停的进行轮询测试
   - CPU干预：
@@ -143,9 +127,7 @@ layout: mind-map
     - I/O控制器 -&gt; CPU -&gt; 内存
 - 中断驱动方式
   - 图：
-    - 配图
-
-      <a href="/images/408-mind-maps/os-0118.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0118.svg" alt="图：" width="113" height="220" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/os-0118.webp" alt="图：" width="113" height="220">
 
       - CPU中断去做其他事情
   - CPU干预：
@@ -160,14 +142,10 @@ layout: mind-map
     - 保存在执行程序的上下文，然后去执行中断处理程序
 - DMA方式
   - 图：
-    - 配图
-
-      <a href="/images/408-mind-maps/os-0131.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0131.svg" alt="图：" width="240" height="218" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/os-0131.webp" alt="图：" width="240" height="218">
 
   - DMA控制器的组成：
-    - 配图
-
-      <a href="/images/408-mind-maps/os-0153.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0153.svg" alt="DMA控制器的组成：" width="240" height="94" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/os-0153.webp" alt="DMA控制器的组成：" width="240" height="94">
 
       - 四个寄存器的作用：
       - DR：
@@ -222,9 +200,7 @@ layout: mind-map
   - 通道控制方式
     - 中断发生的时机：CPU向通道指明通道程序在内存中的地址，通道执行完通道程序后，通道向CPU发出中断信号
 
-## I/O软件层级结构
-
-<a href="/images/408-mind-maps/co-0015.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0015.svg" alt="I/O软件层级结构" width="48" height="48" loading="lazy" /></a>
+## I/O软件层级结构 <img src="/images/408-mind-maps/thumb/co-0015.webp" alt="I/O软件层级结构" width="48" height="48">
 
 分组说明：I/O子系统；对应：[设备独立性软件](#focus=%E8%AE%BE%E5%A4%87%E7%8B%AC%E7%AB%8B%E6%80%A7%E8%BD%AF%E4%BB%B6)、[设备驱动程序](#focus=%E8%AE%BE%E5%A4%87%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F)、[中断处理程序](#focus=%E4%B8%AD%E6%96%AD%E5%A4%84%E7%90%86%E7%A8%8B%E5%BA%8F)
 
@@ -294,9 +270,7 @@ layout: mind-map
     - 电子部件
       - 设备控制器（设备适配器）
 
-- I/O子系统概述
-
-  <a href="/images/408-mind-maps/co-0247.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0247.svg" alt="I/O子系统概述" width="48" height="48" loading="lazy" /></a>
+- I/O子系统概述 <img src="/images/408-mind-maps/thumb/co-0247.webp" alt="I/O子系统概述" width="48" height="48">
 
   - 层次：
     - 设备无关性软件
@@ -319,9 +293,7 @@ layout: mind-map
       - 文件保护
     - 差错处理
 
-## 高速缓存和缓冲区
-
-<a href="/images/408-mind-maps/co-0033.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0033.svg" alt="高速缓存和缓冲区" width="48" height="48" loading="lazy" /></a>
+## 高速缓存和缓冲区 <img src="/images/408-mind-maps/thumb/co-0033.webp" alt="高速缓存和缓冲区" width="48" height="48">
 
 - 磁盘高速缓存
   - Disk Cache
@@ -352,9 +324,7 @@ layout: mind-map
       - 图形学开篇，使用双缓冲来实现图像更换
   - 若无特殊说明，缓冲区大小为一个块
   - 高速缓存和缓冲区的对比
-    - 配图
-
-      <a href="/images/408-mind-maps/os-0042.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0042.svg" alt="高速缓存和缓冲区的对比" width="240" height="66" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/os-0042.webp" alt="高速缓存和缓冲区的对比" width="240" height="66">
 
   - 预读 + 滞后写
     - 预读：读区域A的时候，把A的下一块也同时读入到buffer中
@@ -362,19 +332,13 @@ layout: mind-map
 - 缓冲技术
   - 注：
     - 下图中计算周期时假设的是工作区已经满了，所以设备 -&gt; 缓冲和工作区 -&gt; CPU可以同时运行，如果初始情况为空：
-      - 配图
-
-        <a href="/images/408-mind-maps/os-0035.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0035.svg" alt="下图中计算周期时假设的是工作区已经满了，所以设备 -&amp;gt; 缓冲和工作区 -&amp;gt; CPU可以同时运行，如果初始情况为空：" width="240" height="96" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/os-0035.webp" alt="下图中计算周期时假设的是工作区已经满了，所以设备 -&amp;amp;gt; 缓冲和工作区 -&amp;amp;gt; CPU可以同时运行，如果初始情况为空：" width="240" height="96">
 
   - 1\. 单缓冲
     - 流程图：
-      - 配图
+      - <img src="/images/408-mind-maps/thumb/os-0093.webp" alt="流程图：" width="240" height="194">
 
-        <a href="/images/408-mind-maps/os-0093.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0093.svg" alt="流程图：" width="240" height="194" loading="lazy" /></a>
-
-        - 配图
-
-          <a href="/images/408-mind-maps/os-0123.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0123.svg" alt="流程图：" width="240" height="187" loading="lazy" /></a>
+        - <img src="/images/408-mind-maps/thumb/os-0123.webp" alt="流程图：" width="240" height="187">
 
     - 描述：
       - 开始状态缓冲区的数据为空，工作区数据为满
@@ -385,13 +349,9 @@ layout: mind-map
 
   - 2\. 双缓冲
     - 流程图：
-      - 配图
+      - <img src="/images/408-mind-maps/thumb/os-0112.webp" alt="流程图：" width="240" height="136">
 
-        <a href="/images/408-mind-maps/os-0112.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0112.svg" alt="流程图：" width="240" height="136" loading="lazy" /></a>
-
-        - 配图
-
-          <a href="/images/408-mind-maps/os-0101.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0101.svg" alt="流程图：" width="190" height="220" loading="lazy" /></a>
+        - <img src="/images/408-mind-maps/thumb/os-0101.webp" alt="流程图：" width="190" height="220">
 
     - 描述：
       - 假设开始状态，工作区为空，缓冲区A为满，缓冲区B为空
@@ -405,32 +365,24 @@ layout: mind-map
     - 缓存通信
       - 如果两台机器都只有单缓冲
         - 只能单向传输
-          - 配图
-
-            <a href="/images/408-mind-maps/os-0030.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0030.svg" alt="只能单向传输" width="240" height="200" loading="lazy" /></a>
+          - <img src="/images/408-mind-maps/thumb/os-0030.webp" alt="只能单向传输" width="240" height="200">
 
       - 如果都有双缓冲
         - 可以实现双线传输
-          - 配图
-
-            <a href="/images/408-mind-maps/os-0045.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0045.svg" alt="可以实现双线传输" width="240" height="193" loading="lazy" /></a>
+          - <img src="/images/408-mind-maps/thumb/os-0045.webp" alt="可以实现双线传输" width="240" height="193">
 
     - ”管道“通信：
       - ”管道“通信就是一个缓冲区，要实现双向通信，就需要两个”管道“
   - 3\. 循环缓冲
     - 流程图：
-      - 配图
-
-        <a href="/images/408-mind-maps/os-0087.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0087.svg" alt="流程图：" width="240" height="217" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/os-0087.webp" alt="流程图：" width="240" height="217">
 
     - 描述：
       - 包含多个大小相等的缓冲区，形成循环链表的形式。另外有两个指针in/out，分别是输入指针和输出指针。in指向空缓冲，out指向满缓冲
   - 4\. 缓冲池
     - 组成：
       - 多个公共缓冲区组成缓冲池
-      - 配图
-
-        <a href="/images/408-mind-maps/os-0041.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0041.svg" alt="组成：" width="240" height="149" loading="lazy" /></a>
+      - <img src="/images/408-mind-maps/thumb/os-0041.webp" alt="组成：" width="240" height="149">
 
     - 三个队列：
       - 空缓冲队列
@@ -451,9 +403,7 @@ layout: mind-map
       - 输入进程获得输出：
         - 把输出队列队首缓冲区提出，作为sout，用完后把它挂到空缓冲队列中
 
-## 设备的分配和回收
-
-<a href="/images/408-mind-maps/co-0017.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0017.svg" alt="设备的分配和回收" width="48" height="48" loading="lazy" /></a>
+## 设备的分配和回收 <img src="/images/408-mind-maps/thumb/co-0017.webp" alt="设备的分配和回收" width="48" height="48">
 
 - 三种分类：
   - 独占
@@ -529,7 +479,7 @@ layout: mind-map
   - 概要：配图
     概要范围：[SDT：](#focus=SDT%EF%BC%9A)
 
-    <a href="/images/408-mind-maps/os-0082.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0082.svg" alt="数据结构：" width="240" height="160" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/os-0082.webp" alt="数据结构：" width="240" height="160">
 
 - 设备分配策略：
   - 设备分配方式：
@@ -557,9 +507,7 @@ layout: mind-map
     - 多用户：
       - 每个用户在登录时，系统会给用户【创建一个进程和一个LUT】，这个LUT会放入到PCB中
 
-## SPOOLing技术
-
-<a href="/images/408-mind-maps/co-0182.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0182.svg" alt="SPOOLing技术" width="48" height="48" loading="lazy" /></a>
+## SPOOLing技术 <img src="/images/408-mind-maps/thumb/co-0182.webp" alt="SPOOLing技术" width="48" height="48">
 
 - 体现操作系统：虚拟性
 - SPOOLing和缓冲区的区别
@@ -573,14 +521,10 @@ layout: mind-map
 - 用空间换时间的技术
   - vs 请求分页系统：时间换空间
 - 脱机技术：
-  - 批处理阶段引入了脱机输入/输出技术（用磁带完成）
-
-    <a href="/images/408-mind-maps/os-0115.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0115.svg" alt="批处理阶段引入了脱机输入/输出技术（用磁带完成）" width="240" height="91" loading="lazy" /></a>
+  - 批处理阶段引入了脱机输入/输出技术（用磁带完成） <img src="/images/408-mind-maps/thumb/os-0115.webp" alt="批处理阶段引入了脱机输入/输出技术（用磁带完成）" width="240" height="91">
 
 - SPOOLING技术
-  - 配图
-
-    <a href="/images/408-mind-maps/os-0092.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0092.svg" alt="SPOOLING技术" width="240" height="145" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/os-0092.webp" alt="SPOOLING技术" width="240" height="145">
 
     - 共享打印机：
       - 当系统同意其打印时：有用户（输出进程）开辟一个空闲磁盘区
@@ -601,9 +545,7 @@ layout: mind-map
 - 考频：中
   - 09、11-13、15、16、20、22
 
-## 磁盘的结构
-
-<a href="/images/408-mind-maps/co-0017.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0017.svg" alt="磁盘的结构" width="48" height="48" loading="lazy" /></a>
+## 磁盘的结构 <img src="/images/408-mind-maps/thumb/co-0017.webp" alt="磁盘的结构" width="48" height="48">
 
 - 磁盘的概念
   - 磁道
@@ -617,9 +559,7 @@ layout: mind-map
     - 每两个扇区之间的间隙
   - 未命名主题
   - 柱面
-    - 多个磁盘垂直叠在一起时，所有磁道组成的垂直面就是柱面
-
-      <a href="/images/408-mind-maps/os-0005.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0005.svg" alt="多个磁盘垂直叠在一起时，所有磁道组成的垂直面就是柱面" width="240" height="217" loading="lazy" /></a>
+    - 多个磁盘垂直叠在一起时，所有磁道组成的垂直面就是柱面 <img src="/images/408-mind-maps/thumb/os-0005.webp" alt="多个磁盘垂直叠在一起时，所有磁道组成的垂直面就是柱面" width="240" height="217">
 
   - 块
     - 物理块
@@ -634,7 +574,7 @@ layout: mind-map
   - 概要：配图
     概要范围：[磁道](#focus=%E7%A3%81%E9%81%93)、[磁道间隙](#focus=%E7%A3%81%E9%81%93%E9%97%B4%E9%9A%99)、[扇区](#focus=%E6%89%87%E5%8C%BA)、[扇区间隙](#focus=%E6%89%87%E5%8C%BA%E9%97%B4%E9%9A%99)
 
-    <a href="/images/408-mind-maps/os-0102.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0102.svg" alt="磁盘的概念" width="222" height="220" loading="lazy" /></a>
+    - <img src="/images/408-mind-maps/thumb/os-0102.webp" alt="磁盘的概念" width="222" height="220">
 
 - 磁盘的类型
   - 磁头
@@ -662,9 +602,7 @@ layout: mind-map
   - 此处和PV互斥有些不一样，例如读磁盘是多读者，那么对应过来多个进程可以在自己的运行时间内访问磁盘
     - 而如果是写磁盘，那么PV信号量会控制其他正在处理机上的进程不能使用该磁盘
 
-## 磁盘的管理
-
-<a href="/images/408-mind-maps/os-0125.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0125.svg" alt="磁盘的管理" width="48" height="48" loading="lazy" /></a>
+## 磁盘的管理 <img src="/images/408-mind-maps/thumb/os-0125.webp" alt="磁盘的管理" width="48" height="48">
 
 - 磁盘初始化
   [查看关联主题：第一章 操作系统概述](/docs/408/mind-maps/operating-systems/01-overview)
@@ -677,7 +615,7 @@ layout: mind-map
       - 在出厂之前把磁盘的各个磁道分为扇区。
     - 每个扇区分为：
       - 数据区域
-      - 头、尾包含磁盘控制器<br>所需要的信息例如：
+      - 头、尾包含磁盘控制器 所需要的信息例如：
         - 数据结构
         - 扇区校验码
   - 第二步：
@@ -695,7 +633,7 @@ layout: mind-map
     - 作用：
       - 创建文件系统
         - 根目录
-        - 管理空闲磁盘块<br>的数据结构，如：
+        - 管理空闲磁盘块 的数据结构，如：
           - 位示图
           - 空闲表
           - 空闲盘块链
@@ -707,7 +645,7 @@ layout: mind-map
   - 初始化程序作用：
     - 初始化程序可以初始CPU、寄存器、设备控制器、内存etc，然后可以启动操作系统
   - 自举程序存储位置：
-    - 【自举程序】存在ROM中<br> 或：<br>【自举装入程序】在ROM中，完整的自举程序在磁盘启动块（引导块）上，一般是在一个固定的位置
+    - 【自举程序】存在ROM中 或： 【自举装入程序】在ROM中，完整的自举程序在磁盘启动块（引导块）上，一般是在一个固定的位置
   - 拓展
     - 引导控制块
       - 包含OS从该分区引导OS所需要的信息
@@ -721,16 +659,12 @@ layout: mind-map
   - 复杂磁盘
     - 磁盘控制器维护一个磁盘坏块链表，同时会有一些块用来作为备用（扇区备用）
 
-## 磁盘调度算法
-
-<a href="/images/408-mind-maps/os-0004.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0004.svg" alt="磁盘调度算法" width="48" height="48" loading="lazy" /></a>
+## 磁盘调度算法 <img src="/images/408-mind-maps/thumb/os-0004.webp" alt="磁盘调度算法" width="48" height="48">
 
 - 考频：高
   - 09、15、17\*2、18、21、10大、19大、21大
 - 图示+公式：
-  - 1\. 启动时间  2. 寻找/寻道时间  3. 旋转【延迟】时间  4. 传输时间
-
-    <a href="/images/408-mind-maps/os-0039.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0039.svg" alt="1. 启动时间 2. 寻找/寻道时间 3. 旋转【延迟】时间 4. 传输时间" width="240" height="144" loading="lazy" /></a>
+  - 1\. 启动时间  2. 寻找/寻道时间  3. 旋转【延迟】时间  4. 传输时间 <img src="/images/408-mind-maps/thumb/os-0039.webp" alt="1. 启动时间 2. 寻找/寻道时间 3. 旋转【延迟】时间 4. 传输时间" width="240" height="144">
 
     - 批注：注意：今年将①和②时间统称为寻找时间
 - 可以优化的
@@ -791,22 +725,16 @@ layout: mind-map
   - 不同盘面
     - 同柱面不同盘面的扇区错位编号，可以缩短连续读写两个相邻盘面的时间
 
-## 固态硬盘SSD
-
-<a href="/images/408-mind-maps/os-0070.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0070.svg" alt="固态硬盘SSD" width="45" height="46" loading="lazy" /></a>
+## 固态硬盘SSD <img src="/images/408-mind-maps/thumb/os-0070.webp" alt="固态硬盘SSD" width="45" height="46">
 
 - 基于闪存的存储器
   - 存储介质：NAND颗粒
 - 读写速度比较：
-  - 配图
-
-    <a href="/images/408-mind-maps/co-0101.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0101.svg" alt="读写速度比较：" width="240" height="99" loading="lazy" /></a>
+  - <img src="/images/408-mind-maps/thumb/co-0101.webp" alt="读写速度比较：" width="240" height="99">
 
     - （硬件茶谈）
 - 组成：
-  - 闪存翻译层 + 多个闪存芯片
-
-    <a href="/images/408-mind-maps/os-0033.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/os-0033.svg" alt="闪存翻译层 + 多个闪存芯片" width="240" height="142" loading="lazy" /></a>
+  - 闪存翻译层 + 多个闪存芯片 <img src="/images/408-mind-maps/thumb/os-0033.webp" alt="闪存翻译层 + 多个闪存芯片" width="240" height="142">
 
     - 读写单位
       - CPU下令要读取一个块的内容
@@ -835,7 +763,7 @@ layout: mind-map
 - 考频：低
   - 无
 
-<a href="/images/408-mind-maps/co-0242.svg" target="_blank" rel="noopener noreferrer"><img src="/images/408-mind-maps/co-0242.svg" alt="END" width="48" height="48" loading="lazy" /></a>
+- <img src="/images/408-mind-maps/thumb/co-0242.webp" alt="END" width="48" height="48">
 
 ## 原图关联关系
 

@@ -18,6 +18,10 @@ function flatten(node: MindMapNode): MindMapNode[] {
   return [node, ...node.children.flatMap(flatten)];
 }
 
+function text(node: MindMapNode) {
+  return node.content.map((inline) => ('value' in inline ? inline.value : '')).join('');
+}
+
 describe('remarkMdxMindmap', () => {
   it('converts mindmap code fences into MindMap components with a build-time tree', () => {
     const tree = transform({
@@ -41,9 +45,9 @@ describe('remarkMdxMindmap', () => {
     expect(node.attributes.map((attribute) => attribute.name)).toEqual(['data']);
 
     const root = JSON.parse(node.attributes[0].value) as MindMapNode;
-    expect(root.content).toBe('计算机系统');
-    expect(root.children[0].content).toBe('硬件');
-    expect(root.children[0].children[0].content).toBe('CPU');
+    expect(text(root)).toBe('计算机系统');
+    expect(text(root.children[0])).toBe('硬件');
+    expect(text(root.children[0].children[0])).toBe('CPU');
   });
 
   it('only transforms non-empty mindmap fences and leaves other code alone', () => {
@@ -67,7 +71,7 @@ describe('remarkMdxMindmap', () => {
   });
 });
 
-describe('transformMindMapMarkdown', () => {
+describe('transformMindMapMarkdown (Markmap 1.0)', () => {
   const fence = String.fromCharCode(96).repeat(3);
   const root = transformMindMapMarkdown(
     [
@@ -87,38 +91,37 @@ describe('transformMindMapMarkdown', () => {
       '  |---|---|',
       '  | 1 | 3 |',
       '## 配图',
-      '- 图',
-      '',
-      '  <a href="/images/a.svg"><img src="/images/a.svg" alt="图" width="240" height="120" loading="lazy" /></a>',
+      '- <img src="/images/408-mind-maps/thumb/a.webp" alt="图" width="240" height="120">',
     ].join('\n'),
   );
   const nodes = flatten(root);
-  const find = (text: string) => nodes.find((node) => node.content.includes(text));
+  const find = (label: string) => nodes.find((node) => text(node).startsWith(label));
 
-  it('renders formulas with KaTeX HTML only, including CJK text in math', () => {
-    const math = find('katex');
-    expect(math?.content).toContain('class="katex"');
-    expect(math?.content).not.toContain('<math');
-    expect(math?.content).not.toContain('katex-error');
+  it('keeps TeX in labels as inline math for the MathJax content plugin', () => {
+    const math = find('渐进')?.content.find((inline) => inline.type === 'inlineMath');
+    expect(math).toMatchObject({ type: 'inlineMath', value: 'O(n\\log_2 n)' });
   });
 
-  it('highlights code blocks and keeps tables as HTML', () => {
-    expect(find('<pre')?.content).toContain('hljs-keyword');
-    expect(find('<table')?.content).toContain('<th>i</th>');
+  it('turns code blocks and tables into notes', () => {
+    expect(find('示例')?.notes[0]?.block).toMatchObject({ type: 'code', lang: 'cpp' });
+    expect(find('三元组')?.notes[0]?.block.type).toBe('table');
   });
 
-  it('keeps CJK text readable and lets markmap measure images eagerly', () => {
-    expect(JSON.stringify(root)).not.toMatch(/&#x[0-9a-f]{3,};/i);
-    expect(root.content).toBe('复杂度');
-    const image = find('<img');
-    expect(image?.content).toContain('width="240"');
-    expect(image?.content).not.toContain('loading="lazy"');
-    expect(image?.content).toContain('decoding="async"');
+  it('keeps sized images and strips source positions', () => {
+    const image = nodes
+      .flatMap((node) => node.content)
+      .find((inline) => inline.type === 'image');
+    expect(image).toMatchObject({
+      type: 'image',
+      url: '/images/408-mind-maps/thumb/a.webp',
+      data: { width: 240, height: 120 },
+    });
+    expect(JSON.stringify(root)).not.toContain('"position"');
   });
 });
 
 describe('MindMap', () => {
-  it('renders a labelled, interactive shell while the browser renderer loads', () => {
+  it('renders a labelled shell while the Markmap view loads', () => {
     const html = renderToStaticMarkup(
       <MindMap data={JSON.stringify(transformMindMapMarkdown('# 计算机系统'))} title="计算机系统知识结构" />,
     );
@@ -126,8 +129,8 @@ describe('MindMap', () => {
     expect(html).toContain('data-mind-map="true"');
     expect(html).toContain('data-variant="embedded"');
     expect(html).toContain('aria-label="计算机系统知识结构"');
+    expect(html).toContain('mind-map-surface-host');
     expect(html).toContain('mind-map-toolbar-host');
-    expect(html).toContain('滚轮或双指缩放');
     expect(html).toContain('正在生成思维导图');
   });
 

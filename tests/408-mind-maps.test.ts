@@ -20,13 +20,17 @@ function chapterFiles(course: string) {
 }
 
 describe('408 chapter mind maps', () => {
-  it('pins the Markmap packages to one release', () => {
+  it('pins the Markmap 1.0 packages to one release and drops the 0.18 line', () => {
     const pkg = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8'));
     const lock = JSON.parse(readFileSync(join(root, 'package-lock.json'), 'utf8'));
-    for (const name of ['markmap-lib', 'markmap-view', 'markmap-toolbar']) {
-      expect(pkg.dependencies[name]).toBe('0.18.12');
-      expect(lock.packages[''].dependencies[name]).toBe('0.18.12');
-      expect(lock.packages['node_modules/' + name].version).toBe('0.18.12');
+    const names = ['core', 'parse', 'render', 'view', 'canvas', 'toolbar', 'plugin-math'];
+    for (const name of names.map((entry) => '@markmap/' + entry)) {
+      expect(pkg.dependencies[name]).toBe('1.0.0');
+      expect(lock.packages[''].dependencies[name]).toBe('1.0.0');
+      expect(lock.packages['node_modules/' + name].version).toBe('1.0.0');
+    }
+    for (const legacy of ['markmap-lib', 'markmap-view', 'markmap-toolbar']) {
+      expect(pkg.dependencies[legacy]).toBeUndefined();
     }
   });
 
@@ -62,12 +66,14 @@ describe('408 chapter mind maps', () => {
         expect(document).toMatch(new RegExp('\\n# ' + chapter + ' '));
         expect(document).not.toMatch(/<a id="topic-/);
         expect(document).not.toMatch(/\]\(#topic-/);
+        // Markmap 1.0 keeps only single <img> tags; other raw HTML would be dropped.
+        expect(document).not.toMatch(/<a\s|<br\s*\/?>|loading="lazy"/);
       });
       expect(files).toHaveLength(count);
     }
   });
 
-  it('resolves cross-chapter links, focus links and local SVG references', () => {
+  it('resolves cross-chapter links, focus links and local WebP images', () => {
     const referencedAssets = new Set<string>();
     const pageUrls = new Set(
       courses.flatMap(([course]) =>
@@ -84,13 +90,18 @@ describe('408 chapter mind maps', () => {
         for (const [, label] of document.matchAll(/#focus=([^)]+)\)/g)) {
           expect(decodeURIComponent(label).trim().length).toBeGreaterThan(0);
         }
-        for (const [, filename] of document.matchAll(/\/images\/408-mind-maps\/([a-z0-9-]+\.svg)/g)) {
+        expect(document).not.toMatch(/\/images\/408-mind-maps\/[^"]+\.svg/);
+        for (const [, filename] of document.matchAll(/<img src="\/images\/408-mind-maps\/thumb\/([a-z0-9-]+\.webp)" alt="[^"]*" width="\d+" height="\d+">/g)) {
           referencedAssets.add(filename);
+          // The map shows the thumbnail; the preview dialog opens the full size.
+          expect(existsSync(join(assetRoot, 'thumb', filename))).toBe(true);
           expect(existsSync(join(assetRoot, filename))).toBe(true);
         }
       }
     }
-    expect(readdirSync(assetRoot).filter((name) => name.endsWith('.svg'))).toHaveLength(616);
+    expect(readdirSync(assetRoot).filter((name) => name.endsWith('.webp'))).toHaveLength(616);
+    expect(readdirSync(join(assetRoot, 'thumb'))).toHaveLength(616);
+    expect(readdirSync(assetRoot).filter((name) => name.endsWith('.svg'))).toHaveLength(0);
     expect(referencedAssets.size).toBeGreaterThan(600);
   });
 

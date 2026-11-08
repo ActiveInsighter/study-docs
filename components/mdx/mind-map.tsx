@@ -4,8 +4,10 @@ import { cn } from '@/lib/utils';
 import {
   useMindMap,
   type MindMapImagePreview,
+  type MindMapRenderer,
 } from '@/components/mdx/mind-map-hook';
 import { ExternalLink, X } from 'lucide-react';
+import { useTheme } from 'next-themes';
 import { useRouter } from 'next/navigation';
 import {
   useCallback,
@@ -18,17 +20,20 @@ import {
 } from 'react';
 
 export interface MindMapProps {
-  /** Build-time markmap tree as JSON; produced from ```mindmap fences. */
+  /** Build-time Markmap tree as JSON; produced from ```mindmap fences. */
   data?: string;
-  /** Markdown headings and list items, transformed in the browser. */
+  /** Markdown headings and list items, parsed in the browser. */
   markdown?: string;
   /** Visible label used by assistive technologies. */
   title?: string;
   /** CSS height, or a number interpreted as pixels (embedded variant only). */
   height?: number | string;
-  /** Heading depth shown on first render. `-1` expands every level. */
+  /**
+   * Levels shown on first render, counting the root as level 1 (Markmap 0.18
+   * semantics). `-1` expands every level. Omit to pick from the map's size.
+   */
   initialExpandLevel?: number;
-  /** Maximum width of a plain-text node label before it wraps. */
+  /** Width at which labels and images wrap, in px. */
   maxWidth?: number;
   /**
    * `embedded` sits in the article flow; `page` fills the docs panel as a
@@ -37,7 +42,18 @@ export interface MindMapProps {
   variant?: 'embedded' | 'page';
   /** Overlay shown in the top-left corner of the canvas (page variant). */
   header?: ReactNode;
+  /**
+   * Markmap backend. `auto` (default) draws large maps on a canvas, which stays
+   * smooth with thousands of nodes, and the rest as accessible SVG.
+   */
+  renderer?: MindMapRenderer;
   className?: string;
+}
+
+function toFoldLevel(initialExpandLevel: number | undefined) {
+  if (initialExpandLevel === undefined) return undefined;
+  // 0.18 expanded `level` levels including the root; 1.0 folds from a depth.
+  return initialExpandLevel < 0 ? Number.POSITIVE_INFINITY : Math.max(initialExpandLevel - 1, 0);
 }
 
 export function MindMap({
@@ -49,9 +65,11 @@ export function MindMap({
   maxWidth = 300,
   variant = 'embedded',
   header,
+  renderer = 'auto',
   className,
 }: MindMapProps) {
   const router = useRouter();
+  const { resolvedTheme } = useTheme();
   const containerRef = useRef<HTMLElement>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [preview, setPreview] = useState<MindMapImagePreview | null>(null);
@@ -60,12 +78,14 @@ export function MindMap({
   const descriptionId = `mind-map-description-${id}`;
 
   const onNavigate = useCallback((href: string) => router.push(href), [router]);
-  const { errorMessage, status, svgRef, toolbarHostRef } = useMindMap({
+  const { activeRenderer, errorMessage, status, surfaceRef, toolbarHostRef } = useMindMap({
     data,
     markdown,
-    initialExpandLevel: initialExpandLevel ?? 3,
-    adaptiveExpand: initialExpandLevel === undefined,
-    maxWidth,
+    foldLevel: toFoldLevel(initialExpandLevel),
+    wrapWidth: maxWidth,
+    fitPadding: variant === 'page' ? 72 : 24,
+    colorScheme: resolvedTheme === 'dark' ? 'dark' : 'light',
+    renderer,
     fullscreenTargetRef: containerRef,
     onNavigate,
     onPreviewImage: setPreview,
@@ -87,6 +107,7 @@ export function MindMap({
       data-mind-map="true"
       data-variant={variant}
       data-status={status}
+      data-renderer={activeRenderer ?? undefined}
       style={
         variant === 'embedded'
           ? ({ '--mind-map-height': heightValue } as CSSProperties)
@@ -100,19 +121,14 @@ export function MindMap({
         aria-describedby={descriptionId}
         aria-busy={status === 'loading'}
       >
-        <svg
-          ref={svgRef}
-          id={`mind-map-svg-${id}`}
-          className="mind-map-svg"
-          role="img"
-          aria-label={title}
-        />
+        {/* The hook mounts Markmap's <svg> or <canvas> here. */}
+        <div ref={surfaceRef} className="mind-map-surface-host" aria-label={title} />
 
         {header ? <div className="mind-map-header">{header}</div> : null}
 
         {status === 'loading' && (
           <div className="mind-map-status" role="status">
-            <span className="mind-map-spinner" aria-hidden="true" />
+            
             正在生成思维导图…
           </div>
         )}
@@ -126,7 +142,7 @@ export function MindMap({
       </div>
 
       <p id={descriptionId} className="mind-map-sr-only">
-        滚轮或双指缩放，拖动平移，点击节点圆点展开或收起分支；右下角工具栏可放大、缩小、适应窗口、联动子分支、全部展开、折叠、恢复初始视图和全屏查看。点击配图可放大查看。
+        滚轮或双指缩放，拖动平移，点击节点圆点展开或收起分支，点击节点旁的小圆点查看代码、表格等注释；右下角工具栏可放大、缩小、适应窗口、全部展开、按层级展开和全屏查看。点击配图可放大查看。
       </p>
 
       <dialog
@@ -142,7 +158,7 @@ export function MindMap({
           <>
             <div className="mind-map-lightbox-actions">
               <a
-                href={preview.href}
+                href={preview.src}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mind-map-lightbox-button"

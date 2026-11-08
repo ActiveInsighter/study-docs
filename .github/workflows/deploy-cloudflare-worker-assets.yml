@@ -93,7 +93,6 @@ jobs:
                   for course in courses
                   for path in (Path('public/images') / course).rglob('*.svg')
               ),
-              *Path('public/images/408-mind-maps').rglob('*.svg'),
           ])
           errors = []
           for path in files:
