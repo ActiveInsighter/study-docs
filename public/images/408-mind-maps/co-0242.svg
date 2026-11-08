@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="END">
+<title>END</title>
+<rect x="2" y="2" width="44" height="44" rx="11" fill="#27272a" stroke="none" stroke-width="0"/>
+<path d="M15 14V35" fill="none" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 15H32L28 20.5L32 26H15" fill="#fafafa" stroke="#fafafa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="24" y="43.5" font-size="7.5" fill="#a1a1aa" text-anchor="middle" font-weight="700" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">END</text>
+</svg>
