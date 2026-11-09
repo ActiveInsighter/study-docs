@@ -86,7 +86,7 @@ export function MindMap({
     markdown,
     foldLevel: toFoldLevel(initialExpandLevel),
     wrapWidth: maxWidth,
-    fitPadding: variant === 'page' ? 72 : 24,
+    fitPadding: variant === 'page' ? 48 : 24,
     colorScheme: resolvedTheme === 'dark' ? 'dark' : 'light',
     onNavigate,
     onPreviewImage,

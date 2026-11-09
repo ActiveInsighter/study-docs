@@ -9,6 +9,13 @@ const RENDER_ERROR_MESSAGE = '思维导图暂时无法生成，请检查 Markdow
 const FOCUS_HASH_PREFIX = '#focus=';
 /** Visible nodes above which the first view folds back to the root's children. */
 const DENSE_MAP_NODES = 48;
+/**
+ * Smallest scale the first view opens at. Fitting a large map into the window
+ * shrinks its labels past reading (15% on a phone), so it opens no smaller than this
+ * on the root instead, and 适应窗口 still shows the whole map.
+ */
+const READABLE_SCALE = { narrow: 0.6, wide: 0.9 } as const;
+const NARROW_WIDTH = 640;
 
 export type MindMapStatus = 'loading' | 'ready' | 'error';
 export type MindMapColorScheme = 'light' | 'dark';
@@ -227,6 +234,26 @@ export function useMindMap({
         };
         const mm = Markmap.create(element, root, options);
         markmapRef.current = mm;
+
+        // The first fit happens now, or once the element is laid out.
+        const sized = () => {
+          const box = element.getBoundingClientRect();
+          return box.width > 0 && box.height > 0;
+        };
+        const openReadable = () => {
+          const { width } = element.getBoundingClientRect();
+          if (!width || !mm.tree) return;
+          const readable = width < NARROW_WIDTH ? READABLE_SCALE.narrow : READABLE_SCALE.wide;
+          if (mm.transform.k < readable) mm.focusNode(mm.tree.id, { scale: readable, animate: false });
+        };
+        if (sized()) openReadable();
+        else {
+          const stop = mm.on('zoom', () => {
+            stop();
+            openReadable();
+          });
+          cleanups.push(stop);
+        }
         cleanups.push(() => {
           mm.destroy();
           if (markmapRef.current === mm) markmapRef.current = null;
