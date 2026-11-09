@@ -1,0 +1,52 @@
+---
+title: "5.14 磁盘结构、地址与存取时间"
+description: "磁道/扇区/柱面、CHS/LBA、寻道/旋转/传输时间。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.14 磁盘结构、地址与存取时间
+
+## 机械硬盘的空间结构
+- 盘片表面上同心圆为**磁道**；每条磁道分为**扇区**
+- 多盘面在相同半径位置的磁道合称**柱面**
+- **磁头**负责访问盘面；磁臂移动切换磁道/柱面
+- <img src="/images/408-mind-maps/co-0038.svg" alt="机械磁盘盘面和柱面结构" width="640" height="360">
+- <img src="/images/408-mind-maps/co-0181.svg" alt="磁道扇区及间隙示意" width="560" height="380">
+
+## 地址与分配单位不能混
+- 传统CHS：**柱面号、磁头号（盘面）、扇区号**（题目次序为准）
+- 现代设备多暴露**LBA逻辑块地址**，控制器负责映射到底层实际位置
+- 扇区：设备最低层读写粒度的一种典型单位
+- 文件系统块/簇可能由**多个逻辑扇区**组成，不得把“扇区=簇”当作恒等式
+- 磁带是典型顺序介质；HDD/SSD均支持随机块访问，但延迟不同
+
+## 经典磁盘访问时间
+- $T_{access}=T_{seek}+T_{rot}+T_{transfer}+T_{other}$
+- 寻道：磁头移动到目标柱面，含启动/稳定开销
+- 旋转延迟：等待目标扇区转到磁头下方
+- 传输：扇区经过磁头完成实际读写
+- 额外开销：控制器处理、队列等待、总线、文件系统等，题目未计时可略去
+- <img src="/images/408-mind-maps/os-0039.svg" alt="磁盘启动寻道旋转等待与传输时间组成" width="820" height="420">
+
+## 必背的量化关系
+- 转速 `R` 转/分钟：每转耗时 `60/R` 秒
+- 均匀随机目标扇区：平均旋转延迟 $T_{rot,avg}=30/R$ 秒
+- 同一磁道、均匀分布N个扇区、传一扇区：$T_{transfer}\approx 60/(RN)$ 秒
+- `R=7200rpm`：每转8.333ms；平均旋转延迟约4.167ms
+
+## 学习导航
+- [上一节：5.13 SPOOLing假脱机与虚拟打印机](/docs/408/mind-maps/operating-systems/05-13-spooling)
+- [下一节：5.15 磁盘初始化、引导区与坏块](/docs/408/mind-maps/operating-systems/05-15-disk-management)
+````

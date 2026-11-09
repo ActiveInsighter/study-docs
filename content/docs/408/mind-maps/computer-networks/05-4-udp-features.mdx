@@ -1,0 +1,48 @@
+---
+title: "5.4 UDP的无连接、面向报文与典型场景"
+description: "408 计算机网络第五章·UDP的无连接、面向报文与典型场景；分节双侧Markmap，含核心概念、考点计算与常见误区。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.4 UDP的无连接、面向报文与典型场景
+
+## 核心特点
+- **无连接**：发送前不需要像TCP那样握手；不维护TCP式连接状态
+- **面向报文**：应用交给UDP的一个报文，对应一个UDP数据报；接收侧保持报文边界
+- **不可靠交付**：无内建ACK、超时重传、排序、去重；校验和只做检错不等于纠错
+- **首部小**：固定8字节；支持单播、广播（IPv4）、组播等，范围与下层网络能力相关
+
+## 对应用的要求
+- 需可靠性时由应用自行设置序号、应答、超时、重传及拥塞友好策略
+- 避免大报文引发IP分片：中途缺失任一片就可能使整个报文不可恢复
+- 链路MTU决定IP层可携带的报文大小；**UDP长度与IP数据报总长度不是同一个字段**
+- 发送速度不被TCP拥塞窗口约束，**不代表网络拥塞无法影响UDP传输**
+
+## 常见应用与反例
+- DNS查询（传统UDP/TCP 53）；DHCP；TFTP；部分音视频与实时交互
+- QUIC、HTTP/3运行于UDP之上，可提供可靠流与拥塞控制；不能据此说“UDP本身可靠”
+- TCP也可承载实时场景，协议选择应综合时延、丢包、可靠性和部署环境
+
+## 易错点
+- **不保证可靠 ≠ 一定丢包**；不保证有序 ≠ 一定乱序
+- UDP可用于广播/组播，TCP连接本身只能在两个端点之间建立
+- UDP收包需应用提供足够缓冲区；应用缓冲过小时一次接收可能截断报文
+
+## 章节导航
+- [上一节：5.3 复用分用、报文传递与UDP/TCP选择](/docs/408/mind-maps/computer-networks/05-3-demultiplex)
+- [下一节：5.5 UDP报文格式、长度与IP层边界](/docs/408/mind-maps/computer-networks/05-5-udp-header)
+- [计算机网络总览](/docs/408/mind-maps/computer-networks)
+
+````

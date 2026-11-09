@@ -1,0 +1,73 @@
+---
+title: "3.4 链队列与双端队列"
+description: "链式队列入队出队、双端队列、输入/输出受限双端队列。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.4 队列 · 链式实现与双端队列
+
+## 带头结点的链队列
+- 结点：`data`、`next`；队列：`front`、`rear` 两个指针
+- 初始化：申请头结点 `h`，`front=rear=h`，`h->next=NULL`
+- 判空：`front==rear`（无数据结点）
+- 队头数据结点是 `front->next`
+- 头结点不是队列中的第一个**逻辑数据元素**
+
+## 链队列入队
+- 新建结点 `s`，令 `s->data=x; s->next=NULL`
+- 将其挂到末尾：`rear->next=s`
+- 更新尾指针：`rear=s`
+- 时间复杂度 O(1)，不需要从队头遍历
+- 不论原先队空还是非空，该模板均成立
+
+## 链队列出队
+- 先确认非空：`front!=rear`
+- `p=front->next`，取出 `p->data`
+- `front->next=p->next`，释放 `p`
+- **若 p 原本就是 rear：再置 `rear=front`**
+- 不更新尾指针会产生悬空指针，后续入队有风险
+- O(1) 时间；链队列仍受内存容量约束
+
+## 不带头结点的链队列
+- 空队列：`front=rear=NULL`
+- 首次入队：`front=rear=s`
+- 非空入队：`rear->next=s; rear=s`
+- 出队：`front=front->next`
+- 删除后如 `front==NULL`，必须同时令 `rear=NULL`
+- 对照带头结点方案：多一个首结点判定分支
+
+## 双端队列 Deque
+- 允许在**队头和队尾**两端插入、删除
+- `push_front`、`push_back`、`pop_front`、`pop_back`
+- 双向链表加头尾指针可实现两端 O(1) 操作
+- 也可用循环数组实现，避免在中间移动元素
+- 与“普通队列 FIFO”不同，双端操作不保证整体 FIFO
+
+## 受限双端队列
+- **输入受限双端队列**
+  - 只能从固定的一端插入，但两端都可删除
+- **输出受限双端队列**
+  - 两端都可插入，但只能从固定的一端删除
+- 典型题型：给定固定输入顺序，判断某个输出序列是否可实现
+- 解题办法：明确两端可做哪些操作，逐步模拟当前队列
+- 注意：与**优先队列**不同，后者按优先级出队而非按端点
+
+## 实现比较与坑点
+- 顺序循环队列：无需结点指针；容量上界明确、地址连续
+- 链队列：逐结点扩容；额外指针空间；分配、释放需管理
+- 双端队列：两端入删灵活；适合滑动窗口等算法
+- 复杂度结论总以**已知头尾指针且操作合法**为前提
+- [下一节：栈的应用](/docs/408/mind-maps/data-structures/03-5-stack-applications)
+````

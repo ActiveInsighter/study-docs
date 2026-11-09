@@ -1,0 +1,57 @@
+---
+title: "5.7 微操作时间表与节拍兼容"
+description: "利用取指、间址与执行时序表分析先后约束、总线冲突和条件动作。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.7 如何安排一张操作时间表
+
+## 三条调度原则
+- **保持数据依赖**：`MAR ← PC`必须先于用该地址开始访存
+- **避免资源冲突**：同一内部总线不能由两个不同源同时驱动
+- **尽量并行**：不同资源且无依赖的操作可同节拍执行，节约时钟数
+  - 即使有先后关系，组合传播延迟允许时也可同拍串联；须满足节拍定时
+
+## 示范取指安排：不是唯一解
+- `T0`：`MAR ← PC`；`MemRead ← 1`
+- `T1`：等待/完成读取；`MDR ← M[MAR]`；`PC ← PC+L`可独立并发
+- `T2`：`IR ← MDR`；指令译码（若组合延迟足够可同节拍）
+- 这里`L`是指令长度（以编址单位计），而不是一律“+1”
+- **有等待状态时需额外周期**：例如存储器未就绪时保持等待，不可强行进入`T2`
+
+- <img src="/images/408-mind-maps/co-0014.svg" alt="取指周期 T0 节拍一定是 (PC)→MAR：C1 = FE·T0" width="480" height="220">
+
+- <img src="/images/408-mind-maps/co-0162.svg" alt="M(MAR)→MDR 的微操作控制信号逻辑" width="820" height="368">
+
+## 几类执行指令简表
+- `CLA`：`ACC ← 0`（清累加器）
+- `COM`：`ACC ← ¬ACC`（取反，按字宽）
+- `ADD A`：`MAR ← A; Read; MDR ← M[MAR]; ACC ← ACC + MDR`
+- `STA A`：`MAR ← A; MDR ← ACC; Write; M[MAR] ← MDR`
+- `LDA A`：`MAR ← A; Read; MDR ← M[MAR]; ACC ← MDR`
+- `JMP A`：`PC ← A`；若是相对跳转要**先求目标地址**
+- 条件跳转：只有条件成立才写PC，否则保留顺序PC
+
+## 兼容性实例
+- `MAR ← PC`与`Read ← 1`往往兼容：先提供/锁存地址并启动读
+- `PC ← PC+L`与“数据返回到MDR”在硬件上可能并发
+- `MDR ← M[MAR]`与`IR ← MDR`是否能同拍取决于路径延迟和寄存器时序
+- `R1out`和`R2out`同时驱动**同一单总线**通常不兼容
+
+## 做题模板
+- ①列出数据依赖图 ②标记每次总线源 ③分配节拍 ④写in/out/ALU/MEM控制位
+- ⑤检查一拍内传播延迟 ⑥看是否需要条件动作或等待状态
+- [继续：微程序控制器](/docs/408/mind-maps/computer-organization/05-8-microprogram-controller)
+````

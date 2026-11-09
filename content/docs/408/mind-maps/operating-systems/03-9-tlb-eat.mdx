@@ -1,0 +1,49 @@
+---
+title: "3.9 TLB 快表与有效访问时间 EAT"
+description: "命中率、并行/串行查表、TLB失效与缺页的区别、平均访存时间模型。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.9 快表 TLB：不是数据 Cache，也不是页框
+
+## TLB 保存的东西
+- **快表 TLB**：保存最近使用的虚拟页号到物理页框号的转换及部分权限信息
+- 页表通常位于内存；TLB是MMU地址转换路径中的高速缓存
+- 命中：直接取得页框号，再访问目标数据
+- 未命中：通过页表步进查询，填充TLB，随后访问目标数据
+- TLB 未命中**不等于缺页**：页面可能就在物理内存里
+- <img src="/images/408-mind-maps/os-0044.svg" alt="具有TLB的页表地址变换机构" width="780" height="414">
+
+## EAT 计算：串行查表模型
+- 设TLB查找时间 $t$，主存一次访问 $m$，TLB命中率 $h$
+- **命中**：$t+m$
+- **未命中**：$t+2m$（单级页表、普通数据访问且不发生缺页）
+- 平均：$EAT=h(t+m)+(1-h)(t+2m)$
+- 例：$t=10\text{ns}, m=100\text{ns}, h=0.9$
+  - $EAT=0.9\times110+0.1\times210=120\text{ns}$
+
+## 并行查找模型和多级页表
+- 若题设规定TLB与页表**并行**访问，则未命中的时间模型不同
+- n级页表、无有效TLB命中且页表都在内存，通常需 $n+1$ 次主存访问
+- TLB命中情况下，对数据的正常内存访问通常只有1次；是否另算TLB查找依题设
+- 缺页时必须另计磁盘/SSD I/O和软件处理时间，不能继续直接套正常EAT
+
+## 缓存一致性与进程切换
+- 地址空间切换后旧TLB项不能被新进程错误复用：可刷新或按地址空间标识区分
+- 修改页表映射时，OS可能需要让相关CPU上的TLB项失效
+- Cache 缓存的是指令/数据，TLB 缓存的是**地址映射**；两者命中率互不等同
+- [上一节：基本地址转换](/docs/408/mind-maps/operating-systems/03-8-page-translation)
+- [下一节：多级页表](/docs/408/mind-maps/operating-systems/03-10-multilevel-pages)
+````

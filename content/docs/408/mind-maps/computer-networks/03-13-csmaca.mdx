@@ -1,0 +1,52 @@
+---
+title: "3.13 802.11 CSMA/CA与隐藏站"
+description: "DIFS、SIFS、随机退避、RTS/CTS、ACK与NAV"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.13 802.11 CSMA/CA与隐藏站
+
+## 无线为什么采用CSMA/CA
+- 802.11无线站往往**难以在发送时可靠检测碰撞**：自身信号强、隐藏站存在
+- **CSMA/CA**：尽量在发送前规避碰撞，而非依赖发送期间检测冲突
+- 多采用接收端**短帧间隔SIFS之后发送ACK**确认单播数据
+
+## DCF基本发送过程（简化）
+- 信道空闲且满足所需等待间隔→发送机会；通常结合随机退避
+- 信道忙→暂停退避计数；重新空闲且满足DIFS后，继续在**空闲时隙**递减
+- 退避计数到0，若允许则发送；未收到期望ACK可能判为失败并重试
+- **DIFS比SIFS长**：ACK/CTS等立即应答优先于新的争用发送
+
+## RTS/CTS可选握手
+- 发送方RTS（含所需占用时长）→接收方SIFS后回CTS
+- 周围可听到RTS/CTS的站点设置**NAV虚拟载波侦听时间**，暂缓接入
+- RTS/CTS可缓解**隐藏站**冲突，但引入控制帧开销，**并非所有帧必用**
+- <img src="/images/408-mind-maps/cn-03-rts-cts-clean.svg" alt="802.11的RTS CTS DATA ACK与SIFS时序" width="850" height="396">
+
+## 隐藏站/暴露站
+- **隐藏站**：A、C互相听不到，却会干扰同一接收方B；仅物理侦听不足
+- **暴露站**：某站虽听到邻站发送，实际上两者对不同接收点的传输可能兼容
+- RTS/CTS不能解决所有无线干扰；具体性能与拓扑、信道与终端有关
+
+## 源图质量说明
+- 原`cn-0155.svg`把DIFS、SIFS标成毫秒级固定值，**不同802.11物理层的间隔参数不同，不应这样记**
+- 该图已作为待重绘候选列出；本节改用标注时序而非硬编码毫秒值的新图
+
+## 章节导航
+- [上一节：3.12 CSMA/CD、最短帧与指数退避](/docs/408/mind-maps/computer-networks/03-12-csmacd)
+- [第三章总览](/docs/408/mind-maps/computer-networks/03-data-link-layer)
+- [下一节：3.14 局域网与IEEE 802子层](/docs/408/mind-maps/computer-networks/03-14-lan)
+
+````

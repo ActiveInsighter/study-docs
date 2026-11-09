@@ -1,0 +1,48 @@
+---
+title: "2.6 线程状态、TCB与上下文切换"
+description: "线程库、内核调度、运行队列、线程与进程切换代价。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.6 线程组织与切换：TCB、调度对象、idle
+
+## 线程状态与TCB
+- 常用状态：就绪、运行、阻塞；事件转移规律与进程类似
+- <img src="/images/408-mind-maps/os-0046.svg" alt="线程就绪、运行和阻塞状态转移" width="560" height="330">
+- TCB主要字段：TID、状态、PC、寄存器、栈指针、优先级及等待对象
+- 线程库如POSIX Pthreads提供API；**是否内核级实现取决于具体运行时和OS**
+- <img src="/images/408-mind-maps/os-0084.svg" alt="线程控制块TCB典型字段" width="620" height="290">
+
+## 用户级调度与内核调度
+- N:1：线程库在本进程用户态选择ULT，内核只看见一个调度实体
+- 1:1：内核可以直接调度每个KLT，跨核运行同进程多个线程
+- M:N：用户态选择ULT，内核调度其映射到的KLT
+- <img src="/images/408-mind-maps/os-0077.svg" alt="调度对象是进程或内核级线程的对比" width="620" height="365">
+- <img src="/images/408-mind-maps/os-0011.svg" alt="内核级线程调度结构" width="590" height="453">
+
+## 上下文切换比较
+- 用户线程在用户态切换：保存/恢复用户寄存器和栈等，可能不陷入内核
+- 同一进程的不同KLT：需要内核调度，**通常不切换虚拟地址空间**
+- 不同进程的线程：可能切换地址空间及相关地址转换上下文
+- 代价来源：寄存器保存、内核代码、缓存/TLB局部性损失等
+- “线程切换一定比进程切换快”是典型趋势，不是无条件的数学定律
+
+## idle及题目警戒
+- **idle线程/进程**：CPU无可运行工作时的空闲执行主体，通常处于最低调度优先级
+- idle可执行节能等待，不意味着必然“每指令周期只检查中断”
+- 用户线程库仅管理ULT不意味着所有I/O一定阻塞全进程：非阻塞I/O、异步I/O可以规避
+- [上一节：线程映射](/docs/408/mind-maps/operating-systems/02-5-thread-models)
+- [下一节：三级调度](/docs/408/mind-maps/operating-systems/02-7-scheduling-levels)
+````

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="640" viewBox="0 0 1120 640" role="img">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#52637a"/></marker><style>text{font-family:"Noto Sans CJK SC","Noto Sans SC","Microsoft YaHei",sans-serif} .muted{fill:#52637a}.mono{font-family:monospace}</style></defs>
+<rect x="1" y="1" width="1118" height="638" rx="18" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="32" y="53" font-size="30" fill="#1b283b" font-weight="700" text-anchor="start">目录项瘦身：名字属于目录项，元数据属于 inode</text>
+<text x="32" y="87" font-size="20" fill="#52637a" font-weight="400" text-anchor="start">两个名字是同一文件的硬链接；修改任一名称指向的内容都作用于同一个inode</text>
+<rect x="45" y="135" width="325" height="205" rx="12" fill="#edf4fe" stroke="#90b4e5" stroke-width="2"/>
+<text x="70" y="176" font-size="26" fill="#1b283b" font-weight="700" text-anchor="start">目录 /home/alice</text>
+<rect x="68" y="211" width="277" height="54" rx="6" fill="#fff" stroke="#b8c7d8" stroke-width="2"/>
+<text x="86" y="246" font-size="22" fill="#1b283b" font-weight="400" text-anchor="start">report.txt  →  inode 100</text>
+<rect x="68" y="275" width="277" height="48" rx="6" fill="#fff" stroke="#b8c7d8" stroke-width="2"/>
+<text x="86" y="307" font-size="21" fill="#1b283b" font-weight="400" text-anchor="start">notes.txt  →  inode 102</text>
+<rect x="45" y="374" width="325" height="197" rx="12" fill="#fff3e8" stroke="#dcaa78" stroke-width="2"/>
+<text x="70" y="414" font-size="26" fill="#1b283b" font-weight="700" text-anchor="start">目录 /home/bob</text>
+<rect x="68" y="448" width="278" height="54" rx="6" fill="#fff" stroke="#c7b1a0" stroke-width="2"/>
+<text x="86" y="483" font-size="21" fill="#1b283b" font-weight="400" text-anchor="start">shared.txt  →  inode 100</text>
+<rect x="505" y="222" width="258" height="222" rx="12" fill="#e8f9ee" stroke="#8dc7a5" stroke-width="2"/>
+<text x="531" y="264" font-size="28" fill="#1b283b" font-weight="700" text-anchor="start">inode 100</text>
+<text x="531" y="309" font-size="21" fill="#1b283b" font-weight="400" text-anchor="start">类型：普通文件</text>
+<text x="531" y="346" font-size="22" fill="#1b283b" font-weight="400" text-anchor="start">链接数：2</text>
+<text x="531" y="382" font-size="19" fill="#1b283b" font-weight="400" text-anchor="start">大小、权限、块映射…</text>
+<rect x="869" y="250" width="212" height="146" rx="12" fill="#f5f0ff" stroke="#b6a3dd" stroke-width="2"/>
+<text x="899" y="297" font-size="25" fill="#1b283b" font-weight="700" text-anchor="start">文件数据块</text>
+<text x="899" y="337" font-size="20" fill="#1b283b" font-weight="400" text-anchor="start">内容唯一一份</text>
+<path d="M370 240 H420 V280 H495" fill="none" stroke="#52637a" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M370 475 H418 V390 H495" fill="none" stroke="#52637a" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="763" y1="333" x2="858" y2="333" stroke="#52637a" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="32" y="612" font-size="20" fill="#1b283b" font-weight="700" text-anchor="start">删除 report.txt：硬链接数由2变1，shared.txt仍可访问；最后释放还要考虑打开文件引用。</text>
+</svg>

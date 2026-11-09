@@ -1,0 +1,51 @@
+---
+title: "6.9 电子邮件系统组成与完整收发链"
+description: "408计算机网络·应用层第六章·电子邮件系统组成与完整收发链；高质量双侧Markmap分节导图。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.9 电子邮件系统组成与完整收发链
+
+## 三类组成
+- **用户代理 MUA**：撰写、发送、查看邮件，例如邮件客户端或Webmail
+- **邮件传输服务器 MTA**：在网络间接力转发、排队重试
+- **邮件存储/访问服务器**：保管收件人邮箱并提供POP3/IMAP/Webmail访问
+
+## 一个典型投递过程
+- ① 发件人在客户端/浏览器撰写邮件并提交给其邮件服务
+- ② 发件服务器查询**收件域的MX记录**，确定目的邮件服务器
+- ③ 发件MTA通过SMTP向收件MTA发送邮件（可能经过中继节点）
+- ④ 收件服务器在收信人邮箱存储邮件；收件人经IMAP/POP3/HTTPS读取
+- 邮件**发送成功入队**不等于收件人立刻读到；服务器可能多次重试或生成退信
+
+## 关键边界
+- SMTP用于**投递/转发**；POP3/IMAP主要用于**邮箱读取管理**
+- Webmail用户在浏览器里读写使用HTTPS；服务端在后台通常仍要参与SMTP投递
+- 两个邮件服务器之间可以经过多个中继，原图“SMTP绝不经过中间服务器”不成立
+
+## 全景矢量图
+- <img src="/images/408-mind-maps/cn-06-mail-flow-clean.svg" alt="邮件用户代理提交、SMTP服务器转发以及IMAP POP3读取" width="1140" height="394">
+
+## 与DNS交叉
+- MX记录给出邮件接收主机；邮件服务器地址可能经A/AAAA得到
+- MX优先级的**数值越小通常优先级越高**；等优先级可按策略选取
+- 退信、垃圾邮件检测、TLS等是业务/安全扩展，不应误认为SMTP天生保证送达
+
+## 分节导航
+- [上一节：6.8 FTP主动PORT与被动PASV模式](/docs/408/mind-maps/computer-networks/06-8-ftp-modes)
+- [下一节：6.10 SMTP命令、三阶段交互与响应码](/docs/408/mind-maps/computer-networks/06-10-smtp)
+- [应用层总览](/docs/408/mind-maps/computer-networks/06-application-layer)
+
+````

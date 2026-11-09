@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="500" viewBox="0 0 940 500" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" role="img" aria-label="计算机取指阶段，PC将地址送到MAR，主存数据经MDR进入IR，PC指向顺序后继指令">
+<title>取指流程：地址与数据的传送</title>
+<defs>
+ <marker id="blueArrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L8 4.5 L0 9 Z" fill="#2563eb"/></marker>
+ <marker id="orangeArrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L8 4.5 L0 9 Z" fill="#c2410c"/></marker>
+</defs>
+<rect x="1.5" y="1.5" width="937" height="497" rx="22" fill="#fff" stroke="#d4dae4" stroke-width="2"/>
+<text x="30" y="47" fill="#172554" font-size="25" font-weight="700">一次典型取指：先送地址，再取指令位串</text>
+<text x="32" y="78" font-size="16" fill="#64748b">非流水模型示意 · 字节编址、定长4字节指令的演示，实际体系可不同</text>
+<!-- modules -->
+<rect x="35" y="130" width="138" height="128" rx="15" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+<text x="104" y="167" text-anchor="middle" fill="#1e3a8a" font-size="25" font-weight="700">PC</text>
+<text x="104" y="198" text-anchor="middle" fill="#334155" font-size="17">下一取指地址</text>
+<text x="104" y="233" text-anchor="middle" fill="#2563eb" font-size="20" font-weight="700">0x1000</text>
+<rect x="217" y="130" width="138" height="128" rx="15" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+<text x="286" y="167" text-anchor="middle" fill="#1e3a8a" font-size="25" font-weight="700">MAR</text>
+<text x="286" y="198" text-anchor="middle" fill="#334155" font-size="17">访存地址</text>
+<text x="286" y="233" text-anchor="middle" fill="#2563eb" font-size="20" font-weight="700">0x1000</text>
+<rect x="402" y="130" width="138" height="128" rx="15" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+<text x="471" y="167" text-anchor="middle" fill="#1e293b" font-size="25" font-weight="700">主存</text>
+<text x="471" y="198" text-anchor="middle" fill="#334155" font-size="17">地址 0x1000</text>
+<text x="471" y="233" text-anchor="middle" fill="#9a3412" font-size="16">指令编码</text>
+<rect x="587" y="130" width="138" height="128" rx="15" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="656" y="167" text-anchor="middle" fill="#9a3412" font-size="25" font-weight="700">MDR</text>
+<text x="656" y="198" text-anchor="middle" fill="#334155" font-size="17">访存数据</text>
+<text x="656" y="233" text-anchor="middle" fill="#9a3412" font-size="16">指令编码</text>
+<rect x="768" y="130" width="138" height="128" rx="15" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="837" y="167" text-anchor="middle" fill="#9a3412" font-size="25" font-weight="700">IR</text>
+<text x="837" y="198" text-anchor="middle" fill="#334155" font-size="17">当前指令</text>
+<text x="837" y="233" text-anchor="middle" fill="#9a3412" font-size="16">供译码</text>
+<!-- arrows -->
+<path d="M173 185 H213" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#blueArrow)"/>
+<path d="M355 185 H398" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#blueArrow)"/>
+<path d="M540 185 H583" fill="none" stroke="#c2410c" stroke-width="3" marker-end="url(#orangeArrow)"/>
+<path d="M725 185 H764" fill="none" stroke="#c2410c" stroke-width="3" marker-end="url(#orangeArrow)"/>
+<rect x="34" y="292" width="874" height="70" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+<text x="54" y="320" font-size="17" fill="#334155">地址传送：</text>
+<text x="174" y="320" font-size="18" fill="#1d4ed8" font-weight="700">MAR ← PC</text>
+<text x="397" y="320" font-size="17" fill="#334155">读内存：</text>
+<text x="507" y="320" font-size="18" fill="#c2410c" font-weight="700">MDR ← M[MAR]</text>
+<text x="54" y="348" font-size="17" fill="#334155">送指令：</text>
+<text x="174" y="348" font-size="18" fill="#c2410c" font-weight="700">IR ← MDR</text>
+<text x="397" y="348" font-size="17" fill="#334155">顺序PC：</text>
+<text x="507" y="348" font-size="18" fill="#1d4ed8" font-weight="700">0x1000 → 0x1004</text>
+<rect x="34" y="390" width="874" height="72" rx="12" fill="#ecfeff" stroke="#a5f3fc"/>
+<text x="55" y="420" font-size="18" fill="#155e75" font-weight="700">注意：</text>
+<text x="128" y="420" font-size="18" fill="#155e75">下一条指令可能因跳转而不在 0x1004，PC 增量也不必总是 4。</text>
+<text x="128" y="448" font-size="16" fill="#0f766e">数据读写也使用MAR/MDR；此图特指取指阶段，不意味着每次执行只访问一次主存。</text>
+</svg>

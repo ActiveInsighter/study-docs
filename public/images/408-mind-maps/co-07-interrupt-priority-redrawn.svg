@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="500" viewBox="0 0 980 500" font-family="Noto Sans CJK SC, sans-serif">
+<rect width="980" height="500" rx="18" fill="#ffffff"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0 0L10 4L0 8Z" fill="#475569"/></marker></defs>
+<text x="490" y="46" fill="#0f172a" font-size="29" font-weight="700" text-anchor="middle">中断请求：硬件判优与软件查询</text>
+<text x="490" y="78" fill="#475569" font-size="17" font-weight="400" text-anchor="middle">示意固定响应顺序 D ＞ A ＞ C ＞ B；响应优先级 ≠ ISR嵌套优先级</text>
+<rect x="40" y="125" width="145" height="77" rx="12" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+<text x="112" y="156" fill="#0f172a" font-size="21" font-weight="600" text-anchor="middle">请求 A</text>
+<text x="112" y="183" fill="#2563eb" font-size="16" font-weight="400" text-anchor="middle">待处理</text>
+<path d="M112 205 L112 239" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="220" y="125" width="145" height="77" rx="12" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+<text x="292" y="156" fill="#0f172a" font-size="21" font-weight="600" text-anchor="middle">请求 B</text>
+<text x="292" y="183" fill="#2563eb" font-size="16" font-weight="400" text-anchor="middle">待处理</text>
+<path d="M292 205 L292 239" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="400" y="125" width="145" height="77" rx="12" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+<text x="472" y="156" fill="#0f172a" font-size="21" font-weight="600" text-anchor="middle">请求 C</text>
+<text x="472" y="183" fill="#2563eb" font-size="16" font-weight="400" text-anchor="middle">待处理</text>
+<path d="M472 205 L472 239" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="580" y="125" width="145" height="77" rx="12" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+<text x="652" y="156" fill="#0f172a" font-size="21" font-weight="600" text-anchor="middle">请求 D</text>
+<text x="652" y="183" fill="#2563eb" font-size="16" font-weight="400" text-anchor="middle">待处理</text>
+<path d="M652 205 L652 239" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="95" y="245" width="630" height="85" rx="12" fill="#f0fdf4" stroke="#34d399" stroke-width="2"/>
+<text x="410" y="277" fill="#0f172a" font-size="24" font-weight="600" text-anchor="middle">硬件中断控制器 / 优先级编码器</text>
+<text x="410" y="308" fill="#166534" font-size="18" font-weight="400" text-anchor="middle">当 A、B、C、D 同时请求且均未屏蔽：选 D</text>
+<path d="M725 286 L770 286" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="773" y="253" width="173" height="68" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+<text x="859" y="284" fill="#0f172a" font-size="19" font-weight="600" text-anchor="middle">输出向量号 D</text>
+<text x="859" y="309" fill="#0f172a" font-size="17" font-weight="400" text-anchor="middle">交给CPU</text>
+<rect x="66" y="368" width="388" height="86" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+<text x="260" y="399" fill="#0f172a" font-size="20" font-weight="700" text-anchor="middle">硬件判优</text>
+<text x="260" y="427" fill="#334155" font-size="17" font-weight="400" text-anchor="middle">线路/优先编码器决定响应来源</text>
+<rect x="525" y="368" width="393" height="86" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+<text x="722" y="399" fill="#0f172a" font-size="20" font-weight="700" text-anchor="middle">软件查询</text>
+<text x="722" y="427" fill="#334155" font-size="17" font-weight="400" text-anchor="middle">程序逐一检查状态寄存器寻找来源</text>
+</svg>

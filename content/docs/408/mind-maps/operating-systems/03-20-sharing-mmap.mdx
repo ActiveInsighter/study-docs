@@ -1,0 +1,47 @@
+---
+title: "3.20 共享页、内存映射文件与 COW"
+description: "映射同一文件页、MAP_SHARED/私有COW、fork、TLB/Cache与内存性能。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.20 内存共享和映射：相同物理页≠相同虚拟地址
+
+## 映射与共享
+- **内存映射文件（mmap）**：把文件内容映射到进程虚拟地址区域
+  - CPU像普通内存读写一样访问，OS负责把相应页按需装入与同步/回写
+- 只读共享代码、共享库和共享文件页可减少物理页的重复加载
+- 多个进程在不同虚拟地址访问**同一物理页框**，是共享映射的典型形式
+- <img src="/images/408-mind-maps/os-03-mmap-cow-clean.svg" alt="共享物理页框和写时复制两种不同机制对照" width="830" height="404">
+
+## 私有映射与写时复制
+- **COW（Copy-on-Write）**：初始共享只读页，一方试图写入时为其分配私有物理页并改映射
+- UNIX类 `fork` 进程常借助COW延迟复制大量页面
+- 文件的私有映射也可以在写时使用COW，不直接修改共享文件页
+- **COW不是一切共享映射的默认写入行为**：共享可写映射可能让其他映射者观察到修改
+
+## 地址翻译与数据缓存链路
+- 地址翻译：虚拟页号 → TLB/页表 → 物理页框号
+- 数据访问：物理地址（或体系结构支持的地址信息） → Cache/主存
+- TLB 缓存地址映射，Cache 缓存**指令或数据**，二者独立
+- <img src="/images/408-mind-maps/co-0070.svg" alt="计组中TLB和页表的地址变换路径" width="710" height="582">
+- <img src="/images/408-mind-maps/co-0306.svg" alt="计组中通过Cache和主存定位实际数据的路径" width="710" height="588">
+
+## 效率与系统权衡
+- 缺页服务需要后备存储I/O时，代价通常远高于一般TLB未命中
+- 页太大：页内碎片可能增大；页太小：页表与地址翻译开销可能增大
+- 要平衡：页大小、驻留集、置换策略、工作集、TLB和Cache局部性
+- [上一节：工作集](/docs/408/mind-maps/operating-systems/03-19-working-set)
+- [下一节：综合纠错与练习](/docs/408/mind-maps/operating-systems/03-21-exam-synthesis)
+````

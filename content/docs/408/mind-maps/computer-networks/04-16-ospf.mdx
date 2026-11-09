@@ -1,0 +1,53 @@
+---
+title: "4.16 OSPF链路状态、区域与SPF"
+description: "408 计算机网络 第四章·OSPF链路状态、区域与SPF：独立双侧Markmap，含考研核心概念、步骤、易错点与计算。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 4.16 OSPF链路状态、区域与SPF
+
+## OSPF身份卡
+- Open Shortest Path First，典型IGP，**链路状态型**，按代价选路径
+- **直接封装在IP中，IPv4协议号89**，不是走UDP或TCP
+- 基于洪泛的LSA同步链路状态数据库LSDB，使用SPF（Dijkstra）计算路由
+
+## 5类基本OSPF分组
+- Hello：发现/维持邻居，建立邻接基础
+- Database Description (DD)：数据库摘要，协助同步
+- Link State Request (LSR)：请求缺失/过期的LSA
+- Link State Update (LSU)：传送LSA，洪泛链路状态更新
+- Link State Acknowledgment (LSAck)：确认LSA接收
+
+## 图与区域
+- 对**所在区域内**建立一致的链路状态视图；跨区域通过ABR传递汇总等信息
+- Area 0是骨干区域；非骨干区域通常经骨干区域实现域间互联
+- 区域内部路由器、ABR（区域边界路由器）、ASBR（自治系统边界路由器）、骨干路由器可以出现角色重叠
+- **ABR ≠ ASBR**；非骨干区域里的全部路由器并非ASBR
+
+## LSDB更新规律
+- 链路状态变化会触发LSA洪泛；还存在Hello和定期**LSA刷新**，不能说只在变化时通信
+- 每台路由器根据适用的LSDB计算自己的最短路径树，并安装下一跳/出口到转发表
+- OSPF支持等价多路径ECMP、可变长度掩码及身份认证机制
+
+## 算法比较
+- OSPF交换**链路状态**，RIP交换**距离向量表**
+- 代价可根据带宽等配置，不能机械假设“每经过一个路由器代价+1”
+- SPF求本源最短路，**不自动保证网络不会在收敛期间出现暂时转发环路**
+## 章节导航
+- [返回第四章导览](/docs/408/mind-maps/computer-networks/04-network-layer)
+- [上一节：4.15 RIP距离向量更新与慢收敛](/docs/408/mind-maps/computer-networks/04-15-rip)
+- [下一节：4.17 BGP路径向量与跨AS选路](/docs/408/mind-maps/computer-networks/04-17-bgp)
+
+````

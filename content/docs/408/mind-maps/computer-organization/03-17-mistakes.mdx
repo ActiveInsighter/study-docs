@@ -1,0 +1,51 @@
+---
+title: "3.17 408核心易错辨析与复习索引"
+description: "三类地址位数、刷新、LRU和TLB/Cache常见陷阱及全章复习路线。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.17 存储系统易错辨析
+
+## 不要混淆这些层次
+- **地址位数**：虚址位宽/物理地址位宽/芯片外部地址引脚/Cache组索引位 ≠ 同一个概念
+- **访问单位**：CPU字、主存编址单位、Cache块、虚存页、SSD物理页、闪存擦除块 ≠ 相同粒度
+- **性能**：首次响应延迟、存储体恢复周期、突发传输间隔、总体带宽 ≠ 相同指标
+- **“随机存取”**：RAM与ROM都可按地址任意读；磁盘通常属于直接访问存储器
+
+## 六组最常考判断
+- “DRAM只在读时刷新” → 错：存储单元必须按照刷新时限周期性恢复
+- “高位交叉可让连续地址依次访问不同体” → 通常错：连续地址常落同一体
+- “Cache tag位数 = 主存块号位数” → 仅全相联（常规物理地址模式）
+- “2路组相联每行必有2位LRU” → 错：真LRU可在**每组1位**记录哪路更旧
+- “TLB缺失说明当前页不在主存” → 错：可以只需要页表遍历和TLB填入
+- “Cache miss就代表缺页” → 错：CPU物理地址已合法，Cache miss常只去主存
+
+## 高质量计算的统一步骤
+- 先写明 **bit/B 与 KiB/MiB，按字还是按字节编址**
+  - 再拆宽度：地址 → 块号/偏移；块号 → tag/index
+  - 题有虚存：先虚页号/页偏移转换，再考虑物理Cache
+- 在表中维护访问序列与每组有效数据；替换前更新LRU顺序
+  - 遇写操作要标dirty及有无分配；计算主存访问量不能遗漏写回流量
+- 总线/外存计算：明确是否“首次访问延迟”“稳态每隔r传一次”“平均机械旋转等待”
+
+## 分节回顾导航
+- [3.1 存储器分层](/docs/408/mind-maps/computer-organization/03-1-hierarchy) · [3.2 SRAM/DRAM](/docs/408/mind-maps/computer-organization/03-2-sram-dram) · [3.3 DRAM刷新](/docs/408/mind-maps/computer-organization/03-3-refresh)
+- [3.4 ROM/Flash](/docs/408/mind-maps/computer-organization/03-4-rom-flash) · [3.5 芯片组织](/docs/408/mind-maps/computer-organization/03-5-chip-organization) · [3.6 字位扩展](/docs/408/mind-maps/computer-organization/03-6-expansion)
+- [3.7 多体交叉](/docs/408/mind-maps/computer-organization/03-7-multi-bank) · [3.8 机械磁盘/RAID](/docs/408/mind-maps/computer-organization/03-8-hdd-raid) · [3.9 SSD](/docs/408/mind-maps/computer-organization/03-9-ssd)
+- [3.10 Cache局部性](/docs/408/mind-maps/computer-organization/03-10-cache-locality) · [3.11 Cache映射](/docs/408/mind-maps/computer-organization/03-11-cache-mapping)
+- [3.12 LRU](/docs/408/mind-maps/computer-organization/03-12-cache-replacement) · [3.13 Cache写策略/AMAT](/docs/408/mind-maps/computer-organization/03-13-cache-write-amat)
+- [3.14 页表](/docs/408/mind-maps/computer-organization/03-14-virtual-memory) · [3.15 TLB+Cache](/docs/408/mind-maps/computer-organization/03-15-tlb-cache)
+- [3.16 综合计算](/docs/408/mind-maps/computer-organization/03-16-exercises) · [下一章 指令系统](/docs/408/mind-maps/computer-organization/04-instruction-set)
+````

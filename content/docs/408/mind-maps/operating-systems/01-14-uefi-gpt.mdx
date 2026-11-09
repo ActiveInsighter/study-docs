@@ -1,0 +1,54 @@
+---
+title: "1.14 UEFI/GPT 引导与安全启动"
+description: "EFI系统分区、EFI应用、启动管理器、Secure Boot"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 1.14 现代UEFI启动不等于BIOS+MBR
+
+## UEFI的基本角色
+- **UEFI固件**提供标准化启动服务与固件接口，可读取受支持的文件系统上的EFI可执行程序
+- 常见UEFI/GPT方案：复位 → 固件初始化 → 根据启动项找到**EFI系统分区 ESP** → 加载`.efi`启动程序 → 加载OS内核
+- **GPT**是分区方案，提供GUID分区条目与相关备份信息；**UEFI**是固件启动接口标准，两者不是同一个概念
+- UEFI可以使用不同配置的启动路径；“UEFI一定没有任何兼容模式”属于过度绝对化
+
+## EFI系统分区（ESP）
+- 通常采用固件支持的FAT文件系统，存放启动管理器/引导加载器等EFI程序
+- 固件根据NVRAM中的启动项等信息寻找EFI程序；可能使用默认回退路径
+- **ESP ≠ Windows的C盘**；可能多个操作系统共用一个ESP
+- 不要求像传统MBR那样将特定主分区设置为“活动”才能启动
+
+## Secure Boot（安全启动）
+- 用于验证启动链中指定代码的签名/信任关系，降低未经授权启动代码介入风险
+- **安全启动 ≠ 全盘加密**；也不能单独保证操作系统运行期绝对安全
+- **TPM**可辅助测量、密钥保护、可信启动等能力，不能与Secure Boot画等号
+- 设备可能启用/禁用Secure Boot；具体能力与策略由平台固件及系统决定
+
+## OS接管阶段
+- 引导器把内核、启动参数与所需初始数据准备完毕 → 内核初始化内存、调度、中断及设备子系统
+- 之后启动系统服务和第一个用户态进程，最终进入登录或其他交互界面
+- “OS启动=已经显示桌面”：错误，**内核初始化早于图形会话**
+
+## 典型考题比较
+- BIOS/MBR：传统首扇区 + MBR分区表 + 可能的活动分区/PBR链
+- UEFI/GPT：固件执行EFI程序 + GPT分区信息 + ESP中的引导文件
+- 两者共有的本质：**固件建立初始执行环境，再把控制权转交引导器和内核**
+
+## 导航
+- [上一节：1.13 传统 BIOS/MBR 启动链](/docs/408/mind-maps/operating-systems/01-13-boot-bios-mbr)
+- [下一节：1.15 虚拟机、Hypervisor 与容器](/docs/408/mind-maps/operating-systems/01-15-virtualization)
+- [返回本章导览](/docs/408/mind-maps/operating-systems/01-overview)
+
+````

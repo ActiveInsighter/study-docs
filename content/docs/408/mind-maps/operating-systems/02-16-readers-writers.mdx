@@ -1,0 +1,48 @@
+---
+title: "2.16 读者—写者与公平性"
+description: "读者优先、写者优先、服务队列与饥饿辨析。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.16 读者—写者：可并发读，写必须独占
+
+## 资源共享规则
+- 多个读者允许同时读同一受保护对象
+- 写者与读者互斥；不同写者之间也互斥
+- **读者优先**：读者可以不断加入已有读者群，可能导致写者饥饿
+- **写者优先**：已有写请求后阻止新读者抢先，可能使读者等待较久
+- **公平策略**：按某种排队顺序接纳请求；是否严格无饥饿依具体信号量排队语义
+
+## 读者优先：三个共享对象
+- `readCount=0`、`mutex=1`（保护计数）、`rw=1`（文件写排他）
+- 读者进：`P(mutex)` → 若`readCount==0`则`P(rw)` → `readCount++` → `V(mutex)`
+- 读者出：`P(mutex)` → `readCount--` → 若变0则`V(rw)` → `V(mutex)`
+- 写者：`P(rw) → 写 → V(rw)`
+- 首位读者负责控制`rw`，而不是每位读者都对`rw`执行P/V
+
+## 服务队列改善公平
+- 加`service=1`作为请求入口闸门
+- 写者：`P(service) → P(rw) → V(service) → 写 → V(rw)`
+- 读者：`P(service) → P(mutex) → 首位读者P(rw) → count++ → V(mutex) → V(service) → 读 → ...退出计数`
+- **必须按锁顺序分析**；这里读者持`service`等待`rw`，可阻止新读者无穷插队
+- 真正保证先来先服务还需要入口信号量/请求队列具备合适的FIFO性质
+
+## 大题画图诀窍
+- 画“读者数 count”，标明首次读/最后一次读的责任
+- 对所有写者画出占有`rw`的临界区
+- 判断的是**线程对文件的读写冲突**，不是“读者之间也必须互斥”
+- [上一节：生产者消费者](/docs/408/mind-maps/operating-systems/02-15-producer-consumer)
+- [下一节：哲学家和吸烟者](/docs/408/mind-maps/operating-systems/02-17-classical-problems)
+````

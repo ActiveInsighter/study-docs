@@ -43,8 +43,8 @@ export function MindMapPageHeader({
             <Link
               href={previous.url}
               className="mind-map-page-nav-link"
-              title={`上一章：${previous.title}`}
-              aria-label={`上一章：${previous.title}`}
+              title={`上一页：${previous.title}`}
+              aria-label={`上一页：${previous.title}`}
             >
               <ChevronLeft aria-hidden="true" />
             </Link>
@@ -57,8 +57,8 @@ export function MindMapPageHeader({
             <Link
               href={next.url}
               className="mind-map-page-nav-link"
-              title={`下一章：${next.title}`}
-              aria-label={`下一章：${next.title}`}
+              title={`下一页：${next.title}`}
+              aria-label={`下一页：${next.title}`}
             >
               <ChevronRight aria-hidden="true" />
             </Link>

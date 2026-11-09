@@ -1,0 +1,60 @@
+---
+title: "5.5 单总线微操作、存储器接口与控制信号"
+description: "用完整取指和访存加法示例说明CPU内部bus与外部AB/DB/CB的区别。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.5 按数据通路写出控制信号
+
+## 标记与口径
+- `(R)`表示R的当前值；`Rin/Rout`表示寄存器锁存/驱动到内部总线
+- `MARin`与外部地址总线输出是两回事；`MDRinE/MDRoutE`示意存储器侧端口
+- `MemRead/Write`是控制命令，**不是向总线写入数字1**
+
+## 示例A：单总线取指（教学模型）
+- 第1拍：`MAR ← PC`，使能`PCout, MARin`
+- 第2拍：发出`MemRead`，等存储器应答；可并行`PC ← PC+指令长度`（依硬件）
+- 第3拍：`MDR ← M[MAR]`，存储器侧传送
+- 第4拍：`IR ← MDR`，使能`MDRout, IRin`
+  - **真实拍数不唯一**：主存可能有等待周期，题目或图纸可能将读命令与数据返回安排在不同拍
+
+## 示例B：ADD R1, [A]（结果回写R1）
+- 已经完成取指后，计算`R1 ← R1 + M[A]`
+  - `MAR ← A`；发出`MemRead`
+  - `MDR ← M[MAR]`（主存返回源操作数）
+  - `Y ← MDR`（`MDRout, Yin`）
+  - `Z ← R1 + Y`（`R1out, ALUadd, Zin`）
+  - `R1 ← Z`（`Zout, R1in`）
+- **若寄存器R1或ALU有专用旁路，节拍可以减少**；上述仅针对这一种单总线模型
+
+## 示例C：经R0指向内存写回
+- 要实现：`M[R0] ← M[R0] + R1`，假设R0存指针
+  - `MAR ← R0` → `MemRead` → `MDR ← M[MAR]`
+  - `Y ← MDR` → `Z ← Y + R1` → `MDR ← Z`
+  - `MemWrite`：`M[MAR] ← MDR`
+- 这条指令既读又写同一地址；要保留MAR，不应把地址字段误写成操作数
+
+## 系统总线与CPU内部总线
+- **AB地址总线**：CPU侧通常向主存/I/O接口输出地址；实际总线可能由多个主设备仲裁
+- **DB数据总线**：在CPU、主存、I/O之间双向传输数据
+- **CB控制总线**：读写、时钟/中断/请求应答等，信号方向因功能不同
+- <img src="/images/408-mind-maps/co-05-readable-0127.svg" alt="CPU、存储器与I/O接口通过地址、数据、控制总线连接" width="1000" height="475">
+
+## 作题时不要漏
+- **读主存**：地址和读命令先有效，数据返回时再接收MDR
+- **写主存**：MAR提供地址、MDR提供数据，发出写命令
+- 不要把外部一次主存访问认作CPU单总线一定只需一拍
+- [继续：硬布线CU](/docs/408/mind-maps/computer-organization/05-6-hardwired)
+````

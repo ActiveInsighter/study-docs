@@ -1,0 +1,55 @@
+---
+title: "2.9 PCM数字化、采样定理与模拟调制"
+description: "采样-量化-编码、量化误差、数字语音速率"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.9 PCM数字化、采样定理与模拟调制
+
+## 四种数据/信号组合
+- 数字数据→数字信号：线路编码（NRZ、曼彻斯特等）
+- 数字数据→模拟载波信号：ASK、FSK、PSK、QAM等
+- 模拟数据→数字信号：PCM等模拟信号数字化技术
+- 模拟数据→模拟载波信号：AM/FM/PM等调制
+
+## PCM三个步骤
+- **采样**：连续时间→离散时刻；采样后的幅值尚可连续
+- **量化**：将幅度归入有限层级，引入量化误差
+- **编码**：将量化索引映射为二进制序列
+- <img src="/images/408-mind-maps/cn-02-pcm-clean.svg" alt="模拟波采样量化和编码过程" width="800" height="388">
+
+## 采样定理与抗混叠
+- 对最高频率为 $f_{\max}$ 的**理想带限低通信号**，常按 $f_s>2f_{\max}$ 留取裕量
+- 若采样频率不足，会产生**混叠**；ADC前常加抗混叠低通滤波器
+- 不要拿奈氏传输上限`2W Baud`直接替代采样定理
+
+## PCM比特率公式
+- 每次采样`b`位、每秒`f_s`次、`c`个通道
+  - $R_{\mathrm{PCM}}=f_sb c\;\mathrm{bit/s}$（未计封装和纠错）
+- 电话级示例：8kHz × 8bit × 单通道 =64kbit/s
+- CD音频示例：44.1kHz × 16bit × 双通道 =1.4112Mbit/s
+- `b`位对应 $2^b$ 个量化等级；量化等级更多通常降低量化误差但增加码率
+
+## 模拟调制简记
+- AM改变振幅、FM改变瞬时频率、PM改变相位
+- 无线电通信将基带音频调制到射频载波便于辐射/多路共存
+- <img src="/images/408-mind-maps/cn-0082.svg" alt="模拟数据 → 模拟信号：把声音加载到高频载波上传输（如广播）" width="640" height="220">
+
+## 章节导航
+- [上一节：2.8 ASK、FSK、PSK与QAM调制](/docs/408/mind-maps/computer-networks/02-8-digital-modulation)
+- [第二章总览](/docs/408/mind-maps/computer-networks/02-physical-layer)
+- [下一节：2.10 电路、报文与分组交换（跨章复习）](/docs/408/mind-maps/computer-networks/02-10-switching)
+
+````

@@ -1,0 +1,47 @@
+---
+title: "3.16 OPT 与 FIFO：缺页和 Belady 异常"
+description: "最优置换、先进先出、缺页次数与页框数、Belady异常示例核算。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.16 OPT 与 FIFO：未来知识对比进入内存的时间
+
+## 最佳置换 OPT
+- **OPT（Optimal）**：发生缺页且无空闲页框时，淘汰未来最久不会被再访问的页
+- 能在给定引用串和相同初始条件下获得最小缺页数，用作理论评价基准
+- 真实执行无法预知未来全部页引用，通常无法直接在线实现
+- 遇到“未来永不再用”的页，优先将它置换出去
+
+## FIFO（先进先出）
+- **FIFO**：淘汰最早**装入内存**的页，与最近是否访问过无关
+- 用到队列；页被再次访问但未缺页时，其入队顺序通常不更新
+- 实现容易，却可能淘汰高频使用但“很早装入”的页
+- 与**连续分配首次适应 FF**是完全不同的算法，别因中文“先”字混淆
+
+## Belady 异常：必须会背的反例
+- 引用串：$1,2,3,4,1,2,5,1,2,3,4,5$
+- 初始页框全为空，FIFO
+  - 3个页框：**9次缺页**（初次调入3页 + 6次替换）
+  - 4个页框：**10次缺页**（初次调入4页 + 6次替换）
+- 增加页框数，缺页反而变多：**Belady 异常**
+- <img src="/images/408-mind-maps/os-03-fifo-belady-clean.svg" alt="FIFO在三个和四个页框下的Belady异常逐次对照" width="930" height="483">
+
+## 缺页/置换区别
+- 缺页：访问的页不在驻留集，若有空闲页框也会发生缺页
+- 置换：在无可用空闲页框且需装入时淘汰某个驻留页
+- 对初始空页框数为 $f$ 的模拟：置换次数不一定等于 $缺页次数-f$，**若访问过的不同页不足 f 个**要另算
+- [上一节：页面分配策略](/docs/408/mind-maps/operating-systems/03-15-page-allocation)
+- [下一节：LRU](/docs/408/mind-maps/operating-systems/03-17-lru)
+````

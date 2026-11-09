@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="570" viewBox="0 0 940 570" role="img" aria-label="二叉与三叉最佳归并树的权值与WPL示例" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="16">
+<title>最佳归并树：二路与三路及带权路径长度</title>
+<rect x="1" y="1" width="938" height="568" rx="17" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="34" y="44" font-size="25" font-weight="700" fill="#0f172a">最佳归并树 · 可复算示例</text>
+<line x1="470" x2="470" y1="78" y2="530" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="7 6"/>
+
+<text x="250" y="95" font-size="20" fill="#0f172a" text-anchor="middle" font-weight="700">二路最佳归并：2、3、6、9</text>
+<line x1="235" y1="145" x2="175" y2="220" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="235" y1="145" x2="345" y2="220" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="175" y1="220" x2="115" y2="312" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="175" y1="220" x2="237" y2="312" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="115" y1="312" x2="70" y2="400" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="115" y1="312" x2="158" y2="400" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="235" cy="145" r="25" fill="#fef3c7" stroke="#92400e" stroke-width="2.3"/>
+<text x="235" y="151" font-size="19" fill="#92400e" text-anchor="middle" font-weight="700">20</text>
+<circle cx="175" cy="220" r="25" fill="#dbeafe" stroke="#1e40af" stroke-width="2.3"/>
+<text x="175" y="226" font-size="19" fill="#1e40af" text-anchor="middle" font-weight="700">11</text>
+<circle cx="345" cy="220" r="25" fill="#e2f7e9" stroke="#166534" stroke-width="2.3"/>
+<text x="345" y="226" font-size="19" fill="#166534" text-anchor="middle" font-weight="700">9</text>
+<circle cx="115" cy="312" r="25" fill="#dbeafe" stroke="#1e40af" stroke-width="2.3"/>
+<text x="115" y="318" font-size="19" fill="#1e40af" text-anchor="middle" font-weight="700">5</text>
+<circle cx="237" cy="312" r="25" fill="#e2f7e9" stroke="#166534" stroke-width="2.3"/>
+<text x="237" y="318" font-size="19" fill="#166534" text-anchor="middle" font-weight="700">6</text>
+<circle cx="70" cy="400" r="25" fill="#e2f7e9" stroke="#166534" stroke-width="2.3"/>
+<text x="70" y="406" font-size="19" fill="#166534" text-anchor="middle" font-weight="700">2</text>
+<circle cx="158" cy="400" r="25" fill="#e2f7e9" stroke="#166534" stroke-width="2.3"/>
+<text x="158" y="406" font-size="19" fill="#166534" text-anchor="middle" font-weight="700">3</text>
+<text x="235" y="473" font-size="19" fill="#1d4ed8" text-anchor="middle" font-weight="700">WPL = 5 + 11 + 20 = 36</text>
+<text x="235" y="501" font-size="15" fill="#475569" text-anchor="middle" font-weight="400">读写约 2 × WPL = 72（按记录计）</text>
+<text x="700" y="95" font-size="20" fill="#0f172a" text-anchor="middle" font-weight="700">三路最佳归并：补 1 个虚段</text>
+<line x1="701" y1="145" x2="579" y2="260" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="701" y1="145" x2="704" y2="260" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="701" y1="145" x2="823" y2="260" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="579" y1="260" x2="522" y2="400" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="579" y1="260" x2="583" y2="400" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="579" y1="260" x2="643" y2="400" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="701" cy="145" r="25" fill="#fef3c7" stroke="#92400e" stroke-width="2.3"/>
+<text x="701" y="151" font-size="19" fill="#92400e" text-anchor="middle" font-weight="700">20</text>
+<circle cx="579" cy="260" r="25" fill="#dbeafe" stroke="#1e40af" stroke-width="2.3"/>
+<text x="579" y="266" font-size="19" fill="#1e40af" text-anchor="middle" font-weight="700">5</text>
+<circle cx="704" cy="260" r="25" fill="#e2f7e9" stroke="#166534" stroke-width="2.3"/>
+<text x="704" y="266" font-size="19" fill="#166534" text-anchor="middle" font-weight="700">6</text>
+<circle cx="823" cy="260" r="25" fill="#e2f7e9" stroke="#166534" stroke-width="2.3"/>
+<text x="823" y="266" font-size="19" fill="#166534" text-anchor="middle" font-weight="700">9</text>
+<circle cx="522" cy="400" r="25" fill="#f1f5f9" stroke="#64748b" stroke-width="2.3"/>
+<text x="522" y="406" font-size="19" fill="#64748b" text-anchor="middle" font-weight="700">0</text>
+<circle cx="583" cy="400" r="25" fill="#e2f7e9" stroke="#166534" stroke-width="2.3"/>
+<text x="583" y="406" font-size="19" fill="#166534" text-anchor="middle" font-weight="700">2</text>
+<circle cx="643" cy="400" r="25" fill="#e2f7e9" stroke="#166534" stroke-width="2.3"/>
+<text x="643" y="406" font-size="19" fill="#166534" text-anchor="middle" font-weight="700">3</text>
+<text x="700" y="473" font-size="19" fill="#1d4ed8" text-anchor="middle" font-weight="700">WPL = 5 + 20 = 25</text>
+<text x="700" y="501" font-size="15" fill="#475569" text-anchor="middle" font-weight="400">读写约 2 × WPL = 50（按记录计）</text>
+<text x="470" y="543" font-size="13" fill="#64748b" text-anchor="middle" font-weight="400">说明：仅统计合并过程的完整读写；不含初始段生成与缓存优化</text>
+</svg>

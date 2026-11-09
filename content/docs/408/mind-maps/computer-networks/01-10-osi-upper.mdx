@@ -1,0 +1,44 @@
+---
+title: "1.10 OSI上三层：会话、表示、应用"
+description: "会话同步、语义/编码、HTTP/DNS/SMTP、模型边界。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 1.10 OSI上三层：会话、表示、应用
+
+## L5 会话层（OSI参考模型）
+- 管理逻辑会话、对话控制、同步点/检查点等抽象功能
+- 适合理解“通信双方怎样组织会话状态”，但TCP/IP互联网并没有独立固定会话层
+
+## L6 表示层（OSI参考模型）
+- 统一数据表示、字符编码、序列化、压缩、加密等抽象功能
+- **ASCII/UTF-8/JPEG是编码/格式示例**，不能无条件等同于表示层网络协议
+- 具体实现中TLS、应用程序库等可承担部分表示功能，不必一一映射到OSI层
+
+## L7 应用层（OSI参考模型）
+- 为网络应用提供通信服务与应用协议语义；不等于全部“用户能点击的程序”
+- 常见协议：**HTTP/HTTPS、FTP、SMTP、DNS**（以实际TCP/IP协议栈为主）
+- 区分应用协议、应用程序、应用数据格式；三者不是同一抽象层次
+
+## 上三层与现实TCP/IP
+- 实务中**会话 + 表示 + 应用**的职责大体融合到TCP/IP应用层及其库/协议
+- “会话”不同于TCP建立连接，“表示转换”不同于物理层线路编码
+- **OSI是参考模型**；对具体协议分层进行严谨描述时应注明模型口径
+
+## 学习导航
+- [上一节：1.9 OSI底四层：物理、链路、网络、传输](/docs/408/mind-maps/computer-networks/01-9-osi-lower)
+- [返回本章总览](/docs/408/mind-maps/computer-networks/01-architecture)
+- [下一节：1.11 OSI七层、TCP/IP四层与教学五层](/docs/408/mind-maps/computer-networks/01-11-models)
+````

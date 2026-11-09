@@ -1,0 +1,51 @@
+---
+title: "6.8 FTP主动PORT与被动PASV模式"
+description: "408计算机网络·应用层第六章·FTP主动PORT与被动PASV模式；高质量双侧Markmap分节导图。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.8 FTP主动PORT与被动PASV模式
+
+## 共同点
+- 控制连接：客户端主动连接服务器TCP 21，发送`PORT`或`PASV`/`EPSV`等协商数据路径
+- 数据连接：使用**第二条TCP连接**，承载数据；传送完成后通常关闭
+- 主动/被动讲的是**哪一端主动建立数据TCP连接**，不是谁发起控制连接
+
+## 主动模式 PORT
+- 客户端通知服务器本机准备好的数据监听地址/端口
+- 传统模型由服务器**源端口20**主动连接客户端指定的数据端口
+- 因需要服务端向客户端回连，受客户端防火墙、NAT等影响明显
+
+## 被动模式 PASV
+- 客户端请求服务端开放一个用于数据传送的监听端口
+- 服务器返回协商出的地址/端口，客户端再主动建立数据TCP连接
+- 服务器数据端口**不是固定20**，也没有全互联网统一规定必须在1024～65535中特定子段
+- `EPSV`扩展被动模式，适用于IPv6等场景
+
+## 对比图
+- <img src="/images/408-mind-maps/cn-06-ftp-modes-clean.svg" alt="FTP PORT主动模式和PASV被动模式数据连接方向" width="1120" height="427">
+- 口诀：**主动=服务器回连客户端；被动=客户端连服务器数据端口**
+
+## 易错题
+- FTP一定两个TCP连接始终同时存在 → **错：控制连接持续，数据连接按传送任务建立/释放**
+- 被动模式服务器数据端口一定为20 → **错：PASV协商端口**
+- “主动/被动决定文件由哪方发送” → **错：决定TCP连接发起方，不决定上传/下载方向**
+
+## 分节导航
+- [上一节：6.7 FTP服务、控制/数据双连接与命令](/docs/408/mind-maps/computer-networks/06-7-ftp-basics)
+- [下一节：6.9 电子邮件系统组成与完整收发链](/docs/408/mind-maps/computer-networks/06-9-mail-system)
+- [应用层总览](/docs/408/mind-maps/computer-networks/06-application-layer)
+
+````

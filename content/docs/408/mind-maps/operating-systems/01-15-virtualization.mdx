@@ -1,0 +1,54 @@
+---
+title: "1.15 虚拟机、Hypervisor 与容器"
+description: "Type 1/2、客户机/宿主机、敏感指令、容器隔离"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 1.15 虚拟机与容器
+
+## 虚拟机的抽象
+- **虚拟机 VM**：为客户系统提供CPU、内存、设备等虚拟硬件视图，可运行自己的客户操作系统
+- **VMM/Hypervisor**：管理客户机、分配资源、拦截/协调敏感操作并保持隔离
+- 现代硬件虚拟化可以让客户机在受控的**客户特权模式**运行，不能笼统称“客户OS全部只能在用户态执行”
+
+## 第一类与第二类Hypervisor
+- **Type 1（裸机型）**：虚拟机管理层直接运行在硬件之上（可带管理域/特权分区），如Xen、ESXi等架构
+- **Type 2（宿主型）**：VMM作为宿主OS上的软件运行，由宿主OS提供基础设备/资源服务，典型如VirtualBox hosted模式
+- **Type 1并非没有管理OS组件**；Type 2也可能利用底层CPU虚拟化硬件能力
+- 相同产品不同工作模式、平台实现可能不同，**不要只凭软件品牌硬套分类**
+
+- <img src="/images/408-mind-maps/os-0034.svg" alt="第一类虚拟机管理程序：直接运行在硬件上，如 Xen、Hyper-V、vSphere" width="560" height="300">
+
+- <img src="/images/408-mind-maps/os-0159.svg" alt="第二类虚拟机管理程序：运行在宿主操作系统之上，如 VMware Workstation" width="480" height="380">
+
+## 系统级虚拟化与容器
+- VM：客户OS通常有各自内核；平台为其呈现虚拟硬件
+- **容器**：通常共享宿主**内核**，通过命名空间、控制组等机制隔离进程和资源
+- 容器启动通常更轻量，但隔离安全依赖内核机制与运行时配置
+- **虚拟内存**、**虚拟机**、**容器**都属于抽象/隔离技术，不能说三者完全相同
+- <img src="/images/408-mind-maps/os-01-virtualization-clean.svg" alt="裸机型Hypervisor、宿主型Hypervisor和容器的运行栈" width="840" height="378">
+
+## 常见误区
+- “虚拟机绝不能执行任何敏感指令”：错误；它们由硬件辅助机制或VMM受控执行/模拟
+- “Type 1的客户OS都独占物理CPU”：错误，VMM仍负责调度和映射
+- “容器与VM一样自带独立的内核”：一般错误
+- “Hypervisor一定比OS有更高的所有权限”：需要结合硬件特权层次与具体VMM架构回答
+
+## 导航
+- [上一节：1.14 UEFI/GPT 引导与安全启动](/docs/408/mind-maps/operating-systems/01-14-uefi-gpt)
+- [下一节：1.16 考研综合辨析与自测](/docs/408/mind-maps/operating-systems/01-16-exam-synthesis)
+- [返回本章导览](/docs/408/mind-maps/operating-systems/01-overview)
+
+````

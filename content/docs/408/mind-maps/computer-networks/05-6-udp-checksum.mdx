@@ -1,0 +1,50 @@
+---
+title: "5.6 UDP伪首部与反码校验和算例"
+description: "408 计算机网络第五章·UDP伪首部与反码校验和算例；分节双侧Markmap，含核心概念、考点计算与常见误区。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.6 UDP伪首部与反码校验和算例
+
+## IPv4 UDP伪首部
+- <img src="/images/408-mind-maps/cn-0091.svg" alt="UDP校验和IPv4伪首部" width="780" height="330">
+- 伪首部仅用于校验和计算，**不是真正在IP载荷中多传12字节**
+- IPv4伪首部 = 源IP(4B) + 目的IP(4B) + 0(1B) + 协议号17(1B) + UDP长度(2B)
+- 检验范围还包括UDP首部、UDP数据；数据不足偶数字节需在**校验计算**时填充零字节
+
+## 16位反码运算步骤
+- 发送端将UDP校验和字段暂置0，把伪首部+UDP报文按16位分组
+- 每次相加若有最高位进位，则**回卷到最低16位继续加**（end-around carry）
+- 取总和16位的逐位反码，放入UDP校验和字段
+- 接收端把携带校验和的所有16位字与伪首部一起累加，校验通过时得到全1（`0xFFFF`）
+
+## 原题数据的复核
+- 源IP`153.19.8.104`，目的IP`171.3.14.11`，源端口1087，目的端口13
+- UDP长度15B → 有效数据7B：十六进制`54 45 53 54 49 4E 47`（`TESTING`）
+- 校验分组依次：`9913 0868 AB03 0E0B 0011 000F 043F 000D 000F 0000 5445 5354 494E 4700`
+- 带回卷进位的和：`0x96ED`；逐位取反：**`0x6912`**
+- 最后字节的填充0**不随UDP数据发送**；此处`0x6912`经算式独立复核
+
+## 与其他校验方法区分
+- UDP/TCP校验和：16位反码和；用于端到端报文差错检测
+- 以太网FCS：常用CRC-32；不是反码求和
+- IPv4首部校验和只含IPv4首部字段；IPv6基本首部没有首部校验和
+
+## 章节导航
+- [上一节：5.5 UDP报文格式、长度与IP层边界](/docs/408/mind-maps/computer-networks/05-5-udp-header)
+- [下一节：5.7 TCP可靠字节流、缓冲与连接抽象](/docs/408/mind-maps/computer-networks/05-7-tcp-stream)
+- [计算机网络总览](/docs/408/mind-maps/computer-networks)
+
+````

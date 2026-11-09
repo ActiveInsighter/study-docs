@@ -1,0 +1,44 @@
+---
+title: "5.3 复用分用、报文传递与UDP/TCP选择"
+description: "408 计算机网络第五章·复用分用、报文传递与UDP/TCP选择；分节双侧Markmap，含核心概念、考点计算与常见误区。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.3 复用分用、报文传递与UDP/TCP选择
+
+## 三层封装路径
+- 应用消息 → UDP用户数据报 / TCP报文段 → IP数据报 → 链路帧
+- 传输层收到IP层送来的负载时，先依据IP协议号识别TCP（6）或UDP（17），再由端口与套接字规则分用
+- 源端口便于回复；目的端口指明目标通信端点，二者**都占16位**
+
+## UDP和TCP怎么选
+- UDP：省去连接握手，按报文边界交付；无内建重传、按序、拥塞控制
+- TCP：建立连接，提供有序、可靠的双向字节流；**不存在应用报文边界**
+- DNS传统查询通常UDP，超长响应、区域传送可使用TCP；DHCP使用UDP
+- 实时应用常选UDP，是为让应用自行权衡超时/重传，但**UDP也受拥塞、丢包和队列时延影响**
+- 可靠的应用协议也能在UDP之上实现：例如QUIC的可靠性和拥塞控制位于UDP上层
+
+## 复用分用的考法
+- 同一主机多TCP连接可共享本地端口：必须结合对端二元组判别连接
+- 两个进程同端口发送不同目的IP，不意味着报文会被送到同一个远程应用
+- UDP常按本地IP/端口及绑定方式分用；已连接UDP套接字还可关联远端，具体取决于实现
+- **协议选择**不决定底层IP一定可靠，更不意味着传输层能“无损穿越”路由器
+
+## 章节导航
+- [上一节：5.2 端口号、套接字与连接四元组](/docs/408/mind-maps/computer-networks/05-2-ports)
+- [下一节：5.4 UDP的无连接、面向报文与典型场景](/docs/408/mind-maps/computer-networks/05-4-udp-features)
+- [计算机网络总览](/docs/408/mind-maps/computer-networks)
+
+````

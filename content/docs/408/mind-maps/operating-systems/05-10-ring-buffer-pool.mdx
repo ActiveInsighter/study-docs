@@ -1,0 +1,49 @@
+---
+title: "5.10 循环缓冲与系统缓冲池"
+description: "in/out指针、三队列、四种缓冲区角色。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.10 循环缓冲与系统缓冲池
+
+## 循环缓冲
+- 多个等长缓冲槽循环复用，`in`/`out` 分别控制写入与读取位置
+- 生产者写满后推进 `in`；消费者读完后推进 `out`
+- 空/满判定需要额外状态、计数或“牺牲一格”；只有指针相等无法区分全部情况
+- <img src="/images/408-mind-maps/os-0087.svg" alt="循环缓冲队列写入和读出指针" width="600" height="509">
+
+## 缓冲池：三队列
+- **空缓冲队列**：可供输入或输出流程取用
+- **输入队列**：装有设备输入、等待计算进程处理
+- **输出队列**：计算进程生成、等待设备实际输出
+- <img src="/images/408-mind-maps/os-0041.svg" alt="缓冲池的空队列、输入队列和输出队列" width="760" height="413">
+
+## 四种工作缓冲角色
+- `hin`：设备取得空缓冲、收容输入的数据
+- `sin`：计算进程从输入队列取缓冲、处理输入数据
+- `hout`：计算进程取得空缓冲、收容待输出数据
+- `sout`：设备输出进程从输出队列取缓冲并消耗
+- 四个名称是**使用角色**，不表示系统永远固定预留四个物理缓冲
+
+## 完整的归还循环
+- 输入：空缓冲 → `hin` → 输入队列 → `sin` → 空缓冲
+- 输出：空缓冲 → `hout` → 输出队列 → `sout` → 空缓冲
+- 多生产者/消费者访问时需互斥和计数同步，不能只递增指针
+- [关联：生产者消费者与PV操作](/docs/408/mind-maps/operating-systems/02-15-producer-consumer)
+
+## 学习导航
+- [上一节：5.9 双缓冲与两级流水](/docs/408/mind-maps/operating-systems/05-9-double-buffer)
+- [下一节：5.11 设备分配的数据结构DCT/COCT/CHCT/SDT](/docs/408/mind-maps/operating-systems/05-11-device-tables)
+````

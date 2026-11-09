@@ -1,0 +1,50 @@
+---
+title: "3.11 ALOHA、时隙ALOHA与CSMA"
+description: "易碰撞时间窗、吞吐率、1坚持/非坚持/p坚持"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.11 ALOHA、时隙ALOHA与CSMA
+
+## 纯ALOHA（随到随发）
+- 有帧立即发送，**不先侦听**；碰撞后在随机延迟后重发
+- 设每帧发送时间为`T`，易碰撞窗口长度为`2T`
+- 经典泊松流量模型下归一化吞吐量：$S=Ge^{-2G}$
+- $G=\tfrac12$时最大 $S_{\max}=\frac1{2e}\approx0.184$
+
+## 时隙ALOHA
+- 仅能在统一时隙**边界**开始发帧；一帧占用一个时隙
+- 易碰撞窗口`T`，归一化吞吐量：$S=Ge^{-G}$
+- $G=1$时最大 $S_{\max}=\frac1e\approx0.368$
+- **时隙ALOHA最大效率约为纯ALOHA的2倍**，需同步时间与固定帧时隙
+
+## 载波侦听多路访问CSMA
+- **先听再发**：发送前检测信道是否空闲，但远端信号的传播延迟仍会导致碰撞
+- **1-坚持**：监听到空闲就立刻发；忙则持续监听，冲突可能集中
+- **非坚持**：忙则随机等待一段时间再监听，减少持续争抢但增加等待
+- **p-坚持**：适用于时隙化假设；空闲时以`p`概率发送，否则推迟到后续时隙
+- 以上**CSMA本身不意味着发送期间能检测碰撞**，与CSMA/CD区分
+
+## 重点易错
+- `G`是每帧时间上的**发送尝试负载**（含重传尝试），不是成功交付率
+- 公式是**特定理想统计模型**的结果，不应当作任何局域网的实际效率
+- 通信双方因传播时延可能同时认为信道空闲，导致碰撞
+
+## 章节导航
+- [上一节：3.10 信道划分与复用：FDM、TDM、WDM、CDMA](/docs/408/mind-maps/computer-networks/03-10-multiplex)
+- [第三章总览](/docs/408/mind-maps/computer-networks/03-data-link-layer)
+- [下一节：3.12 CSMA/CD、最短帧与指数退避](/docs/408/mind-maps/computer-networks/03-12-csmacd)
+
+````

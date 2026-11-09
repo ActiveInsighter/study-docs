@@ -1,159 +1,73 @@
 ---
-title: "第四章 串"
-description: "数据结构 · 第四章 串：考频：中、定义、课本要求的基本操作函数、存储结构、字符串的模式匹配算法、KMP算法 等。"
+title: "第四章 串｜分节导览"
+description: "八节梳理串的概念与抽象操作、存储、朴素匹配、前后缀、KMP next、KMP 完整匹配、nextval 与题型。"
 layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
 ---
 
 ````mindmap
-# 第四章 串
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
 
-[查看关联主题：第一章 绪论](/docs/408/mind-maps/data-structures/01-introduction)
+# 第四章 串 · 八节分层导览
 
-## 考频：中
+## 4.1 串的基本概念
+- [串、空串、子串与子序列](/docs/408/mind-maps/data-structures/04-1-concepts)
+  - 串是**有限字符序列**，是特殊线性表
+  - 子串连续；子序列不要求连续
+  - 子串位置、字符位序常采用 **1 基**
+- 考试：先统一 `S[1..n]` 或 `S[0..n-1]` 的约定
 
-- 15、19
+## 4.2 基本操作与串 ADT
+- [赋值、复制、比较、连接、求子串、定位](/docs/408/mind-maps/data-structures/04-2-adt)
+  - `StrAssign / StrCopy / StrEmpty / StrLength`
+  - `Concat / SubString / Index / StrCompare`
+  - 清空与销毁的**资源管理含义不同**
+- 重点：`Index` 无匹配按教材可返回 0
 
-## 定义
+## 4.3 串的存储结构
+- [顺序串、动态分配与块链串](/docs/408/mind-maps/data-structures/04-3-storage)
+  - 定长数组、堆分配、`'\0'` 结束符
+  - 单字符链表与多字符结点块链
+  - 长度单独记录 vs 查找结尾
+- <img src="/images/408-mind-maps/ds-0202.svg" alt="四种串的顺序存储方式" width="500" height="263">
 
-- 串
-  - 就是string
-- 主串 &amp; 子串
-  - 子串是主串中任意连续字符组成的子序
-- 主串 &amp; 模式串
-  - KMP中的概念
-- 两种实现
-  - std::string s
-    - s.at(i)
-      - 功能上比较类似vector&lt;char&gt;
-  - char \* s
-    - s\[i\]
+## 4.4 朴素模式匹配（BF）
+- [主串与模式串的逐位匹配](/docs/408/mind-maps/data-structures/04-4-naive)
+  - 失配后：主串起点右移一位、模式串回到首位
+  - 最坏时间 **O(nm)**；成功时返回第一次匹配位置
+  - 空模式串及未找到的处理需声明约定
 
-## 课本要求的基本操作函数
+## 4.5 next 数组从何而来
+- [真前后缀、border 与 next 构造](/docs/408/mind-maps/data-structures/04-5-prefix-next)
+  - 相等且**非完整串自身**的前缀与后缀
+  - `next[1]=0`，`next[j]` 取决于 `P[1..j−1]`
+  - 辨析 `next`、0 基 `lps`：并非同一个数组
 
-- StrAssign(&amp;T, chars): 赋值操作。把串T赋值为chars。
-- StrCopy(&amp;T, S): 复制操作。由串S复制得到串T。
-- StrEmpty(S): 判空操作。若S为空串，则返回TRUE，否则返回FALSE。
-- StrLength(S): 求串长。返回串S的元素个数。
-- ClearString(&amp;S): 清空操作。将S清为空串。
-- DestroyString(&amp;S): 销毁串。将串S销毁 (回收存储空间) 。
-- Concat(&amp;T, S1, S2): 串联接。用T返回由S1和S2联接而成的新串。
-- SubString(&amp;Sub, S, pos, len): 求子串。用Sub返回串S的第pos个字符起长度为len的子串。
-- Index(S, T): 定位操作。若主串S中存在与串T值相同的子串，则返回它在主串S中第一次出现的位置:否则函数值为0。
-- StrCompare(S, T): 比较操作。若S&gt;T，则返回值&gt;0: 若S=T，则返回值=0: 若S&lt;T，则返回值&lt;0。
+## 4.6 KMP 完整匹配
+- [匹配指针与失配状态转移](/docs/408/mind-maps/data-structures/04-6-kmp)
+  - 失配时主串指针 i **不回退**
+  - 模式串指针 j ← `next[j]`
+  - 匹配总时间 **O(n+m)**，含预处理
+- <img src="/images/408-mind-maps/ds-04-kmp-fallback.svg" alt="具体主串中 KMP 失配后保持主串指针不变并移动模式串" width="620" height="269">
 
-## 存储结构
+## 4.7 nextval 优化
+- [连续重复比较消除与下标版本](/docs/408/mind-maps/data-structures/04-7-nextval)
+  - 若 `P[j]==P[next[j]]`，继续沿失配链跳转
+  - 1 基 `nextval[1]=0`；`nextval` 不改变最终答案
+  - 混用 `next`、`nextval`、`lps` 是高频错误
 
-- 顺序存储
-  - 静态数组实现 （定长顺序存储）
-    - char ch\[MAX\_SIZE\]
-    - 配图
-
-      ```cpp
-      #define MAXLEN 255  // 预定义最大串长为 255
-      typedef struct {
-          char ch[MAXLEN];  // 每个分量存储一个字符
-          int length;      // 串的实际长度
-      } SString;
-      ```
-
-  - 动态数组实现 （堆分配存储）
-    - char \* ch
-  - 四种顺序存储方案
-    - 默认使用最后一种方式存储（教材上的） <img src="/images/408-mind-maps/ds-0202.svg" alt="默认使用最后一种方式存储（教材上的）" width="300" height="158">
-
-- 链式存储
-  - <img src="/images/408-mind-maps/ds-0014.svg" alt="链式存储" width="300" height="158">
-
-## 字符串的模式匹配算法
-
-- 主串 N
-  - 模式串 M
-- 朴素模式匹配算法
-  - 暴力解决问题
-  - 时间复杂度：O(NM)
-- KMP
-  - 可以避免暴力重复匹配 O(N+M)
-
-## KMP算法
-
-- 使用next数组来进行模式串指针的回溯 <img src="/images/408-mind-maps/ds-0057.svg" alt="使用next数组来进行模式串指针的回溯" width="300" height="119">
-
-- KMP的next数组算法：
-  - 视频：KMP 算法（易懂版）· 天勤考研数据结构
-
-    [参考链接](<https://www.bilibili.com/video/BV1jb411V78H?from=search&seid=1484468344086384340&spm_id_from=333.337.0.0>)
-
-    [视频链接](<https://www.bilibili.com/video/BV1jb411V78H?from=search&seid=1484468344086384340&spm_id_from=333.337.0.0>)
-
-- KMP的nextval算法：
-  - 视频：四分钟搞定 nextval 数组求值
-
-    [参考链接](<https://www.bilibili.com/video/BV1uJ411s7br?from=search&seid=1484468344086384340&spm_id_from=333.337.0.0>)
-
-    [视频链接](<https://www.bilibili.com/video/BV1uJ411s7br?from=search&seid=1484468344086384340&spm_id_from=333.337.0.0 >)
-
-## KMP 可能的考法
-
-- KMP求next数组
-  - next\[1\]无脑写0
-  - next\[2\]无脑写1
-  - 考点：手写next数组 (不需要优化，左边只要 对得上就可以）
-
-    - 练习：1. google
-      - 011121
-    - 练习：2. ababaa
-      - 011234
-    - 练习：3. aaaab
-      - 01234
-    - 做法：建议使用21年的做法，去看最长相同前后缀子串长度+1
-  - 没考过：next数组的代码 /nextval数组
-
-    - 代码实现next\[\]
-
-      ```cpp
-      // 求模式串 T 的 next 数组，串下标从 1 开始
-      void get_next(SString T, int next[]) {
-          int i = 1, j = 0;
-          next[1] = 0;
-          while (i < T.length) {
-              if (j == 0 || T.ch[i] == T.ch[j]) {
-                  ++i;
-                  ++j;
-                  // 匹配时将相等前后缀的长度增加 1
-                  next[i] = j;
-              } else {
-                  // 否则令 j = next[j]，继续比较
-                  j = next[j];
-              }
-          }
-      }
-      ```
-
-      > 整理说明：原截图循环条件写为 L.length，但参数及串名为 T；整理为 T.length。原截图将“p_i=p_j”作为递推文字说明，保留其说明用途。
-
-    - 如何求nextval数组：
-      - 算出next数组，从左到右扫描next数组，去消除冗余项
-      - 配图
-
-        |序号 j|1|2|3|4|5|
-        |---|---|---|---|---|---|
-        |模式串|a|a|a|a|b|
-        |next[j]|0|1|2|3|4|
-
-      - 代码
-
-        ```cpp
-        // nextval 数组：先算出 next 数组，再令 nextval[1] = 0
-        nextval[1] = 0;
-        for (int j = 2; j <= T.length; j++) {
-            if (T.ch[next[j]] == T.ch[j])
-                nextval[j] = nextval[next[j]];
-            else
-                nextval[j] = next[j];
-        }
-        ```
-
-        > 整理说明：原截图使用 j<T.length；结合上下文的 1 起始串下标，改为 j<=T.length，避免漏算最后一个 nextval 值。
-
-- KMP计算index：看视频
+## 4.8 综合考法
+- [手算、代码、匹配轨迹与复杂度](/docs/408/mind-maps/data-structures/04-8-exercises)
+  - `google / ababaa / aaaab / abaabc` 的数组值
+  - 位置返回值与首匹配位置计算
+  - 递推代码、各种版本互换、最大比较次数
+- [上一章：栈、队列与数组](/docs/408/mind-maps/data-structures/03-stacks-queues-arrays) · [下一章：树与二叉树](/docs/408/mind-maps/data-structures/05-trees)
 ````

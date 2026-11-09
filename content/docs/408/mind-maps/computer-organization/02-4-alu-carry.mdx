@@ -1,0 +1,77 @@
+---
+title: "2.4 加法器、先行进位与ALU"
+description: "半/全加器、异或与同或、串行加法、行波进位、CLA、组合逻辑和多路选择器。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.4 逻辑电路、加法器与ALU
+
+## 组合逻辑基础
+- 与 $AB$、或 $A+B$、非 $\overline A$、异或 $A\oplus B$、同或 $\overline{A\oplus B}$
+  - 异或：不同为1；同或：相同为1
+  - 德摩根：$\overline{A+B}=\overline A\,\overline B$，$\overline{AB}=\overline A+\overline B$
+- 组合逻辑：当前输出只由当前输入决定；时序逻辑还含状态元件
+  - ALU典型地是组合逻辑，寄存器与控制状态不是ALU本体必然组成
+- <img src="/images/408-mind-maps/co-0322.svg" alt="德摩根定律以及与非或非异或门" width="850" height="415">
+
+- <img src="/images/408-mind-maps/co-0272.svg" alt="异或与同或" width="560" height="350">
+
+## 半加器和全加器
+- 半加器：$S=A\oplus B$，$C=AB$；没有来自低位的输入进位
+- 全加器：输入 $A_i,B_i,C_{i-1}$，输出 $S_i,C_i$
+  - $S_i=A_i\oplus B_i\oplus C_{i-1}$
+  - $C_i=A_iB_i+(A_i\oplus B_i)C_{i-1}$
+  - 全加器与门、异或门、或门的关系按布尔代数可验证
+- <img src="/images/408-mind-maps/co-02-fixed-0282.svg" alt="一位全加器真值表与布尔逻辑" width="850" height="376">
+
+- <img src="/images/408-mind-maps/co-02-fixed-0145.svg" alt="一位全加器的简化逻辑符号" width="460" height="250">
+
+## 串行加法器 vs 并行加法器
+- **串行加法器**：重用同一位全加器，通常需 $n$ 个位周期
+  - <img src="/images/408-mind-maps/co-02-fixed-0036.svg" alt="串行加法器复用全加器" width="750" height="399">
+- **行波进位并行加法器**：用 $n$ 位全加器同时形成各位和，但高位结果需等待低位进位
+  - <img src="/images/408-mind-maps/co-02-fixed-0122.svg" alt="行波进位加法器多级连接" width="850" height="291">
+- 两者不是“硬件并行度和速度完全一样”：串行重用时间与行波组合传播延迟属于不同约束
+
+## 先行进位CLA
+- 定义产生与传播：$G_i=A_iB_i$，$P_i=A_i\oplus B_i$
+  - $C_i=G_i+P_iC_{i-1}$
+  - $C_2=G_2+P_2G_1+P_2P_1C_0$
+  - $C_3=G_3+P_3G_2+P_3P_2G_1+P_3P_2P_1C_0$
+- **原则**：组合逻辑通过展开生成多位进位，缩短逐级等待
+  - 门级扇入、线路与分组层次决定实际复杂度；“理论同时产生”不等于零延迟
+- <img src="/images/408-mind-maps/co-02-fixed-0058.svg" alt="基于产生和传播信号的先行进位关系" width="800" height="295">
+- 多级CLA：小位数组成组，再对组进位做更高一级的并行逻辑
+  - <img src="/images/408-mind-maps/co-02-fixed-0051.svg" alt="十六位CLA组间进位两种组织方式" width="860" height="470">
+
+- <img src="/images/408-mind-maps/co-02-fixed-0257.svg" alt="四位CLA先行进位电路" width="760" height="320">
+
+- <img src="/images/408-mind-maps/co-02-fixed-0264.svg" alt="四位全先行进位加法器" width="800" height="330">
+
+- <img src="/images/408-mind-maps/co-02-fixed-0128.svg" alt="四位先行进位加法器的组合结构" width="460" height="262">
+
+## ALU、MUX与三态门
+- ALU执行加/减、与/或、移位/比较等中被实现的功能，控制信号选择操作
+  - 多路选择器MUX：$k$ 选1时至少需要 $\lceil\log_2k\rceil$ 位选择控制
+  - <img src="/images/408-mind-maps/co-0112.svg" alt="一位ALU包含逻辑和加法选路" width="720" height="360">
+- 三态门输出0、1或高阻Z，**高阻态不是一个第三种布尔值**
+  - <img src="/images/408-mind-maps/co-0016.svg" alt="三态缓冲门输出与使能控制" width="540" height="411">
+- 带标志加法器可以把进位、零/符号/溢出状态输出给PSW
+  - [继续：2.5 运算标志](/docs/408/mind-maps/computer-organization/02-5-arithmetic-flags)
+- <img src="/images/408-mind-maps/co-0299.svg" alt="多路选择器：k 个 n 位输入，m 位控制信号选择一个输出" width="520" height="300">
+
+- <img src="/images/408-mind-maps/co-0223.svg" alt="ALU 的基本结构：加法器 + ALUop 控制信号" width="500" height="340">
+
+````

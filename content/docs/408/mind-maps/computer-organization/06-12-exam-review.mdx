@@ -1,0 +1,67 @@
+---
+title: "6.12 总线计算与概念压轴自测"
+description: "涵盖仲裁、带宽、突发、同步异步和分离式的完整核对"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.12 总线 · 章末题型与易错整理
+
+## 题型一：地址线、带宽与方向
+- Q1：按字节编址，30位地址总线有多少理论地址空间？
+  - A：$2^{30}$B = **1GiB**；若按4B字编址则理论为4GiB
+- Q2：数据总线宽64bit、总线时钟125MHz、SDR，峰值？
+  - A：$8\times125\times10^6=1000$MB/s = **1GB/s**
+- Q3：DB是双向、CB也一定双向吗？
+  - A：数据可依事务方向双向；控制线**集合内**通常含不同方向的信号，单根信号的实际方向按功能与协议确定
+
+## 题型二：突发效率
+- 16位总线，20ns/拍，连续传8个16bit字
+  - 非突发：每字1拍地址+1拍数据，$T=16\times20=320$ns
+  - 突发：1拍首地址+8拍数据，$T=9\times20=180$ns
+  - 两种模型均明确假设**无等待、无重叠**
+  - 有效载荷为16B → 50MB/s和约88.89MB/s
+- 必须写清：**一次突发不等于一次时钟周期完成8字**
+
+## 题型三：仲裁辨析
+- 菊花链优先级由设备在允许信号链上的位置决定
+- 计数器定时查询可通过起始计数值策略实现轮转
+- 独立请求需要较多请求/授权信号线
+- “支持DMA”不意味着每个周期CPU必须停顿；看CPU与DMA如何访问共享资源
+
+## 题型四：时序图判读
+- 同步：公共时钟规定采样时刻
+- 异步：REQ/ACK控制数据交换；全互锁按$REQ\uparrow\to ACK\uparrow\to REQ\downarrow\to ACK\downarrow$
+- 半同步：公共时钟存在，但可插入$T_w$等待周期
+- 分离式：目标处理间隙释放总线，另一事务可插入
+
+## 题型五：真伪对照
+- **错**：“总线时钟周期=CPU时钟周期必相等”
+  - 由不同的时钟域/分频与接口标准决定
+- **错**：“并行总线一定比串行快”
+  - 并行受到时钟偏斜、串扰；高速串行可有多个lane
+- **错**：“地址总线32位，所有机器可访问空间都是4GiB”
+  - 需看编址单位、实际地址映射、硬件实现
+- **错**：“全互锁绝对最快”
+  - 时序确认更多，具体性能看实现
+- **错**：“分离式减少了设备内部处理延迟”
+  - 主要降低等待期间总线被占用的机会成本
+- **错**：“带宽=时钟频率，宽度可忽略”
+  - 至少要计入每拍载荷字节数与每时钟传输次数
+
+## 复习总路径
+- [6.1 基本概念](/docs/408/mind-maps/computer-organization/06-1-core-concepts) → [6.3 组织](/docs/408/mind-maps/computer-organization/06-3-bus-topologies) → [6.4 性能](/docs/408/mind-maps/computer-organization/06-4-performance-metrics)
+- [6.6 事务](/docs/408/mind-maps/computer-organization/06-6-transactions-bursts) → [6.7 仲裁](/docs/408/mind-maps/computer-organization/06-7-bus-arbitration) → [6.8-6.10 时序与握手](/docs/408/mind-maps/computer-organization/06-8-synchronous-timing)
+- [下一章第七章 I/O系统](/docs/408/mind-maps/computer-organization/07-io-system) · [计算机组成原理目录](/docs/408/mind-maps/computer-organization)
+````

@@ -1,0 +1,51 @@
+---
+title: "6.15 HTTP响应结构、状态码与重定向"
+description: "408计算机网络·应用层第六章·HTTP响应结构、状态码与重定向；高质量双侧Markmap分节导图。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.15 HTTP响应结构、状态码与重定向
+
+## 响应报文的组成
+- **状态行**：`HTTP/1.1 200 OK`（版本、三位状态码、可选原因短语）
+- **首部字段**如`Content-Type`、`Content-Length`、`Cache-Control`、`Location`、`Set-Cookie`
+- 空行后可有消息体；例如**204**与对HEAD的响应不带消息体
+- HTTP/2和HTTP/3采用二进制帧，不能沿用HTTP/1.1每条线上消息都以文本状态行表示
+
+- <img src="/images/408-mind-maps/cn-0095.svg" alt="HTTP 响应报文的结构" width="620" height="430">
+
+## 五类状态码
+- **1xx**：信息性，如`100 Continue`
+- **2xx**：成功，如`200 OK`、`201 Created`、`204 No Content`
+- **3xx**：重定向，如`301`永久移动、`302`临时重定向、`304 Not Modified`
+- **4xx**：客户端请求相关错误，如`400`、`401`、`403`、`404`
+- **5xx**：服务器处理失败，如`500`、`502`、`503`
+
+## 302与304怎么区分
+- `302 Found`可带`Location`指向新目标，客户端随后可能再发一次请求
+- `304 Not Modified`通常由条件请求触发，表示缓存的实体表示仍可复用，**不是跳到新URL**
+- 浏览器开发者工具中的302与Location代表应用层重定向，不意味着“连接TCP突然变成另一IP”
+
+## 内容长度
+- `Content-Length`是**消息主体的字节长度**，不是以太网帧/整份HTTP响应总长
+- `Transfer-Encoding: chunked`在HTTP/1.1可用于分块定界；**不要简单把chunked与Content-Length同时当最终定界**
+- `Content-Encoding: gzip`影响编码后的载荷字节数，与IP压缩/帧校验概念不同
+
+## 分节导航
+- [上一节：6.14 HTTP请求行、方法、首部与实体](/docs/408/mind-maps/computer-networks/06-14-http-request)
+- [下一节：6.16 HTTP连接方式、RTT推导与典型算例](/docs/408/mind-maps/computer-networks/06-16-http-rtt)
+- [应用层总览](/docs/408/mind-maps/computer-networks/06-application-layer)
+
+````

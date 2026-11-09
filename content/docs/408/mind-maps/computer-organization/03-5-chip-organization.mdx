@@ -1,0 +1,63 @@
+---
+title: "3.5 存储芯片、地址与译码接口"
+description: "存储字/编址单位、引脚用途、时序、译码器和片选的可靠计数。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.5 存储芯片如何工作
+
+## 从存储单元到芯片
+- 存储元：可容纳若干bit的电路单元；字线选中一行，位线传送感测信号
+  - “一排电容等于机器字长”**不是普适规律**：阵列内部行宽与外部数据组织可不同
+- 存储芯片标记 `N × b`：N 个可选地址，每个地址一次给出 b bit
+  - `8K × 8`：$2^{13}$ 个地址、8根数据引脚；总容量8 KiB
+  - 使用13位地址就可寻址这颗芯片，不代表整机CPU总线仅13位
+- <img src="/images/408-mind-maps/co-0114.svg" alt="存储芯片片选、地址、数据和读写控制引脚" width="800" height="375">
+
+- <img src="/images/408-mind-maps/co-0044.svg" alt="存储体：一排存储元组成一个存储字，CPU 以存储字为单位读写" width="760" height="250">
+
+- <img src="/images/408-mind-maps/co-0034.svg" alt="存储芯片的基本原理：MAR、译码器、存储矩阵、MDR、控制电路" width="800" height="380">
+
+- <img src="/images/408-mind-maps/co-0258.svg" alt="存储控制器、存储器总线、内存条和 DRAM 芯片之间的连接" width="800" height="300">
+
+- <img src="/images/408-mind-maps/co-0069.svg" alt="主存（存储芯片）的基本组成：存储体、MAR、MDR、译码驱动、读写电路、控制电路" width="720" height="300">
+
+## 信号与时序
+- 地址线 A：选择单元；数据线 D：承载读/写字；CS/CE：选择目标芯片
+  - `CS̅` 或 `/CS` 表示**低电平有效**；电平意义依器件说明书
+  - WE、OE/RD：写使能、输出使能；单独 WE 低表示写，WE 高也未必自动就完成读
+- CPU地址先稳定 → 片选/读写控制满足建立时间 → 数据有效 → 完成读写
+  - DRAM有行/列地址复用和 RAS/CAS，不应把这些控制端机械等价于两个 CS
+  - <img src="/images/408-mind-maps/co-03-bus-timing-clean.svg" alt="地址稳定片选与数据有效的简化读时序" width="900" height="366">
+
+- <img src="/images/408-mind-maps/co-0037.svg" alt="CPU 用 MREQ 控制译码器使能端，从而控制片选信号生效的时间" width="760" height="330">
+
+- <img src="/images/408-mind-maps/co-0066.svg" alt="RAM 的读周期时序：地址有效 → 片选有效 → 数据稳定" width="760" height="300">
+
+## 译码器和片选
+- n→$2^n$ 译码器：选通一个输出；输出是否低有效由电路规格决定
+  - 使用带使能端的 74LS138 可实现3位片选，通常3选8个输出为低有效
+- **线选法**：直接用不同高位地址线做片选，简单但容易出现非连续/重复映射
+  - **译码片选法**：用高位组合解码，形成不重叠、连续的地址区间
+- 每组芯片位扩展时所有组内片选通常共用；数据线接到不同bit位段
+- 地址跨度求法：芯片有 $2^k$ 个地址 → 映射区间有 $2^k$ 个编址单位
+  - 例 `8K×8` 按字节编址，区间 `0x4000–0x5FFF` 恰好8KiB
+- <img src="/images/408-mind-maps/co-0157.svg" alt="3-8 译码器：输出高电平有效与低电平有效" width="760" height="330">
+
+- <img src="/images/408-mind-maps/co-0175.svg" alt="带使能端 EN 的译码器：EN 有效时才译码" width="540" height="330">
+
+- <img src="/images/408-mind-maps/co-0302.svg" alt="74LS138 译码器：三个使能端 G1、G2A、G2B" width="560" height="360">
+
+````

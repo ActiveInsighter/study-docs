@@ -1,0 +1,49 @@
+---
+title: "6.17 HTTP无状态、Cookie、Session与缓存"
+description: "408计算机网络·应用层第六章·HTTP无状态、Cookie、Session与缓存；高质量双侧Markmap分节导图。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.17 HTTP无状态、Cookie、Session与缓存
+
+## HTTP无状态的确切含义
+- HTTP语义本身不要求服务器为连续请求自动记录会话状态
+- 同一TCP连接可承载多个HTTP请求：**传输连接持久与HTTP语义无状态不冲突**
+- 应用可以借助Cookie、Session、令牌或URL参数维护状态
+
+## Cookie往返机制
+- 响应首部示例：`Set-Cookie: sid=abc; Path=/; HttpOnly; Secure`
+- 浏览器为匹配的请求附上`Cookie: sid=abc`，服务端借此关联会话数据
+- Cookie存储在客户端环境；会话核心数据可在服务器存储，也可设计成签名令牌
+- `HttpOnly`限制脚本读取；`Secure`限制HTTPS安全传输；`SameSite`影响跨站发送策略
+
+## 缓存与状态区分
+- `Cache-Control: max-age=60`影响响应复用/新鲜度，不是Cookie生存期
+- 过期可用`If-None-Match`/ETag、`If-Modified-Since`条件请求获得`304`
+- 强制重新验证与完全不缓存不同；`no-cache`通常表示使用前须重新验证
+- 浏览器缓存、CDN缓存、反向代理缓存都可能减少重复请求流量
+
+## 易错点
+- **HTTP无状态**不意味着“绝不能实现登录”
+- `Cookie`不等于TCP序号，也不等于DNS缓存TTL
+- `304`表示已缓存的表示可继续使用，不是服务器又把完整资源发一遍
+- `Cache-Control: no-store`与`no-cache`不可混为一谈
+
+## 分节导航
+- [上一节：6.16 HTTP连接方式、RTT推导与典型算例](/docs/408/mind-maps/computer-networks/06-16-http-rtt)
+- [下一节：6.18 HTTPS、HTTP/2/3与加密边界](/docs/408/mind-maps/computer-networks/06-18-https-versions)
+- [应用层总览](/docs/408/mind-maps/computer-networks/06-application-layer)
+
+````

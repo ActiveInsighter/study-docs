@@ -1,0 +1,71 @@
+---
+title: "2.4 单链表的结点与建立"
+description: "单链表的结点结构、头指针与头结点、头尾插法、遍历与定位。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.4 单链表 · 结构、建表、查找
+
+## 单链表定义
+- 链式存储的线性表：数据结点中保存**数据域 + 指向后继的指针域**
+- 结点地址不要求连续；逻辑次序通过 `next` 构成
+- 最后一个结点 `next == NULL`（普通非循环单链表）
+- 不支持按位随机访问，按位定位通常需从表头逐个遍历
+
+## 数据结构与术语
+- 典型 C 声明：`struct LNode { ElemType data; struct LNode *next; };`
+- `LNode *p`：一个指向结点的指针
+- `LinkList L`：习惯上表示链表的头指针（实际也是结点指针类型）
+- `p->next`：**后继结点的指针值**；`&(p->next)`：**指针成员自身的地址**，两者不能混淆
+- `p == NULL` 与 `p->next == NULL` 不是同一判定
+
+## 带头结点 VS 不带头结点
+- **带头结点**：`L` 指向额外的哨兵结点，不存储第 1 个逻辑数据元素
+  - 空表：`L != NULL && L->next == NULL`
+  - 第 1 个数据结点：`L->next`
+  - 头结点用于统一首元素的插入/删除处理
+- **不带头结点**：`L` 直接指向第 1 个数据结点
+  - 空表：`L == NULL`
+  - 表头增删可能改变 `L`，须通过地址/引用传递
+- **头指针**是变量或指针；**头结点**是可选的实体结点
+
+## 遍历与查找
+- 带头结点遍历：`p = L->next; while (p != NULL) { ...; p = p->next; }`
+- 不带头结点：从 `p = L` 开始
+- 按值查找：逐结点比较；最坏 $\Theta(n)$
+- 按位查找：从头依次计数；最坏 $\Theta(n)$
+- 已给目标结点指针时读取 `data` 是 $\Theta(1)$；**这不是随机访问**
+
+## 头插法建表
+- 每次新结点接到表头之后
+- 带头结点：`s->next = L->next; L->next = s`
+- 原输入次序为 A, B, C → 链中次序为 C, B, A
+- n 次插入 $\Theta(n)$；新结点分配需检查失败
+- 应用：原地逆置单链表的思路类似
+
+## 尾插法建表
+- 使用尾指针 `r` 指向当前最后一个结点
+- 带头结点空表初始化：`L->next = NULL; r = L`
+- 追加：`r->next = s; r = s; s->next = NULL`
+- 保持输入顺序；n 次追加 $\Theta(n)$
+- 若每次都从头重新找尾结点，整体可能退化成 $\Theta(n^2)$
+- 最后记得令尾结点 `next = NULL`
+
+## 图解与误区
+- <img src="/images/408-mind-maps/ds-02-head-sentinel.svg" alt="带头结点单链表与不带头结点单链表对比" width="410" height="141">
+- 头结点不参与逻辑表长；空链表也可以拥有头结点
+- 不是所有链表操作 O(1)，**定位成本要单独算**
+- [下一节：单链表插删](/docs/408/mind-maps/data-structures/02-5-singly-linked-operations)
+````

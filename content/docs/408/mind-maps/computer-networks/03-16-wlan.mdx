@@ -1,0 +1,52 @@
+---
+title: "3.16 无线局域网802.11与帧地址"
+description: "AP BSS ESS、基础设施/自组织、To DS/From DS、四地址帧"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.16 无线局域网802.11与帧地址
+
+## 802.11无线局域网架构
+- **STA**：无线站点；**AP**：接入点
+- **BSS**：基本服务集；基础设施BSS通过AP协调，通常标识以BSSID
+- **SSID**：服务集名称，不等于每个帧中的源MAC地址
+- **ESS**：多个BSS经分配系统DS互联，支持扩展覆盖与移动接入
+- **IBSS**：无基础设施的独立BSS（历史ad hoc模式）
+- <img src="/images/408-mind-maps/cn-0035.svg" alt="两个BSS通过分配系统DS扩展形成ESS" width="770" height="385">
+
+## 802.11帧与以太网帧不同
+- 无线MAC帧可包含**地址1/2/3，以及在特定模式中的地址4**
+- 典型字段还包括帧控制、持续时间/ID、序列控制，格式依帧类别而异
+- **To DS/From DS**位决定无线帧朝向和地址字段语义
+- <img src="/images/408-mind-maps/cn-0096.svg" alt="802.11地址字段和To DS From DS示意" width="800" height="349">
+
+## 地址速记（数据帧常见情形）
+- `ToDS=1, FromDS=0`：STA→AP；地址1=RA/BSSID，地址2=TA/SA，地址3=DA
+- `ToDS=0, FromDS=1`：AP→STA；地址1=RA/DA，地址2=TA/BSSID，地址3=SA
+- `ToDS=0, FromDS=0`：常见IBSS等；地址1=DA，地址2=SA，地址3=BSSID
+- `ToDS=1, FromDS=1`：WDS四地址帧，地址1=RA、地址2=TA、地址3=DA、地址4=SA
+- **RA/TA**是本次无线跃点收发者；**SA/DA**是原始源/最终目的，二者不总相同
+
+## 可靠性与接入
+- 单播数据帧常采用**MAC ACK+重试**，不表示端到端TCP必然存在
+- 竞争接入使用CSMA/CA及随机退避；RTS/CTS可选
+- 802.11具体代际的速率、调制、信道带宽不能用统一数字代表
+
+## 章节导航
+- [上一节：3.15 以太网帧、MAC地址和介质标准](/docs/408/mind-maps/computer-networks/03-15-ethernet)
+- [第三章总览](/docs/408/mind-maps/computer-networks/03-data-link-layer)
+- [下一节：3.17 广域链路与PPP点对点协议](/docs/408/mind-maps/computer-networks/03-17-ppp)
+
+````

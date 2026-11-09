@@ -1,0 +1,79 @@
+---
+title: "3.3 队列与循环队列"
+description: "FIFO、顺序队列假溢出、循环队列三种判空判满方案和操作。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.3 队列 · 顺序存储与循环队列
+
+## 队列的抽象定义
+- **队列 Queue**：只在队尾插入、只在队头删除的线性表
+- **先进先出 FIFO**：最早入队的元素最早出队
+- `EnQueue(Q,x)`：队尾插入
+- `DeQueue(Q,x)`：队头删除并返回
+- `GetHead(Q,x)`：读取队头，不删除
+- 栈是 LIFO、队列是 FIFO，均属于**操作受限的线性表**
+
+## 顺序队列：front 和 rear 约定
+- 采用常见约定：`front` 指向队头元素，`rear` 指向下一可插入位置
+- 初始化：`front=rear=0`
+- 队空：`front==rear`（**不要求二者都为 0**）
+- 入队：`data[rear++]=x`；出队：`x=data[front++]`
+- 不循环的有限数组：`rear==M` 表示当前无法再追加
+  - 即使 `front>0`，数组头部的空位也未复用，称为**假溢出**
+- **不要写** `front == rear == 0`：在 C/C++ 中不是数学链式等号
+- <img src="/images/408-mind-maps/ds-0107.svg" alt="普通顺序队列出入队及假溢出过程" width="480" height="208">
+
+## 循环队列：指针移动
+- 逻辑上把数组末尾与开头连接；物理数组**仍然连续**
+- 取模移动：`rear=(rear+1)%M`、`front=(front+1)%M`
+- `front` 与 `rear` 都在 `[0,M-1]` 内
+- 相对大小**不能唯一判定**是否发生过回绕
+  - `front>rear` 通常说明当前队列跨越数组尾部（无额外空满标志时仍需看模型）
+  - `front<rear` 也可能是在两指针都回绕之后
+- <img src="/images/408-mind-maps/ds-0094.svg" alt="循环队列回绕与入队出队示意" width="480" height="208">
+
+## 方案一：牺牲一个存储单元（最常考）
+- 物理数组槽位 `M` 个；**有效容量只有 `M-1`**
+- 队空：`front==rear`
+- 队满：`(rear+1)%M == front`
+- 入队（非满）：`data[rear]=x; rear=(rear+1)%M`
+- 出队（非空）：`x=data[front]; front=(front+1)%M`
+- 队长：`(rear-front+M)%M`
+- 例：`M=6, front=4, rear=2` → 队长 `4`
+
+## 方案二：独立计数 size
+- 保留全部 `M` 个物理槽位
+- 初始：`front=rear=0; size=0`
+- 队空：`size==0`；队满：`size==M`
+- 入队成功后 `size++`；出队成功后 `size--`
+- 此模型**满与空都可能出现** `front==rear`
+- 任何位置均可通过 `size` 消歧
+
+## 方案三：tag / 最近一次操作
+- 保留全部 `M` 个物理槽位
+- 规定 `tag=1` 代表最近一次改变状态的是**入队**
+- 规定 `tag=0` 代表最近一次改变状态的是**出队**
+- 队空：`front==rear && tag==0`
+- 队满：`front==rear && tag==1`
+- 不相等时不是满也不是空；同样需要遵守队列操作合法性
+
+## 常考计算题解法
+- 第一步：确认指针约定、数组长 M、是否预留空槽
+- 第二步：**每次**出入队后对 M 取模更新相应指针
+- 第三步：按**对应方案**判空、判满、求长度
+- 特别注意：`rear = (rear+1)%M` 是**赋值**；不能误写成 `==`
+- [下一节：链队列与双端队列](/docs/408/mind-maps/data-structures/03-4-linked-deque)
+````

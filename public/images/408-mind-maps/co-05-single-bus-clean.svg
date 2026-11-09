@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 515" width="1060" height="515" role="img" aria-label="CPU内部单总线：单源驱动，多接收端可并行" style="font-family: Noto Sans CJK SC, sans-serif;">
+<title>CPU内部单总线：单源驱动，多接收端可并行</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 1L9 5L0 9" fill="#64748B"/></marker><marker id="arrowblue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 1L9 5L0 9" fill="#2563EB"/></marker></defs>
+<rect width="1060" height="515" rx="18" fill="white" stroke="#CFD8E3" stroke-width="2"/>
+<text x="32" y="46" font-size="24" font-weight="700" fill="#17243A">CPU内部单总线：单源驱动，多接收端可并行</text>
+<rect x="32" y="57" width="62" height="5" rx="2.5" fill="#2563EB"/>
+<rect x="60" y="104" width="165" height="82" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="142.5" y="138.4" text-anchor="middle" fill="#2563EB" font-size="21" font-weight="700">R1</text>
+<text x="142.5" y="161.4" text-anchor="middle" fill="#17243A" font-size="13" font-weight="400">寄存器 / 锁存器</text>
+<line x1="143" y1="190" x2="143" y2="247" stroke="#64748B" stroke-width="2"/>
+<rect x="254" y="104" width="165" height="82" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="336.5" y="138.4" text-anchor="middle" fill="#2563EB" font-size="21" font-weight="700">R2</text>
+<text x="336.5" y="161.4" text-anchor="middle" fill="#17243A" font-size="13" font-weight="400">寄存器 / 锁存器</text>
+<line x1="337" y1="190" x2="337" y2="247" stroke="#64748B" stroke-width="2"/>
+<rect x="448" y="104" width="165" height="82" rx="10" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+<text x="530.5" y="138.4" text-anchor="middle" fill="#B45309" font-size="21" font-weight="700">Y（暂存）</text>
+<text x="530.5" y="161.4" text-anchor="middle" fill="#17243A" font-size="13" font-weight="400">寄存器 / 锁存器</text>
+<line x1="531" y1="190" x2="531" y2="247" stroke="#64748B" stroke-width="2"/>
+<rect x="642" y="104" width="165" height="82" rx="10" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+<text x="724.5" y="138.4" text-anchor="middle" fill="#B45309" font-size="21" font-weight="700">Z（结果）</text>
+<text x="724.5" y="161.4" text-anchor="middle" fill="#17243A" font-size="13" font-weight="400">寄存器 / 锁存器</text>
+<line x1="725" y1="190" x2="725" y2="247" stroke="#64748B" stroke-width="2"/>
+<rect x="836" y="104" width="165" height="82" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="918.5" y="138.4" text-anchor="middle" fill="#2563EB" font-size="21" font-weight="700">R3</text>
+<text x="918.5" y="161.4" text-anchor="middle" fill="#17243A" font-size="13" font-weight="400">寄存器 / 锁存器</text>
+<line x1="919" y1="190" x2="919" y2="247" stroke="#64748B" stroke-width="2"/>
+<rect x="47" y="246" width="974" height="29" rx="7" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+<text x="533" y="266" text-anchor="middle" fill="#2563EB" font-size="16" font-weight="600">CPU内部共享 BUS（同拍只允许一个不同源驱动；可向多个目的广播）</text>
+<rect x="414" y="320" width="235" height="82" rx="10" fill="#D1FAE5" stroke="#0F766E" stroke-width="1.5"/>
+<text x="532" y="357" text-anchor="middle" fill="#0F766E" font-size="24" font-weight="700">ALU</text>
+<text x="532" y="382" text-anchor="middle" fill="#17243A" font-size="15" font-weight="400">一个输入可来自Y</text>
+<line x1="529" y1="277" x2="529" y2="317" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arrowblue)"/>
+<line x1="530" y1="402" x2="722" y2="402" stroke="#64748B" stroke-width="2.5"/>
+<line x1="722" y1="402" x2="722" y2="191" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="40" y="435" width="982" height="54" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+<text x="60" y="458" text-anchor="start" fill="#17243A" font-size="17" font-weight="600">教学运算顺序：Y ← R1；Z ← Y + R2；R3 ← Z</text>
+<text x="60" y="480" text-anchor="start" fill="#64748B" font-size="13" font-weight="400">若使用双源读端口或专用旁路，可减少准备节拍；本图强调总线争用而非唯一微操作时序。</text>
+</svg>

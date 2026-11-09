@@ -1,0 +1,59 @@
+---
+title: "3.21 408综合：时序、窗口和错题判别"
+description: "CRC、海明、窗口、CSMA/CD、帧长、VLAN综合复盘"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.21 408综合：时序、窗口和错题判别
+
+## 必背公式卡
+- CRC：生成多项式最高次`r`→FCS`r bit`；被除数$D\cdot 2^r$，结果余数`R`
+- 海明校验位：$2^r\ge m+r+1$；纠`t`位错需$d_{\min}\ge2t+1$
+- GBN：k位序号，$1\le W_s\le2^k-1$，$W_r=1$
+- SR：$W_s+W_r\le2^k$；对称时$W_s=W_r\le2^{k-1}$
+- 单帧发送时间$T_t=\frac LR$；传播$T_p=\frac dv$
+- 停等$U\approx\frac{T_t}{T_t+2T_p+T_a}$；流水线$U\approx\min\!\left(1,\frac{W_sT_t}{T_t+2T_p+T_a}\right)$
+- CSMA/CD：最短$L\ge2T_pR$（只计最坏往返传播时延的理想下界）
+- ALOHA：纯ALOHA$S_{\max}=\frac{1}{2e}$；时隙ALOHA$S_{\max}=\frac{1}{e}$
+
+## 四组典型判断题
+- **CRC余数为0 → 帧一定没错**：错，仅代表未发现可检测的错误
+- **MAC地址48bit → 所有网卡出厂地址永久唯一**：错，存在本地管理/随机地址
+- **全双工交换式以太网需要CSMA/CD**：错，没有共享半双工碰撞问题
+- **VLAN划分冲突域，交换机端口划分广播域**：错，作用大致相反
+
+## 计算模型选择
+- 题给**数据位数、信道率和距离** →先求`Tt`、`Tp`；注意单位bits/bytes、km/m
+- 题给**编号位数** →先求模空间$M=2^k$；再辨别GBN还是SR
+- 题给**生成多项式** →看最高次而非比特串长度；附加r位
+- 题给**10M以太网最短帧** →64B指MAC帧而非前导码+帧
+- 题给**802.1Q** →多4B标签，`1518B→1522B`（常规无其他封装）
+
+## 防错关键词
+- “确认”不代表必须等待当前帧ACK才能发下一帧：GBN/SR可以流水发送
+- “缓存失序帧”是SR典型特征；GBN接收窗口通常仅1
+- “802.11无线”核心是CSMA/CA、ACK与隐藏站，不是CSMA/CD
+- “二层交换机”可学习MAC和VLAN转发，不能代替IP路由
+
+## 延伸联系
+- [第二章：物理层波特率与链路速率](/docs/408/mind-maps/computer-networks/02-3-symbol-rate)
+- [第一章：数据交换和分层服务](/docs/408/mind-maps/computer-networks/01-3-switching)
+- [第四章：网络层与IP路由](/docs/408/mind-maps/computer-networks/04-network-layer)
+
+## 章节导航
+- [上一节：3.20 VLAN与802.1Q标记帧](/docs/408/mind-maps/computer-networks/03-20-vlan)
+- [第三章总览](/docs/408/mind-maps/computer-networks/03-data-link-layer)
+
+````

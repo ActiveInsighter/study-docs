@@ -1,0 +1,55 @@
+---
+title: "3.15 TLB + Cache联合地址转换与访问"
+description: "TLB缺失/缺页/Cache miss的独立路径与地址分解，VIPT安全条件。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.15 TLB、Cache与主存
+
+## 三种缓存/映射对象
+- 页表：VPN→PFN 的正式映射，通常由主存中数据结构表示
+- **TLB**：缓存近期地址转换结果与权限（虚页号→物理页框号）
+  - 常用相联或组相联硬件；TLB hit通常无需常规页表遍历
+  - TLB miss不意味着缺页：**页表命中（页面驻留）仍可能发生TLB miss**
+- **Cache**：缓存主存块的数据；如果用物理地址映射，需有物理tag进行访问确认
+
+## 标准（PIPT）访问路径
+- CPU产生虚地址→查TLB（未命中则页表遍历）→获得物理地址
+  - 若PTE未驻留且可合法调入：触发缺页处理，更新页表/TLB，重试访问
+  - 若转换完成：提取Cache索引、tag和块内偏移 → 查Cache数据
+  - Cache miss：从下级缓存/主存装入目标块后返回CPU
+- <img src="/images/408-mind-maps/co-03-tlb-cache-flow-clean.svg" alt="VPN到PFN、TLB查找与Cache访问的分阶段流程图" width="960" height="475">
+
+- <img src="/images/408-mind-maps/co-0298.svg" alt="TLB + Cache 的多级存储系统全图" width="900" height="409">
+
+## 命中/缺失的合法组合
+- TLB hit意味着对应合法有效转换，通常说明页已驻留
+- Cache hit**不必意味着TLB hit**：TLB可先被替换，而相应物理数据仍留在Cache
+- 页不驻留时，当前有效的物理缓存副本通常不能直接由该页的虚址命中并返回
+  - 分析题中若已给明确的物理Cache和常规有效性模型，遵从其操作顺序
+- TLB miss + 页表驻留 + Cache hit 合法；TLB hit + Cache miss 合法
+
+## VIPT（虚拟索引、物理标记）要点
+- 为并行查询TLB与Cache，常利用页内偏移中不随地址转换变化的索引位
+  - 若Cache数据容量C、s路、页大小P，典型无别名冲突设计要求 $C/s\le P$
+  - 即 $\log_2(S)+\log_2(B)\le\log_2(P)$，B为块字节数、S为组数
+  - 超出时需要额外处理同义地址/别名；并非所有架构都坚持此限制
+- **必须区分VIPT与教材简化的先TLB后物理Cache顺序**
+
+## 综合计算
+- 4KiB页，64B Cache块：页内偏移12位，其中块内6位
+  - 余下6位足以从页内偏移取得最多64个索引组
+  - 例4路Cache容量16KiB，组数64，VIPT索引全部在页内偏移内
+````

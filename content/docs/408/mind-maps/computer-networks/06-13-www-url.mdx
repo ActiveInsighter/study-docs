@@ -1,0 +1,50 @@
+---
+title: "6.13 WWW组成、URL结构与一次网页访问"
+description: "408计算机网络·应用层第六章·WWW组成、URL结构与一次网页访问；高质量双侧Markmap分节导图。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.13 WWW组成、URL结构与一次网页访问
+
+## 万维网三要素
+- URL（统一资源定位符）：标识访问资源位置与方式
+- HTTP：规定客户端和服务器交换请求/响应消息的方法
+- HTML：描述文档结构；浏览器还可能加载CSS/JavaScript和多媒体
+- URL不是IP地址；域名通常还需DNS解析，而不是所有URL一定需要DNS
+
+## 典型URL解剖
+- `https://www.example.com:443/docs/index.html?q=408#intro`
+- `https`为scheme；`www.example.com`为主机；`443`为端口
+- `/docs/index.html`为路径；`q=408`为查询参数；`#intro`为片段标识符
+- `#intro`一般由客户端处理，**不会随HTTP请求目标发送给服务器**
+- URL中端口可缺省，HTTP默认为80，HTTPS通常443；特定服务可以另设端口
+
+## 浏览器取一个网页的步骤
+- 分析URL → 缓存/hosts等命中或DNS取得地址 → 建立传输连接
+- HTTPS over TCP：通常TCP握手 → TLS握手 → HTTP请求/响应
+- 对HTTP/3：由QUIC承担加密连接与可靠交付，**不经过HTTP/1.1式TCP连接**
+- 收到HTML后解析，再发起CSS/图片/脚本等资源请求；连接可复用，不必立即释放
+
+## 访问失败的分层定位
+- 域名错误：DNS解析失败；目标IP不可达：网络/路由层
+- 端口拒绝/超时：传输连接问题；TLS证书异常：加密身份验证问题
+- HTTP 404/500说明服务器能返回应用层状态信息，通常不是“DNS完全失败”
+
+## 分节导航
+- [上一节：6.12 POP3、IMAP与Webmail协议对比](/docs/408/mind-maps/computer-networks/06-12-pop-imap)
+- [下一节：6.14 HTTP请求行、方法、首部与实体](/docs/408/mind-maps/computer-networks/06-14-http-request)
+- [应用层总览](/docs/408/mind-maps/computer-networks/06-application-layer)
+
+````

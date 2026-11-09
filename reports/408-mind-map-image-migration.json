@@ -1,0 +1,3827 @@
+{
+  "sourceCommit": "5d9359a571d6f4096a791cf17b683c69c2ec0c80",
+  "sourceDriveId": "1onjyAPCyu3fmvBaXWRu6S9-Pu4uHNB9X",
+  "placements": [
+    {
+      "asset": "cn-0143.svg",
+      "chapter": "computer-networks/01-architecture.mdx",
+      "line": 31,
+      "heading": "计网的组成",
+      "parents": [
+        "工作方式",
+        "概要：配图"
+      ],
+      "alt": "工作方式",
+      "target": "computer-networks/01-1-definition.mdx",
+      "selectedAsset": "cn-0143.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "从工作方式看"
+    },
+    {
+      "asset": "cn-0009.svg",
+      "chapter": "computer-networks/01-architecture.mdx",
+      "line": 104,
+      "heading": "计网的分类",
+      "parents": [
+        "交换技术：",
+        "电路交换"
+      ],
+      "alt": "电路交换",
+      "target": "computer-networks/01-3-switching.mdx",
+      "selectedAsset": "cn-0009.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "电路交换：独占逻辑电路"
+    },
+    {
+      "asset": "cn-0065.svg",
+      "chapter": "computer-networks/01-architecture.mdx",
+      "line": 108,
+      "heading": "计网的分类",
+      "parents": [
+        "交换技术：",
+        "报文交换"
+      ],
+      "alt": "报文交换",
+      "target": "computer-networks/01-3-switching.mdx",
+      "selectedAsset": "cn-01-message-switch-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "cn-0154.svg",
+      "chapter": "computer-networks/01-architecture.mdx",
+      "line": 114,
+      "heading": "计网的分类",
+      "parents": [
+        "交换技术：",
+        "三种交换对比",
+        "三种交换的比较（P1到P4，表示4个分组）"
+      ],
+      "alt": "三种交换的比较（P1到P4，表示4个分组）",
+      "target": "computer-networks/01-3-switching.mdx",
+      "selectedAsset": "cn-01-switching-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "cn-0024.svg",
+      "chapter": "computer-networks/01-architecture.mdx",
+      "line": 228,
+      "heading": "计网分层",
+      "parents": [
+        "概念",
+        "协议、接口、服务的关系",
+        "相邻两层之间的关系"
+      ],
+      "alt": "相邻两层之间的关系",
+      "target": "computer-networks/01-7-services.mdx",
+      "selectedAsset": "cn-01-service-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "cn-0042.svg",
+      "chapter": "computer-networks/01-architecture.mdx",
+      "line": 308,
+      "heading": "多种参考模型对比",
+      "parents": [
+        "TCP/IP、OSI",
+        "图："
+      ],
+      "alt": "图：",
+      "target": "computer-networks/01-11-models.mdx",
+      "selectedAsset": "cn-0042.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "三种体系结构"
+    },
+    {
+      "asset": "cn-0046.svg",
+      "chapter": "computer-networks/02-physical-layer.mdx",
+      "line": 36,
+      "heading": "概念",
+      "parents": [
+        "一个典型的数据通信模型"
+      ],
+      "alt": "一个典型的数据通信模型",
+      "target": "computer-networks/02-2-communication-modes.mdx",
+      "selectedAsset": "cn-02-communication-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "cn-0115.svg",
+      "chapter": "computer-networks/02-physical-layer.mdx",
+      "line": 91,
+      "heading": "四种概念",
+      "parents": [
+        "码元"
+      ],
+      "alt": "码元",
+      "target": "computer-networks/02-3-symbol-rate.mdx",
+      "selectedAsset": "cn-0115.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "码元（symbol）"
+    },
+    {
+      "asset": "cn-0022.svg",
+      "chapter": "computer-networks/02-physical-layer.mdx",
+      "line": 139,
+      "heading": "四种概念",
+      "parents": [
+        "带宽",
+        "数字信号系统：bps"
+      ],
+      "alt": "数字信号系统：bps",
+      "target": "computer-networks/02-4-bandwidth-impairments.mdx",
+      "selectedAsset": "cn-0022.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "带宽的两种语境"
+    },
+    {
+      "asset": "cn-0139.svg",
+      "chapter": "computer-networks/02-physical-layer.mdx",
+      "line": 158,
+      "heading": "奈氏准则 &amp; 香农定理",
+      "parents": [
+        "失真",
+        "码间串扰",
+        "信道带宽",
+        "模拟信号的带宽：最高频率 - 最低频率"
+      ],
+      "alt": "模拟信号的带宽：最高频率 - 最低频率",
+      "target": "computer-networks/02-4-bandwidth-impairments.mdx",
+      "selectedAsset": "cn-02-bandwidth-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "cn-0019.svg",
+      "chapter": "computer-networks/02-physical-layer.mdx",
+      "line": 302,
+      "heading": "编码 &amp; 调制",
+      "parents": [
+        "编码 （数据 -&gt; 数字信号）"
+      ],
+      "alt": "编码 （数据 -&amp;amp;gt; 数字信号）",
+      "target": "computer-networks/02-7-line-coding.mdx",
+      "selectedAsset": "cn-0019.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "常见编码"
+    },
+    {
+      "asset": "cn-0006.svg",
+      "chapter": "computer-networks/02-physical-layer.mdx",
+      "line": 313,
+      "heading": "编码 &amp; 调制",
+      "parents": [
+        "编码 （数据 -&gt; 数字信号）",
+        "未命名主题",
+        "差分曼彻斯特编码：1 则蓝色（不变），0则红色（要变），第一位应该是和曼彻斯特编码一致"
+      ],
+      "alt": "差分曼彻斯特编码：1 则蓝色（不变），0则红色（要变），第一位应该是和曼彻斯特编码一致",
+      "target": "computer-networks/02-7-line-coding.mdx",
+      "selectedAsset": "cn-0006.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "常见编码"
+    },
+    {
+      "asset": "cn-0121.svg",
+      "chapter": "computer-networks/02-physical-layer.mdx",
+      "line": 389,
+      "heading": "编码 &amp; 调制",
+      "parents": [
+        "模拟数据 -&gt; 数字信号 （PCM脉冲编码调制）",
+        "步骤：",
+        "配图",
+        "为何要？ $f_{采} > 2f_{max}$"
+      ],
+      "alt": "为何要？",
+      "target": "computer-networks/02-9-pcm-sampling.mdx",
+      "selectedAsset": "cn-02-pcm-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "cn-0082.svg",
+      "chapter": "computer-networks/02-physical-layer.mdx",
+      "line": 392,
+      "heading": "编码 &amp; 调制",
+      "parents": [
+        "模拟数据 -&gt; 模拟信号",
+        "步骤很简单，就是把模拟数据调制为高频的模拟信号，然后再把模拟信号在收音机处解调为模拟数据，进行播放"
+      ],
+      "alt": "步骤很简单，就是把模拟数据调制为高频的模拟信号，然后再把模拟信号在收音机处解调为模拟数据，进行播放",
+      "target": "computer-networks/02-9-pcm-sampling.mdx",
+      "selectedAsset": "cn-0082.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "模拟调制简记"
+    },
+    {
+      "asset": "cn-0140.svg",
+      "chapter": "computer-networks/02-physical-layer.mdx",
+      "line": 405,
+      "heading": "数据的交换方式",
+      "parents": [
+        "三大数据交换方式",
+        "电路交换 (Circuit)",
+        "步骤",
+        "1\\. 建立连接 （呼叫/电路建立）",
+        "1\\. 在交换设备中使用【路由选择算法】去找是发个【下一个交换设备】还是发给【下一个路由器】 2. A发送呼叫后，B如果接受到了请求，会原路返回去应答主机A"
+      ],
+      "alt": "1. 在交换设备中使用【路由选择算法】去找是发个【下一个交换设备】还是发给【下一个路由器】 2. A发送呼叫后，B如果接受到了请求，会原路返回去应答主机A",
+      "target": "computer-networks/02-11-datagram-vc.mdx",
+      "selectedAsset": "cn-02-datagram-vc-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "cn-0054.svg",
+      "chapter": "computer-networks/02-physical-layer.mdx",
+      "line": 409,
+      "heading": "数据的交换方式",
+      "parents": [
+        "三大数据交换方式",
+        "电路交换 (Circuit)",
+        "步骤",
+        "3\\.  释放连接 （拆除电路）",
+        "与建立连接类似，最后【不返回】"
+      ],
+      "alt": "与建立连接类似，最后【不返回】",
+      "target": "computer-networks/02-11-datagram-vc.mdx",
+      "selectedAsset": "cn-02-datagram-vc-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "cn-0020.svg",
+      "chapter": "computer-networks/02-physical-layer.mdx",
+      "line": 443,
+      "heading": "数据的交换方式",
+      "parents": [
+        "三大数据交换方式",
+        "报文交换 (Message)",
+        "发送流程"
+      ],
+      "alt": "发送流程",
+      "target": "computer-networks/02-10-switching.mdx",
+      "selectedAsset": "cn-0020.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "报文交换"
+    },
+    {
+      "asset": "cn-0154.svg",
+      "chapter": "computer-networks/02-physical-layer.mdx",
+      "line": 489,
+      "heading": "数据的交换方式",
+      "parents": [
+        "数据交换方式的选择"
+      ],
+      "alt": "数据交换方式的选择",
+      "target": "computer-networks/02-10-switching.mdx",
+      "selectedAsset": "cn-01-switching-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "cn-0118.svg",
+      "chapter": "computer-networks/02-physical-layer.mdx",
+      "line": 503,
+      "heading": "数据的交换方式",
+      "parents": [
+        "细说【分组交换】",
+        "数据报方式"
+      ],
+      "alt": "数据报方式",
+      "target": "computer-networks/02-11-datagram-vc.mdx",
+      "selectedAsset": "cn-02-datagram-vc-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "cn-0034.svg",
+      "chapter": "computer-networks/02-physical-layer.mdx",
+      "line": 511,
+      "heading": "数据的交换方式",
+      "parents": [
+        "细说【分组交换】",
+        "虚电路方式"
+      ],
+      "alt": "虚电路方式",
+      "target": "computer-networks/02-11-datagram-vc.mdx",
+      "selectedAsset": "cn-02-datagram-vc-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "cn-0087.svg",
+      "chapter": "computer-networks/02-physical-layer.mdx",
+      "line": 570,
+      "heading": "传输介质/传输媒体",
+      "parents": [
+        "导向性传输介质",
+        "光纤",
+        "光纤的概念",
+        "光纤通信就是利用光导纤维(简称光纤)传递光脉冲来进行通信。有光脉冲表示1,无光脉冲表示0。"
+      ],
+      "alt": "光纤通信就是利用光导纤维(简称光纤)传递光脉冲来进行通信。有光脉冲表示1,无光脉冲表示0。",
+      "target": "computer-networks/02-13-fiber.mdx",
+      "selectedAsset": "cn-0087.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "光纤构造与传播"
+    },
+    {
+      "asset": "cn-0146.svg",
+      "chapter": "computer-networks/02-physical-layer.mdx",
+      "line": 576,
+      "heading": "传输介质/传输媒体",
+      "parents": [
+        "导向性传输介质",
+        "光纤",
+        "多模光纤/单模光纤"
+      ],
+      "alt": "多模光纤/单模光纤",
+      "target": "computer-networks/02-13-fiber.mdx",
+      "selectedAsset": "cn-02-fiber-modes-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "cn-0059.svg",
+      "chapter": "computer-networks/02-physical-layer.mdx",
+      "line": 630,
+      "heading": "物理层设备",
+      "parents": [
+        "集线器（多口中继器）",
+        "广播 + 不能分割冲突域 + 连在集线器的设备共享网络"
+      ],
+      "alt": "广播 + 不能分割冲突域 + 连在集线器的设备共享网络",
+      "target": "computer-networks/02-15-repeaters-hubs.mdx",
+      "selectedAsset": "cn-02-hub-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "cn-0073.svg",
+      "chapter": "computer-networks/03-data-link-layer.mdx",
+      "line": 155,
+      "heading": "流量控制（算）",
+      "parents": [
+        "统一特点",
+        "滑动窗口如何算完美：",
+        "分析两种情况，如果接收端所有ACK全部正常抵达和ACK全部丢失的情况下，会不会出现“误解”"
+      ],
+      "alt": "分析两种情况，如果接收端所有ACK全部正常抵达和ACK全部丢失的情况下，会不会出现“误解”",
+      "target": "computer-networks/03-8-sr.mdx",
+      "selectedAsset": "cn-0073.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "序号空间约束（必考）"
+    },
+    {
+      "asset": "cn-0012.svg",
+      "chapter": "computer-networks/03-data-link-layer.mdx",
+      "line": 181,
+      "heading": "流量控制（算）",
+      "parents": [
+        "链路利用率如何求解：",
+        "例如：从1中进行延伸求解"
+      ],
+      "alt": "例如：从1中进行延伸求解",
+      "target": "computer-networks/03-9-utilization.mdx",
+      "selectedAsset": "cn-0012.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "停等和流水线"
+    },
+    {
+      "asset": "cn-0155.svg",
+      "chapter": "computer-networks/03-data-link-layer.mdx",
+      "line": 304,
+      "heading": "介质访问（算）",
+      "parents": [
+        "随机访问（动态）",
+        "CSMA/CA"
+      ],
+      "alt": "CSMA/CA",
+      "target": "computer-networks/03-13-csmaca.mdx",
+      "selectedAsset": "cn-03-rts-cts-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "cn-0049.svg",
+      "chapter": "computer-networks/03-data-link-layer.mdx",
+      "line": 481,
+      "heading": "广域网",
+      "parents": [
+        "特点：",
+        "广域网是连接众多局域网的网络"
+      ],
+      "alt": "广域网是连接众多局域网的网络",
+      "target": "computer-networks/03-17-ppp.mdx",
+      "selectedAsset": "cn-0049.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "广域网WAN不是某种单一帧格式"
+    },
+    {
+      "asset": "cn-0038.svg",
+      "chapter": "computer-networks/03-data-link-layer.mdx",
+      "line": 511,
+      "heading": "广域网",
+      "parents": [
+        "PPP协议",
+        "位置：",
+        "两个路由器之间的帧数据可以是PPP帧",
+        "但如果两个路由器之间有一个交换机，则一定不是PPP帧而是以太网帧"
+      ],
+      "alt": "但如果两个路由器之间有一个交换机，则一定不是PPP帧而是以太网帧",
+      "target": "computer-networks/03-17-ppp.mdx",
+      "selectedAsset": "cn-0038.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "广域网WAN不是某种单一帧格式"
+    },
+    {
+      "asset": "cn-0084.svg",
+      "chapter": "computer-networks/03-data-link-layer.mdx",
+      "line": 665,
+      "heading": "VLAN",
+      "parents": [
+        "概念："
+      ],
+      "alt": "概念：",
+      "target": "computer-networks/03-20-vlan.mdx",
+      "selectedAsset": "cn-0084.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "VLAN本质"
+    },
+    {
+      "asset": "cn-0113.svg",
+      "chapter": "computer-networks/03-data-link-layer.mdx",
+      "line": 668,
+      "heading": "VLAN",
+      "parents": [
+        "基于接口的VLAN技术："
+      ],
+      "alt": "基于接口的VLAN技术：",
+      "target": "computer-networks/03-20-vlan.mdx",
+      "selectedAsset": "cn-0113.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "Access与Trunk（工程常见术语）"
+    },
+    {
+      "asset": "cn-0148.svg",
+      "chapter": "computer-networks/03-data-link-layer.mdx",
+      "line": 696,
+      "heading": "VLAN",
+      "parents": [
+        "VLAN传输",
+        "VLAN帧："
+      ],
+      "alt": "VLAN帧：",
+      "target": "computer-networks/03-20-vlan.mdx",
+      "selectedAsset": "cn-0148.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "802.1Q标签构造"
+    },
+    {
+      "asset": "cn-0113.svg",
+      "chapter": "computer-networks/03-data-link-layer.mdx",
+      "line": 704,
+      "heading": "VLAN",
+      "parents": [
+        "练习题："
+      ],
+      "alt": "练习题：",
+      "target": "computer-networks/03-20-vlan.mdx",
+      "selectedAsset": "cn-0113.svg",
+      "reason": "restored-original",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "cn-0037.svg",
+      "chapter": "computer-networks/06-application-layer.mdx",
+      "line": 118,
+      "heading": "域名系统(DNS)",
+      "parents": [
+        "域名解析",
+        "概要：配图"
+      ],
+      "alt": "域名解析",
+      "target": "computer-networks/06-5-dns-query.mdx",
+      "selectedAsset": "cn-06-dns-resolution-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "cn-0010.svg",
+      "chapter": "computer-networks/06-application-layer.mdx",
+      "line": 326,
+      "heading": "万维网和HTTP",
+      "parents": [
+        "HTTP报文",
+        "请求报文/响应报文",
+        "HTTP 是面向文本的(Text-Oriented），因此报文中的每个字段都是一些 ASCII 码串，并且每 个字段的长度都是不确定的。有两类HTTP 报文：",
+        "请求报文：从客户向服务器发送的请求报文"
+      ],
+      "alt": "请求报文：从客户向服务器发送的请求报文",
+      "target": "computer-networks/06-14-http-request.mdx",
+      "selectedAsset": "cn-0010.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "HTTP/1.1请求报文结构"
+    },
+    {
+      "asset": "cn-0095.svg",
+      "chapter": "computer-networks/06-application-layer.mdx",
+      "line": 328,
+      "heading": "万维网和HTTP",
+      "parents": [
+        "HTTP报文",
+        "请求报文/响应报文",
+        "HTTP 是面向文本的(Text-Oriented），因此报文中的每个字段都是一些 ASCII 码串，并且每 个字段的长度都是不确定的。有两类HTTP 报文：",
+        "请求报文：从客户向服务器发送的请求报文",
+        "响应报文：从服务器到客户的回答"
+      ],
+      "alt": "响应报文：从服务器到客户的回答",
+      "target": "computer-networks/06-15-http-response.mdx",
+      "selectedAsset": "cn-0095.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "响应报文的组成"
+    },
+    {
+      "asset": "co-0232.svg",
+      "chapter": "computer-organization/01-overview.mdx",
+      "line": 77,
+      "heading": "层次结构",
+      "parents": [
+        "硬件的基本组成",
+        "冯 · 诺依曼机",
+        "特点：",
+        "早期冯诺依曼机是以【运算器】作为核心的"
+      ],
+      "alt": "早期冯诺依曼机是以【运算器】作为核心的",
+      "target": "computer-organization/01-2-von-neumann.mdx",
+      "selectedAsset": "co-0232.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "冯·诺依曼机的核心思想"
+    },
+    {
+      "asset": "co-0123.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 46,
+      "heading": "定点数的表示",
+      "parents": [
+        "无符号数",
+        "【没有符号位】，有n个bit，则数的表示范围为：( 0 ~ 2^n - 1 )"
+      ],
+      "alt": "【没有符号位】，有n个bit，则数的表示范围为：( 0 ~ 2^n - 1 )",
+      "target": "computer-organization/02-2-number-representations.mdx",
+      "selectedAsset": "co-0123.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "有符号和无符号、定点整数与小数"
+    },
+    {
+      "asset": "co-0032.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 53,
+      "heading": "定点数的表示",
+      "parents": [
+        "定点数",
+        "定点小数"
+      ],
+      "alt": "定点小数",
+      "target": "computer-organization/02-2-number-representations.mdx",
+      "selectedAsset": "co-02-fixed-0032.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0244.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 57,
+      "heading": "定点数的表示",
+      "parents": [
+        "定点数",
+        "定点整数"
+      ],
+      "alt": "定点整数",
+      "target": "computer-organization/02-2-number-representations.mdx",
+      "selectedAsset": "co-02-fixed-0244.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0272.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 266,
+      "heading": "运算电路和方法",
+      "parents": [
+        "（补充）门电路和摩根定律"
+      ],
+      "alt": "（补充）门电路和摩根定律",
+      "target": "computer-organization/02-4-alu-carry.mdx",
+      "selectedAsset": "co-0272.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "组合逻辑基础"
+    },
+    {
+      "asset": "co-0282.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 269,
+      "heading": "运算电路和方法",
+      "parents": [
+        "一位全加器"
+      ],
+      "alt": "一位全加器",
+      "target": "computer-organization/02-4-alu-carry.mdx",
+      "selectedAsset": "co-02-fixed-0282.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0145.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 271,
+      "heading": "运算电路和方法",
+      "parents": [
+        "一位全加器",
+        "逻辑符号（简化）"
+      ],
+      "alt": "逻辑符号（简化）",
+      "target": "computer-organization/02-4-alu-carry.mdx",
+      "selectedAsset": "co-02-fixed-0145.svg",
+      "reason": "verified-redraw",
+      "action": "inserted",
+      "branch": "半加器和全加器"
+    },
+    {
+      "asset": "co-0036.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 291,
+      "heading": "运算电路和方法",
+      "parents": [
+        "串行加法器",
+        "串行加法器：循环使用一位全加器"
+      ],
+      "alt": "串行加法器：循环使用一位全加器",
+      "target": "computer-organization/02-4-alu-carry.mdx",
+      "selectedAsset": "co-02-fixed-0036.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0122.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 296,
+      "heading": "运算电路和方法",
+      "parents": [
+        "串行进位加法器",
+        "把多个全加器串在一起，和串行加法器问题一致，速度一样的慢"
+      ],
+      "alt": "把多个全加器串在一起，和串行加法器问题一致，速度一样的慢",
+      "target": "computer-organization/02-4-alu-carry.mdx",
+      "selectedAsset": "co-02-fixed-0122.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0058.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 302,
+      "heading": "运算电路和方法",
+      "parents": [
+        "并行进位加法器",
+        "理论依据",
+        "相互间的进位没有依赖关系，只要同时到达，可以同时生成C1~C3"
+      ],
+      "alt": "相互间的进位没有依赖关系，只要同时到达，可以同时生成C1~C3",
+      "target": "computer-organization/02-4-alu-carry.mdx",
+      "selectedAsset": "co-02-fixed-0058.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0257.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 306,
+      "heading": "运算电路和方法",
+      "parents": [
+        "并行进位加法器",
+        "四位CLA部件/CLA电路"
+      ],
+      "alt": "四位CLA部件/CLA电路",
+      "target": "computer-organization/02-4-alu-carry.mdx",
+      "selectedAsset": "co-02-fixed-0257.svg",
+      "reason": "verified-redraw",
+      "action": "inserted",
+      "branch": "先行进位CLA"
+    },
+    {
+      "asset": "co-0264.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 309,
+      "heading": "运算电路和方法",
+      "parents": [
+        "并行进位加法器",
+        "四位全先行进位加法器"
+      ],
+      "alt": "四位全先行进位加法器",
+      "target": "computer-organization/02-4-alu-carry.mdx",
+      "selectedAsset": "co-02-fixed-0264.svg",
+      "reason": "verified-redraw",
+      "action": "inserted",
+      "branch": "先行进位CLA"
+    },
+    {
+      "asset": "co-0128.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 312,
+      "heading": "运算电路和方法",
+      "parents": [
+        "并行进位加法器",
+        "四位全先行进位加法器",
+        "简化",
+        "把几(4)个加法器串在一起，这样可以并发的计算4bit的数据"
+      ],
+      "alt": "把几(4)个加法器串在一起，这样可以并发的计算4bit的数据",
+      "target": "computer-organization/02-4-alu-carry.mdx",
+      "selectedAsset": "co-02-fixed-0128.svg",
+      "reason": "verified-redraw",
+      "action": "inserted",
+      "branch": "先行进位CLA"
+    },
+    {
+      "asset": "co-0051.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 315,
+      "heading": "运算电路和方法",
+      "parents": [
+        "多级并行进位加法器"
+      ],
+      "alt": "多级并行进位加法器",
+      "target": "computer-organization/02-4-alu-carry.mdx",
+      "selectedAsset": "co-02-fixed-0051.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0178.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 343,
+      "heading": "运算电路和方法",
+      "parents": [
+        "带标记加法器",
+        "带标记加法器逻辑电路"
+      ],
+      "alt": "带标记加法器逻辑电路",
+      "target": "computer-organization/02-5-arithmetic-flags.mdx",
+      "selectedAsset": "co-0178.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "四个常考条件码"
+    },
+    {
+      "asset": "co-0299.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 347,
+      "heading": "运算电路和方法",
+      "parents": [
+        "多路选择器、三态门",
+        "多路选择器"
+      ],
+      "alt": "多路选择器",
+      "target": "computer-organization/02-4-alu-carry.mdx",
+      "selectedAsset": "co-0299.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "ALU、MUX与三态门"
+    },
+    {
+      "asset": "co-0223.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 357,
+      "heading": "运算电路和方法",
+      "parents": [
+        "ALU为组合逻辑电路",
+        "ALU的基本结构"
+      ],
+      "alt": "ALU的基本结构",
+      "target": "computer-organization/02-4-alu-carry.mdx",
+      "selectedAsset": "co-0223.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "ALU、MUX与三态门"
+    },
+    {
+      "asset": "co-0173.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 548,
+      "heading": "定点数的加减法",
+      "parents": [
+        "【乘法运算】",
+        "【补码乘法】 符号参与运算，双符号位，MQ多一个辅助位，ACC是+/- X或者不变看MQ后两位之差，然后位移。【最后还有一次加法】",
+        "硬件构成"
+      ],
+      "alt": "硬件构成",
+      "target": "computer-organization/02-7-multiplication.mdx",
+      "selectedAsset": "co-02-fixed-0173.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0269.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 600,
+      "heading": "定点数的加减法",
+      "parents": [
+        "乘法电路",
+        "无符号数"
+      ],
+      "alt": "无符号数",
+      "target": "computer-organization/02-7-multiplication.mdx",
+      "selectedAsset": "co-02-fixed-0269.svg",
+      "reason": "verified-redraw",
+      "action": "inserted",
+      "branch": "乘法的一般位级逻辑"
+    },
+    {
+      "asset": "co-0020.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 602,
+      "heading": "定点数的加减法",
+      "parents": [
+        "乘法电路",
+        "无符号数",
+        "自己尝试一下~"
+      ],
+      "alt": "自己尝试一下~",
+      "target": "computer-organization/02-7-multiplication.mdx",
+      "selectedAsset": "co-02-fixed-0020.svg",
+      "reason": "verified-redraw",
+      "action": "inserted",
+      "branch": "乘法的一般位级逻辑"
+    },
+    {
+      "asset": "co-0230.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 604,
+      "heading": "定点数的加减法",
+      "parents": [
+        "乘法电路",
+        "无符号数",
+        "自己尝试一下~",
+        "阵列乘法器，可以同时得到多位的乘积"
+      ],
+      "alt": "阵列乘法器，可以同时得到多位的乘积",
+      "target": "computer-organization/02-7-multiplication.mdx",
+      "selectedAsset": "co-02-fixed-0230.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0100.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 609,
+      "heading": "定点数的加减法",
+      "parents": [
+        "乘法电路",
+        "有符号数",
+        "补码一位乘法逻辑结构图"
+      ],
+      "alt": "补码一位乘法逻辑结构图",
+      "target": "computer-organization/02-7-multiplication.mdx",
+      "selectedAsset": "co-02-fixed-0100.svg",
+      "reason": "verified-redraw",
+      "action": "inserted",
+      "branch": "补码一位乘法 / Booth重编码"
+    },
+    {
+      "asset": "co-0276.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 633,
+      "heading": "定点数的加减法",
+      "parents": [
+        "【除法运算】",
+        "【原码除法】 先商一，然后相减后发现是负数了，再处理，逐渐左移，最后MQ是商，ACC是余数",
+        "恢复余数法",
+        "硬件构成"
+      ],
+      "alt": "硬件构成",
+      "target": "computer-organization/02-8-division.mdx",
+      "selectedAsset": "co-02-fixed-0276.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0013.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 729,
+      "heading": "定点数的加减法",
+      "parents": [
+        "除法电路",
+        "R ÷ Y = Q...R / ACC ÷ X = MQ ... ACC"
+      ],
+      "alt": "R ÷ Y = Q...R / ACC ÷ X = MQ ... ACC",
+      "target": "computer-organization/02-8-division.mdx",
+      "selectedAsset": "co-02-fixed-0013.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0008.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 732,
+      "heading": "定点数的加减法",
+      "parents": [
+        "除法电路",
+        "R ÷ Y = Q...R / ACC ÷ X = MQ ... ACC",
+        "定点小数"
+      ],
+      "alt": "定点小数",
+      "target": "computer-organization/02-8-division.mdx",
+      "selectedAsset": "co-02-fixed-0008.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0142.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 735,
+      "heading": "定点数的加减法",
+      "parents": [
+        "除法电路",
+        "R ÷ Y = Q...R / ACC ÷ X = MQ ... ACC",
+        "定点整数"
+      ],
+      "alt": "定点整数",
+      "target": "computer-organization/02-8-division.mdx",
+      "selectedAsset": "co-02-fixed-0142.svg",
+      "reason": "verified-redraw",
+      "action": "inserted",
+      "branch": "除法结果与寄存器"
+    },
+    {
+      "asset": "co-0004.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 850,
+      "heading": "浮点数",
+      "parents": [
+        "通常表示方法",
+        "一般格式"
+      ],
+      "alt": "一般格式",
+      "target": "computer-organization/02-10-float-principles.mdx",
+      "selectedAsset": "co-02-fixed-0004.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0099.svg",
+      "chapter": "computer-organization/02-data-representation.mdx",
+      "line": 906,
+      "heading": "浮点数",
+      "parents": [
+        "IEEE 754",
+        "一般格式",
+        "不同精度"
+      ],
+      "alt": "不同精度",
+      "target": "computer-organization/02-11-ieee754.mdx",
+      "selectedAsset": "co-02-fixed-0099.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0010.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 101,
+      "heading": "SRAM、DRAM",
+      "parents": [
+        "DRAM",
+        "刷新：",
+        "每次刷新多少存储单元：",
+        "【基础版】一次刷新一整行"
+      ],
+      "alt": "【基础版】一次刷新一整行",
+      "target": "computer-organization/03-3-refresh.mdx",
+      "selectedAsset": "co-0010.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "刷新基本原理"
+    },
+    {
+      "asset": "co-0148.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 105,
+      "heading": "SRAM、DRAM",
+      "parents": [
+        "DRAM",
+        "刷新：",
+        "每次刷新多少存储单元：",
+        "【行列存储版】把地址分布改为行地址+列地址的存储方式"
+      ],
+      "alt": "【行列存储版】把地址分布改为行地址+列地址的存储方式",
+      "target": "computer-organization/03-3-refresh.mdx",
+      "selectedAsset": "co-0148.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "刷新基本原理"
+    },
+    {
+      "asset": "co-0044.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 154,
+      "heading": "SRAM、DRAM",
+      "parents": [
+        "存储芯片的基本原理：",
+        "存储体/存储单元："
+      ],
+      "alt": "存储体/存储单元：",
+      "target": "computer-organization/03-5-chip-organization.mdx",
+      "selectedAsset": "co-0044.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "从存储单元到芯片"
+    },
+    {
+      "asset": "co-0034.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 158,
+      "heading": "SRAM、DRAM",
+      "parents": [
+        "存储芯片的基本原理：",
+        "存储芯片："
+      ],
+      "alt": "存储芯片：",
+      "target": "computer-organization/03-5-chip-organization.mdx",
+      "selectedAsset": "co-0034.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "从存储单元到芯片"
+    },
+    {
+      "asset": "co-0281.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 280,
+      "heading": "双端口RAM和多模块存储器",
+      "parents": [
+        "多模块存储器：",
+        "多体并行",
+        "高位交叉编址",
+        "高位2bit是对应不同的存储体"
+      ],
+      "alt": "高位2bit是对应不同的存储体",
+      "target": "computer-organization/03-7-multi-bank.mdx",
+      "selectedAsset": "co-0281.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "高位交叉与低位交叉"
+    },
+    {
+      "asset": "co-0261.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 292,
+      "heading": "双端口RAM和多模块存储器",
+      "parents": [
+        "多模块存储器：",
+        "多体并行",
+        "高位交叉编址",
+        "高位2bit是对应不同的存储体",
+        "举例：",
+        "甘特图， 耗时 5T"
+      ],
+      "alt": "甘特图， 耗时 5T",
+      "target": "computer-organization/03-7-multi-bank.mdx",
+      "selectedAsset": "co-0261.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "时间与体数计算"
+    },
+    {
+      "asset": "co-0253.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 295,
+      "heading": "双端口RAM和多模块存储器",
+      "parents": [
+        "多模块存储器：",
+        "多体并行",
+        "低位交叉编址",
+        "低位2bit对应不同存储体"
+      ],
+      "alt": "低位2bit对应不同存储体",
+      "target": "computer-organization/03-7-multi-bank.mdx",
+      "selectedAsset": "co-0253.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "高位交叉与低位交叉"
+    },
+    {
+      "asset": "co-0067.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 305,
+      "heading": "双端口RAM和多模块存储器",
+      "parents": [
+        "多模块存储器：",
+        "多体并行",
+        "低位交叉编址",
+        "低位2bit对应不同存储体",
+        "举例：",
+        "甘特图， 耗时 T+4r"
+      ],
+      "alt": "甘特图， 耗时 T+4r",
+      "target": "computer-organization/03-7-multi-bank.mdx",
+      "selectedAsset": "co-0067.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "时间与体数计算"
+    },
+    {
+      "asset": "co-0076.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 314,
+      "heading": "双端口RAM和多模块存储器",
+      "parents": [
+        "多模块存储器：",
+        "单体多字",
+        "把多体并行存储器合并在了同一个存储器中，所有存储器共用控制电路、寄存器等等"
+      ],
+      "alt": "把多体并行存储器合并在了同一个存储器中，所有存储器共用控制电路、寄存器等等",
+      "target": "computer-organization/03-7-multi-bank.mdx",
+      "selectedAsset": "co-0076.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "高位交叉与低位交叉"
+    },
+    {
+      "asset": "co-0258.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 324,
+      "heading": "主存储器和CPU的连接",
+      "parents": [
+        "主存的基本组成"
+      ],
+      "alt": "主存的基本组成",
+      "target": "computer-organization/03-5-chip-organization.mdx",
+      "selectedAsset": "co-0258.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "从存储单元到芯片"
+    },
+    {
+      "asset": "co-0069.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 328,
+      "heading": "主存储器和CPU的连接",
+      "parents": [
+        "主存的基本组成"
+      ],
+      "alt": "主存的基本组成",
+      "target": "computer-organization/03-5-chip-organization.mdx",
+      "selectedAsset": "co-0069.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "从存储单元到芯片"
+    },
+    {
+      "asset": "co-0233.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 333,
+      "heading": "主存储器和CPU的连接",
+      "parents": [
+        "位扩展",
+        "最开始只有一块芯片的时候（数据线不够）"
+      ],
+      "alt": "最开始只有一块芯片的时候（数据线不够）",
+      "target": "computer-organization/03-6-expansion.mdx",
+      "selectedAsset": "co-0233.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "位扩展：加宽一个存储字"
+    },
+    {
+      "asset": "co-0301.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 335,
+      "heading": "主存储器和CPU的连接",
+      "parents": [
+        "位扩展",
+        "最开始只有一块芯片的时候（数据线不够）",
+        "例如再连一块"
+      ],
+      "alt": "例如再连一块",
+      "target": "computer-organization/03-6-expansion.mdx",
+      "selectedAsset": "co-0301.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "位扩展：加宽一个存储字"
+    },
+    {
+      "asset": "co-0074.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 343,
+      "heading": "主存储器和CPU的连接",
+      "parents": [
+        "字扩展",
+        "最开始的时候地址线还有3个引脚没有连接"
+      ],
+      "alt": "最开始的时候地址线还有3个引脚没有连接",
+      "target": "computer-organization/03-6-expansion.mdx",
+      "selectedAsset": "co-0074.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "字扩展：增加可寻址单元数"
+    },
+    {
+      "asset": "co-0314.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 345,
+      "heading": "主存储器和CPU的连接",
+      "parents": [
+        "字扩展",
+        "最开始的时候地址线还有3个引脚没有连接",
+        "法一：线选法，CPU每一根多的地址线就连接着对应的芯片的CS。【这样CPU多了N根线，就可以多连接N个芯片】"
+      ],
+      "alt": "法一：线选法，CPU每一根多的地址线就连接着对应的芯片的CS。【这样CPU多了N根线，就可以多连接N个芯片】",
+      "target": "computer-organization/03-6-expansion.mdx",
+      "selectedAsset": "co-0314.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "字扩展：增加可寻址单元数"
+    },
+    {
+      "asset": "co-0157.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 360,
+      "heading": "主存储器和CPU的连接",
+      "parents": [
+        "补充：译码器",
+        "普通的3-8译码器"
+      ],
+      "alt": "普通的3-8译码器",
+      "target": "computer-organization/03-5-chip-organization.mdx",
+      "selectedAsset": "co-0157.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "译码器和片选"
+    },
+    {
+      "asset": "co-0175.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 363,
+      "heading": "主存储器和CPU的连接",
+      "parents": [
+        "补充：译码器",
+        "普通的3-8译码器",
+        "\"使能\"端",
+        "EN使能"
+      ],
+      "alt": "EN使能",
+      "target": "computer-organization/03-5-chip-organization.mdx",
+      "selectedAsset": "co-0175.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "译码器和片选"
+    },
+    {
+      "asset": "co-0302.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 365,
+      "heading": "主存储器和CPU的连接",
+      "parents": [
+        "补充：译码器",
+        "普通的3-8译码器",
+        "\"使能\"端",
+        "EN使能",
+        "74ls138"
+      ],
+      "alt": "74ls138",
+      "target": "computer-organization/03-5-chip-organization.mdx",
+      "selectedAsset": "co-0302.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "译码器和片选"
+    },
+    {
+      "asset": "co-0037.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 368,
+      "heading": "主存储器和CPU的连接",
+      "parents": [
+        "补充：译码器",
+        "普通的3-8译码器",
+        "MREQ",
+        "CPU通过控制一个使能端，来控制CPU的操作顺序"
+      ],
+      "alt": "CPU通过控制一个使能端，来控制CPU的操作顺序",
+      "target": "computer-organization/03-5-chip-organization.mdx",
+      "selectedAsset": "co-0037.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "信号与时序"
+    },
+    {
+      "asset": "co-0066.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 370,
+      "heading": "主存储器和CPU的连接",
+      "parents": [
+        "补充：译码器",
+        "普通的3-8译码器",
+        "MREQ",
+        "CPU通过控制一个使能端，来控制CPU的操作顺序",
+        "CPU先把地址信号传递到地址线上面去，检测到信号稳定后，CPU才会把MREQ设置为0，芯片才能进行运作"
+      ],
+      "alt": "CPU先把地址信号传递到地址线上面去，检测到信号稳定后，CPU才会把MREQ设置为0，芯片才能进行运作",
+      "target": "computer-organization/03-5-chip-organization.mdx",
+      "selectedAsset": "co-0066.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "信号与时序"
+    },
+    {
+      "asset": "co-0180.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 535,
+      "heading": "高速缓冲存储器Cache",
+      "parents": [
+        "Cache和主存的映射关系",
+        "直接映射",
+        "直接映射规则：",
+        "主存在Cache中的行号 = 主存块号 % Cache总块数"
+      ],
+      "alt": "主存在Cache中的行号 = 主存块号 % Cache总块数",
+      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "selectedAsset": "co-0180.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "直接映射图解",
+      "branchLevel": 3
+    },
+    {
+      "asset": "co-0254.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 542,
+      "heading": "高速缓冲存储器Cache",
+      "parents": [
+        "Cache和主存的映射关系",
+        "直接映射",
+        "地址变化：",
+        "大题第二步（根据地址应声规则计算正确的地址形式）"
+      ],
+      "alt": "大题第二步（根据地址应声规则计算正确的地址形式）",
+      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "selectedAsset": "co-0254.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "直接映射图解",
+      "branchLevel": 3
+    },
+    {
+      "asset": "co-0143.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 544,
+      "heading": "高速缓冲存储器Cache",
+      "parents": [
+        "Cache和主存的映射关系",
+        "直接映射",
+        "地址变化：",
+        "大题第二步（根据地址应声规则计算正确的地址形式）",
+        "此时主存的地址样子"
+      ],
+      "alt": "此时主存的地址样子",
+      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "selectedAsset": "co-0143.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "直接映射图解",
+      "branchLevel": 3
+    },
+    {
+      "asset": "co-0296.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 546,
+      "heading": "高速缓冲存储器Cache",
+      "parents": [
+        "Cache和主存的映射关系",
+        "直接映射",
+        "地址变化：",
+        "大题第二步（根据地址应声规则计算正确的地址形式）",
+        "此时主存的地址样子",
+        "CPU访问例子（大题第三步）"
+      ],
+      "alt": "CPU访问例子（大题第三步）",
+      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "selectedAsset": "co-0296.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "直接映射图解",
+      "branchLevel": 3
+    },
+    {
+      "asset": "co-0046.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 555,
+      "heading": "高速缓冲存储器Cache",
+      "parents": [
+        "Cache和主存的映射关系",
+        "直接映射",
+        "Cache每行结构：",
+        "Cache每行有 1+1+19+64\\*8 = 533 bit"
+      ],
+      "alt": "Cache每行有 1+1+19+64\\*8 = 533 bit",
+      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "selectedAsset": "co-0046.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "直接映射图解",
+      "branchLevel": 3
+    },
+    {
+      "asset": "co-0319.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 573,
+      "heading": "高速缓冲存储器Cache",
+      "parents": [
+        "Cache和主存的映射关系",
+        "全相联映射",
+        "地址变化：",
+        "大题第二步（根据地址映射规则计算正确的地址形式）"
+      ],
+      "alt": "大题第二步（根据地址映射规则计算正确的地址形式）",
+      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "selectedAsset": "co-0319.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "全相联映射图解",
+      "branchLevel": 3
+    },
+    {
+      "asset": "co-0071.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 575,
+      "heading": "高速缓冲存储器Cache",
+      "parents": [
+        "Cache和主存的映射关系",
+        "全相联映射",
+        "地址变化：",
+        "大题第二步（根据地址映射规则计算正确的地址形式）",
+        "此时主存的地址样子"
+      ],
+      "alt": "此时主存的地址样子",
+      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "selectedAsset": "co-0071.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "全相联映射图解",
+      "branchLevel": 3
+    },
+    {
+      "asset": "co-0083.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 577,
+      "heading": "高速缓冲存储器Cache",
+      "parents": [
+        "Cache和主存的映射关系",
+        "全相联映射",
+        "地址变化：",
+        "大题第二步（根据地址映射规则计算正确的地址形式）",
+        "此时主存的地址样子",
+        "CPU访问例子（大题第三步）"
+      ],
+      "alt": "CPU访问例子（大题第三步）",
+      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "selectedAsset": "co-0083.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "全相联映射图解",
+      "branchLevel": 3
+    },
+    {
+      "asset": "co-0086.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 586,
+      "heading": "高速缓冲存储器Cache",
+      "parents": [
+        "Cache和主存的映射关系",
+        "全相联映射",
+        "Cache每行有 1+1+3+22+64\\*8 = 539 bit"
+      ],
+      "alt": "Cache每行有 1+1+3+22+64\\*8 = 539 bit",
+      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "selectedAsset": "co-0086.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "全相联映射图解",
+      "branchLevel": 3
+    },
+    {
+      "asset": "co-0224.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 591,
+      "heading": "高速缓冲存储器Cache",
+      "parents": [
+        "Cache和主存的映射关系",
+        "组相联映射",
+        "组相联映射规则：",
+        "主存在Cache中的组号 = 主存块号 % Cache总组数"
+      ],
+      "alt": "主存在Cache中的组号 = 主存块号 % Cache总组数",
+      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "selectedAsset": "co-0224.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "组相联映射图解",
+      "branchLevel": 3
+    },
+    {
+      "asset": "co-0278.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 599,
+      "heading": "高速缓冲存储器Cache",
+      "parents": [
+        "Cache和主存的映射关系",
+        "组相联映射",
+        "地址变化：",
+        "大题第二步（根据地址应声规则计算正确的地址形式）"
+      ],
+      "alt": "大题第二步（根据地址应声规则计算正确的地址形式）",
+      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "selectedAsset": "co-0278.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "组相联映射图解",
+      "branchLevel": 3
+    },
+    {
+      "asset": "co-0275.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 601,
+      "heading": "高速缓冲存储器Cache",
+      "parents": [
+        "Cache和主存的映射关系",
+        "组相联映射",
+        "地址变化：",
+        "大题第二步（根据地址应声规则计算正确的地址形式）",
+        "此时主存的地址样子"
+      ],
+      "alt": "此时主存的地址样子",
+      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "selectedAsset": "co-0275.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "组相联映射图解",
+      "branchLevel": 3
+    },
+    {
+      "asset": "co-0141.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 603,
+      "heading": "高速缓冲存储器Cache",
+      "parents": [
+        "Cache和主存的映射关系",
+        "组相联映射",
+        "地址变化：",
+        "大题第二步（根据地址应声规则计算正确的地址形式）",
+        "此时主存的地址样子",
+        "CPU访问例子（大题第三步）"
+      ],
+      "alt": "CPU访问例子（大题第三步）",
+      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "selectedAsset": "co-0141.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "组相联映射图解",
+      "branchLevel": 3
+    },
+    {
+      "asset": "co-0197.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 606,
+      "heading": "高速缓冲存储器Cache",
+      "parents": [
+        "Cache和主存的映射关系",
+        "组相联映射",
+        "Cache每行结构：",
+        "Cache每行有 1+1+1+20+64\\*8 = 535 bit"
+      ],
+      "alt": "Cache每行有 1+1+1+20+64\\*8 = 535 bit",
+      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "selectedAsset": "co-0197.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "组相联映射图解",
+      "branchLevel": 3
+    },
+    {
+      "asset": "co-0246.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 609,
+      "heading": "高速缓冲存储器Cache",
+      "parents": [
+        "Cache和主存的映射关系",
+        "组相联映射",
+        "Cache每行结构：",
+        "Cache每行有 1+1+1+20+64\\*8 = 535 bit",
+        "标记项组成的二维标记阵列"
+      ],
+      "alt": "标记项组成的二维标记阵列",
+      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "selectedAsset": "co-0246.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "组相联映射图解",
+      "branchLevel": 3
+    },
+    {
+      "asset": "co-0268.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 698,
+      "heading": "虚拟存储器",
+      "parents": [
+        "用户编程使用逻辑/虚地址来进行编程，操作系统自行将其转为对应的物理/实地址",
+        "虚拟存储器的三个地址空间"
+      ],
+      "alt": "虚拟存储器的三个地址空间",
+      "target": "computer-organization/03-14-virtual-memory.mdx",
+      "selectedAsset": "co-0268.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "为什么需要虚存"
+    },
+    {
+      "asset": "co-0062.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 708,
+      "heading": "虚拟存储器",
+      "parents": [
+        "页式虚拟存储",
+        "页表",
+        "页表项",
+        "主存中的页表实例：&lt;有效位、脏位、引用位、物理页号&gt;"
+      ],
+      "alt": "主存中的页表实例：&amp;amp;lt;有效位、脏位、引用位、物理页号&amp;amp;gt;",
+      "target": "computer-organization/03-14-virtual-memory.mdx",
+      "selectedAsset": "co-0062.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "页表项PTE不等于固定四元组"
+    },
+    {
+      "asset": "co-0298.svg",
+      "chapter": "computer-organization/03-memory-system.mdx",
+      "line": 759,
+      "heading": "虚拟存储器",
+      "parents": [
+        "页式虚拟存储",
+        "TLB + Cache 的多级存储系统",
+        "第一步：虚拟地址到物理地址",
+        "概要：也可以合起来图"
+      ],
+      "alt": "也可以合起来图",
+      "target": "computer-organization/03-15-tlb-cache.mdx",
+      "selectedAsset": "co-0298.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "标准（PIPT）访问路径"
+    },
+    {
+      "asset": "co-0318.svg",
+      "chapter": "computer-organization/04-instruction-set.mdx",
+      "line": 60,
+      "heading": "指令格式",
+      "parents": [
+        "扩展操作码："
+      ],
+      "alt": "扩展操作码：",
+      "target": "computer-organization/04-3-extended-opcodes.mdx",
+      "selectedAsset": "co-0318.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "完整分配实例"
+    },
+    {
+      "asset": "co-0235.svg",
+      "chapter": "computer-organization/04-instruction-set.mdx",
+      "line": 102,
+      "heading": "指令寻址和数据寻址",
+      "parents": [
+        "数据寻址",
+        "隐含寻址"
+      ],
+      "alt": "隐含寻址",
+      "target": "computer-organization/04-5-immediate-memory.mdx",
+      "selectedAsset": "co-0235.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "别把隐含寻址当公式"
+    },
+    {
+      "asset": "co-0024.svg",
+      "chapter": "computer-organization/04-instruction-set.mdx",
+      "line": 122,
+      "heading": "指令寻址和数据寻址",
+      "parents": [
+        "数据寻址",
+        "普通寻址",
+        "间接寻址"
+      ],
+      "alt": "间接寻址",
+      "target": "computer-organization/04-5-immediate-memory.mdx",
+      "selectedAsset": "co-04-fixed-0024.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0084.svg",
+      "chapter": "computer-organization/04-instruction-set.mdx",
+      "line": 134,
+      "heading": "指令寻址和数据寻址",
+      "parents": [
+        "数据寻址",
+        "寄存器寻址",
+        "寄存器寻址"
+      ],
+      "alt": "寄存器寻址",
+      "target": "computer-organization/04-6-register-addressing.mdx",
+      "selectedAsset": "co-04-fixed-0084.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0078.svg",
+      "chapter": "computer-organization/04-instruction-set.mdx",
+      "line": 143,
+      "heading": "指令寻址和数据寻址",
+      "parents": [
+        "数据寻址",
+        "寄存器寻址",
+        "寄存器间接寻址"
+      ],
+      "alt": "寄存器间接寻址",
+      "target": "computer-organization/04-6-register-addressing.mdx",
+      "selectedAsset": "co-04-fixed-0078.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0192.svg",
+      "chapter": "computer-organization/04-instruction-set.mdx",
+      "line": 149,
+      "heading": "指令寻址和数据寻址",
+      "parents": [
+        "数据寻址",
+        "偏移寻址",
+        "相对寻址"
+      ],
+      "alt": "相对寻址",
+      "target": "computer-organization/04-7-relative-base-index.mdx",
+      "selectedAsset": "co-04-fixed-0192.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0200.svg",
+      "chapter": "computer-organization/04-instruction-set.mdx",
+      "line": 160,
+      "heading": "指令寻址和数据寻址",
+      "parents": [
+        "数据寻址",
+        "偏移寻址",
+        "基址寻址"
+      ],
+      "alt": "基址寻址",
+      "target": "computer-organization/04-7-relative-base-index.mdx",
+      "selectedAsset": "co-04-fixed-0200.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0176.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 123,
+      "heading": "指令执行过程",
+      "parents": [
+        "指令周期",
+        "其中：",
+        "定长的机器周期"
+      ],
+      "alt": "定长的机器周期",
+      "target": "computer-organization/05-2-cycles.mdx",
+      "selectedAsset": "co-05-cycle-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0303.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 125,
+      "heading": "指令执行过程",
+      "parents": [
+        "指令周期",
+        "其中：",
+        "不定长的机器周期"
+      ],
+      "alt": "不定长的机器周期",
+      "target": "computer-organization/05-2-cycles.mdx",
+      "selectedAsset": "co-05-cycle-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0117.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 133,
+      "heading": "指令执行过程",
+      "parents": [
+        "指令周期",
+        "举例：",
+        "取指、执行、多执行、间址、中断"
+      ],
+      "alt": "取指、执行、多执行、间址、中断",
+      "target": "computer-organization/05-2-cycles.mdx",
+      "selectedAsset": "co-0117.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "典型的教学阶段"
+    },
+    {
+      "asset": "co-0209.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 153,
+      "heading": "指令执行过程",
+      "parents": [
+        "取指周期",
+        "取值周期控制流"
+      ],
+      "alt": "取值周期控制流",
+      "target": "computer-organization/05-3-fetch-interrupt.mdx",
+      "selectedAsset": "co-05-readable-0209.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0291.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 166,
+      "heading": "指令执行过程",
+      "parents": [
+        "间址周期",
+        "一次间址周期数据流"
+      ],
+      "alt": "一次间址周期数据流",
+      "target": "computer-organization/05-3-fetch-interrupt.mdx",
+      "selectedAsset": "co-05-readable-0291.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0102.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 170,
+      "heading": "指令执行过程",
+      "parents": [
+        "间址周期",
+        "一次间址周期数据流",
+        "1\\. Ad(IR)/Ad(MDR) -&gt; MAR --- ①",
+        "这里也可以是Ad(MDR) -&gt; MAR？可以，在唐朔飞计算机组成原理中（第三版），有Ad(MDR)的原图和原描述"
+      ],
+      "alt": "这里也可以是Ad(MDR) -&amp;amp;gt; MAR？可以，在唐朔飞计算机组成原理中（第三版），有Ad(MDR)的原图和原描述",
+      "target": "computer-organization/05-3-fetch-interrupt.mdx",
+      "selectedAsset": "co-0102.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "间址周期IND：多一次“取指针”"
+    },
+    {
+      "asset": "co-0184.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 184,
+      "heading": "指令执行过程",
+      "parents": [
+        "中断周期"
+      ],
+      "alt": "中断周期",
+      "target": "computer-organization/05-3-fetch-interrupt.mdx",
+      "selectedAsset": "co-0184.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "中断响应：先保护能恢复执行的状态"
+    },
+    {
+      "asset": "co-0273.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 224,
+      "heading": "【数据通路】的功能、基本结构",
+      "parents": [
+        "数据通路的基本结构",
+        "CPU内部单总线方式"
+      ],
+      "alt": "CPU内部单总线方式",
+      "target": "computer-organization/05-4-datapath.mdx",
+      "selectedAsset": "co-05-single-bus-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0103.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 226,
+      "heading": "【数据通路】的功能、基本结构",
+      "parents": [
+        "数据通路的基本结构",
+        "CPU内部单总线方式"
+      ],
+      "alt": "CPU内部单总线方式",
+      "target": "computer-organization/05-4-datapath.mdx",
+      "selectedAsset": "co-05-single-bus-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0059.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 269,
+      "heading": "【数据通路】的功能、基本结构",
+      "parents": [
+        "数据通路的基本结构",
+        "CPU专用数据通路方式",
+        "基本结构 + 一个取指周期的例子"
+      ],
+      "alt": "基本结构 + 一个取指周期的例子",
+      "target": "computer-organization/05-4-datapath.mdx",
+      "selectedAsset": "co-05-readable-0059.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0193.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 271,
+      "heading": "【数据通路】的功能、基本结构",
+      "parents": [
+        "数据通路的基本结构",
+        "CPU专用数据通路方式",
+        "基本结构 + 一个取指周期的例子",
+        "例题"
+      ],
+      "alt": "例题",
+      "target": "computer-organization/05-4-datapath.mdx",
+      "selectedAsset": "co-0193.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "专用/旁路数据通路"
+    },
+    {
+      "asset": "co-0127.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 293,
+      "heading": "控制器各部件之间的连接",
+      "parents": [
+        "CPU的三总线结构",
+        "数据总线DB、地址总线AB、控制总线CB"
+      ],
+      "alt": "数据总线DB、地址总线AB、控制总线CB",
+      "target": "computer-organization/05-4-datapath.mdx",
+      "selectedAsset": "co-05-readable-0127.svg",
+      "reason": "verified-redraw",
+      "action": "inserted",
+      "branch": "CPU内部多总线结构"
+    },
+    {
+      "asset": "co-0151.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 352,
+      "heading": "硬布线",
+      "parents": [
+        "确定一条微指令 四大要素：",
+        "微操作通过【指令的OP部分、当前处于哪个机器周期、当前机器周期的节拍号、PSW的状态】来确定"
+      ],
+      "alt": "微操作通过【指令的OP部分、当前处于哪个机器周期、当前机器周期的节拍号、PSW的状态】来确定",
+      "target": "computer-organization/05-6-hardwired.mdx",
+      "selectedAsset": "co-0151.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "四组控制条件"
+    },
+    {
+      "asset": "co-0290.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 355,
+      "heading": "硬布线",
+      "parents": [
+        "确定一条微指令 四大要素：",
+        "确定指令操作码："
+      ],
+      "alt": "确定指令操作码：",
+      "target": "computer-organization/05-6-hardwired.mdx",
+      "selectedAsset": "co-05-hardwired-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0002.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 362,
+      "heading": "硬布线",
+      "parents": [
+        "确定一条微指令 四大要素：",
+        "确定机器周期："
+      ],
+      "alt": "确定机器周期：",
+      "target": "computer-organization/05-6-hardwired.mdx",
+      "selectedAsset": "co-05-hardwired-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0149.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 367,
+      "heading": "硬布线",
+      "parents": [
+        "确定一条微指令 四大要素：",
+        "确定节拍号："
+      ],
+      "alt": "确定节拍号：",
+      "target": "computer-organization/05-6-hardwired.mdx",
+      "selectedAsset": "co-05-hardwired-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0210.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 371,
+      "heading": "硬布线",
+      "parents": [
+        "确定一条微指令 四大要素：",
+        "确定标志信息："
+      ],
+      "alt": "确定标志信息：",
+      "target": "computer-organization/05-6-hardwired.mdx",
+      "selectedAsset": "co-05-hardwired-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0115.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 375,
+      "heading": "硬布线",
+      "parents": [
+        "确定一条微指令 四大要素：",
+        "最后CU输出微操作："
+      ],
+      "alt": "最后CU输出微操作：",
+      "target": "computer-organization/05-6-hardwired.mdx",
+      "selectedAsset": "co-05-hardwired-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0284.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 378,
+      "heading": "硬布线",
+      "parents": [
+        "确定一条微指令 四大要素：",
+        "完整图"
+      ],
+      "alt": "完整图",
+      "target": "computer-organization/05-6-hardwired.mdx",
+      "selectedAsset": "co-05-hardwired-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0014.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 382,
+      "heading": "硬布线",
+      "parents": [
+        "如何通过要素 确定微指令：",
+        "考虑所有可能的指令情况，写出对应的微操作所需要的四要素：",
+        "例如：取指周期T0时刻的(PC) -&gt; MAR"
+      ],
+      "alt": "例如：取指周期T0时刻的(PC) -&amp;amp;gt; MAR",
+      "target": "computer-organization/05-7-control-timing.mdx",
+      "selectedAsset": "co-0014.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "示范取指安排：不是唯一解"
+    },
+    {
+      "asset": "co-0162.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 385,
+      "heading": "硬布线",
+      "parents": [
+        "如何通过要素 确定微指令：",
+        "考虑所有可能的指令情况，写出对应的微操作所需要的四要素：",
+        "例如：取指周期T0时刻的(PC) -&gt; MAR",
+        "例如：M(MAR) -&gt; MDR"
+      ],
+      "alt": "例如：M(MAR) -&amp;amp;gt; MDR",
+      "target": "computer-organization/05-7-control-timing.mdx",
+      "selectedAsset": "co-0162.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "示范取指安排：不是唯一解"
+    },
+    {
+      "asset": "co-0190.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 446,
+      "heading": "微程序",
+      "parents": [
+        "微指令的结构"
+      ],
+      "alt": "微指令的结构",
+      "target": "computer-organization/05-9-microinstruction-encoding.mdx",
+      "selectedAsset": "co-05-readable-0190.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0049.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 461,
+      "heading": "微程序",
+      "parents": [
+        "微程序控制器 （微CPU）部件",
+        "CM - 控制存储器",
+        "控存，由ROM组成，用来存各种指令的微程序段（就像存在内存中的程序的指令一样）"
+      ],
+      "alt": "控存，由ROM组成，用来存各种指令的微程序段（就像存在内存中的程序的指令一样）",
+      "target": "computer-organization/05-8-microprogram-controller.mdx",
+      "selectedAsset": "co-0049.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "控制器四大部件"
+    },
+    {
+      "asset": "co-0204.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 470,
+      "heading": "微程序",
+      "parents": [
+        "微程序控制器 的处理流程："
+      ],
+      "alt": "微程序控制器 的处理流程：",
+      "target": "computer-organization/05-8-microprogram-controller.mdx",
+      "selectedAsset": "co-0204.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "取出一条微指令的流程"
+    },
+    {
+      "asset": "co-0308.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 482,
+      "heading": "微程序",
+      "parents": [
+        "CM中的微指令序列"
+      ],
+      "alt": "CM中的微指令序列",
+      "target": "computer-organization/05-8-microprogram-controller.mdx",
+      "selectedAsset": "co-0308.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "从机器指令到微指令"
+    },
+    {
+      "asset": "co-0159.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 538,
+      "heading": "微程序",
+      "parents": [
+        "微指令的编码方式",
+        "μOP部分",
+        "直接编码方式",
+        "一个bit的 0、1对应一个微操作的运行和不运行"
+      ],
+      "alt": "一个bit的 0、1对应一个微操作的运行和不运行",
+      "target": "computer-organization/05-9-microinstruction-encoding.mdx",
+      "selectedAsset": "co-05-readable-0159.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0185.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 545,
+      "heading": "微程序",
+      "parents": [
+        "微指令的编码方式",
+        "μOP部分",
+        "字段编码方式"
+      ],
+      "alt": "字段编码方式",
+      "target": "computer-organization/05-9-microinstruction-encoding.mdx",
+      "selectedAsset": "co-05-readable-0185.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0287.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 557,
+      "heading": "微程序",
+      "parents": [
+        "微指令的编码方式",
+        "μOP部分",
+        "字段间接编码方式 （隐式编码）",
+        "字段编码方式中，译码后不会直接发出微命令，而是需要多个译码结果来决定"
+      ],
+      "alt": "字段编码方式中，译码后不会直接发出微命令，而是需要多个译码结果来决定",
+      "target": "computer-organization/05-9-microinstruction-encoding.mdx",
+      "selectedAsset": "co-0287.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "字段间接编码"
+    },
+    {
+      "asset": "co-0203.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 568,
+      "heading": "微程序",
+      "parents": [
+        "微指令的编码方式",
+        "下地址部分",
+        "根据OP形成",
+        "根据【机器指令】的OP部分来指明操作码",
+        "就是这个"
+      ],
+      "alt": "就是这个",
+      "target": "computer-organization/05-10-microaddress-design.mdx",
+      "selectedAsset": "co-05-readable-0203.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0120.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 581,
+      "heading": "微程序",
+      "parents": [
+        "微指令的编码方式",
+        "下地址部分",
+        "测试网络",
+        "顺序逻辑部件就是测试网络"
+      ],
+      "alt": "顺序逻辑部件就是测试网络",
+      "target": "computer-organization/05-10-microaddress-design.mdx",
+      "selectedAsset": "co-0120.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "五种常见来源"
+    },
+    {
+      "asset": "co-0204.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 632,
+      "heading": "微程序",
+      "parents": [
+        "设计一个微程序控制单元",
+        "概要：配图"
+      ],
+      "alt": "设计一个微程序控制单元",
+      "target": "computer-organization/05-8-microprogram-controller.mdx",
+      "selectedAsset": "co-0204.svg",
+      "reason": "restored-original",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0028.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 685,
+      "heading": "指令流水线",
+      "parents": [
+        "指令流水定义",
+        "传统方式："
+      ],
+      "alt": "传统方式：",
+      "target": "computer-organization/05-11-pipeline-performance.mdx",
+      "selectedAsset": "co-0028.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "核心思想"
+    },
+    {
+      "asset": "co-0130.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 692,
+      "heading": "指令流水线",
+      "parents": [
+        "指令流水定义",
+        "流水线方式：",
+        "一次重叠："
+      ],
+      "alt": "一次重叠：",
+      "target": "computer-organization/05-11-pipeline-performance.mdx",
+      "selectedAsset": "co-0130.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "核心思想"
+    },
+    {
+      "asset": "co-0310.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 699,
+      "heading": "指令流水线",
+      "parents": [
+        "指令流水定义",
+        "流水线方式：",
+        "两次重叠："
+      ],
+      "alt": "两次重叠：",
+      "target": "computer-organization/05-11-pipeline-performance.mdx",
+      "selectedAsset": "co-0310.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "核心思想"
+    },
+    {
+      "asset": "co-0029.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 704,
+      "heading": "指令流水线",
+      "parents": [
+        "指令流水线 的表示方式",
+        "执行过程图、时空图",
+        "指令执行过程图"
+      ],
+      "alt": "指令执行过程图",
+      "target": "computer-organization/05-11-pipeline-performance.mdx",
+      "selectedAsset": "co-05-pipeline-grid-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0250.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 706,
+      "heading": "指令流水线",
+      "parents": [
+        "指令流水线 的表示方式",
+        "执行过程图、时空图",
+        "指令执行过程图",
+        "时空图"
+      ],
+      "alt": "时空图",
+      "target": "computer-organization/05-11-pipeline-performance.mdx",
+      "selectedAsset": "co-05-pipeline-grid-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0095.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 709,
+      "heading": "指令流水线",
+      "parents": [
+        "流水线的性能指标"
+      ],
+      "alt": "流水线的性能指标",
+      "target": "computer-organization/05-11-pipeline-performance.mdx",
+      "selectedAsset": "co-0095.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "三个考频极高指标"
+    },
+    {
+      "asset": "co-0274.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 724,
+      "heading": "指令流水线",
+      "parents": [
+        "流水线的性能指标",
+        "流水线的效率：",
+        "1 - 红色区域面积 ➗ 蓝色区域面积"
+      ],
+      "alt": "1 - 红色区域面积 ➗ 蓝色区域面积",
+      "target": "computer-organization/05-11-pipeline-performance.mdx",
+      "selectedAsset": "co-0274.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "三个考频极高指标"
+    },
+    {
+      "asset": "co-0045.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 731,
+      "heading": "指令流水线",
+      "parents": [
+        "指令流水线 的影响因素",
+        "机器周期分段：",
+        "FE 取指 -&gt; ID 译码 -&gt; EX 执行 -&gt; M 访存 -&gt; WB 写回"
+      ],
+      "alt": "FE 取指 -&amp;amp;gt; ID 译码 -&amp;amp;gt; EX 执行 -&amp;amp;gt; M 访存 -&amp;amp;gt; WB 写回",
+      "target": "computer-organization/05-12-five-stage.mdx",
+      "selectedAsset": "co-05-readable-0045.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0231.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 758,
+      "heading": "指令流水线",
+      "parents": [
+        "指令流水线 的影响因素",
+        "流水线冲突：",
+        "资源冲突（结构相关）"
+      ],
+      "alt": "资源冲突（结构相关）",
+      "target": "computer-organization/05-13-data-hazards.mdx",
+      "selectedAsset": "co-05-readable-0231.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0205.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 767,
+      "heading": "指令流水线",
+      "parents": [
+        "指令流水线 的影响因素",
+        "流水线冲突：",
+        "数据冲突（数据冲突）"
+      ],
+      "alt": "数据冲突（数据冲突）",
+      "target": "computer-organization/05-13-data-hazards.mdx",
+      "selectedAsset": "co-0205.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "三种数据相关"
+    },
+    {
+      "asset": "co-0018.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 771,
+      "heading": "指令流水线",
+      "parents": [
+        "指令流水线 的影响因素",
+        "流水线冲突：",
+        "数据冲突（数据冲突）",
+        "解决办法",
+        "1\\. 硬件阻塞 (stall)，插入气泡"
+      ],
+      "alt": "1. 硬件阻塞 (stall)，插入气泡",
+      "target": "computer-organization/05-13-data-hazards.mdx",
+      "selectedAsset": "co-0018.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "Load-Use最常考"
+    },
+    {
+      "asset": "co-0216.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 773,
+      "heading": "指令流水线",
+      "parents": [
+        "指令流水线 的影响因素",
+        "流水线冲突：",
+        "数据冲突（数据冲突）",
+        "解决办法",
+        "1\\. 硬件阻塞 (stall)，插入气泡",
+        "2\\. 软件插入(NOP)，插入空指令"
+      ],
+      "alt": "2. 软件插入(NOP)，插入空指令",
+      "target": "computer-organization/05-13-data-hazards.mdx",
+      "selectedAsset": "co-0216.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "Load-Use最常考"
+    },
+    {
+      "asset": "co-0286.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 775,
+      "heading": "指令流水线",
+      "parents": [
+        "指令流水线 的影响因素",
+        "流水线冲突：",
+        "数据冲突（数据冲突）",
+        "解决办法",
+        "3\\. 数据旁路技术，把ALU的输出端和输入端相接，这样在执行阶段后就可以直接使用上次的运算结果了"
+      ],
+      "alt": "3. 数据旁路技术，把ALU的输出端和输入端相接，这样在执行阶段后就可以直接使用上次的运算结果了",
+      "target": "computer-organization/05-13-data-hazards.mdx",
+      "selectedAsset": "co-0286.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "旁路Forwarding/Bypassing"
+    },
+    {
+      "asset": "co-0133.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 779,
+      "heading": "指令流水线",
+      "parents": [
+        "指令流水线 的影响因素",
+        "流水线冲突：",
+        "控制冲突（控制冲突）",
+        "因为转移指令或其他改变PC值的指令而导致断流"
+      ],
+      "alt": "因为转移指令或其他改变PC值的指令而导致断流",
+      "target": "computer-organization/05-14-control-hazards.mdx",
+      "selectedAsset": "co-05-readable-0133.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0119.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 792,
+      "heading": "指令流水线",
+      "parents": [
+        "举例说明五种类型指令：",
+        "运算类指令",
+        "① IF取指 ② ID译码&amp;取值 ③ EX 执行 ④ 空过  ⑤ WB 写回寄存器"
+      ],
+      "alt": "① IF取指 ② ID译码&amp;amp;amp;取值 ③ EX 执行 ④ 空过 ⑤ WB 写回寄存器",
+      "target": "computer-organization/05-12-five-stage.mdx",
+      "selectedAsset": "co-0119.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "典型ALU寄存器运算 `ADD R3,R1,R2`"
+    },
+    {
+      "asset": "co-0045.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 810,
+      "heading": "指令流水线",
+      "parents": [
+        "举例说明五种类型指令：",
+        "LOAD指令",
+        "① IF取指 ② ID译码&amp;取值 ③ EX 执行 ④ M 访存  ⑤ WB 写回寄存器"
+      ],
+      "alt": "① IF取指 ② ID译码&amp;amp;amp;取值 ③ EX 执行 ④ M 访存 ⑤ WB 写回寄存器",
+      "target": "computer-organization/05-12-five-stage.mdx",
+      "selectedAsset": "co-05-readable-0045.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0155.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 825,
+      "heading": "指令流水线",
+      "parents": [
+        "举例说明五种类型指令：",
+        "STORE指令",
+        "① IF取指 ② ID译码&amp;取值 ③ EX 执行 ④ M 访存  ⑤ 空段"
+      ],
+      "alt": "① IF取指 ② ID译码&amp;amp;amp;取值 ③ EX 执行 ④ M 访存 ⑤ 空段",
+      "target": "computer-organization/05-12-five-stage.mdx",
+      "selectedAsset": "co-05-readable-0155.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0196.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 839,
+      "heading": "指令流水线",
+      "parents": [
+        "举例说明五种类型指令：",
+        "BRANCH指令",
+        "① IF取指 ② ID译码&amp;取值 ③ EX 执行 ④ M/WrPC（目标PC值写回PC）  ⑤ 空段"
+      ],
+      "alt": "① IF取指 ② ID译码&amp;amp;amp;取值 ③ EX 执行 ④ M/WrPC（目标PC值写回PC） ⑤ 空段",
+      "target": "computer-organization/05-12-five-stage.mdx",
+      "selectedAsset": "co-0196.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "`BEQ R1,R2,offset`"
+    },
+    {
+      "asset": "co-0237.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 859,
+      "heading": "指令流水线",
+      "parents": [
+        "举例说明五种类型指令：",
+        "JMP指令",
+        "① IF取指 ② ID译码&amp;取值 ③ EX/WrPC ④ 空段  ⑤ 空段"
+      ],
+      "alt": "① IF取指 ② ID译码&amp;amp;amp;取值 ③ EX/WrPC ④ 空段 ⑤ 空段",
+      "target": "computer-organization/05-12-five-stage.mdx",
+      "selectedAsset": "co-0237.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "`JMP`或无条件跳转"
+    },
+    {
+      "asset": "co-0259.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 909,
+      "heading": "指令流水线",
+      "parents": [
+        "流水线的多发技术",
+        "1\\. 超标量技术"
+      ],
+      "alt": "1. 超标量技术",
+      "target": "computer-organization/05-15-issue-techniques.mdx",
+      "selectedAsset": "co-05-readable-0259.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0055.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 917,
+      "heading": "指令流水线",
+      "parents": [
+        "流水线的多发技术",
+        "2\\. 超流水技术"
+      ],
+      "alt": "2. 超流水技术",
+      "target": "computer-organization/05-15-issue-techniques.mdx",
+      "selectedAsset": "co-05-readable-0055.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0153.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 926,
+      "heading": "指令流水线",
+      "parents": [
+        "流水线的多发技术",
+        "3\\. 超长指令字"
+      ],
+      "alt": "3. 超长指令字",
+      "target": "computer-organization/05-15-issue-techniques.mdx",
+      "selectedAsset": "co-05-readable-0153.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0106.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 961,
+      "heading": "多处理器",
+      "parents": [
+        "XIXD",
+        "SIMD",
+        "向量处理器",
+        "是特殊的SIMD，既可以一次处理多个数据，又一次处理的数据是一个多维的向量"
+      ],
+      "alt": "是特殊的SIMD，既可以一次处理多个数据，又一次处理的数据是一个多维的向量",
+      "target": "computer-organization/05-16-flynn.mdx",
+      "selectedAsset": "co-05-readable-0106.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0007.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 974,
+      "heading": "多处理器",
+      "parents": [
+        "XIXD",
+        "MIMD",
+        "多计算机系统",
+        "每个计算机拥有各自私有的存储器，有独立的主存空间，计算机之间只能够通过消息传递进行通信"
+      ],
+      "alt": "每个计算机拥有各自私有的存储器，有独立的主存空间，计算机之间只能够通过消息传递进行通信",
+      "target": "computer-organization/05-16-flynn.mdx",
+      "selectedAsset": "co-05-readable-0007.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0116.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 977,
+      "heading": "多处理器",
+      "parents": [
+        "XIXD",
+        "MIMD",
+        "多核处理器系统"
+      ],
+      "alt": "多核处理器系统",
+      "target": "computer-organization/05-17-multicore.mdx",
+      "selectedAsset": "co-05-readable-0116.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0212.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 1015,
+      "heading": "多处理器",
+      "parents": [
+        "硬件多线程",
+        "同时",
+        "单核处理器有多个功能部件、寄存器组、指令发射槽",
+        "处理器"
+      ],
+      "alt": "处理器",
+      "target": "computer-organization/05-17-multicore.mdx",
+      "selectedAsset": "co-0212.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "硬件多线程的三种调度"
+    },
+    {
+      "asset": "co-0096.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 1037,
+      "heading": "多处理器",
+      "parents": [
+        "多核/多处理器",
+        "多处理器：",
+        "多处理器的分类",
+        "第一类：UMA统一存储访问",
+        "共享同一份内存，每个处理器访存所有存储单元的速度大致相同"
+      ],
+      "alt": "共享同一份内存，每个处理器访存所有存储单元的速度大致相同",
+      "target": "computer-organization/05-17-multicore.mdx",
+      "selectedAsset": "co-05-readable-0096.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0228.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 1046,
+      "heading": "多处理器",
+      "parents": [
+        "多核/多处理器",
+        "多处理器：",
+        "多处理器的分类",
+        "第二类：NUMA非统一存储访问",
+        "拥有自己的不同内存。会有特定几个处理器访存存储单元的速度更快"
+      ],
+      "alt": "拥有自己的不同内存。会有特定几个处理器访存存储单元的速度更快",
+      "target": "computer-organization/05-17-multicore.mdx",
+      "selectedAsset": "co-05-readable-0228.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0170.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 1062,
+      "heading": "多处理器",
+      "parents": [
+        "多核/多处理器",
+        "多核处理器：",
+        "不共享Cache"
+      ],
+      "alt": "不共享Cache",
+      "target": "computer-organization/05-17-multicore.mdx",
+      "selectedAsset": "co-0170.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "多核与多处理器"
+    },
+    {
+      "asset": "co-0116.svg",
+      "chapter": "computer-organization/05-cpu.mdx",
+      "line": 1065,
+      "heading": "多处理器",
+      "parents": [
+        "多核/多处理器",
+        "多核处理器：",
+        "不共享Cache",
+        "比较",
+        "共享Cache"
+      ],
+      "alt": "共享Cache",
+      "target": "computer-organization/05-17-multicore.mdx",
+      "selectedAsset": "co-05-readable-0116.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0094.svg",
+      "chapter": "computer-organization/06-bus.mdx",
+      "line": 40,
+      "heading": "总线定义",
+      "parents": [
+        "总线的分类",
+        "片内总线",
+        "芯片内部的总线，是CPU内部：寄存器与寄存器之间、寄存器与ALU之间的线",
+        "这里面所有的线"
+      ],
+      "alt": "这里面所有的线",
+      "target": "computer-organization/06-1-core-concepts.mdx",
+      "selectedAsset": "co-06-readable-0094.svg",
+      "reason": "verified-redraw",
+      "action": "inserted",
+      "branch": "为什么需要总线"
+    },
+    {
+      "asset": "co-0164.svg",
+      "chapter": "computer-organization/06-bus.mdx",
+      "line": 59,
+      "heading": "总线定义",
+      "parents": [
+        "总线结构",
+        "单总线结构",
+        "CPU、主存、IO全都挂载到一组总线上"
+      ],
+      "alt": "CPU、主存、IO全都挂载到一组总线上",
+      "target": "computer-organization/06-3-bus-topologies.mdx",
+      "selectedAsset": "co-06-readable-0164.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0056.svg",
+      "chapter": "computer-organization/06-bus.mdx",
+      "line": 68,
+      "heading": "总线定义",
+      "parents": [
+        "总线结构",
+        "双总线结构",
+        "一条是主存总线，另一条是IO总线"
+      ],
+      "alt": "一条是主存总线，另一条是IO总线",
+      "target": "computer-organization/06-3-bus-topologies.mdx",
+      "selectedAsset": "co-06-readable-0056.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0053.svg",
+      "chapter": "computer-organization/06-bus.mdx",
+      "line": 76,
+      "heading": "总线定义",
+      "parents": [
+        "总线结构",
+        "三总线结构",
+        "一条主存总线、一条IO总线、一条DMA"
+      ],
+      "alt": "一条主存总线、一条IO总线、一条DMA",
+      "target": "computer-organization/06-3-bus-topologies.mdx",
+      "selectedAsset": "co-06-readable-0053.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0194.svg",
+      "chapter": "computer-organization/06-bus.mdx",
+      "line": 151,
+      "heading": "总线事务和定时",
+      "parents": [
+        "总线定时",
+        "同步定时"
+      ],
+      "alt": "同步定时",
+      "target": "computer-organization/06-8-synchronous-timing.mdx",
+      "selectedAsset": "co-0194.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "教材同步读事务：四相位示意"
+    },
+    {
+      "asset": "co-0087.svg",
+      "chapter": "computer-organization/06-bus.mdx",
+      "line": 171,
+      "heading": "总线事务和定时",
+      "parents": [
+        "总线定时",
+        "异步定时",
+        "请求回答的互锁",
+        "不互锁方式"
+      ],
+      "alt": "不互锁方式",
+      "target": "computer-organization/06-9-async-handshakes.mdx",
+      "selectedAsset": "co-06-readable-0087.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0289.svg",
+      "chapter": "computer-organization/06-bus.mdx",
+      "line": 178,
+      "heading": "总线事务和定时",
+      "parents": [
+        "总线定时",
+        "异步定时",
+        "请求回答的互锁",
+        "半互锁方式"
+      ],
+      "alt": "半互锁方式",
+      "target": "computer-organization/06-9-async-handshakes.mdx",
+      "selectedAsset": "co-06-readable-0289.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0265.svg",
+      "chapter": "computer-organization/06-bus.mdx",
+      "line": 185,
+      "heading": "总线事务和定时",
+      "parents": [
+        "总线定时",
+        "异步定时",
+        "请求回答的互锁",
+        "全互锁方式"
+      ],
+      "alt": "全互锁方式",
+      "target": "computer-organization/06-9-async-handshakes.mdx",
+      "selectedAsset": "co-06-readable-0265.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "co-0089.svg",
+      "chapter": "computer-organization/06-bus.mdx",
+      "line": 201,
+      "heading": "总线事务和定时",
+      "parents": [
+        "半同步通信",
+        "同步 + 异步"
+      ],
+      "alt": "同步 + 异步",
+      "target": "computer-organization/06-10-semisync-split.mdx",
+      "selectedAsset": "co-0089.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "半同步方式"
+    },
+    {
+      "asset": "co-0075.svg",
+      "chapter": "computer-organization/07-io-system.mdx",
+      "line": 210,
+      "heading": "IO方式",
+      "parents": [
+        "程序中断方式",
+        "大致流程：",
+        "中断响应",
+        "2\\. CPU进行中断判优",
+        "在INTR中加入硬件排队器/查询程序，来获得当前的最优先请求"
+      ],
+      "alt": "在INTR中加入硬件排队器/查询程序，来获得当前的最优先请求",
+      "target": "computer-organization/07-8-priority-mask.mdx",
+      "selectedAsset": "co-0075.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "三种“优先”不可混淆"
+    },
+    {
+      "asset": "co-0238.svg",
+      "chapter": "computer-organization/07-io-system.mdx",
+      "line": 301,
+      "heading": "IO方式",
+      "parents": [
+        "程序中断方式",
+        "多重中断与屏蔽字",
+        "多重中断：",
+        "硬件排队器的改进：",
+        "MASK为该中断的中断屏蔽字"
+      ],
+      "alt": "MASK为该中断的中断屏蔽字",
+      "target": "computer-organization/07-8-priority-mask.mdx",
+      "selectedAsset": "co-0238.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "屏蔽位约定：1 屏蔽，0 放行"
+    },
+    {
+      "asset": "ds-0133.svg",
+      "chapter": "data-structures/03-stacks-queues-arrays.mdx",
+      "line": 177,
+      "heading": "特殊矩阵的压缩存储",
+      "parents": [
+        "特殊矩阵",
+        "三对角矩阵（带状矩阵）"
+      ],
+      "alt": "三对角矩阵（带状矩阵）",
+      "target": "data-structures/03-9-banded-sparse.mdx",
+      "selectedAsset": "ds-0133.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "三对角矩阵的结构"
+    },
+    {
+      "asset": "ds-0176.svg",
+      "chapter": "data-structures/05-trees.mdx",
+      "line": 99,
+      "heading": "二叉树",
+      "parents": [
+        "特殊的二叉树",
+        "满二叉树"
+      ],
+      "alt": "满二叉树",
+      "target": "data-structures/05-3-binary-types.mdx",
+      "selectedAsset": "ds-0176.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "满二叉树"
+    },
+    {
+      "asset": "ds-0032.svg",
+      "chapter": "data-structures/05-trees.mdx",
+      "line": 136,
+      "heading": "二叉树",
+      "parents": [
+        "二叉树的存储结构",
+        "顺序存储",
+        "存储方式"
+      ],
+      "alt": "存储方式",
+      "target": "data-structures/05-4-binary-storage.mdx",
+      "selectedAsset": "ds-0032.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "顺序存储 · 最适合完全二叉树"
+    },
+    {
+      "asset": "ds-0064.svg",
+      "chapter": "data-structures/05-trees.mdx",
+      "line": 140,
+      "heading": "二叉树",
+      "parents": [
+        "二叉树的存储结构",
+        "顺序存储",
+        "非完全二叉树"
+      ],
+      "alt": "非完全二叉树",
+      "target": "data-structures/05-4-binary-storage.mdx",
+      "selectedAsset": "ds-0064.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "一般二叉树的顺序存储"
+    },
+    {
+      "asset": "ds-0100.svg",
+      "chapter": "data-structures/05-trees.mdx",
+      "line": 268,
+      "heading": "树与森林",
+      "parents": [
+        "树的遍历",
+        "后根"
+      ],
+      "alt": "后根",
+      "target": "data-structures/05-9-forest-traversal.mdx",
+      "selectedAsset": "ds-0100.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "普通树的三种遍历"
+    },
+    {
+      "asset": "ds-0152.svg",
+      "chapter": "data-structures/05-trees.mdx",
+      "line": 421,
+      "heading": "并查集",
+      "parents": [
+        "定义："
+      ],
+      "alt": "定义：",
+      "target": "data-structures/05-13-union-find.mdx",
+      "selectedAsset": "ds-0152.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "解决什么问题"
+    },
+    {
+      "asset": "ds-0124.svg",
+      "chapter": "data-structures/05-trees.mdx",
+      "line": 423,
+      "heading": "并查集",
+      "parents": [
+        "定义：",
+        "存储结构：可以采用森林存储"
+      ],
+      "alt": "存储结构：可以采用森林存储",
+      "target": "data-structures/05-13-union-find.mdx",
+      "selectedAsset": "ds-0124.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "数组表示：两种方案别混"
+    },
+    {
+      "asset": "ds-0136.svg",
+      "chapter": "data-structures/06-graphs.mdx",
+      "line": 37,
+      "heading": "图的定义",
+      "parents": [
+        "各种各样的图",
+        "简单图："
+      ],
+      "alt": "简单图：",
+      "target": "data-structures/06-1-definitions.mdx",
+      "selectedAsset": "ds-0136.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "简单图与完全图"
+    },
+    {
+      "asset": "ds-0033.svg",
+      "chapter": "data-structures/06-graphs.mdx",
+      "line": 134,
+      "heading": "图的定义",
+      "parents": [
+        "无向图连通辨析：",
+        "概要：配图"
+      ],
+      "alt": "无向图连通辨析：",
+      "target": "data-structures/06-2-connectivity.mdx",
+      "selectedAsset": "ds-0033.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "无向图连通性"
+    },
+    {
+      "asset": "ds-0093.svg",
+      "chapter": "data-structures/06-graphs.mdx",
+      "line": 155,
+      "heading": "图的定义",
+      "parents": [
+        "有向图：",
+        "一个例子",
+        "C. 含有多个入度为0的顶点"
+      ],
+      "alt": "C. 含有多个入度为0的顶点",
+      "target": "data-structures/06-2-connectivity.mdx",
+      "selectedAsset": "ds-0093.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "有向图可达与强连通"
+    },
+    {
+      "asset": "ds-0206.svg",
+      "chapter": "data-structures/06-graphs.mdx",
+      "line": 344,
+      "heading": "图的应用",
+      "parents": [
+        "最短路径算法",
+        "有权图",
+        "Floyd算法",
+        "动态规范算法，动态维护一个dis\\[\\]\\[\\]和path\\[\\]\\[\\]，每次更新时都加入一个新的节点作为可使用的中转点。"
+      ],
+      "alt": "动态规范算法，动态维护一个dis\\[\\]\\[\\]和path\\[\\]\\[\\]，每次更新时都加入一个新的节点作为可使用的中转点。",
+      "target": "data-structures/06-11-floyd.mdx",
+      "selectedAsset": "ds-0206.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "Floyd–Warshall 的状态"
+    },
+    {
+      "asset": "ds-0003.svg",
+      "chapter": "data-structures/06-graphs.mdx",
+      "line": 394,
+      "heading": "图的应用",
+      "parents": [
+        "关键路径",
+        "AOE网",
+        "举例",
+        "找关键路径ve(i), le(i)"
+      ],
+      "alt": "找关键路径ve(i), le(i)",
+      "target": "data-structures/06-13-critical-path.mdx",
+      "selectedAsset": "ds-0003.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "事件最迟发生时间 vl"
+    },
+    {
+      "asset": "ds-0078.svg",
+      "chapter": "data-structures/06-graphs.mdx",
+      "line": 397,
+      "heading": "图的应用",
+      "parents": [
+        "关键路径",
+        "AOE网",
+        "举例",
+        "找关键路径的活动的 e(i), l(i), l(i)-e(i)"
+      ],
+      "alt": "找关键路径的活动的 e(i), l(i), l(i)-e(i)",
+      "target": "data-structures/06-13-critical-path.mdx",
+      "selectedAsset": "ds-0078.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "活动的 e、l 和时差 d"
+    },
+    {
+      "asset": "ds-0143.svg",
+      "chapter": "data-structures/06-graphs.mdx",
+      "line": 402,
+      "heading": "并查集的应用",
+      "parents": [
+        "图的连通分量"
+      ],
+      "alt": "图的连通分量",
+      "target": "data-structures/06-9-kruskal.mdx",
+      "selectedAsset": "ds-0143.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "并查集的正确使用"
+    },
+    {
+      "asset": "ds-0170.svg",
+      "chapter": "data-structures/06-graphs.mdx",
+      "line": 405,
+      "heading": "并查集的应用",
+      "parents": [
+        "判断是否有环"
+      ],
+      "alt": "判断是否有环",
+      "target": "data-structures/06-9-kruskal.mdx",
+      "selectedAsset": "ds-0170.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "并查集的正确使用"
+    },
+    {
+      "asset": "ds-0209.svg",
+      "chapter": "data-structures/07-search.mdx",
+      "line": 234,
+      "heading": "B树",
+      "parents": [
+        "B树",
+        "数据 结构"
+      ],
+      "alt": "数据 结构",
+      "target": "data-structures/07-9-btree-properties.mdx",
+      "selectedAsset": "ds-0209.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "基本定义（408教材常用约定）"
+    },
+    {
+      "asset": "ds-0010.svg",
+      "chapter": "data-structures/07-search.mdx",
+      "line": 241,
+      "heading": "B树",
+      "parents": [
+        "是一种BST的拓展",
+        "例：",
+        "五叉查找树"
+      ],
+      "alt": "五叉查找树",
+      "target": "data-structures/07-9-btree-properties.mdx",
+      "selectedAsset": "ds-0010.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "基本定义（408教材常用约定）"
+    },
+    {
+      "asset": "ds-0207.svg",
+      "chapter": "data-structures/07-search.mdx",
+      "line": 251,
+      "heading": "B树",
+      "parents": [
+        "如何保证m叉查找树效率够高",
+        "策略一：",
+        "如何记住⌈m/2⌉ - 1：考虑分裂吧，分裂也是从⌈m/2⌉ 处分的"
+      ],
+      "alt": "如何记住⌈m/2⌉ - 1：考虑分裂吧，分裂也是从⌈m/2⌉ 处分的",
+      "target": "data-structures/07-9-btree-properties.mdx",
+      "selectedAsset": "ds-0207.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "基本定义（408教材常用约定）"
+    },
+    {
+      "asset": "ds-0140.svg",
+      "chapter": "data-structures/07-search.mdx",
+      "line": 317,
+      "heading": "B树",
+      "parents": [
+        "B树的操作",
+        "删除",
+        "够删",
+        "删非终端",
+        "找直接前驱或直接后继来进行顶替"
+      ],
+      "alt": "找直接前驱或直接后继来进行顶替",
+      "target": "data-structures/07-11-btree-delete.mdx",
+      "selectedAsset": "ds-0140.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "第一步：确定目标结点"
+    },
+    {
+      "asset": "ds-0013.svg",
+      "chapter": "data-structures/07-search.mdx",
+      "line": 328,
+      "heading": "B树",
+      "parents": [
+        "B树的操作",
+        "删除",
+        "删终端后低于下限了",
+        "1\\. 兄弟够借",
+        "借左：借前驱和前驱的前驱",
+        "借前"
+      ],
+      "alt": "借前",
+      "target": "data-structures/07-11-btree-delete.mdx",
+      "selectedAsset": "ds-0013.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "情形 A：兄弟能借"
+    },
+    {
+      "asset": "ds-0190.svg",
+      "chapter": "data-structures/07-search.mdx",
+      "line": 330,
+      "heading": "B树",
+      "parents": [
+        "B树的操作",
+        "删除",
+        "删终端后低于下限了",
+        "1\\. 兄弟够借",
+        "借左：借前驱和前驱的前驱",
+        "借前",
+        "借后"
+      ],
+      "alt": "借后",
+      "target": "data-structures/07-11-btree-delete.mdx",
+      "selectedAsset": "ds-0190.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "情形 A：兄弟能借"
+    },
+    {
+      "asset": "ds-0067.svg",
+      "chapter": "data-structures/07-search.mdx",
+      "line": 340,
+      "heading": "B树",
+      "parents": [
+        "是二叉查找的一种升级优化，重点是查是否有某个值",
+        "或者把其记录理解为这样"
+      ],
+      "alt": "或者把其记录理解为这样",
+      "target": "data-structures/07-9-btree-properties.mdx",
+      "selectedAsset": "ds-0067.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "B树为磁盘索引的理由"
+    },
+    {
+      "asset": "ds-0025.svg",
+      "chapter": "data-structures/08-sort.mdx",
+      "line": 631,
+      "heading": "外部排序",
+      "parents": [
+        "置换选择排序",
+        "最佳归并树",
+        "归并排序的IO次数：",
+        "二路归并",
+        "最佳归并树（哈夫曼树）"
+      ],
+      "alt": "最佳归并树（哈夫曼树）",
+      "target": "data-structures/08-17-optimal-merge.mdx",
+      "selectedAsset": "ds-0025.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "二路归并示例"
+    },
+    {
+      "asset": "ds-0161.svg",
+      "chapter": "data-structures/08-sort.mdx",
+      "line": 636,
+      "heading": "外部排序",
+      "parents": [
+        "置换选择排序",
+        "最佳归并树",
+        "三路归并",
+        "用类似哈夫曼树的方法构造：每次找权值最小的三个结点来归并"
+      ],
+      "alt": "用类似哈夫曼树的方法构造：每次找权值最小的三个结点来归并",
+      "target": "data-structures/08-17-optimal-merge.mdx",
+      "selectedAsset": "ds-0161.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "三路归并示例与注意"
+    },
+    {
+      "asset": "ds-0052.svg",
+      "chapter": "data-structures/08-sort.mdx",
+      "line": 641,
+      "heading": "外部排序",
+      "parents": [
+        "置换选择排序",
+        "最佳归并树",
+        "三路归并",
+        "如果没有足够的归并段如何处理",
+        "补充长度为0的虚段来凑归并段"
+      ],
+      "alt": "补充长度为0的虚段来凑归并段",
+      "target": "data-structures/08-17-optimal-merge.mdx",
+      "selectedAsset": "ds-0052.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "严格 k 叉树的虚段补齐"
+    },
+    {
+      "asset": "ds-0029.svg",
+      "chapter": "data-structures/08-sort.mdx",
+      "line": 651,
+      "heading": "外部排序",
+      "parents": [
+        "置换选择排序",
+        "最佳归并树",
+        "三路归并",
+        "如果没有足够的归并段如何处理",
+        "应该补充多少个归并段呢",
+        "公式法：",
+        "k叉归并树：严格的k叉树，设有n0个叶子，nk个分支，总结点为n个。其中nk是整数 $\\left\\{ \\begin{array}{l} n=n_0+n_k \\\\ kn_k = n-1 \\end{array} \\right.  \\Longrightarrow  n_k = \\frac{n_0-1}{k-1}$",
+        "需要补充的虚段个数： $u = (n_0-1)\\%(k-1), 补充 (k-1) - u个$"
+      ],
+      "alt": "需要补充的虚段个数：",
+      "target": "data-structures/08-17-optimal-merge.mdx",
+      "selectedAsset": "ds-0029.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "严格 k 叉树的虚段补齐"
+    },
+    {
+      "asset": "os-0089.svg",
+      "chapter": "operating-systems/01-overview.mdx",
+      "line": 222,
+      "heading": "操作系统结构",
+      "parents": [
+        "模块化"
+      ],
+      "alt": "模块化",
+      "target": "operating-systems/01-12-kernel-architectures.mdx",
+      "selectedAsset": "os-0089.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "分层与模块化"
+    },
+    {
+      "asset": "os-0121.svg",
+      "chapter": "operating-systems/01-overview.mdx",
+      "line": 225,
+      "heading": "操作系统结构",
+      "parents": [
+        "模块化",
+        "分块标准",
+        "高内聚低耦合"
+      ],
+      "alt": "高内聚低耦合",
+      "target": "operating-systems/01-12-kernel-architectures.mdx",
+      "selectedAsset": "os-0121.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "分层与模块化"
+    },
+    {
+      "asset": "os-0161.svg",
+      "chapter": "operating-systems/01-overview.mdx",
+      "line": 247,
+      "heading": "操作系统结构",
+      "parents": [
+        "微内核",
+        "把部分内核OS代码移出内核，采用C/S模式进行执行"
+      ],
+      "alt": "把部分内核OS代码移出内核，采用C/S模式进行执行",
+      "target": "operating-systems/01-12-kernel-architectures.mdx",
+      "selectedAsset": "os-0161.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "微内核"
+    },
+    {
+      "asset": "os-0043.svg",
+      "chapter": "operating-systems/01-overview.mdx",
+      "line": 283,
+      "heading": "OS引导",
+      "parents": [
+        "前提",
+        "RAM和ROM"
+      ],
+      "alt": "RAM和ROM",
+      "target": "operating-systems/01-13-boot-bios-mbr.mdx",
+      "selectedAsset": "os-0043.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "为什么要引导"
+    },
+    {
+      "asset": "os-0105.svg",
+      "chapter": "operating-systems/01-overview.mdx",
+      "line": 286,
+      "heading": "OS引导",
+      "parents": [
+        "步骤图示："
+      ],
+      "alt": "步骤图示：",
+      "target": "operating-systems/01-13-boot-bios-mbr.mdx",
+      "selectedAsset": "os-0105.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "典型传统链条（示意）"
+    },
+    {
+      "asset": "os-0034.svg",
+      "chapter": "operating-systems/01-overview.mdx",
+      "line": 332,
+      "heading": "虚拟机",
+      "parents": [
+        "第一类",
+        "第一类虚拟机是运行在裸机上的OS，它的工作是支持真实硬件的多个虚拟机拷贝，类似于不同操作系统支持的进程。",
+        "例如Xen、Hyper-V、vSphere"
+      ],
+      "alt": "例如Xen、Hyper-V、vSphere",
+      "target": "operating-systems/01-15-virtualization.mdx",
+      "selectedAsset": "os-0034.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "第一类与第二类Hypervisor"
+    },
+    {
+      "asset": "os-0159.svg",
+      "chapter": "operating-systems/01-overview.mdx",
+      "line": 344,
+      "heading": "虚拟机",
+      "parents": [
+        "第二类",
+        "第二类虚拟机是运行在宿主操作系统上的，进程调度、资源分配等是依赖于其他OS的",
+        "例如VMware"
+      ],
+      "alt": "例如VMware",
+      "target": "operating-systems/01-15-virtualization.mdx",
+      "selectedAsset": "os-0159.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "第一类与第二类Hypervisor"
+    },
+    {
+      "asset": "os-0160.svg",
+      "chapter": "operating-systems/02-processes.mdx",
+      "line": 55,
+      "heading": "进程操作：",
+      "parents": [
+        "进程的七状态模型："
+      ],
+      "alt": "进程的七状态模型：",
+      "target": "operating-systems/02-2-process-states.mdx",
+      "selectedAsset": "os-02-process-states-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "os-0036.svg",
+      "chapter": "operating-systems/02-processes.mdx",
+      "line": 57,
+      "heading": "进程操作：",
+      "parents": [
+        "进程的七状态模型："
+      ],
+      "alt": "进程的七状态模型：",
+      "target": "operating-systems/02-2-process-states.mdx",
+      "selectedAsset": "os-02-process-states-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section"
+    },
+    {
+      "asset": "os-0028.svg",
+      "chapter": "operating-systems/02-processes.mdx",
+      "line": 272,
+      "heading": "进程与线程",
+      "parents": [
+        "线程库",
+        "线程的实现",
+        "通过调用线程库提供的函数来创建用户线程，线程的控制（状态转换）由运行时系统负责"
+      ],
+      "alt": "通过调用线程库提供的函数来创建用户线程，线程的控制（状态转换）由运行时系统负责",
+      "target": "operating-systems/02-5-thread-models.mdx",
+      "selectedAsset": "os-0028.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "用户级与内核级线程"
+    },
+    {
+      "asset": "os-0098.svg",
+      "chapter": "operating-systems/02-processes.mdx",
+      "line": 274,
+      "heading": "进程与线程",
+      "parents": [
+        "线程库",
+        "线程的实现",
+        "通过调用线程库提供的函数来创建用户线程，线程的控制（状态转换）由运行时系统负责",
+        "通过系统调用来创建内核线程，线程的控制（状态转换）由内核负责"
+      ],
+      "alt": "通过系统调用来创建内核线程，线程的控制（状态转换）由内核负责",
+      "target": "operating-systems/02-5-thread-models.mdx",
+      "selectedAsset": "os-0098.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "用户级与内核级线程"
+    },
+    {
+      "asset": "os-0155.svg",
+      "chapter": "operating-systems/02-processes.mdx",
+      "line": 308,
+      "heading": "进程与线程",
+      "parents": [
+        "内核和用户级线程调度",
+        "用户级线程的调度",
+        "线程切换代价：低，不需要切换完整的上下文 并发/并行度：低，一个阻塞整个进程阻塞"
+      ],
+      "alt": "线程切换代价：低，不需要切换完整的上下文 并发/并行度：低，一个阻塞整个进程阻塞",
+      "target": "operating-systems/02-5-thread-models.mdx",
+      "selectedAsset": "os-0155.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "用户级与内核级线程"
+    },
+    {
+      "asset": "os-0081.svg",
+      "chapter": "operating-systems/03-memory.mdx",
+      "line": 399,
+      "heading": "虚拟内存",
+      "parents": [
+        "请求分页管理",
+        "地址变化机构"
+      ],
+      "alt": "地址变化机构",
+      "target": "operating-systems/03-14-demand-paging.mdx",
+      "selectedAsset": "os-0081.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "页表项需要记录什么"
+    },
+    {
+      "asset": "os-0154.svg",
+      "chapter": "operating-systems/04-file-system.mdx",
+      "line": 615,
+      "heading": "文件系统",
+      "parents": [
+        "外存空闲空间管理",
+        "成组链接法",
+        "图示："
+      ],
+      "alt": "图示：",
+      "target": "operating-systems/04-16-group-link.mdx",
+      "selectedAsset": "os-0154.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "结构模型"
+    },
+    {
+      "asset": "os-0146.svg",
+      "chapter": "operating-systems/04-file-system.mdx",
+      "line": 661,
+      "heading": "文件系统",
+      "parents": [
+        "虚拟文件系统",
+        "概要：配图",
+        "函数功能指针指向的是对应文件系统中的函数",
+        "UFS："
+      ],
+      "alt": "UFS：",
+      "target": "operating-systems/04-17-vfs.mdx",
+      "selectedAsset": "os-0146.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "VFS中的文件操作"
+    },
+    {
+      "asset": "os-0075.svg",
+      "chapter": "operating-systems/04-file-system.mdx",
+      "line": 664,
+      "heading": "文件系统",
+      "parents": [
+        "虚拟文件系统",
+        "概要：配图",
+        "函数功能指针指向的是对应文件系统中的函数",
+        "FAT："
+      ],
+      "alt": "FAT：",
+      "target": "operating-systems/04-17-vfs.mdx",
+      "selectedAsset": "os-0075.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "VFS中的文件操作"
+    },
+    {
+      "asset": "os-0104.svg",
+      "chapter": "operating-systems/04-file-system.mdx",
+      "line": 752,
+      "heading": "两个补充",
+      "parents": [
+        "UNIX文件系统"
+      ],
+      "alt": "UNIX文件系统",
+      "target": "operating-systems/04-9-directory-fcb-inode.mdx",
+      "selectedAsset": "os-0104.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "目录项与文件控制块"
+    },
+    {
+      "asset": "os-0035.svg",
+      "chapter": "operating-systems/05-io.mdx",
+      "line": 341,
+      "heading": "高速缓存和缓冲区",
+      "parents": [
+        "缓冲技术",
+        "注：",
+        "下图中计算周期时假设的是工作区已经满了，所以设备 -&gt; 缓冲和工作区 -&gt; CPU可以同时运行，如果初始情况为空："
+      ],
+      "alt": "下图中计算周期时假设的是工作区已经满了，所以设备 -&amp;amp;gt; 缓冲和工作区 -&amp;amp;gt; CPU可以同时运行，如果初始情况为空：",
+      "target": "operating-systems/05-8-single-buffer.mdx",
+      "selectedAsset": "os-0035.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "统一符号与前提"
+    },
+    {
+      "asset": "os-0093.svg",
+      "chapter": "operating-systems/05-io.mdx",
+      "line": 345,
+      "heading": "高速缓存和缓冲区",
+      "parents": [
+        "缓冲技术",
+        "1\\. 单缓冲",
+        "流程图："
+      ],
+      "alt": "流程图：",
+      "target": "operating-systems/05-8-single-buffer.mdx",
+      "selectedAsset": "os-0093.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "单缓冲过程"
+    },
+    {
+      "asset": "os-0112.svg",
+      "chapter": "operating-systems/05-io.mdx",
+      "line": 361,
+      "heading": "高速缓存和缓冲区",
+      "parents": [
+        "缓冲技术",
+        "2\\. 双缓冲",
+        "流程图："
+      ],
+      "alt": "流程图：",
+      "target": "operating-systems/05-9-double-buffer.mdx",
+      "selectedAsset": "os-0112.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "双缓冲的本质"
+    },
+    {
+      "asset": "os-0115.svg",
+      "chapter": "operating-systems/05-io.mdx",
+      "line": 536,
+      "heading": "SPOOLing技术",
+      "parents": [
+        "脱机技术：",
+        "批处理阶段引入了脱机输入/输出技术（用磁带完成）"
+      ],
+      "alt": "批处理阶段引入了脱机输入/输出技术（用磁带完成）",
+      "target": "operating-systems/05-13-spooling.mdx",
+      "selectedAsset": "os-0115.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "SPOOLing是什么"
+    },
+    {
+      "asset": "os-0092.svg",
+      "chapter": "operating-systems/05-io.mdx",
+      "line": 539,
+      "heading": "SPOOLing技术",
+      "parents": [
+        "SPOOLING技术"
+      ],
+      "alt": "SPOOLING技术",
+      "target": "operating-systems/05-13-spooling.mdx",
+      "selectedAsset": "os-0092.svg",
+      "reason": "restored-original",
+      "action": "inserted",
+      "branch": "SPOOLing是什么"
+    }
+  ],
+  "sourceZipSha256": "5898e683abf84f7d352d8e1870b8d2bb013877b1f2cc5be9b86540a2be52a36c",
+  "summary": {
+    "chapterGuides": 26,
+    "sectionMaps": 402,
+    "mdxPages": 433,
+    "svgFiles": 612,
+    "referencedSvgFiles": 530,
+    "restoredOriginalAssets": 141,
+    "newlyConnectedFixedAssets": 8,
+    "intentionallySupersededOriginalAssets": 82
+  }
+}
