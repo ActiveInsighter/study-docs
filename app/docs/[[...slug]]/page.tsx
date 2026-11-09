@@ -56,29 +56,48 @@ export function generateStaticParams() {
 
 type DocPage = NonNullable<ReturnType<typeof source.getPage>>;
 
-/** Parent overview and adjacent maps within the current chapter folder. */
+/**
+ * Where a mind-map page sits: its subject and chapter overviews, every map of
+ * the chapter in reading order (overview first), the subject's chapters, and
+ * the adjacent maps.
+ */
 function getMindMapNavigation(page: DocPage) {
+  const pages = source.getPages();
   const folder = dirname(page.path);
-  const siblings = source
-    .getPages()
-    .filter((entry) => dirname(entry.path) === folder)
-    .sort((a, b) => compareMindMapPaths(a.path, b.path));
-  const chapters = siblings.filter((entry) => entry.data.layout === 'mind-map');
-  const index = chapters.findIndex((entry) => entry.url === page.url);
-  const overview = siblings.find((entry) => /\/index\.mdx?$/u.test(entry.path));
-  const courseIndex = overview?.url === page.url
-    ? source.getPages().find((entry) => entry.path === `${dirname(folder)}/index.mdx`)
-    : overview;
   const toLink = (entry?: DocPage) =>
     entry ? { title: entry.data.title, url: entry.url } : undefined;
+  const indexOf = (dir: string) =>
+    pages.find((entry) => entry.path === `${dir}/index.mdx` || entry.path === `${dir}/index.md`);
+
+  const siblings = pages
+    .filter((entry) => dirname(entry.path) === folder && entry.data.layout === 'mind-map')
+    .sort((a, b) => compareMindMapPaths(a.path, b.path));
+  const index = siblings.findIndex((entry) => entry.url === page.url);
+  const chapter = indexOf(folder);
+  const chapterIsMap = chapter?.data.layout === 'mind-map';
+
+  // A chapter folder's parent is the subject; its sibling folders are the other chapters.
+  const subjectFolder = dirname(folder);
+  const subject = subjectFolder !== '.' ? indexOf(subjectFolder) : undefined;
+  const chapters = chapterIsMap
+    ? pages
+        .filter(
+          (entry) =>
+            entry.data.layout === 'mind-map' &&
+            /(^|\/)index\.mdx?$/u.test(entry.path) &&
+            dirname(dirname(entry.path)) === subjectFolder,
+        )
+        .sort((a, b) => compareMindMapPaths(a.path, b.path))
+    : [];
 
   return {
-    course: courseIndex
-      ? { title: courseIndex.data.title.replace(/思维导图$/u, ''), url: courseIndex.url }
-      : undefined,
-    previous: toLink(chapters[index - 1]),
-    next: toLink(chapters[index + 1]),
-    position: index >= 0 ? { index: index + 1, total: chapters.length } : undefined,
+    subject: toLink(chapterIsMap ? subject : chapter),
+    chapter: chapterIsMap ? toLink(chapter) : undefined,
+    sections: siblings.map((entry) => ({ title: entry.data.title, url: entry.url })),
+    chapters: chapters.map((entry) => ({ title: entry.data.title, url: entry.url })),
+    previous: toLink(siblings[index - 1]),
+    next: toLink(siblings[index + 1]),
+    position: index >= 0 && siblings.length > 1 ? { index: index + 1, total: siblings.length } : undefined,
   };
 }
 

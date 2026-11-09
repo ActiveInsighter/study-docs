@@ -566,6 +566,11 @@ type ModalContentProps = DialogPrimitive.Popup.Props & {
    */
   height?: ModalHeight
   backdropClassName?: string
+  /**
+   * Where the modal is portalled; the document body by default. Pass the
+   * fullscreen element when opening from inside one, or it would be hidden.
+   */
+  container?: DialogPrimitive.Portal.Props["container"]
 }
 
 function ModalContent(props: ModalContentProps) {
@@ -579,6 +584,7 @@ function ModalRootContent({
   height = "auto",
   className,
   backdropClassName,
+  container,
   initialFocus,
   finalFocus,
   style,
@@ -618,7 +624,7 @@ function ModalRootContent({
   } as React.CSSProperties
 
   return (
-    <DialogPortal>
+    <DialogPortal container={container}>
       <DialogPrimitive.Backdrop
         ref={backdropRef}
         data-slot="modal-backdrop"
@@ -670,6 +676,7 @@ function ModalPageContent({
   size: _size,
   height: _height,
   backdropClassName: _backdropClassName,
+  container: _container,
   render: _render,
   ...props
 }: ModalContentProps) {

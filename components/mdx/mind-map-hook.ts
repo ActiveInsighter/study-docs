@@ -29,7 +29,6 @@ interface UseMindMapOptions {
   wrapWidth: number;
   fitPadding: number;
   colorScheme: MindMapColorScheme;
-  fullscreenTargetRef: React.RefObject<HTMLElement | null>;
   onNavigate: (href: string) => void;
   onPreviewImage: (image: MindMapImagePreview) => void;
 }
@@ -75,6 +74,27 @@ function findNodeId(root: MarkmapNode, label: string) {
     return undefined;
   };
   return walk(root) ?? partial;
+}
+
+/** Alt text the Markdown gives an image (`![alt](src)` or a raw `<img alt>`). */
+function findImageAlt(root: MarkmapNode, src: string): string | undefined {
+  const fromInlines = (items: readonly Inline[]): string | undefined => {
+    for (const inline of items) {
+      if (inline.type === 'image' && inline.url === src) return inline.alt ?? undefined;
+      if (inline.type === 'html' && inline.value.includes(src)) {
+        const alt = /\balt\s*=\s*(?:"([^"]*)"|'([^']*)')/u.exec(inline.value);
+        if (alt) return alt[1] ?? alt[2];
+      }
+      if ('children' in inline) {
+        const found = fromInlines(inline.children as Inline[]);
+        if (found) return found;
+      }
+    }
+    return undefined;
+  };
+  const walk = (node: MarkmapNode): string | undefined =>
+    fromInlines(node.content) ?? node.children.map(walk).find(Boolean);
+  return walk(root);
 }
 
 function readFocusLabel(hash: string) {
@@ -128,10 +148,6 @@ function imageAt(primitives: readonly Primitive[], x: number, y: number): string
   return found;
 }
 
-// Lucide "maximize-2" / "minimize-2", redrawn for the toolbar's 16 × 16 box.
-const FULLSCREEN_ICON = 'M10 2.5h3.5V6M13.5 2.5 9 7M2.5 13.5 7 9M6 13.5H2.5V10';
-const EXIT_FULLSCREEN_ICON = 'M9.5 2.5V6.5h4M13.5 2.5 9.5 6.5M2.5 13.5l4-4M2.5 9.5h4v4';
-
 export function useMindMap({
   data,
   documentOptions,
@@ -140,13 +156,14 @@ export function useMindMap({
   wrapWidth,
   fitPadding,
   colorScheme,
-  fullscreenTargetRef,
   onNavigate,
   onPreviewImage,
 }: UseMindMapOptions) {
   const surfaceRef = useRef<HTMLDivElement>(null);
-  const toolbarHostRef = useRef<HTMLDivElement>(null);
   const markmapRef = useRef<Markmap | null>(null);
+  // The live view, for the React toolbar; null until the map is drawn.
+  const [markmap, setMarkmap] = useState<Markmap | null>(null);
+  const [initialLevel, setInitialLevel] = useState<number | null>(null);
   const callbacksRef = useRef({ onNavigate, onPreviewImage });
   callbacksRef.current = { onNavigate, onPreviewImage };
   const colorSchemeRef = useRef(colorScheme);
@@ -169,7 +186,6 @@ export function useMindMap({
   useEffect(() => {
     let cancelled = false;
     const surface = surfaceRef.current;
-    const toolbarHost = toolbarHostRef.current;
     const cleanups: Array<() => void> = [];
 
     if (!hasContent || !surface) {
@@ -184,10 +200,9 @@ export function useMindMap({
     async function render() {
       try {
         const { root, options: documentOptionsValue } = await loadDocument(data, markdown, documentOptions);
-        const [{ Markmap, resolveViewOptions }, { createToolbar, builtinButtons }, { defaultContentPlugins }, { mathContent }] =
+        const [{ Markmap, resolveViewOptions }, { defaultContentPlugins }, { mathContent }] =
           await Promise.all([
             import('@markmap/view'),
-            import('@markmap/toolbar'),
             import('@markmap/render'),
             import('@markmap/plugin-math'),
           ]);
@@ -217,67 +232,9 @@ export function useMindMap({
           if (markmapRef.current === mm) markmapRef.current = null;
         });
 
-        // Official toolbar: built-in buttons with Chinese labels, plus fullscreen.
-        const fullscreenSupported =
-          typeof document.documentElement.requestFullscreen === 'function';
-        const isFullscreen = () =>
-          Boolean(fullscreenTargetRef.current) &&
-          document.fullscreenElement === fullscreenTargetRef.current;
-        const toolbar = createToolbar(mm, {
-          items: [
-            { ...builtinButtons['zoom-in'], label: '放大' },
-            { ...builtinButtons['zoom-out'], label: '缩小' },
-            { ...builtinButtons.fit, label: '适应窗口' },
-            { ...builtinButtons['expand-all'], label: '全部展开' },
-            'fold-level',
-            ...(fullscreenSupported
-              ? [
-                  {
-                    label: '全屏查看',
-                    icon: FULLSCREEN_ICON,
-                    onClick: () => {
-                      const target = fullscreenTargetRef.current;
-                      if (!target) return;
-                      const request = isFullscreen()
-                        ? document.exitFullscreen()
-                        : target.requestFullscreen();
-                      request.catch(() => {
-                        // Fullscreen can be denied by the browser or an embedding host.
-                      });
-                    },
-                  },
-                ]
-              : []),
-          ],
-        });
-        toolbar.element.setAttribute('aria-label', '思维导图工具');
-        const localizeLevels = () => {
-          const select = toolbar.element.querySelector('select');
-          if (!select) return;
-          select.setAttribute('aria-label', '展开到层级');
-          select.title = '展开到层级';
-          const placeholder = select.querySelector('option[value=""]');
-          if (placeholder) placeholder.textContent = '层级';
-        };
-        const syncFullscreenButton = () => {
-          const buttons = toolbar.element.querySelectorAll('button');
-          const button = buttons[buttons.length - 1];
-          if (!fullscreenSupported || !button) return;
-          const label = isFullscreen() ? '退出全屏' : '全屏查看';
-          button.title = label;
-          button.setAttribute('aria-label', label);
-          button
-            .querySelector('path')
-            ?.setAttribute('d', isFullscreen() ? EXIT_FULLSCREEN_ICON : FULLSCREEN_ICON);
-        };
-        localizeLevels();
-        cleanups.push(mm.on('render', localizeLevels));
-        document.addEventListener('fullscreenchange', syncFullscreenButton);
-        cleanups.push(() =>
-          document.removeEventListener('fullscreenchange', syncFullscreenButton),
-        );
-        toolbarHost?.replaceChildren(toolbar.element);
-        cleanups.push(() => toolbar.destroy());
+        setMarkmap(mm);
+        setInitialLevel(Number.isFinite(options.foldLevel) ? options.foldLevel ?? null : null);
+        cleanups.push(() => setMarkmap((current) => (current === mm ? null : current)));
 
         // Site links inside labels navigate in-app; focus links move to a node;
         // images open in the preview dialog. Hit-test in layout
@@ -314,7 +271,7 @@ export function useMindMap({
             event.preventDefault();
             callbacksRef.current.onPreviewImage({
               src,
-              alt: '配图',
+              alt: (mm.tree && findImageAlt(mm.tree, src)) || '配图',
             });
           }
         };
@@ -343,7 +300,6 @@ export function useMindMap({
     return () => {
       cancelled = true;
       cleanups.splice(0).forEach((cleanup) => cleanup());
-      toolbarHost?.replaceChildren();
     };
   }, [
     data,
@@ -354,7 +310,6 @@ export function useMindMap({
     wrapWidth,
     fitPadding,
     focusLabel,
-    fullscreenTargetRef,
   ]);
 
   // Follow the site's light / dark theme without rebuilding the map.
@@ -364,5 +319,5 @@ export function useMindMap({
     mm.setOptions({ ...mm.options, colorScheme });
   }, [colorScheme, status]);
 
-  return { errorMessage, status, surfaceRef, toolbarHostRef };
+  return { errorMessage, status, surfaceRef, markmap, initialLevel };
 }
