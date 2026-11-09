@@ -14,15 +14,15 @@
 <text x="470" y="212" text-anchor="middle" font-size="23" fill="#9f1239" font-weight="700">运算器 ALU</text>
 <rect x="715" y="167" width="155" height="80" rx="13" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
 <text x="792" y="212" text-anchor="middle" font-size="22" fill="#1e3a8a" font-weight="600">输出设备</text>
-<rect x="378" y="100" width="184" height="52" rx="11" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
-<text x="470" y="133" text-anchor="middle" font-size="20" fill="#065f46" font-weight="700">存储器</text>
+<rect x="378" y="86" width="184" height="46" rx="11" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+<text x="470" y="116" text-anchor="middle" font-size="20" fill="#065f46" font-weight="700">存储器</text>
 <rect x="378" y="264" width="184" height="64" rx="11" fill="#fff7ed" stroke="#d97706" stroke-width="2"/>
 <text x="470" y="304" text-anchor="middle" font-size="21" fill="#9a3412" font-weight="700">控制器 CU</text>
 <!-- data paths -->
 <path d="M225 207 H371" stroke="#1d4ed8" stroke-width="3" fill="none" marker-end="url(#ad)"/>
 <path d="M563 207 H708" stroke="#1d4ed8" stroke-width="3" fill="none" marker-end="url(#ad)"/>
-<path d="M451 152 V160" stroke="#1d4ed8" stroke-width="3" fill="none" marker-end="url(#ad)"/>
-<path d="M489 167 V159" stroke="#1d4ed8" stroke-width="3" fill="none" marker-end="url(#ad)"/>
+<path d="M451 133 V150" stroke="#1d4ed8" stroke-width="2" fill="none" marker-end="url(#ad)"/>
+<path d="M489 166 V149" stroke="#1d4ed8" stroke-width="2" fill="none" marker-end="url(#ad)"/>
 <text x="294" y="197" text-anchor="middle" font-size="15" fill="#1e40af">输入数据</text>
 <text x="639" y="197" text-anchor="middle" font-size="15" fill="#1e40af">处理结果</text>
 <!-- control dashed path below avoiding labels -->

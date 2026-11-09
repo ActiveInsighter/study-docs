@@ -13,19 +13,19 @@
 <rect x="90" y="138" width="160" height="32" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
 <text x="170" y="158.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle">文件目录系统</text>
 <text x="268" y="158.2" font-size="12" fill="#3f3f46" font-weight="600">第 1 级</text>
-<path d="M170 114L170 136" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M170 112L170 136" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
 <rect x="90" y="196" width="160" height="32" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
 <text x="170" y="216.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle">存取控制验证模块</text>
 <text x="268" y="216.2" font-size="12" fill="#3f3f46" font-weight="600">第 2 级</text>
-<path d="M170 172L170 194" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M170 170L170 194" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
 <rect x="90" y="254" width="160" height="46" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
 <text x="170" y="272.9" font-size="12.5" fill="#1e3a8a" text-anchor="middle"><tspan x="170" dy="0">逻辑文件系统与</tspan><tspan x="170" dy="16.9">文件信息缓冲区</tspan></text>
 <text x="268" y="281.2" font-size="12" fill="#3f3f46" font-weight="600">第 3 级</text>
-<path d="M170 230L170 252" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M170 228L170 252" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
 <rect x="90" y="312" width="160" height="32" rx="4" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
 <text x="170" y="332.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle">物理文件系统</text>
 <text x="268" y="332.2" font-size="12" fill="#3f3f46" font-weight="600">第 4 级</text>
-<path d="M170 288L170 310" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
+<path d="M170 300L170 310" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
 <rect x="30" y="380" width="120" height="32" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
 <text x="90" y="400.2" font-size="12" fill="#18181b" text-anchor="middle">辅助分配模块</text>
 <rect x="190" y="380" width="160" height="32" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>

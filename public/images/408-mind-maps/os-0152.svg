@@ -5,87 +5,121 @@
 <text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">隐式链接分配</text>
 <rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
 <path d="M20 50Q120.0 66 220 50V380Q120.0 396 20 380Z" fill="#fafafa" stroke="#71717a" stroke-width="1.3"/>
-<rect x="42" y="70" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="39" y="81.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
-<rect x="92" y="70" width="26" height="16" rx="2" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
-<text x="105" y="81.5" font-size="10" fill="#134e4a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">10</text>
-<text x="89" y="81.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
-<rect x="142" y="70" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="139" y="81.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
-<rect x="192" y="70" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="189" y="81.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
-<rect x="42" y="108" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="39" y="119.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
-<rect x="92" y="108" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="89" y="119.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">5</text>
-<rect x="142" y="108" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="139" y="119.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6</text>
-<rect x="192" y="108" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="189" y="119.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">7</text>
-<rect x="42" y="146" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="39" y="157.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8</text>
-<rect x="92" y="146" width="26" height="16" rx="2" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
-<text x="105" y="157.5" font-size="10" fill="#134e4a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">16</text>
-<text x="89" y="157.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">9</text>
-<rect x="142" y="146" width="26" height="16" rx="2" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
-<text x="155" y="157.5" font-size="10" fill="#134e4a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">25</text>
-<text x="139" y="157.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">10</text>
-<rect x="192" y="146" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="189" y="157.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">11</text>
-<rect x="42" y="184" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="39" y="195.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">12</text>
-<rect x="92" y="184" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="89" y="195.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">13</text>
-<rect x="142" y="184" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="139" y="195.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">14</text>
-<rect x="192" y="184" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="189" y="195.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">15</text>
-<rect x="42" y="222" width="26" height="16" rx="2" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
-<text x="55" y="233.5" font-size="10" fill="#134e4a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
-<text x="39" y="233.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">16</text>
-<rect x="92" y="222" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="89" y="233.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">17</text>
-<rect x="142" y="222" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="139" y="233.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">18</text>
-<rect x="192" y="222" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="189" y="233.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">19</text>
-<rect x="42" y="260" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="39" y="271.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">20</text>
-<rect x="92" y="260" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="89" y="271.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">21</text>
-<rect x="142" y="260" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="139" y="271.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">22</text>
-<rect x="192" y="260" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="189" y="271.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">23</text>
-<rect x="42" y="298" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="39" y="309.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">24</text>
-<rect x="92" y="298" width="26" height="16" rx="2" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
-<text x="105" y="309.5" font-size="10" fill="#134e4a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">−1</text>
-<text x="89" y="309.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">25</text>
-<rect x="142" y="298" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="139" y="309.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">26</text>
-<rect x="192" y="298" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="189" y="309.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">27</text>
-<rect x="42" y="336" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="39" y="347.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">28</text>
-<rect x="92" y="336" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="89" y="347.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">29</text>
-<rect x="142" y="336" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="139" y="347.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">30</text>
-<rect x="192" y="336" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="189" y="347.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">31</text>
 <path d="M99.5 162.4L61.6 220" fill="none" stroke="#18181b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a18181b)"/>
 <path d="M58.1 220.5L101.3 89.4" fill="none" stroke="#18181b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a18181b)"/>
 <path d="M110.5 86.4L148.4 144" fill="none" stroke="#18181b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a18181b)"/>
 <path d="M151.9 163.5L108.7 294.6" fill="none" stroke="#18181b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a18181b)"/>
-<text x="480" y="76" font-size="12" fill="#3f3f46" text-anchor="middle">目录</text>
-<rect x="380" y="114" width="70" height="28" rx="0" fill="#e0f3f1" stroke="none" stroke-width="0"/>
-<rect x="450" y="114" width="60" height="28" rx="0" fill="#e0f3f1" stroke="none" stroke-width="0"/>
-<rect x="510" y="114" width="70" height="28" rx="0" fill="#e0f3f1" stroke="none" stroke-width="0"/>
 <path d="M380 114V94Q380 86 388 86H572Q580 86 580 94V114Z" fill="#f4f4f5"/>
 <path d="M380 114L580 114" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M450 86L450 142" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M510 86L510 142" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M445 144L445 190Q445 196 439 196L306 196Q300 196 294.2 194.6L119 154" fill="none" stroke="#a1a1aa" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3" marker-end="url(#aa1a1aa)"/>
+<path d="M515 144L515 336Q515 342 509 341.5L119 306" fill="none" stroke="#a1a1aa" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3" marker-end="url(#aa1a1aa)"/>
+<rect x="42" y="70" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="29" y="70.2" width="14" height="15.5" rx="3" fill="#fafafa"/>
+<text x="39" y="81.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<rect x="92" y="70" width="26" height="16" rx="2" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="105" y="81.5" font-size="10" fill="#134e4a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">10</text>
+<rect x="79" y="70.2" width="14" height="15.5" rx="3" fill="#fafafa"/>
+<text x="89" y="81.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="142" y="70" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="129" y="70.2" width="14" height="15.5" rx="3" fill="#fafafa"/>
+<text x="139" y="81.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<rect x="192" y="70" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="179" y="70.2" width="14" height="15.5" rx="3" fill="#fafafa"/>
+<text x="189" y="81.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<rect x="42" y="108" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="29" y="108.2" width="14" height="15.5" rx="3" fill="#fafafa"/>
+<text x="39" y="119.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
+<rect x="92" y="108" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="79" y="108.2" width="14" height="15.5" rx="3" fill="#fafafa"/>
+<text x="89" y="119.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">5</text>
+<rect x="142" y="108" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="129" y="108.2" width="14" height="15.5" rx="3" fill="#fafafa"/>
+<text x="139" y="119.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6</text>
+<rect x="192" y="108" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="179" y="108.2" width="14" height="15.5" rx="3" fill="#fafafa"/>
+<text x="189" y="119.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">7</text>
+<rect x="42" y="146" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="29" y="146.2" width="14" height="15.5" rx="3" fill="#fafafa"/>
+<text x="39" y="157.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8</text>
+<rect x="92" y="146" width="26" height="16" rx="2" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="105" y="157.5" font-size="10" fill="#134e4a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">16</text>
+<rect x="79" y="146.2" width="14" height="15.5" rx="3" fill="#fafafa"/>
+<text x="89" y="157.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">9</text>
+<rect x="142" y="146" width="26" height="16" rx="2" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="155" y="157.5" font-size="10" fill="#134e4a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">25</text>
+<rect x="123" y="146.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="139" y="157.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">10</text>
+<rect x="192" y="146" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="173" y="146.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="189" y="157.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">11</text>
+<rect x="42" y="184" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="23" y="184.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="39" y="195.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">12</text>
+<rect x="92" y="184" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="73" y="184.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="89" y="195.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">13</text>
+<rect x="142" y="184" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="123" y="184.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="139" y="195.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">14</text>
+<rect x="192" y="184" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="173" y="184.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="189" y="195.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">15</text>
+<rect x="42" y="222" width="26" height="16" rx="2" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="55" y="233.5" font-size="10" fill="#134e4a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<rect x="23" y="222.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="39" y="233.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">16</text>
+<rect x="92" y="222" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="73" y="222.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="89" y="233.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">17</text>
+<rect x="142" y="222" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="123" y="222.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="139" y="233.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">18</text>
+<rect x="192" y="222" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="173" y="222.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="189" y="233.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">19</text>
+<rect x="42" y="260" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="23" y="260.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="39" y="271.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">20</text>
+<rect x="92" y="260" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="73" y="260.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="89" y="271.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">21</text>
+<rect x="142" y="260" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="123" y="260.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="139" y="271.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">22</text>
+<rect x="192" y="260" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="173" y="260.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="189" y="271.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">23</text>
+<rect x="42" y="298" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="23" y="298.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="39" y="309.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">24</text>
+<rect x="92" y="298" width="26" height="16" rx="2" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
+<text x="105" y="309.5" font-size="10" fill="#134e4a" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">−1</text>
+<rect x="73" y="298.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="89" y="309.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">25</text>
+<rect x="142" y="298" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="123" y="298.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="139" y="309.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">26</text>
+<rect x="192" y="298" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="173" y="298.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="189" y="309.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">27</text>
+<rect x="42" y="336" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="23" y="336.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="39" y="347.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">28</text>
+<rect x="92" y="336" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="73" y="336.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="89" y="347.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">29</text>
+<rect x="142" y="336" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="123" y="336.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="139" y="347.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">30</text>
+<rect x="192" y="336" width="26" height="16" rx="2" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<rect x="173" y="336.2" width="20" height="15.5" rx="3" fill="#fafafa"/>
+<text x="189" y="347.5" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">31</text>
+<text x="480" y="76" font-size="12" fill="#3f3f46" text-anchor="middle">目录</text>
+<rect x="380" y="114" width="70" height="28" rx="0" fill="#e0f3f1" stroke="none" stroke-width="0"/>
+<rect x="450" y="114" width="60" height="28" rx="0" fill="#e0f3f1" stroke="none" stroke-width="0"/>
+<rect x="510" y="114" width="70" height="28" rx="0" fill="#e0f3f1" stroke="none" stroke-width="0"/>
 <rect x="380" y="86" width="200" height="56" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
 <text x="415" y="104.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">file</text>
 <text x="480" y="104.2" font-size="12" fill="#18181b" text-anchor="middle" font-weight="600">start</text>
@@ -93,7 +127,5 @@
 <text x="415" y="132.2" font-size="12" fill="#134e4a" text-anchor="middle">jeep</text>
 <text x="480" y="132.2" font-size="12" fill="#134e4a" text-anchor="middle">9</text>
 <text x="545" y="132.2" font-size="12" fill="#134e4a" text-anchor="middle">25</text>
-<path d="M445 144L445 190Q445 196 439 196L306 196Q300 196 294.2 194.6L119 154" fill="none" stroke="#a1a1aa" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3" marker-end="url(#aa1a1aa)"/>
-<path d="M515 144L515 336Q515 342 509 341.5L119 306" fill="none" stroke="#a1a1aa" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3" marker-end="url(#aa1a1aa)"/>
 <text x="470" y="370" font-size="11.5" fill="#71717a" text-anchor="middle">只能顺序访问；指针占用盘块空间</text>
 </svg>

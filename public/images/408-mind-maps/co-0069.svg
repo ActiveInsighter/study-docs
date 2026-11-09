@@ -9,8 +9,8 @@
 <text x="200" y="154.6" font-size="13" fill="#3b0764" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">MAR</text>
 <rect x="250" y="100" width="50" height="100" rx="5" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
 <text x="275" y="138" font-size="12" fill="#7f1d1d" text-anchor="middle"><tspan x="275" dy="0">译</tspan><tspan x="275" dy="16.2">码</tspan><tspan x="275" dy="16.2">器</tspan></text>
-<rect x="320" y="80" width="160" height="140" rx="6" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
-<text x="400" y="145.5" font-size="14" fill="#7f1d1d" text-anchor="middle"><tspan x="400" dy="0">存储体</tspan><tspan x="400" dy="18.9">（存储矩阵）</tspan></text>
+<rect x="320" y="80" width="160" height="120" rx="6" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="400" y="135.5" font-size="14" fill="#7f1d1d" text-anchor="middle"><tspan x="400" dy="0">存储体</tspan><tspan x="400" dy="18.9">（存储矩阵）</tspan></text>
 <rect x="490" y="100" width="60" height="100" rx="5" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
 <text x="520" y="129.9" font-size="12" fill="#7f1d1d" text-anchor="middle"><tspan x="520" dy="0">读</tspan><tspan x="520" dy="16.2">写</tspan><tspan x="520" dy="16.2">电</tspan><tspan x="520" dy="16.2">路</tspan></text>
 <rect x="250" y="210" width="230" height="24" rx="5" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>

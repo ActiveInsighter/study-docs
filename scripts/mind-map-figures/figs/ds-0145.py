@@ -5,7 +5,7 @@ F.graph(N, [('V1','V2'), ('V1','V3'), ('V2','V3'), ('V3','V1', '', {'shift': 5})
 F.text(110, 260, 'V1→V2, V1→V3, V2→V3, V3→V1', 12, color=MUTED, mono=True)
 F.text(280, 74, '顶点结点', 12.5, 'start', MUTED); F.cells(350, 60, ['data', 'firstin', 'firstout'], 62, 22, size=11, mono=False)
 F.text(560, 74, '弧结点', 12.5, 'start', MUTED); F.cells(610, 60, ['tail', 'head', 'hlink', 'tlink'], 52, 22, size=11, mono=False)
-F.text(610, 100, 'hlink：同弧头的下一条弧　tlink：同弧尾的下一条弧', 11, 'start', MUTED)
+F.text(840, 100, 'hlink：同弧头的下一条弧　tlink：同弧尾的下一条弧', 11, 'end', MUTED)
 arcs = {0: [('0', '1'), ('0', '2')], 1: [('1', '2')], 2: [('2', '0')]}
 from common import record
 for i, v in enumerate(['V1', 'V2', 'V3']):

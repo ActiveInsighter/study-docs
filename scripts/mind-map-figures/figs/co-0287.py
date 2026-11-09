@@ -12,7 +12,7 @@ for i in (0, 3):
     F.box(x + 10, 80, 80, 36, '', 'white', rx=4)
     F.line(x + 35, 148, x + 35, 118, ACCENT['blue'], 1.1, arrow='end'); F.line(x + 50, 148, x + 50, 118, ACCENT['blue'], 1.1, arrow='end'); F.line(x + 70, 148, x + 70, 118, ACCENT['blue'], 1.1, arrow='end')
     for dx in (25, 40, 70): F.line(x + dx, 78, x + dx, 56, INK2, 1.2, arrow='end')
-    F.text(x + 50, 48, '控制信号', 11.5, color=INK2)
+    F.text(x + 108, 64, '控制信号', 11.5, 'start', INK2)
 F.poly([(130 + 50, 148), (180, 130), (140, 130), (140, 98), (122, 98)], ACCENT['blue'], 1.2, arrow='end')
 F.poly([(180, 130), (300, 130), (300, 98), (338, 98)], ACCENT['blue'], 1.2, arrow='end')
 F.line(30, 276, 430, 276, INK2, 1.2, arrow='both'); F.text(230, 290, '操作控制', 12, color=INK2, halo=True)

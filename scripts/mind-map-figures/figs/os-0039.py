@@ -10,12 +10,12 @@ for i in range(8):
 for i, n in enumerate(['7', '0', '1', '2', '3', '4', '5', '6']):
     a = -math.pi / 2 + math.pi / 4 * i
     F.text(cx + 178 * math.cos(a), cy + 178 * math.sin(a), n, 13, color=INK, valign='middle')
-F.path(f'M{cx + 160} {cy - 2}H{cx + 76}', ACCENT['violet'], 1.8, arrow='end'); F.text(cx + 150, cy - 14, '② 寻道', 11, color=ACCENT['violet'])
+F.path(f'M{cx + 160} {cy - 2}H{cx + 76}', ACCENT['violet'], 1.8, arrow='end'); F.text(cx + 150, cy - 14, '② 寻道', 11, color=ACCENT['violet'], chip=True)
 a1, a2 = 0.15, 1.2
-F.path(f'M{cx + 76 * math.cos(a1):.1f} {cy + 76 * math.sin(a1):.1f}A76 76 0 0 1 {cx + 76 * math.cos(a2):.1f} {cy + 76 * math.sin(a2):.1f}', ACCENT['violet'], 1.8, arrow='end'); F.text(cx + 80, cy + 80, '③ 旋转延迟', 11, color=ACCENT['violet'])
+F.path(f'M{cx + 76 * math.cos(a1):.1f} {cy + 76 * math.sin(a1):.1f}A76 76 0 0 1 {cx + 76 * math.cos(a2):.1f} {cy + 76 * math.sin(a2):.1f}', ACCENT['violet'], 1.8, arrow='end'); F.text(cx + 80, cy + 80, '③ 旋转延迟', 11, color=ACCENT['violet'], chip=True)
 a3, a4 = 1.4, 2.6
-F.path(f'M{cx + 76 * math.cos(a3):.1f} {cy + 76 * math.sin(a3):.1f}A76 76 0 0 1 {cx + 76 * math.cos(a4):.1f} {cy + 76 * math.sin(a4):.1f}', ACCENT['red'], 4); F.text(cx - 90, cy + 70, '④ 传输', 11, color=ACCENT['red'])
-F.box(cx + 158, cy - 10, 10, 20, '', 'dark', rx=1); F.text(cx + 180, cy, '① 启动', 11, 'start', ACCENT['violet'], valign='middle')
+F.path(f'M{cx + 76 * math.cos(a3):.1f} {cy + 76 * math.sin(a3):.1f}A76 76 0 0 1 {cx + 76 * math.cos(a4):.1f} {cy + 76 * math.sin(a4):.1f}', ACCENT['red'], 4); F.text(cx - 90, cy + 70, '④ 传输', 11, color=ACCENT['red'], chip=True)
+F.box(cx + 158, cy - 10, 10, 20, '', 'dark', rx=1); F.text(cx + 163, cy + 26, '① 启动', 11, 'middle', ACCENT['violet'], valign='middle')
 x = 470
 lines = ['① 启动时间：s（约 2 ms）', '② 寻找 / 寻道时间：m × n（跨越 n 条磁道，每条 m）',
          '③ 旋转延迟时间 Tᵣ：转速为 r，平均转半圈', '　 Tᵣ = (1/2) × (1/r) = 1/(2r)',

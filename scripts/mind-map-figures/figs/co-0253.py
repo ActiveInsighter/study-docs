@@ -10,7 +10,7 @@ for m in range(4):
         F.rect(x, y, 70, 30, 'white' if r not in (2, 3) else '#fafafa', INK2, 1.2, 0)
         if r in (2, 3): F.text(x + 35, y + 15, '⋮', 12, color=MUTED, valign='middle')
     for r, t in LAB[m]:
-        F.text(x - 8, 91 + r * 30, t, 12, 'end', ACCENT[tone] if r == 0 else INK2, mono=True, valign='middle')
+        F.text(x + 78, 91 + r * 30, t, 12, 'start', ACCENT[tone] if r == 0 else INK2, mono=True, valign='middle')
     F.line(x + 35, 300, x + 35, 258, INK2, 1.2, dash='4 3', arrow='end')
 F.line(125, 300, 605, 300, INK2, 1.2, dash='4 3')
 F.box(300, 304, 100, 28, '地址译码', 'white', 12.5, 4)

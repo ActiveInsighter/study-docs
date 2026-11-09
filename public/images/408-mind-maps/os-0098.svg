@@ -17,7 +17,7 @@
 <path d="M362 136.0c-8.0 6.0 8.0 10.0 0 14.0s8.0 10.0 0 14.0" fill="none" stroke="#2f8f57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M384 136.0c-8.0 6.0 8.0 10.0 0 14.0s8.0 10.0 0 14.0" fill="none" stroke="#2f8f57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M406 136.0c-8.0 6.0 8.0 10.0 0 14.0s8.0 10.0 0 14.0" fill="none" stroke="#2f8f57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="270" y="330" font-size="12" fill="#3f3f46" text-anchor="middle">内核</text>
+<text x="355" y="335" font-size="12" fill="#3f3f46" text-anchor="middle">内核</text>
 <rect x="240" y="292" width="60" height="10" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
 <text x="270" y="299.6" font-size="7.5" fill="#1e3a8a" text-anchor="middle">TCB1</text>
 <rect x="240" y="302" width="60" height="10" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>

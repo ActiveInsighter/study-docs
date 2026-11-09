@@ -9,7 +9,7 @@ F.box(60, 300, 90, 30, 'IR', 'white', 13, 5, mono=True)
 F.box(430, 300, 90, 30, 'MDR', 'white', 13, 5, mono=True)
 F.box(110, 160, 54, 90, '标志\n寄存器', 'gray', 11.5, 5)
 F.items.append('<path d="M210 160L246 176V234L210 250V218L222 205L210 192Z" fill="#fde7e4" stroke="#d1493a" stroke-width="1.3"/>')
-F.text(228, 205, 'ALU', 11, color='#7f1d1d', weight=700, valign='middle')
+F.text(234, 205, 'ALU', 10, color='#7f1d1d', weight=700, valign='middle')
 F.text(380, 152, '通用寄存器组 GPRs', 11.5, color=MUTED)
 for i in range(4):
     F.box(330, 162 + i * 22, 100, 22, f'R{i}', 'white', 11.5, 0, True)

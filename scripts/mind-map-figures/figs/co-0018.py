@@ -18,5 +18,5 @@ for r, (name, kind) in enumerate(rows):
             continue
         hl = {(0, 4): 'red', (4, 1): 'blue'}.get((r, i))
         F.box(x, y, 52, 28, lab, hl or 'white', 11.5, 3)
-F.line(152 + 4 * 64 + 40, 104, 152 + 5 * 64 + 26, 90 + 4 * 52 + 2, ACCENT['blue'], 1.2)
+F.line(152 + 4 * 64 + 40, 104, 152 + 5 * 64 + 26, 90 + 4 * 52 + 2, ACCENT['blue'], 1.2); F.items.insert(1, F.items.pop())
 F.text(350, 370 - 14, '硬件检测到相关后插入 3 个气泡，sub 等 r1 写回后再读', 11.5, color=MUTED)

@@ -35,13 +35,13 @@
 <path d="M530 170H620L604 194H546Z" fill="#fde7e4" stroke="#d1493a" stroke-width="1.3"/>
 <text x="575" y="185" font-size="11.5" fill="#7f1d1d" text-anchor="middle" font-weight="700">ALU</text>
 <path d="M620 108L590 168" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
-<text x="445" y="130" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-weight="600">通用寄存器</text>
+<text x="445" y="232" font-size="12.5" fill="#3f3f46" text-anchor="middle" font-weight="600">通用寄存器</text>
 <rect x="410" y="140" width="70" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
 <rect x="410" y="164" width="70" height="24" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
 <text x="445" y="180.4" font-size="12.5" fill="#18181b" text-anchor="middle">基址</text>
 <rect x="410" y="188" width="70" height="24" rx="0" fill="#fafafa" stroke="#a1a1aa" stroke-width="1.5"/>
 <text x="445" y="204.4" font-size="12.5" fill="#3f3f46" text-anchor="middle">...</text>
-<text x="402" y="156.2" font-size="12" fill="#3f3f46" text-anchor="end" font-family="Noto Sans CJK SC, Arial, sans-serif">R0</text>
+<text x="445" y="156.4" font-size="12" fill="#3f3f46" text-anchor="middle" font-family="Noto Sans CJK SC, Arial, sans-serif">R0</text>
 <path d="M560 108L560 118Q560 124 554 124L406 124Q400 124 400 130L400 148Q400 152 404 152L408 152" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
 <path d="M480 176L546 176Q550 176 550 172L550 168" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
 <text x="560" y="270" font-size="12.5" fill="#3f3f46" text-anchor="middle">(b) 通用寄存器 R0 作基址寄存器</text>

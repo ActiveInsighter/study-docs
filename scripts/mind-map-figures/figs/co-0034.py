@@ -11,6 +11,6 @@ F.cells(280, 60, list('10100011'), 58, 26, {i: 'green' for i in range(8)}, size=
 F.line(510, 58, 510, 36, INK2, 1.6, arrow='both'); F.text(520, 40, '数据总线（宽度 = 存储字长）', 11.5, 'start', INK2)
 F.box(110, 60, 70, 60, '控制\n电路', 'amber', 12, 5)
 for i, (lab, y) in enumerate((('片选线 CS / CE', 70), ('读控制线 RD / OE', 90), ('写控制线 WE', 110))):
-    F.line(30, y, 108, y, INK2, 1.2, arrow='end'); F.text(26, y, lab, 11, 'end', INK2, valign='middle') if False else F.text(34, y - 6, lab, 10.5, 'start', MUTED)
+    F.line(20, y, 108, y, INK2, 1.2, arrow='end'); F.text(20, y - 5, lab, 9.5, 'start', MUTED)
 F.text(400, 340, '控制电路：MAR、MDR、译码器电平稳定后才进行下一步；CS 低电平时芯片工作；只有 WE 时“低写高读”', 12, color=MUTED)
 F.text(400, 362, '总容量 = 存储单元个数 × 存储字长', 12, color=INK2)

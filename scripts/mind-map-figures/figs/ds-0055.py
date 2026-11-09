@@ -10,7 +10,7 @@ tones['+p2'] = 'red'; tones['*m3'] = 'red'
 F.graph(N, E, r=17, labels=labels, tones=tones, size=15)
 x = 500
 F.text(x, 130, '① 画出表达式树', 13, 'start', INK2)
-F.text(x, 158, '② 合并相同的操作数（a、b、c、d、e\n　 各只保留一个）', 13, 'start', INK2, lh=1.5)
-F.text(x, 214, '③ 自底向上逐层合并相同的\n　 操作符结点', 13, 'start', INK2, lh=1.5)
-F.legend(x, 290, [('red', '被共享的子表达式')])
-F.text(x, 316, 'c+d 与 (c+d)*e 只出现一次', 12, 'start', MUTED)
+F.text(x, 158, '② 合并相同的操作数\n　 （a、b、c、d、e\n　 各只保留一个）', 13, 'start', INK2, lh=1.5)
+F.text(x, 236, '③ 自底向上逐层合并相同的\n　 操作符结点', 13, 'start', INK2, lh=1.5)
+F.legend(x, 300, [('red', '被共享的子表达式')])
+F.text(x, 326, 'c+d 与 (c+d)*e 只出现一次', 12, 'start', MUTED)

@@ -11,5 +11,5 @@ for k, (x, y) in phones.items(): F.box(x - 14, y - 10, 28, 20, '☎', 'white', 1
 blue = ACCENT['blue']
 F.poly([(54, 110), (216, 179), (274, 203), (366, 89), (424, 113), (466, 223), (524, 223), (616, 123), (674, 123), (706, 160)], blue, 2, arrow=None)
 F.line(54, 170, 216, 203, ACCENT['red'], 1.4); F.line(54, 220, 216, 227, ACCENT['red'], 1.4)
-F.text(100, 82, '用户线', 11, color=INK2); F.text(330, 160, '中继线', 11, color=INK2); F.text(680, 110, '用户线', 11, color=INK2)
+F.text(100, 82, '用户线', 11, color=INK2); F.text(352, 178, '中继线', 11, color=INK2, halo=True); F.text(704, 106, '用户线', 11, color=INK2)
 F.text(150, 290, 'C、D 可以通过本地交换机实现通信；蓝线为 A 与 B 之间建立的专用电路', 11.5, 'start', ACCENT['red'])

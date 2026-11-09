@@ -1,5 +1,6 @@
 LABEL = '打开文件的过程：读目录找到 FCB，复制到系统打开文件表，再在进程打开文件表中建条目并返回文件描述符'
-F = Fig(900, 470, 'open 系统调用的过程')
+F = Fig(900, 490, 'open 系统调用的过程')
+_n0 = len(F.items)
 F.rect(20, 40, 140, 400, 'none', INK2, 1.2, 0); F.rect(160, 40, 520, 400, 'none', INK2, 1.2, 0); F.text(90, 460, '用户区', 11.5, color=ACCENT['blue']); F.text(420, 460, '内核区', 11.5, color=ACCENT['blue'])
 F.circle(80, 300, 18, 'fd', 'green', 12); F.text(80, 340, '文件描述符 / 文件句柄', 10.5, color=ACCENT['blue'])
 for i, t in enumerate(('FCB_A', 'FCB_B', 'FCB_C', 'FCB_D')): F.box(400, 60 + i * 28, 80, 28, t, 'violet' if i == 0 else 'white', 11.5, 0, True)
@@ -17,3 +18,5 @@ F.poly([(398, 74), (360, 74), (360, 278), (378, 278)], INK2, 1.2, arrow='end'); 
 F.line(578, 278, 748, 305, INK2, 1.2, arrow='end')
 F.poly([(100, 300), (240, 300), (240, 405), (328, 405)], ACCENT['blue'], 1.2, arrow='end'); F.text(240, 330, '(3) 在进程打开文件表\n中新建条目，并返回\n文件描述符', 10.5, 'middle', ACCENT['green'], lh=1.3)
 F.poly([(632, 405), (660, 405), (660, 330), (408, 330), (408, 306)], ACCENT['blue'], 1.2, arrow='end')
+
+F.items[_n0:] = ['<g transform="translate(0 18)">'] + F.items[_n0:] + ['</g>']

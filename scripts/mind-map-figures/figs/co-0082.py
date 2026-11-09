@@ -2,7 +2,7 @@ LABEL = '固态硬盘：闪存翻译层 + 多个闪存芯片（块由页组成�
 F = Fig(800, 392)
 F.line(120, 52, 680, 52, INK, 5); F.text(130, 42, 'I/O 总线', 12, 'start', INK2)
 F.rect(24, 72, 752, 296, 'none', INK2, 1.3, 16, dash='6 4'); F.text(40, 94, '固态硬盘 SSD', 13, 'start', INK, 700)
-F.line(400, 54, 400, 100, INK, 3, arrow='end'); F.text(410, 80, '系统要读写的逻辑块号', 11.5, 'start', INK2)
+F.line(400, 54, 400, 100, INK, 3, arrow='end'); F.text(410, 92, '系统要读写的逻辑块号', 11.5, 'start', INK2)
 F.box(300, 102, 200, 32, '闪存翻译层', 'violet', 13, 4)
 F.line(400, 136, 400, 160, INK2, 1.2, arrow='both'); F.text(410, 152, '把逻辑块号映射为物理地址', 11.5, 'start', INK2)
 F.rect(44, 166, 712, 190, '#fdf1d8', ACCENT['amber'], 1.2, 8)

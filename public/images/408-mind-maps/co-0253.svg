@@ -4,7 +4,7 @@
 <rect x="0.75" y="0.75" width="718.5" height="378.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
 <text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">低位交叉编址的多体存储器</text>
 <rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
-<text x="125" y="66" font-size="14" fill="#18181b" text-anchor="middle" font-weight="700">M<tspan baseline-shift="-22%" font-size="10.08">0</tspan></text>
+<text x="125" y="66" font-size="14" fill="#18181b" text-anchor="middle" font-weight="700">M<tspan baseline-shift="-22%" font-size="10.1">0</tspan></text>
 <rect x="90" y="76" width="70" height="30" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.2"/>
 <rect x="90" y="106" width="70" height="30" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.2"/>
 <rect x="90" y="136" width="70" height="30" rx="0" fill="#fafafa" stroke="#3f3f46" stroke-width="1.2"/>
@@ -13,11 +13,11 @@
 <text x="125" y="185.2" font-size="12" fill="#71717a" text-anchor="middle">⋮</text>
 <rect x="90" y="196" width="70" height="30" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.2"/>
 <rect x="90" y="226" width="70" height="30" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.2"/>
-<text x="82" y="95.2" font-size="12" fill="#c98a12" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
-<text x="82" y="125.2" font-size="12" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
-<text x="82" y="245.2" font-size="12" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4n−4</text>
+<text x="168" y="95.2" font-size="12" fill="#c98a12" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">0</text>
+<text x="168" y="125.2" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4</text>
+<text x="168" y="245.2" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4n−4</text>
 <path d="M125 300L125 258" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3" marker-end="url(#a3f3f46)"/>
-<text x="285" y="66" font-size="14" fill="#18181b" text-anchor="middle" font-weight="700">M<tspan baseline-shift="-22%" font-size="10.08">1</tspan></text>
+<text x="285" y="66" font-size="14" fill="#18181b" text-anchor="middle" font-weight="700">M<tspan baseline-shift="-22%" font-size="10.1">1</tspan></text>
 <rect x="250" y="76" width="70" height="30" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.2"/>
 <rect x="250" y="106" width="70" height="30" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.2"/>
 <rect x="250" y="136" width="70" height="30" rx="0" fill="#fafafa" stroke="#3f3f46" stroke-width="1.2"/>
@@ -26,11 +26,11 @@
 <text x="285" y="185.2" font-size="12" fill="#71717a" text-anchor="middle">⋮</text>
 <rect x="250" y="196" width="70" height="30" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.2"/>
 <rect x="250" y="226" width="70" height="30" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.2"/>
-<text x="242" y="95.2" font-size="12" fill="#c98a12" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
-<text x="242" y="125.2" font-size="12" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">5</text>
-<text x="242" y="245.2" font-size="12" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4n−3</text>
+<text x="328" y="95.2" font-size="12" fill="#c98a12" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="328" y="125.2" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">5</text>
+<text x="328" y="245.2" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4n−3</text>
 <path d="M285 300L285 258" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3" marker-end="url(#a3f3f46)"/>
-<text x="445" y="66" font-size="14" fill="#18181b" text-anchor="middle" font-weight="700">M<tspan baseline-shift="-22%" font-size="10.08">2</tspan></text>
+<text x="445" y="66" font-size="14" fill="#18181b" text-anchor="middle" font-weight="700">M<tspan baseline-shift="-22%" font-size="10.1">2</tspan></text>
 <rect x="410" y="76" width="70" height="30" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.2"/>
 <rect x="410" y="106" width="70" height="30" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.2"/>
 <rect x="410" y="136" width="70" height="30" rx="0" fill="#fafafa" stroke="#3f3f46" stroke-width="1.2"/>
@@ -39,11 +39,11 @@
 <text x="445" y="185.2" font-size="12" fill="#71717a" text-anchor="middle">⋮</text>
 <rect x="410" y="196" width="70" height="30" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.2"/>
 <rect x="410" y="226" width="70" height="30" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.2"/>
-<text x="402" y="95.2" font-size="12" fill="#c98a12" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
-<text x="402" y="125.2" font-size="12" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6</text>
-<text x="402" y="245.2" font-size="12" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4n−2</text>
+<text x="488" y="95.2" font-size="12" fill="#c98a12" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
+<text x="488" y="125.2" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6</text>
+<text x="488" y="245.2" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4n−2</text>
 <path d="M445 300L445 258" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3" marker-end="url(#a3f3f46)"/>
-<text x="605" y="66" font-size="14" fill="#18181b" text-anchor="middle" font-weight="700">M<tspan baseline-shift="-22%" font-size="10.08">3</tspan></text>
+<text x="605" y="66" font-size="14" fill="#18181b" text-anchor="middle" font-weight="700">M<tspan baseline-shift="-22%" font-size="10.1">3</tspan></text>
 <rect x="570" y="76" width="70" height="30" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.2"/>
 <rect x="570" y="106" width="70" height="30" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.2"/>
 <rect x="570" y="136" width="70" height="30" rx="0" fill="#fafafa" stroke="#3f3f46" stroke-width="1.2"/>
@@ -52,9 +52,9 @@
 <text x="605" y="185.2" font-size="12" fill="#71717a" text-anchor="middle">⋮</text>
 <rect x="570" y="196" width="70" height="30" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.2"/>
 <rect x="570" y="226" width="70" height="30" rx="0" fill="#ffffff" stroke="#3f3f46" stroke-width="1.2"/>
-<text x="562" y="95.2" font-size="12" fill="#c98a12" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
-<text x="562" y="125.2" font-size="12" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">7</text>
-<text x="562" y="245.2" font-size="12" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4n−1</text>
+<text x="648" y="95.2" font-size="12" fill="#c98a12" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3</text>
+<text x="648" y="125.2" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">7</text>
+<text x="648" y="245.2" font-size="12" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">4n−1</text>
 <path d="M605 300L605 258" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3" marker-end="url(#a3f3f46)"/>
 <path d="M125 300L605 300" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3"/>
 <rect x="300" y="304" width="100" height="28" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>

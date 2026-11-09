@@ -13,8 +13,8 @@
 <text x="212" y="105.8" font-size="11" fill="#fafafa" text-anchor="middle" font-weight="600">3</text>
 <rect x="232" y="92" width="28" height="20" rx="0" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
 <text x="246" y="105.8" font-size="11" fill="#fafafa" text-anchor="middle" font-weight="600">4</text>
-<rect x="20" y="80" width="140" height="170" rx="12" fill="none" stroke="#c98a12" stroke-width="1.4"/>
-<rect x="180" y="80" width="140" height="170" rx="12" fill="none" stroke="#18181b" stroke-width="1.4"/>
+<rect x="20" y="80" width="164" height="170" rx="12" fill="none" stroke="#c98a12" stroke-width="1.4"/>
+<rect x="190" y="80" width="140" height="170" rx="12" fill="none" stroke="#18181b" stroke-width="1.4"/>
 <rect x="46" y="180" width="28" height="24" rx="3" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
 <text x="60" y="196.2" font-size="12" fill="#78350f" text-anchor="middle">A</text>
 <path d="M60 180L124 112" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -29,9 +29,9 @@
 <path d="M280 180L246 112" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <rect x="50" y="256" width="54.1" height="23" rx="11.5" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.2"/>
 <text x="77" y="271.4" font-size="11" fill="#78350f" text-anchor="middle" font-weight="500">VLAN1</text>
-<rect x="210" y="256" width="54.1" height="23" rx="11.5" fill="#f4f4f5" stroke="#52525b" stroke-width="1.2"/>
-<text x="237.1" y="271.4" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500">VLAN2</text>
-<text x="350" y="60" font-size="11.5" fill="#3f3f46"><tspan x="350" dy="0">交换机上生成的各 VLAN 互不相通，若想实现通信，</tspan><tspan x="350" dy="17.2">需要借助：① 路由器　② 三层交换机</tspan></text>
+<rect x="222" y="256" width="54.1" height="23" rx="11.5" fill="#f4f4f5" stroke="#52525b" stroke-width="1.2"/>
+<text x="249.1" y="271.4" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500">VLAN2</text>
+<text x="352" y="60" font-size="11.5" fill="#3f3f46"><tspan x="352" dy="0">交换机上生成的各 VLAN 互不相通，若想实现通信，</tspan><tspan x="352" dy="17.2">需要借助：① 路由器　② 三层交换机</tspan></text>
 <text x="440" y="124" font-size="12" fill="#3b6fd4" text-anchor="middle">交换机的转发表</text>
 <rect x="370" y="186" width="140" height="26" rx="0" fill="#fafafa" stroke="none" stroke-width="0"/>
 <rect x="370" y="238" width="140" height="26" rx="0" fill="#fafafa" stroke="none" stroke-width="0"/>

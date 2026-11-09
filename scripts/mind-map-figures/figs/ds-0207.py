@@ -5,7 +5,7 @@ def row(y, m):
     F.cells(76, y, ['']*m, 22, 28, {i: 'blue' for i in range(m)}, size=11)
     F.text(76 + m * 22 + 8, y + 14, f'溢出：{m} 个关键字', 12, 'start', MUTED, valign='middle')
     k = -(-m // 2)
-    F.line(330, y + 14, 370, y + 14, LINE, 1.5, arrow='end')
+    F.line(348, y + 14, 390, y + 14, LINE, 1.5, arrow='end')
     F.cells(470, y - 22, [''], 22, 22, {0: 'red'})
     F.cells(400, y + 18, [''] * (k - 1), 22, 22, {i: 'blue' for i in range(k - 1)})
     F.cells(560 - 22 * (m - k), y + 18, [''] * (m - k), 22, 22, {i: 'blue' for i in range(m - k)})

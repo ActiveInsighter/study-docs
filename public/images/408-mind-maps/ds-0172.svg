@@ -25,7 +25,7 @@
 <circle cx="210" cy="196" r="16" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
 <text x="210" y="200.6" font-size="13" fill="#fafafa" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">2</text>
 <circle cx="210" cy="196" r="21" fill="none" stroke="#d1493a" stroke-width="1.5"/>
-<text x="232" y="184" font-size="12.5" fill="#d1493a" font-weight="700" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6胜</text>
+<text x="188" y="184" font-size="12.5" fill="#d1493a" text-anchor="end" font-weight="700" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">6胜</text>
 <circle cx="590" cy="196" r="16" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
 <text x="590" y="200.6" font-size="13" fill="#fafafa" text-anchor="middle" font-weight="600" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8</text>
 <circle cx="115" cy="258" r="16" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>

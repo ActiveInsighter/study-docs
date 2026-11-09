@@ -17,7 +17,7 @@
 <path d="M194 282L206 282" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
 <rect x="488" y="232" width="24" height="36" rx="3" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
 <path d="M494 242L506 242" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="150" y="66" font-size="12" fill="#3f3f46" text-anchor="middle">主机</text>
+<text x="168" y="95" font-size="12" fill="#3f3f46">主机</text>
 <ellipse cx="240" cy="168" rx="16" ry="7" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
 <ellipse cx="240" cy="232" rx="16" ry="7" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>
 <ellipse cx="370" cy="236" rx="16" ry="7" fill="#e0f3f1" stroke="#23877c" stroke-width="1.5"/>

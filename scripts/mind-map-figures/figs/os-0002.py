@@ -2,10 +2,10 @@ LABEL = '虚拟文件系统 VFS：向上提供统一的 POSIX 接口，向下屏
 F = Fig(640, 420, '虚拟文件系统 VFS')
 F.rect(100, 56, 520, 100, 'none', '#a1a1aa', 1.1, 6); F.text(60, 100, '用户进程', 12, 'middle', INK2)
 F.rect(100, 156, 520, 250, 'none', '#a1a1aa', 1.1, 6); F.text(60, 230, '内核\n（文件系统\n部分）', 12, 'middle', INK2, lh=1.3, valign='middle')
-F.circle(160, 90, 26, '用户进程\nP1', 'amber', 11); F.circle(560, 90, 26, '用户进程\nP2', 'amber', 11)
+F.circle(160, 96, 30, '用户进程\nP1', 'amber', 10); F.circle(560, 96, 30, '用户进程\nP2', 'amber', 10)
 F.ellipse(360, 118, 90, 20, 'C 标准库（libc）', 'blue', 12)
-F.line(186, 96, 270, 112, INK2, 1.2, arrow='end'); F.line(534, 96, 450, 112, INK2, 1.2, arrow='end')
-F.text(360, 152, 'POSIX 标准接口：open(x, y, z)', 11, color=INK2, halo=True); F.text(560, 150, '系统调用', 11, color=MUTED)
+F.line(191, 102, 270, 114, INK2, 1.2, arrow='end'); F.line(529, 102, 450, 114, INK2, 1.2, arrow='end')
+F.text(372, 180, 'POSIX 标准接口：open(x, y, z)', 11, 'start', INK2); F.text(600, 176, '系统调用', 11, 'end', MUTED)
 F.line(360, 138, 360, 196, INK2, 1.3, arrow='end')
 F.ellipse(360, 216, 100, 20, '虚拟文件系统 VFS', 'teal', 12.5)
 for i, (x, t) in enumerate(((230, 'UFS 文件系统'), (360, 'NTFS 文件系统'), (490, 'FAT 文件系统'))):

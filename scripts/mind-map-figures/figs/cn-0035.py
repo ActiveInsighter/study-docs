@@ -1,7 +1,7 @@
 LABEL = '有固定基础设施的 WLAN：基本服务集 BSS、扩展服务集 ESS、分配系统 DS、漫游'
 F = Fig(760, 380, '基本服务集和扩展服务集')
 F.ellipse(220, 250, 180, 90, '', 'violet'); F.ellipse(460, 240, 170, 96, '', 'green')
-F.box(130, 54, 80, 26, 'Portal', 'amber', 11.5, 4); F.line(128, 67, 40, 67, INK2, 1.2, arrow='end'); F.text(40, 56, '至其他 802.x 局域网', 10.5, 'start', INK2)
+F.box(130, 54, 80, 26, 'Portal', 'amber', 11.5, 4); F.line(128, 67, 40, 67, INK2, 1.2, arrow='end'); F.text(40, 96, '至其他 802.x 局域网', 10.5, 'start', INK2)
 F.line(212, 67, 600, 67, INK2, 1.2); F.text(400, 58, '分配系统 DS', 11.5, color=ACCENT['amber'], weight=600)
 F.circle(660, 70, 30, '因特网', 'white', 11)
 F.box(280, 150, 44, 22, 'AP1', 'blue', 10.5, 4); F.box(470, 150, 44, 22, 'AP2', 'blue', 10.5, 4)

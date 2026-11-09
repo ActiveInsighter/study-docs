@@ -30,7 +30,7 @@ markmap:
   - 若PTE未驻留且可合法调入：触发缺页处理，更新页表/TLB，重试访问
   - 若转换完成：提取Cache索引、tag和块内偏移 → 查Cache数据
   - Cache miss：从下级缓存/主存装入目标块后返回CPU
-- <img src="/images/408-mind-maps/co-03-tlb-cache-flow-clean.svg" alt="VPN到PFN、TLB查找与Cache访问的分阶段流程图" width="960" height="475">
+- <img src="/images/408-mind-maps/co-03-tlb-cache-flow-clean.svg" alt="VPN到PFN、TLB查找与Cache访问的分阶段流程图" width="960" height="490">
 
 - <img src="/images/408-mind-maps/co-0298.svg" alt="TLB + Cache 的多级存储系统全图" width="900" height="409">
 
