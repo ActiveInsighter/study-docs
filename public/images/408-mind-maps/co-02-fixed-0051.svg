@@ -4,7 +4,7 @@
 <rect x="0.75" y="0.75" width="858.5" height="468.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
 <text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">16 位先行进位加法器的两种组织方式</text>
 <rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
-<text x="30" y="76" font-size="13.5" fill="#18181b" font-weight="700">① 单级先行进位：组内并行、组间串行</text>
+<text x="30" y="67" font-size="13.5" fill="#18181b" font-weight="700">① 单级先行进位：组内并行、组间串行</text>
 <rect x="640" y="110" width="92" height="44" rx="6" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
 <text x="686" y="128.1" font-size="12" fill="#1e3a8a" text-anchor="middle"><tspan x="686" dy="0">4 位 CLA</tspan><tspan x="686" dy="16.2">加法器</tspan></text>
 <path d="M686 110L686 92" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>

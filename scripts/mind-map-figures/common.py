@@ -416,8 +416,8 @@ def datapath(F, top_reg, left_reg, right_reg, alu='32 位 ALU', w=32, op='加', 
     F.poly([(130, ry + 32), (130, ry + 60), (60, ry + 60), (60, y0 + 56), (ax + 40, y0 + 56), (ax + 40, y0 + 68)], INK2, 1.2, arrow='end')
     cx = 100 + 2 * reg_w + 110
     F.ellipse(cx, ry + 15, 74, 30, '控制逻辑\n计数器 C_{n}', 'violet', 12)
-    F.line(cx - 74, ry + 8, 100 + 2 * reg_w + 2, ry + 8, INK2, 1.2, dash='4 3', arrow='end'); F.text(cx - 54, ry - 2, shift, 11, color=INK2)
-    F.line(cx - 74, ry + 22, 100 + 2 * reg_w + 2, ry + 22, INK2, 1.2, dash='4 3', arrow='end'); F.text(cx - 54, ry + 40, '写使能', 11, color=INK2)
+    F.line(cx - 74, ry + 8, 100 + 2 * reg_w + 2, ry + 8, INK2, 1.2, dash='4 3', arrow='end'); F.text(cx - 91, ry - 2, shift, 11, color=INK2)
+    F.line(cx - 74, ry + 22, 100 + 2 * reg_w + 2, ry + 22, INK2, 1.2, dash='4 3', arrow='end'); F.text(cx - 91, ry + 40, '写使能', 11, color=INK2)
     F.poly([(cx, ry - 15), (cx, y0 + 90), (ax + 154, y0 + 90)], INK2, 1.2, dash='4 3', arrow='end'); F.text(ax + 200, y0 + 82, op, 11, color=INK2)
     F.line(cx, ry + 80, cx, ry + 46, INK2, 1.2, arrow='end'); F.text(cx + 8, ry + 78, '时钟', 11, 'start', INK2)
     return ry

@@ -4,25 +4,25 @@
 <rect width="1040" height="450" rx="18" fill="white" stroke="#CFD8E3" stroke-width="2"/>
 <text x="32" y="46" font-size="24" font-weight="700" fill="#17243A">中断响应：入口硬件动作与软件处理要区分</text>
 <rect x="32" y="57" width="62" height="5" rx="2.5" fill="#2563EB"/>
-<rect x="34" y="118" width="178" height="94" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
-<text x="123.0" y="157.5" text-anchor="middle" fill="#2563EB" font-size="17" font-weight="700">中断请求</text>
-<text x="123.0" y="183.8" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">设备/异常条件</text>
-<line x1="214" y1="166" x2="234" y2="166" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="240" y="118" width="178" height="94" rx="10" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
-<text x="329.0" y="157.5" text-anchor="middle" fill="#B45309" font-size="17" font-weight="700">可受理检查点</text>
-<text x="329.0" y="183.8" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">优先级/屏蔽判断</text>
-<line x1="420" y1="166" x2="440" y2="166" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="446" y="118" width="178" height="94" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
-<text x="535.0" y="157.5" text-anchor="middle" fill="#2563EB" font-size="17" font-weight="700">保护必要现场</text>
-<text x="535.0" y="183.8" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">返回PC、状态等</text>
-<line x1="626" y1="166" x2="646" y2="166" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="652" y="118" width="178" height="94" rx="10" fill="#D1FAE5" stroke="#0F766E" stroke-width="1.5"/>
-<text x="741.0" y="157.5" text-anchor="middle" fill="#0F766E" font-size="17" font-weight="700">转入ISR</text>
-<text x="741.0" y="183.8" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">找到处理入口</text>
-<line x1="832" y1="166" x2="852" y2="166" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="858" y="118" width="178" height="94" rx="10" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/>
-<text x="947.0" y="157.5" text-anchor="middle" fill="#7C3AED" font-size="17" font-weight="700">返回原程序</text>
-<text x="947.0" y="183.8" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">恢复现场/中断返回</text>
+<rect x="34" y="118" width="172" height="94" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="120" y="157.5" text-anchor="middle" fill="#2563EB" font-size="17" font-weight="700">中断请求</text>
+<text x="120" y="183.8" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">设备/异常条件</text>
+<line x1="208" y1="166" x2="230" y2="166" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="236" y="118" width="172" height="94" rx="10" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+<text x="322" y="157.5" text-anchor="middle" fill="#B45309" font-size="17" font-weight="700">可受理检查点</text>
+<text x="322" y="183.8" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">优先级/屏蔽判断</text>
+<line x1="410" y1="166" x2="432" y2="166" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="438" y="118" width="172" height="94" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="524" y="157.5" text-anchor="middle" fill="#2563EB" font-size="17" font-weight="700">保护必要现场</text>
+<text x="524" y="183.8" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">返回PC、状态等</text>
+<line x1="612" y1="166" x2="634" y2="166" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="640" y="118" width="172" height="94" rx="10" fill="#D1FAE5" stroke="#0F766E" stroke-width="1.5"/>
+<text x="726" y="157.5" text-anchor="middle" fill="#0F766E" font-size="17" font-weight="700">转入ISR</text>
+<text x="726" y="183.8" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">找到处理入口</text>
+<line x1="814" y1="166" x2="836" y2="166" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="842" y="118" width="172" height="94" rx="10" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="928" y="157.5" text-anchor="middle" fill="#7C3AED" font-size="17" font-weight="700">返回原程序</text>
+<text x="928" y="183.8" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">恢复现场/中断返回</text>
 <rect x="35" y="260" width="593" height="55" rx="11" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
 <text x="331" y="291" text-anchor="middle" fill="#2563EB" font-size="16" font-weight="600">硬件入口动作：原子/受保护的状态切换（具体因ISA而异）</text>
 <rect x="645" y="260" width="360" height="55" rx="11" fill="#F0FDF4" stroke="#0F766E" stroke-width="1.5"/>

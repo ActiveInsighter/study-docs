@@ -21,9 +21,9 @@
 <ellipse cx="510" cy="231" rx="74" ry="30" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
 <text x="510" y="227.1" font-size="12" fill="#3b0764" text-anchor="middle" font-weight="500"><tspan x="510" dy="0">控制逻辑</tspan><tspan x="510" dy="16.2">计数器 C<tspan baseline-shift="-22%" font-size="9.5">n</tspan></tspan></text>
 <path d="M436 224L402 224" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3" marker-end="url(#a3f3f46)"/>
-<text x="456" y="214" font-size="11" fill="#3f3f46" text-anchor="middle">右移</text>
+<text x="419" y="214" font-size="11" fill="#3f3f46" text-anchor="middle">右移</text>
 <path d="M436 238L402 238" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3" marker-end="url(#a3f3f46)"/>
-<text x="456" y="256" font-size="11" fill="#3f3f46" text-anchor="middle">写使能</text>
+<text x="419" y="256" font-size="11" fill="#3f3f46" text-anchor="middle">写使能</text>
 <path d="M510 201L510 156Q510 150 504 150L274 150" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3" marker-end="url(#a3f3f46)"/>
 <text x="320" y="142" font-size="11" fill="#3f3f46" text-anchor="middle">加 / 减</text>
 <path d="M510 296L510 262" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>

@@ -18,6 +18,6 @@
 <path d="M530 84L530 148" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
 <rect x="490" y="150" width="80" height="34" rx="6" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
 <text x="530" y="171.4" font-size="12.5" fill="#18181b" text-anchor="middle">设备接口</text>
-<text x="510" y="171.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
+<text x="460" y="171.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
 <text x="320" y="206" font-size="12" fill="#71717a" text-anchor="middle">结构简单、成本低；但带宽低、多部件争用总线、不支持并行传送</text>
 </svg>
