@@ -16,17 +16,27 @@
 .mind-map {
   --mind-map-height: clamp(22rem, 62vh, 38rem);
   --mind-map-border: color-mix(in oklab, var(--color-fd-foreground) 12%, transparent);
-  /* Frosted controls over the canvas: toolbar and navigator. */
-  --mind-map-glass: color-mix(in oklab, var(--color-fd-background) 80%, transparent);
-  --mind-map-glass-solid: color-mix(in oklab, var(--color-fd-background) 96%, transparent);
-  --mind-map-glass-edge: color-mix(in oklab, var(--color-fd-foreground) 9%, transparent);
-  --mind-map-glass-blur: blur(16px) saturate(1.6);
+  /* Frosted controls over the canvas: toolbar and navigator. Light enough to
+   * see the map through, blurred enough to read on top of it. */
+  --mind-map-glass: color-mix(in oklab, var(--color-fd-background) 58%, transparent);
+  --mind-map-glass-panel: color-mix(in oklab, var(--color-fd-background) 78%, transparent);
+  --mind-map-glass-edge: color-mix(in oklab, var(--color-fd-foreground) 10%, transparent);
+  --mind-map-glass-blur: blur(18px) saturate(1.8);
   --mind-map-glass-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 35%),
+    0 1px 2px rgb(0 0 0 / 4%),
+    0 8px 24px -10px rgb(0 0 0 / 18%);
+  --mind-map-glass-shadow-lg:
+    inset 0 1px 0 rgb(255 255 255 / 35%),
     0 1px 2px rgb(0 0 0 / 5%),
-    0 10px 30px -12px rgb(0 0 0 / 22%);
-  --mind-map-hover: color-mix(in oklab, var(--color-fd-foreground) 7%, transparent);
-  --mind-map-pressed: color-mix(in oklab, var(--color-fd-foreground) 12%, transparent);
-  --mind-map-accent: var(--color-fd-primary);
+    0 24px 48px -16px rgb(0 0 0 / 26%);
+  --mind-map-hover: color-mix(in oklab, var(--color-fd-foreground) 6%, transparent);
+  --mind-map-pressed: color-mix(in oklab, var(--color-fd-foreground) 11%, transparent);
+  /* A calm indigo for "you are here" states, against the neutral site chrome. */
+  --mind-map-accent: oklch(0.52 0.17 268);
+  --mind-map-accent-strong: oklch(0.42 0.15 268);
+  --mind-map-accent-soft: color-mix(in oklab, var(--mind-map-accent) 12%, transparent);
+  --mind-map-touch: 0;
   position: relative;
   margin-block: 1.75rem;
   overflow: hidden;
@@ -34,6 +44,29 @@
   border-radius: 0.75rem;
   background: var(--color-fd-background);
   color: var(--color-fd-foreground);
+}
+
+.dark .mind-map {
+  --mind-map-glass: color-mix(in oklab, var(--color-fd-background) 52%, transparent);
+  --mind-map-glass-panel: color-mix(in oklab, var(--color-fd-background) 74%, transparent);
+  --mind-map-glass-edge: color-mix(in oklab, var(--color-fd-foreground) 12%, transparent);
+  --mind-map-glass-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 6%),
+    0 1px 2px rgb(0 0 0 / 30%),
+    0 10px 28px -10px rgb(0 0 0 / 60%);
+  --mind-map-glass-shadow-lg:
+    inset 0 1px 0 rgb(255 255 255 / 6%),
+    0 1px 2px rgb(0 0 0 / 30%),
+    0 24px 48px -16px rgb(0 0 0 / 70%);
+  --mind-map-accent: oklch(0.74 0.13 268);
+  --mind-map-accent-strong: oklch(0.84 0.09 268);
+  --mind-map-accent-soft: color-mix(in oklab, var(--mind-map-accent) 18%, transparent);
+}
+
+@media (pointer: coarse) {
+  .mind-map {
+    --mind-map-touch: 1;
+  }
 }
 
 .mind-map-stage {
@@ -70,7 +103,7 @@
   top: 0.75rem;
   left: 0.75rem;
   z-index: 4;
-  width: min(25rem, calc(100% - 1.5rem));
+  max-width: min(30rem, calc(100% - 1.5rem));
   pointer-events: none;
 }
 
@@ -144,7 +177,7 @@
 }
 
 .mind-map-tool:focus-visible {
-  outline: 2px solid var(--color-fd-ring, var(--mind-map-accent));
+  outline: 2px solid var(--mind-map-accent);
   outline-offset: 1px;
 }
 
@@ -159,14 +192,10 @@
   font-size: 0.6875rem;
 }
 
-.mind-map-tool[aria-pressed='true'] {
-  background: var(--color-fd-foreground);
-  color: var(--color-fd-background);
-}
-
+.mind-map-tool[aria-pressed='true'],
 .mind-map-tool-level[aria-pressed='true']:hover:enabled {
-  background: var(--color-fd-foreground);
-  color: var(--color-fd-background);
+  background: var(--mind-map-accent-soft);
+  color: var(--mind-map-accent-strong);
 }
 
 .mind-map-toolbar-levels {
@@ -202,120 +231,32 @@
 
 .mind-map-nav {
   position: relative;
+  width: fit-content;
+  max-width: 100%;
   pointer-events: auto;
 }
 
-.mind-map-nav-card {
-  overflow: hidden;
+/* One slim frosted pill: title (opens the directory) · ‹ n/N ›. */
+.mind-map-nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+  max-width: 100%;
+  height: 2.375rem;
+  padding: 0.1875rem;
   border: 1px solid var(--mind-map-glass-edge);
-  border-radius: 1rem;
+  border-radius: 999px;
   background: var(--mind-map-glass);
   box-shadow: var(--mind-map-glass-shadow);
   -webkit-backdrop-filter: var(--mind-map-glass-blur);
   backdrop-filter: var(--mind-map-glass-blur);
 }
 
-.mind-map-nav-main {
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-  padding: 0.5rem 0.625rem 0.5rem 0.5rem;
-}
-
-.mind-map-nav-toggle,
-.mind-map-nav-icon {
-  display: inline-grid;
-  flex: none;
-  width: 2.25rem;
-  height: 2.25rem;
-  place-items: center;
-  border: 0;
-  border-radius: 0.75rem;
-  background: var(--mind-map-hover);
-  color: var(--color-fd-foreground);
-  cursor: pointer;
-  transition:
-    background-color 160ms ease,
-    color 160ms ease,
-    scale 160ms ease;
-}
-
-.mind-map-nav-toggle svg,
-.mind-map-nav-icon svg {
-  width: 1.125rem;
-  height: 1.125rem;
-}
-
-.mind-map-nav-toggle:hover {
-  background: var(--mind-map-pressed);
-}
-
-.mind-map-nav-toggle:active {
-  scale: 0.94;
-}
-
-.mind-map-nav-toggle[aria-expanded='true'] {
-  background: var(--color-fd-foreground);
-  color: var(--color-fd-background);
-}
-
-.mind-map-nav-icon {
-  width: 1.75rem;
-  height: 1.75rem;
-  border-radius: 999px;
-  background: transparent;
-  color: var(--color-fd-muted-foreground);
-}
-
-.mind-map-nav-icon svg {
-  width: 1rem;
-  height: 1rem;
-}
-
-.mind-map-nav-icon:hover {
-  background: var(--mind-map-hover);
-  color: var(--color-fd-foreground);
-}
-
-.mind-map-nav-heading {
-  display: grid;
-  min-width: 0;
-  flex: 1;
-  gap: 0.0625rem;
-}
-
-.mind-map-nav-trail {
-  display: flex;
-  align-items: center;
-  gap: 0.125rem;
-  min-width: 0;
-  color: var(--color-fd-muted-foreground);
-  font-size: 0.6875rem;
-  line-height: 1.4;
-}
-
-.mind-map-nav-crumb {
-  overflow: hidden;
-  color: inherit;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.mind-map-nav-crumb:hover {
-  color: var(--color-fd-foreground);
-}
-
-.mind-map-nav-crumb-sep {
-  width: 0.75rem;
-  height: 0.75rem;
-  flex: none;
-  opacity: 0.6;
-}
-
 #docs-body .mind-map-page-title {
-  margin: 0;
+  display: flex;
   min-width: 0;
+  flex: 0 1 auto;
+  margin: 0;
   font-size: inherit;
   font-weight: inherit !important;
   line-height: inherit;
@@ -324,19 +265,43 @@
 .mind-map-nav-title {
   display: flex;
   align-items: center;
-  gap: 0.375rem;
-  width: 100%;
+  gap: 0.4375rem;
   min-width: 0;
-  padding: 0;
+  max-width: 100%;
+  height: 2rem;
+  padding: 0 0.5rem 0 0.625rem;
   border: 0;
+  border-radius: 999px;
   background: none;
   color: var(--color-fd-foreground);
   font: inherit;
-  font-size: 0.9375rem;
-  font-weight: 650;
-  line-height: 1.4;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1;
   text-align: left;
   cursor: pointer;
+  transition: background-color 160ms ease;
+}
+
+.mind-map-nav-title:hover,
+.mind-map-nav[data-open] .mind-map-nav-title {
+  background: var(--mind-map-hover);
+}
+
+.mind-map-nav-title:focus-visible,
+.mind-map-nav-step:focus-visible,
+.mind-map-nav-icon:focus-visible,
+.mind-map-nav-item:focus-visible,
+.mind-map-nav-chapter:focus-visible {
+  outline: 2px solid var(--mind-map-accent);
+  outline-offset: 1px;
+}
+
+.mind-map-nav-title-icon {
+  width: 1rem;
+  height: 1rem;
+  flex: none;
+  color: var(--mind-map-accent);
 }
 
 .mind-map-nav-title-text {
@@ -348,18 +313,15 @@
 
 .mind-map-nav-number {
   flex: none;
-  padding: 0.0625rem 0.375rem;
-  border-radius: 0.375rem;
-  background: var(--mind-map-hover);
-  color: var(--color-fd-muted-foreground);
+  color: var(--mind-map-accent);
   font-size: 0.75rem;
   font-variant-numeric: tabular-nums;
-  font-weight: 600;
+  font-weight: 650;
 }
 
 .mind-map-nav-caret {
-  width: 0.875rem;
-  height: 0.875rem;
+  width: 0.8125rem;
+  height: 0.8125rem;
   flex: none;
   color: var(--color-fd-muted-foreground);
   transition: rotate 200ms ease;
@@ -370,47 +332,30 @@
 }
 
 .mind-map-nav-steps {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  display: flex;
+  flex: none;
   align-items: center;
-  gap: 0.375rem;
-  padding: 0.3125rem 0.375rem;
-  border-top: 1px solid var(--mind-map-glass-edge);
+  padding-left: 0.1875rem;
+  border-left: 1px solid var(--mind-map-glass-edge);
 }
 
 .mind-map-nav-step {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  min-width: 0;
-  max-width: 100%;
+  display: inline-grid;
+  width: 1.75rem;
   height: 1.75rem;
-  padding: 0 0.5rem;
-  border-radius: 0.5rem;
+  place-items: center;
+  border-radius: 999px;
   color: var(--color-fd-muted-foreground);
-  font-size: 0.75rem;
   text-decoration: none;
   transition:
     background-color 160ms ease,
-    color 160ms ease;
+    color 160ms ease,
+    scale 160ms ease;
 }
 
 .mind-map-nav-step svg {
-  width: 0.875rem;
-  height: 0.875rem;
-  flex: none;
-}
-
-.mind-map-nav-step-next {
-  flex-direction: row-reverse;
-  justify-self: end;
-}
-
-.mind-map-nav-step-text {
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  width: 0.9375rem;
+  height: 0.9375rem;
 }
 
 .mind-map-nav-step:not([data-disabled]):hover {
@@ -418,54 +363,43 @@
   color: var(--color-fd-foreground);
 }
 
+.mind-map-nav-step:not([data-disabled]):active {
+  scale: 0.92;
+}
+
 .mind-map-nav-step[data-disabled] {
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
-.mind-map-nav-progress {
-  position: relative;
-  display: grid;
-  min-width: 3.5rem;
-  height: 1.375rem;
-  place-items: center;
-  overflow: hidden;
-  border-radius: 999px;
-  background: var(--mind-map-hover);
-}
-
-.mind-map-nav-progress-bar {
-  position: absolute;
-  inset: 0 auto 0 0;
-  border-radius: inherit;
-  background: color-mix(in oklab, var(--color-fd-foreground) 12%, transparent);
-}
-
-.mind-map-nav-progress-text {
-  position: relative;
-  padding-inline: 0.5rem;
+.mind-map-nav-position {
+  min-width: 2.25rem;
   color: var(--color-fd-foreground);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-variant-numeric: tabular-nums;
   font-weight: 600;
+  text-align: center;
+}
+
+.mind-map-nav-position-total {
+  color: var(--color-fd-muted-foreground);
+  font-weight: 500;
 }
 
 /* Directory */
 
 .mind-map-nav-panel {
   position: absolute;
-  top: calc(100% + 0.5rem);
+  top: calc(100% + 0.375rem);
   left: 0;
   display: flex;
-  width: min(25rem, calc(100vw - 1.5rem));
-  max-height: min(34rem, calc(100dvh - 12rem));
+  width: min(21rem, calc(100vw - 1.5rem));
+  max-height: min(32rem, calc(100dvh - 10rem));
   flex-direction: column;
   overflow: hidden;
   border: 1px solid var(--mind-map-glass-edge);
   border-radius: 1rem;
-  background: var(--mind-map-glass-solid);
-  box-shadow:
-    0 1px 2px rgb(0 0 0 / 6%),
-    0 24px 48px -16px rgb(0 0 0 / 28%);
+  background: var(--mind-map-glass-panel);
+  box-shadow: var(--mind-map-glass-shadow-lg);
   -webkit-backdrop-filter: var(--mind-map-glass-blur);
   backdrop-filter: var(--mind-map-glass-blur);
   transform-origin: top left;
@@ -475,7 +409,7 @@
 @keyframes mind-map-panel-in {
   from {
     opacity: 0;
-    transform: translateY(-0.375rem) scale(0.98);
+    transform: translateY(-0.25rem) scale(0.98);
   }
 }
 
@@ -487,10 +421,28 @@
 
 .mind-map-nav-panel-head {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 0.5rem;
-  padding: 0.75rem 0.625rem 0.5rem 0.875rem;
+  padding: 0.75rem 0.5rem 0.5rem 0.875rem;
+}
+
+.mind-map-nav-panel-heading {
+  display: grid;
+  min-width: 0;
+  gap: 0.125rem;
+}
+
+.mind-map-nav-panel-subject {
+  width: fit-content;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.mind-map-nav-panel-subject:hover {
+  color: var(--color-fd-foreground);
 }
 
 .mind-map-nav-panel-title {
@@ -511,24 +463,55 @@
 .mind-map-nav-panel-count {
   flex: none;
   color: var(--color-fd-muted-foreground);
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 500;
+}
+
+.mind-map-nav-icon {
+  display: inline-grid;
+  flex: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-fd-muted-foreground);
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.mind-map-nav-icon svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.mind-map-nav-icon:hover {
+  background: var(--mind-map-hover);
+  color: var(--color-fd-foreground);
 }
 
 .mind-map-nav-search {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin: 0 0.625rem 0.375rem;
+  height: 2rem;
+  margin: 0 0.625rem 0.25rem;
   padding: 0 0.625rem;
-  height: 2.125rem;
+  border: 1px solid transparent;
   border-radius: 0.625rem;
   background: var(--mind-map-hover);
   color: var(--color-fd-muted-foreground);
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease;
 }
 
 .mind-map-nav-search:focus-within {
-  box-shadow: 0 0 0 2px color-mix(in oklab, var(--color-fd-foreground) 18%, transparent);
+  border-color: color-mix(in oklab, var(--mind-map-accent) 45%, transparent);
+  background: transparent;
 }
 
 .mind-map-nav-search svg {
@@ -544,21 +527,26 @@
   background: none;
   color: var(--color-fd-foreground);
   font: inherit;
-  font-size: 0.8125rem;
+  /* 16px on touch screens, or iOS zooms the page when the field gets focus. */
+  font-size: max(0.8125rem, 16px * var(--mind-map-touch, 0));
   outline: none;
+}
+
+.mind-map-nav-search input::-webkit-search-cancel-button {
+  display: none;
 }
 
 .mind-map-nav-list {
   flex: 1 1 auto;
   min-height: 0;
   margin: 0;
-  padding: 0.375rem 0.375rem 0.625rem;
+  padding: 0.25rem 0.375rem 0.5rem;
   overflow-y: auto;
   overscroll-behavior: contain;
   list-style: none;
   scrollbar-width: thin;
-  -webkit-mask-image: linear-gradient(transparent, #000 0.625rem, #000 calc(100% - 0.75rem), transparent);
-  mask-image: linear-gradient(transparent, #000 0.625rem, #000 calc(100% - 0.75rem), transparent);
+  -webkit-mask-image: linear-gradient(transparent, #000 0.5rem, #000 calc(100% - 0.625rem), transparent);
+  mask-image: linear-gradient(transparent, #000 0.5rem, #000 calc(100% - 0.625rem), transparent);
 }
 
 .mind-map-nav-list li {
@@ -566,11 +554,12 @@
 }
 
 .mind-map-nav-item {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 0.625rem;
-  padding: 0.4375rem 0.5rem;
-  border-radius: 0.625rem;
+  gap: 0.5rem;
+  padding: 0.375rem 0.5rem;
+  border-radius: 0.5rem;
   color: var(--color-fd-foreground);
   font-size: 0.8125rem;
   line-height: 1.45;
@@ -584,13 +573,9 @@
 
 .mind-map-nav-item-number {
   display: inline-grid;
-  min-width: 2.25rem;
-  height: 1.375rem;
+  min-width: 2rem;
   flex: none;
-  place-items: center;
-  padding-inline: 0.25rem;
-  border-radius: 0.4375rem;
-  background: var(--mind-map-hover);
+  place-items: center start;
   color: var(--color-fd-muted-foreground);
   font-size: 0.6875rem;
   font-variant-numeric: tabular-nums;
@@ -614,13 +599,13 @@
 }
 
 .mind-map-nav-item[aria-current='page'] {
-  background: var(--color-fd-foreground);
-  color: var(--color-fd-background);
+  background: var(--mind-map-accent-soft);
+  color: var(--mind-map-accent-strong);
+  font-weight: 600;
 }
 
 .mind-map-nav-item[aria-current='page'] .mind-map-nav-item-number {
-  background: color-mix(in oklab, var(--color-fd-background) 18%, transparent);
-  color: var(--color-fd-background);
+  color: var(--mind-map-accent);
 }
 
 .mind-map-nav-empty {
@@ -643,7 +628,6 @@
   color: var(--color-fd-muted-foreground);
   font-size: 0.6875rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
 }
 
 .mind-map-nav-chapters-all {
@@ -666,37 +650,39 @@
 
 .mind-map-nav-chapter-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
-  gap: 0.375rem;
+  grid-template-columns: repeat(auto-fill, minmax(6.25rem, 1fr));
+  gap: 0.25rem;
 }
 
 .mind-map-nav-chapter {
   display: grid;
   gap: 0.0625rem;
   min-width: 0;
-  padding: 0.375rem 0.5rem;
-  border: 1px solid var(--mind-map-glass-edge);
-  border-radius: 0.625rem;
+  padding: 0.3125rem 0.5rem;
+  border-radius: 0.5rem;
+  background: var(--mind-map-hover);
   color: var(--color-fd-foreground);
   text-decoration: none;
-  transition:
-    background-color 140ms ease,
-    border-color 140ms ease;
+  transition: background-color 140ms ease;
 }
 
 .mind-map-nav-chapter:hover {
-  background: var(--mind-map-hover);
+  background: var(--mind-map-pressed);
 }
 
 .mind-map-nav-chapter[aria-current='true'] {
-  border-color: var(--color-fd-foreground);
-  background: var(--mind-map-hover);
+  background: var(--mind-map-accent-soft);
+  color: var(--mind-map-accent-strong);
 }
 
 .mind-map-nav-chapter-order {
   color: var(--color-fd-muted-foreground);
   font-size: 0.625rem;
   font-weight: 600;
+}
+
+.mind-map-nav-chapter[aria-current='true'] .mind-map-nav-chapter-order {
+  color: var(--mind-map-accent);
 }
 
 .mind-map-nav-chapter-name {
@@ -789,13 +775,12 @@
     padding-left: 0.1875rem;
   }
 
-  .mind-map-nav-steps {
-    grid-template-columns: auto auto auto;
-    justify-content: space-between;
+  .mind-map-nav-position-total {
+    display: none;
   }
 
-  .mind-map-nav-step-text {
-    display: none;
+  .mind-map-nav-position {
+    min-width: 1.25rem;
   }
 }
 
@@ -876,12 +861,7 @@
   position: absolute;
   inset: 0;
   overflow: hidden;
-  background-color: var(--modal-pane-muted, var(--color-fd-muted));
-  background-image: radial-gradient(
-    color-mix(in oklab, var(--color-fd-foreground) 9%, transparent) 1px,
-    transparent 1px
-  );
-  background-size: 18px 18px;
+  background: var(--modal-pane-muted, var(--color-fd-muted));
   cursor: grab;
   touch-action: none;
   user-select: none;
@@ -891,17 +871,12 @@
   cursor: grabbing;
 }
 
+/* The figure as drawn: the SVG brings its own card, so no frame is added. */
 .mind-map-image {
   position: absolute;
   top: 0;
   left: 0;
   max-width: none;
-  border-radius: 0.5rem;
-  /* SVG figures are drawn on white in either theme. */
-  background: #fff;
-  box-shadow:
-    0 0 0 1px rgb(0 0 0 / 6%),
-    0 18px 48px -20px rgb(0 0 0 / 35%);
   opacity: 0;
   transform-origin: 0 0;
   pointer-events: none;

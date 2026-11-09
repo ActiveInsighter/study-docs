@@ -1,6 +1,5 @@
 'use client';
 
-import { cn } from '@/lib/utils';
 import {
   ChevronDown,
   ChevronLeft,
@@ -51,10 +50,10 @@ function splitChapter(title: string): [string, string] {
 }
 
 /**
- * Floating navigator for dedicated mind-map pages: where the page sits
- * (subject › chapter), its title and progress through the chapter,
- * previous / next, and a directory of the chapter's sections and the
- * subject's chapters, filterable, to jump anywhere in two clicks.
+ * Compact floating navigator for dedicated mind-map pages: one frosted pill
+ * with the page title (opens the directory), previous / next and the
+ * position in the chapter. The directory lists the chapter's maps,
+ * filterable, and the subject's chapters, to jump anywhere in two clicks.
  */
 export function MindMapPageHeader({
   title,
@@ -117,81 +116,40 @@ export function MindMapPageHeader({
     return sections.filter((section) => section.title.toLowerCase().includes(needle));
   }, [query, sections]);
 
-  const progress = position ? (position.index / position.total) * 100 : 0;
   const chapterLabel = chapter ? shortChapterTitle(chapter.title) : undefined;
+  const subjectLabel = subject ? shortChapterTitle(subject.title) : undefined;
+  const heading = isOverview ? `${chapterLabel ?? name} · 导览` : name;
+  const toggle = () => setOpen((value) => !value);
 
   return (
     <div ref={rootRef} className="mind-map-nav" data-open={open ? '' : undefined}>
-      <div className="mind-map-nav-card">
-        <div className="mind-map-nav-main">
+      <div className="mind-map-nav-bar">
+        <h1 className="mind-map-page-title">
           <button
             type="button"
-            className="mind-map-nav-toggle"
+            className="mind-map-nav-title"
             aria-expanded={open}
             aria-controls={panelId}
-            title={open ? '收起目录' : '打开本章目录'}
-            onClick={() => setOpen((value) => !value)}
+            title={open ? '收起目录' : `打开本章目录：${title}`}
+            onClick={toggle}
           >
-            <ListTree aria-hidden="true" />
-            <span className="sr-only">本章目录</span>
+            <ListTree className="mind-map-nav-title-icon" aria-hidden="true" />
+            {number ? <span className="mind-map-nav-number">{number}</span> : null}
+            <span className="mind-map-nav-title-text">{heading}</span>
+            <ChevronDown className="mind-map-nav-caret" aria-hidden="true" />
           </button>
-
-          <div className="mind-map-nav-heading">
-            {subject || chapter ? (
-              <nav className="mind-map-nav-trail" aria-label="所在位置">
-                {subject ? (
-                  <Link href={subject.url} className="mind-map-nav-crumb">
-                    {shortChapterTitle(subject.title)}
-                  </Link>
-                ) : null}
-                {subject && chapter && !isOverview ? (
-                  <ChevronRight className="mind-map-nav-crumb-sep" aria-hidden="true" />
-                ) : null}
-                {chapter && !isOverview ? (
-                  <Link href={chapter.url} className="mind-map-nav-crumb">
-                    {chapterLabel}
-                  </Link>
-                ) : null}
-              </nav>
-            ) : null}
-            <h1 className="mind-map-page-title">
-              <button
-                type="button"
-                className="mind-map-nav-title"
-                aria-expanded={open}
-                aria-controls={panelId}
-                onClick={() => setOpen((value) => !value)}
-              >
-                {number ? <span className="mind-map-nav-number">{number}</span> : null}
-                <span className="mind-map-nav-title-text">
-                  {isOverview ? `${chapterLabel ?? name} · 导览` : name}
-                </span>
-                <ChevronDown className="mind-map-nav-caret" aria-hidden="true" />
-              </button>
-            </h1>
-          </div>
-        </div>
+        </h1>
 
         {previous || next || position ? (
           <div className="mind-map-nav-steps">
             <StepLink link={previous} direction="previous" />
             {position ? (
-              <div
-                className="mind-map-nav-progress"
-                role="progressbar"
-                aria-label="本章进度"
-                aria-valuemin={1}
-                aria-valuemax={position.total}
-                aria-valuenow={position.index}
-              >
-                <span className="mind-map-nav-progress-bar" style={{ width: `${progress}%` }} />
-                <span className="mind-map-nav-progress-text">
-                  {position.index}
-                  <span aria-hidden="true"> / </span>
-                  <span className="sr-only">共</span>
-                  {position.total}
+              <span className="mind-map-nav-position" aria-label={`本章第 ${position.index} 张，共 ${position.total} 张`}>
+                {position.index}
+                <span className="mind-map-nav-position-total" aria-hidden="true">
+                  /{position.total}
                 </span>
-              </div>
+              </span>
             ) : null}
             <StepLink link={next} direction="next" />
           </div>
@@ -201,9 +159,16 @@ export function MindMapPageHeader({
       {open ? (
         <div id={panelId} className="mind-map-nav-panel" role="dialog" aria-label="思维导图目录">
           <div className="mind-map-nav-panel-head">
-            <div className="mind-map-nav-panel-title">
-              <span>{chapterLabel ?? '本章'}</span>
-              <span className="mind-map-nav-panel-count">{sections.length} 张导图</span>
+            <div className="mind-map-nav-panel-heading">
+              {subject && subjectLabel ? (
+                <Link href={subject.url} className="mind-map-nav-panel-subject">
+                  {subjectLabel}
+                </Link>
+              ) : null}
+              <div className="mind-map-nav-panel-title">
+                <span>{chapterLabel ?? '本章'}</span>
+                <span className="mind-map-nav-panel-count">{sections.length} 张</span>
+              </div>
             </div>
             <button
               type="button"
@@ -219,14 +184,15 @@ export function MindMapPageHeader({
           {sections.length > 6 ? (
             <label className="mind-map-nav-search">
               <Search aria-hidden="true" />
+              {/* Not focused on open: on phones that would pop up the keyboard. */}
               <input
                 type="search"
+                inputMode="search"
+                enterKeyHint="search"
                 value={query}
                 placeholder="筛选本章小节"
                 aria-label="筛选本章小节"
                 onChange={(event) => setQuery(event.target.value)}
-                // eslint-disable-next-line jsx-a11y/no-autofocus -- the directory is opened to search it
-                autoFocus
               />
             </label>
           ) : null}
@@ -261,7 +227,7 @@ export function MindMapPageHeader({
                 <span>切换章节</span>
                 {subject ? (
                   <Link href={subject.url} className="mind-map-nav-chapters-all">
-                    {shortChapterTitle(subject.title)}总览
+                    {subjectLabel}总览
                     <ChevronRight aria-hidden="true" />
                   </Link>
                 ) : null}
@@ -301,23 +267,19 @@ function StepLink({ link, direction }: { link?: MindMapNavLink; direction: 'prev
   const Icon = direction === 'previous' ? ChevronLeft : ChevronRight;
   if (!link) {
     return (
-      <span className={cn('mind-map-nav-step', `mind-map-nav-step-${direction}`)} data-disabled="" aria-hidden="true">
+      <span className="mind-map-nav-step" data-disabled="" aria-hidden="true">
         <Icon />
-        <span className="mind-map-nav-step-text">{direction === 'previous' ? '已是第一张' : '已是最后一张'}</span>
       </span>
     );
   }
-  const [number, name] = splitNumber(link.title);
-  const text = number ? `${number} ${name}` : shortChapterTitle(link.title);
   return (
     <Link
       href={link.url}
-      className={cn('mind-map-nav-step', `mind-map-nav-step-${direction}`)}
+      className="mind-map-nav-step"
       title={`${label}：${link.title}`}
       aria-label={`${label}：${link.title}`}
     >
       <Icon aria-hidden="true" />
-      <span className="mind-map-nav-step-text">{text}</span>
     </Link>
   );
 }
