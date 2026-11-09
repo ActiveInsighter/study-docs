@@ -8,7 +8,7 @@ for i, lab in enumerate(('标记', '标记', '…', '标记')):
 F.text(260, 188, 'Cache 存储体', 11.5, color=MUTED)
 F.ellipse(150, 154, 32, 16, '比较', 'white', 12)
 F.line(150, 104, 150, 136, INK2, 1.3, arrow='end'); F.line(150, 198, 150, 172, INK2, 1.3, arrow='end')
-F.poly([(260, 104), (260, 130), (400, 130), (400, 242), (342, 242)], ACCENT['amber'], 1.3, arrow='end'); F.text(408, 160, '行号直接选中一行', 11.5, 'start', ACCENT['amber'])
+F.poly([(260, 104), (260, 130), (400, 130), (400, 242), (342, 242)], ACCENT['amber'], 1.3, arrow='end'); F.text(408, 198, '行号直接选中一行', 11.5, 'start', ACCENT['amber'])
 F.text(108, 150, '相等', 11.5, 'end', ACCENT['green']); F.text(196, 140, '不等', 11.5, 'start', ACCENT['red'])
 F.poly([(118, 154), (90, 154), (90, 330), (180, 330)], ACCENT['green'], 1.3, arrow='end'); F.text(90, 342, 'Cache 命中', 11.5, 'start', ACCENT['green'])
 F.circle(196, 330, 10, '×', 'white', 12)

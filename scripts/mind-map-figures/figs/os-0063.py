@@ -9,7 +9,7 @@ F.circle(70, 170, 13, '+', 'white', 14); F.line(70, 122, 70, 128, INK2, 1)
 for k, (x, lab, hl) in enumerate(((200, '一级页表', 'b'), (370, '二级页表', 'c'))):
     F.text(x + 30, 214, '页号　块号', 10.5, 'start', INK2)
     for i, (p, b) in enumerate((('0', '…'), ('…', '…'), ('P1' if k == 0 else 'P2', hl), ('…', '…'))):
-        F.text(x + 24, 236 + i * 22, p, 10.5, 'end', INK2, mono=True, valign='middle'); F.box(x + 30, 225 + i * 22, 60, 22, b, ('amber' if k == 0 else 'green') if b == hl else 'white', 10.5, 0, True)
+        F.text(x + 24, 236 + i * 22 - (8 if i == 2 else 0), p, 10.5, 'end', INK2, mono=True, valign='middle'); F.box(x + 30, 225 + i * 22, 60, 22, b, ('amber' if k == 0 else 'green') if b == hl else 'white', 10.5, 0, True)
     F.text(x + 60, 326, lab, 11.5, color=INK2)
 F.poly([(70, 184), (70, 280), (228, 280)], ACCENT['amber'], 1.2, arrow='end')
 F.poly([(292, 280), (330, 280), (330, 240), (398, 240)], ACCENT['green'], 1.2, arrow='end'); F.poly([(545, 122), (545, 200), (360, 200), (360, 280), (398, 280)], ACCENT['green'], 1.2, arrow='end')

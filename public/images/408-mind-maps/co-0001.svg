@@ -12,7 +12,7 @@
 <rect x="120" y="80" width="70" height="56" rx="5" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
 <text x="155" y="112.2" font-size="12" fill="#18181b" text-anchor="middle">寄存器组</text>
 <path d="M226 80L262 94V128L226 142L226 120L236 111L226 102Z" fill="#fde7e4" stroke="#d1493a" stroke-width="1.3"/>
-<text x="246" y="115.8" font-size="11" fill="#7f1d1d" text-anchor="middle" font-weight="700">ALU</text>
+<text x="250" y="115.5" font-size="10" fill="#7f1d1d" text-anchor="middle" font-weight="700">ALU</text>
 <rect x="40" y="160" width="110" height="28" rx="5" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
 <text x="95" y="178.2" font-size="12" fill="#18181b" text-anchor="middle">总线接口</text>
 <rect x="380" y="140" width="90" height="44" rx="6" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
@@ -20,9 +20,7 @@
 <rect x="600" y="140" width="100" height="44" rx="6" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
 <text x="650" y="166.6" font-size="13" fill="#14532d" text-anchor="middle">主存储器</text>
 <path d="M150 174L378 162" fill="none" stroke="#3f3f46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
-<text x="260" y="158" font-size="11" fill="#71717a" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">处理器总线</text>
 <path d="M470 162L598 162" fill="none" stroke="#3f3f46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
-<text x="534" y="152" font-size="11" fill="#71717a" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">存储器总线</text>
 <rect x="40" y="236" width="640" height="12" rx="6" fill="#e4e4e7" stroke="#71717a" stroke-width="1.2"/>
 <text x="50" y="228" font-size="11.5" fill="#71717a">I/O 总线</text>
 <path d="M425 184L425 234" fill="none" stroke="#3f3f46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
@@ -49,6 +47,10 @@
 <text x="560" y="388" font-size="12" fill="#3f3f46" text-anchor="middle">磁盘</text>
 <path d="M570 278L570 264Q570 258 564 258L446 258Q440 258 440 252L440 202Q440 196 446 196L474 196Q480 196 485.9 195L598 176" fill="none" stroke="#d1493a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
 <path d="M598 172L476 172Q470 172 464.4 174.2L415.6 193.8Q410 196 410 202L410 252Q410 258 404 258L346 258Q340 258 340 264L340 278" fill="none" stroke="#3b6fd4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
+<rect x="258.5" y="138.9" width="63" height="16.9" rx="3" fill="#ffffff"/>
+<text x="290" y="150" font-size="11" fill="#71717a" text-anchor="middle">处理器总线</text>
+<rect x="502.5" y="140.9" width="63" height="16.9" rx="3" fill="#ffffff"/>
+<text x="534" y="152" font-size="11" fill="#71717a" text-anchor="middle">存储器总线</text>
 <rect x="40" y="400" width="248.6" height="24" rx="12" fill="#fde7e4" stroke="#d1493a" stroke-width="1.2"/>
 <text x="164.3" y="416.2" font-size="12" fill="#7f1d1d" text-anchor="middle" font-weight="500">③ shell 调用内核把 test 从磁盘装入主存</text>
 <rect x="370" y="400" width="286" height="24" rx="12" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.2"/>

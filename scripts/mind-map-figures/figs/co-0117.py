@@ -10,5 +10,5 @@ for i, (name, segs) in enumerate(rows):
     x = 160
     for lab, t, w in segs:
         F.box(x, y, w, 28, lab, t, 12, 0); x += w
-    F.line(160, y + 38, x, y + 38, LINE, 1.1, arrow='both'); F.text((160 + x) / 2, y + 46, '指令周期', 10.5, color=MUTED, halo=True)
+    F.line(160, y + 38, x, y + 38, LINE, 1.1, arrow='both'); F.text((160 + x) / 2, y + 38, '指令周期', 10.5, color=MUTED, valign='middle', chip=True)
 F.text(350, 348, '只有检测到中断请求才进入中断周期（在执行周期末尾检测）', 12, color=MUTED)

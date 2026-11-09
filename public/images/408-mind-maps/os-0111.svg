@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="分段存储的地址变换：段号 2、偏移量 100 → 物理地址 8292">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 670 340" width="670" height="340" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="分段存储的地址变换：段号 2、偏移量 100 → 物理地址 8292">
 <title>分段存储的地址变换：段号 2、偏移量 100 → 物理地址 8292</title>
 <defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
-<rect x="0.75" y="0.75" width="638.5" height="338.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<rect x="0.75" y="0.75" width="668.5" height="338.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
 <text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">分段的地址变换</text>
 <rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
 <text x="130" y="86" font-size="11.5" fill="#3f3f46" text-anchor="middle">段表寄存器</text>
@@ -58,9 +58,9 @@
 <rect x="560" y="220" width="60" height="100" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
 <rect x="560" y="250" width="60" height="30" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1"/>
 <text x="590" y="334" font-size="11" fill="#3f3f46" text-anchor="middle">主存</text>
-<text x="554" y="252" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8KB</text>
-<text x="554" y="266" font-size="10" fill="#3b6fd4" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8292</text>
-<text x="554" y="282" font-size="10" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8692</text>
+<text x="626" y="253.5" font-size="10" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8KB</text>
+<text x="626" y="269.5" font-size="10" fill="#3b6fd4" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8292</text>
+<text x="626" y="283.5" font-size="10" fill="#3f3f46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8692</text>
 <path d="M512 217L524 217Q530 217 530 223L530 260Q530 266 536 266L558 266" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
 <text x="300" y="334" font-size="11" fill="#71717a" text-anchor="middle">偏移量 100 &lt; 段长 500，不越界；E = 8K + 100 = 8292</text>
 </svg>

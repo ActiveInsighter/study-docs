@@ -12,7 +12,7 @@
 <rect x="240" y="156" width="130" height="30" rx="0" fill="#f4f4f5" stroke="#52525b" stroke-width="1.5"/>
 <text x="305" y="175.2" font-size="12" fill="#18181b" text-anchor="middle">页内地址（12 位）</text>
 <path d="M210 132L210 154" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
-<rect x="40" y="206" width="320" height="140" rx="8" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-dasharray="5 4"/>
+<rect x="40" y="206" width="320" height="148" rx="8" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-dasharray="5 4"/>
 <text x="50" y="224" font-size="12.5" fill="#18181b" font-weight="700">TLB</text>
 <rect x="140" y="256" width="80" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
 <rect x="220" y="256" width="60" height="26" rx="0" fill="#e8effc" stroke="none" stroke-width="0"/>
@@ -42,9 +42,9 @@
 <text x="112" y="298.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500">=</text>
 <circle cx="112" cy="321" r="8" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
 <text x="112" y="324.9" font-size="11" fill="#18181b" text-anchor="middle" font-weight="500">=</text>
-<text x="112" y="338" font-size="11" fill="#71717a" text-anchor="middle">比较器</text>
+<text x="112" y="345" font-size="10.5" fill="#71717a" text-anchor="middle">比较器</text>
 <path d="M80 186L80 263Q80 269 86 269L102 269" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
-<text x="42" y="370" font-size="11.5" fill="#d1493a">TLB 缺失</text>
+<text x="74" y="370" font-size="11.5" fill="#d1493a" text-anchor="end">TLB 缺失</text>
 <path d="M80 269L80 382" fill="none" stroke="#d1493a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
 <rect x="40" y="384" width="60" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
 <rect x="100" y="384" width="60" height="26" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>

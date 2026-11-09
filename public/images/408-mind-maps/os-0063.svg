@@ -33,7 +33,7 @@
 <text x="224" y="261.7" font-size="10.5" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
 <rect x="230" y="247" width="60" height="22" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
 <text x="260" y="261.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
-<text x="224" y="283.7" font-size="10.5" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">P1</text>
+<text x="224" y="275.7" font-size="10.5" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">P1</text>
 <rect x="230" y="269" width="60" height="22" rx="0" fill="#fdf1d8" stroke="#c98a12" stroke-width="1.5"/>
 <text x="260" y="283.7" font-size="10.5" fill="#78350f" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">b</text>
 <text x="224" y="305.7" font-size="10.5" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
@@ -47,7 +47,7 @@
 <text x="394" y="261.7" font-size="10.5" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
 <rect x="400" y="247" width="60" height="22" rx="0" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
 <text x="430" y="261.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>
-<text x="394" y="283.7" font-size="10.5" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">P2</text>
+<text x="394" y="275.7" font-size="10.5" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">P2</text>
 <rect x="400" y="269" width="60" height="22" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
 <text x="430" y="283.7" font-size="10.5" fill="#14532d" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">c</text>
 <text x="394" y="305.7" font-size="10.5" fill="#3f3f46" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">…</text>

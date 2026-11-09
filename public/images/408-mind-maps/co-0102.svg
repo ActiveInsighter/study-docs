@@ -21,9 +21,9 @@
 <text x="502" y="280" font-size="10.5" fill="#71717a" transform="rotate(-90 502 280)">控制总线</text>
 <rect x="560" y="140" width="100" height="70" rx="6" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
 <text x="610" y="179.9" font-size="14" fill="#3b0764" text-anchor="middle">存储器</text>
-<path d="M270 228L270 124" fill="none" stroke="#d1493a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
-<circle cx="270" cy="166" r="8" fill="#ffffff" stroke="#52525b" stroke-width="1"/>
-<text x="270" y="169.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-weight="500">1</text>
+<path d="M228 246L218 246Q212 246 212 240L212 112Q212 106 218 106L228 106" fill="none" stroke="#d1493a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
+<circle cx="220" cy="236" r="8" fill="#ffffff" stroke="#52525b" stroke-width="1"/>
+<text x="220" y="239.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-weight="500">1</text>
 <path d="M320 98L410 98" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
 <circle cx="365" cy="88" r="8" fill="#ffffff" stroke="#52525b" stroke-width="1"/>
 <text x="365" y="91.7" font-size="10.5" fill="#18181b" text-anchor="middle" font-weight="500">2</text>

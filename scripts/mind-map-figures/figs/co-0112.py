@@ -8,7 +8,7 @@ wire(F, [(46, 90), (120, 90), (120, ai[0][1]), ai[0]], dot=[(120, 90)])
 wire(F, [(120, 90), (120, oi[0][1]), oi[0]], dot=[(120, oi[0][1])]); wire(F, [(120, oi[0][1]), (120, 208), (198, 208)])
 wire(F, [(46, 230), (150, 230), (150, ai[1][1]), ai[1]], dot=[(150, 230)])
 wire(F, [(150, oi[1][1]), oi[1]], dot=[(150, oi[1][1])]); wire(F, [(150, 230), (198, 230)])
-mux_shape(F, 440, 60, 40, 200, 'MUX', 'violet', 13, vertical=True)
+mux_shape(F, 440, 60, 40, 200, '', 'violet', 13, vertical=True); F.text(466, 184, 'MUX', 12, color=TONES['violet'][2], weight=700, valign='middle', rotate=90)
 for (src, lab, y) in ((ao, 'and', 90), (oo, 'or', 150), ((300, 218), 'add', 218)):
     wire(F, [src, (400, src[1]), (400, y), (440, y)]); F.text(420, y - 6, lab, 11, color=MUTED)
 for y, c in ((90, '00'), (150, '01'), (218, '10')): F.text(448, y, c, 11, 'start', ACCENT['red'], mono=True, valign='middle')

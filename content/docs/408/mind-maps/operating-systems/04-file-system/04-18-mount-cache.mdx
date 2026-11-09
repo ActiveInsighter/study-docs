@@ -31,7 +31,7 @@ markmap:
 - dentry/inode缓存：加速路径查找和元数据访问
 - 预读适合可预测访问；错误预读浪费缓存与I/O
 - 延迟写可以合并请求，但在崩溃情形存在尚未落盘的脏页
-- <img src="/images/408-mind-maps/os-0022.svg" alt="open系统调用中用户级和内核级的打开文件表及目录项关系" width="850" height="444">
+- <img src="/images/408-mind-maps/os-0022.svg" alt="open系统调用中用户级和内核级的打开文件表及目录项关系" width="850" height="463">
 
 ## 性能路径拆分
 - `read(fd)`：fd→打开文件对象→inode块映射→页缓存→必要时设备I/O

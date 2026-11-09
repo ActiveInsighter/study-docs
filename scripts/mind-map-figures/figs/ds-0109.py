@@ -6,5 +6,6 @@ pos = rb(F, 20, 80, t, unit=60, levelh=66, r=18)
 bh = {'6': 2, '2': 1, '15': 2, '11': 1, '18': 1, '8': 1, '14': 1, '20': 1}
 for k, v in bh.items():
     x, y = pos[k]
-    F.text(x + 24, y - 14, f'bh={v}', 12, 'start', ACCENT['blue'], 600, mono=True, halo=True)
+    if k in ('2', '11', '8'): F.text(x - 24, y - 14, f'bh={v}', 12, 'end', ACCENT['blue'], 600, mono=True, halo=True)
+    else: F.text(x + 24, y - 14, f'bh={v}', 12, 'start', ACCENT['blue'], 600, mono=True, halo=True)
 F.text(360, 386, 'NIL 结点的 bh = 0；根的黑高即整棵树的黑高（此处 bh = 2）', 12.5, color=MUTED)

@@ -31,13 +31,13 @@
 <path d="M210 150L490 200" fill="none" stroke="#d1493a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
 <text x="350" y="160" font-size="11.5" fill="#d1493a" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">FIN = 1，seq = u</text>
 <path d="M490 216L210 244" fill="none" stroke="#2f8f57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a2f8f57)"/>
-<text x="350" y="222" font-size="11" fill="#2f8f57" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">ACK = 1，seq = v，ack = u + 1</text>
+<text x="350" y="214" font-size="11" fill="#2f8f57" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">ACK = 1，seq = v，ack = u + 1</text>
 <path d="M480 270L220 280" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3" marker-end="url(#a3f3f46)"/>
 <text x="350" y="268" font-size="11" fill="#3f3f46" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">数据传送（半关闭：B 还可以发）</text>
 <path d="M490 300L210 320" fill="none" stroke="#d1493a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
-<text x="350" y="300" font-size="11" fill="#d1493a" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">FIN = 1，ACK = 1，seq = w，ack = u + 1</text>
+<text x="350" y="297" font-size="11" fill="#d1493a" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">FIN = 1，ACK = 1，seq = w，ack = u + 1</text>
 <path d="M210 340L490 374" fill="none" stroke="#2f8f57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a2f8f57)"/>
-<text x="350" y="352" font-size="11" fill="#2f8f57" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">ACK = 1，seq = u + 1，ack = w + 1</text>
+<text x="350" y="335" font-size="11" fill="#2f8f57" text-anchor="middle" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">ACK = 1，seq = u + 1，ack = w + 1</text>
 <path d="M104 330q-8 0 -8 8V357q0 8 -8 8q8 0 8 8V392q0 8 8 8" fill="none" stroke="#71717a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
 <text x="82" y="368.9" font-size="11" fill="#71717a" text-anchor="end">等待 2MSL</text>
 <text x="20" y="430" font-size="10.5" fill="#71717a">等 2MSL：可收到 B 重传的 FIN 并再次确认；让本连接的旧报文段全部消失</text>

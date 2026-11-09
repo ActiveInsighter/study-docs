@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" width="600" height="280" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="完全二叉树：编号与满二叉树一一对应">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="完全二叉树：编号与满二叉树一一对应">
 <title>完全二叉树：编号与满二叉树一一对应</title>
-<rect x="0.75" y="0.75" width="598.5" height="278.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<rect x="0.75" y="0.75" width="598.5" height="298.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
 <text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">完全二叉树（n = 12）</text>
 <rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
 <path d="M57.9 205.4L49.1 234.6" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -38,5 +38,5 @@
 <text x="223.5" y="140.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">3</text>
 <circle cx="159.8" cy="80" r="14" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
 <text x="159.8" y="84.2" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="500">1</text>
-<text x="300" y="264" font-size="12.5" fill="#71717a" text-anchor="middle">只有最后一层可以不满，且结点都靠左排列</text>
+<text x="300" y="288" font-size="12.5" fill="#71717a" text-anchor="middle">只有最后一层可以不满，且结点都靠左排列</text>
 </svg>

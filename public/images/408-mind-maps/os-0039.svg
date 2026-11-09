@@ -27,13 +27,16 @@
 <text x="52" y="224.6" font-size="13" fill="#18181b" text-anchor="middle">5</text>
 <text x="104.1" y="98.7" font-size="13" fill="#18181b" text-anchor="middle">6</text>
 <path d="M390 218H306" fill="none" stroke="#7856c9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a7856c9)"/>
+<rect x="358.7" y="194.9" width="42.6" height="16.9" rx="3" fill="#ffffff"/>
 <text x="380" y="206" font-size="11" fill="#7856c9" text-anchor="middle">② 寻道</text>
 <path d="M305.1 231.4A76 76 0 0 1 257.5 290.8" fill="none" stroke="#7856c9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a7856c9)"/>
+<rect x="277.7" y="288.9" width="64.7" height="16.9" rx="3" fill="#ffffff"/>
 <text x="310" y="300" font-size="11" fill="#7856c9" text-anchor="middle">③ 旋转延迟</text>
 <path d="M242.9 294.9A76 76 0 0 1 164.9 259.2" fill="none" stroke="#d1493a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="118.7" y="278.9" width="42.6" height="16.9" rx="3" fill="#ffffff"/>
 <text x="140" y="290" font-size="11" fill="#d1493a" text-anchor="middle">④ 传输</text>
 <rect x="388" y="210" width="10" height="20" rx="1" fill="#27272a" stroke="#27272a" stroke-width="1.5"/>
-<text x="410" y="223.8" font-size="11" fill="#7856c9">① 启动</text>
+<text x="393" y="249.8" font-size="11" fill="#7856c9" text-anchor="middle">① 启动</text>
 <text x="470" y="76" font-size="12.5" fill="#3f3f46">① 启动时间：s（约 2 ms）</text>
 <text x="470" y="106" font-size="12.5" fill="#3f3f46">② 寻找 / 寻道时间：m × n（跨越 n 条磁道，每条 m）</text>
 <text x="470" y="136" font-size="12.5" fill="#3f3f46">③ 旋转延迟时间 Tᵣ：转速为 r，平均转半圈</text>

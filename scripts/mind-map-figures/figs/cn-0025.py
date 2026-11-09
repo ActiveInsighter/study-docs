@@ -5,4 +5,5 @@ F.box(40, 70, 220, 36, '16 位源端口号', 'white', 12, 0, align='start'); F.b
 F.box(40, 106, 220, 36, '16 位 UDP 长度', 'white', 12, 0, align='start'); F.box(260, 106, 220, 36, '16 位 UDP 校验和', 'white', 12, 0, align='start')
 F.box(40, 142, 440, 60, '数据（如果有）', 'blue', 13, 0)
 F.vbrace(486, 70, 142, '8 B')
-F.pill(170, 76, '可以不用，填 0', 'green', 9.5); F.pill(420, 76, '一定要', 'red', 9.5); F.pill(168, 112, '首部 + 数据', 'red', 9.5); F.pill(410, 112, '可以不用，填 0', 'green', 9.5)
+def tag(xr, y, lab, tone): F.pill(xr - text_width(lab, 9.5) - 28, y, lab, tone, 9.5)
+tag(260, 77, '可以不用，填 0', 'green'); tag(480, 77, '一定要', 'red'); tag(260, 113, '首部 + 数据', 'red'); tag(480, 113, '可以不用，填 0', 'green')

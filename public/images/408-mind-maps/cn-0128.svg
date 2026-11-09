@@ -31,5 +31,5 @@
 <text x="400" y="84" font-size="11" fill="#d1493a" text-anchor="middle" font-weight="600">始终打开</text>
 <text x="400" y="284" font-size="11" fill="#d1493a" text-anchor="middle">只会保持一会，数据发送完就关闭</text>
 <text x="400" y="310" font-size="11" fill="#3b6fd4" text-anchor="middle">主动模式用 20 端口；被动模式由双方协商（&gt;1024），与传输模式有关</text>
-<text x="40" y="300" font-size="10.5" fill="#2f8f57">都属于从属进程</text>
+<text x="130" y="314" font-size="10.5" fill="#2f8f57" text-anchor="middle">（都属于从属进程）</text>
 </svg>

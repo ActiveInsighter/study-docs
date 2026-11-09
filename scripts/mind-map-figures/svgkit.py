@@ -109,10 +109,22 @@ class Fig:
         self.items.append(s)
 
     def text(self, x, y, s, size=15, anchor='middle', color=INK, weight=400, mono=False,
-             italic=False, lh=1.35, valign='baseline', rotate=None, opacity=None, halo=False):
+             italic=False, lh=1.35, valign='baseline', rotate=None, opacity=None, halo=False, chip=False):
         s = str(s)
         lines = s.split('\n')
         n = len(lines)
+        if chip:
+            # opaque paper-coloured backing so a line running underneath never cuts the label
+            cw = text_width(s, size, mono) + 8
+            ch = n * size * lh + 2
+            if valign == 'middle':
+                cy0 = y - ch / 2
+            elif valign == 'top':
+                cy0 = y - 1
+            else:
+                cy0 = y - size * 0.92 - 1
+            cx0 = x - cw / 2 if anchor == 'middle' else (x - 4 if anchor == 'start' else x - cw + 4)
+            self.items.append(f'<rect x="{f(cx0)}" y="{f(cy0)}" width="{f(cw)}" height="{f(ch)}" rx="3" fill="{PAPER if chip is True else chip}"/>')
         if valign == 'middle':
             y0 = y - (n - 1) * size * lh / 2 + size * 0.35
         elif valign == 'top':

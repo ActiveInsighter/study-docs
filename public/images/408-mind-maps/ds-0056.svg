@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="数据的逻辑结构与存储（物理）结构">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 492" width="860" height="492" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="数据的逻辑结构与存储（物理）结构">
 <title>数据的逻辑结构与存储（物理）结构</title>
 <defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker></defs>
-<rect x="0.75" y="0.75" width="858.5" height="468.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<rect x="0.75" y="0.75" width="858.5" height="490.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
 <text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">逻辑结构 ↔ 存储结构</text>
 <rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
 <text x="30" y="84" font-size="14" fill="#18181b" font-weight="700">存储结构（物理）</text>
@@ -91,5 +91,5 @@
 <circle cx="735" cy="372" r="8" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
 <circle cx="710" cy="405" r="8" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
 <circle cx="745" cy="402" r="8" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="430" y="456" font-size="12.5" fill="#71717a" text-anchor="middle">同一种逻辑结构既可以顺序存储，也可以链式存储（如二叉树可用数组或二叉链表）</text>
+<text x="430" y="478" font-size="12.5" fill="#71717a" text-anchor="middle">同一种逻辑结构既可以顺序存储，也可以链式存储（如二叉树可用数组或二叉链表）</text>
 </svg>

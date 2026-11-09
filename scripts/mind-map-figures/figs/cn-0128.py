@@ -11,4 +11,4 @@ F.poly([(182, 155), (300, 120), (500, 120), (598, 135)], INK2, 1.4); F.text(400,
 F.poly([(182, 225), (300, 240), (500, 240), (598, 215)], INK2, 1.4); F.text(400, 262, 'TCP 数据连接 端口 20', 11, color=ACCENT['red'])
 F.text(400, 84, '始终打开', 11, color=ACCENT['red'], weight=600); F.text(400, 284, '只会保持一会，数据发送完就关闭', 11, color=ACCENT['red'])
 F.text(400, 310, '主动模式用 20 端口；被动模式由双方协商（>1024），与传输模式有关', 11, color=ACCENT['blue'])
-F.text(40, 300, '都属于从属进程', 10.5, 'start', ACCENT['green'])
+F.text(130, 314, '（都属于从属进程）', 10.5, color=ACCENT['green'])

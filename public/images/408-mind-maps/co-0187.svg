@@ -25,9 +25,11 @@
 <text x="490" y="304.9" font-size="14" fill="#7f1d1d" text-anchor="middle" font-weight="700">I/O 设备</text>
 <path d="M105 260L180 282" fill="none" stroke="#d1493a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
 <path d="M310 260L240 282" fill="none" stroke="#d1493a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
-<text x="280" y="270" font-size="12" fill="#d1493a" text-anchor="middle">主存</text>
+<rect x="259" y="261.9" width="32" height="18.2" rx="3" fill="#ffffff"/>
+<text x="275" y="275.2" font-size="12" fill="#d1493a" text-anchor="middle">主存</text>
 <path d="M370 260L460 282" fill="none" stroke="#d1493a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
-<text x="400" y="268" font-size="12" fill="#d1493a" text-anchor="middle">辅存</text>
+<rect x="399" y="261.9" width="32" height="18.2" rx="3" fill="#ffffff"/>
+<text x="415" y="275.2" font-size="12" fill="#d1493a" text-anchor="middle">辅存</text>
 <path d="M575 260L520 282" fill="none" stroke="#d1493a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ad1493a)"/>
 <text x="340" y="344" font-size="14" fill="#18181b" text-anchor="middle" font-weight="600">主机 + I/O 设备 = 硬件</text>
 </svg>

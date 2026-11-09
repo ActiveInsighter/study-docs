@@ -158,13 +158,13 @@
 <text x="406" y="291.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">97</text>
 <text x="458" y="291.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">65</text>
 <text x="510" y="291.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">49*</text>
-<text x="560" y="92" font-size="14" fill="#78350f" font-weight="700">pivot = 49</text>
-<text x="560" y="118" font-size="12.5" fill="#71717a">空位（坑）</text>
-<rect x="536" y="106" width="18" height="16" rx="3" fill="none" stroke="#a1a1aa" stroke-width="1" stroke-dasharray="3 3"/>
-<rect x="536" y="140" width="14" height="14" rx="3" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.3"/>
-<text x="556" y="151" font-size="13" fill="#3f3f46">比 pivot 小，填左坑</text>
-<rect x="536" y="164" width="14" height="14" rx="3" fill="#fde7e4" stroke="#d1493a" stroke-width="1.3"/>
-<text x="556" y="175" font-size="13" fill="#3f3f46">比 pivot 大，填右坑</text>
+<text x="572" y="92" font-size="14" fill="#78350f" font-weight="700">pivot = 49</text>
+<text x="572" y="118" font-size="12.5" fill="#71717a">空位（坑）</text>
+<rect x="550" y="106" width="18" height="16" rx="3" fill="none" stroke="#a1a1aa" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="550" y="140" width="14" height="14" rx="3" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.3"/>
+<text x="570" y="151" font-size="13" fill="#3f3f46">比 pivot 小，填左坑</text>
+<rect x="550" y="164" width="14" height="14" rx="3" fill="#fde7e4" stroke="#d1493a" stroke-width="1.3"/>
+<text x="570" y="175" font-size="13" fill="#3f3f46">比 pivot 大，填右坑</text>
 <text x="20" y="330" font-size="13" fill="#18181b" font-weight="600">递归处理左右子序列：</text>
 <rect x="120" y="344" width="46" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>
 <rect x="166" y="344" width="46" height="28" rx="0" fill="#ffffff" stroke="none" stroke-width="0"/>

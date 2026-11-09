@@ -6,7 +6,8 @@ for i, (t, lv) in enumerate(labs):
     h = 46 if '\n' in t else 32
     y = 80 + i * 58
     F.box(90, y, 160, h, t, 'blue', 12.5, 4); F.text(268, y + h / 2, lv, 12, 'start', INK2, 600, valign='middle')
-    if i: F.line(170, y - 24, 170, y - 2, INK2, 1.2, arrow='end')
+    if i: F.line(170, prev, 170, y - 2, INK2, 1.2, arrow='end')
+    prev = y + h
 F.box(30, 380, 120, 32, '辅助分配模块', 'white', 12, 4); F.box(190, 380, 160, 32, '设备管理程序模块', 'white', 12, 4)
 F.line(150, 346, 100, 378, INK2, 1.2, arrow='end'); F.line(190, 346, 260, 378, INK2, 1.2, arrow='end')
 F.ellipse(270, 446, 34, 16, '设备', 'gray', 12); F.line(270, 414, 270, 428, INK2, 1.2, arrow='both')

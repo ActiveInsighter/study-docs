@@ -58,7 +58,7 @@
 <text x="363.5" y="300.6" font-size="13" fill="#14532d" text-anchor="middle" font-weight="500">G</text>
 <path d="M127 296L203 296" fill="none" stroke="#d1493a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 4"/>
 <path d="M249 296L335 296" fill="none" stroke="#d1493a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 4"/>
-<text x="220" y="480" font-size="12.5" fill="#d1493a" text-anchor="middle">③ 把后一棵树的根作为前一棵树根的右孩子（虚线）</text>
+<text x="220" y="503" font-size="12.5" fill="#d1493a" text-anchor="middle">③ 把后一棵树的根作为前一棵树根的右孩子（虚线）</text>
 <path d="M420 300L460 260" fill="none" stroke="#a1a1aa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#aa1a1aa)"/>
 <text x="620" y="82" font-size="13" fill="#71717a" text-anchor="middle">④ 对应的二叉树</text>
 <path d="M559.8 238.9L569.2 263.1" fill="none" stroke="#3f3f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

@@ -198,7 +198,8 @@ def loser_tree(F, ox, oy, inner=None, champ='', winners=None, leaves=None, runs=
             F.circle(x, y, 21, '', 'none', sw=1.5)
             F.items[-1] = F.items[-1].replace('stroke="none"', f'stroke="{ACCENT["red"]}"')
         if n in winners:
-            F.text(x + 22, y - 12, winners[n], 12.5, 'start', ACCENT['red'], 700, mono=True)
+            if n % 2 == 0: F.text(x - 22, y - 12, winners[n], 12.5, 'end', ACCENT['red'], 700, mono=True)  # left child: edge runs up-right
+            else: F.text(x + 22, y - 12, winners[n], 12.5, 'start', ACCENT['red'], 700, mono=True)
     F.circle(*pos[0], 16, champ, 'blue', 13, weight=700, mono=True)
     if 1 in winners:
         pass
@@ -301,7 +302,7 @@ def avl_node(F, x, y, k, bf=None, tone='blue'):
 def edge(F, a, b, r1=16, r2=0):
     F.line(a[0], a[1], b[0], b[1], INK2, 1.4, gap=r1, gap2=r2)
 
-def sysbus(F, hl_paths=(), notes=None):
+def sysbus(F, hl_paths=(), notes=None, mem_label_y=152):
     """Bus-structured computer: CPU, IO bridge, memory, IO bus with USB/display/disk controllers.
     hl_paths: list of (tone, [points]) polylines to highlight data flow."""
     F.rect(24, 64, 300, 140, 'none', ACCENT['blue'], 1.3, 12, dash='5 4')
@@ -309,12 +310,12 @@ def sysbus(F, hl_paths=(), notes=None):
     F.box(40, 84, 70, 26, '控制器', 'white', 12, 5)
     F.box(120, 80, 70, 56, '寄存器组', 'gray', 12, 5)
     F.items.append('<path d="M226 80L262 94V128L226 142L226 120L236 111L226 102Z" fill="#fde7e4" stroke="#d1493a" stroke-width="1.3"/>')
-    F.text(246, 112, 'ALU', 11, color='#7f1d1d', weight=700, valign='middle')
+    F.text(250, 112, 'ALU', 10, color='#7f1d1d', weight=700, valign='middle')
     F.box(40, 160, 110, 28, '总线接口', 'white', 12, 5)
     F.box(380, 140, 90, 44, 'I/O 桥接器', 'gray', 12, 6)
     F.box(600, 140, 100, 44, '主存储器', 'green', 13, 6)
-    F.line(150, 174, 378, 162, INK2, 2, arrow='both'); F.text(260, 158, '处理器总线', 11, color=MUTED, halo=True)
-    F.line(470, 162, 598, 162, INK2, 2, arrow='both'); F.text(534, 152, '存储器总线', 11, color=MUTED, halo=True)
+    F.line(150, 174, 378, 162, INK2, 2, arrow='both')
+    F.line(470, 162, 598, 162, INK2, 2, arrow='both')
     F.rect(40, 236, 640, 12, '#e4e4e7', '#71717a', 1.2, 6); F.text(50, 228, 'I/O 总线', 11.5, 'start', MUTED)
     F.line(425, 184, 425, 234, INK2, 2, arrow='both')
     for x, lab in ((130, 'USB\n控制器'), (330, '显示\n适配卡'), (560, '磁盘\n控制器')):
@@ -328,6 +329,8 @@ def sysbus(F, hl_paths=(), notes=None):
     F.path('M534 350V368M586 350V368', INK2, 1.3); F.ellipse(560, 368, 26, 7, '', 'white'); F.text(560, 388, '磁盘', 12, color=INK2)
     for tone, pts in hl_paths:
         F.poly(pts, ACCENT[tone], 2.4, arrow='end')
+    F.text(290, 150, '处理器总线', 11, color=MUTED, chip=True)
+    F.text(534, mem_label_y, '存储器总线', 11, color=MUTED, chip=True)
 
 GATE_SYM = {'and': '&', 'or': '≥1', 'xor': '=1', 'not': '1', 'nand': '&', 'nor': '≥1', 'xnor': '=', 'buf': '1'}
 
@@ -446,13 +449,13 @@ def tlb_part(F, ox=0, oy=0):
     F.text(X(40), Y(110), '虚拟地址', 12, 'start', INK2)
     F.box(X(60), Y(116), 180, 30, '虚页号（20 位）', 'amber', 12, 0); F.box(X(240), Y(116), 130, 30, '页内地址（12 位）', 'gray', 12, 0)
     F.line(X(210), Y(92), X(210), Y(114), INK2, 1.3, arrow='end')
-    F.rect(X(40), Y(166), 320, 140, 'none', INK2, 1.2, 8, dash='5 4'); F.text(X(50), Y(184), 'TLB', 12.5, 'start', INK, 700)
+    F.rect(X(40), Y(166), 320, 148, 'none', INK2, 1.2, 8, dash='5 4'); F.text(X(50), Y(184), 'TLB', 12.5, 'start', INK, 700)
     F.table(X(140), Y(190), [['Tag', '有效位', '实页号'], ['0008CH', '1', '0040H'], ['', '', ''], ['⋮', '⋮', '⋮']], [80, 60, 80], 26, size=11.5, head_tone='gray', tones={(1, 0): 'blue', (1, 1): 'blue', (1, 2): 'blue'}, zebra=False)
     for i in range(3):
         F.circle(X(112), Y(229 + i * 26), 8, '=', 'white', 11)
-    F.text(X(112), Y(298), '比较器', 11, color=MUTED)
+    F.text(X(112), Y(305), '比较器', 10.5, color=MUTED)
     F.poly([(X(80), Y(146)), (X(80), Y(229)), (X(102), Y(229))], INK2, 1.2, arrow='end')
-    F.text(X(42), Y(330), 'TLB 缺失', 11.5, 'start', ACCENT['red'])
+    F.text(X(74), Y(330), 'TLB 缺失', 11.5, 'end', ACCENT['red'])
     F.poly([(X(80), Y(229)), (X(80), Y(342))], ACCENT['red'], 1.2, arrow='end')
     F.cells(X(40), Y(344), ['10 位', '10 位'], 60, 26, size=11.5, mono=False); F.text(X(70), Y(386), '查页表', 11, color=ACCENT['red'])
     F.text(X(270), Y(330), '物理地址', 12, 'middle', INK2)
@@ -627,8 +630,10 @@ def datapath5(F, idle=(), green=False, wrpc=None, ox=0, oy=0):
     F.box(X(190), Y(160), 80, 90, '寄存器堆', 'green', 11.5, 4)
     F.items.append(f'<path d="M{X(330)} {Y(140)}L{X(372)} {Y(162)}V{Y(184)}L{X(362)} {Y(192)}L{X(372)} {Y(200)}V{Y(222)}L{X(330)} {Y(244)}Z" fill="#fde7e4" stroke="#d1493a" stroke-width="1.3"/>')
     F.text(X(354), Y(192), 'ALU', 10.5, color='#7f1d1d', weight=700, valign='middle', rotate=-90)
-    F.box(X(460), Y(130), 80, 110, '数据\nCache', 'amber', 11.5, 4)
+    if 3 not in idle:  # an idle M stage is drawn as a bare pass-through arrow
+        F.box(X(460), Y(130), 80, 110, '数据\nCache', 'amber', 11.5, 4)
     for (a, b, y) in ((66, 78, 180), (150, 162, 180), (176, 188, 200), (270, 292, 180), (270, 292, 220), (306, 328, 170), (306, 328, 214), (372, 422, 192), (436, 458, 185), (540, 552, 185), (566, 610, 185)):
+        if 3 in idle and a in (436, 540): continue
         F.line(X(a), Y(y), X(b), Y(y), INK2, 1.2, arrow='end')
     F.poly([(X(610), Y(185)), (X(640), Y(185)), (X(640), Y(290)), (X(230), Y(290)), (X(230), Y(252))], INK2, 1.2, arrow='end')
     if green:
@@ -670,8 +675,8 @@ def dmac(F, hl=False):
     F.box(560, 120, 160, 30, '主存地址计数器 AR', 'white', 11.5, 4); F.box(560, 170, 160, 30, '传送长度计数器 WC', 'white', 11.5, 4)
     F.box(450, 240, 160, 34, '数据缓冲寄存器 DR', t('green', 'white'), 11.5, 4); F.box(640, 220, 50, 26, 'DAR', 'blue', 11, 3); F.box(640, 256, 70, 26, '设备选择', 'white', 10.5, 3)
     F.text(700, 233, '目的地址\n计数器', 9.5, 'start', MUTED, lh=1.2)
-    F.line(158, 168, 218, 168, INK2, 1.3, arrow='end' if not hl else 'end', gap=0); F.text(170, 160, 'HRQ', 10.5, 'start', ACCENT['red'] if hl else INK2)
-    F.line(218, 186, 158, 186, INK2, 1.3, arrow='end'); F.text(170, 200, 'HLDA', 10.5, 'start', ACCENT['blue'] if hl else INK2)
+    F.line(158, 168, 218, 168, INK2, 1.3, arrow='end' if not hl else 'end', gap=0); F.text(186, 162, 'HRQ', 10.5, 'end', ACCENT['red'] if hl else INK2)
+    F.line(218, 186, 158, 186, INK2, 1.3, arrow='end'); F.text(186, 200, 'HLDA', 10.5, 'end', ACCENT['blue'] if hl else INK2)
     F.line(275, 158, 275, 54, ACCENT['red'] if hl else INK2, 2.2 if hl else 1.5, arrow='end'); F.text(282, 76, '控制线', 10.5, 'start', INK2)
     F.line(415, 98, 415, 54, ACCENT['red'] if hl else INK2, 1.5, arrow='end'); F.text(422, 76, '中断请求', 10.5, 'start', INK2)
     F.line(530, 54, 530, 238, ACCENT['red'] if hl else INK2, 2.2 if hl else 1.5, arrow='both'); F.text(536, 76, '数据线', 10.5, 'start', INK2)
@@ -728,7 +733,8 @@ def proc_space(F, ox, oy, kind, sched=False):
         if kind == 'user':
             F.box(X(cx - 60), Y(150), 70, 72, '调度\n程序' if (sched and k == 0) else '', 'red' if (sched and k == 0) else 'blue', 10.5, 0)
             for j in range(n): F.box(X(cx + 10), Y(150 + j * 72 / n), 50, 72 / n, f'TCB{j + 1}', 'blue', 10, 0)
-    F.text(X(270), Y(300), '内核', 12, color=INK2)
+    if kind != 'kernel': F.text(X(270), Y(300), '内核', 12, color=INK2)
+    else: F.text(X(355), Y(305), '内核', 12, color=INK2)
     if kind == 'kernel':
         for j in range(7): F.box(X(240), Y(262 + j * 10), 60, 10, f'TCB{j + 1}', 'blue', 7.5, 0)
         F.text(X(270), Y(352 + 12), '线程表', 11, color=INK2)
@@ -747,7 +753,7 @@ def xlate(F, kind, ox=0, oy=0):
     F.circle(X(70), Y(170), 13, '+', 'white', 14)
     F.line(X(70), Y(122), X(70), Y(156), INK2, 1.2, arrow='end')
 
-def disk_grid(F, x, y, n=32, cols=4, hl=None, labels=True, cw=26, ch=16, dx=50, dy=32, tones=None):
+def disk_grid(F, x, y, n=32, cols=4, hl=None, labels=True, cw=26, ch=16, dx=50, dy=32, tones=None, label_chip=False):
     """Disk drawn as numbered small blocks. hl: {block: (tone, text)}. Returns centres."""
     hl = hl or {}
     F.items.append(f'<path d="M{x} {y}Q{x + cols * dx / 2} {y + 16} {x + cols * dx} {y}V{y + (n // cols) * dy + 26}Q{x + cols * dx / 2} {y + (n // cols) * dy + 42} {x} {y + (n // cols) * dy + 26}Z" fill="#fafafa" stroke="#71717a" stroke-width="1.3"/>')
@@ -757,7 +763,7 @@ def disk_grid(F, x, y, n=32, cols=4, hl=None, labels=True, cw=26, ch=16, dx=50, 
         bx, by = x + 22 + c * dx, y + 20 + r * dy
         tone, t = hl.get(b, ('white', ''))
         F.box(bx, by, cw, ch, t, tone, 10, 2, True)
-        if labels: F.text(bx - 3, by + ch / 2, str(b), 10, 'end', INK2, mono=True, valign='middle')
+        if labels: F.text(bx - 3, by + ch / 2, str(b), 10, 'end', INK2, mono=True, valign='middle', chip='#fafafa' if label_chip else False)
         cs[b] = (bx + cw / 2, by + ch / 2)
     return cs
 
@@ -819,11 +825,11 @@ def switch_net(F, path=(), color=None, label_arrows=None, ox=0):
         F.line(x1, y1, x2, y2, color, 3.2, arrow='end', gap=20, gap2=24)
     return N
 
-def frame(F, x, y, fields, h=34, size=12, top=None, bottom=None):
+def frame(F, x, y, fields, h=34, size=12, top=None, bottom=None, halo=False):
     """fields: [(label, width, tone, top_len)]"""
     cx = x
     for lab, w, tone, ln in fields:
         F.box(cx, y, w, h, lab, tone, size, 0)
-        if ln is not None: F.text(cx + w / 2, y - 8, str(ln), 11, color=INK2, mono=True)
+        if ln is not None: F.text(cx + w / 2, y - 8, str(ln), 11, color=INK2, mono=True, halo=halo)
         cx += w
     return cx

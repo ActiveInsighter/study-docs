@@ -9,10 +9,10 @@ rows = [('取出 pivot', ['_', '38', '65', '97', '76', '13', '27', '49*'], {}),
         ('i→ 找 >49', ['27', '38', '13', '_', '76', '97', '65', '49*'], {5: 'red'}),
         ('i == j', ['27', '38', '13', '49', '76', '97', '65', '49*'], {3: P})]
 trace(F, 20, 72, rows, cw=52, lw=100)
-F.text(560, 92, 'pivot = 49', 14, 'start', TONES[P][2], 700)
-F.text(560, 118, '空位（坑）', 12.5, 'start', MUTED)
-F.rect(536, 106, 18, 16, 'none', LINE, 1, 3, dash='3 3')
-F.legend(536, 150, [('blue', '比 pivot 小，填左坑')]); F.legend(536, 174, [('red', '比 pivot 大，填右坑')])
+F.text(572, 92, 'pivot = 49', 14, 'start', TONES[P][2], 700)
+F.text(572, 118, '空位（坑）', 12.5, 'start', MUTED)
+F.rect(550, 106, 18, 16, 'none', LINE, 1, 3, dash='3 3')
+F.legend(550, 150, [('blue', '比 pivot 小，填左坑')]); F.legend(550, 174, [('red', '比 pivot 大，填右坑')])
 y = 330
 F.text(20, y, '递归处理左右子序列：', 13, 'start', INK, 600)
 from common import groups_row

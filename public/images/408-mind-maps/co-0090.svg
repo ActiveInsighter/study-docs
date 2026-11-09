@@ -31,7 +31,7 @@
 <path d="M150 104L150 136" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
 <path d="M150 198L150 172" fill="none" stroke="#3f3f46" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
 <path d="M260 104L260 124Q260 130 266 130L394 130Q400 130 400 136L400 236Q400 242 394 242L342 242" fill="none" stroke="#c98a12" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ac98a12)"/>
-<text x="408" y="160" font-size="11.5" fill="#c98a12">行号直接选中一行</text>
+<text x="408" y="198" font-size="11.5" fill="#c98a12">行号直接选中一行</text>
 <text x="108" y="150" font-size="11.5" fill="#2f8f57" text-anchor="end">相等</text>
 <text x="196" y="140" font-size="11.5" fill="#d1493a">不等</text>
 <path d="M118 154L96 154Q90 154 90 160L90 324Q90 330 96 330L180 330" fill="none" stroke="#2f8f57" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a2f8f57)"/>

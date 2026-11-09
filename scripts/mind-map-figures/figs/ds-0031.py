@@ -1,6 +1,6 @@
 from common import bnode
 LABEL = 'B 树：终端结点与叶结点（失败结点）'
-F = Fig(860, 390, 'm 阶 B 树（m = 5）')
+F = Fig(860, 410, 'm 阶 B 树（m = 5）')
 r = bnode(F, 430, 76, ['22'], 1, kw=36)
 L = bnode(F, 220, 170, ['5', '11'], 2, kw=34)
 R = bnode(F, 640, 170, ['36', '45'], 2, kw=34)
@@ -12,5 +12,5 @@ for cx, ks, par, i in leaves:
     for j in range(len(ks) + 1):
         F.line(a[j][0], a[j][1] + 3, a[j][0], a[j][1] + 22, LINE, 1.1, arrow='end')
         F.rect(a[j][0] - 7, a[j][1] + 24, 14, 16, 'violet', ACCENT['violet'], 1, 3, dash='2 2')
-F.legend(40, 340, [('blue', '终端结点（最底层的非叶结点）'), ('violet', '叶结点 = 失败结点，实际不存在')])
-F.text(430, 374, '所有叶结点都在同一层；n 个关键字的 B 树有 n + 1 个叶结点', 12.5, color=MUTED)
+F.legend(40, 358, [('blue', '终端结点（最底层的非叶结点）'), ('violet', '叶结点 = 失败结点，实际不存在')])
+F.text(430, 394, '所有叶结点都在同一层；n 个关键字的 B 树有 n + 1 个叶结点', 12.5, color=MUTED)

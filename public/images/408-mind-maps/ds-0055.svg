@@ -44,9 +44,9 @@
 <circle cx="470" cy="330" r="17" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
 <text x="470" y="335.2" font-size="15" fill="#14532d" text-anchor="middle" font-weight="500">e</text>
 <text x="500" y="130" font-size="13" fill="#3f3f46">① 画出表达式树</text>
-<text x="500" y="158" font-size="13" fill="#3f3f46"><tspan x="500" dy="0">② 合并相同的操作数（a、b、c、d、e</tspan><tspan x="500" dy="19.5">　 各只保留一个）</tspan></text>
-<text x="500" y="214" font-size="13" fill="#3f3f46"><tspan x="500" dy="0">③ 自底向上逐层合并相同的</tspan><tspan x="500" dy="19.5">　 操作符结点</tspan></text>
-<rect x="500" y="280" width="14" height="14" rx="3" fill="#fde7e4" stroke="#d1493a" stroke-width="1.3"/>
-<text x="520" y="291" font-size="13" fill="#3f3f46">被共享的子表达式</text>
-<text x="500" y="316" font-size="12" fill="#71717a">c+d 与 (c+d)*e 只出现一次</text>
+<text x="500" y="158" font-size="13" fill="#3f3f46"><tspan x="500" dy="0">② 合并相同的操作数</tspan><tspan x="500" dy="19.5">　 （a、b、c、d、e</tspan><tspan x="500" dy="19.5">　 各只保留一个）</tspan></text>
+<text x="500" y="236" font-size="13" fill="#3f3f46"><tspan x="500" dy="0">③ 自底向上逐层合并相同的</tspan><tspan x="500" dy="19.5">　 操作符结点</tspan></text>
+<rect x="500" y="290" width="14" height="14" rx="3" fill="#fde7e4" stroke="#d1493a" stroke-width="1.3"/>
+<text x="520" y="301" font-size="13" fill="#3f3f46">被共享的子表达式</text>
+<text x="500" y="326" font-size="12" fill="#71717a">c+d 与 (c+d)*e 只出现一次</text>
 </svg>
