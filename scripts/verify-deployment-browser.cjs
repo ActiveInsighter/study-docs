@@ -276,9 +276,9 @@ async function rscPrefetch(page, base) {
   return `payloads=${payloads}`;
 }
 
-/** A 408 chapter mind map draws as SVG with its toolbar. */
+/** A 408 section mind map draws as SVG with its toolbar and image preview. */
 async function mindMap(page, base) {
-  await page.goto(base + '/docs/408/mind-maps/operating-systems/02-processes/', { waitUntil: 'networkidle2', timeout: 120000 });
+  await page.goto(base + '/docs/408/mind-maps/operating-systems/02-6-thread-context/', { waitUntil: 'networkidle2', timeout: 120000 });
   await page.waitForSelector('.mind-map[data-status="ready"] svg.mind-map-surface', { timeout: 60000 });
   const nodes = await page.evaluate(() => document.querySelectorAll('svg.mind-map-surface [data-node-id]').length);
   const buttons = await page.evaluate(() => document.querySelectorAll('.markmap-toolbar button').length);
@@ -286,7 +286,7 @@ async function mindMap(page, base) {
 
   // Reveal a labelled figure, then check both the SVG resource and the real
   // click-to-preview path (the map uses SVG <image>, the dialog uses <img>).
-  const focus = encodeURIComponent('线程三状态模型');
+  const focus = encodeURIComponent('线程状态与TCB');
   await page.evaluate((hash) => { location.hash = hash; }, '#focus=' + focus);
   const selector = 'svg.mind-map-surface image[href="/images/408-mind-maps/os-0046.svg"]';
   await page.waitForSelector(selector, { visible: true, timeout: 60000 });
