@@ -1,0 +1,54 @@
+---
+title: "4.10 x86数据传送与运算指令"
+description: "MOV/LEA、算术逻辑、IMUL/IDIV、移位、CMP/TEST关键语义。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 4.10 x86常见指令：数据如何流动
+
+## 数据传送
+- `mov dst, src`：把src的值复制到dst（Intel语法：**目的在前**）
+  - 普通MOV一般**不允许**两操作数同时为任意内存操作数（需中转寄存器）
+  - `mov eax,[ebx]`读内存；`mov [ebx],eax`写内存
+- `lea eax,[ebx+ecx*4+8]`：计算**有效地址**放入EAX，不读取该地址内存值
+- `push`/`pop`：与SP/ESP及栈数据传送相联系
+
+## 算术与逻辑
+- `add/sub dst,src`：更新目的操作数与状态标志
+- `inc/dec dst`：加1/减1；**x86不修改CF**，与普通ADD/SUB的标志更新不同
+- `neg dst`：计算二补码负值，依据结果修改标志
+- `and/or/xor`：按位逻辑；`not`按位取反且**不改EFLAGS**
+- `shl/shr/sar`：逻辑左移/逻辑右移/算术右移
+  - `shr`高位补0；`sar`复制符号位（有符号负数使用，但与C除法向零截断不总一致）
+
+## 有符号乘除
+- `imul eax,ecx`：二操作数形式以低32位写回EAX；若有符号数学积无法用32位表示，CF/OF置1
+- `imul reg,src,imm`：三操作数变式存在，不能推断所有形式都只用一个操作数
+- 32位`idiv r/m32`：有符号**64位被除数**在EDX:EAX，除数来自指令操作数
+  - 商须放入32位EAX，余数放入EDX；除0或商超范围引发除法错误异常
+  - 通常用`cdq`把EAX符号扩到EDX，然后做32位除法
+
+## 只设置标志不保存结果
+- `cmp a,b`：做a−b设置标志，**不写回差**
+- `test a,b`：按位AND设置有关标志，不写回AND结果
+  - `test eax,eax`常用于检测EAX是否为0
+
+## 逐条追踪例
+- EAX=7，EBX=3
+  - `sub eax,ebx`→EAX=4；`add eax,ebx`→EAX=7
+  - `cmp eax,7`→ZF=1，但EAX仍为7
+- **不要把汇编助记符的“目的/源顺序”脱离Intel/AT&T格式判断**
+- [继续：标志位与条件跳转](/docs/408/mind-maps/computer-organization/04-instruction-set/04-11-flags-branches)
+````

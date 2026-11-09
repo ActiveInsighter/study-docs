@@ -12,7 +12,7 @@
         "概要：配图"
       ],
       "alt": "工作方式",
-      "target": "computer-networks/01-1-definition.mdx",
+      "target": "computer-networks/01-architecture/01-1-definition.mdx",
       "selectedAsset": "cn-0143.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -28,7 +28,7 @@
         "电路交换"
       ],
       "alt": "电路交换",
-      "target": "computer-networks/01-3-switching.mdx",
+      "target": "computer-networks/01-architecture/01-3-switching.mdx",
       "selectedAsset": "cn-0009.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -44,7 +44,7 @@
         "报文交换"
       ],
       "alt": "报文交换",
-      "target": "computer-networks/01-3-switching.mdx",
+      "target": "computer-networks/01-architecture/01-3-switching.mdx",
       "selectedAsset": "cn-01-message-switch-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -60,7 +60,7 @@
         "三种交换的比较（P1到P4，表示4个分组）"
       ],
       "alt": "三种交换的比较（P1到P4，表示4个分组）",
-      "target": "computer-networks/01-3-switching.mdx",
+      "target": "computer-networks/01-architecture/01-3-switching.mdx",
       "selectedAsset": "cn-01-switching-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -76,7 +76,7 @@
         "相邻两层之间的关系"
       ],
       "alt": "相邻两层之间的关系",
-      "target": "computer-networks/01-7-services.mdx",
+      "target": "computer-networks/01-architecture/01-7-services.mdx",
       "selectedAsset": "cn-01-service-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -91,7 +91,7 @@
         "图："
       ],
       "alt": "图：",
-      "target": "computer-networks/01-11-models.mdx",
+      "target": "computer-networks/01-architecture/01-11-models.mdx",
       "selectedAsset": "cn-0042.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -106,7 +106,7 @@
         "一个典型的数据通信模型"
       ],
       "alt": "一个典型的数据通信模型",
-      "target": "computer-networks/02-2-communication-modes.mdx",
+      "target": "computer-networks/02-physical-layer/02-2-communication-modes.mdx",
       "selectedAsset": "cn-02-communication-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -120,7 +120,7 @@
         "码元"
       ],
       "alt": "码元",
-      "target": "computer-networks/02-3-symbol-rate.mdx",
+      "target": "computer-networks/02-physical-layer/02-3-symbol-rate.mdx",
       "selectedAsset": "cn-0115.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -136,7 +136,7 @@
         "数字信号系统：bps"
       ],
       "alt": "数字信号系统：bps",
-      "target": "computer-networks/02-4-bandwidth-impairments.mdx",
+      "target": "computer-networks/02-physical-layer/02-4-bandwidth-impairments.mdx",
       "selectedAsset": "cn-0022.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -154,7 +154,7 @@
         "模拟信号的带宽：最高频率 - 最低频率"
       ],
       "alt": "模拟信号的带宽：最高频率 - 最低频率",
-      "target": "computer-networks/02-4-bandwidth-impairments.mdx",
+      "target": "computer-networks/02-physical-layer/02-4-bandwidth-impairments.mdx",
       "selectedAsset": "cn-02-bandwidth-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -168,7 +168,7 @@
         "编码 （数据 -&gt; 数字信号）"
       ],
       "alt": "编码 （数据 -&amp;amp;gt; 数字信号）",
-      "target": "computer-networks/02-7-line-coding.mdx",
+      "target": "computer-networks/02-physical-layer/02-7-line-coding.mdx",
       "selectedAsset": "cn-0019.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -185,7 +185,7 @@
         "差分曼彻斯特编码：1 则蓝色（不变），0则红色（要变），第一位应该是和曼彻斯特编码一致"
       ],
       "alt": "差分曼彻斯特编码：1 则蓝色（不变），0则红色（要变），第一位应该是和曼彻斯特编码一致",
-      "target": "computer-networks/02-7-line-coding.mdx",
+      "target": "computer-networks/02-physical-layer/02-7-line-coding.mdx",
       "selectedAsset": "cn-0006.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -203,7 +203,7 @@
         "为何要？ $f_{采} > 2f_{max}$"
       ],
       "alt": "为何要？",
-      "target": "computer-networks/02-9-pcm-sampling.mdx",
+      "target": "computer-networks/02-physical-layer/02-9-pcm-sampling.mdx",
       "selectedAsset": "cn-02-pcm-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -218,7 +218,7 @@
         "步骤很简单，就是把模拟数据调制为高频的模拟信号，然后再把模拟信号在收音机处解调为模拟数据，进行播放"
       ],
       "alt": "步骤很简单，就是把模拟数据调制为高频的模拟信号，然后再把模拟信号在收音机处解调为模拟数据，进行播放",
-      "target": "computer-networks/02-9-pcm-sampling.mdx",
+      "target": "computer-networks/02-physical-layer/02-9-pcm-sampling.mdx",
       "selectedAsset": "cn-0082.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -237,7 +237,7 @@
         "1\\. 在交换设备中使用【路由选择算法】去找是发个【下一个交换设备】还是发给【下一个路由器】 2. A发送呼叫后，B如果接受到了请求，会原路返回去应答主机A"
       ],
       "alt": "1. 在交换设备中使用【路由选择算法】去找是发个【下一个交换设备】还是发给【下一个路由器】 2. A发送呼叫后，B如果接受到了请求，会原路返回去应答主机A",
-      "target": "computer-networks/02-11-datagram-vc.mdx",
+      "target": "computer-networks/02-physical-layer/02-11-datagram-vc.mdx",
       "selectedAsset": "cn-02-datagram-vc-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -255,7 +255,7 @@
         "与建立连接类似，最后【不返回】"
       ],
       "alt": "与建立连接类似，最后【不返回】",
-      "target": "computer-networks/02-11-datagram-vc.mdx",
+      "target": "computer-networks/02-physical-layer/02-11-datagram-vc.mdx",
       "selectedAsset": "cn-02-datagram-vc-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -271,7 +271,7 @@
         "发送流程"
       ],
       "alt": "发送流程",
-      "target": "computer-networks/02-10-switching.mdx",
+      "target": "computer-networks/02-physical-layer/02-10-switching.mdx",
       "selectedAsset": "cn-0020.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -286,7 +286,7 @@
         "数据交换方式的选择"
       ],
       "alt": "数据交换方式的选择",
-      "target": "computer-networks/02-10-switching.mdx",
+      "target": "computer-networks/02-physical-layer/02-10-switching.mdx",
       "selectedAsset": "cn-01-switching-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -301,7 +301,7 @@
         "数据报方式"
       ],
       "alt": "数据报方式",
-      "target": "computer-networks/02-11-datagram-vc.mdx",
+      "target": "computer-networks/02-physical-layer/02-11-datagram-vc.mdx",
       "selectedAsset": "cn-02-datagram-vc-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -316,7 +316,7 @@
         "虚电路方式"
       ],
       "alt": "虚电路方式",
-      "target": "computer-networks/02-11-datagram-vc.mdx",
+      "target": "computer-networks/02-physical-layer/02-11-datagram-vc.mdx",
       "selectedAsset": "cn-02-datagram-vc-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -333,7 +333,7 @@
         "光纤通信就是利用光导纤维(简称光纤)传递光脉冲来进行通信。有光脉冲表示1,无光脉冲表示0。"
       ],
       "alt": "光纤通信就是利用光导纤维(简称光纤)传递光脉冲来进行通信。有光脉冲表示1,无光脉冲表示0。",
-      "target": "computer-networks/02-13-fiber.mdx",
+      "target": "computer-networks/02-physical-layer/02-13-fiber.mdx",
       "selectedAsset": "cn-0087.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -350,7 +350,7 @@
         "多模光纤/单模光纤"
       ],
       "alt": "多模光纤/单模光纤",
-      "target": "computer-networks/02-13-fiber.mdx",
+      "target": "computer-networks/02-physical-layer/02-13-fiber.mdx",
       "selectedAsset": "cn-02-fiber-modes-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -365,7 +365,7 @@
         "广播 + 不能分割冲突域 + 连在集线器的设备共享网络"
       ],
       "alt": "广播 + 不能分割冲突域 + 连在集线器的设备共享网络",
-      "target": "computer-networks/02-15-repeaters-hubs.mdx",
+      "target": "computer-networks/02-physical-layer/02-15-repeaters-hubs.mdx",
       "selectedAsset": "cn-02-hub-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -381,7 +381,7 @@
         "分析两种情况，如果接收端所有ACK全部正常抵达和ACK全部丢失的情况下，会不会出现“误解”"
       ],
       "alt": "分析两种情况，如果接收端所有ACK全部正常抵达和ACK全部丢失的情况下，会不会出现“误解”",
-      "target": "computer-networks/03-8-sr.mdx",
+      "target": "computer-networks/03-data-link-layer/03-8-sr.mdx",
       "selectedAsset": "cn-0073.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -397,7 +397,7 @@
         "例如：从1中进行延伸求解"
       ],
       "alt": "例如：从1中进行延伸求解",
-      "target": "computer-networks/03-9-utilization.mdx",
+      "target": "computer-networks/03-data-link-layer/03-9-utilization.mdx",
       "selectedAsset": "cn-0012.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -413,7 +413,7 @@
         "CSMA/CA"
       ],
       "alt": "CSMA/CA",
-      "target": "computer-networks/03-13-csmaca.mdx",
+      "target": "computer-networks/03-data-link-layer/03-13-csmaca.mdx",
       "selectedAsset": "cn-03-rts-cts-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -428,7 +428,7 @@
         "广域网是连接众多局域网的网络"
       ],
       "alt": "广域网是连接众多局域网的网络",
-      "target": "computer-networks/03-17-ppp.mdx",
+      "target": "computer-networks/03-data-link-layer/03-17-ppp.mdx",
       "selectedAsset": "cn-0049.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -446,7 +446,7 @@
         "但如果两个路由器之间有一个交换机，则一定不是PPP帧而是以太网帧"
       ],
       "alt": "但如果两个路由器之间有一个交换机，则一定不是PPP帧而是以太网帧",
-      "target": "computer-networks/03-17-ppp.mdx",
+      "target": "computer-networks/03-data-link-layer/03-17-ppp.mdx",
       "selectedAsset": "cn-0038.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -461,7 +461,7 @@
         "概念："
       ],
       "alt": "概念：",
-      "target": "computer-networks/03-20-vlan.mdx",
+      "target": "computer-networks/03-data-link-layer/03-20-vlan.mdx",
       "selectedAsset": "cn-0084.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -476,7 +476,7 @@
         "基于接口的VLAN技术："
       ],
       "alt": "基于接口的VLAN技术：",
-      "target": "computer-networks/03-20-vlan.mdx",
+      "target": "computer-networks/03-data-link-layer/03-20-vlan.mdx",
       "selectedAsset": "cn-0113.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -492,7 +492,7 @@
         "VLAN帧："
       ],
       "alt": "VLAN帧：",
-      "target": "computer-networks/03-20-vlan.mdx",
+      "target": "computer-networks/03-data-link-layer/03-20-vlan.mdx",
       "selectedAsset": "cn-0148.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -507,7 +507,7 @@
         "练习题："
       ],
       "alt": "练习题：",
-      "target": "computer-networks/03-20-vlan.mdx",
+      "target": "computer-networks/03-data-link-layer/03-20-vlan.mdx",
       "selectedAsset": "cn-0113.svg",
       "reason": "restored-original",
       "action": "already-in-section"
@@ -522,7 +522,7 @@
         "概要：配图"
       ],
       "alt": "域名解析",
-      "target": "computer-networks/06-5-dns-query.mdx",
+      "target": "computer-networks/06-application-layer/06-5-dns-query.mdx",
       "selectedAsset": "cn-06-dns-resolution-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -539,7 +539,7 @@
         "请求报文：从客户向服务器发送的请求报文"
       ],
       "alt": "请求报文：从客户向服务器发送的请求报文",
-      "target": "computer-networks/06-14-http-request.mdx",
+      "target": "computer-networks/06-application-layer/06-14-http-request.mdx",
       "selectedAsset": "cn-06-http-messages-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -558,7 +558,7 @@
         "响应报文：从服务器到客户的回答"
       ],
       "alt": "响应报文：从服务器到客户的回答",
-      "target": "computer-networks/06-15-http-response.mdx",
+      "target": "computer-networks/06-application-layer/06-15-http-response.mdx",
       "selectedAsset": "cn-06-http-messages-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -576,7 +576,7 @@
         "早期冯诺依曼机是以【运算器】作为核心的"
       ],
       "alt": "早期冯诺依曼机是以【运算器】作为核心的",
-      "target": "computer-organization/01-2-von-neumann.mdx",
+      "target": "computer-organization/01-overview/01-2-von-neumann.mdx",
       "selectedAsset": "co-01-von-neumann-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -592,7 +592,7 @@
         "【没有符号位】，有n个bit，则数的表示范围为：( 0 ~ 2^n - 1 )"
       ],
       "alt": "【没有符号位】，有n个bit，则数的表示范围为：( 0 ~ 2^n - 1 )",
-      "target": "computer-organization/02-2-number-representations.mdx",
+      "target": "computer-organization/02-data-representation/02-2-number-representations.mdx",
       "selectedAsset": "co-0123.svg",
       "reason": "repaired-original",
       "action": "inserted",
@@ -609,7 +609,7 @@
         "定点小数"
       ],
       "alt": "定点小数",
-      "target": "computer-organization/02-2-number-representations.mdx",
+      "target": "computer-organization/02-data-representation/02-2-number-representations.mdx",
       "selectedAsset": "co-02-fixed-0032.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -624,7 +624,7 @@
         "定点整数"
       ],
       "alt": "定点整数",
-      "target": "computer-organization/02-2-number-representations.mdx",
+      "target": "computer-organization/02-data-representation/02-2-number-representations.mdx",
       "selectedAsset": "co-02-fixed-0244.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -638,7 +638,7 @@
         "（补充）门电路和摩根定律"
       ],
       "alt": "（补充）门电路和摩根定律",
-      "target": "computer-organization/02-4-alu-carry.mdx",
+      "target": "computer-organization/02-data-representation/02-4-alu-carry.mdx",
       "selectedAsset": "co-0272.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -653,7 +653,7 @@
         "一位全加器"
       ],
       "alt": "一位全加器",
-      "target": "computer-organization/02-4-alu-carry.mdx",
+      "target": "computer-organization/02-data-representation/02-4-alu-carry.mdx",
       "selectedAsset": "co-02-fixed-0282.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -668,7 +668,7 @@
         "逻辑符号（简化）"
       ],
       "alt": "逻辑符号（简化）",
-      "target": "computer-organization/02-4-alu-carry.mdx",
+      "target": "computer-organization/02-data-representation/02-4-alu-carry.mdx",
       "selectedAsset": "co-02-fixed-0145.svg",
       "reason": "verified-redraw",
       "action": "inserted",
@@ -684,7 +684,7 @@
         "串行加法器：循环使用一位全加器"
       ],
       "alt": "串行加法器：循环使用一位全加器",
-      "target": "computer-organization/02-4-alu-carry.mdx",
+      "target": "computer-organization/02-data-representation/02-4-alu-carry.mdx",
       "selectedAsset": "co-02-fixed-0036.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -699,7 +699,7 @@
         "把多个全加器串在一起，和串行加法器问题一致，速度一样的慢"
       ],
       "alt": "把多个全加器串在一起，和串行加法器问题一致，速度一样的慢",
-      "target": "computer-organization/02-4-alu-carry.mdx",
+      "target": "computer-organization/02-data-representation/02-4-alu-carry.mdx",
       "selectedAsset": "co-02-fixed-0122.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -715,7 +715,7 @@
         "相互间的进位没有依赖关系，只要同时到达，可以同时生成C1~C3"
       ],
       "alt": "相互间的进位没有依赖关系，只要同时到达，可以同时生成C1~C3",
-      "target": "computer-organization/02-4-alu-carry.mdx",
+      "target": "computer-organization/02-data-representation/02-4-alu-carry.mdx",
       "selectedAsset": "co-02-fixed-0058.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -730,7 +730,7 @@
         "四位CLA部件/CLA电路"
       ],
       "alt": "四位CLA部件/CLA电路",
-      "target": "computer-organization/02-4-alu-carry.mdx",
+      "target": "computer-organization/02-data-representation/02-4-alu-carry.mdx",
       "selectedAsset": "co-02-fixed-0257.svg",
       "reason": "verified-redraw",
       "action": "inserted",
@@ -746,7 +746,7 @@
         "四位全先行进位加法器"
       ],
       "alt": "四位全先行进位加法器",
-      "target": "computer-organization/02-4-alu-carry.mdx",
+      "target": "computer-organization/02-data-representation/02-4-alu-carry.mdx",
       "selectedAsset": "co-02-fixed-0264.svg",
       "reason": "verified-redraw",
       "action": "inserted",
@@ -764,7 +764,7 @@
         "把几(4)个加法器串在一起，这样可以并发的计算4bit的数据"
       ],
       "alt": "把几(4)个加法器串在一起，这样可以并发的计算4bit的数据",
-      "target": "computer-organization/02-4-alu-carry.mdx",
+      "target": "computer-organization/02-data-representation/02-4-alu-carry.mdx",
       "selectedAsset": "co-02-fixed-0128.svg",
       "reason": "verified-redraw",
       "action": "inserted",
@@ -779,7 +779,7 @@
         "多级并行进位加法器"
       ],
       "alt": "多级并行进位加法器",
-      "target": "computer-organization/02-4-alu-carry.mdx",
+      "target": "computer-organization/02-data-representation/02-4-alu-carry.mdx",
       "selectedAsset": "co-02-fixed-0051.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -794,7 +794,7 @@
         "带标记加法器逻辑电路"
       ],
       "alt": "带标记加法器逻辑电路",
-      "target": "computer-organization/02-5-arithmetic-flags.mdx",
+      "target": "computer-organization/02-data-representation/02-5-arithmetic-flags.mdx",
       "selectedAsset": "co-0137.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -810,7 +810,7 @@
         "多路选择器"
       ],
       "alt": "多路选择器",
-      "target": "computer-organization/02-4-alu-carry.mdx",
+      "target": "computer-organization/02-data-representation/02-4-alu-carry.mdx",
       "selectedAsset": "co-0299.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -826,7 +826,7 @@
         "ALU的基本结构"
       ],
       "alt": "ALU的基本结构",
-      "target": "computer-organization/02-4-alu-carry.mdx",
+      "target": "computer-organization/02-data-representation/02-4-alu-carry.mdx",
       "selectedAsset": "co-0223.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -843,7 +843,7 @@
         "硬件构成"
       ],
       "alt": "硬件构成",
-      "target": "computer-organization/02-7-multiplication.mdx",
+      "target": "computer-organization/02-data-representation/02-7-multiplication.mdx",
       "selectedAsset": "co-02-fixed-0173.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -858,7 +858,7 @@
         "无符号数"
       ],
       "alt": "无符号数",
-      "target": "computer-organization/02-7-multiplication.mdx",
+      "target": "computer-organization/02-data-representation/02-7-multiplication.mdx",
       "selectedAsset": "co-02-fixed-0269.svg",
       "reason": "verified-redraw",
       "action": "inserted",
@@ -875,7 +875,7 @@
         "自己尝试一下~"
       ],
       "alt": "自己尝试一下~",
-      "target": "computer-organization/02-7-multiplication.mdx",
+      "target": "computer-organization/02-data-representation/02-7-multiplication.mdx",
       "selectedAsset": "co-02-fixed-0020.svg",
       "reason": "verified-redraw",
       "action": "inserted",
@@ -893,7 +893,7 @@
         "阵列乘法器，可以同时得到多位的乘积"
       ],
       "alt": "阵列乘法器，可以同时得到多位的乘积",
-      "target": "computer-organization/02-7-multiplication.mdx",
+      "target": "computer-organization/02-data-representation/02-7-multiplication.mdx",
       "selectedAsset": "co-02-fixed-0230.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -909,7 +909,7 @@
         "补码一位乘法逻辑结构图"
       ],
       "alt": "补码一位乘法逻辑结构图",
-      "target": "computer-organization/02-7-multiplication.mdx",
+      "target": "computer-organization/02-data-representation/02-7-multiplication.mdx",
       "selectedAsset": "co-02-fixed-0100.svg",
       "reason": "verified-redraw",
       "action": "inserted",
@@ -927,7 +927,7 @@
         "硬件构成"
       ],
       "alt": "硬件构成",
-      "target": "computer-organization/02-8-division.mdx",
+      "target": "computer-organization/02-data-representation/02-8-division.mdx",
       "selectedAsset": "co-02-fixed-0276.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -942,7 +942,7 @@
         "R ÷ Y = Q...R / ACC ÷ X = MQ ... ACC"
       ],
       "alt": "R ÷ Y = Q...R / ACC ÷ X = MQ ... ACC",
-      "target": "computer-organization/02-8-division.mdx",
+      "target": "computer-organization/02-data-representation/02-8-division.mdx",
       "selectedAsset": "co-02-fixed-0013.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -958,7 +958,7 @@
         "定点小数"
       ],
       "alt": "定点小数",
-      "target": "computer-organization/02-8-division.mdx",
+      "target": "computer-organization/02-data-representation/02-8-division.mdx",
       "selectedAsset": "co-02-fixed-0008.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -974,7 +974,7 @@
         "定点整数"
       ],
       "alt": "定点整数",
-      "target": "computer-organization/02-8-division.mdx",
+      "target": "computer-organization/02-data-representation/02-8-division.mdx",
       "selectedAsset": "co-02-fixed-0142.svg",
       "reason": "verified-redraw",
       "action": "inserted",
@@ -990,7 +990,7 @@
         "一般格式"
       ],
       "alt": "一般格式",
-      "target": "computer-organization/02-10-float-principles.mdx",
+      "target": "computer-organization/02-data-representation/02-10-float-principles.mdx",
       "selectedAsset": "co-02-fixed-0004.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -1006,7 +1006,7 @@
         "不同精度"
       ],
       "alt": "不同精度",
-      "target": "computer-organization/02-11-ieee754.mdx",
+      "target": "computer-organization/02-data-representation/02-11-ieee754.mdx",
       "selectedAsset": "co-02-fixed-0099.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -1023,7 +1023,7 @@
         "【基础版】一次刷新一整行"
       ],
       "alt": "【基础版】一次刷新一整行",
-      "target": "computer-organization/03-3-refresh.mdx",
+      "target": "computer-organization/03-memory-system/03-3-refresh.mdx",
       "selectedAsset": "co-0010.svg",
       "reason": "repaired-original",
       "action": "inserted",
@@ -1042,7 +1042,7 @@
         "【行列存储版】把地址分布改为行地址+列地址的存储方式"
       ],
       "alt": "【行列存储版】把地址分布改为行地址+列地址的存储方式",
-      "target": "computer-organization/03-3-refresh.mdx",
+      "target": "computer-organization/03-memory-system/03-3-refresh.mdx",
       "selectedAsset": "co-0148.svg",
       "reason": "repaired-original",
       "action": "inserted",
@@ -1059,7 +1059,7 @@
         "存储体/存储单元："
       ],
       "alt": "存储体/存储单元：",
-      "target": "computer-organization/03-5-chip-organization.mdx",
+      "target": "computer-organization/03-memory-system/03-5-chip-organization.mdx",
       "selectedAsset": "co-0044.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1075,7 +1075,7 @@
         "存储芯片："
       ],
       "alt": "存储芯片：",
-      "target": "computer-organization/03-5-chip-organization.mdx",
+      "target": "computer-organization/03-memory-system/03-5-chip-organization.mdx",
       "selectedAsset": "co-0034.svg",
       "reason": "repaired-original",
       "action": "inserted",
@@ -1094,7 +1094,7 @@
         "高位2bit是对应不同的存储体"
       ],
       "alt": "高位2bit是对应不同的存储体",
-      "target": "computer-organization/03-7-multi-bank.mdx",
+      "target": "computer-organization/03-memory-system/03-7-multi-bank.mdx",
       "selectedAsset": "co-0281.svg",
       "reason": "repaired-original",
       "action": "inserted",
@@ -1115,7 +1115,7 @@
         "甘特图， 耗时 5T"
       ],
       "alt": "甘特图， 耗时 5T",
-      "target": "computer-organization/03-7-multi-bank.mdx",
+      "target": "computer-organization/03-memory-system/03-7-multi-bank.mdx",
       "selectedAsset": "co-0261.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1133,7 +1133,7 @@
         "低位2bit对应不同存储体"
       ],
       "alt": "低位2bit对应不同存储体",
-      "target": "computer-organization/03-7-multi-bank.mdx",
+      "target": "computer-organization/03-memory-system/03-7-multi-bank.mdx",
       "selectedAsset": "co-0253.svg",
       "reason": "repaired-original",
       "action": "inserted",
@@ -1154,7 +1154,7 @@
         "甘特图， 耗时 T+4r"
       ],
       "alt": "甘特图， 耗时 T+4r",
-      "target": "computer-organization/03-7-multi-bank.mdx",
+      "target": "computer-organization/03-memory-system/03-7-multi-bank.mdx",
       "selectedAsset": "co-0067.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1171,7 +1171,7 @@
         "把多体并行存储器合并在了同一个存储器中，所有存储器共用控制电路、寄存器等等"
       ],
       "alt": "把多体并行存储器合并在了同一个存储器中，所有存储器共用控制电路、寄存器等等",
-      "target": "computer-organization/03-7-multi-bank.mdx",
+      "target": "computer-organization/03-memory-system/03-7-multi-bank.mdx",
       "selectedAsset": "co-0076.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1186,7 +1186,7 @@
         "主存的基本组成"
       ],
       "alt": "主存的基本组成",
-      "target": "computer-organization/03-5-chip-organization.mdx",
+      "target": "computer-organization/03-memory-system/03-5-chip-organization.mdx",
       "selectedAsset": "co-0258.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1201,7 +1201,7 @@
         "主存的基本组成"
       ],
       "alt": "主存的基本组成",
-      "target": "computer-organization/03-5-chip-organization.mdx",
+      "target": "computer-organization/03-memory-system/03-5-chip-organization.mdx",
       "selectedAsset": "co-0069.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1217,7 +1217,7 @@
         "最开始只有一块芯片的时候（数据线不够）"
       ],
       "alt": "最开始只有一块芯片的时候（数据线不够）",
-      "target": "computer-organization/03-6-expansion.mdx",
+      "target": "computer-organization/03-memory-system/03-6-expansion.mdx",
       "selectedAsset": "co-0233.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1234,7 +1234,7 @@
         "例如再连一块"
       ],
       "alt": "例如再连一块",
-      "target": "computer-organization/03-6-expansion.mdx",
+      "target": "computer-organization/03-memory-system/03-6-expansion.mdx",
       "selectedAsset": "co-0301.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1250,7 +1250,7 @@
         "最开始的时候地址线还有3个引脚没有连接"
       ],
       "alt": "最开始的时候地址线还有3个引脚没有连接",
-      "target": "computer-organization/03-6-expansion.mdx",
+      "target": "computer-organization/03-memory-system/03-6-expansion.mdx",
       "selectedAsset": "co-0074.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1267,7 +1267,7 @@
         "法一：线选法，CPU每一根多的地址线就连接着对应的芯片的CS。【这样CPU多了N根线，就可以多连接N个芯片】"
       ],
       "alt": "法一：线选法，CPU每一根多的地址线就连接着对应的芯片的CS。【这样CPU多了N根线，就可以多连接N个芯片】",
-      "target": "computer-organization/03-6-expansion.mdx",
+      "target": "computer-organization/03-memory-system/03-6-expansion.mdx",
       "selectedAsset": "co-0314.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1283,7 +1283,7 @@
         "普通的3-8译码器"
       ],
       "alt": "普通的3-8译码器",
-      "target": "computer-organization/03-5-chip-organization.mdx",
+      "target": "computer-organization/03-memory-system/03-5-chip-organization.mdx",
       "selectedAsset": "co-0157.svg",
       "reason": "repaired-original",
       "action": "inserted",
@@ -1302,7 +1302,7 @@
         "EN使能"
       ],
       "alt": "EN使能",
-      "target": "computer-organization/03-5-chip-organization.mdx",
+      "target": "computer-organization/03-memory-system/03-5-chip-organization.mdx",
       "selectedAsset": "co-0175.svg",
       "reason": "repaired-original",
       "action": "inserted",
@@ -1322,7 +1322,7 @@
         "74ls138"
       ],
       "alt": "74ls138",
-      "target": "computer-organization/03-5-chip-organization.mdx",
+      "target": "computer-organization/03-memory-system/03-5-chip-organization.mdx",
       "selectedAsset": "co-0302.svg",
       "reason": "repaired-original",
       "action": "inserted",
@@ -1341,7 +1341,7 @@
         "CPU通过控制一个使能端，来控制CPU的操作顺序"
       ],
       "alt": "CPU通过控制一个使能端，来控制CPU的操作顺序",
-      "target": "computer-organization/03-5-chip-organization.mdx",
+      "target": "computer-organization/03-memory-system/03-5-chip-organization.mdx",
       "selectedAsset": "co-0037.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1360,7 +1360,7 @@
         "CPU先把地址信号传递到地址线上面去，检测到信号稳定后，CPU才会把MREQ设置为0，芯片才能进行运作"
       ],
       "alt": "CPU先把地址信号传递到地址线上面去，检测到信号稳定后，CPU才会把MREQ设置为0，芯片才能进行运作",
-      "target": "computer-organization/03-5-chip-organization.mdx",
+      "target": "computer-organization/03-memory-system/03-5-chip-organization.mdx",
       "selectedAsset": "co-0066.svg",
       "reason": "repaired-original",
       "action": "inserted",
@@ -1379,7 +1379,7 @@
         "主存在Cache中的行号 = 主存块号 % Cache总块数"
       ],
       "alt": "主存在Cache中的行号 = 主存块号 % Cache总块数",
-      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "target": "computer-organization/03-memory-system/03-11-cache-mapping.mdx",
       "selectedAsset": "co-0180.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1398,7 +1398,7 @@
         "大题第二步（根据地址应声规则计算正确的地址形式）"
       ],
       "alt": "大题第二步（根据地址应声规则计算正确的地址形式）",
-      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "target": "computer-organization/03-memory-system/03-11-cache-mapping.mdx",
       "selectedAsset": "co-0254.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1418,7 +1418,7 @@
         "此时主存的地址样子"
       ],
       "alt": "此时主存的地址样子",
-      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "target": "computer-organization/03-memory-system/03-11-cache-mapping.mdx",
       "selectedAsset": "co-0143.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1439,7 +1439,7 @@
         "CPU访问例子（大题第三步）"
       ],
       "alt": "CPU访问例子（大题第三步）",
-      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "target": "computer-organization/03-memory-system/03-11-cache-mapping.mdx",
       "selectedAsset": "co-0296.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1458,7 +1458,7 @@
         "Cache每行有 1+1+19+64\\*8 = 533 bit"
       ],
       "alt": "Cache每行有 1+1+19+64\\*8 = 533 bit",
-      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "target": "computer-organization/03-memory-system/03-11-cache-mapping.mdx",
       "selectedAsset": "co-0046.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1477,7 +1477,7 @@
         "大题第二步（根据地址映射规则计算正确的地址形式）"
       ],
       "alt": "大题第二步（根据地址映射规则计算正确的地址形式）",
-      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "target": "computer-organization/03-memory-system/03-11-cache-mapping.mdx",
       "selectedAsset": "co-0319.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1497,7 +1497,7 @@
         "此时主存的地址样子"
       ],
       "alt": "此时主存的地址样子",
-      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "target": "computer-organization/03-memory-system/03-11-cache-mapping.mdx",
       "selectedAsset": "co-0071.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1518,7 +1518,7 @@
         "CPU访问例子（大题第三步）"
       ],
       "alt": "CPU访问例子（大题第三步）",
-      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "target": "computer-organization/03-memory-system/03-11-cache-mapping.mdx",
       "selectedAsset": "co-0083.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1536,7 +1536,7 @@
         "Cache每行有 1+1+3+22+64\\*8 = 539 bit"
       ],
       "alt": "Cache每行有 1+1+3+22+64\\*8 = 539 bit",
-      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "target": "computer-organization/03-memory-system/03-11-cache-mapping.mdx",
       "selectedAsset": "co-0086.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1555,7 +1555,7 @@
         "主存在Cache中的组号 = 主存块号 % Cache总组数"
       ],
       "alt": "主存在Cache中的组号 = 主存块号 % Cache总组数",
-      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "target": "computer-organization/03-memory-system/03-11-cache-mapping.mdx",
       "selectedAsset": "co-0224.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1574,7 +1574,7 @@
         "大题第二步（根据地址应声规则计算正确的地址形式）"
       ],
       "alt": "大题第二步（根据地址应声规则计算正确的地址形式）",
-      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "target": "computer-organization/03-memory-system/03-11-cache-mapping.mdx",
       "selectedAsset": "co-0278.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1594,7 +1594,7 @@
         "此时主存的地址样子"
       ],
       "alt": "此时主存的地址样子",
-      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "target": "computer-organization/03-memory-system/03-11-cache-mapping.mdx",
       "selectedAsset": "co-0275.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1615,7 +1615,7 @@
         "CPU访问例子（大题第三步）"
       ],
       "alt": "CPU访问例子（大题第三步）",
-      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "target": "computer-organization/03-memory-system/03-11-cache-mapping.mdx",
       "selectedAsset": "co-0141.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1634,7 +1634,7 @@
         "Cache每行有 1+1+1+20+64\\*8 = 535 bit"
       ],
       "alt": "Cache每行有 1+1+1+20+64\\*8 = 535 bit",
-      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "target": "computer-organization/03-memory-system/03-11-cache-mapping.mdx",
       "selectedAsset": "co-0197.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1654,7 +1654,7 @@
         "标记项组成的二维标记阵列"
       ],
       "alt": "标记项组成的二维标记阵列",
-      "target": "computer-organization/03-11-cache-mapping.mdx",
+      "target": "computer-organization/03-memory-system/03-11-cache-mapping.mdx",
       "selectedAsset": "co-0246.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1671,7 +1671,7 @@
         "虚拟存储器的三个地址空间"
       ],
       "alt": "虚拟存储器的三个地址空间",
-      "target": "computer-organization/03-14-virtual-memory.mdx",
+      "target": "computer-organization/03-memory-system/03-14-virtual-memory.mdx",
       "selectedAsset": "co-0268.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1689,7 +1689,7 @@
         "主存中的页表实例：&lt;有效位、脏位、引用位、物理页号&gt;"
       ],
       "alt": "主存中的页表实例：&amp;amp;lt;有效位、脏位、引用位、物理页号&amp;amp;gt;",
-      "target": "computer-organization/03-14-virtual-memory.mdx",
+      "target": "computer-organization/03-memory-system/03-14-virtual-memory.mdx",
       "selectedAsset": "co-0062.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1707,7 +1707,7 @@
         "概要：也可以合起来图"
       ],
       "alt": "也可以合起来图",
-      "target": "computer-organization/03-15-tlb-cache.mdx",
+      "target": "computer-organization/03-memory-system/03-15-tlb-cache.mdx",
       "selectedAsset": "co-0298.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1722,7 +1722,7 @@
         "扩展操作码："
       ],
       "alt": "扩展操作码：",
-      "target": "computer-organization/04-3-extended-opcodes.mdx",
+      "target": "computer-organization/04-instruction-set/04-3-extended-opcodes.mdx",
       "selectedAsset": "co-04-opcode-prefix-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -1738,7 +1738,7 @@
         "隐含寻址"
       ],
       "alt": "隐含寻址",
-      "target": "computer-organization/04-5-immediate-memory.mdx",
+      "target": "computer-organization/04-instruction-set/04-5-immediate-memory.mdx",
       "selectedAsset": "co-0235.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1755,7 +1755,7 @@
         "间接寻址"
       ],
       "alt": "间接寻址",
-      "target": "computer-organization/04-5-immediate-memory.mdx",
+      "target": "computer-organization/04-instruction-set/04-5-immediate-memory.mdx",
       "selectedAsset": "co-04-fixed-0024.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -1771,7 +1771,7 @@
         "寄存器寻址"
       ],
       "alt": "寄存器寻址",
-      "target": "computer-organization/04-6-register-addressing.mdx",
+      "target": "computer-organization/04-instruction-set/04-6-register-addressing.mdx",
       "selectedAsset": "co-04-fixed-0084.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -1787,7 +1787,7 @@
         "寄存器间接寻址"
       ],
       "alt": "寄存器间接寻址",
-      "target": "computer-organization/04-6-register-addressing.mdx",
+      "target": "computer-organization/04-instruction-set/04-6-register-addressing.mdx",
       "selectedAsset": "co-04-fixed-0078.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -1803,7 +1803,7 @@
         "相对寻址"
       ],
       "alt": "相对寻址",
-      "target": "computer-organization/04-7-relative-base-index.mdx",
+      "target": "computer-organization/04-instruction-set/04-7-relative-base-index.mdx",
       "selectedAsset": "co-04-fixed-0192.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -1819,7 +1819,7 @@
         "基址寻址"
       ],
       "alt": "基址寻址",
-      "target": "computer-organization/04-7-relative-base-index.mdx",
+      "target": "computer-organization/04-instruction-set/04-7-relative-base-index.mdx",
       "selectedAsset": "co-04-fixed-0200.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -1835,7 +1835,7 @@
         "定长的机器周期"
       ],
       "alt": "定长的机器周期",
-      "target": "computer-organization/05-2-cycles.mdx",
+      "target": "computer-organization/05-cpu/05-2-cycles.mdx",
       "selectedAsset": "co-05-cycle-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -1851,7 +1851,7 @@
         "不定长的机器周期"
       ],
       "alt": "不定长的机器周期",
-      "target": "computer-organization/05-2-cycles.mdx",
+      "target": "computer-organization/05-cpu/05-2-cycles.mdx",
       "selectedAsset": "co-05-cycle-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -1867,7 +1867,7 @@
         "取指、执行、多执行、间址、中断"
       ],
       "alt": "取指、执行、多执行、间址、中断",
-      "target": "computer-organization/05-2-cycles.mdx",
+      "target": "computer-organization/05-cpu/05-2-cycles.mdx",
       "selectedAsset": "co-0117.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1883,7 +1883,7 @@
         "取值周期控制流"
       ],
       "alt": "取值周期控制流",
-      "target": "computer-organization/05-3-fetch-interrupt.mdx",
+      "target": "computer-organization/05-cpu/05-3-fetch-interrupt.mdx",
       "selectedAsset": "co-05-readable-0209.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -1898,7 +1898,7 @@
         "一次间址周期数据流"
       ],
       "alt": "一次间址周期数据流",
-      "target": "computer-organization/05-3-fetch-interrupt.mdx",
+      "target": "computer-organization/05-cpu/05-3-fetch-interrupt.mdx",
       "selectedAsset": "co-05-readable-0291.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -1915,7 +1915,7 @@
         "这里也可以是Ad(MDR) -&gt; MAR？可以，在唐朔飞计算机组成原理中（第三版），有Ad(MDR)的原图和原描述"
       ],
       "alt": "这里也可以是Ad(MDR) -&amp;amp;gt; MAR？可以，在唐朔飞计算机组成原理中（第三版），有Ad(MDR)的原图和原描述",
-      "target": "computer-organization/05-3-fetch-interrupt.mdx",
+      "target": "computer-organization/05-cpu/05-3-fetch-interrupt.mdx",
       "selectedAsset": "co-0102.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1930,7 +1930,7 @@
         "中断周期"
       ],
       "alt": "中断周期",
-      "target": "computer-organization/05-3-fetch-interrupt.mdx",
+      "target": "computer-organization/05-cpu/05-3-fetch-interrupt.mdx",
       "selectedAsset": "co-0184.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -1946,7 +1946,7 @@
         "CPU内部单总线方式"
       ],
       "alt": "CPU内部单总线方式",
-      "target": "computer-organization/05-4-datapath.mdx",
+      "target": "computer-organization/05-cpu/05-4-datapath.mdx",
       "selectedAsset": "co-05-single-bus-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -1961,7 +1961,7 @@
         "CPU内部单总线方式"
       ],
       "alt": "CPU内部单总线方式",
-      "target": "computer-organization/05-4-datapath.mdx",
+      "target": "computer-organization/05-cpu/05-4-datapath.mdx",
       "selectedAsset": "co-05-single-bus-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -1977,7 +1977,7 @@
         "基本结构 + 一个取指周期的例子"
       ],
       "alt": "基本结构 + 一个取指周期的例子",
-      "target": "computer-organization/05-4-datapath.mdx",
+      "target": "computer-organization/05-cpu/05-4-datapath.mdx",
       "selectedAsset": "co-05-readable-0059.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -1994,7 +1994,7 @@
         "例题"
       ],
       "alt": "例题",
-      "target": "computer-organization/05-4-datapath.mdx",
+      "target": "computer-organization/05-cpu/05-4-datapath.mdx",
       "selectedAsset": "co-0193.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2010,7 +2010,7 @@
         "数据总线DB、地址总线AB、控制总线CB"
       ],
       "alt": "数据总线DB、地址总线AB、控制总线CB",
-      "target": "computer-organization/05-4-datapath.mdx",
+      "target": "computer-organization/05-cpu/05-4-datapath.mdx",
       "selectedAsset": "co-05-readable-0127.svg",
       "reason": "verified-redraw",
       "action": "inserted",
@@ -2026,7 +2026,7 @@
         "微操作通过【指令的OP部分、当前处于哪个机器周期、当前机器周期的节拍号、PSW的状态】来确定"
       ],
       "alt": "微操作通过【指令的OP部分、当前处于哪个机器周期、当前机器周期的节拍号、PSW的状态】来确定",
-      "target": "computer-organization/05-6-hardwired.mdx",
+      "target": "computer-organization/05-cpu/05-6-hardwired.mdx",
       "selectedAsset": "co-0151.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2042,7 +2042,7 @@
         "确定指令操作码："
       ],
       "alt": "确定指令操作码：",
-      "target": "computer-organization/05-6-hardwired.mdx",
+      "target": "computer-organization/05-cpu/05-6-hardwired.mdx",
       "selectedAsset": "co-05-hardwired-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2057,7 +2057,7 @@
         "确定机器周期："
       ],
       "alt": "确定机器周期：",
-      "target": "computer-organization/05-6-hardwired.mdx",
+      "target": "computer-organization/05-cpu/05-6-hardwired.mdx",
       "selectedAsset": "co-05-hardwired-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2072,7 +2072,7 @@
         "确定节拍号："
       ],
       "alt": "确定节拍号：",
-      "target": "computer-organization/05-6-hardwired.mdx",
+      "target": "computer-organization/05-cpu/05-6-hardwired.mdx",
       "selectedAsset": "co-05-hardwired-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2087,7 +2087,7 @@
         "确定标志信息："
       ],
       "alt": "确定标志信息：",
-      "target": "computer-organization/05-6-hardwired.mdx",
+      "target": "computer-organization/05-cpu/05-6-hardwired.mdx",
       "selectedAsset": "co-05-hardwired-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2102,7 +2102,7 @@
         "最后CU输出微操作："
       ],
       "alt": "最后CU输出微操作：",
-      "target": "computer-organization/05-6-hardwired.mdx",
+      "target": "computer-organization/05-cpu/05-6-hardwired.mdx",
       "selectedAsset": "co-05-hardwired-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2117,7 +2117,7 @@
         "完整图"
       ],
       "alt": "完整图",
-      "target": "computer-organization/05-6-hardwired.mdx",
+      "target": "computer-organization/05-cpu/05-6-hardwired.mdx",
       "selectedAsset": "co-05-hardwired-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2133,7 +2133,7 @@
         "例如：取指周期T0时刻的(PC) -&gt; MAR"
       ],
       "alt": "例如：取指周期T0时刻的(PC) -&amp;amp;gt; MAR",
-      "target": "computer-organization/05-7-control-timing.mdx",
+      "target": "computer-organization/05-cpu/05-7-control-timing.mdx",
       "selectedAsset": "co-0014.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2151,7 +2151,7 @@
         "例如：M(MAR) -&gt; MDR"
       ],
       "alt": "例如：M(MAR) -&amp;amp;gt; MDR",
-      "target": "computer-organization/05-7-control-timing.mdx",
+      "target": "computer-organization/05-cpu/05-7-control-timing.mdx",
       "selectedAsset": "co-0162.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2166,7 +2166,7 @@
         "微指令的结构"
       ],
       "alt": "微指令的结构",
-      "target": "computer-organization/05-9-microinstruction-encoding.mdx",
+      "target": "computer-organization/05-cpu/05-9-microinstruction-encoding.mdx",
       "selectedAsset": "co-05-readable-0190.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2182,7 +2182,7 @@
         "控存，由ROM组成，用来存各种指令的微程序段（就像存在内存中的程序的指令一样）"
       ],
       "alt": "控存，由ROM组成，用来存各种指令的微程序段（就像存在内存中的程序的指令一样）",
-      "target": "computer-organization/05-8-microprogram-controller.mdx",
+      "target": "computer-organization/05-cpu/05-8-microprogram-controller.mdx",
       "selectedAsset": "co-0049.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2197,7 +2197,7 @@
         "微程序控制器 的处理流程："
       ],
       "alt": "微程序控制器 的处理流程：",
-      "target": "computer-organization/05-8-microprogram-controller.mdx",
+      "target": "computer-organization/05-cpu/05-8-microprogram-controller.mdx",
       "selectedAsset": "co-0204.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2212,7 +2212,7 @@
         "CM中的微指令序列"
       ],
       "alt": "CM中的微指令序列",
-      "target": "computer-organization/05-8-microprogram-controller.mdx",
+      "target": "computer-organization/05-cpu/05-8-microprogram-controller.mdx",
       "selectedAsset": "co-0308.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2230,7 +2230,7 @@
         "一个bit的 0、1对应一个微操作的运行和不运行"
       ],
       "alt": "一个bit的 0、1对应一个微操作的运行和不运行",
-      "target": "computer-organization/05-9-microinstruction-encoding.mdx",
+      "target": "computer-organization/05-cpu/05-9-microinstruction-encoding.mdx",
       "selectedAsset": "co-05-readable-0159.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2246,7 +2246,7 @@
         "字段编码方式"
       ],
       "alt": "字段编码方式",
-      "target": "computer-organization/05-9-microinstruction-encoding.mdx",
+      "target": "computer-organization/05-cpu/05-9-microinstruction-encoding.mdx",
       "selectedAsset": "co-05-readable-0185.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2263,7 +2263,7 @@
         "字段编码方式中，译码后不会直接发出微命令，而是需要多个译码结果来决定"
       ],
       "alt": "字段编码方式中，译码后不会直接发出微命令，而是需要多个译码结果来决定",
-      "target": "computer-organization/05-9-microinstruction-encoding.mdx",
+      "target": "computer-organization/05-cpu/05-9-microinstruction-encoding.mdx",
       "selectedAsset": "co-0287.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2282,7 +2282,7 @@
         "就是这个"
       ],
       "alt": "就是这个",
-      "target": "computer-organization/05-10-microaddress-design.mdx",
+      "target": "computer-organization/05-cpu/05-10-microaddress-design.mdx",
       "selectedAsset": "co-05-readable-0203.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2299,7 +2299,7 @@
         "顺序逻辑部件就是测试网络"
       ],
       "alt": "顺序逻辑部件就是测试网络",
-      "target": "computer-organization/05-10-microaddress-design.mdx",
+      "target": "computer-organization/05-cpu/05-10-microaddress-design.mdx",
       "selectedAsset": "co-0120.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2315,7 +2315,7 @@
         "概要：配图"
       ],
       "alt": "设计一个微程序控制单元",
-      "target": "computer-organization/05-8-microprogram-controller.mdx",
+      "target": "computer-organization/05-cpu/05-8-microprogram-controller.mdx",
       "selectedAsset": "co-0204.svg",
       "reason": "restored-original",
       "action": "already-in-section"
@@ -2330,7 +2330,7 @@
         "传统方式："
       ],
       "alt": "传统方式：",
-      "target": "computer-organization/05-11-pipeline-performance.mdx",
+      "target": "computer-organization/05-cpu/05-11-pipeline-performance.mdx",
       "selectedAsset": "co-0028.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2347,7 +2347,7 @@
         "一次重叠："
       ],
       "alt": "一次重叠：",
-      "target": "computer-organization/05-11-pipeline-performance.mdx",
+      "target": "computer-organization/05-cpu/05-11-pipeline-performance.mdx",
       "selectedAsset": "co-0130.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2364,7 +2364,7 @@
         "两次重叠："
       ],
       "alt": "两次重叠：",
-      "target": "computer-organization/05-11-pipeline-performance.mdx",
+      "target": "computer-organization/05-cpu/05-11-pipeline-performance.mdx",
       "selectedAsset": "co-0310.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2381,7 +2381,7 @@
         "指令执行过程图"
       ],
       "alt": "指令执行过程图",
-      "target": "computer-organization/05-11-pipeline-performance.mdx",
+      "target": "computer-organization/05-cpu/05-11-pipeline-performance.mdx",
       "selectedAsset": "co-05-pipeline-grid-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2398,7 +2398,7 @@
         "时空图"
       ],
       "alt": "时空图",
-      "target": "computer-organization/05-11-pipeline-performance.mdx",
+      "target": "computer-organization/05-cpu/05-11-pipeline-performance.mdx",
       "selectedAsset": "co-05-pipeline-grid-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2412,7 +2412,7 @@
         "流水线的性能指标"
       ],
       "alt": "流水线的性能指标",
-      "target": "computer-organization/05-11-pipeline-performance.mdx",
+      "target": "computer-organization/05-cpu/05-11-pipeline-performance.mdx",
       "selectedAsset": "co-0095.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2429,7 +2429,7 @@
         "1 - 红色区域面积 ➗ 蓝色区域面积"
       ],
       "alt": "1 - 红色区域面积 ➗ 蓝色区域面积",
-      "target": "computer-organization/05-11-pipeline-performance.mdx",
+      "target": "computer-organization/05-cpu/05-11-pipeline-performance.mdx",
       "selectedAsset": "co-0274.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2446,7 +2446,7 @@
         "FE 取指 -&gt; ID 译码 -&gt; EX 执行 -&gt; M 访存 -&gt; WB 写回"
       ],
       "alt": "FE 取指 -&amp;amp;gt; ID 译码 -&amp;amp;gt; EX 执行 -&amp;amp;gt; M 访存 -&amp;amp;gt; WB 写回",
-      "target": "computer-organization/05-12-five-stage.mdx",
+      "target": "computer-organization/05-cpu/05-12-five-stage.mdx",
       "selectedAsset": "co-05-readable-0045.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2462,7 +2462,7 @@
         "资源冲突（结构相关）"
       ],
       "alt": "资源冲突（结构相关）",
-      "target": "computer-organization/05-13-data-hazards.mdx",
+      "target": "computer-organization/05-cpu/05-13-data-hazards.mdx",
       "selectedAsset": "co-05-readable-0231.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2478,7 +2478,7 @@
         "数据冲突（数据冲突）"
       ],
       "alt": "数据冲突（数据冲突）",
-      "target": "computer-organization/05-13-data-hazards.mdx",
+      "target": "computer-organization/05-cpu/05-13-data-hazards.mdx",
       "selectedAsset": "co-0205.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2497,7 +2497,7 @@
         "1\\. 硬件阻塞 (stall)，插入气泡"
       ],
       "alt": "1. 硬件阻塞 (stall)，插入气泡",
-      "target": "computer-organization/05-13-data-hazards.mdx",
+      "target": "computer-organization/05-cpu/05-13-data-hazards.mdx",
       "selectedAsset": "co-0018.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2517,7 +2517,7 @@
         "2\\. 软件插入(NOP)，插入空指令"
       ],
       "alt": "2. 软件插入(NOP)，插入空指令",
-      "target": "computer-organization/05-13-data-hazards.mdx",
+      "target": "computer-organization/05-cpu/05-13-data-hazards.mdx",
       "selectedAsset": "co-0216.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2536,7 +2536,7 @@
         "3\\. 数据旁路技术，把ALU的输出端和输入端相接，这样在执行阶段后就可以直接使用上次的运算结果了"
       ],
       "alt": "3. 数据旁路技术，把ALU的输出端和输入端相接，这样在执行阶段后就可以直接使用上次的运算结果了",
-      "target": "computer-organization/05-13-data-hazards.mdx",
+      "target": "computer-organization/05-cpu/05-13-data-hazards.mdx",
       "selectedAsset": "co-0286.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2554,7 +2554,7 @@
         "因为转移指令或其他改变PC值的指令而导致断流"
       ],
       "alt": "因为转移指令或其他改变PC值的指令而导致断流",
-      "target": "computer-organization/05-14-control-hazards.mdx",
+      "target": "computer-organization/05-cpu/05-14-control-hazards.mdx",
       "selectedAsset": "co-05-readable-0133.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2570,7 +2570,7 @@
         "① IF取指 ② ID译码&amp;取值 ③ EX 执行 ④ 空过  ⑤ WB 写回寄存器"
       ],
       "alt": "① IF取指 ② ID译码&amp;amp;amp;取值 ③ EX 执行 ④ 空过 ⑤ WB 写回寄存器",
-      "target": "computer-organization/05-12-five-stage.mdx",
+      "target": "computer-organization/05-cpu/05-12-five-stage.mdx",
       "selectedAsset": "co-0119.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2587,7 +2587,7 @@
         "① IF取指 ② ID译码&amp;取值 ③ EX 执行 ④ M 访存  ⑤ WB 写回寄存器"
       ],
       "alt": "① IF取指 ② ID译码&amp;amp;amp;取值 ③ EX 执行 ④ M 访存 ⑤ WB 写回寄存器",
-      "target": "computer-organization/05-12-five-stage.mdx",
+      "target": "computer-organization/05-cpu/05-12-five-stage.mdx",
       "selectedAsset": "co-05-readable-0045.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2603,7 +2603,7 @@
         "① IF取指 ② ID译码&amp;取值 ③ EX 执行 ④ M 访存  ⑤ 空段"
       ],
       "alt": "① IF取指 ② ID译码&amp;amp;amp;取值 ③ EX 执行 ④ M 访存 ⑤ 空段",
-      "target": "computer-organization/05-12-five-stage.mdx",
+      "target": "computer-organization/05-cpu/05-12-five-stage.mdx",
       "selectedAsset": "co-05-readable-0155.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2619,7 +2619,7 @@
         "① IF取指 ② ID译码&amp;取值 ③ EX 执行 ④ M/WrPC（目标PC值写回PC）  ⑤ 空段"
       ],
       "alt": "① IF取指 ② ID译码&amp;amp;amp;取值 ③ EX 执行 ④ M/WrPC（目标PC值写回PC） ⑤ 空段",
-      "target": "computer-organization/05-12-five-stage.mdx",
+      "target": "computer-organization/05-cpu/05-12-five-stage.mdx",
       "selectedAsset": "co-0196.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2636,7 +2636,7 @@
         "① IF取指 ② ID译码&amp;取值 ③ EX/WrPC ④ 空段  ⑤ 空段"
       ],
       "alt": "① IF取指 ② ID译码&amp;amp;amp;取值 ③ EX/WrPC ④ 空段 ⑤ 空段",
-      "target": "computer-organization/05-12-five-stage.mdx",
+      "target": "computer-organization/05-cpu/05-12-five-stage.mdx",
       "selectedAsset": "co-0237.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2652,7 +2652,7 @@
         "1\\. 超标量技术"
       ],
       "alt": "1. 超标量技术",
-      "target": "computer-organization/05-15-issue-techniques.mdx",
+      "target": "computer-organization/05-cpu/05-15-issue-techniques.mdx",
       "selectedAsset": "co-05-readable-0259.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2667,7 +2667,7 @@
         "2\\. 超流水技术"
       ],
       "alt": "2. 超流水技术",
-      "target": "computer-organization/05-15-issue-techniques.mdx",
+      "target": "computer-organization/05-cpu/05-15-issue-techniques.mdx",
       "selectedAsset": "co-05-readable-0055.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2682,7 +2682,7 @@
         "3\\. 超长指令字"
       ],
       "alt": "3. 超长指令字",
-      "target": "computer-organization/05-15-issue-techniques.mdx",
+      "target": "computer-organization/05-cpu/05-15-issue-techniques.mdx",
       "selectedAsset": "co-05-readable-0153.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2699,7 +2699,7 @@
         "是特殊的SIMD，既可以一次处理多个数据，又一次处理的数据是一个多维的向量"
       ],
       "alt": "是特殊的SIMD，既可以一次处理多个数据，又一次处理的数据是一个多维的向量",
-      "target": "computer-organization/05-16-flynn.mdx",
+      "target": "computer-organization/05-cpu/05-16-flynn.mdx",
       "selectedAsset": "co-05-readable-0106.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2716,7 +2716,7 @@
         "每个计算机拥有各自私有的存储器，有独立的主存空间，计算机之间只能够通过消息传递进行通信"
       ],
       "alt": "每个计算机拥有各自私有的存储器，有独立的主存空间，计算机之间只能够通过消息传递进行通信",
-      "target": "computer-organization/05-16-flynn.mdx",
+      "target": "computer-organization/05-cpu/05-16-flynn.mdx",
       "selectedAsset": "co-05-readable-0007.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2732,7 +2732,7 @@
         "多核处理器系统"
       ],
       "alt": "多核处理器系统",
-      "target": "computer-organization/05-17-multicore.mdx",
+      "target": "computer-organization/05-cpu/05-17-multicore.mdx",
       "selectedAsset": "co-05-readable-0116.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2749,7 +2749,7 @@
         "处理器"
       ],
       "alt": "处理器",
-      "target": "computer-organization/05-17-multicore.mdx",
+      "target": "computer-organization/05-cpu/05-17-multicore.mdx",
       "selectedAsset": "co-0212.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2768,7 +2768,7 @@
         "共享同一份内存，每个处理器访存所有存储单元的速度大致相同"
       ],
       "alt": "共享同一份内存，每个处理器访存所有存储单元的速度大致相同",
-      "target": "computer-organization/05-17-multicore.mdx",
+      "target": "computer-organization/05-cpu/05-17-multicore.mdx",
       "selectedAsset": "co-05-readable-0096.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2786,7 +2786,7 @@
         "拥有自己的不同内存。会有特定几个处理器访存存储单元的速度更快"
       ],
       "alt": "拥有自己的不同内存。会有特定几个处理器访存存储单元的速度更快",
-      "target": "computer-organization/05-17-multicore.mdx",
+      "target": "computer-organization/05-cpu/05-17-multicore.mdx",
       "selectedAsset": "co-05-readable-0228.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2802,7 +2802,7 @@
         "不共享Cache"
       ],
       "alt": "不共享Cache",
-      "target": "computer-organization/05-17-multicore.mdx",
+      "target": "computer-organization/05-cpu/05-17-multicore.mdx",
       "selectedAsset": "co-0170.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -2821,7 +2821,7 @@
         "共享Cache"
       ],
       "alt": "共享Cache",
-      "target": "computer-organization/05-17-multicore.mdx",
+      "target": "computer-organization/05-cpu/05-17-multicore.mdx",
       "selectedAsset": "co-05-readable-0116.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2838,7 +2838,7 @@
         "这里面所有的线"
       ],
       "alt": "这里面所有的线",
-      "target": "computer-organization/06-1-core-concepts.mdx",
+      "target": "computer-organization/06-bus/06-1-core-concepts.mdx",
       "selectedAsset": "co-06-readable-0094.svg",
       "reason": "verified-redraw",
       "action": "inserted",
@@ -2855,7 +2855,7 @@
         "CPU、主存、IO全都挂载到一组总线上"
       ],
       "alt": "CPU、主存、IO全都挂载到一组总线上",
-      "target": "computer-organization/06-3-bus-topologies.mdx",
+      "target": "computer-organization/06-bus/06-3-bus-topologies.mdx",
       "selectedAsset": "co-06-readable-0164.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2871,7 +2871,7 @@
         "一条是主存总线，另一条是IO总线"
       ],
       "alt": "一条是主存总线，另一条是IO总线",
-      "target": "computer-organization/06-3-bus-topologies.mdx",
+      "target": "computer-organization/06-bus/06-3-bus-topologies.mdx",
       "selectedAsset": "co-06-readable-0056.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2887,7 +2887,7 @@
         "一条主存总线、一条IO总线、一条DMA"
       ],
       "alt": "一条主存总线、一条IO总线、一条DMA",
-      "target": "computer-organization/06-3-bus-topologies.mdx",
+      "target": "computer-organization/06-bus/06-3-bus-topologies.mdx",
       "selectedAsset": "co-06-readable-0053.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2902,7 +2902,7 @@
         "同步定时"
       ],
       "alt": "同步定时",
-      "target": "computer-organization/06-8-synchronous-timing.mdx",
+      "target": "computer-organization/06-bus/06-8-synchronous-timing.mdx",
       "selectedAsset": "co-06-sync-waveform-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -2920,7 +2920,7 @@
         "不互锁方式"
       ],
       "alt": "不互锁方式",
-      "target": "computer-organization/06-9-async-handshakes.mdx",
+      "target": "computer-organization/06-bus/06-9-async-handshakes.mdx",
       "selectedAsset": "co-06-readable-0087.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2937,7 +2937,7 @@
         "半互锁方式"
       ],
       "alt": "半互锁方式",
-      "target": "computer-organization/06-9-async-handshakes.mdx",
+      "target": "computer-organization/06-bus/06-9-async-handshakes.mdx",
       "selectedAsset": "co-06-readable-0289.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2954,7 +2954,7 @@
         "全互锁方式"
       ],
       "alt": "全互锁方式",
-      "target": "computer-organization/06-9-async-handshakes.mdx",
+      "target": "computer-organization/06-bus/06-9-async-handshakes.mdx",
       "selectedAsset": "co-06-readable-0265.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -2969,7 +2969,7 @@
         "同步 + 异步"
       ],
       "alt": "同步 + 异步",
-      "target": "computer-organization/06-10-semisync-split.mdx",
+      "target": "computer-organization/06-bus/06-10-semisync-split.mdx",
       "selectedAsset": "co-06-semisync-wait-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -2988,7 +2988,7 @@
         "在INTR中加入硬件排队器/查询程序，来获得当前的最优先请求"
       ],
       "alt": "在INTR中加入硬件排队器/查询程序，来获得当前的最优先请求",
-      "target": "computer-organization/07-6-interrupt-vector.mdx",
+      "target": "computer-organization/07-io-system/07-6-interrupt-vector.mdx",
       "selectedAsset": "co-07-interrupt-priority-redrawn.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3007,7 +3007,7 @@
         "MASK为该中断的中断屏蔽字"
       ],
       "alt": "MASK为该中断的中断屏蔽字",
-      "target": "computer-organization/07-8-priority-mask.mdx",
+      "target": "computer-organization/07-io-system/07-8-priority-mask.mdx",
       "selectedAsset": "co-07-mask-matrix-redrawn.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3023,7 +3023,7 @@
         "三对角矩阵（带状矩阵）"
       ],
       "alt": "三对角矩阵（带状矩阵）",
-      "target": "data-structures/03-9-banded-sparse.mdx",
+      "target": "data-structures/03-stacks-queues-arrays/03-9-banded-sparse.mdx",
       "selectedAsset": "ds-03-tridiagonal-redrawn.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3039,7 +3039,7 @@
         "满二叉树"
       ],
       "alt": "满二叉树",
-      "target": "data-structures/05-3-binary-types.mdx",
+      "target": "data-structures/05-trees/05-3-binary-types.mdx",
       "selectedAsset": "ds-05-full-tree-redrawn.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3056,7 +3056,7 @@
         "存储方式"
       ],
       "alt": "存储方式",
-      "target": "data-structures/05-4-binary-storage.mdx",
+      "target": "data-structures/05-trees/05-4-binary-storage.mdx",
       "selectedAsset": "ds-0032.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3073,7 +3073,7 @@
         "非完全二叉树"
       ],
       "alt": "非完全二叉树",
-      "target": "data-structures/05-4-binary-storage.mdx",
+      "target": "data-structures/05-trees/05-4-binary-storage.mdx",
       "selectedAsset": "ds-05-sparse-sequential-redrawn.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3089,7 +3089,7 @@
         "后根"
       ],
       "alt": "后根",
-      "target": "data-structures/05-9-forest-traversal.mdx",
+      "target": "data-structures/05-trees/05-9-forest-traversal.mdx",
       "selectedAsset": "ds-0100.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3104,7 +3104,7 @@
         "定义："
       ],
       "alt": "定义：",
-      "target": "data-structures/05-13-union-find.mdx",
+      "target": "data-structures/05-trees/05-13-union-find.mdx",
       "selectedAsset": "ds-05-dsu-sets-redrawn.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3120,7 +3120,7 @@
         "存储结构：可以采用森林存储"
       ],
       "alt": "存储结构：可以采用森林存储",
-      "target": "data-structures/05-13-union-find.mdx",
+      "target": "data-structures/05-trees/05-13-union-find.mdx",
       "selectedAsset": "ds-0124.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3136,7 +3136,7 @@
         "简单图："
       ],
       "alt": "简单图：",
-      "target": "data-structures/06-1-definitions.mdx",
+      "target": "data-structures/06-graphs/06-1-definitions.mdx",
       "selectedAsset": "ds-06-simple-graph-redrawn.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3152,7 +3152,7 @@
         "概要：配图"
       ],
       "alt": "无向图连通辨析：",
-      "target": "data-structures/06-2-connectivity.mdx",
+      "target": "data-structures/06-graphs/06-2-connectivity.mdx",
       "selectedAsset": "ds-0033.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3169,7 +3169,7 @@
         "C. 含有多个入度为0的顶点"
       ],
       "alt": "C. 含有多个入度为0的顶点",
-      "target": "data-structures/06-2-connectivity.mdx",
+      "target": "data-structures/06-graphs/06-2-connectivity.mdx",
       "selectedAsset": "ds-0093.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3187,7 +3187,7 @@
         "动态规范算法，动态维护一个dis\\[\\]\\[\\]和path\\[\\]\\[\\]，每次更新时都加入一个新的节点作为可使用的中转点。"
       ],
       "alt": "动态规范算法，动态维护一个dis\\[\\]\\[\\]和path\\[\\]\\[\\]，每次更新时都加入一个新的节点作为可使用的中转点。",
-      "target": "data-structures/06-11-floyd.mdx",
+      "target": "data-structures/06-graphs/06-11-floyd.mdx",
       "selectedAsset": "ds-06-floyd-redrawn.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3205,7 +3205,7 @@
         "找关键路径ve(i), le(i)"
       ],
       "alt": "找关键路径ve(i), le(i)",
-      "target": "data-structures/06-13-critical-path.mdx",
+      "target": "data-structures/06-graphs/06-13-critical-path.mdx",
       "selectedAsset": "ds-06-aoe-events-redrawn.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3223,7 +3223,7 @@
         "找关键路径的活动的 e(i), l(i), l(i)-e(i)"
       ],
       "alt": "找关键路径的活动的 e(i), l(i), l(i)-e(i)",
-      "target": "data-structures/06-13-critical-path.mdx",
+      "target": "data-structures/06-graphs/06-13-critical-path.mdx",
       "selectedAsset": "ds-06-aoe-activities-redrawn.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3238,7 +3238,7 @@
         "图的连通分量"
       ],
       "alt": "图的连通分量",
-      "target": "data-structures/06-2-connectivity.mdx",
+      "target": "data-structures/06-graphs/06-2-connectivity.mdx",
       "selectedAsset": "ds-06-dsu-components-redrawn.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3253,7 +3253,7 @@
         "判断是否有环"
       ],
       "alt": "判断是否有环",
-      "target": "data-structures/06-9-kruskal.mdx",
+      "target": "data-structures/06-graphs/06-9-kruskal.mdx",
       "selectedAsset": "ds-06-dsu-cycle-redrawn.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3269,7 +3269,7 @@
         "数据 结构"
       ],
       "alt": "数据 结构",
-      "target": "data-structures/07-9-btree-properties.mdx",
+      "target": "data-structures/07-search/07-9-btree-properties.mdx",
       "selectedAsset": "ds-07-btree-node-redrawn.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3286,7 +3286,7 @@
         "五叉查找树"
       ],
       "alt": "五叉查找树",
-      "target": "data-structures/07-9-btree-properties.mdx",
+      "target": "data-structures/07-search/07-9-btree-properties.mdx",
       "selectedAsset": "ds-0010.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3303,7 +3303,7 @@
         "如何记住⌈m/2⌉ - 1：考虑分裂吧，分裂也是从⌈m/2⌉ 处分的"
       ],
       "alt": "如何记住⌈m/2⌉ - 1：考虑分裂吧，分裂也是从⌈m/2⌉ 处分的",
-      "target": "data-structures/07-9-btree-properties.mdx",
+      "target": "data-structures/07-search/07-9-btree-properties.mdx",
       "selectedAsset": "ds-0207.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3322,7 +3322,7 @@
         "找直接前驱或直接后继来进行顶替"
       ],
       "alt": "找直接前驱或直接后继来进行顶替",
-      "target": "data-structures/07-11-btree-delete.mdx",
+      "target": "data-structures/07-search/07-11-btree-delete.mdx",
       "selectedAsset": "ds-0140.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3342,7 +3342,7 @@
         "借前"
       ],
       "alt": "借前",
-      "target": "data-structures/07-11-btree-delete.mdx",
+      "target": "data-structures/07-search/07-11-btree-delete.mdx",
       "selectedAsset": "ds-0013.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3363,7 +3363,7 @@
         "借后"
       ],
       "alt": "借后",
-      "target": "data-structures/07-11-btree-delete.mdx",
+      "target": "data-structures/07-search/07-11-btree-delete.mdx",
       "selectedAsset": "ds-0190.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3379,7 +3379,7 @@
         "或者把其记录理解为这样"
       ],
       "alt": "或者把其记录理解为这样",
-      "target": "data-structures/07-9-btree-properties.mdx",
+      "target": "data-structures/07-search/07-9-btree-properties.mdx",
       "selectedAsset": "ds-0067.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3398,7 +3398,7 @@
         "最佳归并树（哈夫曼树）"
       ],
       "alt": "最佳归并树（哈夫曼树）",
-      "target": "data-structures/08-17-optimal-merge.mdx",
+      "target": "data-structures/08-sort/08-17-optimal-merge.mdx",
       "selectedAsset": "ds-08-optimal-merge-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3416,7 +3416,7 @@
         "用类似哈夫曼树的方法构造：每次找权值最小的三个结点来归并"
       ],
       "alt": "用类似哈夫曼树的方法构造：每次找权值最小的三个结点来归并",
-      "target": "data-structures/08-17-optimal-merge.mdx",
+      "target": "data-structures/08-sort/08-17-optimal-merge.mdx",
       "selectedAsset": "ds-08-optimal-merge-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3435,7 +3435,7 @@
         "补充长度为0的虚段来凑归并段"
       ],
       "alt": "补充长度为0的虚段来凑归并段",
-      "target": "data-structures/08-17-optimal-merge.mdx",
+      "target": "data-structures/08-sort/08-17-optimal-merge.mdx",
       "selectedAsset": "ds-08-optimal-merge-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3457,7 +3457,7 @@
         "需要补充的虚段个数： $u = (n_0-1)\\%(k-1), 补充 (k-1) - u个$"
       ],
       "alt": "需要补充的虚段个数：",
-      "target": "data-structures/08-17-optimal-merge.mdx",
+      "target": "data-structures/08-sort/08-17-optimal-merge.mdx",
       "selectedAsset": "ds-08-optimal-merge-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3472,7 +3472,7 @@
         "模块化"
       ],
       "alt": "模块化",
-      "target": "operating-systems/01-12-kernel-architectures.mdx",
+      "target": "operating-systems/01-overview/01-12-kernel-architectures.mdx",
       "selectedAsset": "os-01-kernel-structure-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3489,7 +3489,7 @@
         "高内聚低耦合"
       ],
       "alt": "高内聚低耦合",
-      "target": "operating-systems/01-12-kernel-architectures.mdx",
+      "target": "operating-systems/01-overview/01-12-kernel-architectures.mdx",
       "selectedAsset": "os-0121.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3505,7 +3505,7 @@
         "把部分内核OS代码移出内核，采用C/S模式进行执行"
       ],
       "alt": "把部分内核OS代码移出内核，采用C/S模式进行执行",
-      "target": "operating-systems/01-12-kernel-architectures.mdx",
+      "target": "operating-systems/01-overview/01-12-kernel-architectures.mdx",
       "selectedAsset": "os-0161.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3521,7 +3521,7 @@
         "RAM和ROM"
       ],
       "alt": "RAM和ROM",
-      "target": "operating-systems/01-13-boot-bios-mbr.mdx",
+      "target": "operating-systems/01-overview/01-13-boot-bios-mbr.mdx",
       "selectedAsset": "os-01-boot-paths-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3536,7 +3536,7 @@
         "步骤图示："
       ],
       "alt": "步骤图示：",
-      "target": "operating-systems/01-13-boot-bios-mbr.mdx",
+      "target": "operating-systems/01-overview/01-13-boot-bios-mbr.mdx",
       "selectedAsset": "os-01-boot-paths-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3553,7 +3553,7 @@
         "例如Xen、Hyper-V、vSphere"
       ],
       "alt": "例如Xen、Hyper-V、vSphere",
-      "target": "operating-systems/01-15-virtualization.mdx",
+      "target": "operating-systems/01-overview/01-15-virtualization.mdx",
       "selectedAsset": "os-0034.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3570,7 +3570,7 @@
         "例如VMware"
       ],
       "alt": "例如VMware",
-      "target": "operating-systems/01-15-virtualization.mdx",
+      "target": "operating-systems/01-overview/01-15-virtualization.mdx",
       "selectedAsset": "os-0159.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3585,7 +3585,7 @@
         "进程的七状态模型："
       ],
       "alt": "进程的七状态模型：",
-      "target": "operating-systems/02-2-process-states.mdx",
+      "target": "operating-systems/02-processes/02-2-process-states.mdx",
       "selectedAsset": "os-02-process-states-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -3599,7 +3599,7 @@
         "进程的七状态模型："
       ],
       "alt": "进程的七状态模型：",
-      "target": "operating-systems/02-2-process-states.mdx",
+      "target": "operating-systems/02-processes/02-2-process-states.mdx",
       "selectedAsset": "os-02-process-states-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section"
@@ -3615,7 +3615,7 @@
         "通过调用线程库提供的函数来创建用户线程，线程的控制（状态转换）由运行时系统负责"
       ],
       "alt": "通过调用线程库提供的函数来创建用户线程，线程的控制（状态转换）由运行时系统负责",
-      "target": "operating-systems/02-5-thread-models.mdx",
+      "target": "operating-systems/02-processes/02-5-thread-models.mdx",
       "selectedAsset": "os-0028.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3633,7 +3633,7 @@
         "通过系统调用来创建内核线程，线程的控制（状态转换）由内核负责"
       ],
       "alt": "通过系统调用来创建内核线程，线程的控制（状态转换）由内核负责",
-      "target": "operating-systems/02-5-thread-models.mdx",
+      "target": "operating-systems/02-processes/02-5-thread-models.mdx",
       "selectedAsset": "os-0098.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3650,7 +3650,7 @@
         "线程切换代价：低，不需要切换完整的上下文 并发/并行度：低，一个阻塞整个进程阻塞"
       ],
       "alt": "线程切换代价：低，不需要切换完整的上下文 并发/并行度：低，一个阻塞整个进程阻塞",
-      "target": "operating-systems/02-5-thread-models.mdx",
+      "target": "operating-systems/02-processes/02-5-thread-models.mdx",
       "selectedAsset": "os-0155.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3666,7 +3666,7 @@
         "地址变化机构"
       ],
       "alt": "地址变化机构",
-      "target": "operating-systems/03-14-demand-paging.mdx",
+      "target": "operating-systems/03-memory/03-14-demand-paging.mdx",
       "selectedAsset": "os-03-demand-paging-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3683,7 +3683,7 @@
         "图示："
       ],
       "alt": "图示：",
-      "target": "operating-systems/04-16-group-link.mdx",
+      "target": "operating-systems/04-file-system/04-16-group-link.mdx",
       "selectedAsset": "os-04-group-link-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3701,7 +3701,7 @@
         "UFS："
       ],
       "alt": "UFS：",
-      "target": "operating-systems/04-17-vfs.mdx",
+      "target": "operating-systems/04-file-system/04-17-vfs.mdx",
       "selectedAsset": "os-0146.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3719,7 +3719,7 @@
         "FAT："
       ],
       "alt": "FAT：",
-      "target": "operating-systems/04-17-vfs.mdx",
+      "target": "operating-systems/04-file-system/04-17-vfs.mdx",
       "selectedAsset": "os-0075.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3734,7 +3734,7 @@
         "UNIX文件系统"
       ],
       "alt": "UNIX文件系统",
-      "target": "operating-systems/04-9-directory-fcb-inode.mdx",
+      "target": "operating-systems/04-file-system/04-9-directory-fcb-inode.mdx",
       "selectedAsset": "os-04-directory-inode-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3751,7 +3751,7 @@
         "下图中计算周期时假设的是工作区已经满了，所以设备 -&gt; 缓冲和工作区 -&gt; CPU可以同时运行，如果初始情况为空："
       ],
       "alt": "下图中计算周期时假设的是工作区已经满了，所以设备 -&amp;amp;gt; 缓冲和工作区 -&amp;amp;gt; CPU可以同时运行，如果初始情况为空：",
-      "target": "operating-systems/05-8-single-buffer.mdx",
+      "target": "operating-systems/05-io/05-8-single-buffer.mdx",
       "selectedAsset": "os-0035.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3768,7 +3768,7 @@
         "流程图："
       ],
       "alt": "流程图：",
-      "target": "operating-systems/05-8-single-buffer.mdx",
+      "target": "operating-systems/05-io/05-8-single-buffer.mdx",
       "selectedAsset": "os-05-single-buffer-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3785,7 +3785,7 @@
         "流程图："
       ],
       "alt": "流程图：",
-      "target": "operating-systems/05-9-double-buffer.mdx",
+      "target": "operating-systems/05-io/05-9-double-buffer.mdx",
       "selectedAsset": "os-05-double-buffer-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3801,7 +3801,7 @@
         "批处理阶段引入了脱机输入/输出技术（用磁带完成）"
       ],
       "alt": "批处理阶段引入了脱机输入/输出技术（用磁带完成）",
-      "target": "operating-systems/05-13-spooling.mdx",
+      "target": "operating-systems/05-io/05-13-spooling.mdx",
       "selectedAsset": "os-0115.svg",
       "reason": "restored-original",
       "action": "inserted",
@@ -3816,7 +3816,7 @@
         "SPOOLING技术"
       ],
       "alt": "SPOOLING技术",
-      "target": "operating-systems/05-13-spooling.mdx",
+      "target": "operating-systems/05-io/05-13-spooling.mdx",
       "selectedAsset": "os-05-spooling-clean.svg",
       "reason": "verified-redraw",
       "action": "already-in-section",
@@ -3845,5 +3845,6 @@
     "co-0302.svg",
     "co-0066.svg",
     "co-0123.svg"
-  ]
+  ],
+  "structure": "course/chapter/index.mdx and course/chapter/section.mdx"
 }

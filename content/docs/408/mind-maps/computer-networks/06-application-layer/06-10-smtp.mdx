@@ -1,0 +1,49 @@
+---
+title: "6.10 SMTP命令、三阶段交互与响应码"
+description: "408计算机网络·应用层第六章·SMTP命令、三阶段交互与响应码；高质量双侧Markmap分节导图。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.10 SMTP命令、三阶段交互与响应码
+
+## 传输与角色
+- SMTP基本模型：TCP 25用于**服务器之间的邮件转发**
+- 客户端向邮件提交服务发送邮件常用TCP 587（submission），加密提交也常见465
+- 服务器欢迎`220`，客户端`EHLO`（兼容旧式`HELO`）；服务端通常回应`250`
+- 传输层的TCP连接与SMTP应用层对话是不同层次的两个过程
+
+## 邮件传送时序
+- ① TCP建立后：`220`；`EHLO client.example` → `250`能力列表
+- ② `MAIL FROM:<alice@example.org>` → 邮件**信封发件人**
+- ③ `RCPT TO:<bob@example.com>` → 信封收件人，可多次发送
+- ④ `DATA` → `354`准备接收正文；后续发送邮件头、空行和正文
+- ⑤ 以`<CRLF>.<CRLF>`终止邮件数据（**一行单独一个点**），再返回`250`等状态
+- ⑥ `QUIT` → `221`，随后关闭TCP连接；服务器也可复用已建立连接投递多封邮件
+
+## 典型状态码
+- `220`服务就绪；`250`请求动作完成；`354`开始输入邮件数据
+- `421`服务不可用；`450/451`可暂时失败；`550`通常表示永久拒绝（如邮箱不存在）
+- 三位码中4xx多为临时失败、5xx多为永久失败，勿与HTTP状态码直接类比
+
+## 两个常见错误
+- 原图写结束符为`<CRLF><CRLF>`：**漏掉分隔的句点 `.`**，要补上
+- SMTP“只能传ASCII”是**历史基本要求**；现代支持扩展如`8BITMIME`、`SMTPUTF8`，但考试以基本SMTP与MIME配合为主
+
+## 分节导航
+- [上一节：6.9 电子邮件系统组成与完整收发链](/docs/408/mind-maps/computer-networks/06-application-layer/06-9-mail-system)
+- [下一节：6.11 邮件信封、首部与MIME多媒体扩展](/docs/408/mind-maps/computer-networks/06-application-layer/06-11-mail-format)
+- [应用层总览](/docs/408/mind-maps/computer-networks/06-application-layer)
+
+````

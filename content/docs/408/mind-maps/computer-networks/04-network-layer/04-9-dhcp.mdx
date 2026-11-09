@@ -1,0 +1,50 @@
+---
+title: "4.9 DHCP动态配置与中继"
+description: "408 计算机网络 第四章·DHCP动态配置与中继：独立双侧Markmap，含考研核心概念、步骤、易错点与计算。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 4.9 DHCP动态配置与中继
+
+## DHCP能提供什么
+- 自动分配IPv4地址、掩码、默认网关、DNS等参数，并以租约管理地址有效期
+- 是**应用层协议**，基于UDP，服务器`67`端口/客户端`68`端口
+- 新设备尚未持有可用IPv4地址时，可通过广播发现服务器
+
+## DORA四步
+- `Discover`：客户端发发现报文，常用源`0.0.0.0:68`，目的`255.255.255.255:67`
+- `Offer`：服务器提供待分配地址与配置（广播/单播取决于场景与报文标志）
+- `Request`：客户端请求选定的租约，初始竞争时常广播，通知其他候选服务器
+- `ACK`：服务器确认租约；若拒绝则可能`NAK`，不是任何请求都必然成功
+
+## 为什么需要中继
+- **路由器通常不会转发链路本地的DHCP广播**
+- 跨网段服务器可由DHCP Relay接收广播，再向服务器以单播等方式转发
+- 中继提供入口子网信息，使服务器判断应从哪个地址池分配
+
+## 租约与风险
+- 租约到期前可以续租；续租失败不等于立刻永久失去地址，需看状态机
+- 出现多个Offer不代表“先到必选”，实际由客户端策略决定
+- 手工地址冲突和错误网关可能导致本地能通、外网不通
+
+## 408综合流程
+- 先有链路连接→DHCP获取参数→判断目的网络→必要时ARP→发送IP分组
+- **协议分层**：DHCP（应用/UDP/IP/链路）与ARP（直接链路封装）不同
+## 章节导航
+- [返回第四章导览](/docs/408/mind-maps/computer-networks/04-network-layer)
+- [上一节：4.8 ARP地址解析与逐跳封装](/docs/408/mind-maps/computer-networks/04-network-layer/04-8-arp)
+- [下一节：4.10 ICMP差错报告、Ping与Traceroute](/docs/408/mind-maps/computer-networks/04-network-layer/04-10-icmp)
+
+````

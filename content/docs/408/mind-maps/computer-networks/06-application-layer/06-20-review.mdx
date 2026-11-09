@@ -1,0 +1,58 @@
+---
+title: "6.20 应用层全章综合、协议选型与高频陷阱"
+description: "408计算机网络·应用层第六章·应用层全章综合、协议选型与高频陷阱；高质量双侧Markmap分节导图。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.20 应用层全章综合、协议选型与高频陷阱
+
+## 一张逻辑网络图
+- Web：URL → DNS A/AAAA → TCP/TLS或QUIC → HTTP请求/响应 → 缓存/重定向
+- FTP：控制TCP 21；PORT服务器回连数据端口，PASV客户端连接协商数据端口
+- 邮件：客户端提交 → SMTP服务器发送/中继 → 邮箱存储 → POP3/IMAP/HTTPS读取
+- P2P：可由中心目录辅助发现，但文件分发常由对等结点承担
+
+## 端口速记
+- DNS 53（UDP/TCP）；FTP控制21、主动数据典型20；SMTP25、提交587
+- HTTP80、HTTPS443；POP3 110、IMAP 143；加密POP3 995、IMAPS993
+- 端口为标准/常用缺省值，不表示任何部署都不能配置其他端口
+
+## 典型判断题纠错
+- **错**：DNS只用UDP → **对**：还可用TCP53；缓存可能绕过外部查询
+- **错**：所有根域名请求都得到最终IPv4 → **对**：根/TLD通常返回委派
+- **错**：FTP被动模式服务器数据端口20 → **对**：使用协商的监听端口
+- **错**：SMTP信封有Subject → **对**：Subject属于消息头；信封是MAIL FROM/RCPT TO
+- **错**：SMTP正文结束是两个连续CRLF → **对**：DATA由独立`.`行终止
+- **错**：HTTP/1.1默认开启流水线 → **对**：默认持久连接，流水线仅可选
+- **错**：HTTP全程无加密 → **对**：HTTPS通过TLS加密，HTTP/3由QUIC保护
+- **错**：Cookie证明HTTP变成有状态协议 → **对**：应用通过额外机制维护会话
+
+## 计算题模板
+- DNS总时延：按未命中缓存的**实际查询次数**加上查询耗时
+- HTTP对象数：一个HTML和$m$个引用对象，$N=m+1$
+- 非持久串行：$T\approx2N\,\mathrm{RTT}$（忽略DNS/传输）
+- 持久不流水：$T\approx(N+1)\,\mathrm{RTT}$；理想流水线取HTML后并发其余对象约$3\,\mathrm{RTT}$
+- 帧字节数：无选项IPv4/TCP与普通以太网II模型，$L=H+58$字节（还需考虑最小帧填充）
+
+## 做题顺序
+- 先标出协议层/默认端口 → 再画客户端和服务器 → 再识别连接/查询顺序 → 最后列式计算
+- 回看：[第四章DNS相关IP寻址](/docs/408/mind-maps/computer-networks/04-network-layer/04-4-addressing)、[第五章TCP端口](/docs/408/mind-maps/computer-networks/05-transport-layer/05-2-ports)、[本章导览](/docs/408/mind-maps/computer-networks/06-application-layer)
+
+## 分节导航
+- [上一节：6.19 应用层端口、封装字节数与跨层辨错](/docs/408/mind-maps/computer-networks/06-application-layer/06-19-port-encapsulation)
+- [返回网络课程总览](/docs/408/mind-maps/computer-networks)
+- [应用层总览](/docs/408/mind-maps/computer-networks/06-application-layer)
+
+````

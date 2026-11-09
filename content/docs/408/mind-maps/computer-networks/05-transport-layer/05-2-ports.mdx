@@ -1,0 +1,49 @@
+---
+title: "5.2 端口号、套接字与连接四元组"
+description: "408 计算机网络第五章·端口号、套接字与连接四元组；分节双侧Markmap，含核心概念、考点计算与常见误区。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.2 端口号、套接字与连接四元组
+
+## 端口与取值
+- 16位无符号端口号：`0～65535`；端口0保留，通常不作为普通服务目的端口
+- 0～1023：熟知端口；1024～49151：登记端口；49152～65535：IANA建议的动态/私有端口区间
+- 动态端口的**实际选择范围由操作系统配置决定**，不能断言所有客户端必用49152以上
+- 同一个数字端口属于TCP命名空间还是UDP命名空间，要连同传输协议一起理解
+
+## 常考协议端口
+- FTP控制：TCP 21；**主动模式数据连接**服务器通常使用TCP 20；被动模式服务器使用协商出的数据端口
+- SSH TCP 22；Telnet TCP 23；SMTP TCP 25；DNS UDP/TCP 53；DHCP UDP 67/68
+- TFTP UDP 69；HTTP TCP 80；POP3 TCP 110；IMAP TCP 143；HTTPS TCP 443；NTP UDP 123
+- HTTP/3使用**QUIC over UDP**（通常443），所以“HTTP只能依靠TCP”不正确
+
+## 套接字、流与复用
+- **端点**：`(IP地址, 端口)`；网络编程中的socket对象是操作系统提供的通信接口，不可机械等同于二元组
+- TCP连接由**源IP、源端口、目的IP、目的端口**的四元组在协议上下文中区分
+- 同一Web服务器`IP:443`可接纳大量不同客户端四元组，**不等于每个客户端需服务器不同监听端口**
+- 复用：多进程的数据汇入TCP/UDP；分用：按协议与套接字映射交给对应接收端
+
+## 考点辨析
+- 一个端口号并不在全球唯一标识进程；`192.0.2.10:8080`与`198.51.100.8:8080`是不同端点
+- 区分**进程监听套接字**与**已建立连接套接字**；TCP通常依据四元组分用
+- 端口与MAC不是同一层：MAC处理逐跳链路交付，IP做主机寻址，端口做进程端点区分
+
+## 章节导航
+- [上一节：5.1 传输层定位与服务边界](/docs/408/mind-maps/computer-networks/05-transport-layer/05-1-role)
+- [下一节：5.3 复用分用、报文传递与UDP/TCP选择](/docs/408/mind-maps/computer-networks/05-transport-layer/05-3-demultiplex)
+- [计算机网络总览](/docs/408/mind-maps/computer-networks)
+
+````

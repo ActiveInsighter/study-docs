@@ -1,0 +1,59 @@
+---
+title: "5.13 流水线结构冒险、RAW与数据旁路"
+description: "分析资源竞争与RAW/WAR/WAW，掌握负载使用相关和转发无法立即消除的气泡。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.13 流水线冒险（一）：资源与数据
+
+## 结构冒险Structural Hazard
+- 两条指令同拍需要同一不可并用的硬件资源
+  - 例：IF要读取指令，上一条LOAD处于MEM也要读取数据；若共用单端口存储器则冲突
+- 解法：分开的指令/数据Cache，多端口资源，或停止一条指令插入气泡
+- <img src="/images/408-mind-maps/co-05-readable-0231.svg" alt="IF取指与MEM访存争用统一存储器导致结构冒险" width="1020" height="484">
+
+## 三种数据相关
+- **RAW（写后读，真相关）**：后指令需要前指令新写的结果
+  - `ADD R1,R2,R3`之后`SUB R4,R1,R5`：SUB要消费ADD算出的R1
+- **WAR（读后写，反相关）**：后指令写某寄存器不能早于前指令读取它
+- **WAW（写后写，输出相关）**：后指令对同一目标的写入不能早于前指令完成写入
+- 经典**顺序发射、顺序完成、五级流水**通常主要出现RAW，WAR/WAW受读写阶段安排抑制
+  - 在乱序执行或不同完成延迟环境中，WAR/WAW可以成为问题
+
+- <img src="/images/408-mind-maps/co-0205.svg" alt="数据冲突：后续指令要用 add 写回的 r1" width="780" height="370">
+
+## 旁路Forwarding/Bypassing
+- 在上一条指令的结果已产生、尚未写回寄存器时，直接送下一条需要它的执行级
+  - 典型ALU→ALU背靠背相关可用EX结果前递解决
+- <img src="/images/408-mind-maps/co-05-forwarding-clean.svg" alt="算术指令数据相关使用旁路，load-use相关即使有前递仍需典型1拍气泡" width="1070" height="465">
+
+- <img src="/images/408-mind-maps/co-0286.svg" alt="解决数据冲突③：数据旁路（转发）" width="780" height="370">
+
+## Load-Use最常考
+- `LW R1,0(R2)`后紧跟`ADD R3,R1,R4`
+  - Load数据通常到**MEM末尾**才可供下一条用；ADD在紧下一拍的EX阶段过早需要R1
+  - 即使有典型MEM→EX前递，**仍至少停顿1个周期**（标准五级假设）
+- 加入一条无关指令或硬件停顿气泡可避免错误依赖
+  - 题目若采用双相寄存器/更快内存/特殊阶段，则以其明确时序为准
+
+- <img src="/images/408-mind-maps/co-0018.svg" alt="解决数据冲突①：硬件阻塞，插入气泡" width="780" height="370">
+
+- <img src="/images/408-mind-maps/co-0216.svg" alt="解决数据冲突②：软件插入空指令 NOP" width="780" height="370">
+
+## 解题顺序
+- ①标每条指令读/写哪些寄存器 ②找RAW ③记录结果产生阶段与使用阶段
+- ④若前递到达不及，插入气泡 ⑤复核是否存在结构冲突
+- [继续：分支冲突与周期数](/docs/408/mind-maps/computer-organization/05-cpu/05-14-control-hazards)
+````

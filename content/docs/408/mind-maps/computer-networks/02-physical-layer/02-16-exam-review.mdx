@@ -1,0 +1,62 @@
+---
+title: "2.16 408综合计算、错题陷阱与概念图"
+description: "两大定理、波特与比特、PCM计算、媒体设备易混"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.16 408综合计算、错题陷阱与概念图
+
+## 核心公式速览
+- $R_s=1/T_s$ （Baud）
+- $R_b=R_s\log_2 M$ （理想M进制、无冗余）
+- $R_{s,\max}=2W$ （理想无噪低通）
+- $R_{b,\max}=2W\log_2M$ （同上）
+- $C=W\log_2(1+S/N)$ （香农有噪声容量）
+- $S/N=10^{\mathrm{SNR}_{dB}/10}$
+- $R_{PCM}=f_sb c$，采样定理常留裕量 $f_s>2f_{\max}$
+
+## 综合例1：奈氏与香农
+- 带宽4kHz，4进制调制，信噪比15dB
+- 奈氏界：$2\times4000\times2=16000\,\mathrm{bit/s}$
+- 线性SNR：$10^{1.5}\approx31.62$
+- 香农界：$4000\log_2(1+31.62)\approx20110\,\mathrm{bit/s}$
+- 同时成立的理想题目约束取16kbit/s；实际编码与设备可能更低
+
+## 综合例2：PCM/线路开销
+- 8kHz采样，8bit量化，2通道：$8k\times8\times2=128\,\mathrm{kbit/s}$
+- 若使用4B/5B承载128kbit/s原始数据，编码线路率至少$128/0.8=160\,\mathrm{kbit/s}$
+- 再加入链路层等开销，实际所需线路速率可能继续增大
+
+## 必纠原图表述
+- “串行一定慢且按低位先发”→速率与位序由具体接口规范决定
+- “半双工一定需要两条信道”→方向和时间划分不等于导线条数
+- “基带只能是数字、宽带只能是模拟”→混淆信号频谱与编码/数据形态
+- “曼彻斯特1固定高低、0固定低高”→映射需指定标准约定
+- “每个IP数据报逐跳ACK”→IP尽力而为，不保证逐跳确认
+- “分组一定128B”→分组大小受具体协议/MTU约束
+- “虚电路一定可靠且必须ACK后释放”→仅是有连接的转发模型，并非可靠性承诺
+- “光纤绝对无法窃听”→错误
+
+## 复习路线
+- **先定义物理过程**：符号和频率 → 带宽 → 噪声 → 极限
+- **再做公式题**：波特率换比特率 → 奈氏/香农取最紧约束 → PCM与编码开销
+- **最后辨析设备/媒体**：中继器Hub vs 交换机；双绞线/同轴/光纤/无线
+- [第一章1.3交换方式详细讲解](/docs/408/mind-maps/computer-networks/01-architecture/01-3-switching)
+- [第三章数据链路层](/docs/408/mind-maps/computer-networks/03-data-link-layer)
+## 章节导航
+- [上一节：2.15 中继器、集线器与冲突域](/docs/408/mind-maps/computer-networks/02-physical-layer/02-15-repeaters-hubs)
+- [第二章总览](/docs/408/mind-maps/computer-networks/02-physical-layer)
+
+````

@@ -1,0 +1,23 @@
+{
+  "title": "第二章 物理层",
+  "pages": [
+    "index",
+    "02-1-role-interface",
+    "02-2-communication-modes",
+    "02-3-symbol-rate",
+    "02-4-bandwidth-impairments",
+    "02-5-nyquist",
+    "02-6-shannon",
+    "02-7-line-coding",
+    "02-8-digital-modulation",
+    "02-9-pcm-sampling",
+    "02-10-switching",
+    "02-11-datagram-vc",
+    "02-12-copper-media",
+    "02-13-fiber",
+    "02-14-wireless",
+    "02-15-repeaters-hubs",
+    "02-16-exam-review"
+  ],
+  "defaultOpen": false
+}

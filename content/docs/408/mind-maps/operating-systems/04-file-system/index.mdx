@@ -1,0 +1,73 @@
+---
+title: "第四章 文件管理 · 19节双侧思维导图"
+description: "文件抽象、逻辑/物理结构、FAT与inode、目录链接、空闲空间管理、VFS与系统调用。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 第四章 文件管理（19节独立双侧导图）
+
+## 基本抽象与逻辑文件（4.1—4.4）
+- [4.1 文件、元数据与基本抽象](/docs/408/mind-maps/operating-systems/04-file-system/04-1-file-concepts)
+  - 文件定义、流式/记录式数据、文件标识与按名存取。
+- [4.2 文件系统调用与生命周期](/docs/408/mind-maps/operating-systems/04-file-system/04-2-file-operations)
+  - create/open/read/write/seek/truncate/unlink 的操作对象与边界。
+- [4.3 进程fd表、系统打开文件表与inode](/docs/408/mind-maps/operating-systems/04-file-system/04-3-open-file-tables)
+  - fd映射、多次open、dup/fork共享文件偏移与引用计数。
+- [4.4 流式、记录式、顺序与索引顺序文件](/docs/408/mind-maps/operating-systems/04-file-system/04-4-logical-files)
+  - 文件逻辑结构、定长记录偏移、索引顺序文件ASL。
+
+## 物理分配与索引计算（4.5—4.8）
+- [4.5 连续分配、extent与外部碎片](/docs/408/mind-maps/operating-systems/04-file-system/04-5-contiguous-allocation)
+  - 起始盘块+长度、随机访问、增长与磁盘碎片。
+- [4.6 隐式链接分配与FAT显式链接](/docs/408/mind-maps/operating-systems/04-file-system/04-6-linked-fat)
+  - 指针随块存放、FAT表索引、EOC/空闲标记及访问代价。
+- [4.7 索引分配、索引块与多级索引](/docs/408/mind-maps/operating-systems/04-file-system/04-7-index-allocation)
+  - 逻辑块号→索引项→数据块，索引结构与访盘次数。
+- [4.8 inode混合索引与大文件计算](/docs/408/mind-maps/operating-systems/04-file-system/04-8-mixed-index)
+  - 直接/一级/二级/三级指针、容量与分段地址判断。
+
+## 目录、链接与安全（4.9—4.12）
+- [4.9 目录项、FCB、磁盘inode与内存inode](/docs/408/mind-maps/operating-systems/04-file-system/04-9-directory-fcb-inode)
+  - 目录瘦身、inode字段、链接计数与缓存对象。
+- [4.10 单级、两级、树形与无环图目录](/docs/408/mind-maps/operating-systems/04-file-system/04-10-directory-hierarchy)
+  - 目录结构比较、相对/绝对路径、目录操作与共享。
+- [4.11 硬链接与软链接的精确定义](/docs/408/mind-maps/operating-systems/04-file-system/04-11-links)
+  - 两个名字同一inode与符号链接独立对象、删除语义。
+- [4.12 文件访问控制、权限与保密](/docs/408/mind-maps/operating-systems/04-file-system/04-12-protection)
+  - ACL、owner/group/others、目录x权限与口令加密区别。
+
+## 文件系统组织与空闲空间（4.13—4.16）
+- [4.13 文件系统层次、卷和磁盘布局](/docs/408/mind-maps/operating-systems/04-file-system/04-13-fs-architecture)
+  - 逻辑FS、文件组织模块、基本FS、设备驱动、超级块与日志。
+- [4.14 外存空闲空间：空闲表与空闲链表](/docs/408/mind-maps/operating-systems/04-file-system/04-14-free-table-chain)
+  - 连续空闲区、空闲盘块链、空闲盘区链及回收合并。
+- [4.15 位示图法：盘块号与字号位号换算](/docs/408/mind-maps/operating-systems/04-file-system/04-15-bitmap)
+  - 0基/1基位序、字长W、分配回收与容量计算。
+- [4.16 成组链接法：超级块栈与分组回收](/docs/408/mind-maps/operating-systems/04-file-system/04-16-group-link)
+  - 分组链表、空闲块栈计数、组间切换的经典考法。
+
+## VFS、挂载与综合复习（4.17—4.19）
+- [4.17 虚拟文件系统VFS与Linux四类对象](/docs/408/mind-maps/operating-systems/04-file-system/04-17-vfs)
+  - 统一API、superblock、inode、dentry、file object区分。
+- [4.18 分区、挂载、缓存与文件访问性能](/docs/408/mind-maps/operating-systems/04-file-system/04-18-mount-cache)
+  - 分区与文件系统区别、mount、页缓存、预读延迟写。
+- [4.19 文件管理：计算综合与易错辨析](/docs/408/mind-maps/operating-systems/04-file-system/04-19-exam-synthesis)
+  - 混合索引、位示图、逻辑与物理结构、硬链接和VFS自测。
+
+## 章际链接
+- [第三章 内存管理](/docs/408/mind-maps/operating-systems/03-memory)
+- [第五章 I/O管理](/docs/408/mind-maps/operating-systems/05-io)
+- [操作系统总览](/docs/408/mind-maps/operating-systems)
+````

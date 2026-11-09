@@ -1,0 +1,52 @@
+---
+title: "2.3 码元、波特率与比特率"
+description: "码元定义、M进制、有效信息率、编码开销"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.3 码元、波特率与比特率
+
+## 码元（symbol）
+- 一个码元是一个**符号持续时间**内的信号状态单元
+- `M`进制码元：共有`M`种可识别状态，理想等概信息量为 $\log_2 M$ bit/码元
+- 二进制码元每个可表示1 bit；四进制2 bit；十六进制4 bit
+- <img src="/images/408-mind-maps/cn-0119.svg" alt="二进制和四进制码元信号波形" width="650" height="264">
+
+- <img src="/images/408-mind-maps/cn-0115.svg" alt="码元：固定时长的信号波形；M 进制码元可携带 log2(M) 比特信息" width="700" height="200">
+
+## 两种速率
+- **码元速率/符号率** $R_s=N_s/t=1/T_s$，单位 Baud（波特）
+- **比特率/信息速率** $R_b=R_s\log_2 M$，单位 bit/s
+  - 该式假定所有状态有效、等量携带信息且**不计冗余开销**
+- `Baud`与`Byte`不要混淆：波特是码元/s，字节是8 bit
+- 码元边界不等于必然有电平变化；**相邻码元同电平仍是两个符号**
+
+## 例题
+- 4s发送8000个四进制码元：$R_s=8000/4=2000\,\mathrm{Baud}$
+  - $R_b=2000\log_2 4=4000\,\mathrm{bit/s}$
+- 八进制码元1600 Baud → 理想比特率 $1600\times3=4800\,\mathrm{bit/s}$
+- 维持信息率4800 bit/s并改用二进制码元 → $4800\,\mathrm{Baud}$
+- 二进制2400 bit/s改用四进制同净数据率 → $1200\,\mathrm{Baud}$
+
+## 进阶：开销和编码效率
+- 4B/5B每4位有效信息编码为5位线路位：编码效率 $4/5=80\%$
+- 若线路输出为100 Mbit/s（未计其他开销），4B/5B的原始数据位流上限为80 Mbit/s
+- **净业务吞吐量**还要减去帧头、校验、重传及空闲等开销
+## 章节导航
+- [上一节：2.2 通信模型、传输模式与同步](/docs/408/mind-maps/computer-networks/02-physical-layer/02-2-communication-modes)
+- [第二章总览](/docs/408/mind-maps/computer-networks/02-physical-layer)
+- [下一节：2.4 频带宽度、失真与码间串扰](/docs/408/mind-maps/computer-networks/02-physical-layer/02-4-bandwidth-impairments)
+
+````

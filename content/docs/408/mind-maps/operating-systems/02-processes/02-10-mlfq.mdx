@@ -1,0 +1,47 @@
+---
+title: "2.10 多级队列与多级反馈队列"
+description: "固定分类与反馈升级/降级、时间片策略及饥饿。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.10 多级队列 MQ 与多级反馈队列 MLFQ
+
+## 多级队列 MQ
+- 预先按进程类别分配不同就绪队列，如交互、批处理等
+- 每个队列可选择独立调度算法；队列间按固定优先级或时间配额调度
+- 进程一般**固定所属队列**；该模型本身不强调动态升降级
+- <img src="/images/408-mind-maps/os-0050.svg" alt="多级队列中不同类型的进程队列" width="600" height="354">
+
+## 多级反馈队列 MLFQ
+- 设多个就绪队列：高优先级时间片通常短，低优先级时间片通常更长
+- 新任务通常从高优先级队列开始；用完整个时间片则可降级
+- 经常在短CPU突发后主动阻塞的交互进程更容易留在高优先级
+- 高优先级就绪队列有任务时，通常先运行高优先级任务
+- 可定期统一提升(aging/priority boost)，缓解低层长期饥饿
+- <img src="/images/408-mind-maps/os-02-mlfq-clean.svg" alt="三级反馈队列与时间片、降级和提升" width="740" height="416">
+
+## 易混规则
+- **每个队列内部通常采用RR**，不是“一律FCFS，只有最后一层RR”的统一定律
+- 允许抢占和升级/降级的细则来自题目，不可套用一种唯一实现
+- 某进程因I/O阻塞提前放弃CPU，不能简单视为“使用完整个时间片”
+- 高层进程长期占据CPU时，低层可能饥饿；优先级提升能缓解
+
+## 高频辨析与关联
+- **MQ**：队列之间相对固定；**MLFQ**：根据运行反馈移动进程
+- 性能目标：快速响应短任务、兼顾CPU型任务及吞吐
+- <img src="/images/408-mind-maps/os-0072.svg" alt="原始多级反馈队列示意" width="740" height="288">
+- [上一节：基础调度算法](/docs/408/mind-maps/operating-systems/02-processes/02-9-scheduling-algorithms)
+- [下一节：同步与互斥](/docs/408/mind-maps/operating-systems/02-processes/02-11-concurrency-basics)
+````

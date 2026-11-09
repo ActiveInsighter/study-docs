@@ -1,0 +1,47 @@
+---
+title: "5.19 三重复ACK、快速重传与快速恢复"
+description: "408 计算机网络第五章·三重复ACK、快速重传与快速恢复；分节双侧Markmap，含核心概念、考点计算与常见误区。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.19 三重复ACK、快速重传与快速恢复
+
+## 重复ACK与快速重传
+- 接收方遇到序号缺口可多次回同一累计ACK，促使发送方在等待RTO前推断损失
+- 典型Reno：达到**三个重复ACK**时快速重传缺失段，更新`ssthresh`约为当前在途量一半
+- 不能把“收到三个ACK报文”机械等同“收到了三个重复ACK”
+
+## Reno快速恢复（简化+实际区别）
+- 408绘图常简化：`cwnd=16 MSS`遇3重复ACK→`ssthresh=8 MSS`，恢复后`cwnd≈8 MSS`再加性增
+- Reno传统细节：先令`cwnd=ssthresh+3 MSS`，额外重复ACK可临时增大cwnd；确认重传后再回落到`ssthresh`
+- 若**超时RTO**：通常`cwnd`回初始小窗口，再走慢开始；不是所有丢包都走快速恢复
+- Tahoe模型可在3重复ACK后回慢开始；**不同算法或版本题目必须注明**
+
+## 与图像对照
+- <img src="/images/408-mind-maps/cn-0099.svg" alt="快速重传快速恢复与超时曲线对比" width="900" height="485">
+- 原图同时绘制Reno与Tahoe趋势，重点认清“降到一半”和“降到初始窗口”两种路径
+- 3个重复ACK不保证“绝对丢包”，网络分组乱序也可能触发
+
+## 图题作答步骤
+- ① 确定每RTT横坐标的含义；② 查找阈值、超时或3重复ACK事件
+- ③ 先更新`ssthresh`，再依Reno/Tahoe及题设更新`cwnd`；④ 依当前增长阶段画后续点
+- 常见失误：把`cwnd`画成绝对字节数，却将`ssthresh`取MSS个数，导致量纲错误
+
+## 章节导航
+- [上一节：5.18 慢开始与拥塞避免的逐RTT计算](/docs/408/mind-maps/computer-networks/05-transport-layer/05-18-slow-start)
+- [下一节：5.20 章节综合题型、全流程与易错清单](/docs/408/mind-maps/computer-networks/05-transport-layer/05-20-exam-review)
+- [计算机网络总览](/docs/408/mind-maps/computer-networks)
+
+````

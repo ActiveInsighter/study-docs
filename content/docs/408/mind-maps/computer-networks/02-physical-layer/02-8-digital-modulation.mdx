@@ -1,0 +1,49 @@
+---
+title: "2.8 ASK、FSK、PSK与QAM调制"
+description: "载波幅度/频率/相位、星座状态数、计算"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.8 ASK、FSK、PSK与QAM调制
+
+## 为什么要调制
+- **频带/带通传输**：把基带信息映射到载波参数，适合带通媒介及频谱分配
+- 载波可表示为 $s(t)=A\cos(2\pi ft+\varphi)$
+  - `A`振幅、`f`频率、`φ`相位，调制就是有规则地改变参数
+- “数字数据→模拟信号”常以载波波形为例；调制后的波形不是恒定电平序列
+
+## 数字调制四类
+- **ASK**：幅移键控，按数据改变载波振幅；简单但对幅度噪声敏感
+- **FSK**：频移键控，不同数据状态使用不同频率
+- **PSK**：相移键控，用相位表示符号，例如BPSK、QPSK
+- **QAM**：正交幅度调制，联合使用幅度/相位以形成更多星座点
+- <img src="/images/408-mind-maps/cn-0040.svg" alt="ASK FSK PSK的波形比较" width="790" height="446">
+
+## 数据率计算
+- $R_b=R_s\log_2M$（理想等概且无冗余时）
+- 如果有`m`个相位且每个相位都配置`n`个可区分振幅，则 $M=mn$
+- 例：1200 Baud，4相位 × 每相位4幅度 =16状态
+  - 每码元4bit，故$R_b=1200\times4=4800\,\mathrm{bit/s}$
+- 相位数×幅度数**仅在组合均被使用且互异**的前提下成立
+
+## 概念边界
+- **基带传输**和**带通传输**区分信号频谱与媒体使用方式
+- **宽带**可以指较宽频率资源或多路复用；不应把“宽带=模拟、基带=数字”当绝对定律
+## 章节导航
+- [上一节：2.7 基带数字信号的线路编码](/docs/408/mind-maps/computer-networks/02-physical-layer/02-7-line-coding)
+- [第二章总览](/docs/408/mind-maps/computer-networks/02-physical-layer)
+- [下一节：2.9 PCM数字化、采样定理与模拟调制](/docs/408/mind-maps/computer-networks/02-physical-layer/02-9-pcm-sampling)
+
+````

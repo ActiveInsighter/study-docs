@@ -1,0 +1,51 @@
+---
+title: "第一章 计算机系统概论 · 分节导览"
+description: "11节：发展与分类、硬件和存储程序、ISA与层次、软件、构建链、取指执行、编址容量、CPU性能、吞吐与基准、性能优化、综合辨析。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 第一章 计算机系统概论 · 11节导航
+
+## 基本组成与抽象（1.1—1.4）
+- [1.1 发展历程、计算机分类与摩尔定律](/docs/408/mind-maps/computer-organization/01-overview/01-1-development)
+  - 器件演化；数字计算机；Flynn分类；并行与兼容性
+- [1.2 五大部件与冯·诺依曼体系](/docs/408/mind-maps/computer-organization/01-overview/01-2-von-neumann)
+  - 存储程序；运算器、控制器、存储器、输入与输出
+- [1.3 ISA、组成与系统层次结构](/docs/408/mind-maps/computer-organization/01-overview/01-3-isa-levels)
+  - 软件可见的体系结构 vs 硬件实现；多级抽象
+- [1.4 系统软件、应用软件与DBMS辨析](/docs/408/mind-maps/computer-organization/01-overview/01-4-system-software)
+  - OS / 编译 / 汇编 / 链接 / DBMS；数据库系统不是单个软件
+
+## 程序从代码到执行（1.5—1.6）
+- [1.5 预处理、编译、汇编、链接和装载](/docs/408/mind-maps/computer-organization/01-overview/01-5-toolchain)
+  - `.c → .i → .s → .o → 可执行文件`；解释/JIT是不同路径
+- [1.6 PC、MAR、MDR、IR与指令周期](/docs/408/mind-maps/computer-organization/01-overview/01-6-instruction-cycle)
+  - 取指—译码—执行；CPU与主存/I/O协作
+
+## 位宽与核心性能指标（1.7—1.9）
+- [1.7 机器字长、编址、MAR和MDR](/docs/408/mind-maps/computer-organization/01-overview/01-7-word-address)
+  - 字长不等于地址位数；容量须结合编址单位
+- [1.8 主频、CPI和CPU时间](/docs/408/mind-maps/computer-organization/01-overview/01-8-clock-cpi)
+  - $T_{CPU}=IC\times CPI/f$；加权平均CPI
+- [1.9 IPS、MIPS、FLOPS与响应/吞吐](/docs/408/mind-maps/computer-organization/01-overview/01-9-benchmarks)
+  - 不同程序/ISA下不能只按MIPS比较
+
+## 综合提高（1.10—1.11）
+- [1.10 性能比较与阿姆达尔定律](/docs/408/mind-maps/computer-organization/01-overview/01-10-speedup)
+  - 同一工作负载才可比较；加速比与瓶颈
+- [1.11 408重点计算与判断题](/docs/408/mind-maps/computer-organization/01-overview/01-11-exam)
+  - 辨析编译链、位宽、CPI、指令与数据、局部优化
+- [返回本学科总览](/docs/408/mind-maps/computer-organization) · [下一章：数据的表示和运算](/docs/408/mind-maps/computer-organization/02-data-representation)
+````

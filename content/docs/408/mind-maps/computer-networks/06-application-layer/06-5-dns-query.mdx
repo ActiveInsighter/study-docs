@@ -1,0 +1,51 @@
+---
+title: "6.5 DNS递归/迭代与完整解析时序"
+description: "408计算机网络·应用层第六章·DNS递归/迭代与完整解析时序；高质量双侧Markmap分节导图。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.5 DNS递归/迭代与完整解析时序
+
+## 两类查询
+- **递归**：被查询服务器负责完成解析或返回失败；Stub通常向本地解析器请求递归
+- **迭代**：被查询服务器主要返回自己知道的答案或下一级委派/推荐信息
+- 教材常考：主机与本地DNS之间递归，本地DNS向根/TLD/权威之间迭代
+- 实际解析器行为还涉及缓存、转发、CNAME、DNSSEC等，不必每次走完所有层
+
+## 图示：一次冷缓存的查找
+- <img src="/images/408-mind-maps/cn-06-dns-resolution-clean.svg" alt="主机递归请求与本地DNS迭代查询根、TLD及权威服务器示意" width="1120" height="415">
+- ① Stub向本地解析器询问`www.example.com A`
+- ② 无缓存时，解析器从已知根提示开始，获得`.com`委派
+- ③ 询问`.com`服务器，获得`example.com`权威服务器信息
+- ④ 向权威服务器请求`www`的A记录；必要时追查别名与附加地址
+- ⑤ 递归解析器缓存符合策略的记录并向Stub返回结果
+
+## 缓存命中与失败
+- 命中TTL尚未到期的正向缓存：无需再访问层级服务器
+- 权威记录/部分否定回答可被缓存，否定缓存期限依DNS规则
+- 域名不存在通常得到`NXDOMAIN`；记录类型不存在不一定代表域名不存在
+- 缓存污染、过期或委派故障都可能引起解析问题，不要把DNS故障等同网站宕机
+
+## 时间题边界
+- 若题设根/TLD/权威均无缓存且逐级串行，计算网络往返按**实际查询次数和RTT**相加
+- DNS自身还可能使用TCP、重试或DNSSEC，多次查询时间不可不分条件地记为固定3RTT
+- 若DNS已缓存，则相关外部查询RTT可以为0
+
+## 分节导航
+- [上一节：6.4 根、TLD、权威与递归DNS服务器](/docs/408/mind-maps/computer-networks/06-application-layer/06-4-dns-servers)
+- [下一节：6.6 DNS UDP/TCP、缓存TTL与典型考题](/docs/408/mind-maps/computer-networks/06-application-layer/06-6-dns-transport)
+- [应用层总览](/docs/408/mind-maps/computer-networks/06-application-layer)
+
+````

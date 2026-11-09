@@ -1,0 +1,68 @@
+---
+title: "第二章 线性表｜分节导览"
+description: "408 数据结构第二章：概念、顺序存储、顺序表操作、单链表、链式插删、双链表、循环与静态链表、综合算法八节双侧导图。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 第二章 线性表 · 分节导览
+
+## 基本概念与抽象操作
+- [2.1 线性表的定义、位序与 ADT](/docs/408/mind-maps/data-structures/02-linear-lists/02-1-linear-list-adt)
+  - 一对一关系、空表、首尾与前驱后继
+  - 基本操作及合法位序范围
+- 易错：位序从 1 起，数组下标常从 0 起
+
+## 顺序表：存储方式
+- [2.2 顺序存储、静态分配、动态扩容](/docs/408/mind-maps/data-structures/02-linear-lists/02-2-sequential-storage)
+  - `length` 与 `capacity` 的区别
+  - 随机访问、缓存局部性、动态扩容均摊分析
+- 易错：`malloc` 大小与 `realloc` 的失败处理
+
+## 顺序表：基本操作
+- [2.3 插入、删除、查找与移动次数](/docs/408/mind-maps/data-structures/02-linear-lists/02-3-sequential-operations)
+  - 插入、删除的边界与复杂度
+  - 有序表查找、合并、去重
+- 易错：按位访问 O(1) ≠ 按值查找 O(1)
+
+## 单链表：理解与建立
+- [2.4 结点、头指针、头结点与建表](/docs/408/mind-maps/data-structures/02-linear-lists/02-4-singly-linked-basics)
+  - 带头结点与不带头结点
+  - 头插、尾插、遍历与查找
+- 易错：头结点不是第 1 个数据元素
+
+## 单链表：指针操作
+- [2.5 插入、删除、前插与删除指定结点](/docs/408/mind-maps/data-structures/02-linear-lists/02-5-singly-linked-operations)
+  - 指针赋值顺序与断链风险
+  - 删除已知结点的条件及尾结点例外
+- 易错：O(1) 插删的前提是已定位到有关结点
+
+## 双链表
+- [2.6 双向链接、插入、删除](/docs/408/mind-maps/data-structures/02-linear-lists/02-6-doubly-linked-lists)
+  - `prior` / `next` 对称维护
+  - 边界结点、带头结点、双向循环表
+- 易错：更新一个方向不足以维持双向关系
+
+## 循环与静态链表
+- [2.7 循环单链表、循环双链表与静态链表](/docs/408/mind-maps/data-structures/02-linear-lists/02-7-circular-static-lists)
+  - 尾指针、判空与遍历停止条件
+  - 数组游标模拟指针
+- 易错：`NULL` 不是循环链表的一般终点
+
+## 综合题型与对比
+- [2.8 高频算法模板与顺序表／链表对照](/docs/408/mind-maps/data-structures/02-linear-lists/02-8-comparisons-algorithms)
+  - 快慢指针、逆置、归并、双指针与去重
+  - 复杂度表、边界检查清单
+- [前章：绪论](/docs/408/mind-maps/data-structures/01-introduction) · [下章：栈、队列与数组](/docs/408/mind-maps/data-structures/03-stacks-queues-arrays)
+````

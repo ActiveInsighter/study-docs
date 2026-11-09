@@ -1,0 +1,48 @@
+---
+title: "6.12 POP3、IMAP与Webmail协议对比"
+description: "408计算机网络·应用层第六章·POP3、IMAP与Webmail协议对比；高质量双侧Markmap分节导图。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.12 POP3、IMAP与Webmail协议对比
+
+## POP3：下载为主
+- 标准端口TCP **110**，加密隐式TLS常用**995**
+- 常见命令：`USER`、`PASS`、`STAT`、`LIST`、`RETR`、`DELE`、`QUIT`
+- 服务端可以保留副本或根据配置/命令删除邮件；“POP3必然下载后删除”错误
+- 更适合侧重客户端本地保存或较简单邮箱同步场景
+
+## IMAP：在线管理为主
+- 标准端口TCP **143**，隐式TLS常用**993**
+- 服务端保存邮箱结构，可管理文件夹、标记已读、搜索以及按需下载消息部分
+- 多设备邮件状态同步更方便；下载部分附件/正文不等于邮件被送达客户端前就“没有传输”
+- IMAP提供远程邮箱操作语义，不是SMTP发送邮件的替代品
+
+## Webmail和传输协议
+- 浏览器使用HTTP/HTTPS与Webmail服务交互，后台服务器负责邮件投递和存储
+- 一次用户界面“发送”按钮对应Web请求，**服务端向外转发**可能仍使用SMTP
+- 使用浏览器阅读邮件并不能据此判断客户端同时运行了POP3协议
+
+## 高频对照
+- SMTP：push，投递/转发；POP3：pull，邮箱检索；IMAP：在线邮箱同步与管理
+- FTP：文件传输，不属于常规邮件收发协议
+- 端口组合：SMTP25/587、POP3 110/995、IMAP 143/993；**根据是否TLS及角色选择**
+
+## 分节导航
+- [上一节：6.11 邮件信封、首部与MIME多媒体扩展](/docs/408/mind-maps/computer-networks/06-application-layer/06-11-mail-format)
+- [下一节：6.13 WWW组成、URL结构与一次网页访问](/docs/408/mind-maps/computer-networks/06-application-layer/06-13-www-url)
+- [应用层总览](/docs/408/mind-maps/computer-networks/06-application-layer)
+
+````

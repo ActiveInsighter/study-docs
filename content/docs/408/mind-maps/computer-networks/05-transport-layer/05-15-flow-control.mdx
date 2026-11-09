@@ -1,0 +1,48 @@
+---
+title: "5.15 接收窗口rwnd与流量控制"
+description: "408 计算机网络第五章·接收窗口rwnd与流量控制；分节双侧Markmap，含核心概念、考点计算与常见误区。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.15 接收窗口rwnd与流量控制
+
+## 为什么需要流量控制
+- 发送端速率过大可压满接收端缓存，与网络中路由器队列拥塞不是同一层问题
+- 接收端在TCP首部**窗口字段**报告可用接收空间，形成**接收窗口`rwnd`**
+- 常见抽象：$\mathrm{rwnd}\approx\text{缓存总量}-\text{已占用量}$（受实现策略影响）
+- 发送端通过接收窗口防止超过对方接收能力，**不是接收方直接修改发送方的cwnd**
+
+## 发送能力的两个约束
+- 经典无其它限制模型：允许未确认在途字节数$\leq\min(\mathrm{rwnd},\mathrm{cwnd})$
+- 实际还能新发多少字节：$\max(0,\min(\mathrm{rwnd},\mathrm{cwnd})-\mathrm{FlightSize})$；拥塞窗口本身受ACK时钟等影响
+- 如果`rwnd=6000B`、`cwnd=4000B`、在途已发3000B，则至多还能发**1000B**新字节
+- `MSS`限制单个报文段的数据长度；**窗口**限制同时在途的数据总量
+
+## 零窗口与探测
+- 接收端可通告`rwnd=0`暂停发送新应用数据
+- 即使窗口更新通告丢失，发送端也不能无限期无所作为；采用**持续计时器/零窗口探测**
+- 纯ACK一般不占序号；窗口更新可能携带在ACK中
+
+## 注意不要混同
+- **流量控制保护接收端**，通常由`rwnd`反馈
+- **拥塞控制保护网络**，通常由发送端维护`cwnd`和`ssthresh`
+- “发送窗口=min(rwnd,cwnd)”是常见题型的上限近似，真实可发还要扣除在途数据
+
+## 章节导航
+- [上一节：5.14 RTT平滑估计、重传超时与Karn原则](/docs/408/mind-maps/computer-networks/05-transport-layer/05-14-rtt-rto)
+- [下一节：5.16 TCP滑动窗口、MSS与吞吐上限](/docs/408/mind-maps/computer-networks/05-transport-layer/05-16-sliding-window)
+- [计算机网络总览](/docs/408/mind-maps/computer-networks)
+
+````

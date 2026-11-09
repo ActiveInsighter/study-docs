@@ -1,0 +1,21 @@
+{
+  "title": "第七章 输入输出系统",
+  "pages": [
+    "index",
+    "07-1-io-overview",
+    "07-2-controller-ports",
+    "07-3-port-addressing",
+    "07-4-programmed-io",
+    "07-5-interrupt-exception",
+    "07-6-interrupt-vector",
+    "07-7-isr-context",
+    "07-8-priority-mask",
+    "07-9-dma-controller",
+    "07-10-dma-process",
+    "07-11-dma-memory-arbitration",
+    "07-12-methods-comparison",
+    "07-13-serial-channel",
+    "07-14-exam-review"
+  ],
+  "defaultOpen": false
+}

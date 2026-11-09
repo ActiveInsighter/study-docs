@@ -1,0 +1,50 @@
+---
+title: "6.3 DNS域名层次、标签与资源记录"
+description: "408计算机网络·应用层第六章·DNS域名层次、标签与资源记录；高质量双侧Markmap分节导图。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.3 DNS域名层次、标签与资源记录
+
+## 域名层次：从右往左读
+- 根域：末尾隐含的`.`；顶级域：`.com`、`.org`、`.cn`
+- `www.example.com.`：根 → `com` → `example` → `www`；子域级别越靠左越低
+- 每个普通DNS标签最长**63字节**；DNS报文中一个完整域名的编码长度至多**255字节**（含标签长度与根标签）
+- 域名比较不区分ASCII英文字母大小写；不等于所有记录都不区分大小写
+- 主机名通常采用字母/数字/连字符规则；DNS通用标签还可能包含下划线，原导图“除连字符外均禁止”过严
+
+## DNS命名层级并非行政固定表
+- 国家/地区代码TLD如`cn`、`us`；通用TLD如`com`、`org`
+- `.arpa`服务于部分互联网基础设施用途，反向解析常用`in-addr.arpa`/`ip6.arpa`
+- `example.com`可向下委派`lab.example.com`，不必遵循“二级是类别、三级是网站”固定模板
+
+## 高频资源记录
+- `A`：主机名 → IPv4地址；`AAAA`：主机名 → IPv6地址
+- `NS`：区域的权威服务器；`MX`：邮件投递服务器及优先级
+- `CNAME`：别名指向规范名称，通常还需继续解析地址
+- `PTR`：反向解析；`TXT`：文本数据，如某些域名验证/SPF配置
+- `SOA`：区域起始授权信息，包含主权威名称等元数据
+
+## 辨析
+- **一个域名可对应多个地址**；反过来一个IP也可服务多个域名
+- 资源记录中的TTL控制缓存期限，**不是IP数据报中的TTL跳数**
+- DNS是分布式层次数据库，不是“把所有网址放在一台根服务器”的中央地址表
+
+## 分节导航
+- [上一节：6.2 C/S、P2P与混合架构](/docs/408/mind-maps/computer-networks/06-application-layer/06-2-models)
+- [下一节：6.4 根、TLD、权威与递归DNS服务器](/docs/408/mind-maps/computer-networks/06-application-layer/06-4-dns-servers)
+- [应用层总览](/docs/408/mind-maps/computer-networks/06-application-layer)
+
+````

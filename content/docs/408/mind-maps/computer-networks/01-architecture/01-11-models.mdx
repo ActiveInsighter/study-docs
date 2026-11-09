@@ -1,0 +1,52 @@
+---
+title: "1.11 OSI七层、TCP/IP四层与教学五层"
+description: "三模型映射与协议定位、OSI服务属性对比。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 1.11 OSI七层、TCP/IP四层与教学五层
+
+## 三种体系结构
+- **OSI参考模型**：应用、表示、会话、传输、网络、数据链路、物理（7层）
+- **TCP/IP四层模型**：应用、传输、网际、网络接口
+- **408教学五层模型**：应用、传输、网络、数据链路、物理
+- 五层模型把TCP/IP**网络接口层拆成两层**，把OSI**上三层合并为应用层**
+- <img src="/images/408-mind-maps/cn-01-models-clean.svg" alt="OSI七层、TCP/IP四层、教学五层结构对比" width="840" height="502">
+
+- <img src="/images/408-mind-maps/cn-0042.svg" alt="OSI、TCP/IP与教学五层模型对照" width="760" height="360">
+
+## 协议和层次（常见考试口径）
+- 应用：HTTP、DNS、SMTP、FTP
+- 传输：TCP、UDP
+- 网际/网络：IP、ICMP、部分路由协议功能
+- 链路：以太网MAC、PPP；物理：以太网PHY等物理信令标准
+- **ARP**是IPv4到链路地址解析的跨层协作协议；不同资料划分不一致
+
+## 服务特征对比
+- Internet的**IP**使用无连接尽力而为数据报服务
+- 传输层同时存在**TCP连接型**与**UDP无连接型**服务
+- OSI模型中的网络层、传输层并非简单固化为“只有连接/只有无连接”
+- OSI采用先定义参考服务/模型再发展协议；TCP/IP模型概括已实际使用的互联网协议族
+
+## 三类判断题
+- **分层优势**：独立设计、互操作、便于升级；代价是封装开销与跨层优化复杂度
+- **协议 ≠ 服务**：HTTP/TCP/IP是具体协议，可靠字节流/尽力而为是服务性质
+- **谁完成可靠传输**需限定协议：TCP可实现；IP不保证；链路可局部重传但不保证端到端
+
+## 学习导航
+- [上一节：1.10 OSI上三层：会话、表示、应用](/docs/408/mind-maps/computer-networks/01-architecture/01-10-osi-upper)
+- [返回本章总览](/docs/408/mind-maps/computer-networks/01-architecture)
+- [下一节：1.12 408典型计算与易混点总复盘](/docs/408/mind-maps/computer-networks/01-architecture/01-12-exam)
+````

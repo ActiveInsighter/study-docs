@@ -1,0 +1,78 @@
+---
+title: "4.7 nextval 优化与不同版本对照"
+description: "教材 1 基 nextval 推导、代码、示例与 0 基 LPS/负一下标版本换算。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 4.7 nextval · 省略必然重复失配
+
+## 为什么需要 nextval
+- KMP 的 next 有时退到模式串中**与当前失配字符相同**的位置
+- 因主串同一个字符刚与该字符失配，重新比较必然仍失配
+- 可沿 `next` 链继续跳转，直接跳到不必然失配的位置
+- 优化的是**比较次数的常数**，不改变 KMP 的 O(n+m) 渐近上界
+
+## 本章教材 1 基定义
+- 已有 `next[j]`，定义 `nextval[1]=0`
+- 对 $2\le j\le m$
+  - 若 `next[j]>0` **且** `P[j]==P[next[j]]`
+    - `nextval[j]=nextval[next[j]]`
+  - 否则 `nextval[j]=next[j]`
+- 在匹配主循环里，将失配转移 `j=next[j]` 替换为 `j=nextval[j]`
+- 首个跳转为 0：按哨兵状态移动 `i` 与 `j`，而不是访问 `P[0]`
+
+## 经典重复串例子
+- 模式 `P="aaaab"`，位序 1..5
+  - `next    = [0,1,2,3,4]`
+  - `nextval = [0,0,0,0,4]`
+- 第 4 位字符 `a` 失配后，前面的相同 `a` 比较都无需重做
+- 第 5 位是 `b`，与 `P[4]='a'` 不同，仍可尝试跳到位置 4
+- 注意：nextval 不是对 next 数组简单“统一减 1”
+
+## 再算一例 `P="ababaa"`
+- 模式位序：`1:a 2:b 3:a 4:b 5:a 6:a`
+- `next = [0,1,1,2,3,4]`
+- 依次判断 `P[j] == P[next[j]]`
+  - j=2：`b!=a` → `nextval[2]=1`
+  - j=3：`a==a` → `nextval[3]=nextval[1]=0`
+  - j=4：`b==b` → `nextval[4]=nextval[2]=1`
+  - j=5：`a==a` → `nextval[5]=nextval[3]=0`
+  - j=6：`a!=b` → `nextval[6]=4`
+- 结果：`nextval = [0,1,0,1,0,4]`
+
+## 可靠的建表伪码
+- `nextval[1] = 0`
+- `for(j=2; j<=m; ++j)`
+  - `k = next[j]`
+  - `if(k > 0 && P[j]==P[k]) nextval[j]=nextval[k];`
+  - `else nextval[j]=k;`
+- 由于 `next[j]<j`，右侧 `nextval[k]` 一定已先被计算
+- 不应直接访问 `P[0]`；避免对未定义的哨兵位求值
+
+## 不同版本的数组要先“对表”
+- 教材 1 基 `next[1]=0`，`next[2]=1`
+  - `next[j] = 1 + L(P[1..j-1])`（j≥2）
+- 0 基 **LPS**：`lps[0]=0`
+  - `lps[k] = L(P[0..k])`，失配时 `j=lps[j-1]`
+- 另一类 0 基 **next[0]=-1** 的写法采用不同哨兵与跳转定义
+- **不能仅将数组改写成从 0 开始而不修改匹配代码**
+
+## 高频错法
+- 错：`nextval[j]=nextval[j-1]`（通常不成立）
+- 错：每一项都跳到 0（某些项仍能复用较长的正确前后缀）
+- 错：计算 `nextval[j]` 时从 P[1..j] 整段中直接套用错位规则
+- 错：修改 nextval 后返回的匹配位置也跟着改变
+- [下一节：手算与综合考法](/docs/408/mind-maps/data-structures/04-strings/04-8-exercises)
+````

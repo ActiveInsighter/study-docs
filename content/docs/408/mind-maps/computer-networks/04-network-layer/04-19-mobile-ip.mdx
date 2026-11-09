@@ -1,0 +1,46 @@
+---
+title: "4.19 移动IP、归属代理与转交地址"
+description: "408 计算机网络 第四章·移动IP、归属代理与转交地址：独立双侧Markmap，含考研核心概念、步骤、易错点与计算。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 4.19 移动IP、归属代理与转交地址
+
+## 目标与角色
+- 传统**移动IPv4**允许移动节点离开归属网络仍维持其归属IP标识
+- HA（Home Agent）：归属代理；CoA（Care-of Address）：转交地址，指示移动节点当前位置
+- FA（Foreign Agent）：外埠代理/外地代理，是某些Mobile IPv4部署中的角色；并非所有移动实现都必需
+
+## 外出时的数据路径
+- 移动节点在外地网络获得/登记CoA，并向HA注册当前地址
+- 对应节点发送到移动节点归属地址→分组按常规路由到归属网络
+- HA截获并**封装隧道**到CoA，外地网络解封装交给移动节点
+- 返回通信可根据策略直接发送（可能形成**三角路由**），不一定沿同一隧道逆向返回
+
+## 回归与更换接入网
+- 换位置→更新绑定/注册信息，隧道目标随之变化
+- 回归归属网→解除原外地绑定；此时可按普通IP通信
+- **同一个Wi-Fi子网内漫游不等于必定使用Mobile IP**；二层漫游可保持IP不变
+
+## 易错边界
+- 移动节点的**归属IP**和当前可路由的CoA是不同概念
+- 不应把移动IP等同IPv6、DHCP租约更新或NAT端口映射
+- 本节以408传统Mobile IPv4模型为主，协议代际和实际部署存在差异
+## 章节导航
+- [返回第四章导览](/docs/408/mind-maps/computer-networks/04-network-layer)
+- [上一节：4.18 IP组播、IGMP与组播MAC](/docs/408/mind-maps/computer-networks/04-network-layer/04-18-multicast)
+- [下一节：4.20 路由器体系结构与队列](/docs/408/mind-maps/computer-networks/04-network-layer/04-20-router-architecture)
+
+````

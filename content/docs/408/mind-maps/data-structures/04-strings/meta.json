@@ -1,0 +1,15 @@
+{
+  "title": "第四章 串｜分节导览",
+  "pages": [
+    "index",
+    "04-1-concepts",
+    "04-2-adt",
+    "04-3-storage",
+    "04-4-naive",
+    "04-5-prefix-next",
+    "04-6-kmp",
+    "04-7-nextval",
+    "04-8-exercises"
+  ],
+  "defaultOpen": false
+}

@@ -1,0 +1,53 @@
+---
+title: "第六章 总线 · 12节双侧导图导航"
+description: "计算机组成原理第六章：总线体系结构、信号线、传输周期、带宽、总线事务、仲裁与同步/异步/半同步定时。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 第六章 · 总线（12节双侧导图）
+
+## 基础与结构（6.1—6.3）
+- [6.1 总线定义、角色与规范](/docs/408/mind-maps/computer-organization/06-bus/06-1-core-concepts)
+  - 分时共享、主设备/目标设备、四类技术特性
+- [6.2 数据/地址/控制总线](/docs/408/mind-maps/computer-organization/06-bus/06-2-signal-lines)
+  - 方向、地址空间、宽度、复用与片内通路
+- [6.3 单/双/三总线、串行与并行](/docs/408/mind-maps/computer-organization/06-bus/06-3-bus-topologies)
+  - 多总线结构图、教材模型与现代点到点互连的边界
+
+## 性能计算与事务（6.4—6.6）
+- [6.4 时钟、周期、位宽与峰值带宽](/docs/408/mind-maps/computer-organization/06-bus/06-4-performance-metrics)
+  - W、f、r、C、总线周期和有效数据率
+- [6.5 带宽和突发计算训练](/docs/408/mind-maps/computer-organization/06-bus/06-5-bandwidth-cases)
+  - SDR/DDR、突发与非突发、串行编码开销
+- [6.6 总线事务、突发与分离式](/docs/408/mind-maps/computer-organization/06-bus/06-6-transactions-bursts)
+  - 申请—寻址—传输—结束；Burst与Split区别
+
+## 仲裁与时序（6.7—6.10）
+- [6.7 集中式/分布式总线仲裁](/docs/408/mind-maps/computer-organization/06-bus/06-7-bus-arbitration)
+  - 链式查询、计数器定时、独立请求与公平性
+- [6.8 同步定时与读事务波形](/docs/408/mind-maps/computer-organization/06-bus/06-8-synchronous-timing)
+  - T1—T4、建立保持、时钟边沿和性能边界
+- [6.9 异步不互锁、半互锁、全互锁](/docs/408/mind-maps/computer-organization/06-bus/06-9-async-handshakes)
+  - REQ/ACK先后关系、四相握手、可靠性
+- [6.10 半同步WAIT与分离事务](/docs/408/mind-maps/computer-organization/06-bus/06-10-semisync-split)
+  - 等待节拍、请求响应分离、通路利用率
+
+## 扩展与总复习（6.11—6.12）
+- [6.11 常见互连与DDR、PCIe概念](/docs/408/mind-maps/computer-organization/06-bus/06-11-standards-extensions)
+  - 共享总线与点到点串行链路，按题设处理版本速率
+- [6.12 综合计算与判断题自测](/docs/408/mind-maps/computer-organization/06-bus/06-12-exam-review)
+  - 地址、带宽、突发、仲裁、异步握手五组题型
+- [上一章：CPU](/docs/408/mind-maps/computer-organization/05-cpu) · [下一章：I/O系统](/docs/408/mind-maps/computer-organization/07-io-system) · [本学科目录](/docs/408/mind-maps/computer-organization)
+````

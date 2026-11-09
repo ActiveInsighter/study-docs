@@ -1,6 +1,13 @@
 /** Chapter guide first, then its sections in numeric order (2 before 10). */
 export function compareMindMapPaths(a: string, b: string) {
-  const key = (path: string) => /(?:^|\/)(\d{2})-(?:(\d+)-)?/.exec(path);
+  const key = (path: string) => {
+    const parts = path.split('/');
+    const filename = parts.at(-1) ?? '';
+    // A chapter's index lives beside its numbered sections and comes first.
+    return /^(\d{2})-(?:(\d+)-)?/.exec(
+      /^index\.mdx?$/.test(filename) ? parts.at(-2) ?? '' : filename,
+    );
+  };
   const left = key(a);
   const right = key(b);
   if (left && right) {

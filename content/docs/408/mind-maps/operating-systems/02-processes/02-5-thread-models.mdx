@@ -1,0 +1,59 @@
+---
+title: "2.5 线程与多线程映射模型"
+description: "ULT/KLT、1:1/N:1/M:N模型与并行、阻塞、资源共享。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.5 线程模型：谁被内核真正调度
+
+## 线程与进程的分工
+- 进程负责资源容器和隔离边界；线程负责在进程内的一条执行流
+- 同进程线程共享：代码、数据、堆、进程级打开文件等
+- 独享：程序计数器PC、寄存器现场、线程栈、线程标识与调度状态
+- **TCB**：线程控制块，记录线程运行状态及上下文
+  - 用户线程的TCB可由用户态线程库管理；KLT对应的内核线程状态由内核维护
+
+## 用户级与内核级线程
+- **ULT**：用户态库负责线程管理与切换；内核未必感知每个用户线程
+  - 用户态切换快；若所有ULT只映射一个KLT，则无法让多个ULT在多CPU上同时执行
+- **KLT**：内核能独立调度的线程；适合多核并行及独立阻塞
+  - 内核态调度/资源维护带来额外开销，不应说“性能一定差几个数量级”
+- <img src="/images/408-mind-maps/os-0097.svg" alt="用户态线程和内核态线程三种实现关系" width="730" height="317">
+
+- <img src="/images/408-mind-maps/os-0028.svg" alt="线程库支持的线程（用户级线程）：TCB 在用户空间，由运行时系统管理" width="560" height="420">
+
+- <img src="/images/408-mind-maps/os-0098.svg" alt="内核支持的线程（内核级线程）：TCB 在内核的线程表中" width="560" height="420">
+
+- <img src="/images/408-mind-maps/os-0155.svg" alt="用户级线程的调度：内核选进程分配时间片，运行时系统在进程内选线程" width="560" height="430">
+
+## 三种映射模型
+- **多对一 N:1**：多个ULT → 一个KLT
+  - 用户态切换代价小；一个阻塞型系统调用可阻塞其唯一KLT
+  - 该进程的多个ULT通常不能真正多核并行
+- **一对一 1:1**：每个ULT对应独立KLT
+  - 多核并行、一个线程阻塞不阻止其他线程运行
+  - 大量线程带来内核资源与调度成本
+- **多对多 M:N**：多个ULT复用一组KLT
+  - 希望兼顾资源成本与并行性；实际模型较复杂
+  - 线程库调度和内核调度同时参与；不是“多个系统进程对应多个ULT”
+- <img src="/images/408-mind-maps/os-0114.svg" alt="多对一、一对一、多对多线程映射对照" width="730" height="288">
+
+## 选择题速断
+- “一个线程阻塞，其他线程必全部停止”仅适用于特定 **N:1+阻塞操作** 场景
+- “线程不拥有任何资源”过于绝对：线程仍需栈、TCB及执行上下文
+- 1:1、N:1描述的是**ULT与KLT的映射**，不是进程数和线程数的简单比例
+- [上一节：IPC](/docs/408/mind-maps/operating-systems/02-processes/02-4-ipc)
+- [下一节：线程组织与切换](/docs/408/mind-maps/operating-systems/02-processes/02-6-thread-context)
+````

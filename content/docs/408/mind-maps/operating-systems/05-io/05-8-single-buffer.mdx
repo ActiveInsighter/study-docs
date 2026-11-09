@@ -1,0 +1,51 @@
+---
+title: "5.8 单缓冲与稳态处理周期"
+description: "单缓冲时序、输入/拷贝/处理重叠、启动延迟计算。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.8 单缓冲与稳态处理周期
+
+## 统一符号与前提
+- `T`：设备把一块放进缓冲区所用时间
+- `M`：把缓冲区数据传入用户工作区的时间
+- `C`：CPU处理工作区一块数据的时间
+- 缓冲区一次只容纳一块；工作区一次处理一块
+- 题设只允许 `T` 与 `C`并行，`M` 转送时不得复用同一缓冲和工作区
+
+- <img src="/images/408-mind-maps/os-0035.svg" alt="无缓冲时的处理时间：磁盘→缓冲区 100us，缓冲区→用户区 50us，CPU 分析 50us" width="700" height="330">
+
+## 单缓冲过程
+- 设备输入当前块（T），将其复制到工作区（M）
+- 缓冲区腾空后可输入下一块，此时CPU处理当前工作区（C）
+- 下次复制必须等**下一块输入完成**且**CPU处理当前块完成**
+- 所以稳态每块的平均周期：$P_1=\max(T,C)+M$
+- <img src="/images/408-mind-maps/os-05-single-buffer-clean.svg" alt="单缓冲按T、M、C划分的时序与稳态周期" width="860" height="337">
+
+## 具体例题
+- `T=100ms, M=20ms, C=60ms`：稳态 `max(100,60)+20=120ms/块`
+- 完成第一块的耗时通常为 `T+M+C=180ms`（假设起点完全空）
+- 第一块完成到第二块完成的间隔为120ms；**启动时间与稳态吞吐周期不同**
+- 若共处理n块且模型如图：`总时间 = (T+M+C) + (n−1)×P1`（依初态与精确重叠约定）
+
+## 易错边界
+- 只会背公式却不画时间轴，容易把首次完成与每块稳定间隔混淆
+- 若设备可直接DMA写用户工作区、复制与处理可重叠，必须重新推导
+- 原图 `os-0093.svg` 的离线渲染有严重字形比例问题；本页改用原创图
+
+## 学习导航
+- [上一节：5.7 高速缓存、缓冲与预读延迟写](/docs/408/mind-maps/operating-systems/05-io/05-7-cache-buffer)
+- [下一节：5.9 双缓冲与两级流水](/docs/408/mind-maps/operating-systems/05-io/05-9-double-buffer)
+````

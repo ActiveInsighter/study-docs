@@ -1,0 +1,58 @@
+---
+title: "6.4 邻接表、十字链表与邻接多重表"
+description: "邻接表、逆邻接表、十字链表、邻接多重表的指针域、空间、度数和遍历性质。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.4 邻接表 · 十字链表 · 邻接多重表
+
+## 邻接表（Adjacency List）
+- 每个顶点维护**出邻点列表**；无向边 $(u,v)$ 在两个表中各出现一次
+- 有向弧 u→v：放在 u 的表中，v 可只存一次顶点记录
+- 空间：$\Theta(V+E)$（无向图有 2E 个边表结点，但仍是该阶）
+- 遍历某顶点邻点：$O(\deg^+(u))$；入度难以直接取得
+- 计算有向图所有顶点入度：扫描所有邻接表 $O(V+E)$
+- 逆邻接表：表内存**入邻点**，适用于频繁追溯前驱
+
+## 邻接矩阵与邻接表对比
+- 矩阵：$O(V^2)$ 空间；判边 $O(1)$；按行找邻点 $O(V)$
+- 邻接表：$O(V+E)$ 空间；找邻点 $O(\deg^+(u))$
+- 邻接表“判断特定 u→v”一般需在 u 的表里查找，最坏 $O(\deg^+(u))$
+- 同一图的**邻接表邻点先后顺序不是唯一的**；若题目给出顺序，要严格照做
+
+## 十字链表：有向图
+- 顶点结点：`(data, firstin, firstout)`
+- 弧结点：`(tailvex, headvex, hlink, tlink, info)`
+  - `tlink`：同尾（相同起点）下一条弧
+  - `hlink`：同头（相同终点）下一条弧
+- 同时高效枚举某顶点**入弧和出弧**；每条弧只保存一个弧结点
+- 不能把 `hlink` 和 `tlink` 连反
+- <img src="/images/408-mind-maps/ds-0145.svg" alt="有向图十字链表的顶点结点、弧结点与头尾链" width="700" height="293">
+
+## 邻接多重表：无向图
+- 顶点结点：`(data, firstedge)`
+- 边结点：`(ivex, jvex, ilink, jlink, info)`
+- 每条无向边**只建一个边结点**，但挂在两个端点的边链上
+- `ilink` 是关联 ivex 的下一条边，`jlink` 是关联 jvex 的下一条边
+- 较邻接表利于处理边的统一标记、删除/修改；不是新一种“图的逻辑结构”
+- <img src="/images/408-mind-maps/ds-0189.svg" alt="无向图邻接多重表结构" width="700" height="293">
+
+## 高频辨析
+- 有向图要同时列出入弧与出弧 → **十字链表**
+- 无向图希望边不重复并易于修改 → **邻接多重表**
+- 稀疏图（$E\ll V^2$）优先邻接表；稠密图通常矩阵更直接
+- 十字链表每条弧一个弧结点；邻接多重表每条无向边一个边结点
+- [继续：6.5 BFS](/docs/408/mind-maps/data-structures/06-graphs/06-5-bfs)
+````

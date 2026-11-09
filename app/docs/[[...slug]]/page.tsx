@@ -56,7 +56,7 @@ export function generateStaticParams() {
 
 type DocPage = NonNullable<ReturnType<typeof source.getPage>>;
 
-/** Course link and previous / next chapter within a mind-map folder. */
+/** Parent overview and adjacent maps within the current chapter folder. */
 function getMindMapNavigation(page: DocPage) {
   const folder = dirname(page.path);
   const siblings = source
@@ -65,7 +65,10 @@ function getMindMapNavigation(page: DocPage) {
     .sort((a, b) => compareMindMapPaths(a.path, b.path));
   const chapters = siblings.filter((entry) => entry.data.layout === 'mind-map');
   const index = chapters.findIndex((entry) => entry.url === page.url);
-  const courseIndex = siblings.find((entry) => /\/index\.mdx?$/u.test(entry.path));
+  const overview = siblings.find((entry) => /\/index\.mdx?$/u.test(entry.path));
+  const courseIndex = overview?.url === page.url
+    ? source.getPages().find((entry) => entry.path === `${dirname(folder)}/index.mdx`)
+    : overview;
   const toLink = (entry?: DocPage) =>
     entry ? { title: entry.data.title, url: entry.url } : undefined;
 

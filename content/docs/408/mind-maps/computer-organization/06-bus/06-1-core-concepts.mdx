@@ -1,0 +1,64 @@
+---
+title: "6.1 总线与主从设备"
+description: "总线的分时共享属性、四类规范、与CPU片内数据通路的边界"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.1 总线的概念与主从角色
+
+## 为什么需要总线
+- **总线**：多个功能部件共享的一组信息传输通路及相应协议
+  - 关注物理连线与协议，不仅是“一捆电线”
+  - “共享”：可连接多个部件；“分时”：共享传输资源在一个时刻由确定的传输方占用
+  - 现代高速互连也可能采用点到点链路与交换结构，**并非一切高速互连都为多点共享电气总线**
+- 使用目标
+  - 减少点到点连线数与扩展成本
+  - 协调处理器、主存控制器和I/O控制器之间的数据交换
+  - 代价：争用、仲裁、广播负载及信号完整性限制
+
+- <img src="/images/408-mind-maps/co-06-readable-0094.svg" alt="片内总线：CPU 内部寄存器与寄存器、寄存器与 ALU 之间的连线（五段流水线数据通路）" width="820" height="320">
+
+## 主设备与从设备
+- **主设备（master / initiator）**：发起访问；在共享总线上按协议获得使用权
+  - CPU可发起读写；DMA控制器可在DMA阶段发起主存事务
+  - “当前是主设备”是**事务角色**，不是设备永久不变的属性
+- **从设备（slave / target）**：按地址和命令响应本次访问
+  - 主存控制器、I/O接口等按协议接收命令并回复数据或完成状态
+  - 许多现代协议使用“发起方／目标方”术语
+- 举例：CPU读内存
+  - CPU给地址和读命令 → 内存返回数据
+  - 方向：地址通常从发起方向目标方；数据读回到发起方
+- 注意：**仲裁控制权**与**中断CPU**是两回事
+  - 总线仲裁决定谁可访问共享传输资源
+  - 中断是设备请求CPU改变指令执行流程；具体见[第七章](/docs/408/mind-maps/computer-organization/07-io-system)
+
+## 总线的四类规范特性
+- 机械：连接器形状、引脚分布、插槽尺寸
+- 电气：电压范围、电平标准、驱动能力、信号完整性
+- 功能：每根线表达地址、数据、控制还是状态
+- 时间：信号建立保持时间、有效窗口、应答先后
+  - 和计网物理层的规程特性在讨论时序方面相似，但名称/定义按题目与标准区分
+
+## 概念边界
+- “CPU内部一条数据通路总线”与“系统单总线结构”不是同一层级
+  - CPU内部总线连接寄存器、ALU及其他片内部件
+  - 系统总线连接CPU、存储器与I/O控制器等
+- “总线控制权”一般针对共享可仲裁总线
+- “一个总线周期”不等于CPU指令周期，也不必等于一个CPU时钟周期
+
+## 学习路径
+- [总线三类信号](/docs/408/mind-maps/computer-organization/06-bus/06-2-signal-lines) → [结构](/docs/408/mind-maps/computer-organization/06-bus/06-3-bus-topologies) → [性能](/docs/408/mind-maps/computer-organization/06-bus/06-4-performance-metrics)
+- [事务](/docs/408/mind-maps/computer-organization/06-bus/06-6-transactions-bursts) → [仲裁](/docs/408/mind-maps/computer-organization/06-bus/06-7-bus-arbitration) → [定时](/docs/408/mind-maps/computer-organization/06-bus/06-8-synchronous-timing)
+````

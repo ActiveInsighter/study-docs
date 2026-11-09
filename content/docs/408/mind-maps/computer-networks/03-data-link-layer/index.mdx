@@ -1,0 +1,84 @@
+---
+title: "第三章 数据链路层 · 21节双侧思维导图"
+description: "组帧、差错控制、停等/GBN/SR、介质访问、局域网、PPP/HDLC、交换机与VLAN的21节独立双侧Markmap导图。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 第三章 数据链路层 · 21节双侧思维导图
+
+## 章节拆分说明
+- 第三章《数据链路层》重构为**21节独立双侧Markmap导图**，覆盖原始章节全部重点分支
+- 原始8大主题：**功能、组帧、差错控制、流量控制、介质访问、局域网、广域网、设备/VLAN**；现按知识依赖和考题类型细分
+- 纠正原图关键问题：GBN计时器、SR窗口、CRC纠错误述、Wi-Fi帧地址、PPP填充和计帧、网卡层次、以太网的全双工、FDDI与VLAN/冲突域
+- 逐张核验原引用SVG，问题记录在`计算机网络第三章SVG审核明细.md`与累计`SVG待重绘清单.md`
+
+## 链路可靠性基础（3.1—3.4）
+- [3.1 链路层的任务与服务模型](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-1-role-services)
+  - 链路、帧、结点到结点、无确认和可靠服务的边界
+- [3.2 组帧与透明传输](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-2-framing)
+  - 字符计数、字节填充、零比特填充、违规编码
+- [3.3 奇偶校验、CRC与差错检测](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-3-error-crc)
+  - 奇偶校验检测范围、CRC模2除法、余数与检错边界
+- [3.4 海明码、码距与纠错能力](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-4-hamming)
+  - Hamming距离、校验位、综合症、SEC与SECDED
+
+## 确认重传与窗口计算（3.5—3.9）
+- [3.5 流量控制与ARQ总框架](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-5-arq-principles)
+  - 确认、序号、超时、窗口、可靠传输与拥塞的区别
+- [3.6 停止等待协议](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-6-stop-wait)
+  - 交替位、ACK丢失、超时重发、信道效率
+- [3.7 后退N帧GBN](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-7-gbn)
+  - 累计确认、单接收窗口、超时批量重传、序号约束
+- [3.8 选择重传SR](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-8-sr)
+  - 独立确认、乱序缓存、窗口和序号空间、重传策略
+- [3.9 滑动窗口利用率与吞吐量计算](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-9-utilization)
+  - 传播/发送/确认时延、流水线最大效率、带宽时延积
+
+## 共享信道接入（3.10—3.13）
+- [3.10 信道划分与复用：FDM、TDM、WDM、CDMA](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-10-multiplex)
+  - 静态信道划分、统计复用、正交码片与点积计算
+- [3.11 ALOHA、时隙ALOHA与CSMA](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-11-aloha-csma)
+  - 易碰撞时间窗、吞吐率、1坚持/非坚持/p坚持
+- [3.12 CSMA/CD、最短帧与指数退避](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-12-csmacd)
+  - 冲突检测、争用期、最短帧长、半双工以太网
+- [3.13 802.11 CSMA/CA与隐藏站](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-13-csmaca)
+  - DIFS、SIFS、随机退避、RTS/CTS、ACK与NAV
+
+## 以太网与无线LAN（3.14—3.16）
+- [3.14 局域网与IEEE 802子层](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-14-lan)
+  - 拓扑、LLC与MAC、共享/交换以太网、令牌环
+- [3.15 以太网帧、MAC地址和介质标准](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-15-ethernet)
+  - Ethernet II与802.3帧、64B与1518B、地址和10BASE族
+- [3.16 无线局域网802.11与帧地址](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-16-wlan)
+  - AP BSS ESS、基础设施/自组织、To DS/From DS、四地址帧
+
+## 广域链路、二层交换与VLAN（3.17—3.20）
+- [3.17 广域链路与PPP点对点协议](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-17-ppp)
+  - 广域网与互联网区别、PPP帧、LCP/NCP、透明传输
+- [3.18 HDLC比特型链路控制协议](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-18-hdlc)
+  - 标志0x7E、零比特填充、I/S/U帧、平衡与非平衡
+- [3.19 网桥、二层交换机与自学习](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-19-bridges-switches)
+  - MAC地址学习、未知单播洪泛、集线器区别、STP
+- [3.20 VLAN与802.1Q标记帧](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-20-vlan)
+  - 广播域划分、Access/Trunk、VID、Tag长度和三层互通
+
+## 综合复盘（3.21）
+- [3.21 408综合：时序、窗口和错题判别](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-21-exam-review)
+  - CRC、海明、窗口、CSMA/CD、帧长、VLAN综合复盘
+
+## 章节导航
+- [第三章总览](/docs/408/mind-maps/computer-networks/03-data-link-layer)
+
+````

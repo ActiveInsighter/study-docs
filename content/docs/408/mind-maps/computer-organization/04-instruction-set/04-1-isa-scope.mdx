@@ -1,0 +1,51 @@
+---
+title: "4.1 ISA的边界与指令系统"
+description: "区分指令集体系结构ISA、机器级代码、微体系结构与机器性能。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 4.1 指令系统与ISA：软硬件边界
+
+## 从软件到硬件
+- **指令（instruction）**：处理器可识别并执行的操作命令，通常以机器码编码
+  - 程序是按控制流组织的指令序列，含代码、数据以及执行环境
+- **ISA（指令集体系结构）**规定软件可见的机器行为
+  - 指令集、指令格式与操作语义
+  - 通用寄存器及其位宽、程序计数器/状态寄存器的可见行为
+  - 地址空间、数据类型、寻址方式、异常/特权等架构约定
+- **微体系结构**：某款CPU如何实现ISA
+  - 流水线段数、执行单元、Cache组织、乱序调度等属实现选择
+  - 相同ISA的CPU可以有不同主频、CPI、功耗与性能
+
+## 指令的主要类别
+- 数据传送：LOAD/STORE、MOV、PUSH/POP
+- 算术逻辑：ADD、SUB、MUL、AND、OR、XOR、移位
+- 程序控制：条件/无条件转移、CALL、RET、陷阱
+- 系统与特权：中断、系统调用、设备/控制寄存器管理（受ISA与特权级限制）
+
+## 哪些信息属于ISA
+- **是**：寄存器是否存在、指令编码、执行结果和寻址规则
+- **不是**：CPU时钟周期、加法器用哪种先行进位网络、具体Cache替换算法
+- 指令字长、机器字长、存储字长是三个不同的概念
+  - 指令字长：本条机器指令的编码位数，可定长或变长
+  - 机器字长：处理器某类主要整数数据通路的自然宽度（教学定义）；不必等于地址位数
+  - 存储字长：一个存储字包含的位数；**编址单位**通常另行规定
+
+## 408常见陷阱
+- 不能从“支持相同ISA”推出“CPI相同”“机器周期相同”“性能相同”
+- CISC/RISC是指令设计风格，**不直接决定**是否能使用流水线或微程序
+- [前置：计算机系统概论中的ISA与性能](/docs/408/mind-maps/computer-organization/01-overview/01-3-isa-levels)
+- [继续：指令字段与显式操作数](/docs/408/mind-maps/computer-organization/04-instruction-set/04-2-instruction-formats)
+````

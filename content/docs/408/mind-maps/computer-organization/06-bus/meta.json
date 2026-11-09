@@ -1,0 +1,19 @@
+{
+  "title": "第六章 总线",
+  "pages": [
+    "index",
+    "06-1-core-concepts",
+    "06-2-signal-lines",
+    "06-3-bus-topologies",
+    "06-4-performance-metrics",
+    "06-5-bandwidth-cases",
+    "06-6-transactions-bursts",
+    "06-7-bus-arbitration",
+    "06-8-synchronous-timing",
+    "06-9-async-handshakes",
+    "06-10-semisync-split",
+    "06-11-standards-extensions",
+    "06-12-exam-review"
+  ],
+  "defaultOpen": false
+}

@@ -1,0 +1,66 @@
+---
+title: "4.15 综合计算与易错辨析"
+description: "扩展操作码、寻址EA、访存次数、分支位移、汇编标志和RISC辨析五类练习。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 4.15 408第四章综合自测
+
+## 题型1：变长操作码
+- 16位指令、三个4位显式地址字段；三地址已用15条、二地址已用12条
+  - 一地址OP的最多可用编码数：$(16-15)\times16-12=4$个8位前缀，再扩展4位→$4\times16=64$条
+  - 如果一地址再使用62条，则零地址最多$(64-62)\times16=32$条
+- 提醒：不同地址数的OP长度不同，必须防止**前缀冲突**
+
+## 题型2：各种EA计算
+- 主存`M[100]=500`，`M[500]=42`；寄存器R1=500
+  - `LOAD R2,[100]`直接寻址 → R2=500，1次主存数据读
+  - `LOAD R2,[[100]]`单级主存间接 → R2=42，2次主存数据读
+  - `LOAD R2,[R1]`寄存器间接 → R2=42，1次主存数据读
+  - `MOV R2,R1`寄存器直接 → R2=500，0次主存数据读
+
+## 题型3：跳转地址
+- 指令首地址`0x2000`，长4字节，位移是补码8位`0xF4`，以字节为单位
+  - $0xF4=244$，有符号8位解释为$244-256=-12$
+  - 下条顺序PC=`0x2004`，跳转目标=`0x2004-12=0x1FF8`
+- 不能把位移当无符号+244，也不能直接用首地址`0x2000`相加
+
+## 题型4：有符号与无符号分支
+- EAX=`0xFFFFFFFF`，EBX=`0x00000001`；`cmp eax,ebx`
+  - 对有符号-1和1：`JL`为真
+  - 对无符号4294967295和1：`JA`为真
+  - ZF=0，不能用`JE`；两种跳转结果不同并不矛盾
+
+## 题型5：CALL相对位移
+- `E8 D6 FF FF FF`位于`0x00401025`，长5B
+  - 有符号rel32 = `0xFFFFFFD6` = −42
+  - 下一PC=`0x0040102A`；目标=`0x00401000`
+  - 返回地址被压栈，`RET`据此回到调用方
+
+## 高频易错速辨
+- 指令字长≠机器字长≠存储字长
+- 立即数直接在指令中；寄存器直接没有主存EA
+- 主存间接比寄存器间接多一次主存读（单级、忽略取指）
+- `LEA`计算地址，不读取地址对应内存的数据
+- `CMP`不保存差；有符号用JL/JG，无符号用JB/JA
+- PC相对位移通常相对已取指后PC，但**仍以题设ISA为准**
+- CISC/RISC只是典型设计倾向，不对应硬性指令数量阈值
+
+## 联动复习路线
+- [前置：补码和OF/CF](/docs/408/mind-maps/computer-organization/02-data-representation/02-5-arithmetic-flags)
+- [前置：Cache与TLB的访存层次](/docs/408/mind-maps/computer-organization/03-memory-system/03-15-tlb-cache)
+- [下一章：CPU的指令执行与微操作](/docs/408/mind-maps/computer-organization/05-cpu)
+- [返回本章导览](/docs/408/mind-maps/computer-organization/04-instruction-set)
+````

@@ -1,0 +1,77 @@
+---
+title: "第二章 进程管理 · 22节双侧导图导航"
+description: "进程状态与控制、线程、CPU调度、同步互斥、经典PV、死锁：原章节拆成22张独立双侧导图。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 第二章 进程管理（22节双侧思维导图）
+
+## 进程、状态与线程（2.1—2.6）
+- [2.1 进程、程序与 PCB](/docs/408/mind-maps/operating-systems/02-processes/02-1-process-pcb)
+  - 进程实体三要素、资源分配、PID/PCB、父子进程和地址空间边界。
+- [2.2 五状态、七状态与挂起](/docs/408/mind-maps/operating-systems/02-processes/02-2-process-states)
+  - 状态机、事件边界、就绪与阻塞、挂起态转换及易错时间线。
+- [2.3 创建、阻塞、唤醒与切换](/docs/408/mind-maps/operating-systems/02-processes/02-3-process-operations)
+  - 进程控制原语、主动/被动操作、PCB与上下文切换。
+- [2.4 共享内存、消息传递与管道](/docs/408/mind-maps/operating-systems/02-processes/02-4-ipc)
+  - 进程间通信的三类模型、阻塞语义、零拷贝与常见错误。
+- [2.5 线程与多线程映射模型](/docs/408/mind-maps/operating-systems/02-processes/02-5-thread-models)
+  - ULT/KLT、1:1/N:1/M:N模型与并行、阻塞、资源共享。
+- [2.6 线程状态、TCB与上下文切换](/docs/408/mind-maps/operating-systems/02-processes/02-6-thread-context)
+  - 线程库、内核调度、运行队列、线程与进程切换代价。
+
+## 调度评价与策略（2.7—2.10）
+- [2.7 三级调度与切换时机](/docs/408/mind-maps/operating-systems/02-processes/02-7-scheduling-levels)
+  - 高级、中级、低级调度和抢占、原语边界、调度器/分派器。
+- [2.8 调度指标与甘特图计算](/docs/408/mind-maps/operating-systems/02-processes/02-8-scheduling-metrics)
+  - 到达、开始、完成、周转、等待、响应、吞吐与SRTF示例。
+- [2.9 FCFS、SJF/SRTF、HRRN、RR与优先级](/docs/408/mind-maps/operating-systems/02-processes/02-9-scheduling-algorithms)
+  - 各调度算法的抢占方式、饥饿风险与适用条件。
+- [2.10 多级队列与多级反馈队列](/docs/408/mind-maps/operating-systems/02-processes/02-10-mlfq)
+  - 固定分类与反馈升级/降级、时间片策略及饥饿。
+
+## 互斥、信号量、管程（2.11—2.14）
+- [2.11 同步、互斥、临界资源与正确性](/docs/408/mind-maps/operating-systems/02-processes/02-11-concurrency-basics)
+  - 并发竞态、互斥准则、临界区四段与进展条件。
+- [2.12 Peterson、TSL/CAS与自旋锁](/docs/408/mind-maps/operating-systems/02-processes/02-12-mutual-exclusion)
+  - 四种软件互斥算法、原子指令、中断屏蔽与内存模型。
+- [2.13 信号量P/V与前驱关系](/docs/408/mind-maps/operating-systems/02-processes/02-13-semaphores)
+  - 整数/记录型、负值含义、互斥/同步及有向无环前驱图。
+- [2.14 管程与条件变量](/docs/408/mind-maps/operating-systems/02-processes/02-14-monitors)
+  - Hoare/Mesa语义、wait/signal、封装互斥与循环复查条件。
+
+## 同步经典题与死锁（2.15—2.22）
+- [2.15 生产者—消费者与多类产品](/docs/408/mind-maps/operating-systems/02-processes/02-15-producer-consumer)
+  - 有界缓冲区P/V顺序、容量1的多生产者消费者模型。
+- [2.16 读者—写者与公平性](/docs/408/mind-maps/operating-systems/02-processes/02-16-readers-writers)
+  - 读者优先、写者优先、服务队列与饥饿辨析。
+- [2.17 哲学家进餐、吸烟者与前驱图](/docs/408/mind-maps/operating-systems/02-processes/02-17-classical-problems)
+  - 破坏环等待、有限竞争、供应者完成握手与考研大题迁移。
+- [2.18 死锁定义与四个必要条件](/docs/408/mind-maps/operating-systems/02-processes/02-18-deadlock-conditions)
+  - 死锁、饥饿、活锁、互斥、请求保持、不可剥夺、循环等待。
+- [2.19 死锁预防、避免、检测与恢复](/docs/408/mind-maps/operating-systems/02-processes/02-19-deadlock-strategies)
+  - 四策略差异、顺序资源分配、SPOOLing与资源适配条件。
+- [2.20 银行家算法：安全序列与请求判定](/docs/408/mind-maps/operating-systems/02-processes/02-20-bankers-algorithm)
+  - Available/Allocation/Max/Need、Work/Finish、经典例题验算。
+- [2.21 死锁检测与解除：图与矩阵](/docs/408/mind-maps/operating-systems/02-processes/02-21-deadlock-detection)
+  - 多实例资源检测、图可化简、环的充分必要条件辨析。
+- [2.22 考研综合自测与高频纠错](/docs/408/mind-maps/operating-systems/02-processes/02-22-exam-synthesis)
+  - 状态、调度、PV、管程、死锁跨主题综合判断与原图纠错。
+
+## 章际衔接
+- [第一章 操作系统概述](/docs/408/mind-maps/operating-systems/01-overview)
+- [第三章 内存管理](/docs/408/mind-maps/operating-systems/03-memory)
+- [操作系统目录](/docs/408/mind-maps/operating-systems)
+````

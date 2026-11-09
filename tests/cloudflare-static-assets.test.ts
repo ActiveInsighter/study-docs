@@ -7,11 +7,36 @@ import {
   buildCloudflareAssetsIgnore,
   buildCloudflareHeaders,
   buildCloudflareRedirects,
+  buildMindMapLegacyRedirects,
   canonicalizeAssetNames,
   CLOUDFLARE_DYNAMIC_REDIRECT_LIMIT,
+  CLOUDFLARE_STATIC_REDIRECT_LIMIT,
 } from '../scripts/prepare-cloudflare-static-assets.mjs';
 
 describe('Cloudflare Workers Static Assets deployment', () => {
+  it('preserves all 402 section bookmarks and Markdown links with exact 301s', () => {
+    const routes = JSON.parse(readFileSync(resolve('lib/mind-map/legacy-routes.json'), 'utf8'));
+    const legacy = buildMindMapLegacyRedirects(routes) as Array<{ source: string; destination: string }>;
+    expect(legacy).toHaveLength(1206);
+    expect(new Set(legacy.map((entry) => entry.source)).size).toBe(1206);
+    const text = buildCloudflareRedirects([{ source: '/docs/*/index.txt', destination: '/docs/:splat/__next._full.txt' }], legacy);
+    for (const [source, target] of Object.entries(routes)) {
+      expect(text).toContain(`${source} ${target}/ 301\n`);
+      expect(text).toContain(`${source}/ ${target}/ 301\n`);
+      expect(text).toContain(`${source}.md ${target}.md 301\n`);
+    }
+    expect(text.indexOf(' 301\n')).toBeLessThan(text.indexOf(' 200\n'));
+    expect(legacy.length).toBeLessThan(CLOUDFLARE_STATIC_REDIRECT_LIMIT);
+  });
+
+  it('rejects redirect chains, loops, wildcard aliases and oversized static lists', () => {
+    const base = '/docs/408/mind-maps/data-structures/';
+    expect(() => buildMindMapLegacyRedirects({ [base + 'a']: base + 'b', [base + 'b']: base + 'c' })).toThrow(/Invalid legacy/);
+    expect(() => buildMindMapLegacyRedirects({ [base + 'a']: base + 'a' })).toThrow(/Invalid legacy/);
+    expect(() => buildMindMapLegacyRedirects({ [base + '*']: base + 'a' })).toThrow(/Invalid legacy/);
+    expect(() => buildCloudflareRedirects([{ source: '/docs/*/index.txt', destination: '/docs/:splat/__next._full.txt' }], Array.from({ length: 2001 }, () => ({ source: '/a', destination: '/b' })))).toThrow(/2000 static/);
+  });
+
   it('uses an assets-only SSG configuration with canonical trailing-slash handling', () => {
     const config = JSON.parse(readFileSync(resolve('wrangler.jsonc'), 'utf8'));
 

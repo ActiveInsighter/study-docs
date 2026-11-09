@@ -1,0 +1,29 @@
+{
+  "title": "第二章 进程管理",
+  "pages": [
+    "index",
+    "02-1-process-pcb",
+    "02-2-process-states",
+    "02-3-process-operations",
+    "02-4-ipc",
+    "02-5-thread-models",
+    "02-6-thread-context",
+    "02-7-scheduling-levels",
+    "02-8-scheduling-metrics",
+    "02-9-scheduling-algorithms",
+    "02-10-mlfq",
+    "02-11-concurrency-basics",
+    "02-12-mutual-exclusion",
+    "02-13-semaphores",
+    "02-14-monitors",
+    "02-15-producer-consumer",
+    "02-16-readers-writers",
+    "02-17-classical-problems",
+    "02-18-deadlock-conditions",
+    "02-19-deadlock-strategies",
+    "02-20-bankers-algorithm",
+    "02-21-deadlock-detection",
+    "02-22-exam-synthesis"
+  ],
+  "defaultOpen": false
+}

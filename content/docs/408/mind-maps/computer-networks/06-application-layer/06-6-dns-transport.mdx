@@ -1,0 +1,49 @@
+---
+title: "6.6 DNS UDP/TCP、缓存TTL与典型考题"
+description: "408计算机网络·应用层第六章·DNS UDP/TCP、缓存TTL与典型考题；高质量双侧Markmap分节导图。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.6 DNS UDP/TCP、缓存TTL与典型考题
+
+## DNS与传输层
+- 传统DNS通常使用**UDP 53**查询，常见请求小、无需建立TCP连接
+- DNS也支持**TCP 53**：区域传输、被截断回答或实现需要时可用
+- 现代DNS的UDP报文不再都限制为早期固定512B；**EDNS(0)**可协商更大UDP载荷
+- 超过路径MTU可能分片，解析器可改用TCP以避免UDP分片问题
+
+## 记录/缓存/邮件的联系
+- `www.example.com`的A/AAAA并不是HTTP服务本身，HTTP仍要请求资源
+- 向`user@example.com`送邮件：先查询域的**MX记录**，再解析邮件服务器的地址记录
+- `PTR`处理地址到名字的逆向映射，不能假设反向与正向结果总是互逆
+- TLS/HTTPS并不自动加密传统53端口DNS；DoT/DoH是另一些传输方案
+
+## 典型判断
+- DNS“必然使用UDP” → **错：UDP/TCP均可**
+- 根服务器“能返回任何主机的最终IP” → **错：一般提供委派**
+- TTL=100 意味着100跳 → **错：DNS TTL表示缓存寿命，通常以秒计**
+- 域名变更地址后世界各地立刻更新 → **错：缓存和TTL使更新存在传播延迟**
+
+## 复习优先级
+- 必背角色：**Stub、递归、本地DNS、根、TLD、权威**
+- 必会计算：冷缓存查询的RTT、命中缓存后减少查询、DNS与HTTP访问时延分开求
+- 考纲之外拓展：DNSSEC保护DNS数据的真实性/完整性，但本身不加密查询内容
+
+## 分节导航
+- [上一节：6.5 DNS递归/迭代与完整解析时序](/docs/408/mind-maps/computer-networks/06-application-layer/06-5-dns-query)
+- [下一节：6.7 FTP服务、控制/数据双连接与命令](/docs/408/mind-maps/computer-networks/06-application-layer/06-7-ftp-basics)
+- [应用层总览](/docs/408/mind-maps/computer-networks/06-application-layer)
+
+````

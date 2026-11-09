@@ -1,0 +1,47 @@
+---
+title: "5.11 设备分配的数据结构DCT/COCT/CHCT/SDT"
+description: "设备控制表、控制器控制表、通道控制表与系统设备表。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.11 设备分配的数据结构DCT/COCT/CHCT/SDT
+
+## 物理资源层次
+- **设备**受**控制器**管理；控制器可受**通道**管理（教材层次）
+- <img src="/images/408-mind-maps/os-0082.svg" alt="DCT、COCT、CHCT与SDT设备资源组织示意" width="780" height="460">
+- 一台设备可能有多路径；只是一条父指针的结构图为考试模型简化
+
+## 四类控制表
+- **DCT**（Device Control Table）：每台设备的类型、标识、占用状态、等待队列、关联控制器等
+- **COCT**（Controller Control Table）：每个控制器的占用状态、等待队列、通道关联等
+- **CHCT**（Channel Control Table）：每个通道的状态、等待队列、关联控制器等
+- **SDT**（System Device Table）：系统设备总表，建立物理设备到DCT及驱动等关联
+
+## 分配次序
+- 依**逻辑设备名/类型**定位候选物理设备及其DCT
+- 设备忙：按分配策略入设备等待队列
+- 设备空闲：继续申请所需控制器资源，再申请所需通道资源
+- 全部所需资源满足后开始服务，否则等待/回退，防止部分分配下产生死锁
+- 完成后按顺序归还资源并唤醒后继等待请求
+
+## 区分教材与实现
+- SDT是系统级统一设备信息抽象，不能说“所有OS都必有完全同名同结构的SDT表”
+- DCT/COCT/CHCT各自有队列，不能误以为设备排队就不需要控制器排队
+- 映射到具体驱动入口是操作系统内部工作，不是简单整数地址运算
+
+## 学习导航
+- [上一节：5.10 循环缓冲与系统缓冲池](/docs/408/mind-maps/operating-systems/05-io/05-10-ring-buffer-pool)
+- [下一节：5.12 设备分配策略、独占/共享与LUT](/docs/408/mind-maps/operating-systems/05-io/05-12-device-policy)
+````

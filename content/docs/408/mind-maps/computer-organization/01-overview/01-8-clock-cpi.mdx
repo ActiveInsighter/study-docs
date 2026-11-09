@@ -1,0 +1,54 @@
+---
+title: "1.8 时钟周期、CPI与CPU执行时间"
+description: "主频、时钟周期、加权CPI、动态指令数、程序CPU时间与算例。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 1.8 CPU时钟、CPI与执行时间
+
+## 主频与时钟周期
+- 主频$f$是单位时间的时钟周期数，单位Hz
+- 时钟周期$T_c=1/f$；如$f=2GHz$则$T_c=0.5ns$
+- **高主频不自动意味着程序运行更快**：每条指令周期数和指令条数也影响CPU时间
+- 不同频率域、动态调频等现代机制下，题目若使用固定主频是理想化模型
+
+## IC、周期数、CPI与CPU时间
+- $IC$：某程序的**动态执行指令条数**；循环/调用会让动态数大于静态指令条数
+- 总周期数$C$：运行该程序所花费的CPU时钟周期数
+- 平均CPI定义：$CPI=C/IC$
+- **核心公式**：$T_{CPU}=C/f=IC\times CPI/f$
+  - $f$用Hz，$T_{CPU}$用秒；同一测量口径才可代入
+  - $IPS=IC/T_{CPU}=f/CPI$（同一程序的平均值）
+
+## 加权平均CPI
+- 若动态指令类型i所占比例为$p_i$，其CPI为$c_i$
+- $CPI_{avg}=\sum_i p_i c_i$，条件是$\sum_i p_i=1$
+- 例：50%指令1周期、30%指令2周期、20%指令4周期
+  - $CPI_{avg}=0.5\times1+0.3\times2+0.2\times4=1.9$
+- **指令数量比例 != 周期时间比例**
+  - 4周期那类指令占20%的条数，却占$0.2\times4/1.9\approx42.1\%$的周期
+
+## 程序时间直接计算
+- 例：执行$10^9$条指令，平均$CPI=2$，主频$f=4GHz$
+  - 总周期$C=2\times10^9$
+  - $T_{CPU}=2\times10^9/(4\times10^9)=0.5s$
+- 改主频、改指令数、改CPI时必须重新计算三因素，不能只取一项估计
+
+## CPU时间和响应时间
+- CPU时间一般只计该程序的CPU执行工作（用户态+必要内核态，取决于指标）
+- 响应/墙钟时间还可能受I/O、等待、OS调度、其他任务竞争影响
+- **跨机器比较**首先选定同一程序/工作负载和同一种时间口径
+- [继续：1.9 其他性能指标](/docs/408/mind-maps/computer-organization/01-overview/01-9-benchmarks)
+````

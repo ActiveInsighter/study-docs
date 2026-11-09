@@ -1,0 +1,52 @@
+---
+title: "4.17 BGP路径向量与跨AS选路"
+description: "408 计算机网络 第四章·BGP路径向量与跨AS选路：独立双侧Markmap，含考研核心概念、步骤、易错点与计算。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 4.17 BGP路径向量与跨AS选路
+
+## BGP做什么
+- Border Gateway Protocol：典型**跨AS路由协议**，在互联网上传播前缀可达性与选路属性
+- 基于**TCP端口179**，提供可靠的邻居会话传输
+- eBGP通常连接不同AS；iBGP在同一AS内部传播BGP路由信息
+- **不要把BGP等同最短路**：管理政策和属性可能压倒跳数/代价最小
+
+## 路径向量与防环
+- 传播前缀`203.0.113.0/24`及AS_PATH、NEXT_HOP等属性
+- 本AS如已在AS_PATH中，通常拒绝以免AS级环路
+- AS_PATH记录自治域路径；**不是逐跳的路由器MAC列表**
+- 路由可根据LocalPref、AS_PATH等属性与策略选取；不同实现与配置顺序可影响结果
+
+## 会话报文4类（经典）
+- OPEN：协商建立BGP会话的参数
+- UPDATE：通告/撤销路由与路径属性
+- KEEPALIVE：维持邻居会话
+- NOTIFICATION：报告错误或结束会话
+
+## 与IGP的分工
+- AS内IGP帮助路由器到达BGP NEXT_HOP；BGP决定哪些外部前缀可走哪条AS路径
+- OSPF路由器不用“每个自治系统都全员跑BGP”；边界设备及所需iBGP参与者按拓扑配置
+- 多区域OSPF的区域编号与AS编号不是同一层次概念
+
+## 典型大题
+- 给出可达前缀与AS_PATH，检查“自己AS重复”→丢弃该路径
+- **BGP对等体交换的是网络可达信息和策略属性**，不会把全球所有具体物理链路图传播给每一台设备
+## 章节导航
+- [返回第四章导览](/docs/408/mind-maps/computer-networks/04-network-layer)
+- [上一节：4.16 OSPF链路状态、区域与SPF](/docs/408/mind-maps/computer-networks/04-network-layer/04-16-ospf)
+- [下一节：4.18 IP组播、IGMP与组播MAC](/docs/408/mind-maps/computer-networks/04-network-layer/04-18-multicast)
+
+````

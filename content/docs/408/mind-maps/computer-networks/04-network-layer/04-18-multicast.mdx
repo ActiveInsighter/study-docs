@@ -1,0 +1,51 @@
+---
+title: "4.18 IP组播、IGMP与组播MAC"
+description: "408 计算机网络 第四章·IP组播、IGMP与组播MAC：独立双侧Markmap，含考研核心概念、步骤、易错点与计算。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 4.18 IP组播、IGMP与组播MAC
+
+## 单播、广播、组播
+- 单播：一个源到指定目的单播地址；广播：向链路/子网所有相关主机
+- IP组播：发送到一个**组地址**，只有加入组的接收端希望处理该流量
+- IPv4组播目的地址属`224.0.0.0/4`（D类），**不能用作普通IPv4源地址**
+
+## IGMP仅管理成员关系
+- IGMP=Internet Group Management Protocol，IPv4协议号`2`
+- 主机与**本地相邻的组播路由器**交换成员报告/查询等，用于学习哪些组在本地有听众
+- **IGMP不负责跨多个路由器建立组播分发树**；路由侧可由PIM等组播路由协议维护
+- IPv6相应链路成员管理以MLD（基于ICMPv6）实现
+
+## 组播如何减少复制
+- 沿分发树传输，到需要分叉处才复制分组；避免每个用户都发送完整单播副本
+- 路由器依组播转发状态和RPF等原则转发，避免回环/重复
+- **IP组播并不只限UDP**：实际流媒体常用UDP，但“只能用UDP”错误
+
+## IPv4组播MAC映射
+- 目的以太网MAC前缀`01:00:5e`，其余映射规则保留IPv4组播地址**低23位**
+- 因28位组内可变地址映射到23位MAC，**32个不同组播IPv4地址可能映射到同一组播MAC**
+- 因碰撞，链路层收到MAC组播帧后，IP/套接字层仍需过滤是否本组
+- 不是“一个IP映射到多个MAC”也不是“一一对应”
+
+## 常见考法
+- IP地址`224.0.0.1`是特殊本地组播，不能随意当作公网可用单播地址
+- IGMP是成员管理，PIM是组播路由；不能把RIP、OSPF本身直接等同组播树协议
+## 章节导航
+- [返回第四章导览](/docs/408/mind-maps/computer-networks/04-network-layer)
+- [上一节：4.17 BGP路径向量与跨AS选路](/docs/408/mind-maps/computer-networks/04-network-layer/04-17-bgp)
+- [下一节：4.19 移动IP、归属代理与转交地址](/docs/408/mind-maps/computer-networks/04-network-layer/04-19-mobile-ip)
+
+````

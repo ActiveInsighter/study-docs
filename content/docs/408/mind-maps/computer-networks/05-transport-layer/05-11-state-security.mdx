@@ -1,0 +1,49 @@
+---
+title: "5.11 TCP状态、异常连接与SYN洪泛"
+description: "408 计算机网络第五章·TCP状态、异常连接与SYN洪泛；分节双侧Markmap，含核心概念、考点计算与常见误区。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.11 TCP状态、异常连接与SYN洪泛
+
+## 连接常见状态
+- `CLOSED`：没有连接；服务端调用监听接口后可处于`LISTEN`
+- `SYN-SENT`：主动发SYN，等待SYN-ACK；`SYN-RCVD`：已收SYN、已发SYN-ACK，等末次确认
+- `ESTABLISHED`：数据双向传输；`FIN-WAIT-1/2`：主动关闭后等待确认和对方FIN
+- `CLOSE-WAIT`与`LAST-ACK`：被动关闭方等待应用结束发送及最后确认
+- `TIME-WAIT`：主动关闭方等待2MSL；`CLOSING`：双方几乎同时关闭可能出现
+
+## SYN洪泛是什么
+- 大量SYN使服务端为待完成握手维护**半连接队列或相关状态**，耗尽资源或导致正常连接排队失败
+- 攻击者可能伪造源IP，导致SYN-ACK收不到最后ACK；不是“服务器只回复普通ACK”
+- 服务端往往重传`SYN+ACK`后按超时回收相关半连接状态
+- 典型缓解包括SYN Cookies、积压队列调整、速率限制和网络侧过滤；都存在实现与环境约束
+
+## 状态转换与报文段关系
+- `RST=1`通常中止连接，未必按FIN四次释放
+- 客户端首次SYN可能丢失 → 超时重传SYN；握手仍可能最终成功
+- TCP有同时打开/同时关闭等特殊场景，**题目未说明时按标准主动/被动情形推导**
+
+## 典型易错
+- “半连接”特指握手尚未完成的状态，与FIN关闭中的“半关闭”不同
+- `CLOSE-WAIT`多与服务端应用未及时关闭相关；`TIME-WAIT`并非服务端专属
+- SYN洪泛攻击影响可用性，不等于破解TCP数据保密性
+
+## 章节导航
+- [上一节：5.10 四次挥手、半关闭与TIME_WAIT](/docs/408/mind-maps/computer-networks/05-transport-layer/05-10-teardown)
+- [下一节：5.12 序号、累计确认与字节级推导](/docs/408/mind-maps/computer-networks/05-transport-layer/05-12-seq-ack)
+- [计算机网络总览](/docs/408/mind-maps/computer-networks)
+
+````
