@@ -27,8 +27,6 @@ markmap:
   - 经 k：$D[i][k]+D[k][j]$
 - 转移：$D[i][j]\leftarrow\min(D[i][j],\,D[i][k]+D[k][j])$
 
-- <img src="/images/408-mind-maps/ds-0206.svg" alt="Floyd 算法的执行过程：依次以 v0、v1、v2 作为中转点" width="860" height="470">
-
 ## 三层循环
 - **k 必须是最外层**，逐个扩展允许的中转点集合
 - 内层对所有 i、j 尝试松弛：`for k: for i: for j: relax(i,j,k)`

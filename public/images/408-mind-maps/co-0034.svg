@@ -5,7 +5,7 @@
 <text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">存储芯片的基本原理</text>
 <rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
 <rect x="260" y="100" width="500" height="210" rx="8" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="1.2"/>
-<text x="510" y="210.6" font-size="13" fill="#3f3f46" text-anchor="middle">存储矩阵：2<tspan baseline-shift="38%" font-size="72%">n</tspan> 个存储单元 × 存储字长</text>
+<text x="510" y="210.6" font-size="13" fill="#3f3f46" text-anchor="middle">存储矩阵：2<tspan baseline-shift="38%" font-size="9.36">n</tspan> 个存储单元 × 存储字长</text>
 <path d="M240 124L760 124" fill="none" stroke="#d1493a" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M240 174L760 174" fill="none" stroke="#d1493a" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M240 224L760 224" fill="none" stroke="#d1493a" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>

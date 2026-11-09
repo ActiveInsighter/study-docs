@@ -34,8 +34,6 @@ markmap:
 - 每次完整读写约 2 倍：**72 次记录读写量**（不计生成初始段）
 - 若错误地先合并 2+9 和 3+6，会得较大 WPL=40
 
-- <img src="/images/408-mind-maps/ds-0025.svg" alt="二路归并的最佳归并树（哈夫曼树）：WPL = 34" width="560" height="430">
-
 ## 严格 k 叉树的虚段补齐
 - 严格 k 叉归并树：每个内部结点**恰有 k 个孩子**
 - 叶子数为 r，内部结点数为 t 时：$r=(k-1)t+1$
@@ -46,10 +44,6 @@ markmap:
   - r=111 时无需补；r=122 时仍需补9个
 - **整除时 u=0**，不能机械地按 `k−1−余数` 补满 k−1 个
 
-- <img src="/images/408-mind-maps/ds-0052.svg" alt="补充长度为 0 的虚段后构造严格 3 叉最佳归并树" width="560" height="380">
-
-- <img src="/images/408-mind-maps/ds-0029.svg" alt="需要补充的虚段个数：k = 4，n₀ = 9 时补 1 个" width="780" height="380">
-
 ## 三路归并示例与注意
 - 初始权重为 `2,3,6,9`，k=3，补1个0权虚段
 - 第一次合并 0+2+3=5；第二次合并 5+6+9=20
@@ -58,6 +52,4 @@ markmap:
 - <img src="/images/408-mind-maps/ds-0019.svg" alt="三路归并的权值树与WPL示意" width="700" height="390">
 - <img src="/images/408-mind-maps/ds-0015.svg" alt="三路归并需要虚段补齐的未修订树形结构" width="680" height="457">
 - [继续：8.18 排序综合](/docs/408/mind-maps/data-structures/08-18-exam)
-- <img src="/images/408-mind-maps/ds-0161.svg" alt="3 路最佳归并树：每次取权值最小的三个结点合并" width="560" height="380">
-
 ````

@@ -540,10 +540,10 @@
       ],
       "alt": "请求报文：从客户向服务器发送的请求报文",
       "target": "computer-networks/06-14-http-request.mdx",
-      "selectedAsset": "cn-0010.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "HTTP/1.1请求报文结构"
+      "selectedAsset": "cn-06-http-messages-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "cn-0095.svg",
@@ -559,10 +559,10 @@
       ],
       "alt": "响应报文：从服务器到客户的回答",
       "target": "computer-networks/06-15-http-response.mdx",
-      "selectedAsset": "cn-0095.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "响应报文的组成"
+      "selectedAsset": "cn-06-http-messages-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "co-0232.svg",
@@ -577,10 +577,10 @@
       ],
       "alt": "早期冯诺依曼机是以【运算器】作为核心的",
       "target": "computer-organization/01-2-von-neumann.mdx",
-      "selectedAsset": "co-0232.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "冯·诺依曼机的核心思想"
+      "selectedAsset": "co-01-von-neumann-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "co-0123.svg",
@@ -594,9 +594,10 @@
       "alt": "【没有符号位】，有n个bit，则数的表示范围为：( 0 ~ 2^n - 1 )",
       "target": "computer-organization/02-2-number-representations.mdx",
       "selectedAsset": "co-0123.svg",
-      "reason": "restored-original",
+      "reason": "repaired-original",
       "action": "inserted",
-      "branch": "有符号和无符号、定点整数与小数"
+      "branch": "有符号和无符号、定点整数与小数",
+      "audit": "Relative tspan font sizes resolved against inherited font size; diagram content and dimensions preserved; corrected final bit index to n-1 for an n-bit unsigned integer"
     },
     {
       "asset": "co-0032.svg",
@@ -794,10 +795,10 @@
       ],
       "alt": "带标记加法器逻辑电路",
       "target": "computer-organization/02-5-arithmetic-flags.mdx",
-      "selectedAsset": "co-0178.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "四个常考条件码"
+      "selectedAsset": "co-0137.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "co-0299.svg",
@@ -1024,9 +1025,10 @@
       "alt": "【基础版】一次刷新一整行",
       "target": "computer-organization/03-3-refresh.mdx",
       "selectedAsset": "co-0010.svg",
-      "reason": "restored-original",
+      "reason": "repaired-original",
       "action": "inserted",
-      "branch": "刷新基本原理"
+      "branch": "刷新基本原理",
+      "audit": "Relative tspan font sizes resolved against inherited font size; diagram content and dimensions preserved"
     },
     {
       "asset": "co-0148.svg",
@@ -1042,9 +1044,10 @@
       "alt": "【行列存储版】把地址分布改为行地址+列地址的存储方式",
       "target": "computer-organization/03-3-refresh.mdx",
       "selectedAsset": "co-0148.svg",
-      "reason": "restored-original",
+      "reason": "repaired-original",
       "action": "inserted",
-      "branch": "刷新基本原理"
+      "branch": "刷新基本原理",
+      "audit": "Relative tspan font sizes resolved against inherited font size; diagram content and dimensions preserved"
     },
     {
       "asset": "co-0044.svg",
@@ -1074,9 +1077,10 @@
       "alt": "存储芯片：",
       "target": "computer-organization/03-5-chip-organization.mdx",
       "selectedAsset": "co-0034.svg",
-      "reason": "restored-original",
+      "reason": "repaired-original",
       "action": "inserted",
-      "branch": "从存储单元到芯片"
+      "branch": "从存储单元到芯片",
+      "audit": "Relative tspan font sizes resolved against inherited font size; diagram content and dimensions preserved"
     },
     {
       "asset": "co-0281.svg",
@@ -1092,9 +1096,10 @@
       "alt": "高位2bit是对应不同的存储体",
       "target": "computer-organization/03-7-multi-bank.mdx",
       "selectedAsset": "co-0281.svg",
-      "reason": "restored-original",
+      "reason": "repaired-original",
       "action": "inserted",
-      "branch": "高位交叉与低位交叉"
+      "branch": "高位交叉与低位交叉",
+      "audit": "Relative tspan font sizes resolved against inherited font size; diagram content and dimensions preserved"
     },
     {
       "asset": "co-0261.svg",
@@ -1130,9 +1135,10 @@
       "alt": "低位2bit对应不同存储体",
       "target": "computer-organization/03-7-multi-bank.mdx",
       "selectedAsset": "co-0253.svg",
-      "reason": "restored-original",
+      "reason": "repaired-original",
       "action": "inserted",
-      "branch": "高位交叉与低位交叉"
+      "branch": "高位交叉与低位交叉",
+      "audit": "Relative tspan font sizes resolved against inherited font size; diagram content and dimensions preserved"
     },
     {
       "asset": "co-0067.svg",
@@ -1279,9 +1285,10 @@
       "alt": "普通的3-8译码器",
       "target": "computer-organization/03-5-chip-organization.mdx",
       "selectedAsset": "co-0157.svg",
-      "reason": "restored-original",
+      "reason": "repaired-original",
       "action": "inserted",
-      "branch": "译码器和片选"
+      "branch": "译码器和片选",
+      "audit": "Relative tspan font sizes resolved against inherited font size; diagram content and dimensions preserved"
     },
     {
       "asset": "co-0175.svg",
@@ -1297,9 +1304,10 @@
       "alt": "EN使能",
       "target": "computer-organization/03-5-chip-organization.mdx",
       "selectedAsset": "co-0175.svg",
-      "reason": "restored-original",
+      "reason": "repaired-original",
       "action": "inserted",
-      "branch": "译码器和片选"
+      "branch": "译码器和片选",
+      "audit": "Relative tspan font sizes resolved against inherited font size; diagram content and dimensions preserved"
     },
     {
       "asset": "co-0302.svg",
@@ -1316,9 +1324,10 @@
       "alt": "74ls138",
       "target": "computer-organization/03-5-chip-organization.mdx",
       "selectedAsset": "co-0302.svg",
-      "reason": "restored-original",
+      "reason": "repaired-original",
       "action": "inserted",
-      "branch": "译码器和片选"
+      "branch": "译码器和片选",
+      "audit": "Relative tspan font sizes resolved against inherited font size; diagram content and dimensions preserved"
     },
     {
       "asset": "co-0037.svg",
@@ -1353,9 +1362,10 @@
       "alt": "CPU先把地址信号传递到地址线上面去，检测到信号稳定后，CPU才会把MREQ设置为0，芯片才能进行运作",
       "target": "computer-organization/03-5-chip-organization.mdx",
       "selectedAsset": "co-0066.svg",
-      "reason": "restored-original",
+      "reason": "repaired-original",
       "action": "inserted",
-      "branch": "信号与时序"
+      "branch": "信号与时序",
+      "audit": "Relative tspan font sizes resolved against inherited font size; diagram content and dimensions preserved"
     },
     {
       "asset": "co-0180.svg",
@@ -1713,10 +1723,10 @@
       ],
       "alt": "扩展操作码：",
       "target": "computer-organization/04-3-extended-opcodes.mdx",
-      "selectedAsset": "co-0318.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "完整分配实例"
+      "selectedAsset": "co-04-opcode-prefix-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "co-0235.svg",
@@ -2893,10 +2903,10 @@
       ],
       "alt": "同步定时",
       "target": "computer-organization/06-8-synchronous-timing.mdx",
-      "selectedAsset": "co-0194.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "教材同步读事务：四相位示意"
+      "selectedAsset": "co-06-sync-waveform-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "co-0087.svg",
@@ -2960,10 +2970,10 @@
       ],
       "alt": "同步 + 异步",
       "target": "computer-organization/06-10-semisync-split.mdx",
-      "selectedAsset": "co-0089.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "半同步方式"
+      "selectedAsset": "co-06-semisync-wait-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "co-0075.svg",
@@ -2978,11 +2988,11 @@
         "在INTR中加入硬件排队器/查询程序，来获得当前的最优先请求"
       ],
       "alt": "在INTR中加入硬件排队器/查询程序，来获得当前的最优先请求",
-      "target": "computer-organization/07-8-priority-mask.mdx",
-      "selectedAsset": "co-0075.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "三种“优先”不可混淆"
+      "target": "computer-organization/07-6-interrupt-vector.mdx",
+      "selectedAsset": "co-07-interrupt-priority-redrawn.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "co-0238.svg",
@@ -2998,10 +3008,10 @@
       ],
       "alt": "MASK为该中断的中断屏蔽字",
       "target": "computer-organization/07-8-priority-mask.mdx",
-      "selectedAsset": "co-0238.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "屏蔽位约定：1 屏蔽，0 放行"
+      "selectedAsset": "co-07-mask-matrix-redrawn.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "ds-0133.svg",
@@ -3014,10 +3024,10 @@
       ],
       "alt": "三对角矩阵（带状矩阵）",
       "target": "data-structures/03-9-banded-sparse.mdx",
-      "selectedAsset": "ds-0133.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "三对角矩阵的结构"
+      "selectedAsset": "ds-03-tridiagonal-redrawn.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "ds-0176.svg",
@@ -3030,10 +3040,10 @@
       ],
       "alt": "满二叉树",
       "target": "data-structures/05-3-binary-types.mdx",
-      "selectedAsset": "ds-0176.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "满二叉树"
+      "selectedAsset": "ds-05-full-tree-redrawn.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "ds-0032.svg",
@@ -3064,10 +3074,10 @@
       ],
       "alt": "非完全二叉树",
       "target": "data-structures/05-4-binary-storage.mdx",
-      "selectedAsset": "ds-0064.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "一般二叉树的顺序存储"
+      "selectedAsset": "ds-05-sparse-sequential-redrawn.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "ds-0100.svg",
@@ -3095,10 +3105,10 @@
       ],
       "alt": "定义：",
       "target": "data-structures/05-13-union-find.mdx",
-      "selectedAsset": "ds-0152.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "解决什么问题"
+      "selectedAsset": "ds-05-dsu-sets-redrawn.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "ds-0124.svg",
@@ -3127,10 +3137,10 @@
       ],
       "alt": "简单图：",
       "target": "data-structures/06-1-definitions.mdx",
-      "selectedAsset": "ds-0136.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "简单图与完全图"
+      "selectedAsset": "ds-06-simple-graph-redrawn.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "ds-0033.svg",
@@ -3178,10 +3188,10 @@
       ],
       "alt": "动态规范算法，动态维护一个dis\\[\\]\\[\\]和path\\[\\]\\[\\]，每次更新时都加入一个新的节点作为可使用的中转点。",
       "target": "data-structures/06-11-floyd.mdx",
-      "selectedAsset": "ds-0206.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "Floyd–Warshall 的状态"
+      "selectedAsset": "ds-06-floyd-redrawn.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "ds-0003.svg",
@@ -3196,10 +3206,10 @@
       ],
       "alt": "找关键路径ve(i), le(i)",
       "target": "data-structures/06-13-critical-path.mdx",
-      "selectedAsset": "ds-0003.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "事件最迟发生时间 vl"
+      "selectedAsset": "ds-06-aoe-events-redrawn.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "ds-0078.svg",
@@ -3214,10 +3224,10 @@
       ],
       "alt": "找关键路径的活动的 e(i), l(i), l(i)-e(i)",
       "target": "data-structures/06-13-critical-path.mdx",
-      "selectedAsset": "ds-0078.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "活动的 e、l 和时差 d"
+      "selectedAsset": "ds-06-aoe-activities-redrawn.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "ds-0143.svg",
@@ -3228,11 +3238,11 @@
         "图的连通分量"
       ],
       "alt": "图的连通分量",
-      "target": "data-structures/06-9-kruskal.mdx",
-      "selectedAsset": "ds-0143.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "并查集的正确使用"
+      "target": "data-structures/06-2-connectivity.mdx",
+      "selectedAsset": "ds-06-dsu-components-redrawn.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "ds-0170.svg",
@@ -3244,10 +3254,10 @@
       ],
       "alt": "判断是否有环",
       "target": "data-structures/06-9-kruskal.mdx",
-      "selectedAsset": "ds-0170.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "并查集的正确使用"
+      "selectedAsset": "ds-06-dsu-cycle-redrawn.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "ds-0209.svg",
@@ -3260,10 +3270,10 @@
       ],
       "alt": "数据 结构",
       "target": "data-structures/07-9-btree-properties.mdx",
-      "selectedAsset": "ds-0209.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "基本定义（408教材常用约定）"
+      "selectedAsset": "ds-07-btree-node-redrawn.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "ds-0010.svg",
@@ -3389,10 +3399,10 @@
       ],
       "alt": "最佳归并树（哈夫曼树）",
       "target": "data-structures/08-17-optimal-merge.mdx",
-      "selectedAsset": "ds-0025.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "二路归并示例"
+      "selectedAsset": "ds-08-optimal-merge-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "ds-0161.svg",
@@ -3407,10 +3417,10 @@
       ],
       "alt": "用类似哈夫曼树的方法构造：每次找权值最小的三个结点来归并",
       "target": "data-structures/08-17-optimal-merge.mdx",
-      "selectedAsset": "ds-0161.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "三路归并示例与注意"
+      "selectedAsset": "ds-08-optimal-merge-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "ds-0052.svg",
@@ -3426,10 +3436,10 @@
       ],
       "alt": "补充长度为0的虚段来凑归并段",
       "target": "data-structures/08-17-optimal-merge.mdx",
-      "selectedAsset": "ds-0052.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "严格 k 叉树的虚段补齐"
+      "selectedAsset": "ds-08-optimal-merge-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "ds-0029.svg",
@@ -3448,10 +3458,10 @@
       ],
       "alt": "需要补充的虚段个数：",
       "target": "data-structures/08-17-optimal-merge.mdx",
-      "selectedAsset": "ds-0029.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "严格 k 叉树的虚段补齐"
+      "selectedAsset": "ds-08-optimal-merge-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "os-0089.svg",
@@ -3463,10 +3473,10 @@
       ],
       "alt": "模块化",
       "target": "operating-systems/01-12-kernel-architectures.mdx",
-      "selectedAsset": "os-0089.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "分层与模块化"
+      "selectedAsset": "os-01-kernel-structure-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "os-0121.svg",
@@ -3512,10 +3522,10 @@
       ],
       "alt": "RAM和ROM",
       "target": "operating-systems/01-13-boot-bios-mbr.mdx",
-      "selectedAsset": "os-0043.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "为什么要引导"
+      "selectedAsset": "os-01-boot-paths-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "os-0105.svg",
@@ -3527,10 +3537,10 @@
       ],
       "alt": "步骤图示：",
       "target": "operating-systems/01-13-boot-bios-mbr.mdx",
-      "selectedAsset": "os-0105.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "典型传统链条（示意）"
+      "selectedAsset": "os-01-boot-paths-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "os-0034.svg",
@@ -3657,10 +3667,10 @@
       ],
       "alt": "地址变化机构",
       "target": "operating-systems/03-14-demand-paging.mdx",
-      "selectedAsset": "os-0081.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "页表项需要记录什么"
+      "selectedAsset": "os-03-demand-paging-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "os-0154.svg",
@@ -3674,10 +3684,10 @@
       ],
       "alt": "图示：",
       "target": "operating-systems/04-16-group-link.mdx",
-      "selectedAsset": "os-0154.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "结构模型"
+      "selectedAsset": "os-04-group-link-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "os-0146.svg",
@@ -3725,10 +3735,10 @@
       ],
       "alt": "UNIX文件系统",
       "target": "operating-systems/04-9-directory-fcb-inode.mdx",
-      "selectedAsset": "os-0104.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "目录项与文件控制块"
+      "selectedAsset": "os-04-directory-inode-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "os-0035.svg",
@@ -3759,10 +3769,10 @@
       ],
       "alt": "流程图：",
       "target": "operating-systems/05-8-single-buffer.mdx",
-      "selectedAsset": "os-0093.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "单缓冲过程"
+      "selectedAsset": "os-05-single-buffer-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "os-0112.svg",
@@ -3776,10 +3786,10 @@
       ],
       "alt": "流程图：",
       "target": "operating-systems/05-9-double-buffer.mdx",
-      "selectedAsset": "os-0112.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "双缓冲的本质"
+      "selectedAsset": "os-05-double-buffer-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     },
     {
       "asset": "os-0115.svg",
@@ -3807,10 +3817,10 @@
       ],
       "alt": "SPOOLING技术",
       "target": "operating-systems/05-13-spooling.mdx",
-      "selectedAsset": "os-0092.svg",
-      "reason": "restored-original",
-      "action": "inserted",
-      "branch": "SPOOLing是什么"
+      "selectedAsset": "os-05-spooling-clean.svg",
+      "reason": "verified-redraw",
+      "action": "already-in-section",
+      "audit": "Package chapter audit explicitly supersedes the source figure"
     }
   ],
   "sourceZipSha256": "5898e683abf84f7d352d8e1870b8d2bb013877b1f2cc5be9b86540a2be52a36c",
@@ -3819,9 +3829,21 @@
     "sectionMaps": 402,
     "mdxPages": 433,
     "svgFiles": 612,
-    "referencedSvgFiles": 530,
-    "restoredOriginalAssets": 141,
+    "referencedSvgFiles": 497,
+    "restoredOriginalAssets": 108,
     "newlyConnectedFixedAssets": 8,
-    "intentionallySupersededOriginalAssets": 82
-  }
+    "intentionallySupersededOriginalAssets": 115
+  },
+  "compatibilityRepairs": [
+    "co-0010.svg",
+    "co-0148.svg",
+    "co-0034.svg",
+    "co-0281.svg",
+    "co-0253.svg",
+    "co-0157.svg",
+    "co-0175.svg",
+    "co-0302.svg",
+    "co-0066.svg",
+    "co-0123.svg"
+  ]
 }
