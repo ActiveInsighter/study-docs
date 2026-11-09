@@ -281,11 +281,11 @@ async function mindMap(page, base) {
   await page.goto(base + '/docs/408/mind-maps/operating-systems/02-processes/02-6-thread-context/', { waitUntil: 'networkidle2', timeout: 120000 });
   await page.waitForSelector('.mind-map[data-status="ready"] svg.mind-map-surface', { timeout: 60000 });
   const nodes = await page.evaluate(() => document.querySelectorAll('svg.mind-map-surface [data-node-id]').length);
-  const buttons = await page.evaluate(() => document.querySelectorAll('.markmap-toolbar button').length);
+  const buttons = await page.evaluate(() => document.querySelectorAll('.mind-map-toolbar button').length);
   if (nodes < 10 || buttons < 4) throw new Error(`Mind map rendered ${nodes} node groups and ${buttons} toolbar buttons.`);
 
   // Reveal a labelled figure, then check both the SVG resource and the real
-  // click-to-preview path (the map uses SVG <image>, the dialog uses <img>).
+  // click-to-preview path (the map uses SVG <image>, the image modal uses <img>).
   const focus = encodeURIComponent('线程状态与TCB');
   await page.evaluate((hash) => { location.hash = hash; }, '#focus=' + focus);
   const selector = 'svg.mind-map-surface image[href="/images/408-mind-maps/os-0046.svg"]';
@@ -312,10 +312,14 @@ async function mindMap(page, base) {
   }, { timeout: 60000 }, selector);
   await page.click(selector);
   await page.waitForFunction(() => {
-    const image = document.querySelector('dialog[open] .mind-map-lightbox-image');
-    return image?.getAttribute('src') === '/images/408-mind-maps/os-0046.svg' && image.complete && image.naturalWidth > 0;
+    const modal = document.querySelector('[data-mind-map-image-modal]');
+    const image = modal?.querySelector('img.mind-map-image[data-ready]');
+    const download = modal?.querySelector('a[aria-label="下载图片"]');
+    return image?.getAttribute('src') === '/images/408-mind-maps/os-0046.svg' && image.complete && image.naturalWidth > 0
+      && download?.getAttribute('href') === '/images/408-mind-maps/os-0046.svg';
   }, { timeout: 60000 });
-  await page.click('dialog[open] button[aria-label="关闭"]');
+  await page.click('[data-mind-map-image-modal] [data-slot="modal-close"]');
+  await page.waitForFunction(() => !document.querySelector('[data-mind-map-image-modal]'), { timeout: 10000 });
   return `nodes=${nodes} buttons=${buttons} SVG figure and preview loaded`;
 }
 
