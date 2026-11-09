@@ -29,7 +29,7 @@
 <path d="M510 296L510 262" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)"/>
 <text x="518" y="294" font-size="11" fill="#3f3f46">时钟</text>
 <rect x="398" y="216" width="22" height="30" rx="0" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
-<text x="409" y="206" font-size="10.5" fill="#d1493a" text-anchor="middle">辅助位</text>
+<text x="409" y="197" font-size="10.5" fill="#d1493a" text-anchor="middle">辅助位</text>
 <rect x="510" y="60" width="240" height="70" rx="8" fill="#efe9fb" stroke="#7856c9" stroke-width="1.5"/>
 <text x="630" y="91.1" font-size="12" fill="#3b0764" text-anchor="middle"><tspan x="630" dy="0">辅助位 − 最低位：</tspan><tspan x="630" dy="16.2">−1：+[−x]<tspan baseline-shift="-22%" font-size="9.5">补</tspan>　0：+0　1：+[x]<tspan baseline-shift="-22%" font-size="9.5">补</tspan></tspan></text>
 <rect x="40" y="290" width="0" height="0" rx="8" fill="none" stroke="none" stroke-width="1.5"/>
