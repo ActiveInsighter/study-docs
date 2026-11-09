@@ -2,7 +2,7 @@
 <title>DRAM 行列地址：行译码器 + 列译码器，选通线从 2^n 降为 2×2^(n/2)</title>
 <defs><marker id="a2f8f57" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#2f8f57"/></marker><marker id="a3b6fd4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3b6fd4"/></marker></defs>
 <rect x="0.75" y="0.75" width="778.5" height="318.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
-<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">行列地址：选通线 2<tspan baseline-shift="38%" font-size="72%">n</tspan> → 2 × 2<tspan baseline-shift="38%" font-size="72%">n/2</tspan></text>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">行列地址：选通线 2<tspan baseline-shift="38%" font-size="12.24">n</tspan> → 2 × 2<tspan baseline-shift="38%" font-size="12.24">n/2</tspan></text>
 <rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
 <rect x="100" y="70" width="40" height="150" rx="5" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
 <text x="120" y="108.7" font-size="12" fill="#7f1d1d" text-anchor="middle"><tspan x="120" dy="0">行</tspan><tspan x="120" dy="16.2">地</tspan><tspan x="120" dy="16.2">址</tspan><tspan x="120" dy="16.2">译</tspan><tspan x="120" dy="16.2">码</tspan><tspan x="120" dy="16.2">器</tspan></text>
@@ -12,7 +12,7 @@
 <text x="385" y="89" font-size="11.5" fill="#18181b" text-anchor="middle">(0,1)</text>
 <text x="535" y="89.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
 <rect x="620" y="70" width="130" height="30" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="685" y="89" font-size="11.5" fill="#18181b" text-anchor="middle">(0, 2<tspan baseline-shift="38%" font-size="72%">n/2</tspan>−1)</text>
+<text x="685" y="89" font-size="11.5" fill="#18181b" text-anchor="middle">(0, 2<tspan baseline-shift="38%" font-size="8.28">n/2</tspan>−1)</text>
 <path d="M140 85L168 85" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
 <rect x="170" y="108" width="130" height="30" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
 <text x="235" y="127" font-size="11.5" fill="#18181b" text-anchor="middle">(1,0)</text>
@@ -20,7 +20,7 @@
 <text x="385" y="127" font-size="11.5" fill="#18181b" text-anchor="middle">(1,1)</text>
 <text x="535" y="127.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
 <rect x="620" y="108" width="130" height="30" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="685" y="127" font-size="11.5" fill="#18181b" text-anchor="middle">(1, 2<tspan baseline-shift="38%" font-size="72%">n/2</tspan>−1)</text>
+<text x="685" y="127" font-size="11.5" fill="#18181b" text-anchor="middle">(1, 2<tspan baseline-shift="38%" font-size="8.28">n/2</tspan>−1)</text>
 <path d="M140 123L168 123" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
 <text x="235" y="165.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
 <text x="385" y="165.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
@@ -28,12 +28,12 @@
 <text x="685" y="165.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
 <path d="M140 161L168 161" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
 <rect x="170" y="184" width="130" height="30" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="235" y="203" font-size="11.5" fill="#18181b" text-anchor="middle">(2<tspan baseline-shift="38%" font-size="72%">n/2</tspan>−1, 0)</text>
+<text x="235" y="203" font-size="11.5" fill="#18181b" text-anchor="middle">(2<tspan baseline-shift="38%" font-size="8.28">n/2</tspan>−1, 0)</text>
 <rect x="320" y="184" width="130" height="30" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="385" y="203" font-size="11.5" fill="#18181b" text-anchor="middle">(2<tspan baseline-shift="38%" font-size="72%">n/2</tspan>−1, 1)</text>
+<text x="385" y="203" font-size="11.5" fill="#18181b" text-anchor="middle">(2<tspan baseline-shift="38%" font-size="8.28">n/2</tspan>−1, 1)</text>
 <text x="535" y="203.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
 <rect x="620" y="184" width="130" height="30" rx="4" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
-<text x="685" y="203" font-size="11.5" fill="#18181b" text-anchor="middle">(2<tspan baseline-shift="38%" font-size="72%">n/2</tspan>−1, 2<tspan baseline-shift="38%" font-size="72%">n/2</tspan>−1)</text>
+<text x="685" y="203" font-size="11.5" fill="#18181b" text-anchor="middle">(2<tspan baseline-shift="38%" font-size="8.28">n/2</tspan>−1, 2<tspan baseline-shift="38%" font-size="8.28">n/2</tspan>−1)</text>
 <path d="M140 199L168 199" fill="none" stroke="#3f3f46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
 <rect x="400" y="236" width="160" height="30" rx="5" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
 <text x="480" y="255.4" font-size="12.5" fill="#7f1d1d" text-anchor="middle">列地址译码器</text>
@@ -44,8 +44,8 @@
 <rect x="190" y="270" width="150" height="30" rx="0" fill="#e3f4e8" stroke="none" stroke-width="0"/>
 <rect x="40" y="270" width="300" height="30" rx="0" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
 <path d="M190 270L190 300" fill="none" stroke="#3f3f46" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="115" y="289.2" font-size="12" fill="#1e3a8a" text-anchor="middle">A<tspan baseline-shift="-22%" font-size="72%">n−1</tspan> … A<tspan baseline-shift="-22%" font-size="72%">n/2</tspan></text>
-<text x="265" y="289.2" font-size="12" fill="#14532d" text-anchor="middle">A<tspan baseline-shift="-22%" font-size="72%">n/2−1</tspan> … A<tspan baseline-shift="-22%" font-size="72%">0</tspan></text>
+<text x="115" y="289.2" font-size="12" fill="#1e3a8a" text-anchor="middle">A<tspan baseline-shift="-22%" font-size="8.64">n−1</tspan> … A<tspan baseline-shift="-22%" font-size="8.64">n/2</tspan></text>
+<text x="265" y="289.2" font-size="12" fill="#14532d" text-anchor="middle">A<tspan baseline-shift="-22%" font-size="8.64">n/2−1</tspan> … A<tspan baseline-shift="-22%" font-size="8.64">0</tspan></text>
 <path d="M115 270L115 222" fill="none" stroke="#3b6fd4" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3b6fd4)"/>
 <path d="M340 285L364 285Q370 285 370 279L370 257Q370 251 376 251L398 251" fill="none" stroke="#2f8f57" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a2f8f57)"/>
 <text x="620" y="300" font-size="12" fill="#71717a" text-anchor="middle">20 根地址线：1024 + 1024 = 2048 根选通线</text>

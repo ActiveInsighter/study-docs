@@ -115,7 +115,7 @@ describe('408 chapter mind maps', () => {
     const replacements = new Set<string>(report.placements.filter((entry: { asset: string; selectedAsset: string }) => entry.asset !== entry.selectedAsset).map((entry: { asset: string }) => entry.asset));
     const assets = readdirSync(assetRoot);
     expect(assets).toHaveLength(612);
-    expect(referenced.size).toBe(530);
+    expect(referenced.size).toBe(497);
     expect(assets.filter((name) => !referenced.has(name) && !replacements.has(name))).toEqual([]);
     expect(new Set(report.placements.map((entry: { asset: string }) => entry.asset)).size).toBe(223);
     for (const entry of report.placements) {
@@ -125,6 +125,22 @@ describe('408 chapter mind maps', () => {
         const branch = target.split('## ' + entry.branch + '\n')[1]?.split('\n## ')[0];
         expect(branch, entry.asset).toContain('/images/408-mind-maps/' + entry.selectedAsset);
       }
+    }
+  });
+
+  it('keeps audited defective source figures superseded and chip diagrams portable', () => {
+    const report = JSON.parse(readFileSync(join(root, 'reports/408-mind-map-image-migration.json'), 'utf8'));
+    const redraws = ['ds-0133', 'ds-0176', 'ds-0064', 'ds-0152', 'ds-0206', 'ds-0003', 'ds-0078', 'ds-0209', 'ds-0025', 'ds-0161', 'ds-0052', 'co-0232', 'co-0178', 'co-0194', 'co-0089', 'co-0075', 'co-0238', 'os-0089', 'os-0105', 'os-0081', 'os-0093', 'os-0112'];
+    for (const stem of redraws) {
+      const entries = report.placements.filter((entry: { asset: string }) => entry.asset === stem + '.svg');
+      expect(entries.length, stem).toBeGreaterThan(0);
+      for (const entry of entries) expect(entry.selectedAsset, stem).not.toBe(entry.asset);
+    }
+    expect(readFileSync(join(assetRoot, 'co-0123.svg'), 'utf8')).toContain('>n-1</tspan>');
+    for (const name of report.compatibilityRepairs) {
+      const svg = readFileSync(join(assetRoot, name), 'utf8');
+      expect(svg, name).not.toMatch(/font-size="[\d.]+%"/);
+      expect(svg, name).toContain('<tspan');
     }
   });
 

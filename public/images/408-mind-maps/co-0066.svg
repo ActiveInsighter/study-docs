@@ -10,18 +10,18 @@
 <path d="M560 140L572 128.0H708L720 140L708 152.0H572Z" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.3"/>
 <text x="90" y="204.6" font-size="13" fill="#18181b" text-anchor="end">CS̄</text>
 <path d="M100 188H230L246 212H430L446 188H720" fill="none" stroke="#d1493a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="90" y="260.6" font-size="13" fill="#18181b" text-anchor="end">D<tspan baseline-shift="-22%" font-size="72%">OUT</tspan></text>
+<text x="90" y="260.6" font-size="13" fill="#18181b" text-anchor="end">D<tspan baseline-shift="-22%" font-size="9.36">OUT</tspan></text>
 <path d="M100 256H330" fill="none" stroke="#a1a1aa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M330 256L342 244.0H588L600 256L588 268.0H342Z" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.3"/>
 <path d="M600 256H720" fill="none" stroke="#a1a1aa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M160 80L160 280" fill="none" stroke="#a1a1aa" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
 <path d="M560 80L560 280" fill="none" stroke="#a1a1aa" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
 <path d="M162 84L558 84" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
-<text x="360" y="76" font-size="12" fill="#3f3f46" text-anchor="middle">t<tspan baseline-shift="-22%" font-size="72%">RC</tspan>：读周期</text>
+<text x="360" y="76" font-size="12" fill="#3f3f46" text-anchor="middle">t<tspan baseline-shift="-22%" font-size="8.64">RC</tspan>：读周期</text>
 <path d="M162 108L330 108" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
-<text x="246" y="102" font-size="12" fill="#3f3f46" text-anchor="middle">t<tspan baseline-shift="-22%" font-size="72%">A</tspan></text>
+<text x="246" y="102" font-size="12" fill="#3f3f46" text-anchor="middle">t<tspan baseline-shift="-22%" font-size="8.64">A</tspan></text>
 <path d="M246 176L330 176" fill="none" stroke="#3f3f46" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
-<text x="290" y="170" font-size="12" fill="#3f3f46" text-anchor="middle">t<tspan baseline-shift="-22%" font-size="72%">CO</tspan></text>
+<text x="290" y="170" font-size="12" fill="#3f3f46" text-anchor="middle">t<tspan baseline-shift="-22%" font-size="8.64">CO</tspan></text>
 <path d="M330 80L330 280" fill="none" stroke="#3b6fd4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
 <text x="160" y="288" font-size="11.5" fill="#71717a" text-anchor="middle">地址有效</text>
 <text x="330" y="288" font-size="11.5" fill="#71717a" text-anchor="middle">数据有效</text>
