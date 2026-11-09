@@ -1,0 +1,51 @@
+---
+title: "3.10 信道划分与复用：FDM、TDM、WDM、CDMA"
+description: "静态信道划分、统计复用、正交码片与点积计算"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.10 信道划分与复用：FDM、TDM、WDM、CDMA
+
+## 为什么需要介质访问控制MAC
+- **广播/共享介质**：多个结点争用公共信道；需决定谁在何时、何频段发送
+- 分类：信道划分（静态分配）、随机接入（竞争）、受控接入（轮询/令牌）
+- **全双工交换式以太网链路**通常不发生传统共享总线碰撞，也就无需CSMA/CD
+
+## 信道划分四类
+- **FDM频分复用**：不同用户占用不同频带并同时传输，可设保护频带
+- **TDM时分复用**：不同用户占用周期性时隙；固定时隙空闲时会造成资源浪费
+- **STDM统计时分复用**：按需动态分配时隙，比固定TDM更灵活
+- **WDM波分复用**：光信号不同波长的复用，可视为光域频分
+- **CDM码分复用**：用户共享时间频率资源，由不同扩频码序列区分
+- 注意：FDM不等于“一定是模拟数据”，TDM也不等于“只能传数字数据”
+
+## CDMA正交码片计算
+- 将数据1映射到`+C_i`，数据0映射到`−C_i`，若不发可记0向量
+- 长度`m`码片序列`C_i`，各元素通常为`+1/−1`；不同用户满足正交$C_i\cdot C_j=0$
+- 公共信道合成向量$S=∑b_i*C_i$，其中`b_i`取`+1、−1、0`
+- 判定第i站发送：$(S\cdot C_i)/m=b_i$（理想无噪声且$C_i\cdot C_i=m$）
+
+## 计算实例
+- $C_A=(1,1,1,1)$，$C_B=(1,-1,1,-1)$：$C_A\cdot C_B=0$
+- A发1、B发0：$S=C_A-C_B=(0,2,0,2)$
+- A：$S\cdot C_A/4=1$；B：$S\cdot C_B/4=-1$
+- **码片长度≥用户数**只是构造相互正交实向量的维数必要条件，具体码族和系统要求另有限制
+
+## 章节导航
+- [上一节：3.9 滑动窗口利用率与吞吐量计算](/docs/408/mind-maps/computer-networks/03-9-utilization)
+- [第三章总览](/docs/408/mind-maps/computer-networks/03-data-link-layer)
+- [下一节：3.11 ALOHA、时隙ALOHA与CSMA](/docs/408/mind-maps/computer-networks/03-11-aloha-csma)
+
+````

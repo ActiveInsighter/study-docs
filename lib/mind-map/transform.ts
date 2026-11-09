@@ -20,6 +20,11 @@ function stripPositions<T>(value: T): T {
  * The browser then only needs `@markmap/view`.
  */
 export function transformMindMapMarkdown(markdown: string): MindMapNode {
-  const { root } = parse(markdown.trim(), { plugins: [remarkMath] });
-  return stripPositions(root);
+  return transformMindMapDocument(markdown).root;
+}
+
+/** Keep document options alongside the tree so layouts survive build-time parsing. */
+export function transformMindMapDocument(markdown: string) {
+  const { root, frontmatter } = parse(markdown.trim(), { plugins: [remarkMath] });
+  return { root: stripPositions(root), options: frontmatter.markmap };
 }

@@ -1,0 +1,49 @@
+---
+title: "5.9 双缓冲与两级流水"
+description: "双缓冲存取交叠、稳态计算与全双工条件。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.9 双缓冲与两级流水
+
+## 双缓冲的本质
+- 两个缓冲交替接收设备数据（A、B），设备可写一个，处理方消费另一个
+- 如果使用相同的用户工作区，`M` 拷贝与 `C` 处理依旧串行
+- 通常允许I/O填充下一缓冲与上块的复制+处理阶段并行
+- <img src="/images/408-mind-maps/os-05-double-buffer-clean.svg" alt="双缓冲交替工作与稳态吞吐周期" width="860" height="337">
+
+- <img src="/images/408-mind-maps/os-0112.svg" alt="双缓冲工作示意图" width="640" height="320">
+
+## 稳态周期
+- 按常见408教材模型：$P_2=\max(T,M+C)$
+- `T=100ms, M=20ms, C=60ms`：`P2=max(100,80)=100ms/块`
+- 在这个实例：单缓冲120ms/块；双缓冲100ms/块
+- 第一块仍需经过填充、传送、处理，不能把100ms/块当作第一块响应时间
+
+## 双机通信问题
+- 两个设备各有发送/接收缓冲区，可支持两方向同时传输
+- “单缓冲一定不能双向通信”不是物理定律；须看一台机器缓冲是否同时共用
+- <img src="/images/408-mind-maps/os-0030.svg" alt="一组共享缓冲的半双工教材示意" width="460" height="260">
+- <img src="/images/408-mind-maps/os-0045.svg" alt="两组独立发送接收缓冲的全双工教材示意" width="460" height="260">
+
+## 容易丢分
+- 多缓冲不保证吞吐成倍增长：仍受最慢流水阶段限制
+- `T`、`M`、`C` 的重叠关系必须按题设，不可盲目代公式
+- 原图 `os-0112.svg` 的离线渲染出现巨大叠字；使用新图替代
+
+## 学习导航
+- [上一节：5.8 单缓冲与稳态处理周期](/docs/408/mind-maps/operating-systems/05-8-single-buffer)
+- [下一节：5.10 循环缓冲与系统缓冲池](/docs/408/mind-maps/operating-systems/05-10-ring-buffer-pool)
+````

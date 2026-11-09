@@ -1,0 +1,50 @@
+---
+title: "2.5 奈奎斯特准则：无噪声码元极限"
+description: "理想低通、2W Baud、M进制上限及计算"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.5 奈奎斯特准则：无噪声码元极限
+
+## 理想低通无噪声假设
+- **奈奎斯特准则**（408常用模型）：带宽$W$ Hz理想低通信道
+- 不产生码间串扰的最大码元速率：$R_{s,\max}=2W\,\mathrm{Baud}$
+- `M`个可区分状态、等概且无冗余时
+  - $R_{b,\max}=2W\log_2 M\,\mathrm{bit/s}$
+- `W`单位Hz，`M`为码元可区分状态数，不是比特数、也不是码元频率
+- 这条经典公式是**理想基带低通模型**，不可不加说明地套到任意带通信道
+
+## 高频做题三步
+- 先识别题目是否为“理想低通/无噪声”场景
+- 写清码元种数`M`，求每符号信息量 $\log_2 M$
+- 求符号率上限 `2W`，再乘每符号比特数
+
+## 2009类型题：QAM
+- `W=3kHz`；4个相位，每相位4个**不同幅度**
+  - 状态数 $M=4\times4=16$
+  - $R_{s,\max}=2\times3000=6000\,\mathrm{Baud}$
+  - $R_{b,\max}=6000\log_2 16=24000\,\mathrm{bit/s}$
+- 状态数必须是**彼此可判别的有效星座点**；并非所有调制都能简单相乘
+
+## 与采样定理区分
+- 采样定理研究对**带限模拟信号**的离散采样，不是通信符号率的上限
+- 最高频率$f_{\max}$的理想基带带限信号通常取 $f_s\ge 2f_{\max}$，实践保留裕量常用$f_s>2f_{\max}$
+- 数字采样率、码元率、信息比特率的**对象和含义不同**
+## 章节导航
+- [上一节：2.4 频带宽度、失真与码间串扰](/docs/408/mind-maps/computer-networks/02-4-bandwidth-impairments)
+- [第二章总览](/docs/408/mind-maps/computer-networks/02-physical-layer)
+- [下一节：2.6 香农容量、信噪比与双约束](/docs/408/mind-maps/computer-networks/02-6-shannon)
+
+````

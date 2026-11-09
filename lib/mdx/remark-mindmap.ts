@@ -1,4 +1,4 @@
-import { transformMindMapMarkdown } from '../mind-map/transform';
+import { transformMindMapDocument } from '../mind-map/transform';
 import type { Root } from 'mdast';
 import type { Transformer } from 'unified';
 import { visit } from 'unist-util-visit';
@@ -11,7 +11,8 @@ export interface RemarkMdxMindmapOptions {
 function toMDX(code: string) {
   // Markdown → Markmap tree happens once at build time, so the browser skips
   // the Markdown parser and only loads the view.
-  const data = JSON.stringify(transformMindMapMarkdown(code));
+  const document = transformMindMapDocument(code);
+  const data = JSON.stringify(document.root);
 
   return {
     type: 'mdxJsxFlowElement' as const,
@@ -22,6 +23,11 @@ function toMDX(code: string) {
         name: 'data',
         value: data,
       },
+      ...(document.options == null ? [] : [{
+        type: 'mdxJsxAttribute' as const,
+        name: 'documentOptions',
+        value: JSON.stringify(document.options),
+      }]),
     ],
     children: [],
   };

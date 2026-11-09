@@ -1,0 +1,51 @@
+---
+title: "2.12 Peterson、TSL/CAS与自旋锁"
+description: "四种软件互斥算法、原子指令、中断屏蔽与内存模型。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.12 临界区互斥的软硬件实现
+
+## 四种经典软件方法
+- **单标志法**：用`turn`严格交替访问，违反**空闲让进**
+- **双标志先检查**：先判断对方flag再置本方flag
+  - 两方可能同时通过检查 → 违反**忙则等待**
+- **双标志后检查**：先置自己flag再检查对方
+  - 双方同时置位 → 两者都忙等，出现**死锁/无法推进**
+- **Peterson**：对两个参与者，结合`flag[i]`和`turn`解决互斥、空闲让进、有限等待
+  - `flag[i]=true; turn=j; while(flag[j] && turn==j) ;` 进入区
+  - 退出时`flag[i]=false`
+  - **仍忙等**，不满足让权等待；现代弱内存模型需保证顺序/可见性
+
+## 硬件原子指令
+- **Test-and-Set / TSL**：原子读取旧锁值并把锁设为已占用
+- **Swap/XCHG**：原子交换内存锁和局部变量
+- **CAS**：仅在旧值符合预期时原子更新；无锁结构也常使用
+- 原子性是关键：普通`while(!locked); locked=true;`不互斥
+- 自旋锁：无法取得锁时循环检查，不主动睡眠
+
+## 关中断与多核限制
+- 单处理器内核短临界区：屏蔽中断可避免本CPU被时钟中断抢占
+- 多核中关闭**本核**中断不能阻止其他CPU同时访问共享资源
+- 用户程序通常无权任意执行关中断特权指令
+- 长时间关中断会严重损害响应时延，应当极短
+
+## 何时用自旋，何时用阻塞
+- 锁持有时间极短、多核并行场景：自旋可能减少睡眠/唤醒开销
+- 锁持有时间长、单核系统或高争用：阻塞锁通常更合适
+- 自旋锁仅提供互斥，不天然保证公平；优先级反转可能需优先级继承协议
+- [上一节：并发基本概念](/docs/408/mind-maps/operating-systems/02-11-concurrency-basics)
+- [下一节：信号量](/docs/408/mind-maps/operating-systems/02-13-semaphores)
+````

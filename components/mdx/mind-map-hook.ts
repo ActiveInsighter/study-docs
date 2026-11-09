@@ -21,6 +21,7 @@ export interface MindMapImagePreview {
 interface UseMindMapOptions {
   /** Build-time Markmap tree, serialized as JSON. Preferred. */
   data?: string;
+  documentOptions?: string;
   /** Markdown parsed in the browser (direct `<MindMap markdown>` usage). */
   markdown?: string;
   /** Fold nodes at this depth and deeper; `undefined` picks one from the map's size. */
@@ -33,14 +34,18 @@ interface UseMindMapOptions {
   onPreviewImage: (image: MindMapImagePreview) => void;
 }
 
-async function loadRoot(data: string | undefined, markdown: string | undefined) {
-  if (data) return JSON.parse(data) as MarkmapNode;
+async function loadDocument(data: string | undefined, markdown: string | undefined, documentOptions: string | undefined) {
+  if (data) return {
+    root: JSON.parse(data) as MarkmapNode,
+    options: documentOptions ? JSON.parse(documentOptions) as unknown : undefined,
+  };
 
   const [{ parse }, { remarkMath }] = await Promise.all([
     import('@markmap/parse'),
     import('@markmap/plugin-math'),
   ]);
-  return parse((markdown ?? '').trim(), { plugins: [remarkMath] }).root;
+  const { root, frontmatter } = parse((markdown ?? '').trim(), { plugins: [remarkMath] });
+  return { root, options: frontmatter.markmap };
 }
 
 function inlineText(content: readonly Inline[]): string {
@@ -129,6 +134,7 @@ const EXIT_FULLSCREEN_ICON = 'M9.5 2.5V6.5h4M13.5 2.5 9.5 6.5M2.5 13.5l4-4M2.5 9
 
 export function useMindMap({
   data,
+  documentOptions,
   markdown,
   foldLevel,
   wrapWidth,
@@ -177,8 +183,8 @@ export function useMindMap({
 
     async function render() {
       try {
-        const root = await loadRoot(data, markdown);
-        const [{ Markmap }, { createToolbar, builtinButtons }, { defaultContentPlugins }, { mathContent }] =
+        const { root, options: documentOptionsValue } = await loadDocument(data, markdown, documentOptions);
+        const [{ Markmap, resolveViewOptions }, { createToolbar, builtinButtons }, { defaultContentPlugins }, { mathContent }] =
           await Promise.all([
             import('@markmap/view'),
             import('@markmap/toolbar'),
@@ -195,11 +201,12 @@ export function useMindMap({
         surface.replaceChildren(element);
         cleanups.push(() => element.remove());
 
+        const resolved = resolveViewOptions({ wrapWidth }, documentOptionsValue).options;
         const options: ViewOptions = {
+          ...resolved,
           plugins: [...defaultContentPlugins, mathContent],
           colorScheme: colorSchemeRef.current,
-          foldLevel: foldLevel ?? pickFoldLevel(root),
-          wrapWidth,
+          foldLevel: foldLevel ?? resolved.foldLevel ?? pickFoldLevel(root),
           fitPadding,
           fitMaxScale: 1.25,
         };
@@ -340,6 +347,7 @@ export function useMindMap({
     };
   }, [
     data,
+    documentOptions,
     markdown,
     hasContent,
     foldLevel,

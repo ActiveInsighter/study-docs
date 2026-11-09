@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1190" height="745" viewBox="0 0 1190 745" role="img">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#52637a"/></marker><style>text{font-family:"Noto Sans CJK SC","Noto Sans SC","Microsoft YaHei",sans-serif} .muted{fill:#52637a}.mono{font-family:monospace}</style></defs>
+<rect x="1" y="1" width="1188" height="743" rx="18" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="35" y="54" font-size="30" fill="#1b283b" font-weight="700" text-anchor="start">混合索引：直接 + 一级 + 二级 + 三级间接</text>
+<text x="35" y="88" font-size="20" fill="#52637a" font-weight="400" text-anchor="start">设 B=4096B，块号地址项 a=4B，索引块可存 K=B/a=1024 个块号</text>
+<rect x="38" y="137" width="268" height="483" rx="12" fill="#eaf1ff" stroke="#91add6" stroke-width="2"/>
+<text x="64" y="178" font-size="28" fill="#1b283b" font-weight="700" text-anchor="start">文件 inode</text>
+<rect x="62" y="216" width="217" height="74" rx="8" fill="#fff" stroke="#9dacbd" stroke-width="2"/>
+<text x="170" y="260" font-size="20" fill="#1b283b" font-weight="400" text-anchor="middle">10个直接块指针</text>
+<rect x="62" y="317" width="217" height="74" rx="8" fill="#f4fff8" stroke="#9dacbd" stroke-width="2"/>
+<text x="170" y="361" font-size="20" fill="#1b283b" font-weight="700" text-anchor="middle">1个一级间接</text>
+<rect x="62" y="418" width="217" height="74" rx="8" fill="#f9f4ff" stroke="#9dacbd" stroke-width="2"/>
+<text x="170" y="462" font-size="20" fill="#1b283b" font-weight="700" text-anchor="middle">1个二级间接</text>
+<rect x="62" y="519" width="217" height="74" rx="8" fill="#fff5ea" stroke="#9dacbd" stroke-width="2"/>
+<text x="170" y="563" font-size="20" fill="#1b283b" font-weight="700" text-anchor="middle">1个三级间接</text>
+<line x1="279" y1="253" x2="349" y2="255" stroke="#52637a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="355" y="217" width="275" height="77" rx="8" fill="#ebf5ff" stroke="#8db3e2" stroke-width="2"/>
+<text x="375" y="248" font-size="22" fill="#1b283b" font-weight="700" text-anchor="start">直达数据块</text>
+<text x="375" y="280" font-size="21" fill="#1b283b" font-weight="400" text-anchor="start">10块 / 40KiB</text>
+<line x1="630" y1="255" x2="685" y2="255" stroke="#52637a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="695" y="217" width="460" height="77" rx="8" fill="#fff" stroke="#bfc9d6" stroke-width="2"/>
+<rect x="719" y="239" width="60" height="36" rx="5" fill="#dfeafa" stroke="#bdc6d3" stroke-width="1"/>
+<text x="749" y="265" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">数据</text>
+<rect x="801" y="239" width="60" height="36" rx="5" fill="#dfeafa" stroke="#bdc6d3" stroke-width="1"/>
+<text x="831" y="265" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">数据</text>
+<rect x="883" y="239" width="60" height="36" rx="5" fill="#dfeafa" stroke="#bdc6d3" stroke-width="1"/>
+<text x="913" y="265" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">数据</text>
+<rect x="965" y="239" width="60" height="36" rx="5" fill="#dfeafa" stroke="#bdc6d3" stroke-width="1"/>
+<text x="995" y="265" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">数据</text>
+<rect x="1047" y="239" width="60" height="36" rx="5" fill="#dfeafa" stroke="#bdc6d3" stroke-width="1"/>
+<text x="1077" y="265" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">数据</text>
+<line x1="279" y1="354" x2="349" y2="357" stroke="#52637a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="355" y="319" width="275" height="77" rx="8" fill="#e9f8f1" stroke="#89c5a7" stroke-width="2"/>
+<text x="375" y="350" font-size="22" fill="#1b283b" font-weight="700" text-anchor="start">一级索引块</text>
+<text x="375" y="382" font-size="21" fill="#1b283b" font-weight="400" text-anchor="start">1024块 / 4MiB</text>
+<line x1="630" y1="357" x2="685" y2="357" stroke="#52637a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="695" y="319" width="460" height="77" rx="8" fill="#fff" stroke="#bfc9d6" stroke-width="2"/>
+<rect x="719" y="341" width="60" height="36" rx="5" fill="#e6f8ef" stroke="#bdc6d3" stroke-width="1"/>
+<text x="749" y="367" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">索引</text>
+<rect x="801" y="341" width="60" height="36" rx="5" fill="#e6f8ef" stroke="#bdc6d3" stroke-width="1"/>
+<text x="831" y="367" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">数据</text>
+<rect x="883" y="341" width="60" height="36" rx="5" fill="#e6f8ef" stroke="#bdc6d3" stroke-width="1"/>
+<text x="913" y="367" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">数据</text>
+<rect x="965" y="341" width="60" height="36" rx="5" fill="#e6f8ef" stroke="#bdc6d3" stroke-width="1"/>
+<text x="995" y="367" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">数据</text>
+<rect x="1047" y="341" width="60" height="36" rx="5" fill="#e6f8ef" stroke="#bdc6d3" stroke-width="1"/>
+<text x="1077" y="367" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">数据</text>
+<line x1="279" y1="455" x2="349" y2="457" stroke="#52637a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="355" y="419" width="275" height="77" rx="8" fill="#f2eafe" stroke="#a88dd5" stroke-width="2"/>
+<text x="375" y="450" font-size="22" fill="#1b283b" font-weight="700" text-anchor="start">二级索引链</text>
+<text x="375" y="482" font-size="21" fill="#1b283b" font-weight="400" text-anchor="start">1024²块 / 4GiB</text>
+<line x1="630" y1="457" x2="685" y2="457" stroke="#52637a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="695" y="419" width="460" height="77" rx="8" fill="#fff" stroke="#bfc9d6" stroke-width="2"/>
+<rect x="719" y="441" width="60" height="36" rx="5" fill="#f6eafd" stroke="#bdc6d3" stroke-width="1"/>
+<text x="749" y="467" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">索引</text>
+<rect x="801" y="441" width="60" height="36" rx="5" fill="#f6eafd" stroke="#bdc6d3" stroke-width="1"/>
+<text x="831" y="467" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">索引</text>
+<rect x="883" y="441" width="60" height="36" rx="5" fill="#f6eafd" stroke="#bdc6d3" stroke-width="1"/>
+<text x="913" y="467" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">数据</text>
+<rect x="965" y="441" width="60" height="36" rx="5" fill="#f6eafd" stroke="#bdc6d3" stroke-width="1"/>
+<text x="995" y="467" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">数据</text>
+<rect x="1047" y="441" width="60" height="36" rx="5" fill="#f6eafd" stroke="#bdc6d3" stroke-width="1"/>
+<text x="1077" y="467" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">数据</text>
+<line x1="279" y1="556" x2="349" y2="558" stroke="#52637a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="355" y="520" width="275" height="77" rx="8" fill="#fff0e1" stroke="#e2b17d" stroke-width="2"/>
+<text x="375" y="551" font-size="22" fill="#1b283b" font-weight="700" text-anchor="start">三级索引链</text>
+<text x="375" y="583" font-size="21" fill="#1b283b" font-weight="400" text-anchor="start">1024³块 / 4TiB</text>
+<line x1="630" y1="558" x2="685" y2="558" stroke="#52637a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="695" y="520" width="460" height="77" rx="8" fill="#fff" stroke="#bfc9d6" stroke-width="2"/>
+<rect x="719" y="542" width="60" height="36" rx="5" fill="#fce8d8" stroke="#bdc6d3" stroke-width="1"/>
+<text x="749" y="568" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">索引</text>
+<rect x="801" y="542" width="60" height="36" rx="5" fill="#fce8d8" stroke="#bdc6d3" stroke-width="1"/>
+<text x="831" y="568" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">索引</text>
+<rect x="883" y="542" width="60" height="36" rx="5" fill="#fce8d8" stroke="#bdc6d3" stroke-width="1"/>
+<text x="913" y="568" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">数据</text>
+<rect x="965" y="542" width="60" height="36" rx="5" fill="#fce8d8" stroke="#bdc6d3" stroke-width="1"/>
+<text x="995" y="568" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">数据</text>
+<rect x="1047" y="542" width="60" height="36" rx="5" fill="#fce8d8" stroke="#bdc6d3" stroke-width="1"/>
+<text x="1077" y="568" font-size="17" fill="#1b283b" font-weight="400" text-anchor="middle">数据</text>
+<text x="36" y="670" font-size="22" fill="#1b283b" font-weight="700" text-anchor="start">理论最大可寻址数据： (D + K + K² + K³) × B ；索引块占用不计入文件数据容量。</text>
+<text x="36" y="705" font-size="20" fill="#52637a" font-weight="400" text-anchor="start">逻辑块号：0～9直接；10～1033一级；1034开始二级。访问磁盘次数另看缓存前提。</text>
+</svg>

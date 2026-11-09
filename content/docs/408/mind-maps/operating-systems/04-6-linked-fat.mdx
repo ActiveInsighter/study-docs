@@ -1,0 +1,47 @@
+---
+title: "4.6 隐式链接分配与FAT显式链接"
+description: "指针随块存放、FAT表索引、EOC/空闲标记及访问代价。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 4.6 链接分配：逐块追踪与FAT
+
+## 隐式链接
+- 文件的**各数据块内**保存下一数据块位置或结束标记
+- 目录通常保存文件起始块，可选保存尾块以便追加
+- 顺序访问适合；访问第 j 个数据块一般要逐步追踪前 j 个链项
+- 块指针占用数据块容量；某个指针损坏可能破坏后续链
+- <img src="/images/408-mind-maps/os-0152.svg" alt="隐式链接分配：块末尾下一块指针" width="770" height="472">
+
+## 显式链接：FAT
+- FAT按**簇号/块号**索引，表项记录该簇的下一簇编号或特殊标记
+- `FAT[c]` 给出下一个簇；开始簇记录在文件目录项中
+- FAT常有“空闲”“已分配链终点”“坏簇”等标记，具体编码依FAT版本/实现
+- 原资料以 `-1`/`-2` 讲解**教学约定**，不能作为FAT12/16/32实际位模式的统一值
+- <img src="/images/408-mind-maps/os-0136.svg" alt="文件目录起始簇及FAT下一簇索引" width="790" height="494">
+
+## FAT能否随机访问？
+- FAT表可缓存到内存，因此追踪链**不必每次都读数据块**
+- 但定位第 j 个簇仍需沿链找第 j 项，**不是常数次表项查找**
+- 数据块读入I/O次数与地址查表次数要区别：表在内存时，找目标数据块可能只需一次磁盘数据读取
+- 大FAT可能仅部分缓存在内存，不能硬说“开机一定全表载入”
+
+## 空间与可靠性
+- 链接分配通常免除要求整文件连续的大洞，但磁盘块分散可能增加机械寻道
+- FAT表记录整个卷的簇分配信息，也可辅助判定可用空间
+- 维护FAT及相应副本/一致性有性能和故障恢复成本
+- [上一节：连续分配](/docs/408/mind-maps/operating-systems/04-5-contiguous-allocation)
+- [下一节：索引分配](/docs/408/mind-maps/operating-systems/04-7-index-allocation)
+````

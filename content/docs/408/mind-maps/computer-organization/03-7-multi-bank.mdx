@@ -1,0 +1,56 @@
+---
+title: "3.7 双端口RAM与多体交叉存储"
+description: "双端口冲突、高低位交叉、启动间隔和带宽吞吐计算。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.7 并行主存组织
+
+## 双端口RAM
+- 同一个存储阵列设两个独立端口，可分别提供地址、数据与控制接口
+  - 不限于“两颗CPU访问内存条”，还用于缓冲与数据交换
+- 同时访问**不同地址**通常可并行；同地址同时读通常可用
+  - 同地址至少一个写：可能存在读写/写写冲突，需要仲裁或约定优先级
+  - busy/冲突检测可暂停一端；不能假定所有双端口实现行为完全相同
+- <img src="/images/408-mind-maps/co-0011.svg" alt="双端口RAM的两个独立访问端口" width="730" height="319">
+
+## 高位交叉与低位交叉
+- 高位交叉：**高位**选择存储体，连续地址大多落同体
+  - 有利于按块分配，但连续访存很难掩蔽该体恢复时间
+- 低位交叉：**低位**选择存储体，连续地址轮流落不同体
+  - 体号 $bank=address\bmod m$（按访问单位对应的地址）
+  - 第 $i$ 次可从 $i\bmod m$ 的体发起，利用多个存储体重叠工作
+- <img src="/images/408-mind-maps/co-03-interleave-address-clean.svg" alt="高位交叉和低位交叉按地址映射到四个存储体" width="910" height="393">
+
+- <img src="/images/408-mind-maps/co-0281.svg" alt="高位交叉编址：高位 2 bit为体号" width="720" height="380">
+
+- <img src="/images/408-mind-maps/co-0253.svg" alt="低位交叉编址：低位 2 bit为体号" width="720" height="380">
+
+- <img src="/images/408-mind-maps/co-0076.svg" alt="单体多字存储器：一个存储单元存 m 个字，一次读一整行" width="560" height="300">
+
+## 时间与体数计算
+- 假设一体完整存取周期 $T$，总线允许每隔 $r$ 时间启动新一体（无冲突）
+  - 理想连续启动要求 $m\ge\lceil T/r\rceil$，体数少于该值会发生体冲突或等待
+  - 连续读 n 个字，第一字在 T 后完成，后续每隔 r 完成：$T_{total}=T+(n-1)r$
+  - 示例 $T=80\,\mathrm{ns},\ r=20\,\mathrm{ns}$，至少4体；连续5字耗160ns
+- 单体多字：一个存储体一次并行读多个字，在总线上按约定传输
+  - 和多体交叉不同：**访问粒度、独立控制与非连续请求性能**不相同
+- 并行带宽上界 $\text{每次总线传送字节数}/r$，还受总线协议及存储体实际时序约束
+- <img src="/images/408-mind-maps/co-03-interleave-timeline-clean.svg" alt="四体交叉每隔r启动依次重叠取数" width="910" height="398">
+- <img src="/images/408-mind-maps/co-0261.svg" alt="高位交叉编址：连续访问同一个体，耗时 5T" width="640" height="260">
+
+- <img src="/images/408-mind-maps/co-0067.svg" alt="低位交叉编址：流水线方式访问四个体，耗时 T + 4r" width="640" height="304">
+
+````

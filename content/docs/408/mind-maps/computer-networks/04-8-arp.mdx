@@ -1,0 +1,54 @@
+---
+title: "4.8 ARP地址解析与逐跳封装"
+description: "408 计算机网络 第四章·ARP地址解析与逐跳封装：独立双侧Markmap，含考研核心概念、步骤、易错点与计算。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 4.8 ARP地址解析与逐跳封装
+
+## ARP解决的问题
+- 已知同一**以太网广播域内下一跳的IPv4地址**，查询其链路层MAC地址
+- ARP缓存通常保存IPv4→MAC映射及老化状态；不跨路由器广播ARP请求
+- IPv6不使用ARP，使用**ICMPv6邻居发现NDP**
+
+## A给同网B发送
+- A判断B在本地直连前缀，选择**B的IP**作为ARP查询目标
+- 命中ARP缓存→以B的MAC为目的MAC构造帧
+- 未命中→ARP请求通常在二层**广播**`FF:FF:FF:FF:FF:FF`
+- B收到后通常发**单播ARP应答**；A缓存并发送IP分组
+- <img src="/images/408-mind-maps/cn-0077.svg" alt="原始ARP发送与下一跳图（需结合本节文字辨析）" width="900" height="417">
+
+## A给外网C发送
+- A的IP数据报**目的IP仍是C**，但本跳以**默认网关IP**解析得到网关MAC
+- 第一帧：MAC源=A、MAC目的=R1；IP源=A、IP目的=C
+- 路由器R1再选择下一跳，构造**新的链路帧**；IP目的通常仍是C
+- **不能把跨路由ARP应答当成从最终主机C直接返回A**
+- <img src="/images/408-mind-maps/cn-04-arp-hop-clean.svg" alt="IP端到端不变与每一跳重写以太网MAC" width="940" height="431">
+
+## ARP报文与链路格式
+- 请求报文含发送者/目标的协议与硬件地址等字段；目标MAC未知时ARP负载里可置0
+- **以太网帧**中目的MAC广播，不意味着IP目的地址必须广播
+- ARP本身直接封装在链路层帧中（EtherType `0x0806`），不是IPv4数据报
+
+## 排错点
+- 主机同网通信通常不需要默认网关；出网通信一般需要下一跳路由
+- ARP缓存中MAC过期可能导致再次请求；交换机自身查MAC表不是ARP
+- RARP为旧方案，现代地址配置主要采用DHCP等，不把DHCP等同RARP
+## 章节导航
+- [返回第四章导览](/docs/408/mind-maps/computer-networks/04-network-layer)
+- [上一节：4.7 路由转发算法与最长前缀匹配](/docs/408/mind-maps/computer-networks/04-7-lpm-forwarding)
+- [下一节：4.9 DHCP动态配置与中继](/docs/408/mind-maps/computer-networks/04-9-dhcp)
+
+````

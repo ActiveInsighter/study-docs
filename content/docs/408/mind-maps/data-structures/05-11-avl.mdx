@@ -1,0 +1,60 @@
+---
+title: "5.11 AVL 平衡树与旋转"
+description: "平衡因子、LL/RR/LR/RL 四种调整、最少结点递推、平衡性能及红黑树定位。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.11 AVL · 四种旋转与高度
+
+## 平衡二叉搜索树
+- AVL 必须首先是 BST：中序仍按关键字递增
+- 对**每个结点**，平衡因子 BF = 左子树高度 − 右子树高度
+- AVL 要求 BF ∈ {−1,0,+1}
+- 其约束保证树高 **O(log n)**，查找/插入/删除皆 **O(log n)**
+- BF 的符号取决于约定；本节固定左高减右高
+
+## 插入失衡时找谁
+- 新结点按 BST 规则插入
+- 沿插入路径向上找**最近的失衡祖先 A**（BF=±2）
+- 根据从 A 到新结点经历的前两步（左 L / 右 R）判断类型
+- 调整后恢复 A 所在子树的高度与 BST 中序顺序
+
+## 四种经典情形
+- **LL**：A 的左孩子 B 的左侧插入 → **A 右旋**
+  - <img src="/images/408-mind-maps/ds-0132.svg" alt="AVL LL 左左失衡，单次右旋" width="570" height="248">
+- **RR**：A 的右孩子 B 的右侧插入 → **A 左旋**
+  - <img src="/images/408-mind-maps/ds-0103.svg" alt="AVL RR 右右失衡，单次左旋" width="570" height="248">
+- **LR**：先对左孩子 B **左旋**，再对 A **右旋**
+  - <img src="/images/408-mind-maps/ds-0072.svg" alt="AVL LR 左右失衡，先左旋再右旋" width="570" height="285">
+- **RL**：先对右孩子 B **右旋**，再对 A **左旋**
+  - <img src="/images/408-mind-maps/ds-0186.svg" alt="AVL RL 右左失衡，先右旋再左旋" width="570" height="285">
+- **单旋 1 次、双旋 2 次**；旋转后仍按 BST 有序排列
+
+## 为什么最坏高度是对数级
+- 设 $N(h)$ 是**高度 h 按层数**的 AVL 树最少结点数
+- 边界：$N(0)=0,\ N(1)=1,\ N(2)=2$
+- 对 h≥2：$N(h)=1+N(h-1)+N(h-2)$
+- 于是 N(3)=4、N(4)=7、N(5)=12，增长类似斐波那契
+- 最大结点数为 $2^h-1$，不是 $h^2-1$
+- 反推树高 h=O(log n)；AVL 查找稳定在对数复杂度
+
+## 删除、红黑树与考点
+- 删除 BST 结点后，AVL 可能沿祖先路径**多次**重新平衡
+- 插入调整通常从最近失衡祖先开始，旋转次数至多 2 次
+- 红黑树也能保证 O(log n)，但**不要求任一结点左右高度差 ≤1**
+- 红黑树细节属于**第七章树形查找**，本节只作概念定位
+- 高频易错：将 LL 写成左旋；将 LR 的顺序颠倒；忽略根指针更新
+- [下一节：哈夫曼树与编码](/docs/408/mind-maps/data-structures/05-12-huffman)
+````

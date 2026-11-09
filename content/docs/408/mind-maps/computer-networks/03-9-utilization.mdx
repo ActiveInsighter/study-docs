@@ -1,0 +1,59 @@
+---
+title: "3.9 滑动窗口利用率与吞吐量计算"
+description: "传播/发送/确认时延、流水线最大效率、带宽时延积"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.9 滑动窗口利用率与吞吐量计算
+
+## 时间轴基本量
+- `L`：一帧总长度bit；`R`：发送速率bit/s → $T_t=\frac LR$
+- `d`：单程距离；`v`：信号传播速率 → $T_p=\frac dv$
+- `Ta`：ACK序列化发送时间；忽略处理时一次发送-确认回合约`Tt+2Tp+Ta`
+- **发送时延**≠**传播时延**；单程传播时间通常不是RTT
+
+## 停等和流水线
+- 停等$W_s=1$：$U\approx\frac{T_t}{T_t+2T_p+T_a}$
+- 若窗口允许连续发`Ws`帧、无错误且连续ACK并可流水发送：
+  - $U\approx\min\!\left(1,\frac{W_sT_t}{T_t+2T_p+T_a}\right)$
+- **满速所需窗口**：$W_s\ge\left\lceil\frac{T_t+2T_p+T_a}{T_t}\right\rceil$（理想持续传输条件）
+- 上式是**理想窗口受限模型**，忽略竞争、控制开销与不同ACK制度
+
+- <img src="/images/408-mind-maps/cn-0012.svg" alt="信道利用率：停等、GBN、SR 的时序比较" width="820" height="360">
+
+## 与带宽时延积结合
+- $\mathrm{BDP}=R\cdot\mathrm{RTT}$表示“往返途中可承载的比特量”，**不是单帧发送时间**
+- 例：链路$R=10\,\mathrm{Mbit/s}$，$T_p=10\,\mathrm{ms}$，帧$L=10000\,\mathrm{bit}$，ACK忽略
+  - $T_t=1\,\mathrm{ms}$，$2T_p=20\,\mathrm{ms}$
+  - 停等$U=\frac1{21}\approx4.76\%$
+  - 窗口至少`21`帧，理想模型下才可能**满载发送**
+
+## 有效吞吐量计算
+- 原始发送速率`R`×发送时间利用率`U` → **帧比特吞吐率**
+- 若每帧仅`P`位载荷，`L`位总长 → **有效负载吞吐率**$R\cdot U\cdot\frac PL$
+- 有丢包/重传时不能仅用这个式子，需计入额外发送及竞争成本
+- <img src="/images/408-mind-maps/cn-03-utilization-clean.svg" alt="停止等待和滑动窗口的发送与确认时间轴对比" width="840" height="412">
+
+## 高频陷阱
+- 传播时延用**单程还是往返**取决于公式；ARP/重传等待常要`2Tp`
+- ACK不是一定为0字节；若题目给出ACK长度或带宽，应计算`Ta`
+- 窗口达到上限但仍不满载：可能序号空间限制、接收窗口限制或错误率高
+
+## 章节导航
+- [上一节：3.8 选择重传SR](/docs/408/mind-maps/computer-networks/03-8-sr)
+- [第三章总览](/docs/408/mind-maps/computer-networks/03-data-link-layer)
+- [下一节：3.10 信道划分与复用：FDM、TDM、WDM、CDMA](/docs/408/mind-maps/computer-networks/03-10-multiplex)
+
+````

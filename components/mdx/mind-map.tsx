@@ -21,6 +21,8 @@ import {
 export interface MindMapProps {
   /** Build-time Markmap tree as JSON; produced from ```mindmap fences. */
   data?: string;
+  /** Serialized Markmap frontmatter; validated by the view before use. */
+  documentOptions?: string;
   /** Markdown headings and list items, parsed in the browser. */
   markdown?: string;
   /** Visible label used by assistive technologies. */
@@ -52,6 +54,7 @@ function toFoldLevel(initialExpandLevel: number | undefined) {
 
 export function MindMap({
   data,
+  documentOptions,
   markdown,
   title = '思维导图',
   height = 'clamp(22rem, 62vh, 38rem)',
@@ -73,6 +76,7 @@ export function MindMap({
   const onNavigate = useCallback((href: string) => router.push(href), [router]);
   const { errorMessage, status, surfaceRef, toolbarHostRef } = useMindMap({
     data,
+    documentOptions,
     markdown,
     foldLevel: toFoldLevel(initialExpandLevel),
     wrapWidth: maxWidth,

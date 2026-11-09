@@ -1,0 +1,53 @@
+---
+title: "3.13 Cache写策略、命中率与AMAT"
+description: "写直达/写回、写分配/不分配，两级Cache访存时间与带宽计算。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.13 Cache 写策略与性能
+
+## 写命中（hit）
+- **写直达 Write-through**：写Cache的同时把修改传播到下一级
+  - 常配合写缓冲，CPU不必总等待下一级写事务完成
+  - 降低“当前级含脏数据”问题，但会增加后续写流量
+- **写回 Write-back**：先改Cache数据并设置dirty，淘汰脏行时才回写
+  - 替换一个dirty块可能额外产生一次完整块写回
+  - 数据一致性需综合考虑多级Cache、DMA和多核一致性协议
+
+## 写不命中（miss）
+- **写分配 Write-allocate**：先将需要的块装入本级，再在Cache中修改
+- **非写分配 No-write-allocate**：写请求绕过本级Cache到下级，不主动分配该行
+  - 典型组合：写回 + 写分配；写直达 + 非写分配
+  - 但这些只是常用搭配，**并非硬件必须如此设计**
+- <img src="/images/408-mind-maps/co-0021.svg" alt="多级Cache及写缓冲和写回路径" width="760" height="217">
+
+## 命中率与AMAT
+- $H=\text{Cache命中次数}/\text{有效访问次数}$，缺失率 $m=1-H$
+- 如果**所有访问先花**$T_c$时间查询Cache，Cache缺失附加处罚P：
+  - $AMAT=T_c+mP$；P若定义为访问主存时间$T_m$，就是 $T_c+mT_m$
+- 另一种题设若把“缺失服务总耗时”定义为$T_{miss}$，则应使用
+  - $AMAT=HT_{hit}+(1-H)T_{miss}$
+  - **两种公式不能混用缺失定义**；题目若含访存重叠、突发服务需另计
+- 两级Cache（按串行访问、局部二级缺失率）
+  - $AMAT=T_{L1}+m_{L1}(T_{L2}+m_{L2,local}T_{memory})$
+  - 全局二级缺失率 = 一级缺失率 × 二级局部缺失率
+
+## 综合带宽与性能
+- 读缺失会转移**整块**，不是只传CPU所需的一个字（可能有关键字先返）
+- 主存读写带宽需求要计读缺失的块填入、写回的dirty块和写直达流量
+- 例 $T_c=2\mathrm{ns}$，miss率5%，惩罚60ns → $AMAT=5\mathrm{ns}$
+  - 若“惩罚60ns”指**包含2ns查Cache在内的总缺失时间**，则AMAT为4.9ns
+- 以CPU总周期/CPI讨论存储停顿时，需确认访存次数/指令与能否流水并行
+````

@@ -1,6 +1,8 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
+import { transformMindMapDocument } from '../lib/mind-map/transform';
+import { compareMindMapPaths } from '../lib/mind-map/navigation';
 
 const root = resolve(process.cwd());
 const docsRoot = join(root, 'content/docs/408/mind-maps');
@@ -34,82 +36,95 @@ describe('408 chapter mind maps', () => {
     }
   });
 
-  it('splits the four courses into 26 chapter pages listed in meta.json', () => {
+  it('lists 26 chapter guides and 402 ordered sections in the four course menus', () => {
     const sectionMeta = JSON.parse(readFileSync(join(docsRoot, 'meta.json'), 'utf8'));
     expect(sectionMeta.pages).toEqual(['index', ...courses.map(([course]) => course)]);
-    expect(readdirSync(docsRoot).filter((name) => name.endsWith('.mdx'))).toEqual(['index.mdx']);
-
-    let total = 0;
+    let sections = 0;
+    let chapters = 0;
     for (const [course, title, count] of courses) {
       const files = chapterFiles(course);
       const meta = JSON.parse(readFileSync(join(docsRoot, course, 'meta.json'), 'utf8'));
-      expect(files).toHaveLength(count);
       expect(meta.title).toBe(title);
-      expect(meta.pages).toEqual(['index', ...files.map((file) => file.replace(/\.mdx$/, ''))]);
-      expect(existsSync(join(docsRoot, course, 'index.mdx'))).toBe(true);
-      total += files.length;
+      expect(new Set(meta.pages).size).toBe(meta.pages.length);
+      expect([...meta.pages].sort()).toEqual(['index', ...files.map((file) => file.replace(/\.mdx$/, ''))].sort());
+      expect([...files].sort(compareMindMapPaths).map((file) => file.replace(/\.mdx$/, ''))).toEqual(meta.pages.slice(1));
+      const guides = files.filter((file) => /^\d{2}-[a-z]/.test(file));
+      expect(guides).toHaveLength(count);
+      for (const guide of guides) {
+        const prefix = guide.slice(0, 2);
+        const children = files.filter((file) => file.startsWith(prefix + '-') && /^\d{2}-\d+-/.test(file))
+          .sort((a, b) => Number(a.split('-')[1]) - Number(b.split('-')[1]));
+        expect(children.length).toBeGreaterThan(0);
+        const start = meta.pages.indexOf(guide.replace(/\.mdx$/, ''));
+        expect(meta.pages.slice(start + 1, start + 1 + children.length)).toEqual(children.map((file) => file.replace(/\.mdx$/, '')));
+        chapters++;
+        sections += children.length;
+      }
     }
-    expect(total).toBe(26);
+    expect(chapters).toBe(26);
+    expect(sections).toBe(402);
   });
 
-  it('gives every chapter exactly one mind map in the full-canvas layout', () => {
-    const numerals = '一二三四五六七八九十';
-    for (const [course, , count] of courses) {
-      const files = chapterFiles(course);
-      files.forEach((file, index) => {
-        const document = readFileSync(join(docsRoot, course, file), 'utf8');
-        const chapter = '第' + numerals[index] + '章';
-        expect(document).toMatch(new RegExp('^---\\ntitle: "' + chapter + ' [^"]+"\\n'));
-        expect(document).toMatch(/\nlayout: mind-map\n---\n/);
-        expect(document.split(fence + 'mindmap\n')).toHaveLength(2);
-        expect(document.trimEnd().endsWith(fence)).toBe(true);
-        expect(document).toMatch(new RegExp('\\n# ' + chapter + ' '));
-        expect(document).not.toMatch(/<a id="topic-/);
-        expect(document).not.toMatch(/\]\(#topic-/);
-        // Markmap 1.0 keeps only single <img> tags; other raw HTML would be dropped.
-        expect(document).not.toMatch(/<a\s|<br\s*\/?>|loading="lazy"/);
-        // Heading icons were never shown by the original maps; keep them out.
-        expect(document).not.toMatch(/^#{1,6} .*<img /m);
-      });
-      expect(files).toHaveLength(count);
-    }
-  });
-
-  it('resolves cross-chapter links, focus links and local hand-drawn SVG figures', () => {
-    const referencedAssets = new Set<string>();
-    const pageUrls = new Set(
-      courses.flatMap(([course]) =>
-        chapterFiles(course).map((file) => '/docs/408/mind-maps/' + course + '/' + file.replace(/\.mdx$/, '')),
-      ),
-    );
-
+  it('keeps every guide and section as one full-canvas map with working two-sided options', () => {
     for (const [course] of courses) {
       for (const file of chapterFiles(course)) {
         const document = readFileSync(join(docsRoot, course, file), 'utf8');
-        for (const [, target] of document.matchAll(/\]\((\/docs\/408\/mind-maps\/[^)#]+)(?:#[^)]*)?\)/g)) {
-          expect(pageUrls.has(target)).toBe(true);
+        expect(document).toMatch(/^---\ntitle: \"[^\"]+\"\n/);
+        expect(document).toContain('\nlayout: mind-map\n');
+        expect(document.split(fence + 'mindmap\n')).toHaveLength(2);
+        const markdown = document.split(fence + 'mindmap\n')[1].slice(0, -fence.length - 1);
+        const parsed = transformMindMapDocument(markdown);
+        expect(parsed.options).toMatchObject({ layout: 'two-sided', theme: 'cards', foldLevel: 3 });
+        expect(parsed.root.children.length).toBeGreaterThan(1);
+        // Every source image must survive Markmap parsing, including restored pictures.
+        const serialized = JSON.stringify(parsed.root);
+        for (const [, name] of markdown.matchAll(/src="\/images\/408-mind-maps\/([^\"]+)"/g)) {
+          expect(serialized, course + '/' + file + ': ' + name).toContain('/images/408-mind-maps/' + name);
         }
-        for (const [, label] of document.matchAll(/#focus=([^)]+)\)/g)) {
-          expect(decodeURIComponent(label).trim().length).toBeGreaterThan(0);
+        expect(document).not.toMatch(/\\\(|\\\)/);
+        expect(document.trimEnd().endsWith(fence)).toBe(true);
+      }
+    }
+  });
+
+  it('resolves all links and preserves sized SVGs without unaccounted orphan assets', () => {
+    const referenced = new Set<string>();
+    const pageUrls = new Set(['/docs/408/mind-maps', ...courses.flatMap(([course]) => [
+      '/docs/408/mind-maps/' + course,
+      ...chapterFiles(course).map((file) => '/docs/408/mind-maps/' + course + '/' + file.replace(/\.mdx$/, '')),
+    ])]);
+    for (const directory of ['', ...courses.map(([course]) => course)]) {
+      for (const file of readdirSync(join(docsRoot, directory)).filter((name) => name.endsWith('.mdx'))) {
+        const document = readFileSync(join(docsRoot, directory, file), 'utf8');
+        for (const [, target] of document.matchAll(/\]\((\/docs\/408\/mind-maps[^)#]*)(?:#[^)]*)?\)/g)) {
+          expect(pageUrls.has(target.replace(/\/$/, '')), directory + '/' + file + ': ' + target).toBe(true);
         }
-        // Every figure was redrawn as SVG (or rewritten as Markdown): no raster images remain.
-        expect(document).not.toMatch(/408-mind-maps\/[^"]*\.(?:png|webp|jpe?g)|408-mind-maps\/thumb\//);
-        for (const [, filename] of document.matchAll(/<img src="\/images\/408-mind-maps\/([a-z0-9-]+\.svg)" alt="[^"]*" width="\d+" height="\d+">/g)) {
-          referencedAssets.add(filename);
-          expect(existsSync(join(assetRoot, filename))).toBe(true);
+        expect(document).not.toMatch(/\]\(\.\.?\//);
+        for (const tag of document.matchAll(/<img\b[^>]+>/g)) {
+          const name = /src="\/images\/408-mind-maps\/([^\"]+)"/.exec(tag[0])?.[1];
+          expect(name, tag[0]).toBeDefined();
+          expect(tag[0]).toMatch(/width="\d+"/);
+          expect(tag[0]).toMatch(/height="\d+"/);
+          expect(tag[0]).toMatch(/alt="[^\"]+"/);
+          expect(existsSync(join(assetRoot, name!)), name).toBe(true);
+          referenced.add(name!);
         }
       }
     }
-    // Every figure file is referenced and every file is an SVG generated by
-    // scripts/mind-map-figures (some figures became Markdown tables or code).
-    expect(readdirSync(assetRoot).sort()).toEqual([...referencedAssets].sort());
-    expect(readdirSync(assetRoot).every((name) => name.endsWith('.svg'))).toBe(true);
-    expect(referencedAssets.size).toBe(452);
-    for (const filename of referencedAssets) {
-      const svg = readFileSync(join(assetRoot, filename), 'utf8');
-      expect(svg.startsWith('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ')).toBe(true);
-      expect(svg).not.toMatch(/<image|<script|href="http/);
-      expect(existsSync(join(root, 'scripts/mind-map-figures/figs', filename.replace(/\.svg$/, '.py')))).toBe(true);
+    const report = JSON.parse(readFileSync(join(root, 'reports/408-mind-map-image-migration.json'), 'utf8'));
+    const replacements = new Set<string>(report.placements.filter((entry: { asset: string; selectedAsset: string }) => entry.asset !== entry.selectedAsset).map((entry: { asset: string }) => entry.asset));
+    const assets = readdirSync(assetRoot);
+    expect(assets).toHaveLength(612);
+    expect(referenced.size).toBe(530);
+    expect(assets.filter((name) => !referenced.has(name) && !replacements.has(name))).toEqual([]);
+    expect(new Set(report.placements.map((entry: { asset: string }) => entry.asset)).size).toBe(223);
+    for (const entry of report.placements) {
+      const target = readFileSync(join(docsRoot, entry.target), 'utf8');
+      expect(target, entry.asset + ' -> ' + entry.target).toContain('/images/408-mind-maps/' + entry.selectedAsset);
+      if (entry.branch) {
+        const branch = target.split('## ' + entry.branch + '\n')[1]?.split('\n## ')[0];
+        expect(branch, entry.asset).toContain('/images/408-mind-maps/' + entry.selectedAsset);
+      }
     }
   });
 

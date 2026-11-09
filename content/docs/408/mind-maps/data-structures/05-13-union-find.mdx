@@ -1,0 +1,75 @@
+---
+title: "5.13 并查集与按大小合并"
+description: "森林表示集合、Find/Union、根节点负规模、路径压缩、均摊复杂度及 Kruskal 应用。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.13 并查集 · Union-Find / DSU
+
+## 解决什么问题
+- 维护一批互不相交的集合，支持**查找所属集合**、**合并两个集合**
+- 初始 n 个元素各自成一个集合，逐步连通成若干个分量
+- `Find(x)` 返回 x 所属集合的**代表元（根）**
+- `Union(x,y)` 合并二者集合；若已同根，不作改动
+- DSU 不能高效支持任意拆分；**不是通用动态森林**
+- <img src="/images/408-mind-maps/ds-05-dsu-sets-redrawn.svg" alt="三个不相交集合及各自代表根（修复原下标失控字号）" width="660" height="358">
+
+- <img src="/images/408-mind-maps/ds-0152.svg" alt="并查集：将各个元素划分为若干个互不相交的子集" width="640" height="312">
+
+## 数组表示：两种方案别混
+- **负值根方案**：根结点 `parent[root] < 0` 表示当前集合大小的负数
+  - 起始每项 = −1；非根项存父下标（≥0）
+  - `Find` 遇到 `parent[x]<0` 即到根
+- **自指根方案**：起始 `parent[i]=i`；根满足 `parent[root]==root`
+  - 可另存 `size[root]` 或 `rank[root]`
+- 两套根哨兵规则不同，**不能混用查根条件**
+- <img src="/images/408-mind-maps/ds-0121.svg" alt="负值根数组的双亲指针表示" width="630" height="274">
+
+- <img src="/images/408-mind-maps/ds-0124.svg" alt="并查集的存储结构：用森林表示，每个子集一棵树" width="640" height="300">
+
+## 按大小合并（负值根版本）
+- 对两元素先执行 `ra=Find(a)`、`rb=Find(b)`
+- 若 `ra==rb`：已在同一集合，直接返回
+- 否则把**较小集合的根**接到较大集合根下
+- 若 `parent[ra] <= parent[rb]`（更负代表规模更大）
+  - `parent[ra] += parent[rb]` 更新总规模
+  - `parent[rb] = ra` 挂上小树
+- 否则对称处理；不要先覆盖根负规模再相加
+- 无路径压缩时，高度**O(log n)**；合并 O(log n)（含找根）
+
+## 路径压缩（负值根版本）
+- 查找时**先找到根 r**，再让路径上的每个结点直接指向 r
+- 伪码 `find(x): if parent[x]<0 return x; parent[x]=find(parent[x]); return parent[x]`
+- 路径压缩保留根的负规模，而不是把每项都改成 −1
+- <img src="/images/408-mind-maps/ds-0079.svg" alt="并查集路径压缩前后双亲指向的变化" width="670" height="343">
+- **按规模/秩合并 + 路径压缩**的 m 次操作，总计约 $O(m\alpha(n))$ 均摊
+  - $\alpha(n)$ 为反阿克曼函数，增长极慢
+  - 这是**均摊复杂度**，不代表每次 Find 最坏一定是常数或 $O(\alpha(n))$
+
+## 代码与边界
+- 初始化：`for i in [0,n): parent[i]=-1`
+- 查找递归时先判断 `parent[x]<0`，**不要把负规模当下标**
+- 合并前必须 Find，且检查根不同，避免同集合反复相加
+- 单次 Union 除了链接，还可能经历查找路径
+- 不加路径压缩的按大小合并与加压缩方案的复杂度不能混写
+
+## 图论应用
+- 无向图连通分量：对每条边的两个端点执行 Union
+- Kruskal：按边权递增，若两端根不同则选边并合并
+- 判断**无向图**是否产生环：处理一条边前根相同则加入它会成环
+- DSU **不能直接用于判断一般有向图是否有环**
+- 此知识在[第六章 图](/docs/408/mind-maps/data-structures/06-graphs)中将与 Kruskal 交叉出现
+- [返回第五章导览](/docs/408/mind-maps/data-structures/05-trees) · [下一章：图](/docs/408/mind-maps/data-structures/06-graphs)
+````

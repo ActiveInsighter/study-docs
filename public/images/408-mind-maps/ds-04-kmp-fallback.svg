@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 390" width="900" height="390" role="img" aria-label="KMP 失配后主串下标 i 不变，模式串 j 从 6 跳到 4 的具体实例">
+<rect x="1" y="1" width="898" height="388" rx="16" fill="#fff" stroke="#dbeafe" stroke-width="2"/>
+<text x="28" y="43" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#0f172a">KMP 匹配实例：同一主串字符重新与模式串第 4 位比较</text>
+<text x="28" y="76" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="15" font-weight="400" fill="#475569">S = abab abacaba     P = ababaca     1 基下标</text>
+<text x="28" y="150" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="15" font-weight="600" fill="#334155">主串 S</text>
+<rect x="162" y="128" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="184" y="152" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">a</text>
+<text x="184" y="118" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="12" font-weight="400" fill="#64748b">1</text>
+<rect x="210" y="128" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="232" y="152" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">b</text>
+<text x="232" y="118" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="12" font-weight="400" fill="#64748b">2</text>
+<rect x="258" y="128" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="280" y="152" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">a</text>
+<text x="280" y="118" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="12" font-weight="400" fill="#64748b">3</text>
+<rect x="306" y="128" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="328" y="152" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">b</text>
+<text x="328" y="118" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="12" font-weight="400" fill="#64748b">4</text>
+<rect x="354" y="128" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="376" y="152" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">a</text>
+<text x="376" y="118" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="12" font-weight="400" fill="#64748b">5</text>
+<rect x="402" y="128" width="44" height="35" rx="5" fill="#fee2e2" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="424" y="152" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#991b1b">b</text>
+<text x="424" y="118" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="12" font-weight="400" fill="#64748b">6</text>
+<rect x="450" y="128" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="472" y="152" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">a</text>
+<text x="472" y="118" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="12" font-weight="400" fill="#64748b">7</text>
+<rect x="498" y="128" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="520" y="152" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">c</text>
+<text x="520" y="118" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="12" font-weight="400" fill="#64748b">8</text>
+<rect x="546" y="128" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="568" y="152" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">a</text>
+<text x="568" y="118" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="12" font-weight="400" fill="#64748b">9</text>
+<rect x="594" y="128" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="616" y="152" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">b</text>
+<text x="616" y="118" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="12" font-weight="400" fill="#64748b">10</text>
+<rect x="642" y="128" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="664" y="152" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">a</text>
+<text x="664" y="118" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="12" font-weight="400" fill="#64748b">11</text>
+<text x="28" y="229" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="15" font-weight="600" fill="#334155">首次对齐 P</text>
+<rect x="162" y="207" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="184" y="231" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">a</text>
+<rect x="210" y="207" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="232" y="231" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">b</text>
+<rect x="258" y="207" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="280" y="231" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">a</text>
+<rect x="306" y="207" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="328" y="231" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">b</text>
+<rect x="354" y="207" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="376" y="231" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">a</text>
+<rect x="402" y="207" width="44" height="35" rx="5" fill="#fee2e2" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="424" y="231" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#991b1b">c</text>
+<rect x="450" y="207" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="472" y="231" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">a</text>
+<text x="28" y="316" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="15" font-weight="600" fill="#334155">失配后右移 P</text>
+<rect x="258" y="294" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="280" y="318" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">a</text>
+<rect x="306" y="294" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="328" y="318" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">b</text>
+<rect x="354" y="294" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="376" y="318" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">a</text>
+<rect x="402" y="294" width="44" height="35" rx="5" fill="#dbeafe" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="424" y="318" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">b</text>
+<rect x="450" y="294" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="472" y="318" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">a</text>
+<rect x="498" y="294" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="520" y="318" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">c</text>
+<rect x="546" y="294" width="44" height="35" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.25"/>
+<text x="568" y="318" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="700" fill="#1e293b">a</text>
+<text x="28" y="187" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="14" font-weight="600" fill="#b91c1c">i = 6，j = 6：b ≠ c</text>
+<text x="28" y="271" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="15" font-weight="600" fill="#1d4ed8">next[6] = 4</text>
+<text x="28" y="362" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="17" font-weight="600" fill="#166534">i = 6 不变，j = 4：b = b；继续比较即可</text>
+<path d="M 426 170 L 426 197" stroke="#dc2626" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M 426 197 l -6 -8 M 426 197 l 6 -8" stroke="#dc2626" stroke-width="2" fill="none"/>
+</svg>

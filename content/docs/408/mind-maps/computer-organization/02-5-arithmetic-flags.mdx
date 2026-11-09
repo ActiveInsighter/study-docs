@@ -1,0 +1,65 @@
+---
+title: "2.5 补码加减、OF/CF/SF/ZF"
+description: "统一加减法、进位与借位、符号溢出、条件标志及有符号无符号比较。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.5 补码加减与结果标志
+
+## 同一个加法器实现 $A+B$ 和 $A-B$
+- 用选择信号 `Sub` 控制第二操作数每位是否取反：$B'=B\oplus Sub$
+  - $F=A+B'+Sub\pmod {2^w}$
+  - `Sub=0`：加法 $A+B$；`Sub=1`：减法 $A+\overline B+1=A-B$
+- <img src="/images/408-mind-maps/co-0245.svg" alt="加减法统一电路通过取反和输入进位切换" width="820" height="364">
+- 补码符号位和数值位一起参加位级运算，但溢出仍需单独检查
+
+## 四个常考条件码
+- **ZF (zero)**：结果所有位为0时为1
+- **SF (sign)**：结果最高有效位（在约定宽度下）
+- **OF (overflow)**：有符号加减超出表示范围
+  - 加法：$OF=C_{\mathrm{into\ sign}}\oplus C_{\mathrm{out\ of\ sign}}$
+  - 两个正数相加得负数：正溢出；两个负数相加得非负：负溢出
+- **CF (carry/borrow)**：按**无符号**解释的溢出/借位状态
+  - 加法：$CF=C_{out}$
+  - **采用x86式“借位为1”约定的减法**：$CF=\overline{C_{out}}$
+  - 若加减统一电路 $C_{in}=Sub$，可写 $CF=C_{out}\oplus Sub$
+  - 不同ISA可能把减法的 `carry` 定义成“无借位”，必须先看题给架构
+- <img src="/images/408-mind-maps/co-0137.svg" alt="加法器输出ZF OF SF CF等标志信号" width="600" height="425">
+
+- <img src="/images/408-mind-maps/co-0178.svg" alt="带标志加法器的逻辑电路：OF、SF、ZF、CF 的产生" width="800" height="340">
+
+## 经典8位例子：OF ≠ CF
+- $127+1$ → `01111111 + 00000001 = 10000000`
+  - 按 signed 真值是−128；**OF=1、CF=0、SF=1、ZF=0**
+- $255+1$ → `11111111 + 00000001 = 00000000`
+  - 按 unsigned 回绕为0；**CF=1、OF=0、SF=0、ZF=1**
+- $5-7$ → `00000101 - 00000111 = 11111110`
+  - 有符号−2可表示：**OF=0**；无符号需要借位：**CF=1**
+- $(-128)-1$ → `10000000 - 00000001 = 01111111`
+  - 真实−129超界：**OF=1**；无符号128−1不借位：**CF=0**
+
+## 比较指令与标志组合
+- 多数比较指令相当于计算 $A-B$ 更新标志但不保留结果
+  - 相等：$ZF=1$；不相等：$ZF=0$
+  - 在上述借位约定下：无符号 $A<B\iff CF=1$
+  - 有符号 $A<B\iff SF\oplus OF=1$
+  - 有符号 $A>B\iff ZF=0$ 且 $SF=OF$
+- **SF不是“结果数学真值为负”的万用判断**：OF=1时结果符号已回绕
+
+## 易错纠偏
+- “符号位翻转就溢出”不成立：−1+1→0符号位改变但没有溢出
+- “异号相加不会溢出”只对**相同位宽补码有符号加法**成立
+- 加法运算中的 $OF$ 与 $CF$ 独立；溢出不等于程序一定抛出异常
+````

@@ -1,0 +1,81 @@
+---
+title: "4.8 KMP 高频考法与综合辨析"
+description: "next/nextval 手算核对、实际匹配模拟、复杂度与边界题型的易错陷阱。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 4.8 408 串 · 高频题型与最后核对
+
+## 题型一：快速求 1 基 next
+- **固定本章定义**：`next[1]=0`，`next[j]=1+L(P[1..j−1])`
+- `google` → `0,1,1,1,2,1`
+- `ababaa` → `0,1,1,2,3,4`
+- `aaaab` → `0,1,2,3,4`
+- `abaabc` → `0,1,1,2,2,3`
+- 若看到首项 `-1` 或 `0 基 lps`，**先转换题目约定**再判断对错
+
+## 题型二：手算 nextval
+- 已得 1 基 next，依次检查当前位置 `P[j]` 与 `P[next[j]]`
+- 若不同：直接沿用 next 值
+- 若相同：沿之前计算好的 nextval 链继续跳转
+- `aaaab` → `nextval = 0,0,0,0,4`
+- `ababaa` → `nextval = 0,1,0,1,0,4`
+- `abaabc` → `nextval = 0,1,0,2,1,3`
+- 对长度为 m 的模式，输出数组**恰好 m 项**；除非题目定义额外结尾项
+
+## 题型三：模拟匹配返回位置
+- `S="abababacaba"`，`P="ababaca"`
+  - 部分匹配后在 `i=6,j=6` 遇到 `b!=c`
+  - 失配：`j=next[6]=4`；**i 仍为 6**
+  - 首次匹配完成时 `i=10,j=8`（m=7）
+  - 返回 `i-m=3`
+- 直接做 KMP 必须保持：`i` 只增不减，`j` 可以退到 0
+- 题目若只问首次出现的位置，朴素逐位模拟也能得到同一结果
+
+## 题型四：代码填空
+- 计算 next 的分支
+  - `if(j==0 || P[i]==P[j]) { ++i; ++j; next[i]=j; }`
+  - `else j=next[j];`
+- KMP 匹配的分支
+  - `if(j==0 || S[i]==P[j]) { ++i; ++j; }`
+  - `else j=next[j];`
+- nextval
+  - `if(next[j]>0 && P[j]==P[next[j]]) nextval[j]=nextval[next[j]];`
+  - `else nextval[j]=next[j];`
+- 条件的**短路求值**可避免访问无效的 `P[0]`
+
+## 题型五：复杂度与边界比较
+- 朴素匹配：最坏时间 O(nm)，额外空间 O(1)
+- KMP 构造 next：时间 O(m)，额外空间 O(m)
+- KMP 匹配阶段：时间 O(n)，已有 next 时额外工作空间 O(1)
+- 完整 KMP：时间 O(n+m)、额外空间 O(m)
+- 单纯“模式只出现一次”不能说明 BF 一定是 O(n)
+- `m>n` 必定不匹配；空模式 `m=0` 必须看题目 API 契约
+
+## 题型六：字符串本体辨析
+- **子串**要求连续；**子序列**不要求连续
+- 空串长度 0，空格串长度 1
+- 静态定长串的 `length` 记录逻辑串长，不等于底层数组容量
+- C 风格 `\0` 终止符不计算在 `strlen` 的结果中
+- 块链串存多个字符以减小指针开销，但仍需遍历才可定位任意字符
+
+## 常见陷阱与查错路径
+- 先标注教材位序 `1..m` 与 `0 基`，再开始求 next
+- 先核对 `next[j]` 基于哪个**已匹配前缀**，不是直接基于 `P[1..j]`
+- 求 nextval 时不能略过跳转链的递归含义
+- KMP 失配只能让**模式串**指针回退，不能重置主串起点
+- 任何手算结果可以用 BF 结果检验最终匹配位置是否一致
+- [返回第四章分节导览](/docs/408/mind-maps/data-structures/04-strings) · [下一章：树与二叉树](/docs/408/mind-maps/data-structures/05-trees)
+````

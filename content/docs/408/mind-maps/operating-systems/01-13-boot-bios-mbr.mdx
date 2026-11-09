@@ -1,0 +1,54 @@
+---
+title: "1.13 传统 BIOS/MBR 启动链"
+description: "固件、MBR、活动分区、引导加载器与内核加载"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 1.13 BIOS + MBR：传统启动方式
+
+## 为什么要引导
+- 上电/复位时，内存中**尚没有可运行的完整操作系统内核**
+- 处理器从架构指定的**复位入口**执行固件代码，初始化硬件并找到可启动程序
+- 固件通常存于非易失性存储器，运行中可能复制部分代码到RAM；**不等于BIOS是RAM的一部分**
+
+- <img src="/images/408-mind-maps/os-0043.svg" alt="主存由 RAM 和 ROM 组成，ROM 中存放 BIOS（含自举程序）" width="460" height="410">
+
+## 典型传统链条（示意）
+- CPU复位 → BIOS固件初始化/自检 → 按启动顺序选择设备
+- BIOS从传统MBR格式磁盘读取**第一个扇区**中的引导代码/分区信息，转交控制
+- MBR阶段可能定位**活动分区**并加载该分区的引导扇区，或链式加载其他启动程序
+- 后续bootloader加载所需内核映像/初始文件系统等，准备运行环境，再转交操作系统
+- **MBR不是“整个OS”**：扇区空间很有限，通常靠多阶段引导
+
+- <img src="/images/408-mind-maps/os-0105.svg" alt="操作系统引导步骤：BIOS 自检 → 读 MBR → 读分区引导记录 → 加载启动管理器与内核" width="860" height="300">
+
+## 关键区分
+- **MBR主引导记录**：传统方案下包含少量引导代码和分区表；末尾可有`0x55AA`标志
+- **活动分区**：在典型传统BIOS/MBR分区式启动中用于标识可启动分区；**“装有OS”不必然就是活动分区**
+- **分区引导扇区 PBR/VBR**：某分区对应的启动记录，在传统链式启动中可能被加载
+- **bootloader**：负责识别、加载并启动内核；不同OS可能有不同阶段
+
+## 不能机械背诵的说法
+- “CPU把IR预先设成BIOS第一条指令”：通常是**复位向量/PC所定义的取指行为**，非泛用IR赋值说法
+- “每次引导一定先读MBR和活动分区”：**UEFI/GPT启动通常不走这条链**
+- “根目录是CPU加载OS的必经第一步”：实际由固件与引导器安排，非所有平台一致
+- <img src="/images/408-mind-maps/os-01-boot-paths-clean.svg" alt="传统BIOS/MBR和UEFI/GPT两种启动路径比较" width="820" height="357">
+
+## 导航
+- [上一节：1.12 操作系统结构：分层、模块、宏内核与微内核](/docs/408/mind-maps/operating-systems/01-12-kernel-architectures)
+- [下一节：1.14 UEFI/GPT 引导与安全启动](/docs/408/mind-maps/operating-systems/01-14-uefi-gpt)
+- [返回本章导览](/docs/408/mind-maps/operating-systems/01-overview)
+
+````

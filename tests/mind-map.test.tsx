@@ -1,9 +1,11 @@
 import type { Root } from 'mdast';
+import { approximateMeasurer, renderTree } from '@markmap/render';
+import { resolveViewOptions } from '@markmap/view';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it, vi } from 'vitest';
 import { MindMap } from '../components/mdx/mind-map';
 import { remarkMdxMindmap } from '../lib/mdx/remark-mindmap';
-import { transformMindMapMarkdown, type MindMapNode } from '../lib/mind-map/transform';
+import { transformMindMapDocument, transformMindMapMarkdown, type MindMapNode } from '../lib/mind-map/transform';
 
 vi.mock('next/navigation', () => ({
   useRouter: () => ({ push: vi.fn() }),
@@ -23,6 +25,28 @@ function text(node: MindMapNode) {
 }
 
 describe('remarkMdxMindmap', () => {
+  it('carries document options through MDX and actually lays out branches on both sides', () => {
+    const markdown = '---\nmarkmap:\n  layout: two-sided\n  theme: cards\n  foldLevel: 3\n---\n# 根\n## 左右分支一\n## 左右分支二\n## 左右分支三';
+    const tree = transform({ type: 'root', children: [{ type: 'code', lang: 'mindmap', value: markdown }] } as Root);
+    const node = tree.children[0] as unknown as { attributes: Array<{ name: string; value: string }> };
+    const attributes = Object.fromEntries(node.attributes.map(({ name, value }) => [name, value]));
+    const document = transformMindMapDocument(markdown);
+    expect(JSON.parse(attributes.documentOptions)).toEqual(document.options);
+    const { options, warnings } = resolveViewOptions({ measurer: approximateMeasurer }, JSON.parse(attributes.documentOptions));
+    expect(warnings).toEqual([]);
+    expect(options.foldLevel).toBe(3);
+    expect(options.theme?.name).toBe('cards');
+    const rendered = renderTree(JSON.parse(attributes.data), { ...options, measurer: approximateMeasurer });
+    expect(new Set(rendered.layout.nodes.filter((entry) => entry.depth === 1).map((entry) => entry.direction))).toEqual(new Set(['left', 'right']));
+  });
+
+  it('rejects invalid document layout options using the official validator', () => {
+    const { options, warnings } = resolveViewOptions({}, { layout: 'missing-layout', foldLevel: 'bad', theme: '<script>' });
+    expect(options.layout).toBeUndefined();
+    expect(options.foldLevel).toBeUndefined();
+    expect(warnings.length).toBeGreaterThan(0);
+  });
+
   it('converts mindmap code fences into MindMap components with a build-time tree', () => {
     const tree = transform({
       type: 'root',

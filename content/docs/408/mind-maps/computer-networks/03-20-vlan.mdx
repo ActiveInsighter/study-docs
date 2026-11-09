@@ -1,0 +1,62 @@
+---
+title: "3.20 VLAN与802.1Q标记帧"
+description: "广播域划分、Access/Trunk、VID、Tag长度和三层互通"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.20 VLAN与802.1Q标记帧
+
+## VLAN本质
+- **虚拟局域网VLAN**：把同一物理交换网络划分成多个**逻辑二层广播域**
+- 不同VLAN的普通二层广播/未知单播不自动互通；跨VLAN通常经**三层路由**
+- VLAN可按交换机端口、MAC等策略分配；实际最常见是按端口
+- **交换机每端口可隔离冲突域**；VLAN主要隔离**广播域**，不能把两个作用混为一谈
+
+- <img src="/images/408-mind-maps/cn-0084.svg" alt="虚拟局域网 VLAN：把局域网内的设备划分成与物理位置无关的逻辑组" width="700" height="300">
+
+## Access与Trunk（工程常见术语）
+- **Access端口**：通常承载一个业务VLAN，接普通终端帧多为不带标签
+- **Trunk端口**：可承载多个VLAN，通常用802.1Q标签区分
+- 特殊情况：Trunk的**native VLAN**可能不带标签，具体依设备配置
+- 不是“所有主机绝对不能发送带Tag帧”，更不能把标签添加主体写成唯一的交换机
+
+- <img src="/images/408-mind-maps/cn-0113.svg" alt="基于接口的 VLAN：交换机端口划分 VLAN，不同 VLAN 通信需要路由器或三层交换机" width="760" height="300">
+
+## 802.1Q标签构造
+- 在原Ethernet II的**源MAC与Type/Length之间**插入4字节标签
+- **TPID(2B，常见0x8100) + TCI(2B)**
+  - TCI含：`PCP(3bit)`、`DEI(1bit)`、`VID(12bit)`
+- VID为12bit，**可用于VLAN标识的通常是1~4094**；0和4095有保留/特殊用途
+- 无标签标准MAC帧最大`1518B`，插入标签后典型最大`1522B`（均不含8B前导）
+- <img src="/images/408-mind-maps/cn-03-vlan-clean.svg" alt="以太网在源MAC后插入TPID TCI共4字节VLAN标签" width="830" height="395">
+
+- <img src="/images/408-mind-maps/cn-0148.svg" alt="802.1Q 帧：在以太网 MAC 帧的源地址后插入 4 字节 VLAN 标记" width="700" height="300">
+
+## 交换与路由
+- 同一VLAN的H1与H2，在交换机MAC学习成功后可二层转发
+- 跨VLAN的H1与H3：需要路由器子接口或三层交换机VLAN接口（SVI）等提供路由
+- 对外路由需要完整IP寻址/网关配置，**不能仅修改VID就跨网通信**
+
+## 查错
+- VLAN拼写为`Trunk`，不是“Truck”
+- 标签**4字节**与`VID 12bit`不能混写；4字节还有PCP、DEI、TPID
+- 源图`cn-0148.svg`标签标注图局部拥挤，本轮新增更清晰的替代图
+
+## 章节导航
+- [上一节：3.19 网桥、二层交换机与自学习](/docs/408/mind-maps/computer-networks/03-19-bridges-switches)
+- [第三章总览](/docs/408/mind-maps/computer-networks/03-data-link-layer)
+- [下一节：3.21 408综合：时序、窗口和错题判别](/docs/408/mind-maps/computer-networks/03-21-exam-review)
+
+````

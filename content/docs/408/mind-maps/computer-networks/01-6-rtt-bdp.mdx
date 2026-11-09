@@ -1,0 +1,47 @@
+---
+title: "1.6 RTT、时延带宽积与利用率"
+description: "RTT与单程区别、BDP链路与窗口、利用率/排队。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 1.6 RTT、时延带宽积与利用率
+
+## 时延带宽积 BDP
+- 定义：`BDP = R × d_prop`（**指定链路**的带宽乘该链路传播时延）
+- 单位bit，可视为单向链路中同时“在途”的比特容量
+- 例：`R=100 Mbit/s`、`d_prop=20 ms` → `BDP=2 Mbit`
+- 传播时延增大，**单向BDP增大**；不代表比特在链路上跑得更快
+
+## 往返时间 RTT
+- 从发送方发出数据/探测到收到对应响应的往返历时；具体测量点需明确
+- 通常包含正反向传播、发送、处理、排队时延；不必等于`2×单程时延`
+- TCP RTT测量、超时重传与吞吐窗口相关；常用理想近似：`窗口/RTT`限制在途有效速率
+- 窗口要跑满路径带宽，需要关注**往返BDP `R × RTT`**；它与单向链路BDP不是同一口径
+
+## 利用率和拥塞
+- 链路利用率：观察区间内链路忙于发送的时间比例（可按实际定义换算）
+- 高利用率未必是高效率：长队列会增加排队时延、可能丢包
+- 队列稳定性与突发性和平均到达率有关；不能写成“利用率越高越好”
+
+## 小算例与误区
+- 例：某链路发送一帧用2ms，观察窗口10ms内总共发送6ms → 利用率60%
+- **吞吐量、带宽、利用率**三者分别描述实际量、能力上限与占用比例
+- RTT不是`L/R`，BDP不是磁盘/内存大小，发送时延也不是波在介质中传播的时间
+
+## 学习导航
+- [上一节：1.5 四类时延与多跳时延计算](/docs/408/mind-maps/computer-networks/01-5-delay)
+- [返回本章总览](/docs/408/mind-maps/computer-networks/01-architecture)
+- [下一节：1.7 分层、对等实体、协议与服务原语](/docs/408/mind-maps/computer-networks/01-7-services)
+````

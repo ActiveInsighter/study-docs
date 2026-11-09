@@ -1,0 +1,44 @@
+---
+title: "3.8 机械磁盘与RAID存储阵列"
+description: "磁盘CHS、寻道/旋转/传输时延、RAID 0/1/5/6/10的容错。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.8 磁盘与 RAID
+
+## 磁盘结构
+- 磁道(track)：盘面上的同心圆；扇区(sector)：磁道上的数据记录区域
+- 柱面(cylinder)：多个盘面相同半径的磁道构成的几何集合
+  - 物理磁盘经典地址 `柱面–磁头/盘面–扇区`（CHS），现代磁盘多采用 LBA 抽象
+  - 物理扇区典型512B或4KiB；文件系统**簇**是逻辑分配单位，不能一律等于物理扇区
+- <img src="/images/408-mind-maps/co-0038.svg" alt="多盘磁头与柱面关系" width="790" height="444">
+
+## 平均访问时间
+- $T_{disk}=T_{seek}+T_{rotation}+T_{transfer}+T_{controller}$
+  - 转速 $R$ 转/分 → 一圈 $60/R$ 秒；**随机访问平均旋转等待** $30/R$ 秒
+  - 传输 $s$ 字节、有效传输率 $v$ → $T_{transfer}\approx s/v$
+  - 例7200 rpm，平均旋转等待约 $4.17$ ms；不能把“转一圈时间”误当平均旋转延迟
+- HDD 随机IOPS常受机械寻道与旋转限制，顺序吞吐不能代表随机性能
+- <img src="/images/408-mind-maps/co-0181.svg" alt="磁盘盘面磁道、扇区和间隙的几何图" width="750" height="509">
+
+## RAID（多个物理盘组成逻辑卷）
+- RAID0：条带化并行，**无冗余，任一盘坏可使整个阵列丢失数据**
+- RAID1：镜像，常见双盘可用容量约为一盘，容忍其中一盘失效
+- RAID5：分布式奇偶校验，n盘（n≥3）可用容量约 $(n-1)C$，容忍一盘故障
+- RAID6：双重校验，n盘（n≥4）可用容量约 $(n-2)C$，容忍两盘故障
+- RAID10：先镜像后条带化；容量与可容忍故障数依具体故障分布
+  - RAID不是备份：误删、勒索软件、火灾等风险不会因镜像自动消失
+- 408资料可能介绍RAID2/3/4，记住其编码/校验粒度即可
+````

@@ -1,0 +1,60 @@
+---
+title: "3.6 主存字扩展、位扩展与地址分配"
+description: "芯片并联、译码片选、地址范围计算和字位同时扩展。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.6 存储芯片扩展
+
+## 位扩展：加宽一个存储字
+- 目标：芯片每地址只提供 b bit，但CPU/总线需 w bit
+  - 并联 $w/b$ 片相同深度芯片；**相同地址线、共享片选、数据线分接**
+  - 示例：8片 `8K×1` → 一个 `8K×8` 存储组
+  - 只加宽不增加地址数；无需新增片选编码
+- <img src="/images/408-mind-maps/co-0309.svg" alt="八片8K乘1位芯片实现位扩展" width="870" height="412">
+
+- <img src="/images/408-mind-maps/co-0233.svg" alt="位扩展前：一块 8K×1 位芯片只能接 1 根数据线" width="760" height="380">
+
+- <img src="/images/408-mind-maps/co-0301.svg" alt="位扩展：再并联一块芯片接 D₁" width="760" height="380">
+
+## 字扩展：增加可寻址单元数
+- 目标：芯片组织 `N×w`，需要总计 `K×N×w`
+  - K个存储组数据总线并接；高位地址进译码器，选中其中一组
+  - 例：4片 `8K×8` → `32K×8`；地址线需15位（片内13位 + 片选2位）
+- 译码后的4个连续区间（以0为基址）
+  - `0000H–1FFFH`、`2000H–3FFFH`、`4000H–5FFFH`、`6000H–7FFFH`
+  - 如果部分高位忽略，可能发生“地址镜像”：多个CPU地址映射到同一颗芯片
+- <img src="/images/408-mind-maps/co-0138.svg" alt="用高位译码器实现字扩展" width="860" height="400">
+
+- <img src="/images/408-mind-maps/co-0074.svg" alt="字扩展前：一块 8K×8 位芯片，CPU 的 A₁₅~A₁₃ 未用" width="620" height="360">
+
+- <img src="/images/408-mind-maps/co-0314.svg" alt="字扩展·线选法：每根高位地址线直接作一块芯片的片选" width="800" height="380">
+
+## 字位同时扩展：先分组再译码
+- 求“每组几片” $n_b=W_{target}/W_{chip}$
+  - 求“多少组” $n_g=N_{target}/N_{chip}$
+  - 总芯片数 $n=n_b\times n_g$，若不整除要按整组向上取整并处理无效区
+- 示例：用 `16K×4` 芯片做 `64K×8`
+  - 每组2片位扩展，4组字扩展 → **8片**
+  - 片内地址14位、组片选2位、总CPU地址至少16位（按字节编址时）
+  - 不能把“两片组成一组”误写成地址位数变少
+- <img src="/images/408-mind-maps/co-0125.svg" alt="八片16K乘4位芯片组合为64K乘8位" width="860" height="380">
+
+## 综合题算法
+- (1)统一B/bit与编址单位 → (2)确定目标深度与宽度
+- (3)画“共享片内地址 + 译码高位 + 分接数据线” → (4)列每片CS条件
+- (5)核对实际地址区间长度、空洞与镜像、控制端有效电平
+- 不可默认“多个芯片一连接就把CPU字长变大”；扩展的是主存数据组织
+````

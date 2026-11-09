@@ -1,6 +1,6 @@
 {
   "title": "思维导图",
-  "description": "408 四门课 26 章思维导图，每章一页。",
+  "description": "408 四门课共 26 章，已重构为 402 个独立 Markmap 分节页面，保留原章节导览。",
   "pages": [
     "index",
     "data-structures",

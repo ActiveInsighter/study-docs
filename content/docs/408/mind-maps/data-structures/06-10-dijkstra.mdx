@@ -1,0 +1,55 @@
+---
+title: "6.10 单源最短路径：BFS 与 Dijkstra"
+description: "无权 BFS、非负权 Dijkstra、dist/final/prev、松弛、不可达、负边反例与复杂度。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.10 单源最短路径：BFS / Dijkstra
+
+## 定义与应用条件
+- 目标：固定源点 s，求到任意 v 的**最小边权和**以及对应的前驱
+- **无权图/各边相同单位权**：BFS 得到最少边数路径，$O(V+E)$（邻接表）
+- **非负权图**：Dijkstra；可处理有向/无向图、零权边和有向环
+- 含**负边**时不能直接采用标准 Dijkstra 的贪心结论
+- 含可达负环时，最短路径权值可能无下界（不存在有限最短路）
+
+## Dijkstra 的三个数组
+- `dist[v]`：当前已找到的从 s 到 v 的**最小暂定距离**
+- `final[v]`：从源点到 v 的最短距离是否**已经确定**
+- `prev[v]`：当前最佳路径中 v 的**前驱顶点**（用于逆序回溯）
+- 初始化 `dist[s]=0`、其他为直接边权或 INF；`prev[s]=-1`
+- 每轮选择 `final=false` 且 `dist` 最小的顶点 u → 置 `final[u]=true`
+- 对 u 的出边 `(u,v,w)` 松弛：若 $dist[u]+w<dist[v]$，更新 `dist[v]` 和 `prev[v]`
+
+## 关键不变式
+- 每个被 `final` 的顶点已有**全局最短距离**，依赖**边权非负**
+- 尚未 final 的 dist 是经由已确定顶点的最佳已知距离
+- 存在并列最短距离时，合法最短路径树可不唯一
+- 当最小暂定距离仍为 INF，可判断剩余顶点**从源点不可达**
+- <img src="/images/408-mind-maps/ds-0049.svg" alt="Dijkstra 从源点不断确定新顶点和修改最短路径长度" width="700" height="407">
+
+## 时间复杂度：看实现
+- 邻接矩阵 + 线性扫描最小 `dist`：$O(V^2)$
+- 邻接表 + 二叉最小堆：$O((V+E)\log V)$（允许重复堆条目）
+- 一次 Dijkstra 计算**从同一个源点到所有顶点**，不是“只算一个终点”
+- 所有 V 个顶点分别作为源点重复运行 → 常规矩阵版 $O(V^3)$
+
+## 常见考题错判
+- BFS 不适用于**一般不等权**最短路径
+- Dijkstra 可处理有向图带环，不要求 DAG
+- 无负边≠没有负环问题；若有负边，标准算法仍不可直接保证正确
+- `final[v]` 必须表示已经**定值**，不是普通 DFS/BFS 的“访问过”
+- [继续：6.11 Floyd](/docs/408/mind-maps/data-structures/06-11-floyd)
+````

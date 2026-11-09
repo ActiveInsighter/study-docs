@@ -1,0 +1,47 @@
+---
+title: "2.14 管程与条件变量"
+description: "Hoare/Mesa语义、wait/signal、封装互斥与循环复查条件。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.14 管程：把共享状态与同步规则封装起来
+
+## 管程包含什么
+- 名称、共享数据结构、对该数据操作的一组过程和初始化代码
+- 只有通过规定的过程操作内部共享状态；语言/运行时提供互斥进入规则
+- 常用条件变量：`notFull`、`notEmpty`等，分别对应等待队列
+- 管程与类相似但**不能等同普通class或static语法**
+
+## 条件变量 wait/signal
+- `condition.wait()`：释放管程互斥访问权并等待条件；醒来后重新获取访问权
+- `condition.signal()`：通知一个等待者有机会重新检查条件
+- 条件变量本身**不保存资源计数**：被signal时也不意味着条件必然为真
+- 管程中的wait/signal不同于计数信号量P/V，后者会修改许可计数
+
+## Hoare与Mesa语义
+- **Hoare管程**：signal后通常立即将管程执行权转交给被唤醒者
+- **Mesa管程**：signal仅令等待者就绪，其真正进入管程时条件可能又变化
+- 因此使用Mesa式条件变量时：**`while (!condition) wait()`**，而不是`if`检查一次
+  - 既考虑其他线程抢先改变共享状态，也考虑伪唤醒
+- 生产者：`while(count==n) notFull.wait(); 插入; notEmpty.signal()`
+- 消费者：`while(count==0) notEmpty.wait(); 取出; notFull.signal()`
+
+## 正确性小测
+- 调用`wait`后该线程不再占着管程，否则别的线程无法改变条件
+- “signal总会增加某个整数变量”错误
+- “管程完全消除死锁可能”错误：管程之间的锁顺序、条件等待仍可能设计错误
+- [上一节：信号量](/docs/408/mind-maps/operating-systems/02-13-semaphores)
+- [下一节：生产者消费者](/docs/408/mind-maps/operating-systems/02-15-producer-consumer)
+````

@@ -6,6 +6,7 @@ import { WordCardsProvider } from '@/components/vocabulary/word-cards';
 import { getContentSourceUrl } from '@/lib/site-config';
 import { toCanonicalPagePath, toMarkdownPath } from '@/lib/site-url';
 import { source } from '@/lib/source';
+import { compareMindMapPaths } from '@/lib/mind-map/navigation';
 import { shardStaticDocParams } from '@/lib/static-doc-shards';
 import { statSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
@@ -61,7 +62,7 @@ function getMindMapNavigation(page: DocPage) {
   const siblings = source
     .getPages()
     .filter((entry) => dirname(entry.path) === folder)
-    .sort((a, b) => a.path.localeCompare(b.path));
+    .sort((a, b) => compareMindMapPaths(a.path, b.path));
   const chapters = siblings.filter((entry) => entry.data.layout === 'mind-map');
   const index = chapters.findIndex((entry) => entry.url === page.url);
   const courseIndex = siblings.find((entry) => /\/index\.mdx?$/u.test(entry.path));

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1010" height="650" viewBox="0 0 1010 650" font-family="Noto Sans CJK SC, sans-serif">
+<rect width="1010" height="650" rx="18" fill="#ffffff"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0 0L10 4L0 8Z" fill="#475569"/></marker></defs>
+<text x="505" y="47" fill="#0f172a" font-size="30" font-weight="700" text-anchor="middle">四路中断的处理优先级与屏蔽字</text>
+<text x="505" y="79" fill="#475569" font-size="18" font-weight="400" text-anchor="middle">处理优先级 D ＞ A ＞ C ＞ B ｜ 约定 1 = 屏蔽、0 = 允许</text>
+<rect x="35" y="113" width="590" height="385" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="128" y="138" fill="#64748b" font-size="16" font-weight="400" text-anchor="middle">正在运行的ISR</text>
+<rect x="200" y="148" width="98" height="67" rx="0" fill="#dbeafe" stroke="#64748b" stroke-width="1"/>
+<text x="249.0" y="190" fill="#1e40af" font-size="24" font-weight="700" text-anchor="middle">A</text>
+<rect x="298" y="148" width="98" height="67" rx="0" fill="#dbeafe" stroke="#64748b" stroke-width="1"/>
+<text x="347.0" y="190" fill="#1e40af" font-size="24" font-weight="700" text-anchor="middle">B</text>
+<rect x="396" y="148" width="98" height="67" rx="0" fill="#dbeafe" stroke="#64748b" stroke-width="1"/>
+<text x="445.0" y="190" fill="#1e40af" font-size="24" font-weight="700" text-anchor="middle">C</text>
+<rect x="494" y="148" width="98" height="67" rx="0" fill="#dbeafe" stroke="#64748b" stroke-width="1"/>
+<text x="543.0" y="190" fill="#1e40af" font-size="24" font-weight="700" text-anchor="middle">D</text>
+<rect x="90" y="215" width="110" height="67" rx="0" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+<text x="145" y="257" fill="#0f172a" font-size="20" font-weight="600" text-anchor="middle">A ISR</text>
+<rect x="200" y="215" width="98" height="67" rx="0" fill="#fee2e2" stroke="#cbd5e1" stroke-width="1"/>
+<text x="249.0" y="257" fill="#b91c1c" font-size="25" font-weight="700" text-anchor="middle">1</text>
+<rect x="298" y="215" width="98" height="67" rx="0" fill="#fee2e2" stroke="#cbd5e1" stroke-width="1"/>
+<text x="347.0" y="257" fill="#b91c1c" font-size="25" font-weight="700" text-anchor="middle">1</text>
+<rect x="396" y="215" width="98" height="67" rx="0" fill="#fee2e2" stroke="#cbd5e1" stroke-width="1"/>
+<text x="445.0" y="257" fill="#b91c1c" font-size="25" font-weight="700" text-anchor="middle">1</text>
+<rect x="494" y="215" width="98" height="67" rx="0" fill="#dcfce7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="543.0" y="257" fill="#15803d" font-size="25" font-weight="700" text-anchor="middle">0</text>
+<rect x="90" y="282" width="110" height="67" rx="0" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+<text x="145" y="324" fill="#0f172a" font-size="20" font-weight="600" text-anchor="middle">B ISR</text>
+<rect x="200" y="282" width="98" height="67" rx="0" fill="#dcfce7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="249.0" y="324" fill="#15803d" font-size="25" font-weight="700" text-anchor="middle">0</text>
+<rect x="298" y="282" width="98" height="67" rx="0" fill="#fee2e2" stroke="#cbd5e1" stroke-width="1"/>
+<text x="347.0" y="324" fill="#b91c1c" font-size="25" font-weight="700" text-anchor="middle">1</text>
+<rect x="396" y="282" width="98" height="67" rx="0" fill="#dcfce7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="445.0" y="324" fill="#15803d" font-size="25" font-weight="700" text-anchor="middle">0</text>
+<rect x="494" y="282" width="98" height="67" rx="0" fill="#dcfce7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="543.0" y="324" fill="#15803d" font-size="25" font-weight="700" text-anchor="middle">0</text>
+<rect x="90" y="349" width="110" height="67" rx="0" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+<text x="145" y="391" fill="#0f172a" font-size="20" font-weight="600" text-anchor="middle">C ISR</text>
+<rect x="200" y="349" width="98" height="67" rx="0" fill="#dcfce7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="249.0" y="391" fill="#15803d" font-size="25" font-weight="700" text-anchor="middle">0</text>
+<rect x="298" y="349" width="98" height="67" rx="0" fill="#fee2e2" stroke="#cbd5e1" stroke-width="1"/>
+<text x="347.0" y="391" fill="#b91c1c" font-size="25" font-weight="700" text-anchor="middle">1</text>
+<rect x="396" y="349" width="98" height="67" rx="0" fill="#fee2e2" stroke="#cbd5e1" stroke-width="1"/>
+<text x="445.0" y="391" fill="#b91c1c" font-size="25" font-weight="700" text-anchor="middle">1</text>
+<rect x="494" y="349" width="98" height="67" rx="0" fill="#dcfce7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="543.0" y="391" fill="#15803d" font-size="25" font-weight="700" text-anchor="middle">0</text>
+<rect x="90" y="416" width="110" height="67" rx="0" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+<text x="145" y="458" fill="#0f172a" font-size="20" font-weight="600" text-anchor="middle">D ISR</text>
+<rect x="200" y="416" width="98" height="67" rx="0" fill="#fee2e2" stroke="#cbd5e1" stroke-width="1"/>
+<text x="249.0" y="458" fill="#b91c1c" font-size="25" font-weight="700" text-anchor="middle">1</text>
+<rect x="298" y="416" width="98" height="67" rx="0" fill="#fee2e2" stroke="#cbd5e1" stroke-width="1"/>
+<text x="347.0" y="458" fill="#b91c1c" font-size="25" font-weight="700" text-anchor="middle">1</text>
+<rect x="396" y="416" width="98" height="67" rx="0" fill="#fee2e2" stroke="#cbd5e1" stroke-width="1"/>
+<text x="445.0" y="458" fill="#b91c1c" font-size="25" font-weight="700" text-anchor="middle">1</text>
+<rect x="494" y="416" width="98" height="67" rx="0" fill="#fee2e2" stroke="#cbd5e1" stroke-width="1"/>
+<text x="543.0" y="458" fill="#b91c1c" font-size="25" font-weight="700" text-anchor="middle">1</text>
+<text x="398" y="137" fill="#334155" font-size="18" font-weight="400" text-anchor="middle">被请求的中断源</text>
+<rect x="652" y="145" width="325" height="299" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+<text x="672" y="196" fill="#334155" font-size="19" font-weight="400" text-anchor="start">A 行 1110：仅 D 可打断</text>
+<text x="672" y="255" fill="#334155" font-size="19" font-weight="400" text-anchor="start">B 行 0100：A/C/D可打断</text>
+<text x="672" y="314" fill="#334155" font-size="19" font-weight="400" text-anchor="start">C 行 0110：A/D 可打断</text>
+<text x="672" y="373" fill="#334155" font-size="19" font-weight="400" text-anchor="start">D 行 1111：全部屏蔽</text>
+<text x="60" y="555" fill="#334155" font-size="18" font-weight="400" text-anchor="start">核验：对角线均为 1；处理优先级越高，屏蔽范围通常越广。</text>
+<text x="60" y="590" fill="#475569" font-size="18" font-weight="400" text-anchor="start">本表只给出处理期间可否嵌套，不等于中断控制器的硬件响应顺序。</text>
+</svg>

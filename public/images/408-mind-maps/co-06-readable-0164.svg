@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" width="640" height="220" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="单总线结构：CPU、主存、I/O 都挂在一组系统总线上">
+<title>单总线结构：CPU、主存、I/O 都挂在一组系统总线上</title>
+<defs><marker id="a3f3f46" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.8L8.5 5 0 9.2z" fill="#3f3f46"/></marker><marker id="a3f3f46s" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M10 0.8L1.5 5 10 9.2z" fill="#3f3f46"/></marker></defs>
+<rect x="0.75" y="0.75" width="638.5" height="218.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">单总线结构</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<path d="M40 80L600 80" fill="none" stroke="#3f3f46" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<text x="320" y="66" font-size="12.5" fill="#3f3f46" text-anchor="middle">系统总线</text>
+<path d="M110 84L110 148" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<rect x="70" y="150" width="80" height="34" rx="6" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="110" y="171.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle">CPU</text>
+<path d="M250 84L250 148" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<rect x="210" y="150" width="80" height="34" rx="6" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="250" y="171.4" font-size="12.5" fill="#1e3a8a" text-anchor="middle">主存</text>
+<path d="M390 84L390 148" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<rect x="350" y="150" width="80" height="34" rx="6" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="390" y="171.4" font-size="12.5" fill="#18181b" text-anchor="middle">设备接口</text>
+<path d="M530 84L530 148" fill="none" stroke="#3f3f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a3f3f46)" marker-start="url(#a3f3f46s)"/>
+<rect x="490" y="150" width="80" height="34" rx="6" fill="#ffffff" stroke="#52525b" stroke-width="1.5"/>
+<text x="530" y="171.4" font-size="12.5" fill="#18181b" text-anchor="middle">设备接口</text>
+<text x="510" y="171.9" font-size="14" fill="#71717a" text-anchor="middle">…</text>
+<text x="320" y="206" font-size="12" fill="#71717a" text-anchor="middle">结构简单、成本低；但带宽低、多部件争用总线、不支持并行传送</text>
+</svg>

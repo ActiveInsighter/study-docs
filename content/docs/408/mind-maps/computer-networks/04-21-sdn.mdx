@@ -1,0 +1,53 @@
+---
+title: "4.21 SDN控制平面与南北向接口"
+description: "408 计算机网络 第四章·SDN控制平面与南北向接口：独立双侧Markmap，含考研核心概念、步骤、易错点与计算。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 4.21 SDN控制平面与南北向接口
+
+## 数据平面 / 控制平面
+- 数据平面：匹配转发规则并处理分组，频率高
+- 控制平面：计算/下发规则，维护全局/局部网络状态
+- 传统路由器通常分布式运行协议；SDN倾向**逻辑集中控制**与可编程转发
+- “逻辑集中”**不等于**控制器必须只有一台物理服务器
+- <img src="/images/408-mind-maps/cn-0151.svg" alt="SDN网络控制应用控制器和底层转发设备" width="790" height="535">
+
+## SDN三层常见结构
+- 网络应用：路由优化、访问策略、流量工程、监控等
+- SDN控制器：维护网络状态、抽象资源、生成策略与下发规则
+- 转发设备：交换机/路由器执行流表等转发动作
+- <img src="/images/408-mind-maps/cn-0108.svg" alt="SDN控制器API、状态管理及通信层" width="700" height="675">
+
+## 南向与北向
+- **南向接口**：控制器 ↔ 受控转发设备；OpenFlow是示例而非唯一方案
+- **北向接口**：应用 ↔ 控制器；向应用暴露状态、编程能力
+- 控制器间还可能需要东西向接口同步状态，非本章基础考核重点
+
+## 转发规则与处理
+- 匹配可涉及IP前缀、协议、端口等字段，不只传统目的IP查表
+- 动作可包括转发、丢弃、修改、上报控制器等；具体能力取决于设备/协议
+- <img src="/images/408-mind-maps/cn-0159.svg" alt="控制平面与数据平面分离" width="480" height="657">
+
+## 典型陷阱
+- **网络应用**决定控制策略；状态管理层提供信息，不应断言新路由算法“只能写在状态管理层”
+- SDN仍需要有物理设备和协议来实际转发；软件控制≠无硬件
+- 数据平面故障时控制器无法凭空保证无丢包；控制面通信的可靠性也是系统设计问题
+## 章节导航
+- [返回第四章导览](/docs/408/mind-maps/computer-networks/04-network-layer)
+- [上一节：4.20 路由器体系结构与队列](/docs/408/mind-maps/computer-networks/04-20-router-architecture)
+- [下一节：4.22 网络层总流程与高频题型核对](/docs/408/mind-maps/computer-networks/04-22-review)
+
+````

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',system-ui,sans-serif" font-size="15" xml:space="preserve" style="white-space:pre" role="img" aria-label="IEEE 754：数符、移码阶码、隐含最高位 1 的尾数；三种精度">
+<title>IEEE 754：数符、移码阶码、隐含最高位 1 的尾数；三种精度</title>
+<rect x="0.75" y="0.75" width="758.5" height="428.5" rx="14" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+<text x="24" y="34" font-size="17" fill="#18181b" font-weight="700">IEEE 754 浮点数格式</text>
+<rect x="24" y="44" width="28" height="3" rx="1.5" fill="#18181b"/>
+<rect x="60" y="80" width="60" height="40" rx="0" fill="#fde7e4" stroke="#d1493a" stroke-width="1.5"/>
+<text x="90" y="105.2" font-size="15" fill="#7f1d1d" text-anchor="middle">m<tspan baseline-shift="-22%" font-size="9.5">s</tspan></text>
+<rect x="120" y="80" width="180" height="40" rx="0" fill="#e8effc" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="210" y="105.2" font-size="15" fill="#1e3a8a" text-anchor="middle">E</text>
+<rect x="300" y="80" width="360" height="40" rx="0" fill="#e3f4e8" stroke="#2f8f57" stroke-width="1.5"/>
+<text x="480" y="105.2" font-size="15" fill="#14532d" text-anchor="middle">M</text>
+<text x="90" y="140" font-size="12.5" fill="#3f3f46" text-anchor="middle">数符</text>
+<text x="210" y="140" font-size="12.5" fill="#3f3f46" text-anchor="middle">阶码：移码表示</text>
+<text x="480" y="140" font-size="12.5" fill="#3f3f46" text-anchor="middle">尾数数值位：原码表示</text>
+<text x="480" y="68" font-size="12" fill="#2f8f57" text-anchor="middle" font-weight="600">规格化后最高位恒为 1，隐藏不存 → 尾数表示 1.M</text>
+<rect x="40" y="238" width="680" height="34" rx="0" fill="#fafafa" stroke="none" stroke-width="0"/>
+<path d="M40 204V178Q40 170 48 170H712Q720 170 720 178V204Z" fill="#27272a"/>
+<path d="M40 204L720 204" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 238L720 238" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 272L720 272" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M180 204L180 306" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250 204L250 306" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M320 204L320 306" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M410 204L410 306" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M490 204L490 306" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M610 204L610 306" fill="none" stroke="#d4d4d8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="40" y="170" width="680" height="136" rx="8" fill="none" stroke="#a1a1aa" stroke-width="1.2"/>
+<text x="110" y="191.6" font-size="13" fill="#fafafa" text-anchor="middle" font-weight="600">类型</text>
+<text x="215" y="191.6" font-size="13" fill="#fafafa" text-anchor="middle" font-weight="600">数符</text>
+<text x="285" y="191.6" font-size="13" fill="#fafafa" text-anchor="middle" font-weight="600">阶码</text>
+<text x="365" y="191.6" font-size="13" fill="#fafafa" text-anchor="middle" font-weight="600">尾数数值</text>
+<text x="450" y="191.6" font-size="13" fill="#fafafa" text-anchor="middle" font-weight="600">总位数</text>
+<text x="550" y="191.6" font-size="13" fill="#fafafa" text-anchor="middle" font-weight="600">偏置值（十六）</text>
+<text x="665" y="191.6" font-size="13" fill="#fafafa" text-anchor="middle" font-weight="600">偏置值（十）</text>
+<text x="110" y="225.6" font-size="13" fill="#18181b" text-anchor="middle">短浮点数 float</text>
+<text x="215" y="225.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="285" y="225.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">8</text>
+<text x="365" y="225.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">23</text>
+<text x="450" y="225.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">32</text>
+<text x="550" y="225.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">7FH</text>
+<text x="665" y="225.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">127</text>
+<text x="110" y="259.6" font-size="13" fill="#18181b" text-anchor="middle">长浮点数 double</text>
+<text x="215" y="259.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="285" y="259.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">11</text>
+<text x="365" y="259.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">52</text>
+<text x="450" y="259.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">64</text>
+<text x="550" y="259.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3FFH</text>
+<text x="665" y="259.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1023</text>
+<text x="110" y="293.6" font-size="13" fill="#18181b" text-anchor="middle">临时浮点数</text>
+<text x="215" y="293.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">1</text>
+<text x="285" y="293.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">15</text>
+<text x="365" y="293.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">64</text>
+<text x="450" y="293.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">80</text>
+<text x="550" y="293.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">3FFFH</text>
+<text x="665" y="293.6" font-size="13" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">16383</text>
+<text x="380" y="330" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">float 真值：(−1)<tspan baseline-shift="38%" font-size="9.5">s</tspan> × 1.M × 2<tspan baseline-shift="38%" font-size="9.5">E−127</tspan></text>
+<text x="380" y="358" font-size="14" fill="#18181b" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Noto Sans Mono CJK SC',monospace">double 真值：(−1)<tspan baseline-shift="38%" font-size="9.5">s</tspan> × 1.M × 2<tspan baseline-shift="38%" font-size="9.5">E−1023</tspan></text>
+<text x="380" y="398" font-size="12.5" fill="#71717a" text-anchor="middle">E 全 0 / 全 1 有特殊含义：非规格化数、±0、±∞、NaN</text>
+</svg>

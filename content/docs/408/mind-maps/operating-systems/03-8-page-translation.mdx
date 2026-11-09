@@ -1,0 +1,48 @@
+---
+title: "3.8 单级页表地址变换与访存次数"
+description: "PTBR、页号检查、PTE地址、物理地址及一/两次访存边界。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.8 基本分页地址变换：两次访存从何而来
+
+## 无快表时的步骤
+- CPU给出逻辑地址 $A=(p,w)$，拆分页号 $p$ 和页内偏移 $w$
+- 依据进程页表长度确认 $p$ 在合法页号范围内；必要时检查权限与有效性
+- 单级页表：$PTE\_addr=PTBR+p\times PTE\_size$
+- 读取页表项，获得物理页框号 $b$；形成 $E=b\times S+w$
+- 再访问目标物理内存单元
+- <img src="/images/408-mind-maps/os-03-paging-translation-clean.svg" alt="页号与偏移拆解以及单级页表到页框号的地址翻译" width="810" height="425">
+
+## 访存次数的严格前提
+- **页表在内存、无 TLB、无缺页、无额外缓存**的教材简化模型：
+  - 查页表1次访存；读/写数据1次访存 → **2次主存访问**
+- 指令取指也需要地址转换，题目应明确统计“单次数据访存”还是整个指令运行
+- PTE越界/无权限、缺页时不满足正常两次访问的前提
+- <img src="/images/408-mind-maps/os-0071.svg" alt="无快表的基本分页地址变换机构" width="740" height="393">
+
+## 数字例题
+- 页大小4KiB，地址 $A=0x2A3F$
+  - 页号 $p=2$，页内偏移 $w=0xA3F$
+- 页表第2项给出页框号 $b=0x1B$
+  - 物理地址 $E=0x1BA3F$，且偏移保持 $0xA3F$
+- 验证：最后12位应与原逻辑地址一致
+
+## 常见错误
+- 页表项地址是“页表起址 + **页号乘PTE字节数**”，不能直接把页号与页表起址相加
+- 页号越界检查与页本身不驻留是两种不同情况
+- [上一节：分页基础](/docs/408/mind-maps/operating-systems/03-7-paging-basics)
+- [下一节：快表与有效访问时间](/docs/408/mind-maps/operating-systems/03-9-tlb-eat)
+````

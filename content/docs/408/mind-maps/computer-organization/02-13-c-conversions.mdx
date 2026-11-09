@@ -1,0 +1,57 @@
+---
+title: "2.13 C类型转换与浮点精度综合"
+description: "整数提升、usual arithmetic conversions、int到float、float到int、大小关系比较、越界行为。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.13 C程序中的整数/浮点转换
+
+## 先看数据模型
+- C标准只规定整数类型**宽度与范围的相对下界/关系**，具体`int/long`位宽按题设
+  - 常见408题设：`char` 8位、`short` 16位、`int`32位、`long long`64位
+- unsigned类型的运算按模 $2^w$ 进行，结果回绕有定义
+  - 有符号整数**算术溢出**在C语言层面有未定义行为风险
+
+## 整数提升与通常算术转换
+- `char`/`short`参与大多数算术表达式时先进行**整型提升**
+  - `int` 能表示原类型所有值 → 提升到 `int`；否则提升到 `unsigned int`
+- 不同秩 signed/unsigned混合时，需套用**usual arithmetic conversions**
+  - 常见32位：`-1 < 1u` → 因转换为unsigned，比较通常为假
+- 运算前的类型决定符号位怎么解释，不能仅凭打印格式推断全部操作规则
+
+## 扩展与unsigned转换
+- 设 `short` 为16位、`int`为32位，`short x=-4096`
+  - `(unsigned int)x` → 4294963200=`0xFFFFF000`
+  - `(unsigned int)(unsigned short)x` → 61440=`0x0000F000`
+- 从有符号数转到相同位宽的无符号数，数学上按对应模 $2^w$ 取余
+- 从无符号数转有符号数，若值超出目标可表示范围，旧版C标准允许实现定义的结果/处理
+  - 408若直接给出“按补码重新解释”，必须明白这是**题设机器模型**而非跨平台保证
+
+## 整数与float/double
+- `binary32` 有24位有效精度；int32的所有数值并非都能被float精确存下
+  - $2^{24}$精确；$2^{24}+1$按默认舍入变成$2^{24}$
+- `binary64`有53位有效精度；在题设常见32位整数范围内可精确表示所有int32和uint32
+- `float`→`int` 截去小数部分（向0方向）
+  - 若值无法表示为目标整数类型，C标准中转换行为未定义，不要按“必定截断成某个位串”处理
+- `float`→`double` 会保留原浮点数值的精度（不会找回之前舍入掉的精确十进制值）
+  - `double`→`float` 可能丢失精度或超出范围
+
+## 复合判断模板
+- 给定C表达式先在每个子表达式上标出：**类型、位宽、是否有符号**
+- 再写：整数提升 → 通常算术转换 → 运算 → 结果类型 → 赋值转换
+- `sizeof(int)` 得到字节数；`printf`格式符必须匹配类型
+  - 例 `size_t` 用 `%zu`，不是在任何平台均可使用 `%lu`
+- 不要把“机器在硬件中按补码回绕”与“所有C源代码表达式回绕有定义”画等号
+````

@@ -1,0 +1,51 @@
+---
+title: "4.9 目录项、FCB、磁盘inode与内存inode"
+description: "目录瘦身、inode字段、链接计数与缓存对象。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 4.9 目录如何按名找到文件
+
+## 目录项与文件控制块
+- 文件控制块 FCB：文件系统管理文件的元数据集合，教材模型中可能与目录项同置
+- 目录项若包含大量元数据，**每盘块可容纳的项数少**，目录检索I/O较多
+- **索引节点组织**：目录项仅存文件名与 inode 编号，元数据保存在独立 inode 结构
+- 目录项不等于“整个FCB必须全部在内存”，缓存策略由系统决定
+
+- <img src="/images/408-mind-maps/os-0104.svg" alt="实例：UNIX 文件系统的目录与索引结点" width="900" height="380">
+
+## 典型inode内容
+- 文件类型、所有者/组、权限、文件长度、存储块映射、时间戳、硬链接数
+- inode 通常**不保存每个硬链接的文件名**，因为同一inode可以对应多个目录项名称
+- 磁盘 inode/内存 inode：内核可为加载的 inode 维护引用数、脏位、锁、缓存链等运行状态
+- **硬链接数**与内核缓存对象**引用计数/打开引用**不是同一个指标
+
+## 目录定位路径
+- `/a/b.txt`：依次解析 `/`、`a`、`b.txt` 对应目录项；可能用缓存减少I/O
+- 找到文件inode后读取数据块，尚需检查访问权限、文件偏移等
+- 路径长度并不必然等于目录查找磁盘I/O次数，**缓存命中率**和目录组织方式影响明显
+- <img src="/images/408-mind-maps/os-04-directory-inode-clean.svg" alt="不同目录项共同引用inode 100与共享文件数据" width="880" height="503">
+
+## 查找效率
+- 目录线性表：最坏可能扫描所有条目，平均比较数依查找分布
+- 哈希目录：预期快速定位键，**冲突处理与动态增长**依实现
+- 类B树/HTree等索引组织可支持大型目录，但不是所有FS固定使用一种方式
+
+## 408陷阱
+- “访问一次FCB必访问两次内存”不是通用结论；看数据结构和缓存
+- 一个inode有两个硬链接≠这两个文件各自拥有两个独立inode
+- [上一节：混合索引计算](/docs/408/mind-maps/operating-systems/04-8-mixed-index)
+- [下一节：目录体系与路径](/docs/408/mind-maps/operating-systems/04-10-directory-hierarchy)
+````

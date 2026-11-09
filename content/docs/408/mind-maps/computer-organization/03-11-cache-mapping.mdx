@@ -1,0 +1,92 @@
+---
+title: "3.11 Cache直接/全相联/组相联地址划分"
+description: "tag、组号、块内位数和三类映射对比，容量位数和例题。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.11 Cache 映射与地址划分
+
+## 先确定三项基本量
+- 按字节编址，物理地址长度 $p$ 位，块大小 $B=2^b$ 字节
+  - **块内偏移** b 位；主存块号 = 地址 >> b
+- Cache数据容量 C，行数 $L=C/B$；s路组相联 → 组数 $S=L/s=2^q$
+  - 组号是主存块号对组数取模（题设按常规低位取组）
+  - 组号 q 位；标记 tag 位数 $t=p-q-b$
+- 注意字长/地址位数、机器字数/Cache行数和主存页大小不是一回事
+
+## 三类映射
+- 直接映射：一组一行，块号 mod 总行数；tag + **行索引** + 块内偏移
+  - 无需选择替换对象：发生冲突时该行旧内容直接被淘汰
+- 全相联：主存块可在任意Cache行；tag + 块内偏移
+  - 标记须与所有有效行并行比较（可用CAM比较电路），**不是必须串行遍历**
+- 组相联：块可在指定组任意s行；tag + 组索引 + 偏移
+  - 组间直接映射、组内全相联；常见2路、4路、8路
+- <img src="/images/408-mind-maps/co-03-cache-address-clean.svg" alt="28位物理地址下三种Cache映射的tag和索引比较" width="940" height="455">
+
+## 统一例题（主存256MiB、8行、块64B）
+- 256MiB=$2^{28}$ B，物理地址28位；$b=6$，总行数8
+- **直接映射**：$q=3$，tag $28-3-6=19$ 位
+- **全相联**：$q=0$，tag $28-6=22$ 位
+- **2路组相联**：4组、$q=2$，tag $28-2-6=20$ 位
+  - 带valid 1位与dirty 1位时：直接映射每行数据部分512位+tag19+2=533位
+  - 全相联每行512+22+2=536位（**另计替换状态**，不机械加3位到每一行）
+  - 2路组相联每行512+20+2=534位；每组若真LRU需1个顺序位
+
+### 直接映射图解
+- <img src="/images/408-mind-maps/co-0180.svg" alt="主存块号 % 8 决定在 Cache 中的行号" width="620" height="624">
+
+- <img src="/images/408-mind-maps/co-0254.svg" alt="直接映射：主存地址的划分" width="620" height="230">
+
+- <img src="/images/408-mind-maps/co-0143.svg" alt="主存地址的样子：每个主存块的地址范围" width="620" height="470">
+
+- <img src="/images/408-mind-maps/co-0296.svg" alt="CPU 访问主存地址的过程（直接映射）" width="760" height="380">
+
+- <img src="/images/408-mind-maps/co-0046.svg" alt="Cache 每行的结构：1 + 1 + 19 + 64×8 = 533 bit" width="760" height="380">
+
+### 全相联映射图解
+- <img src="/images/408-mind-maps/co-0319.svg" alt="全相联映射：主存地址的划分" width="620" height="230">
+
+- <img src="/images/408-mind-maps/co-0071.svg" alt="主存地址的样子：每个主存块的地址范围" width="620" height="470">
+
+- <img src="/images/408-mind-maps/co-0083.svg" alt="CPU 访问主存地址的过程（全相联映射）" width="760" height="380">
+
+- <img src="/images/408-mind-maps/co-0086.svg" alt="Cache 每行的结构：1 + 1 + 3 + 22 + 64×8 = 539 bit" width="760" height="380">
+
+  - 原图采用每行3位计数器记录替换状态的教学示例；通用的有效位、脏位、tag和数据合计536 bit，替换信息按题设实现另计，不能机械认为每行必需539 bit。
+
+### 组相联映射图解
+- <img src="/images/408-mind-maps/co-0224.svg" alt="主存块号 % 4 决定在 Cache 中的组号" width="620" height="624">
+
+- <img src="/images/408-mind-maps/co-0278.svg" alt="2 路组相联映射：主存地址的划分" width="620" height="230">
+
+- <img src="/images/408-mind-maps/co-0275.svg" alt="主存地址的样子：每个主存块的地址范围" width="620" height="470">
+
+- <img src="/images/408-mind-maps/co-0141.svg" alt="CPU 访问主存地址的过程（2 路组相联映射）" width="760" height="380">
+
+- <img src="/images/408-mind-maps/co-0197.svg" alt="Cache 每行的结构：1 + 1 + 1 + 20 + 64×8 = 535 bit" width="760" height="380">
+
+  - 原图把1位替换标记分摊到每行；若2路组相联按每组1位LRU实现，每行有效位、脏位、tag和数据为534 bit，替换状态应按组另计。
+- <img src="/images/408-mind-maps/co-0246.svg" alt="标记项组成的二维标记阵列（2 路组相联）" width="560" height="260">
+
+  - 此图沿用原例的替换标记组织；标记阵列容量必须结合题设的有效位、脏位和替换策略计算。
+
+## 查找与地址推断步骤
+- (1)单位换算 → (2)物理地址位数 → (3)块偏移 → (4)行/组数 → (5)tag位数
+- (6)将访问地址拆为 `tag | index | offset` → (7)检查valid、tag匹配 → (8)更新数据/替换状态
+- 例地址 `0x000012C4`、64B块 → 块号 `0x4B`，块内偏移4
+  - 8行直接映射：行号 `0x4B mod 8=3`，tag=$75\div8=9$
+- <img src="/images/408-mind-maps/co-0090.svg" alt="Cache组索引与tag比较硬件结构" width="880" height="463">
+
+````

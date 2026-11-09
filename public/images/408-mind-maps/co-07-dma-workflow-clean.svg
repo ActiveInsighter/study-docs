@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="520" viewBox="0 0 1040 520" font-family="Noto Sans CJK SC, sans-serif">
+<rect width="1040" height="520" rx="18" fill="#ffffff"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0 0L10 4L0 8Z" fill="#475569"/></marker></defs>
+<text x="520" y="45" fill="#0f172a" font-size="30" font-weight="700" text-anchor="middle">DMA工作流程：CPU只负责配置与结束管理</text>
+<text x="520" y="78" fill="#475569" font-size="18" font-weight="400" text-anchor="middle">传送阶段由DMA硬件在获准使用主存资源后搬运数据</text>
+<rect x="28" y="110" width="308" height="66" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+<text x="182" y="150" fill="#0f172a" font-size="23" font-weight="700" text-anchor="middle">① 预处理</text>
+<rect x="365" y="110" width="308" height="66" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+<text x="519" y="150" fill="#0f172a" font-size="23" font-weight="700" text-anchor="middle">② 直接数据搬运</text>
+<rect x="704" y="110" width="308" height="66" rx="12" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+<text x="858" y="150" fill="#0f172a" font-size="23" font-weight="700" text-anchor="middle">③ 完成与后处理</text>
+<path d="M340 143 L359 143" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M677 143 L698 143" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="28" y="195" width="308" height="126" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+<text x="182" y="229" fill="#0f172a" font-size="19" font-weight="600" text-anchor="middle">CPU配置：</text>
+<text x="182" y="262" fill="#0f172a" font-size="19" font-weight="400" text-anchor="middle">设备/方向、内存地址、</text>
+<text x="182" y="295" fill="#0f172a" font-size="19" font-weight="400" text-anchor="middle">块长度、启动命令</text>
+<rect x="365" y="195" width="308" height="126" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+<text x="519" y="229" fill="#0f172a" font-size="19" font-weight="600" text-anchor="middle">DMA引擎：</text>
+<text x="519" y="262" fill="#0f172a" font-size="19" font-weight="400" text-anchor="middle">AR/WC更新、请求访问、</text>
+<text x="519" y="295" fill="#0f172a" font-size="19" font-weight="400" text-anchor="middle">读/写内存事务</text>
+<rect x="704" y="195" width="308" height="126" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+<text x="858" y="229" fill="#0f172a" font-size="19" font-weight="600" text-anchor="middle">设备或DMA发出完成事件</text>
+<text x="858" y="262" fill="#0f172a" font-size="19" font-weight="400" text-anchor="middle">CPU响应中断/查询状态</text>
+<text x="858" y="295" fill="#0f172a" font-size="19" font-weight="400" text-anchor="middle">驱动唤醒等待任务</text>
+<rect x="50" y="350" width="940" height="115" rx="12" fill="#eef2ff" stroke="#a5b4fc" stroke-width="2"/>
+<text x="520" y="384" fill="#312e81" font-size="24" font-weight="700" text-anchor="middle">设备  ⇄  DMA引擎  ⇄  主存缓冲区</text>
+<text x="520" y="416" fill="#4338ca" font-size="18" font-weight="400" text-anchor="middle">CPU没有执行逐字搬运指令，但DMA可能与CPU竞争主存/总线</text>
+<text x="520" y="443" fill="#475569" font-size="17" font-weight="400" text-anchor="middle">完成中断按块/异常触发；一次块传输可包含许多总线事务</text>
+</svg>

@@ -1,220 +1,68 @@
 ---
-title: "第二章 线性表"
-description: "数据结构 · 第二章 线性表：线性表定义、顺序表、链表。"
+title: "第二章 线性表｜分节导览"
+description: "408 数据结构第二章：概念、顺序存储、顺序表操作、单链表、链式插删、双链表、循环与静态链表、综合算法八节双侧导图。"
 layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
 ---
 
 ````mindmap
-# 第二章 线性表
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
 
-[查看关联主题：第一章 绪论](/docs/408/mind-maps/data-structures/01-introduction)
+# 第二章 线性表 · 分节导览
 
-## 线性表定义
+## 基本概念与抽象操作
+- [2.1 线性表的定义、位序与 ADT](/docs/408/mind-maps/data-structures/02-1-linear-list-adt)
+  - 一对一关系、空表、首尾与前驱后继
+  - 基本操作及合法位序范围
+- 易错：位序从 1 起，数组下标常从 0 起
 
-- 要求：
-  - 相同数据类型的n个数据元素
-  - 逻辑上的有限序列
-- 相同数据类型的n个数据元素的有限序列
-  - n=0叫空表
-- 位序、表头元素、表尾元素
-- 前驱、后继
-- 基本操作
-  - 初始化
-  - 销毁
-  - 插入
-  - 删除
-  - 按值查找
-  - 按位查找
-  - 其他操作
-    - 求表长
-    - 输出表
-    - 判空
-- 逻辑结构
-- 考频：低
-- 概要：缺一不可，n=0 叫空表
-  概要范围：[要求：](#focus=%E8%A6%81%E6%B1%82%EF%BC%9A)
+## 顺序表：存储方式
+- [2.2 顺序存储、静态分配、动态扩容](/docs/408/mind-maps/data-structures/02-2-sequential-storage)
+  - `length` 与 `capacity` 的区别
+  - 随机访问、缓存局部性、动态扩容均摊分析
+- 易错：`malloc` 大小与 `realloc` 的失败处理
 
-## 顺序表
+## 顺序表：基本操作
+- [2.3 插入、删除、查找与移动次数](/docs/408/mind-maps/data-structures/02-3-sequential-operations)
+  - 插入、删除的边界与复杂度
+  - 有序表查找、合并、去重
+- 易错：按位访问 O(1) ≠ 按值查找 O(1)
 
-- 考频：中
-  - 10大、11大、13大、18大、20大
-- 定义
-  - 顺序存储的线性表
-    - 逻辑结构+物理结构
-- 特点
-  - 随机访问
-    - 查找数组O(1)
-  - 存储密度高
-    - 相比较链表
-  - 拓展容量不方便
-    - 重新开辟新空间进行拷贝
-- 创建
-  - 静态分配
-    - data\[MaxSize\]
-  - 动态分配
-    - \*data = malloc(sizeof(ElemType) \* length)
-    - 释放：free(data)
-    - 增加动态数组的长度
-      - 配图
+## 单链表：理解与建立
+- [2.4 结点、头指针、头结点与建表](/docs/408/mind-maps/data-structures/02-4-singly-linked-basics)
+  - 带头结点与不带头结点
+  - 头插、尾插、遍历与查找
+- 易错：头结点不是第 1 个数据元素
 
-        ```cpp
-        // 增加动态顺序表的长度
-        void IncreaseSize(SeqList &L, int len) {
-            int *p = L.data;
-            L.data = (int *)malloc((L.MaxSize + len) * sizeof(int));
-            for (int i = 0; i < L.length; i++)
-                L.data[i] = p[i];     // 将数据复制到新区域
-            L.MaxSize += len;        // 更新顺序表最大长度
-            free(p);                // 释放原来的内存空间
-        }
-        ```
+## 单链表：指针操作
+- [2.5 插入、删除、前插与删除指定结点](/docs/408/mind-maps/data-structures/02-5-singly-linked-operations)
+  - 指针赋值顺序与断链风险
+  - 删除已知结点的条件及尾结点例外
+- 易错：O(1) 插删的前提是已定位到有关结点
 
-- 插入
-  - 代码：注意代码的健壮性
-    - 配图
+## 双链表
+- [2.6 双向链接、插入、删除](/docs/408/mind-maps/data-structures/02-6-doubly-linked-lists)
+  - `prior` / `next` 对称维护
+  - 边界结点、带头结点、双向循环表
+- 易错：更新一个方向不足以维持双向关系
 
-      ```cpp
-      bool ListInsert(SqList &L, int i, int e) {
-          if (i < 1 || i > L.length + 1)  // 判断 i 的范围是否有效
-              return false;
-          if (L.length >= MaxSize)       // 当前存储空间满，不能插入
-              return false;
-          for (int j = L.length; j >= i; j--)  // 将第 i 个及之后的元素后移
-              L.data[j] = L.data[j - 1];
-          L.data[i - 1] = e;             // 在位置 i 处放入 e
-          L.length++;                   // 表长增加 1
-          return true;
-      }
-      ```
+## 循环与静态链表
+- [2.7 循环单链表、循环双链表与静态链表](/docs/408/mind-maps/data-structures/02-7-circular-static-lists)
+  - 尾指针、判空与遍历停止条件
+  - 数组游标模拟指针
+- 易错：`NULL` 不是循环链表的一般终点
 
-  - 时间复杂度
-    - 最好
-      - O(1)
-    - 最坏
-      - O(n)
-    - 平均
-      - O(n/2) = O(n)
-- 删除
-  - 代码
-    - 配图
-
-      ```cpp
-      bool ListDelete(SqList &L, int i, int &e) {
-          if (i < 1 || i > L.length)  // 判断 i 的范围是否有效
-              return false;
-          e = L.data[i - 1];         // 将被删除元素赋给 e
-          for (int j = i; j < L.length; j++)
-              L.data[j - 1] = L.data[j];
-          L.length--;               // 表长减 1
-          return true;
-      }
-      ```
-
-  - 时间复杂度
-    - 最好
-      - O(1)
-    - 最坏
-      - O(n)
-    - 平均
-      - O(n/2) = O(n)
-- 查找
-  - 代码：
-    - 配图
-
-      ```cpp
-      int LocateElem(SqList L, ElemType e) {
-          int i;
-          for (i = 0; i < L.length; i++)
-              if (L.data[i] == e)
-                  return i + 1;  // 下标为 i 的元素值为 e，返回其位序 i+1
-          return 0;
-      }
-      ```
-
-  - 按位查找
-    - 获得表L中的第i个位置的元素的值
-    - 时间复杂度
-      - O(1)
-  - 按值查找
-    - 搜索即可
-    - 时间复杂度
-      - O(n)
-- 概要：注意length需要修改，传入是引用
-  概要范围：[插入](#focus=%E6%8F%92%E5%85%A5)、[删除](#focus=%E5%88%A0%E9%99%A4)
-
-## 链表
-
-- 单链表
-  - 定义
-    - 线性表的链式存储
-      - 逻辑+物理
-  - 链表类型
-    - 带头节点
-      - 头节点即第0个元素
-    - 不带头节点
-      - 元素从第一个开始
-  - 优缺点
-    - 优点：不要求大片存储空间
-    - 缺点：不支持随机存取
-  - 代码规范
-    - typedef
-      - 使用 LNode\* 来表示使用的是一个节点
-      - 使用 LinkList 来表示使用的是一个链表
-    - malloc
-      - 配图
-
-        ```cpp
-        (LNode *)malloc(sizeof(LNode))
-        ```
-
-    - 结构体
-      - 配图
-
-        ```cpp
-        typedef struct LNode {
-            ElemType data;
-            struct LNode *next;
-        } LNode, *LinkList;
-        ```
-
-  - 按位序插入
-    - 按位序插入（带头节点插入法）
-      - 找到第i - 1 个节点
-      - 然后插入一个新的节点
-    - 按位序插入（不带头节点插入法）
-      - 不带头节点的链表，处理第1个节点的时候需要特殊处理
-  - 插入
-    - 后插节点
-      - 比较简单，直接malloc然后赋值、更新指针
-    - 前插节点
-      - 需要用一个小的巧方法
-        - 对节点p后面插入一个后继节点s
-        - 把节点p的数据移动到节点s里面去
-        - 把新的数据放到p里面
-  - 删除
-    - 按位序删除
-      - ListDelete(LinkList &amp;L, int i, ElemType &amp;e)
-      - 其中的e需要返回删除的数据
-    - 指定节点删除
-  - 查找
-    - 按位查找
-      - O(n)
-    - 按值查找
-      - O(n)
-  - 建立
-    - 尾插法
-    - 头插法
-- 双链表
-  - 双链表在单链表的基础上添加了前驱节点
-  - 插入：需要修改前节点的next和后节点的prior，后设置新节点的next和prior
-  - 删除：先设置前节点的next=next-&gt;next，再设置后节点的prior = prior-&gt;prior，删除中间
-- 循环链表
-  - 链表中最后一个节点指向头结点
-  - 循环单链表
-  - 循环双链表
-- 静态链表
-  - 线性结构+顺序存储
-  - 用顺序表的形式进行存储空间开辟
-- 考频：高
-  - 16\*2、21、09大、12大、15大、19大
+## 综合题型与对比
+- [2.8 高频算法模板与顺序表／链表对照](/docs/408/mind-maps/data-structures/02-8-comparisons-algorithms)
+  - 快慢指针、逆置、归并、双指针与去重
+  - 复杂度表、边界检查清单
+- [前章：绪论](/docs/408/mind-maps/data-structures/01-introduction) · [下章：栈、队列与数组](/docs/408/mind-maps/data-structures/03-stacks-queues-arrays)
 ````

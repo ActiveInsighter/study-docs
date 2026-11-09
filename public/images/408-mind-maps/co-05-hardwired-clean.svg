@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 485" width="1050" height="485" role="img" aria-label="硬布线CU：OP、阶段、节拍、标志 → 控制信号" style="font-family: Noto Sans CJK SC, sans-serif;">
+<title>硬布线CU：OP、阶段、节拍、标志 → 控制信号</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 1L9 5L0 9" fill="#64748B"/></marker><marker id="arrowblue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 1L9 5L0 9" fill="#2563EB"/></marker></defs>
+<rect width="1050" height="485" rx="18" fill="white" stroke="#CFD8E3" stroke-width="2"/>
+<text x="32" y="46" font-size="24" font-weight="700" fill="#17243A">硬布线CU：OP、阶段、节拍、标志 → 控制信号</text>
+<rect x="32" y="57" width="62" height="5" rx="2.5" fill="#2563EB"/>
+<rect x="31" y="104" width="228" height="87" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="145.0" y="140.5" text-anchor="middle" fill="#2563EB" font-size="19" font-weight="700">OP(IR)</text>
+<text x="145.0" y="164.9" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">指令操作码/译码</text>
+<line x1="145" y1="193" x2="145" y2="250" stroke="#64748B" stroke-width="2"/>
+<rect x="287" y="104" width="228" height="87" rx="10" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+<text x="401.0" y="140.5" text-anchor="middle" fill="#B45309" font-size="19" font-weight="700">阶段状态</text>
+<text x="401.0" y="164.9" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">FE / IND / EX / INT</text>
+<line x1="401" y1="193" x2="401" y2="250" stroke="#64748B" stroke-width="2"/>
+<rect x="543" y="104" width="228" height="87" rx="10" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="657.0" y="140.5" text-anchor="middle" fill="#7C3AED" font-size="19" font-weight="700">时间信号</text>
+<text x="657.0" y="164.9" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">T0、T1、T2…</text>
+<line x1="657" y1="193" x2="657" y2="250" stroke="#64748B" stroke-width="2"/>
+<rect x="799" y="104" width="228" height="87" rx="10" fill="#D1FAE5" stroke="#0F766E" stroke-width="1.5"/>
+<text x="913.0" y="140.5" text-anchor="middle" fill="#0F766E" font-size="19" font-weight="700">状态条件</text>
+<text x="913.0" y="164.9" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">ZF / CF / 访存就绪</text>
+<line x1="913" y1="193" x2="913" y2="250" stroke="#64748B" stroke-width="2"/>
+<rect x="162" y="250" width="726" height="89" rx="10" fill="#E0F2FE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="525" y="284" text-anchor="middle" fill="#2563EB" font-size="21" font-weight="700">组合逻辑 + 时序状态：产生微命令</text>
+<text x="525" y="312" text-anchor="middle" fill="#17243A" font-size="15" font-weight="400">对同一个控制位，把所有需要该位为 1 的条件项相“或”</text>
+<line x1="209" y1="340" x2="209" y2="368" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="84" y="372" width="250" height="63" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="209.0" y="398.5" text-anchor="middle" fill="#2563EB" font-size="18" font-weight="700">PCout  /  MARin</text>
+<text x="209.0" y="416.1" text-anchor="middle" fill="#17243A" font-size="13" font-weight="400">输出至数据通路</text>
+<line x1="531" y1="340" x2="531" y2="368" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="406" y="372" width="250" height="63" rx="10" fill="#D1FAE5" stroke="#0F766E" stroke-width="1.5"/>
+<text x="531.0" y="398.5" text-anchor="middle" fill="#0F766E" font-size="18" font-weight="700">ALUadd / Zin</text>
+<text x="531.0" y="416.1" text-anchor="middle" fill="#17243A" font-size="13" font-weight="400">输出至数据通路</text>
+<line x1="853" y1="340" x2="853" y2="368" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="728" y="372" width="250" height="63" rx="10" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+<text x="853.0" y="398.5" text-anchor="middle" fill="#B45309" font-size="18" font-weight="700">MemRead / Write</text>
+<text x="853.0" y="416.1" text-anchor="middle" fill="#17243A" font-size="13" font-weight="400">输出至数据通路</text>
+</svg>

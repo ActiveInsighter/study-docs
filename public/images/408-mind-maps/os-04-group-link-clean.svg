@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#52637a"/></marker><style>text{font-family:"Noto Sans CJK SC","Noto Sans SC","Microsoft YaHei",sans-serif} .muted{fill:#52637a}.mono{font-family:monospace}</style></defs>
+<rect x="1" y="1" width="1118" height="648" rx="18" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="34" y="53" font-size="30" fill="#1b283b" font-weight="700" text-anchor="start">成组链接：块号数组（栈）+ 组间链</text>
+<text x="34" y="90" font-size="20" fill="#52637a" font-weight="400" text-anchor="start">以下只表示组间关系，具体栈顶和哨兵位置按题目给定约定执行</text>
+<rect x="45" y="146" width="306" height="338" rx="12" fill="#ecf4ff" stroke="#8cb5e8" stroke-width="2"/>
+<text x="68" y="187" font-size="25" fill="#1b283b" font-weight="700" text-anchor="start">超级块内存管理区</text>
+<rect x="68" y="215" width="257" height="48" rx="6" fill="#e2f1ff" stroke="#bbccd9" stroke-width="2"/>
+<text x="88" y="247" font-size="20" fill="#1b283b" font-weight="400" text-anchor="start">当前组可用计数</text>
+<rect x="68" y="273" width="257" height="48" rx="6" fill="#fff" stroke="#bbccd9" stroke-width="2"/>
+<text x="88" y="305" font-size="20" fill="#1b283b" font-weight="400" text-anchor="start">空闲块号 31</text>
+<rect x="68" y="331" width="257" height="48" rx="6" fill="#fff" stroke="#bbccd9" stroke-width="2"/>
+<text x="88" y="363" font-size="20" fill="#1b283b" font-weight="400" text-anchor="start">空闲块号 48</text>
+<rect x="68" y="389" width="257" height="48" rx="6" fill="#fff6dc" stroke="#bbccd9" stroke-width="2"/>
+<text x="88" y="421" font-size="20" fill="#1b283b" font-weight="400" text-anchor="start">后继组入口 80</text>
+<rect x="465" y="216" width="268" height="268" rx="12" fill="#eaf9f3" stroke="#93c7b2" stroke-width="2"/>
+<text x="492" y="255" font-size="26" fill="#1b283b" font-weight="700" text-anchor="start">块 80：后继组</text>
+<rect x="490" y="284" width="217" height="46" rx="6" fill="#fff" stroke="#c7d7ce" stroke-width="2"/>
+<text x="511" y="314" font-size="20" fill="#1b283b" font-weight="400" text-anchor="start">空闲块号 101</text>
+<rect x="490" y="339" width="217" height="46" rx="6" fill="#fff" stroke="#c7d7ce" stroke-width="2"/>
+<text x="511" y="369" font-size="20" fill="#1b283b" font-weight="400" text-anchor="start">空闲块号 115</text>
+<rect x="490" y="394" width="217" height="46" rx="6" fill="#fff" stroke="#c7d7ce" stroke-width="2"/>
+<text x="511" y="424" font-size="20" fill="#1b283b" font-weight="400" text-anchor="start">后继组入口 160</text>
+<rect x="845" y="238" width="226" height="225" rx="12" fill="#fff2e4" stroke="#dbac82" stroke-width="2"/>
+<text x="870" y="278" font-size="23" fill="#1b283b" font-weight="700" text-anchor="start">块 160：再下组</text>
+<rect x="865" y="299" width="179" height="40" rx="5" fill="#fff" stroke="#d1c0b5" stroke-width="2"/>
+<text x="895" y="325" font-size="18" fill="#1b283b" font-weight="400" text-anchor="start">空闲块号 171</text>
+<rect x="865" y="348" width="179" height="40" rx="5" fill="#fff" stroke="#d1c0b5" stroke-width="2"/>
+<text x="895" y="374" font-size="18" fill="#1b283b" font-weight="400" text-anchor="start">空闲块号 188</text>
+<rect x="865" y="397" width="179" height="40" rx="5" fill="#fff" stroke="#d1c0b5" stroke-width="2"/>
+<text x="895" y="423" font-size="18" fill="#1b283b" font-weight="400" text-anchor="start">...</text>
+<path d="M351 436 H404 V365 H454" fill="none" stroke="#52637a" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M733 415 H788 V366 H833" fill="none" stroke="#52637a" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="35" y="548" font-size="21" fill="#1b283b" font-weight="700" text-anchor="start">分配：当前组弹出号 → 触及组入口时装载下一组的块号表</text>
+<text x="35" y="587" font-size="21" fill="#1b283b" font-weight="700" text-anchor="start">回收：栈未满直接入栈；栈满时将原组表写入回收块并建立新的组入口</text>
+</svg>

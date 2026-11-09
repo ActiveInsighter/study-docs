@@ -1,0 +1,63 @@
+---
+title: "5.11 指令流水线与吞吐率、加速比、效率"
+description: "用标准k段流水模型推导T、TP、加速比和效率，处理装入/排空和分段不均。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.11 经典流水线：从时空图算性能
+
+## 核心思想
+- 把任务切分为k个阶段，令**不同指令占用不同阶段**而重叠运行
+- 流水线主要提升**吞吐率**，并不必然减少单条指令的完成延迟
+  - 实际流水段有锁存器开销、阶段不平衡及冲突气泡
+- <img src="/images/408-mind-maps/co-05-pipeline-grid-clean.svg" alt="5段流水线执行7条指令的时空图，首条5拍完成，之后理想状态每拍完成1条" width="1060" height="505">
+
+- <img src="/images/408-mind-maps/co-0028.svg" alt="顺序执行方式：总耗时 T = 3nt" width="640" height="170">
+
+- <img src="/images/408-mind-maps/co-0130.svg" alt="一次重叠执行方式：T = 3t + (n−1)·2t = (1+2n)t" width="640" height="230">
+
+- <img src="/images/408-mind-maps/co-0310.svg" alt="二次重叠执行方式：T = 3t + (n−1)·t = (2+n)t" width="560" height="230">
+
+## 理想等时模型
+- k段、每段耗时Δt，无冲突，n个任务
+  - 串行执行时间：$T_{seq}=nk\Delta t$
+  - 流水线总时间：$T_{pipe}=(k+n-1)\Delta t$
+  - 第一条指令完成延迟$k\Delta t$，理想稳定吞吐1/Δt
+- 装入：前k−1拍尚未填满；排空：最后k−1拍部分段空闲
+  - 总时间公式**已经计入**装入排空，无须再额外加两次(k−1)Δt
+
+## 三个考频极高指标
+- **吞吐率**：$TP=n/T_{pipe}=\frac{n}{(k+n-1)\Delta t}$
+  - 当$n\to\infty$时，$TP_{max}=1/\Delta t$
+- **加速比**：$S=T_{seq}/T_{pipe}=\frac{nk}{k+n-1}$，理论极限k
+- **效率**：$E=\frac{n\cdot k\Delta t}{k(k+n-1)\Delta t}=\frac{n}{k+n-1}=S/k$
+  - 上式定义为所有段实际忙碌时间/可用时空面积，只适用于该理想等长模型
+
+- <img src="/images/408-mind-maps/co-0095.svg" alt="流水线时空图：k 段流水线完成 n 个任务共需 (k + n − 1)Δt" width="620" height="330">
+
+- <img src="/images/408-mind-maps/co-0274.svg" alt="流水线时空图：k 段流水线完成 n 个任务共需 (k + n − 1)Δt" width="620" height="330">
+
+## 算例：5段7条
+- $T_{seq}=35\Delta t$，$T_{pipe}=11\Delta t$
+- $S=35/11\approx3.18$；$E=7/11\approx63.64\%$
+- $TP=7/(11\Delta t)$，稳定后每拍完成1条
+
+## 实际流水线的校正
+- 分段时延不等：周期至少为**最慢阶段+流水寄存器开销**
+  - 若各段延迟为$d_i$，则$T_{clk}\ge\max_i d_i+t_{reg}$
+- 有s个额外停顿节拍：$T_{pipe}=(k+n-1+s)T_{clk}$（简化模型）
+- 不能直接把$n$无限大时的**理想吞吐**用于有限条、有冒险任务
+- [继续：五级流水线各阶段](/docs/408/mind-maps/computer-organization/05-12-five-stage)
+````

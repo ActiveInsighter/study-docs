@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 970 395" width="970" height="395" font-family="Noto Sans CJK SC, sans-serif" font-size="15" role="img" aria-label="FTL映射、异地更新及垃圾回收">
+<title>FTL映射、异地更新及垃圾回收</title>
+<rect width="970" height="395" rx="14" fill="#ffffff"/>
+<text x="28" y="36" font-size="22" fill="#0f172a" font-weight="700" text-anchor="start">SSD：修改LBA不是把旧NAND页直接原地覆盖</text>
+<text x="28" y="67" font-size="14" fill="#475569" font-weight="400" text-anchor="start">逻辑地址映射在FTL里更新；旧页无效，稍后垃圾回收搬移有效页并擦除整个块</text>
+<rect x="35" y="128" width="178" height="90" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.7"/>
+<text x="124" y="160" font-size="18" fill="#1d4ed8" font-weight="700" text-anchor="middle">主机 LBA 42</text>
+<text x="124" y="191" font-size="14" fill="#1e3a8a" font-weight="400" text-anchor="middle">写入新内容 B</text>
+<line x1="213" y1="173" x2="315" y2="173" stroke="#2563eb" stroke-width="2" /><polygon points="315,173 308.0,176.8 308.0,169.2" fill="#2563eb"/>
+<rect x="318" y="125" width="185" height="96" rx="8" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.7"/>
+<text x="410" y="155" font-size="19" fill="#5b21b6" font-weight="700" text-anchor="middle">FTL 映射</text>
+<text x="410" y="187" font-size="15" fill="#5b21b6" font-weight="400" text-anchor="middle">42 → 新页 P9</text>
+<line x1="503" y1="173" x2="590" y2="173" stroke="#7c3aed" stroke-width="2" /><polygon points="590,173 583.0,176.8 583.0,169.2" fill="#7c3aed"/>
+<text x="673" y="112" font-size="16" fill="#0f172a" font-weight="700" text-anchor="middle">物理块 X（旧）</text>
+<rect x="595" y="129" width="156" height="44" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.7"/>
+<text x="673" y="156" font-size="13" fill="#334155" font-weight="700" text-anchor="middle">P1有效</text>
+<rect x="595" y="186" width="156" height="44" rx="8" fill="#fecaca" stroke="#94a3b8" stroke-width="1.7"/>
+<text x="673" y="213" font-size="13" fill="#334155" font-weight="700" text-anchor="middle">P2旧页无效</text>
+<rect x="595" y="243" width="156" height="44" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.7"/>
+<text x="673" y="270" font-size="13" fill="#334155" font-weight="700" text-anchor="middle">P3有效</text>
+<text x="862" y="112" font-size="16" fill="#0f172a" font-weight="700" text-anchor="middle">物理块 Y（新）</text>
+<rect x="784" y="129" width="156" height="44" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.7"/>
+<text x="862" y="156" font-size="13" fill="#334155" font-weight="700" text-anchor="middle">P8空闲</text>
+<rect x="784" y="186" width="156" height="44" rx="8" fill="#dcfce7" stroke="#94a3b8" stroke-width="1.7"/>
+<text x="862" y="213" font-size="13" fill="#334155" font-weight="700" text-anchor="middle">P9新内容B</text>
+<rect x="784" y="243" width="156" height="44" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.7"/>
+<text x="862" y="270" font-size="13" fill="#334155" font-weight="700" text-anchor="middle">P10空闲</text>
+<text x="28" y="332" font-size="15" fill="#1d4ed8" font-weight="700" text-anchor="start">步骤1：写到空闲页</text>
+<text x="270" y="332" font-size="15" fill="#dc2626" font-weight="700" text-anchor="start">步骤2：旧页标记失效</text>
+<text x="535" y="332" font-size="15" fill="#15803d" font-weight="700" text-anchor="start">步骤3：后台GC复制有效页并回收擦除块</text>
+<text x="28" y="363" font-size="14" fill="#475569" font-weight="400" text-anchor="start">注意：擦除以块为单位；每次更新不必立即擦除整个旧块。</text>
+</svg>

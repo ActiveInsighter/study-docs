@@ -1,0 +1,57 @@
+---
+title: "6.10 半同步与分离式通信"
+description: "WAIT等待节拍、分离请求/响应，以及两者和异步握手的区别"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.10 半同步通信与分离式事务
+
+## 半同步方式
+- 保留公共时钟和同步操作阶段
+- 当目标方尚未准备好时，利用**WAIT/READY**等信号延长事务
+- 在允许的节拍点插入一个或多个等待周期$T_w$
+- <img src="/images/408-mind-maps/co-06-semisync-wait-clean.svg" alt="半同步读事务在固定时钟中插入两个WAIT等待节拍" width="820" height="439">
+
+- <img src="/images/408-mind-maps/co-0089.svg" alt="半同步通信：同步时钟 + 异步 WAIT 信号，可插入等待周期 Tw" width="700" height="400">
+
+## 半同步与同步比较
+- 同步：无准备好扩展时，事务可能必须按规定节拍完成
+- 半同步：时钟统一，但可响应目标方的等待请求延长事务
+- 它**不等于**异步全互锁：半同步仍按公共时钟采样有效的WAIT/READY
+- 题目若规定“固定4拍+2拍等待”，则总事务为6拍（另有开销需计入）
+
+## 分离式通信 / split transaction
+- 事务**请求阶段**占用总线，发出地址及命令后释放传输通路
+- 目标方进行慢速处理时，共享通路可用于其他事务
+- **响应阶段**目标方重新取得发送资格，返回数据/完成信息
+- 请求与响应需用标识/上下文关联；详细机制依协议
+- <img src="/images/408-mind-maps/co-06-split-transaction-clean.svg" alt="分离式总线事务的两次占用与中间释放空窗" width="790" height="324">
+
+## 分离式与突发传输对比
+- **分离式**解决慢目标等待期间通路空占问题
+- **突发**解决连续多个数据beat的重复启动/地址开销
+- **半同步**解决同一同步事务内目标迟到的问题
+- 这三种方式并不排斥，可以结合使用
+
+## 考试中的易错表述
+- “分离式需要主设备一直保有总线控制权直到数据返回”→ 错
+- “半同步就是双方没有共同的时钟”→ 错
+- “WAIT=1一定表示等待”→ 必须看有效电平，原图$\overline{WAIT}$为低有效
+- “分离式永远比非分离式延迟低”→ 错；其优势通常体现在**总线占用效率/并发吞吐**
+
+## 路径
+- [事务阶段](/docs/408/mind-maps/computer-organization/06-6-transactions-bursts)
+- [带宽与有效占用率](/docs/408/mind-maps/computer-organization/06-5-bandwidth-cases)
+````

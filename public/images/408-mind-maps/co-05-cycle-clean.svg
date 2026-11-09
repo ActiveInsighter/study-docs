@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 420" width="1040" height="420" role="img" aria-label="经典指令周期与节拍：阶段不是必选项" style="font-family: Noto Sans CJK SC, sans-serif;">
+<title>经典指令周期与节拍：阶段不是必选项</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 1L9 5L0 9" fill="#64748B"/></marker><marker id="arrowblue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 1L9 5L0 9" fill="#2563EB"/></marker></defs>
+<rect width="1040" height="420" rx="18" fill="white" stroke="#CFD8E3" stroke-width="2"/>
+<text x="32" y="46" font-size="24" font-weight="700" fill="#17243A">经典指令周期与节拍：阶段不是必选项</text>
+<rect x="32" y="57" width="62" height="5" rx="2.5" fill="#2563EB"/>
+<rect x="33" y="94" width="212" height="92" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="139.0" y="132.6" text-anchor="middle" fill="#2563EB" font-size="19" font-weight="700">FE 取指</text>
+<text x="139.0" y="158.4" text-anchor="middle" fill="#17243A" font-size="15" font-weight="400">取指令/译码</text>
+<rect x="287" y="94" width="212" height="92" rx="10" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+<text x="393.0" y="132.6" text-anchor="middle" fill="#B45309" font-size="19" font-weight="700">IND 间址</text>
+<text x="393.0" y="158.4" text-anchor="middle" fill="#17243A" font-size="15" font-weight="400">按寻址方式可选</text>
+<rect x="541" y="94" width="212" height="92" rx="10" fill="#D1FAE5" stroke="#0F766E" stroke-width="1.5"/>
+<text x="647.0" y="132.6" text-anchor="middle" fill="#0F766E" font-size="19" font-weight="700">EX 执行</text>
+<text x="647.0" y="158.4" text-anchor="middle" fill="#17243A" font-size="15" font-weight="400">运算/存取/转移</text>
+<rect x="795" y="94" width="212" height="92" rx="10" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="901.0" y="132.6" text-anchor="middle" fill="#7C3AED" font-size="19" font-weight="700">INT 中断</text>
+<text x="901.0" y="158.4" text-anchor="middle" fill="#17243A" font-size="15" font-weight="400">受理请求时可选</text>
+<line x1="247" y1="139" x2="282" y2="139" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="501" y1="139" x2="536" y2="139" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="755" y1="139" x2="790" y2="139" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="36" y="236" text-anchor="start" fill="#17243A" font-size="18" font-weight="700">机器周期（教学模型）</text>
+<rect x="229" y="209" width="118" height="74" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="288.0" y="240.1" text-anchor="middle" fill="#2563EB" font-size="18" font-weight="700">T0</text>
+<text x="288.0" y="260.8" text-anchor="middle" fill="#17243A" font-size="12" font-weight="400">时钟节拍</text>
+<rect x="378" y="209" width="118" height="74" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="437.0" y="240.1" text-anchor="middle" fill="#2563EB" font-size="18" font-weight="700">T1</text>
+<text x="437.0" y="260.8" text-anchor="middle" fill="#17243A" font-size="12" font-weight="400">时钟节拍</text>
+<rect x="527" y="209" width="118" height="74" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="586.0" y="240.1" text-anchor="middle" fill="#2563EB" font-size="18" font-weight="700">T2</text>
+<text x="586.0" y="260.8" text-anchor="middle" fill="#17243A" font-size="12" font-weight="400">时钟节拍</text>
+<rect x="676" y="209" width="118" height="74" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="735.0" y="240.1" text-anchor="middle" fill="#2563EB" font-size="18" font-weight="700">T3</text>
+<text x="735.0" y="260.8" text-anchor="middle" fill="#17243A" font-size="12" font-weight="400">时钟节拍</text>
+<rect x="825" y="209" width="118" height="74" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="884.0" y="240.1" text-anchor="middle" fill="#2563EB" font-size="18" font-weight="700">T4</text>
+<text x="884.0" y="260.8" text-anchor="middle" fill="#17243A" font-size="12" font-weight="400">时钟节拍</text>
+<text x="35" y="333" text-anchor="start" fill="#64748B" font-size="15" font-weight="400">一条机器指令可经历不同数量的功能阶段；每阶段也不必恰好含同样数量的时钟节拍。</text>
+<text x="35" y="364" text-anchor="start" fill="#64748B" font-size="15" font-weight="400">单拍内可以安排多个无资源冲突、满足时序关系的微操作；现代CPU并不总以此模型实施。</text>
+</svg>

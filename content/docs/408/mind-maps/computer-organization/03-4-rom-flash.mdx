@@ -1,0 +1,44 @@
+---
+title: "3.4 ROM、EEPROM与Flash"
+description: "ROM族谱、固件引导、Flash的页编程块擦除及SSD边界。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.4 非易失半导体存储器
+
+## ROM的关键性质
+- **只读**通常指正常运行时不允许任意快速覆盖；不是必然永远无法修改
+  - 非易失性：断电仍可保持数据；同样能按地址**随机读取**
+  - 上电后的固件可驻留 Flash/EEPROM 等非易失存储，CPU执行或拷贝到RAM后执行
+- MROM：掩模制造时固化；成本优势取决于产量，灵活性低
+- PROM：典型一次性可编程
+- EPROM：紫外线擦除后再编程，擦除往往对整个器件
+- EEPROM：电擦除/电编程，典型可按较小粒度更新
+- Flash：EEPROM的一类高密度变体，**按页编程、按块擦除**是常见NAND特性
+  - NOR Flash更适合随机指令读取；NAND Flash更常用于大容量SSD/闪存卡
+
+## 与系统启动的关系
+- 传统 BIOS/现代 UEFI：固件通常存储在主板非易失闪存
+  - 上电固件初始化硬件、选启动设备、装载引导程序或系统组件
+  - 不应一概断言“OS引导程序全存于主板ROM”；引导链可能跨固件/EFI系统分区/磁盘
+- 主存可同时映射 RAM 与 ROM 地址空间，是否连续取决于**芯片选址设计**
+- 只读语义与保护权限有关：只读存储器本身 vs 把 RAM 页面设为只读
+
+## 典型考点
+- “RAM一定能写、ROM一定不能被改写”表述过粗：ROM族中有可擦写EEPROM/Flash
+- Flash写入不是任意原位覆盖：先编程未写单元、回收旧块后再使用空闲块
+- SSD=闪存介质 + 控制器 + 映射/纠错/磨损均衡，**不等于一颗裸Flash芯片**
+- <img src="/images/408-mind-maps/co-0082.svg" alt="SSD闪存芯片和闪存翻译层组成" width="880" height="431">
+````

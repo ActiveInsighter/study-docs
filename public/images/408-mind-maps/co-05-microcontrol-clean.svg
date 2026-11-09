@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1070 535" width="1070" height="535" role="img" aria-label="微程序控制器：微地址决定读取哪条微指令" style="font-family: Noto Sans CJK SC, sans-serif;">
+<title>微程序控制器：微地址决定读取哪条微指令</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 1L9 5L0 9" fill="#64748B"/></marker><marker id="arrowblue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 1L9 5L0 9" fill="#2563EB"/></marker></defs>
+<rect width="1070" height="535" rx="18" fill="white" stroke="#CFD8E3" stroke-width="2"/>
+<text x="32" y="46" font-size="24" font-weight="700" fill="#17243A">微程序控制器：微地址决定读取哪条微指令</text>
+<rect x="32" y="57" width="62" height="5" rx="2.5" fill="#2563EB"/>
+<rect x="40" y="109" width="198" height="76" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="139.0" y="140.9" text-anchor="middle" fill="#2563EB" font-size="18" font-weight="700">IR.OP</text>
+<text x="139.0" y="162.2" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">机器指令的操作码</text>
+<rect x="267" y="109" width="260" height="76" rx="10" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+<text x="397.0" y="140.9" text-anchor="middle" fill="#B45309" font-size="18" font-weight="700">下地址形成逻辑</text>
+<text x="397.0" y="162.2" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">OP映射/条件测试</text>
+<line x1="240" y1="146" x2="264" y2="146" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="578" y="113" width="177" height="85" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="666.5" y="148.7" text-anchor="middle" fill="#2563EB" font-size="20" font-weight="700">CMAR</text>
+<text x="666.5" y="172.5" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">当前微地址</text>
+<rect x="810" y="113" width="211" height="85" rx="10" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="915.5" y="148.7" text-anchor="middle" fill="#7C3AED" font-size="20" font-weight="700">CM</text>
+<text x="915.5" y="172.5" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">控制存储器</text>
+<line x1="530" y1="146" x2="574" y2="146" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="758" y1="157" x2="806" y2="157" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="809" y="260" width="211" height="93" rx="10" fill="#D1FAE5" stroke="#0F766E" stroke-width="1.5"/>
+<text x="914.5" y="299.1" text-anchor="middle" fill="#0F766E" font-size="20" font-weight="700">CMDR / μIR</text>
+<text x="914.5" y="325.1" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">当前微指令</text>
+<line x1="918" y1="200" x2="918" y2="257" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="798" y="382" width="228" height="81" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="912" y="412" text-anchor="middle" fill="#2563EB" font-size="18" font-weight="700">操作字段 μOP</text>
+<text x="912" y="439" text-anchor="middle" fill="#17243A" font-size="14" font-weight="400">产生微命令 → 数据通路</text>
+<line x1="917" y1="355" x2="917" y2="379" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="807" y1="308" x2="500" y2="308" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="500" y1="308" x2="500" y2="189" stroke="#64748B" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="49" y="263" width="396" height="123" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+<text x="68" y="298" text-anchor="start" fill="#17243A" font-size="18" font-weight="700">控制时序循环</text>
+<text x="68" y="325" text-anchor="start" fill="#17243A" font-size="15" font-weight="400">1  CMAR取地址 → CM读微指令</text>
+<text x="68" y="349" text-anchor="start" fill="#17243A" font-size="15" font-weight="400">2  CMDR发命令 → 形成下一地址</text>
+<text x="49" y="489" text-anchor="start" fill="#64748B" font-size="15" font-weight="400">提示：CMAR ≠ MAR；CMDR ≠ MDR；CM存微程序，主存存机器指令与数据。</text>
+</svg>

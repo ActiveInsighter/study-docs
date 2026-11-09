@@ -1,0 +1,47 @@
+---
+title: "1.4 速率、带宽、吞吐量与有效吞吐"
+description: "bit/s、带宽与频宽、瓶颈链路、goodput、B与b。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 1.4 速率、带宽、吞吐量与有效吞吐
+
+## 速率与单位
+- **速率/数据率**：单位时间可发送的比特数（bit/s），常记 `R`
+- `1 kbit/s = 10³ bit/s`，`1 Mbit/s = 10⁶ bit/s`，`1 Gbit/s = 10⁹ bit/s`
+- **b**（bit）是位，**B**（byte）是字节；`1 B = 8 bit`
+- `MB/s`和`Mbit/s`相差8倍，且存储容量常用二进制单位 `MiB=2²⁰ B`
+
+## 两种“带宽”语境
+- **模拟信道带宽**：频率范围上限与下限之差，单位Hz
+- **网络链路带宽**（常用口径）：链路的标称/最大传输数据率，单位bit/s
+- 数据率不等于传播速度；**增大带宽不直接缩短信号传播时间**
+
+## 吞吐量与有效吞吐
+- **吞吐量**：单位时间成功传输的实际数据量，需说明测量点和统计口径
+- **Goodput**：应用获得的有效载荷数据率，不计协议首部、重传等开销
+- 单一路径稳定持续传输通常受瓶颈链路、协议开销、窗口与拥塞控制约束
+- 理想稳态常用上界：`端到端吞吐量 ≤ min(沿途链路带宽)`
+
+## 快速换算
+- `100 Mbit/s = 12.5 MB/s`（不计开销、十进制）
+- `16 Mbit ÷ 8 Mbit/s = 2 s`：算**发送时延**，不是包括传播和排队的完整端到端时延
+- **注意**：名义带宽100M不代表实际每秒必收到100M有效载荷
+
+## 学习导航
+- [上一节：1.3 电路、报文、分组交换](/docs/408/mind-maps/computer-networks/01-3-switching)
+- [返回本章总览](/docs/408/mind-maps/computer-networks/01-architecture)
+- [下一节：1.5 四类时延与多跳时延计算](/docs/408/mind-maps/computer-networks/01-5-delay)
+````

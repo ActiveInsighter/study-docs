@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 360" width="920" height="360" font-family="Noto Sans CJK SC, sans-serif" font-size="15" role="img" aria-label="双缓冲 T/M/C 时序图">
+<title>双缓冲 T/M/C 时序图</title>
+<rect width="920" height="360" rx="14" fill="#ffffff"/>
+<text x="28" y="38" font-size="23" fill="#0f172a" font-weight="700" text-anchor="start">双缓冲：A、B交替接收数据</text>
+<text x="28" y="67" font-size="13" fill="#475569" font-weight="400" text-anchor="start">设备在处理上一块时可填充另一个缓冲；工作区转送M与CPU处理C串行</text>
+<text x="42" y="120" font-size="16" fill="#0f172a" font-weight="700" text-anchor="start">设备写A/B</text>
+<text x="42" y="181" font-size="16" fill="#0f172a" font-weight="700" text-anchor="start">缓冲→工作区</text>
+<text x="42" y="242" font-size="16" fill="#0f172a" font-weight="700" text-anchor="start">CPU处理</text>
+<rect x="205.0" y="94" width="152.0" height="39" rx="5" fill="#dbeafe" stroke="#64748b" stroke-width="1.7"/>
+<text x="281.0" y="119" font-size="14" fill="#1e293b" font-weight="700" text-anchor="middle">T1A</text>
+<rect x="357.0" y="94" width="152.0" height="39" rx="5" fill="#dbeafe" stroke="#64748b" stroke-width="1.7"/>
+<text x="433.0" y="119" font-size="14" fill="#1e293b" font-weight="700" text-anchor="middle">T2B</text>
+<rect x="509.0" y="94" width="152.0" height="39" rx="5" fill="#dbeafe" stroke="#64748b" stroke-width="1.7"/>
+<text x="585.0" y="119" font-size="14" fill="#1e293b" font-weight="700" text-anchor="middle">T3A</text>
+<rect x="661.0" y="94" width="152.0" height="39" rx="5" fill="#dbeafe" stroke="#64748b" stroke-width="1.7"/>
+<text x="737.0" y="119" font-size="14" fill="#1e293b" font-weight="700" text-anchor="middle">T4B</text>
+<rect x="357.0" y="155" width="30.4" height="39" rx="5" fill="#fed7aa" stroke="#64748b" stroke-width="1.7"/>
+<text x="372.2" y="180" font-size="14" fill="#1e293b" font-weight="700" text-anchor="middle">M1</text>
+<rect x="509.0" y="155" width="30.4" height="39" rx="5" fill="#fed7aa" stroke="#64748b" stroke-width="1.7"/>
+<text x="524.2" y="180" font-size="14" fill="#1e293b" font-weight="700" text-anchor="middle">M2</text>
+<rect x="661.0" y="155" width="30.4" height="39" rx="5" fill="#fed7aa" stroke="#64748b" stroke-width="1.7"/>
+<text x="676.2" y="180" font-size="14" fill="#1e293b" font-weight="700" text-anchor="middle">M3</text>
+<rect x="387.4" y="216" width="91.2" height="39" rx="5" fill="#bbf7d0" stroke="#64748b" stroke-width="1.7"/>
+<text x="433.0" y="241" font-size="14" fill="#1e293b" font-weight="700" text-anchor="middle">C1</text>
+<rect x="539.4" y="216" width="91.2" height="39" rx="5" fill="#bbf7d0" stroke="#64748b" stroke-width="1.7"/>
+<text x="585.0" y="241" font-size="14" fill="#1e293b" font-weight="700" text-anchor="middle">C2</text>
+<rect x="691.4" y="216" width="91.2" height="39" rx="5" fill="#bbf7d0" stroke="#64748b" stroke-width="1.7"/>
+<text x="737.0" y="241" font-size="14" fill="#1e293b" font-weight="700" text-anchor="middle">C3</text>
+<line x1="205.0" y1="280" x2="205.0" y2="286" stroke="#64748b" stroke-width="2" />
+<text x="205.0" y="304" font-size="12" fill="#64748b" font-weight="400" text-anchor="middle">0</text>
+<line x1="265.8" y1="280" x2="265.8" y2="286" stroke="#64748b" stroke-width="2" />
+<text x="265.8" y="304" font-size="12" fill="#64748b" font-weight="400" text-anchor="middle">40</text>
+<line x1="326.6" y1="280" x2="326.6" y2="286" stroke="#64748b" stroke-width="2" />
+<text x="326.6" y="304" font-size="12" fill="#64748b" font-weight="400" text-anchor="middle">80</text>
+<line x1="387.4" y1="280" x2="387.4" y2="286" stroke="#64748b" stroke-width="2" />
+<text x="387.4" y="304" font-size="12" fill="#64748b" font-weight="400" text-anchor="middle">120</text>
+<line x1="448.2" y1="280" x2="448.2" y2="286" stroke="#64748b" stroke-width="2" />
+<text x="448.2" y="304" font-size="12" fill="#64748b" font-weight="400" text-anchor="middle">160</text>
+<line x1="509.0" y1="280" x2="509.0" y2="286" stroke="#64748b" stroke-width="2" />
+<text x="509.0" y="304" font-size="12" fill="#64748b" font-weight="400" text-anchor="middle">200</text>
+<line x1="569.8" y1="280" x2="569.8" y2="286" stroke="#64748b" stroke-width="2" />
+<text x="569.8" y="304" font-size="12" fill="#64748b" font-weight="400" text-anchor="middle">240</text>
+<line x1="630.6" y1="280" x2="630.6" y2="286" stroke="#64748b" stroke-width="2" />
+<text x="630.6" y="304" font-size="12" fill="#64748b" font-weight="400" text-anchor="middle">280</text>
+<line x1="691.4" y1="280" x2="691.4" y2="286" stroke="#64748b" stroke-width="2" />
+<text x="691.4" y="304" font-size="12" fill="#64748b" font-weight="400" text-anchor="middle">320</text>
+<line x1="752.2" y1="280" x2="752.2" y2="286" stroke="#64748b" stroke-width="2" />
+<text x="752.2" y="304" font-size="12" fill="#64748b" font-weight="400" text-anchor="middle">360</text>
+<line x1="813.0" y1="280" x2="813.0" y2="286" stroke="#64748b" stroke-width="2" />
+<text x="813.0" y="304" font-size="12" fill="#64748b" font-weight="400" text-anchor="middle">400</text>
+<line x1="873.8" y1="280" x2="873.8" y2="286" stroke="#64748b" stroke-width="2" />
+<text x="873.8" y="304" font-size="12" fill="#64748b" font-weight="400" text-anchor="middle">440</text>
+<line x1="205" y1="280" x2="904.2" y2="280" stroke="#64748b" stroke-width="2" /><polygon points="904.2,280 897.2,283.8 897.2,276.2" fill="#64748b"/>
+<text x="28" y="335" font-size="16" fill="#1d4ed8" font-weight="700" text-anchor="start">稳态周期：max(T,M+C)=100ms/块；首块仍需T+M+C</text>
+</svg>

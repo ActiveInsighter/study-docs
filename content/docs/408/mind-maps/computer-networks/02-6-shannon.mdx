@@ -1,0 +1,51 @@
+---
+title: "2.6 香农容量、信噪比与双约束"
+description: "dB线性转换、Shannon公式、与奈氏共同约束"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.6 香农容量、信噪比与双约束
+
+## 有噪声信道的理论容量
+- 香农公式：$C=W\log_2(1+S/N)\,\mathrm{bit/s}$
+  - `W`：信道带宽Hz；`S/N`：信号功率与噪声功率**线性比值**
+  - 这是加性白高斯噪声等经典假设下的容量模型
+- 信噪比分贝形式：$\mathrm{SNR}_{dB}=10\log_{10}(S/N)$
+- 反推：$S/N=10^{\mathrm{SNR}_{dB}/10}$
+  - `30dB`→`1000`（不是30）；`20dB`→`100`
+
+## 容量含义
+- 数据率低于容量时，理论上存在**编码块长足够大、误码概率可任意小**的通信方案
+- **不等于**实际有限长度编码严格“零误码”，更不等于任何设备都能达到C
+- 增大`W`、提高有效SNR可提高容量；高SNR增长是对数关系
+
+## 例题：3kHz与30dB
+- $W=3000\,\mathrm{Hz},\quad S/N=1000$
+- $C=3000\log_2(1001)\approx29.90\,\mathrm{kbit/s}$
+
+## 奈氏与香农一起出现
+- 经典408组合题若**同时给出**理想低通码元数限制与有噪声SNR限制
+  - 奈氏：$R_b\le2W\log_2 M$
+  - 香农：$R_b\le W\log_2(1+S/N)$
+  - 在两套适用假设均满足时，取**较小上界**
+- 例：二进制 $M=2$、$W=4\,\mathrm{kHz}$、$S/N=127$
+  - 奈氏：$8\,\mathrm{kbit/s}$；香农：$28\,\mathrm{kbit/s}$；较小为`8kbit/s`
+- <img src="/images/408-mind-maps/cn-02-limits-clean.svg" alt="奈氏码元上限与香农有噪声容量双重约束" width="800" height="354">
+## 章节导航
+- [上一节：2.5 奈奎斯特准则：无噪声码元极限](/docs/408/mind-maps/computer-networks/02-5-nyquist)
+- [第二章总览](/docs/408/mind-maps/computer-networks/02-physical-layer)
+- [下一节：2.7 基带数字信号的线路编码](/docs/408/mind-maps/computer-networks/02-7-line-coding)
+
+````
