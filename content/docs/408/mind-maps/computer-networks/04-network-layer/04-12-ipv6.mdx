@@ -1,0 +1,54 @@
+---
+title: "4.12 IPv6格式、寻址与邻居发现"
+description: "408 计算机网络 第四章·IPv6格式、寻址与邻居发现：独立双侧Markmap，含考研核心概念、步骤、易错点与计算。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 4.12 IPv6格式、寻址与邻居发现
+
+## IPv6核心格式
+- 地址**128位**，通常写成8组16位十六进制（冒号分隔）
+- **基本首部固定40 B**，含版本、流量类别、流标签、有效载荷长度、下一首部、跳数限制、源/目的地址
+- 扩展首部承担IPv4选项等部分扩展功能；IPv6基本首部**没有首部校验和**
+- <img src="/images/408-mind-maps/cn-0044.svg" alt="IPv6固定40字节基本首部" width="840" height="420">
+
+## 缩写规范
+- 每组可省略前导0，如`0db8`→`db8`
+- 连续的全0组可用`::`压缩，**一个地址中最多出现一次**
+- `2001:0db8:0000:0000:0000:0000:0000:0001`→`2001:db8::1`
+- `::1`是本机环回，`::`是未指定；这些不用于给外网主机任意分配
+
+## 地址传播方式
+- 单播：一个接口或节点的地址；常见全球单播、链路本地`fe80::/10`
+- 组播：一组节点接收；地址`ff00::/8`，用于多种邻居和路由控制
+- 任播：多个接口共享单播样式的地址，网络路由到其中一个（通常最近路由代价）
+- **IPv6没有IPv4意义上的广播**，不能把任播等同“一旦有人收到其余都不再发送”
+
+## 新的寻址/配置机制
+- 用ICMPv6 **邻居发现NDP**代替ARP；RS/RA、NS/NA与路由器发现
+- SLAAC可结合RA前缀自动生成地址；DHCPv6也可用于有状态等配置
+- IPv6接口地址常见/64前缀，但不能说所有链路或类型必须都是/64
+
+## 分片与跳数限制
+- IPv6中**路由器不执行分片**；需要分片时由源点使用Fragment扩展首部
+- 下一跳MTU过小时，路由器丢弃并可回ICMPv6 Packet Too Big
+- 跳数限制Hop Limit逐跳减1，作用对应IPv4的TTL
+- QoS相关流标签/流量类别提供机制，**不保证所有网络的服务质量**
+## 章节导航
+- [返回第四章导览](/docs/408/mind-maps/computer-networks/04-network-layer)
+- [上一节：4.11 NAT、NAPT端口映射与端到端封装](/docs/408/mind-maps/computer-networks/04-network-layer/04-11-nat)
+- [下一节：4.13 IPv4/IPv6过渡与对比](/docs/408/mind-maps/computer-networks/04-network-layer/04-13-ipv6-transition)
+
+````

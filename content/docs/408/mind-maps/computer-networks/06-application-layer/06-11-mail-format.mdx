@@ -1,0 +1,50 @@
+---
+title: "6.11 邮件信封、首部与MIME多媒体扩展"
+description: "408计算机网络·应用层第六章·邮件信封、首部与MIME多媒体扩展；高质量双侧Markmap分节导图。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.11 邮件信封、首部与MIME多媒体扩展
+
+## 信封和消息头不是一回事
+- SMTP信封：`MAIL FROM`反向路径、`RCPT TO`转发收件人，用于投递
+- 邮件**头字段**：`From:`、`To:`、`Subject:`、`Date:`、`Message-ID:`等，用于展示与处理
+- 邮件头与正文之间有**空行**；正文可包含文字、MIME附件结构
+- `Subject:`属于**邮件头，不属于SMTP信封**；原导图把其列在信封下错误
+
+## MIME的三项作用
+- `MIME-Version`、`Content-Type`描述类型，如`text/plain`、`multipart/mixed`
+- `Content-Transfer-Encoding`如`base64`、`quoted-printable`，适应邮件传输限制
+- 多部分消息使用边界标记（boundary），可同时承载文本、HTML与附件
+- 文件附件一般由MIME编码封装，不意味着SMTP突然变成一种文件传输协议
+
+## 典型示意
+- `From: Alice <alice@example.org>`
+- `To: Bob <bob@example.com>`
+- `Subject: 复习资料`（含非ASCII内容时按适用邮件编码规范处理）
+- `MIME-Version: 1.0`；`Content-Type: multipart/mixed; boundary=...`
+- **边界结论**：MIME扩展邮件格式/编码，并未替代SMTP的投递角色
+
+## 安全辨析
+- MIME不保证加密或验签；传输安全可用SMTP STARTTLS / TLS
+- 邮件头显示的`From`可不同于SMTP信封发件人，不能仅据显示名称断言真实性
+- S/MIME是另外的邮件内容安全技术，与**普通MIME**概念不等同
+
+## 分节导航
+- [上一节：6.10 SMTP命令、三阶段交互与响应码](/docs/408/mind-maps/computer-networks/06-application-layer/06-10-smtp)
+- [下一节：6.12 POP3、IMAP与Webmail协议对比](/docs/408/mind-maps/computer-networks/06-application-layer/06-12-pop-imap)
+- [应用层总览](/docs/408/mind-maps/computer-networks/06-application-layer)
+
+````

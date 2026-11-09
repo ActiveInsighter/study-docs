@@ -1,0 +1,63 @@
+---
+title: "5.18 CPU与流水线综合计算、易错辨析"
+description: "综合取指、微指令长度、访存控制、五级流水冲突与吞吐/CPI的典型考法。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.18 中央处理器章末综合检验
+
+## 题型一：认清寄存器与信号
+- 题设：要从地址A读取一个字到R1；采用MAR/MDR的CPU
+  - `MAR ← A` → `MemRead` → `MDR ← M[MAR]` → `R1 ← MDR`
+  - **MAR给地址，MDR给内容**；不能只发出MemRead却未提供有效地址
+
+## 题型二：内存间接求操作数
+- 假设`M[100]=200`，`M[200]=37`
+  - 直接`LOAD R1,[100]`读取值200：**1次数据主存读**
+  - 单级间接`LOAD R1,[[100]]`读取值37：**2次数据主存读**
+- 上述都**不计取指**；若题目明确含取指，需再另计取指次数
+
+## 题型三：微指令控制字段
+- 32个微命令均可独立并行，用直接编码：控制字段至少32bit
+- 3个互相独立字段，每字段最多7个互斥命令再加1个空编码：需$3\times3=9$bit
+  - 若有256个微地址需要完整后继地址字段，再加8bit→共17bit（未算测试/转移控制）
+- 不要忘记空操作码；同字段不应同时选出两种互斥命令
+
+## 题型四：流水线时空表
+- 5段等时流水线处理20条指令，无冒险
+  - 总拍数$5+20-1=24$，吞吐$20/(24\Delta t)$
+  - 串行拍数$5\times20=100$，加速比$100/24=25/6\approx4.17$
+  - 效率$20/24=5/6\approx83.33\%$
+- 若有3拍气泡，总周期变27拍；此时不能仍用24作分母
+
+## 题型五：Load-Use和分支
+- `LW R1,0(R2)`紧跟`ADD R3,R1,R4`：经典5段且允许前递→通常需1拍气泡
+- 若分支率20%、错预测率10%、错误代价3拍，其他损失忽略：$CPI=1.06$
+- 若题设无旁路或分支在不同阶段决定，**重新画时空图**，不能背固定罚时
+
+## 本章最值得纠正的原图表述
+- 硬布线控制器**不只适用于RISC**；微程序控制器也不保证每条微指令必有额外一个空拍
+- **单总线同拍一个源**，但可以同时选通多个目的寄存器；并非只能“一个in、一个out”
+- **STORE的MEM阶段是写数据**，不是从Cache读数据
+- **超标量可用乱序调度**；MISD是少见而非数学意义不存在
+- **中断保存现场/SP步长/响应时刻**与具体ISA和实现有关，不能一概而论
+
+## 跨章节复习
+- [补码/标志位](/docs/408/mind-maps/computer-organization/02-data-representation/02-5-arithmetic-flags)
+- [高速缓存与TLB](/docs/408/mind-maps/computer-organization/03-memory-system/03-15-tlb-cache)
+- [指令格式与寻址](/docs/408/mind-maps/computer-organization/04-instruction-set)
+- [下一章：总线](/docs/408/mind-maps/computer-organization/06-bus)
+- [返回第五章导览](/docs/408/mind-maps/computer-organization/05-cpu)
+````

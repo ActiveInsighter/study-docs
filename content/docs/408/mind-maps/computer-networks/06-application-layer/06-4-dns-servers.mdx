@@ -1,0 +1,49 @@
+---
+title: "6.4 根、TLD、权威与递归DNS服务器"
+description: "408计算机网络·应用层第六章·根、TLD、权威与递归DNS服务器；高质量双侧Markmap分节导图。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.4 根、TLD、权威与递归DNS服务器
+
+## 四种常考角色
+- **主机Stub Resolver**：应用委托操作系统/本机解析器发起查询
+- **本地递归解析器**：可由ISP、校园、企业或第三方提供；先查缓存，必要时向权威层级查询
+- **根DNS**：帮助找到相应顶级域的委派信息；并非保存全部主机最终IP
+- **TLD服务器**：返回下级区域权威NS及必要的Glue地址记录
+- **权威服务器**：对自身负责的区域给出权威回答，也可能返回更下层委派
+
+## 根服务器数字的准确含义
+- 教材所谓**13台根服务器**是13组逻辑根服务器标识（A～M）/IPv4根服务地址，不是全球只有13台物理机器
+- 大量Anycast节点在世界各地提供根服务；同一字母标识有多个实际实例
+- 有缓存时查询可不触及根，更不要求每次DNS都访问全部服务器
+
+## 权威与缓存区别
+- 权威回答表示该服务器对相关区域数据有权威性
+- 递归解析器把权威回答缓存起来，后续可**非权威**回答相同问题
+- 同一部署体系中可同时提供递归和权威服务，但**概念角色要区分**
+- 委派不等于转交整个数据库；父区域通过NS记录指示子区域
+
+## 根到权威的考试链
+- 主机 → 递归解析器 → 根 → `.com`TLD → `example.com`权威 → IP
+- 根/TLD多数时候返回“下一步询问谁”的地址信息；末级权威返回所求记录
+- 发生`CNAME`时可能继续查找别名指向的规范主机名
+
+## 分节导航
+- [上一节：6.3 DNS域名层次、标签与资源记录](/docs/408/mind-maps/computer-networks/06-application-layer/06-3-dns-names)
+- [下一节：6.5 DNS递归/迭代与完整解析时序](/docs/408/mind-maps/computer-networks/06-application-layer/06-5-dns-query)
+- [应用层总览](/docs/408/mind-maps/computer-networks/06-application-layer)
+
+````

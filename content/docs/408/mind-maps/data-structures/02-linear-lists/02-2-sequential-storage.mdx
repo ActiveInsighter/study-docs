@@ -1,0 +1,74 @@
+---
+title: "2.2 顺序表的存储与扩容"
+description: "顺序表地址公式、静态与动态分配、扩容健壮性、优缺点及均摊成本。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.2 顺序表 · 存储、分配与扩容
+
+## 顺序表本质
+- **线性表的顺序存储实现**：逻辑相邻元素存放于物理相邻的存储单元
+- 用数组表示：`data[0..length-1]`
+- 设元素大小为 $w$ 字节，首地址为 $LOC(a_1)$
+  - 第 i 个元素的地址：$LOC(a_i)=LOC(a_1)+(i-1)w$
+- 由下标直接计算地址 → **按位访问 O(1)**
+
+## 静态分配（固定容量）
+- 典型伪代码：`ElemType data[MaxSize]; int length;`
+- 初始化：`length = 0`
+- 插入前检验：`length < MaxSize`
+- 优点：结构简单、不必扩容
+- 缺点：固定最大容量；可能空间浪费或容量不足
+- 注意：静态顺序表不是“元素数量永远不变”
+
+## 动态分配（可扩容）
+- 典型成员：`ElemType *data; int length; int capacity;`
+- 申请时分配**容量**：`malloc(capacity * sizeof(ElemType))`
+- 仅在 C 中用 `malloc/free`；C++ 可用 `new/delete[]` 或容器
+  - 分配、释放机制必须匹配；不能 `malloc` 后 `delete[]`
+- `length` 记录有效元素个数，`capacity` 记录已分配槽数
+- 扩容后保留原有 $length$ 个有效元素
+
+## 安全扩容模板（C 语言）
+- 条件：`length == capacity` 时才需要扩容
+- 先确定新容量（例如 $2\times capacity$，从 0 容量开始要特判）
+- 先保存返回值：`tmp = realloc(data, newCapacity * sizeof *data)`
+  - `tmp == NULL` → 分配失败，原指针依然有效
+  - `tmp != NULL` → `data = tmp; capacity = newCapacity`
+- 不能直接 `data = realloc(data, ...)` 而不检查失败
+- 还应考虑 `newCapacity * sizeof(ElemType)` 的整数溢出
+
+## 扩容复杂度（条件成立时）
+- 固定块长增长：一次扩容需搬运 $\Theta(n)$ 元素；大量追加可能累积至 $\Theta(n^2)$
+- 倍增扩容：单次扩容最坏 $\Theta(n)$
+  - 连续 n 次尾插的**总搬运量 O(n)**（几何级数）
+  - 因而追加操作的**均摊时间 O(1)**
+- 均摊 O(1) 不等于每一次尾插都 O(1)
+- 对任意位置插入，扩容之外仍可能移动 O(n) 个元素
+
+## 顺序表的优势与局限
+- 优点：按下标随机访问快、存储密度高、访存局部性通常好
+- 局限：中间插删移动元素；扩容可能重新分配与复制
+- 连续大块内存可能难以获得；不是所有实现都会扩容
+- **按位访问**与**按值搜索**是两种不同操作
+  - 无序顺序表按值查找：O(n)
+  - 有序顺序表可二分查找：O(log n)，前提是按下标随机访问
+
+## 图解与题眼
+- <img src="/images/408-mind-maps/ds-02-sequential-insert.svg" alt="顺序表中插入元素时的右移示意" width="410" height="141">
+- 地址计算考点：元素类型大小、起始地址、**位序和数组下标换算**
+- 时间分析考点：随机访问 ≠ 插入快；单次最坏 ≠ 均摊
+- [下一节：顺序表的操作](/docs/408/mind-maps/data-structures/02-linear-lists/02-3-sequential-operations)
+````

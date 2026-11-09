@@ -1,0 +1,52 @@
+---
+title: "6.16 HTTP连接方式、RTT推导与典型算例"
+description: "408计算机网络·应用层第六章·HTTP连接方式、RTT推导与典型算例；高质量双侧Markmap分节导图。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.16 HTTP连接方式、RTT推导与典型算例
+
+## 经典408简化前提
+- 假定**单一服务器**，顺序请求，不计对象传输时间与DNS耗时，TCP建连耗费1 RTT
+- 一次HTTP请求到首字节响应近似用1 RTT；真实网络还会叠加握手、TLS、服务器处理和传输时间
+- 已建立连接时不应重复计算TCP建立的1 RTT
+
+## 非持久HTTP/1.0典型模型
+- 每取**一个对象**：TCP建立1 RTT + HTTP请求/响应1 RTT = **2 RTT**
+- 若页面含一个HTML加100张图片，总对象数101，且**逐一串行**：$2\times101=202\,\mathrm{RTT}$
+- 若允许并行TCP连接，需要按并行轮次求而非简单乘总对象数
+
+## 持久连接、不用流水线
+- 1条TCP建连1 RTT；每个对象按请求-响应1 RTT
+- 101个对象串行：$1+101=102\,\mathrm{RTT}$
+- “持久连接=流水线”错误；HTTP/1.1默认复用连接，**流水线是可选机制，非默认必启**
+
+## 持久连接、理想流水线
+- 首次取HTML仍需建立TCP+首个GET：**2 RTT**
+- 收到HTML才知道100张图地址；随后一次性发出100个GET并等待响应，理想模型再1 RTT
+- 总计约$3\,\mathrm{RTT}$，前提是题目允许流水线/请求立即发出、忽略主体发送时间
+- HTTP/2多路复用和HTTP/3 QUIC不能直接照搬这一**HTTP/1.1课堂理想式**
+
+## 解题步骤
+- ① 识别**N是总对象数还是嵌入对象数**；② 数TCP连接次数
+- ③ 判断能否并行、能否复用、能否流水；④ 再计DNS/TLS/对象传输时间
+- 原例202RTT只在**一个HTML+100图片、非持久且串行**前提下成立
+
+## 分节导航
+- [上一节：6.15 HTTP响应结构、状态码与重定向](/docs/408/mind-maps/computer-networks/06-application-layer/06-15-http-response)
+- [下一节：6.17 HTTP无状态、Cookie、Session与缓存](/docs/408/mind-maps/computer-networks/06-application-layer/06-17-http-state)
+- [应用层总览](/docs/408/mind-maps/computer-networks/06-application-layer)
+
+````

@@ -1,0 +1,16 @@
+{
+  "title": "第三章 栈、队列与数组｜分节导览",
+  "pages": [
+    "index",
+    "03-1-stack-basics",
+    "03-2-stack-permutations",
+    "03-3-queue-circular",
+    "03-4-linked-deque",
+    "03-5-stack-applications",
+    "03-6-queue-applications",
+    "03-7-array-addresses",
+    "03-8-symmetric-triangular",
+    "03-9-banded-sparse"
+  ],
+  "defaultOpen": false
+}

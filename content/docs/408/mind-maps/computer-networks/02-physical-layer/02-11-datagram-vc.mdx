@@ -1,0 +1,49 @@
+---
+title: "2.11 数据报与虚电路：分组交换两种服务"
+description: "路由决策位置、分组首部、可靠性与故障处理"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.11 数据报与虚电路：分组交换两种服务
+
+## 数据报方式（Datagram）
+- **无连接网络服务**：通常每个分组带完整目的地址，转发节点逐包查转发表
+- 同一报文的不同分组可能沿不同路径，可能发生乱序/丢失/重复
+- 典型IP层提供**尽力而为服务**，**不保证逐跳ACK或可靠重传**
+- 某链路故障后网络可能重新收敛选路，仍可能短时丢包
+
+## 虚电路方式（Virtual Circuit）
+- 交换虚电路：建立逻辑连接→数据传输→释放连接
+- 中间节点维护转发映射，后续分组可使用**虚电路标识符**，沿确定的逻辑路径转发
+- 虚电路是**逻辑通道**，并非电路交换的独占铜线/带宽
+- **有序交付**常见于稳定路径，但**可靠传输、确认及流量控制不由“虚电路”名称自动保证**
+- 永久虚电路PVC可预先配置；交换虚电路SVC按需建立
+
+## 典型对比
+- 连接：数据报无需网络层建连；虚电路需要逻辑状态/标识
+- 转发：数据报逐包查目的地址；虚电路依入接口/入标识映射出接口/出标识
+- 故障：数据报可重新选路；虚电路可能需要重建或保护倒换
+- <img src="/images/408-mind-maps/cn-02-datagram-vc-clean.svg" alt="逐包选路数据报与同一路径虚电路图" width="800" height="388">
+
+## 原导图两处修正
+- “每跳差错检测正确后给前一个节点发ACK并丢副本”**不是IP数据报通用动作**
+- “收端ACK后必须拆虚电路”**不是虚电路固定生命周期规则**
+- 后续TCP等端到端可靠性机制见[传输层](/docs/408/mind-maps/computer-networks/05-transport-layer)
+## 章节导航
+- [上一节：2.10 电路、报文与分组交换（跨章复习）](/docs/408/mind-maps/computer-networks/02-physical-layer/02-10-switching)
+- [第二章总览](/docs/408/mind-maps/computer-networks/02-physical-layer)
+- [下一节：2.12 导向型介质：双绞线与同轴电缆](/docs/408/mind-maps/computer-networks/02-physical-layer/02-12-copper-media)
+
+````

@@ -278,7 +278,7 @@ async function rscPrefetch(page, base) {
 
 /** A 408 section mind map draws as SVG with its toolbar and image preview. */
 async function mindMap(page, base) {
-  await page.goto(base + '/docs/408/mind-maps/operating-systems/02-6-thread-context/', { waitUntil: 'networkidle2', timeout: 120000 });
+  await page.goto(base + '/docs/408/mind-maps/operating-systems/02-processes/02-6-thread-context/', { waitUntil: 'networkidle2', timeout: 120000 });
   await page.waitForSelector('.mind-map[data-status="ready"] svg.mind-map-surface', { timeout: 60000 });
   const nodes = await page.evaluate(() => document.querySelectorAll('svg.mind-map-surface [data-node-id]').length);
   const buttons = await page.evaluate(() => document.querySelectorAll('.markmap-toolbar button').length);

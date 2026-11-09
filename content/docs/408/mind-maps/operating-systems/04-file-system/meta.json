@@ -1,0 +1,26 @@
+{
+  "title": "第四章 文件管理",
+  "pages": [
+    "index",
+    "04-1-file-concepts",
+    "04-2-file-operations",
+    "04-3-open-file-tables",
+    "04-4-logical-files",
+    "04-5-contiguous-allocation",
+    "04-6-linked-fat",
+    "04-7-index-allocation",
+    "04-8-mixed-index",
+    "04-9-directory-fcb-inode",
+    "04-10-directory-hierarchy",
+    "04-11-links",
+    "04-12-protection",
+    "04-13-fs-architecture",
+    "04-14-free-table-chain",
+    "04-15-bitmap",
+    "04-16-group-link",
+    "04-17-vfs",
+    "04-18-mount-cache",
+    "04-19-exam-synthesis"
+  ],
+  "defaultOpen": false
+}

@@ -1,0 +1,48 @@
+---
+title: "5.14 RTT平滑估计、重传超时与Karn原则"
+description: "408 计算机网络第五章·RTT平滑估计、重传超时与Karn原则；分节双侧Markmap，含核心概念、考点计算与常见误区。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.14 RTT平滑估计、重传超时与Karn原则
+
+## 影响RTO的时间量
+- `SampleRTT`：一个未重传数据段的发送至确认之间的观测往返时间
+- `SRTT`：平滑往返时间估计；`RTTVAR`：RTT变化程度估计
+- 常用RTO估算思路：$\mathrm{RTO}\approx\mathrm{SRTT}+4\,\mathrm{RTTVAR}$，还需遵守实现的最小超时与上限要求
+- 超时往往导致**指数退避**，防止网络拥塞时反复无节制重传
+
+## 常见教材平滑公式
+- $\mathrm{SRTT}_{\mathrm{new}}=(1-\alpha)\mathrm{SRTT}_{\mathrm{old}}+\alpha\,\mathrm{SampleRTT}$，常取$\alpha=\tfrac18$
+- RTTVAR按观测误差进行指数平滑（经典取$\beta=\tfrac14$）；**不是简单固定RTT×某个常数**
+- 例：旧SRTT=100ms，新SampleRTT=140ms，$\alpha=\tfrac18$ → 新SRTT=`105ms`
+- 若题目给了自定义权重，以**题设公式与参数**为准
+
+## 重传歧义与Karn算法
+- 若一个数据段经过重传才收到ACK，无法直接判定确认对应初传还是重传
+- **Karn原则**：避免用歧义ACK计算普通RTT样本，超时后可保持退避
+- 带TCP时间戳的实现可改善重传场景测量，不能机械说“所有重传后ACK都永远无法测RTT”
+
+## 考试辨析
+- RTT是端到端往返时延；RTO是超时重传的等待门限，二者不同
+- RTO过短→无谓重传；RTO过长→真实丢包恢复慢
+- `重传超时`与`三重复ACK快速重传`会触发不同的**拥塞窗口处理**，见5.18～5.19
+
+## 章节导航
+- [上一节：5.13 TCP重传、重复ACK、SACK与可靠性](/docs/408/mind-maps/computer-networks/05-transport-layer/05-13-retransmit)
+- [下一节：5.15 接收窗口rwnd与流量控制](/docs/408/mind-maps/computer-networks/05-transport-layer/05-15-flow-control)
+- [计算机网络总览](/docs/408/mind-maps/computer-networks)
+
+````

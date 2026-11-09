@@ -1,0 +1,12 @@
+{
+  "title": "第一章 绪论｜章节导览",
+  "pages": [
+    "index",
+    "01-1-data-and-adt",
+    "01-2-structures",
+    "01-3-algorithms",
+    "01-4-time-complexity",
+    "01-5-space-and-access"
+  ],
+  "defaultOpen": false
+}

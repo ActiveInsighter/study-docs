@@ -1,0 +1,50 @@
+---
+title: "4.10 ICMP差错报告、Ping与Traceroute"
+description: "408 计算机网络 第四章·ICMP差错报告、Ping与Traceroute：独立双侧Markmap，含考研核心概念、步骤、易错点与计算。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 4.10 ICMP差错报告、Ping与Traceroute
+
+## ICMPv4角色
+- 属于IPv4控制报文协议，IPv4 Protocol字段=`1`，**不承诺修复丢失数据**
+- 差错报告常含触发报文的部分首部/负载，帮助定位原始流量
+- 常见类型：目的不可达`3`、时间超过`11`、参数问题`12`、重定向`5`
+
+## TTL与路径追踪
+- 路由器转发将TTL减至0→丢弃并可回ICMP Time Exceeded
+- `traceroute/tracert`通过逐渐增大TTL观察中间跳，具体探测可使用UDP、ICMP等
+- `ping`发送ICMP Echo Request（类型8），收Echo Reply（类型0），测试可达与往返时延
+- **丢失ICMP回应不必然证明目标断网**，防火墙/策略可能屏蔽ICMP
+
+## ICMP不应发送的典型情况
+- 通常**不对ICMP差错报文本身**再次发送ICMP差错（避免递归风暴）
+- 不对非首片IPv4分片生成某些差错报告
+- 不对目的为广播/多播及非法源地址等情形产生通常的差错回包
+
+## 经典但不宜照搬的概念
+- Source Quench（源点抑制，类型4）已废弃，不应列作现代拥塞控制方案
+- 路由重定向是优化下一跳的机制，**不能等同普通路由器转发**
+- ICMP端口不可达常用于UDP服务不可达反馈，与TCP RST机制不同
+
+## PMTUD关联
+- IPv4 `DF=1`且包超下一跳MTU→可能回目的不可达/需分片（type 3 code 4）
+- 实际网络过滤ICMP会影响路径MTU发现；不能说ICMP只为Ping使用
+## 章节导航
+- [返回第四章导览](/docs/408/mind-maps/computer-networks/04-network-layer)
+- [上一节：4.9 DHCP动态配置与中继](/docs/408/mind-maps/computer-networks/04-network-layer/04-9-dhcp)
+- [下一节：4.11 NAT、NAPT端口映射与端到端封装](/docs/408/mind-maps/computer-networks/04-network-layer/04-11-nat)
+
+````

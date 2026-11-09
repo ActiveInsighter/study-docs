@@ -1,0 +1,61 @@
+---
+title: "第七章 查找 · 分节导览"
+description: "16节：查找指标、线性/折半/分块查找、BST/AVL/红黑树、B树/B+树、散列函数与冲突、ASL计算。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 第七章 查找 · 16 节导览
+
+## 基础查找策略（7.1—7.4）
+- [7.1 概念、关键字与平均查找长度 ASL](/docs/408/mind-maps/data-structures/07-search/07-1-search-basics)
+  - 静态/动态查找表；成功/失败事件概率
+- [7.2 顺序查找与哨兵](/docs/408/mind-maps/data-structures/07-search/07-2-sequential)
+  - 普通线性扫描、有序提前终止；边界与比较次数
+- [7.3 折半查找和判定树](/docs/408/mind-maps/data-structures/07-search/07-3-binary)
+  - 必须有序且支持随机访问；判定树决定 ASL
+- [7.4 分块（索引）查找](/docs/408/mind-maps/data-structures/07-search/07-4-block)
+  - 块间有序、块内可无序；先索引后块内
+
+## 树形查找（7.5—7.8）
+- [7.5 二叉排序树 BST](/docs/408/mind-maps/data-structures/07-search/07-5-bst)
+  - 中序有序；查找、插入和三种删除情形
+- [7.6 AVL 平衡二叉树](/docs/408/mind-maps/data-structures/07-search/07-6-avl)
+  - 平衡因子、LL/RR/LR/RL、删除时沿路径调整
+- [7.7 红黑树性质与黑高](/docs/408/mind-maps/data-structures/07-search/07-7-red-black-properties)
+  - 根叶黑、不红红、黑路同；与 AVL 的差异
+- [7.8 红黑树插入与删除](/docs/408/mind-maps/data-structures/07-search/07-8-red-black-operations)
+  - 红叔变色，黑叔旋转；删除重平衡
+
+## 多路平衡查找（7.9—7.12）
+- [7.9 B 树阶数、关键字边界及树高](/docs/408/mind-maps/data-structures/07-search/07-9-btree-properties)
+  - 对内存中的关键字计数；高度不算外部失败叶
+- [7.10 B 树查找、插入和分裂](/docs/408/mind-maps/data-structures/07-search/07-10-btree-insert)
+  - 终端插入，溢出后关键字向上提升
+- [7.11 B 树删除：借位、合并与根收缩](/docs/408/mind-maps/data-structures/07-search/07-11-btree-delete)
+  - 不能低于最小关键字数
+- [7.12 B+ 树与范围查询](/docs/408/mind-maps/data-structures/07-search/07-12-bplus)
+  - 全部数据索引在叶层；叶链利于顺序遍历
+
+## 散列及考试综合（7.13—7.16）
+- [7.13 散列函数与装填因子](/docs/408/mind-maps/data-structures/07-search/07-13-hash-functions)
+  - 哈希映射、冲突不可逆避免的条件
+- [7.14 冲突处理和删除](/docs/408/mind-maps/data-structures/07-search/07-14-hash-collisions)
+  - 开放定址 vs 拉链；探测路径与墓碑标记
+- [7.15 散列表成功/失败 ASL](/docs/408/mind-maps/data-structures/07-search/07-15-hash-asl)
+  - 每次从原始散列地址开始模拟
+- [7.16 查找综合题与考点纠错](/docs/408/mind-maps/data-structures/07-search/07-16-exam)
+  - 复杂度前提；分支数、旋转次数、IO 与 ASL
+- [上一章：图](/docs/408/mind-maps/data-structures/06-graphs) · [下一章：排序](/docs/408/mind-maps/data-structures/08-sort)
+````

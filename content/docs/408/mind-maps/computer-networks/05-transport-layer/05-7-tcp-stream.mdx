@@ -1,0 +1,48 @@
+---
+title: "5.7 TCP可靠字节流、缓冲与连接抽象"
+description: "408 计算机网络第五章·TCP可靠字节流、缓冲与连接抽象；分节双侧Markmap，含核心概念、考点计算与常见误区。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.7 TCP可靠字节流、缓冲与连接抽象
+
+## 面向字节流而非报文
+- 应用一次写入100B，接收方可以多次读取；TCP可合并或拆分发送的字节，不保留应用写入的消息边界
+- **TCP提供可靠、有序、无重复的字节流抽象**，但应用必须自定义消息长度、分隔符或帧格式
+- 一个连接有两个独立方向，各自拥有序号空间、发送缓存和接收缓存
+- TCP点到点、全双工；单个TCP连接不直接发送广播或组播
+
+## 发送与接收缓冲
+- 发送缓存：应用已交给TCP但未发送的数据 + 已发送仍未确认、可能重传的数据
+- 接收缓存：按序但尚未被应用读取的数据 + 接收实现愿意保留的乱序数据
+- TCP可以对字节进行分段，段边界不必等同应用层消息边界
+- 数据可在缓存与网络之间暂存，`write()`成功不代表远端应用已经读取
+
+## 两层可靠性边界
+- TCP的确认说明远端TCP接收了相应字节，不等同“服务器业务逻辑已持久处理”
+- TCP不提供加密/身份认证；TLS等建立在TCP之上以保护应用数据
+- TCP ACK与应用层响应不是一回事
+
+## 复习用对比
+- UDP：8B固定头、报文边界、无握手、需应用自行可靠
+- TCP：至少20B头、可靠有序字节流、连接状态、流量与拥塞控制
+- <img src="/images/408-mind-maps/cn-05-transport-choice-clean.svg" alt="TCP和UDP语义及交付方式对比" width="920" height="408">
+
+## 章节导航
+- [上一节：5.6 UDP伪首部与反码校验和算例](/docs/408/mind-maps/computer-networks/05-transport-layer/05-6-udp-checksum)
+- [下一节：5.8 TCP首部字段、标志位与选项](/docs/408/mind-maps/computer-networks/05-transport-layer/05-8-tcp-header)
+- [计算机网络总览](/docs/408/mind-maps/computer-networks)
+
+````

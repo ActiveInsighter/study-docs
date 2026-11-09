@@ -3,12 +3,34 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const CLOUDFLARE_DYNAMIC_REDIRECT_LIMIT = 100;
+export const CLOUDFLARE_STATIC_REDIRECT_LIMIT = 2000;
 
 function countSplats(value) {
   return (value.match(/\*/g) ?? []).length;
 }
 
-export function buildCloudflareRedirects(rewrites) {
+/** Exact old section URLs, including their Markdown views; no wildcard routing. */
+export function buildMindMapLegacyRedirects(routes) {
+  const redirects = [];
+  for (const [source, destination] of Object.entries(routes)) {
+    if (
+      !source.startsWith('/docs/408/mind-maps/') ||
+      typeof destination !== 'string' ||
+      !destination.startsWith('/docs/408/mind-maps/') ||
+      /[\s*?#]/.test(source + destination) ||
+      source === destination ||
+      Object.hasOwn(routes, destination)
+    ) throw new Error(`Invalid legacy mind-map route: ${source} -> ${destination}`);
+    redirects.push(
+      { source, destination: `${destination}/` },
+      { source: `${source}/`, destination: `${destination}/` },
+      { source: `${source}.md`, destination: `${destination}.md` },
+    );
+  }
+  return redirects;
+}
+
+export function buildCloudflareRedirects(rewrites, staticRedirects = []) {
   if (!Array.isArray(rewrites) || rewrites.length === 0) {
     throw new Error('Expected at least one EdgeOne rewrite to translate for Cloudflare.');
   }
@@ -22,6 +44,17 @@ export function buildCloudflareRedirects(rewrites) {
     '# Generated from .static-docs/edgeone.json by scripts/prepare-cloudflare-static-assets.mjs.',
     '# HTTP 200 rules are internal proxy rewrites: the browser URL stays unchanged.',
   ];
+
+  if (staticRedirects.length > CLOUDFLARE_STATIC_REDIRECT_LIMIT) {
+    throw new Error(`Cloudflare Static Assets supports at most ${CLOUDFLARE_STATIC_REDIRECT_LIMIT} static redirects.`);
+  }
+  // Cloudflare requires exact static redirects before dynamic rewrite rules.
+  for (const { source, destination } of staticRedirects) {
+    if (!source.startsWith('/') || !destination.startsWith('/') || /[\s*]/.test(source + destination)) {
+      throw new Error(`Invalid static redirect: ${source} -> ${destination}`);
+    }
+    lines.push(`${source} ${destination} 301`);
+  }
 
   for (const rewrite of rewrites) {
     const source = rewrite?.source;
@@ -143,7 +176,11 @@ export async function prepareCloudflareStaticAssets(outputRoot = path.resolve('.
 
   const edgeOneConfig = JSON.parse(await readFile(edgeOneConfigPath, 'utf8'));
   const canonicalNames = await canonicalizeAssetNames(outputRoot);
-  const redirects = buildCloudflareRedirects([...edgeOneConfig.rewrites, ...canonicalNames.rewrites]);
+  const legacyRoutes = JSON.parse(await readFile(new URL('../lib/mind-map/legacy-routes.json', import.meta.url), 'utf8'));
+  const redirects = buildCloudflareRedirects(
+    [...edgeOneConfig.rewrites, ...canonicalNames.rewrites],
+    buildMindMapLegacyRedirects(legacyRoutes),
+  );
 
   await stat(notFoundPath);
   const restoredRootIndex = await ensureRootIndex(outputRoot);

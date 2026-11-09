@@ -1,0 +1,15 @@
+{
+  "title": "第二章 线性表｜分节导览",
+  "pages": [
+    "index",
+    "02-1-linear-list-adt",
+    "02-2-sequential-storage",
+    "02-3-sequential-operations",
+    "02-4-singly-linked-basics",
+    "02-5-singly-linked-operations",
+    "02-6-doubly-linked-lists",
+    "02-7-circular-static-lists",
+    "02-8-comparisons-algorithms"
+  ],
+  "defaultOpen": false
+}

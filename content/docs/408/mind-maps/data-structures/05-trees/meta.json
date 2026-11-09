@@ -1,0 +1,20 @@
+{
+  "title": "第五章 树与二叉树",
+  "pages": [
+    "index",
+    "05-1-tree-concepts",
+    "05-2-tree-properties",
+    "05-3-binary-types",
+    "05-4-binary-storage",
+    "05-5-binary-traversals",
+    "05-6-reconstruct",
+    "05-7-threaded",
+    "05-8-tree-storage",
+    "05-9-forest-traversal",
+    "05-10-bst",
+    "05-11-avl",
+    "05-12-huffman",
+    "05-13-union-find"
+  ],
+  "defaultOpen": false
+}

@@ -1,0 +1,74 @@
+---
+title: "第三章 栈、队列与数组｜分节导览"
+description: "全章知识拆为 9 张双侧 Markmap：栈、出栈序列、循环队列、链队列与双端队列、栈和队列的应用、数组与矩阵压缩。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 第三章 栈、队列与数组 · 分节导览
+
+## 栈：抽象与实现
+- [3.1 栈的定义、顺序栈、链栈和共享栈](/docs/408/mind-maps/data-structures/03-stacks-queues-arrays/03-1-stack-basics)
+  - LIFO、栈顶位置的两种约定
+  - 两栈共享同一数组的溢出条件
+- 核心：操作**只在栈顶**进行
+
+## 栈：合法输出序列
+- [3.2 出栈序列与卡特兰数](/docs/408/mind-maps/data-structures/03-stacks-queues-arrays/03-2-stack-permutations)
+  - 固定入栈顺序下的合法出栈排列
+  - 模拟法判合法、卡特兰数计数
+- 易错：卡特兰数不是任意排列的数量
+
+## 顺序队列与循环队列
+- [3.3 FIFO、假溢出、循环队列](/docs/408/mind-maps/data-structures/03-stacks-queues-arrays/03-3-queue-circular)
+  - `front` 指队头，`rear` 指下一入队位置
+  - 少用一格 / `size` / `tag` 三种判满方式
+- 易错：**循环队列满与空可能都有 `front==rear`**
+
+## 链队列与双端队列
+- [3.4 带头结点链队列、双端队列](/docs/408/mind-maps/data-structures/03-stacks-queues-arrays/03-4-linked-deque)
+  - 入队、出队与“删最后结点”边界
+  - 输入受限、输出受限的双端队列
+- 易错：尾指针在最后一个结点删除后必须复位
+
+## 栈的实际应用
+- [3.5 括号匹配、表达式处理、递归](/docs/408/mind-maps/data-structures/03-stacks-queues-arrays/03-5-stack-applications)
+  - 中缀转后缀、前/后缀表达式求值
+  - 运算符优先级与结合性、非交换运算顺序
+- 重点：**弹栈次序决定操作数左右关系**
+
+## 队列的实际应用
+- [3.6 BFS、层序遍历、调度与缓冲](/docs/408/mind-maps/data-structures/03-stacks-queues-arrays/03-6-queue-applications)
+  - 树与图的广度优先搜索
+  - FIFO 调度、缓冲区与单调队列拓展
+- 易错：普通 BFS 与优先队列并非同一种策略
+
+## 数组地址换算
+- [3.7 一维/二维数组与行主序、列主序](/docs/408/mind-maps/data-structures/03-stacks-queues-arrays/03-7-array-addresses)
+  - 按维长展开的地址公式
+  - 题目位序与程序下标的 1 基 / 0 基切换
+- 重点：**先求元素偏移量，再乘元素字节数**
+
+## 特殊矩阵压缩（一）
+- [3.8 对称矩阵与三角矩阵](/docs/408/mind-maps/data-structures/03-stacks-queues-arrays/03-8-symmetric-triangular)
+  - 上/下三角行主序的存储公式
+  - 常数区额外单元的定位
+- 易错：先确定保留上三角还是下三角
+
+## 特殊矩阵压缩（二）
+- [3.9 三对角矩阵与稀疏矩阵](/docs/408/mind-maps/data-structures/03-stacks-queues-arrays/03-9-banded-sparse)
+  - 三对角矩阵压缩共 `3n-2` 个元素
+  - 三元组表、十字链表与稀疏转置
+- [上一章：线性表](/docs/408/mind-maps/data-structures/02-linear-lists) · [下一章：串](/docs/408/mind-maps/data-structures/04-strings)
+````

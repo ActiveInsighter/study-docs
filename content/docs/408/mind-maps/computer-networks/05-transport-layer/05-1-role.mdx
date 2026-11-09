@@ -1,0 +1,49 @@
+---
+title: "5.1 传输层定位与服务边界"
+description: "408 计算机网络第五章·传输层定位与服务边界；分节双侧Markmap，含核心概念、考点计算与常见误区。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.1 传输层定位与服务边界
+
+## 进程到进程的逻辑通信
+- **网络层**：提供主机到主机的IP数据报交付，常是尽最大努力服务
+- **传输层**：为运行在不同主机上的**应用进程**提供逻辑通信，数据单元为UDP用户数据报或TCP报文段
+- **端到端**：传输协议主要运行在通信端系统，路由器通常不作为传输层连接的端点
+- 不要把“同一主机两个进程的通信”和“跨主机网络通信”混同；本章侧重后一种
+
+## 四类服务
+- 复用与分用：多个应用共享同一网络层，按协议和端口识别接收方
+- 差错检验：UDP/TCP校验和覆盖头部与数据，含源/目的IP等伪首部字段
+- 可靠性：**TCP提供可靠、有序的字节流**；UDP本身不保证可靠、有序或去重
+- 流量与拥塞控制：TCP通过`rwnd`、`cwnd`共同限制未确认数据量；UDP不内建TCP式控制
+
+## 与其它层的对比
+- 链路层：相邻结点之间的帧传递，可用FCS检测链路帧损坏
+- IPv4网络层：只校验IPv4首部；**IPv6基本首部不含首部校验和**
+- 传输层：面向端系统进程；其校验和既验证数据，也可验证伪首部中地址/协议的一致性
+- 路由器将IP分组转发到终点不代表UDP/TCP服务可靠
+
+## 图示与记忆
+- <img src="/images/408-mind-maps/cn-0016.svg" alt="端到端进程逻辑通信示意" width="760" height="420">
+- 主机 A：应用A1/A2 → TCP或UDP → IP；主机B：IP → TCP或UDP → 对应端口的应用
+- **一句话**：IP寻址到主机，传输端口把数据交到合适的进程通信端点
+
+## 章节导航
+- [返回第五章导览](/docs/408/mind-maps/computer-networks/05-transport-layer)
+- [下一节：5.2 端口号、套接字与连接四元组](/docs/408/mind-maps/computer-networks/05-transport-layer/05-2-ports)
+- [计算机网络总览](/docs/408/mind-maps/computer-networks)
+
+````

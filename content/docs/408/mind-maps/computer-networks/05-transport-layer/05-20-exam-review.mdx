@@ -1,0 +1,53 @@
+---
+title: "5.20 章节综合题型、全流程与易错清单"
+description: "408 计算机网络第五章·章节综合题型、全流程与易错清单；分节双侧Markmap，含核心概念、考点计算与常见误区。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.20 章节综合题型、全流程与易错清单
+
+## 总流程：从应用到网络
+- 应用层选择TCP/UDP与端口 → 传输层组装首部/选项、复用 → IP层封装、路由 → 远端解封装、分用
+- UDP：校验和+目的端口，保持报文边界；可靠性需求交由应用上层实现
+- TCP：握手→数据/ACK/重传→流控与拥塞控制→FIN关闭与TIME_WAIT
+
+## 高频计算模板
+- UDP：`数据长度=UDP长度−8`；IPv4总长度扣除IP实际首部后得到UDP长度
+- TCP序号：`下一个seq=本段seq+数据长度+SYN/FIN的序号消耗`
+- TCP确认：`ack=连续按序收到的下一字节序号`，不因乱序缓存就跨过缺口
+- 窗口：`在途上限=min(rwnd,cwnd)`；尚可新发=`max(0,上限−FlightSize)`
+- 吞吐：`约min(瓶颈带宽,窗口/RTT)`（统一bit/byte单位，忽略开销时）
+- 拥塞：看事件是RTO还是3重复ACK，再按题设Reno/Tahoe更新`cwnd`/`ssthresh`
+
+## 一页反例
+- **错**：UDP总不可靠，不能承载HTTP → **对**：HTTP/3通过QUIC/UDP实现可靠的应用流
+- **错**：TCP一个报文段对应应用的一次write → **对**：字节流没有应用消息边界
+- **错**：ack=最后确认到的字节 → **对**：ack=下一个期待的序号
+- **错**：`cwnd`和`rwnd`是同一个东西 → **对**：前者发送端拥塞控制，后者接收端流量控制
+- **错**：3次重复ACK等同RTO → **对**：两者触发的典型Reno窗口策略不同
+- **错**：UDP校验和可以在IPv6中随意设零 → **对**：IPv6 UDP通常必须使用校验和
+- **错**：MSL就是RTT → **对**：MSL是报文段最大生存期，TIME_WAIT典型等待2MSL
+
+## 章节交叉
+- [第四章IP分片与MTU](/docs/408/mind-maps/computer-networks/04-network-layer/04-3-fragmentation)；[第三章可靠ARQ](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-5-arq-principles)
+- [第六章应用层](/docs/408/mind-maps/computer-networks/06-application-layer)：DNS、HTTP、邮件、FTP及QUIC的实际协议选型
+- [返回第五章导览](/docs/408/mind-maps/computer-networks/05-transport-layer)
+
+## 章节导航
+- [上一节：5.19 三重复ACK、快速重传与快速恢复](/docs/408/mind-maps/computer-networks/05-transport-layer/05-19-fast-recovery)
+- [下一章：第六章 应用层](/docs/408/mind-maps/computer-networks/06-application-layer)
+- [计算机网络总览](/docs/408/mind-maps/computer-networks)
+
+````

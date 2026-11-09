@@ -1,0 +1,50 @@
+---
+title: "3.6 停止等待协议"
+description: "交替位、ACK丢失、超时重发、信道效率"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.6 停止等待协议
+
+## 停止等待（Stop-and-Wait ARQ）
+- 每发出**一帧**后，发送端必须等到有效ACK才能发送下一帧
+- $W_s=1, W_r=1$；序号只需1bit，交替使用`0/1`
+- 发送端缓存当前帧副本，超时重传；收端识别并丢弃重复帧
+
+## 正常与异常情形
+- **正常**：发SEQ0→收端交付0并回ACK0→发SEQ1→ACK1
+- **数据帧损坏/丢失**：收端不交付；发端超时重发原序号帧
+- **ACK损坏/丢失**：发送端误以为未成功，重发旧帧
+  - 接收端凭序号识别重复，**不会向上重复交付**，但可重新ACK
+- “有了ACK就不需要序号”错误：ACK丢失时需要区分重发与新帧
+
+## 效率为什么低
+- 一帧发送耗时$T_t=\frac LR$，单程传播时延`Tp`，ACK发送耗时`Ta`
+- 理想忽略处理、排队和差错时，单帧周期约`Tt+2Tp+Ta`
+- **信道发送利用率** $U=\frac{T_t}{T_t+2T_p+T_a}$
+  - 若ACK时间忽略：$U=\frac1{1+2a}$，$a=\frac{T_p}{T_t}$
+- 大传播时延或短帧时利用率低；**大带宽时延积时尤其明显**
+
+## 小题
+- 帧`1000bit`、带宽$1\,\mathrm{Mbit/s}$、单程传播时延`4ms`、ACK忽略
+- $T_t=1\,\mathrm{ms}$，$U=\frac{1}{1+8}=\frac19\approx11.1\%$
+- 若题目要求“净数据吞吐量”，应再乘**帧中的有效载荷占比**
+
+## 章节导航
+- [上一节：3.5 流量控制与ARQ总框架](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-5-arq-principles)
+- [第三章总览](/docs/408/mind-maps/computer-networks/03-data-link-layer)
+- [下一节：3.7 后退N帧GBN](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-7-gbn)
+
+````

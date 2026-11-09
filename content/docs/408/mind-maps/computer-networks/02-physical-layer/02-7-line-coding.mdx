@@ -1,0 +1,55 @@
+---
+title: "2.7 基带数字信号的线路编码"
+description: "NRZ、NRZI、RZ、曼彻斯特与差分曼彻斯特、4B/5B"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.7 基带数字信号的线路编码
+
+## 编码目的
+- **基带传输**：数据以基带信号形式送入通道；并非所有基带都必须只有两种电压
+- 线路编码决定数据位如何表现为物理电平/电平跳变
+- 需考虑直流分量、时钟恢复、占用频带、同步能力
+
+## 常见编码
+- **NRZ（非归零）**：符号区间内保持电平；长连0/1可能缺少过渡，恢复时钟困难
+- **RZ（归零）**：每个码元区间内回到零电平；需要更多电平变化/带宽
+- **NRZI（反向不归零）**：用**是否跳变**表示一个比特；0/1对应可按协议约定
+- **曼彻斯特**：每个比特**中间必有一次跳变**，用于时钟同步
+  - 中间高→低代表0还是1，**存在不同标准约定**，不要死记唯一映射
+- **差分曼彻斯特**：位中间必跳；位**起始处是否跳变**编码比特
+  - 同样需先指定0/1映射及初始电平才可完整画出波形
+- <img src="/images/408-mind-maps/cn-02-linecodes-clean.svg" alt="给定bit序列的NRZ和曼彻斯特线路编码波形" width="820" height="402">
+
+- <img src="/images/408-mind-maps/cn-0019.svg" alt="常用编码：非归零、归零、反向不归零、曼彻斯特、差分曼彻斯特" width="840" height="460">
+
+- <img src="/images/408-mind-maps/cn-0006.svg" alt="差分曼彻斯特编码示意（以本节约定的初始电平和位映射为准）" width="600" height="100">
+
+## 4B/5B分组编码
+- 把每4个数据位映射为5位线路编码，减少不利于时钟恢复的长连续串
+- 理想编码效率 $4/5=80\%$；其余码字可用于控制或保留
+- 4B/5B本身不是纠错码，也不直接规定最终电压波形
+- 例：1000bit用户数据需至少$1000\times5/4=1250$位编码序列（忽略其他开销）
+
+## 易错点
+- “NRZ无纠错能力”并非它独有：**线路编码不等于差错控制编码**
+- 曼彻斯特每bit存在中间跳变；不可把所有电平跳变次数都算“码元数”
+- 带宽效率和自同步能力往往存在折中
+## 章节导航
+- [上一节：2.6 香农容量、信噪比与双约束](/docs/408/mind-maps/computer-networks/02-physical-layer/02-6-shannon)
+- [第二章总览](/docs/408/mind-maps/computer-networks/02-physical-layer)
+- [下一节：2.8 ASK、FSK、PSK与QAM调制](/docs/408/mind-maps/computer-networks/02-physical-layer/02-8-digital-modulation)
+
+````

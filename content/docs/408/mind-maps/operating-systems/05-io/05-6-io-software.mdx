@@ -1,0 +1,55 @@
+---
+title: "5.6 I/O软件层次与设备无关性"
+description: "用户I/O、独立性软件、驱动、中断程序、硬件。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.6 I/O软件层次与设备无关性
+
+## 自顶向下的经典五层模型
+- 用户层I/O软件：标准库、I/O函数、用户缓冲和格式化
+- 设备独立性软件：统一接口、命名、分配、缓冲、保护、差错处理
+- 设备驱动程序：面向具体控制器的寄存器/队列/命令
+- 中断处理程序：读取状态、确认中断、推动I/O完成
+- 硬件层：控制器、总线、真实I/O设备
+- **教材模型**便于定位功能；真实内核中驱动/中断可能是协同而非严格调用栈
+
+## 用户层与内核分界
+- `printf` 可能先在用户库缓冲，真正写出由系统调用完成
+- `read/write` 统一描述I/O，但参数并不等于所有硬件设备寄存器命令
+- 应用通常不直接访问物理设备寄存器，访问受内核权限限制
+
+## 设备无关性软件
+- 同一逻辑接口可支持不同厂家/型号设备
+- 逻辑设备名 → 物理设备/驱动映射
+- 设备保护、请求排队、缓冲、高速缓存和错误恢复
+- 设备独立性不意味着驱动不存在，也不意味着所有设备完全同能力
+
+## 驱动与中断处理程序
+- 驱动：初始化设备、编程控制器、构造命令/DMA描述符
+- 中断处理：确认完成、查错、更新请求队列、唤醒等待进程
+- 驱动不必“每台设备独有一个程序”；同类设备可共享驱动或模块
+- 中断响应与进程调度/上下文切换是不同概念
+
+## I/O子系统功能位置
+- 请求调度、缓冲、分配回收、设备保护、SPOOLing、驱动维护
+- [关联：磁盘请求的FCFS、SSTF与扫描调度](/docs/408/mind-maps/operating-systems/05-io/05-16-fcfs-sstf)
+- [参考：进程阻塞与唤醒](/docs/408/mind-maps/operating-systems/02-processes/02-2-process-states)
+- [参考：文件系统调用](/docs/408/mind-maps/operating-systems/04-file-system/04-2-file-operations)
+
+## 学习导航
+- [上一节：5.5 通道控制方式与四种I/O模式对比](/docs/408/mind-maps/operating-systems/05-io/05-5-channels)
+- [下一节：5.7 高速缓存、缓冲与预读延迟写](/docs/408/mind-maps/operating-systems/05-io/05-7-cache-buffer)
+````

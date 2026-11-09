@@ -105,6 +105,9 @@ jobs:
           print(f'Validated XML structure of {len(files)} SVG assets.')
           PY
 
+      - name: Validate 408 SVG references and internal dependencies
+        run: python3 scripts/audit-408-mind-map-assets.py
+
       - name: Run complete regression suite
         shell: bash
         run: npm test

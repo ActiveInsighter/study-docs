@@ -1,0 +1,25 @@
+{
+  "title": "第五章 中央处理器",
+  "pages": [
+    "index",
+    "05-1-cpu-registers",
+    "05-2-cycles",
+    "05-3-fetch-interrupt",
+    "05-4-datapath",
+    "05-5-bus-operations",
+    "05-6-hardwired",
+    "05-7-control-timing",
+    "05-8-microprogram-controller",
+    "05-9-microinstruction-encoding",
+    "05-10-microaddress-design",
+    "05-11-pipeline-performance",
+    "05-12-five-stage",
+    "05-13-data-hazards",
+    "05-14-control-hazards",
+    "05-15-issue-techniques",
+    "05-16-flynn",
+    "05-17-multicore",
+    "05-18-exam-review"
+  ],
+  "defaultOpen": false
+}

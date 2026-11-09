@@ -1,0 +1,65 @@
+---
+title: "第六章 图 · 分节导览"
+description: "14 节构建：概念和连通性、4 种存储、BFS/DFS、生成树与最小生成树、最短路径、DAG、拓扑排序和关键路径。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 第六章 图 · 分为 14 节
+
+## 基本概念与存储（6.1—6.4）
+- [6.1 图定义与度数计算](/docs/408/mind-maps/data-structures/06-graphs/06-1-definitions)
+  - 无向边和有向弧、简单图/完全图
+  - 握手定理与简单图边数上限
+- [6.2 路径、子图、连通性](/docs/408/mind-maps/data-structures/06-graphs/06-2-connectivity)
+  - 连通分量和强连通分量；极大与极小不同
+  - 子图、生成子图、生成树
+- [6.3 邻接矩阵与矩阵幂](/docs/408/mind-maps/data-structures/06-graphs/06-3-adjacency-matrix)
+  - 稠密图、判边 $O(1)$ 与空间 $O(V^2)$
+  - 有向图行=出度，列=入度
+- [6.4 邻接表和两种特殊链表](/docs/408/mind-maps/data-structures/06-graphs/06-4-linked-representations)
+  - 逆邻接表、十字链表、邻接多重表
+
+## 图遍历（6.5—6.6）
+- [6.5 BFS 广度优先搜索](/docs/408/mind-maps/data-structures/06-graphs/06-5-bfs)
+  - 队列分层、无权图单源最短距离
+  - BFS 搜索树、起点与邻接次序的影响
+- [6.6 DFS 深度优先搜索](/docs/408/mind-maps/data-structures/06-graphs/06-6-dfs)
+  - 递归/栈、DFS 树和森林、连通分量与环
+  - **DFS 一般不保证最短路径**
+
+## 生成树和最小生成树（6.7—6.9）
+- [6.7 生成树和 MST 的核心性质](/docs/408/mind-maps/data-structures/06-graphs/06-7-spanning-trees)
+  - 生成树 $V-1$ 条边；最小生成树按**总权值**最小
+- [6.8 Prim 算法](/docs/408/mind-maps/data-structures/06-graphs/06-8-prim)
+  - 维护已入树顶点集，每次取跨越割的最小边
+- [6.9 Kruskal 与并查集](/docs/408/mind-maps/data-structures/06-graphs/06-9-kruskal)
+  - 边从小到大，异集合才合并；不连通图生成森林
+
+## 最短路与有向图应用（6.10—6.13）
+- [6.10 单源最短路：BFS/Dijkstra](/docs/408/mind-maps/data-structures/06-graphs/06-10-dijkstra)
+  - 无权图用 BFS；**非负权图**使用 Dijkstra
+- [6.11 所有顶点对：Floyd](/docs/408/mind-maps/data-structures/06-graphs/06-11-floyd)
+  - 动态规划、负边允许、负环需检测
+- [6.12 DAG、AOV 与拓扑排序](/docs/408/mind-maps/data-structures/06-graphs/06-12-topological)
+  - 拓扑序存在 **当且仅当** 有向图无环
+- [6.13 AOE 与关键路径](/docs/408/mind-maps/data-structures/06-graphs/06-13-critical-path)
+  - 事件最早/最迟时间、活动总时差与关键活动
+
+## 408 综合串联（6.14）
+- [6.14 图论题目选型和陷阱总览](/docs/408/mind-maps/data-structures/06-graphs/06-14-exam-integrations)
+  - 区分生成树、MST、最短路树、关键路径
+  - 时间复杂度、边权条件、负权边、连通性
+- [上一章：树与二叉树](/docs/408/mind-maps/data-structures/05-trees) · [下一章：查找](/docs/408/mind-maps/data-structures/07-search)
+````

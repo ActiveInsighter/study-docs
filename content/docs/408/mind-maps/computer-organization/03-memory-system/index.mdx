@@ -1,0 +1,67 @@
+---
+title: "第三章 存储系统 · 17节导览"
+description: "存储器结构、DRAM刷新、字位扩展、多体交叉、外存、Cache与TLB虚拟存储全面拆分。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 第三章 存储系统（17节）
+
+第一步先分清地址和数据单位；第二步按存储器层次由器件到虚存学习。
+
+## 从概念与器件到主存组织
+- [3.1 存储器分类、性能与层次](/docs/408/mind-maps/computer-organization/03-memory-system/03-1-hierarchy)
+  - 按介质/访问方式/易失性分类，容量、存储周期、带宽与三级层次。
+- [3.2 SRAM/DRAM存储单元与芯片接口](/docs/408/mind-maps/computer-organization/03-memory-system/03-2-sram-dram)
+  - 六晶体管锁存单元与电容存储单元、读出再生、行列译码、地址复用。
+- [3.3 DRAM刷新、周期与时序](/docs/408/mind-maps/computer-organization/03-memory-system/03-3-refresh)
+  - 集中/分散/异步刷新，刷新周期、死区与行数计算。
+- [3.4 ROM、EEPROM与Flash](/docs/408/mind-maps/computer-organization/03-memory-system/03-4-rom-flash)
+  - ROM族谱、固件引导、Flash的页编程块擦除及SSD边界。
+- [3.5 存储芯片、地址与译码接口](/docs/408/mind-maps/computer-organization/03-memory-system/03-5-chip-organization)
+  - 存储字/编址单位、引脚用途、时序、译码器和片选的可靠计数。
+- [3.6 主存字扩展、位扩展与地址分配](/docs/408/mind-maps/computer-organization/03-memory-system/03-6-expansion)
+  - 芯片并联、译码片选、地址范围计算和字位同时扩展。
+- [3.7 双端口RAM与多体交叉存储](/docs/408/mind-maps/computer-organization/03-memory-system/03-7-multi-bank)
+  - 双端口冲突、高低位交叉、启动间隔和带宽吞吐计算。
+
+## 外存储器与Cache
+- [3.8 机械磁盘与RAID存储阵列](/docs/408/mind-maps/computer-organization/03-memory-system/03-8-hdd-raid)
+  - 磁盘CHS、寻道/旋转/传输时延、RAID 0/1/5/6/10的容错。
+- [3.9 SSD页、块、FTL与磨损均衡](/docs/408/mind-maps/computer-organization/03-memory-system/03-9-ssd)
+  - NAND页编程块擦除、地址重映射、垃圾回收、写放大与寿命。
+- [3.10 Cache结构、局部性与缺失分类](/docs/408/mind-maps/computer-organization/03-memory-system/03-10-cache-locality)
+  - Cache行结构、CPU数组步长、强制/容量/冲突缺失及有效载荷和元数据。
+- [3.11 Cache直接/全相联/组相联地址划分](/docs/408/mind-maps/computer-organization/03-memory-system/03-11-cache-mapping)
+  - tag、组号、块内位数和三类映射对比，容量位数和例题。
+- [3.12 Cache替换算法、LRU与访问序列](/docs/408/mind-maps/computer-organization/03-memory-system/03-12-cache-replacement)
+  - FIFO、LRU、LFU、随机替换，命中次数和计数位正确口径。
+- [3.13 Cache写策略、命中率与AMAT](/docs/408/mind-maps/computer-organization/03-memory-system/03-13-cache-write-amat)
+  - 写直达/写回、写分配/不分配，两级Cache访存时间与带宽计算。
+
+## 虚拟存储与综合
+- [3.14 虚拟存储、页表与多级分页](/docs/408/mind-maps/computer-organization/03-memory-system/03-14-virtual-memory)
+  - 页号和页内偏移、PTE位、缺页、两级页表寻址计算。
+- [3.15 TLB + Cache联合地址转换与访问](/docs/408/mind-maps/computer-organization/03-memory-system/03-15-tlb-cache)
+  - TLB缺失/缺页/Cache miss的独立路径与地址分解，VIPT安全条件。
+- [3.16 存储系统综合计算六类题](/docs/408/mind-maps/computer-organization/03-memory-system/03-16-exercises)
+  - 芯片扩展、交叉存储、Cache索引、地址转换、AMAT、磁盘延迟的分步演练。
+- [3.17 408核心易错辨析与复习索引](/docs/408/mind-maps/computer-organization/03-memory-system/03-17-mistakes)
+  - 三类地址位数、刷新、LRU和TLB/Cache常见陷阱及全章复习路线。
+
+## 章节衔接
+- [上一章：数据的表示和运算](/docs/408/mind-maps/computer-organization/02-data-representation)
+- [下一章：指令系统](/docs/408/mind-maps/computer-organization/04-instruction-set)
+- [计算机组成原理目录](/docs/408/mind-maps/computer-organization)
+````

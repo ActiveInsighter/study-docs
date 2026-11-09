@@ -1,0 +1,56 @@
+---
+title: "5.4 数据通路：单总线、多总线与专用通路"
+description: "用结构和传送冲突解释为什么需要Y/Z暂存器、控制信号和多端口寄存器堆。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.4 数据通路的硬件组织
+
+## 数据通路是什么
+- CPU内承载**数据**的寄存器、运算器和连线整体
+- 主要部件：通用寄存器堆、ALU、Y/Z锁存器、PC/IR/MAR/MDR、MUX选择器
+- 控制器发出`Rout`、`Rin`、`ALUop`、`MemRead/Write`等控制信号
+- 总线宽度、寄存器端口数和MUX连接方式共同决定一拍能执行哪些微操作
+
+## 内部单总线结构
+- 同一时刻共享总线上通常只能由**一个源**驱动，以免电气冲突
+  - **允许多个目的寄存器同时接收同一总线数值**，前提是控制与时序支持
+- 两个不同寄存器都要作为ALU输入时，常先`Y ← R1`、再从总线给第二输入
+  - `Z ← Y + R2`、`R3 ← Z`可分别安排多个节拍
+- 易于实现、线少，但寄存器读写和ALU输入的总线争用较多
+- <img src="/images/408-mind-maps/co-05-single-bus-clean.svg" alt="CPU单总线数据通路以及R1、Y、ALU、Z、R3的两操作数加法路径" width="1060" height="515">
+
+## CPU内部多总线结构
+- 例如A、B两条源操作数总线 + C一条结果总线
+  - 同拍可读两个寄存器输入ALU，计算结果再写回；减少数据准备节拍
+- 需要多读端口寄存器堆、更多布线和控制选择逻辑
+- “三总线数据通路”不等于系统的“地址/数据/控制三总线”
+
+- <img src="/images/408-mind-maps/co-05-readable-0127.svg" alt="CPU 的三总线结构：数据总线 DB、地址总线 AB、控制总线 CB" width="800" height="380">
+
+## 专用/旁路数据通路
+- 功能部件间设置定向连线，减少绕共享总线传输
+- 通常包括寄存器堆至ALU、ALU结果至写回、流水级间旁路等
+- 更利于高吞吐流水线，但硬件资源、验证和时序约束更复杂
+- <img src="/images/408-mind-maps/co-05-readable-0059.svg" alt="专用数据通路示意：PC、IR、MDR、MAR与运算部件" width="960" height="445">
+
+- <img src="/images/408-mind-maps/co-0193.svg" alt="例题：某计算机的数据通路结构" width="620" height="520">
+
+## 408做图题思路
+- 先标记**单/多总线**以及所有寄存器in/out信号
+- 对每条微操作列出**源端、目的端、是否访存、是否使用ALU**
+- 同一时钟允许的操作必须满足无总线争用且数据依赖允许
+- [继续：单总线微操作实例](/docs/408/mind-maps/computer-organization/05-cpu/05-5-bus-operations)
+````

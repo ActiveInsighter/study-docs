@@ -1,0 +1,49 @@
+---
+title: "5.13 TCP重传、重复ACK、SACK与可靠性"
+description: "408 计算机网络第五章·TCP重传、重复ACK、SACK与可靠性；分节双侧Markmap，含核心概念、考点计算与常见误区。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.13 TCP重传、重复ACK、SACK与可靠性
+
+## 两种典型重传触发
+- **超时重传**：已发出但未确认的字节超过RTO，重发相应数据
+- **快速重传**：经典TCP Reno教学模型中，收到**3个重复ACK**可判定疑似丢失，不必等RTO
+- 连续ACK是**累计确认**，例如`ack=3001`表示小于3001的字节已经按序接收
+- 接收方为乱序段返回相同累计ACK，可启发发送端推断缺口
+
+## 乱序、丢包与重复ACK
+- A发送三段每段100B：`seq=1000,1100,1200`
+- 第二段丢失，先收到第一段，B回`ack=1100`；后收到第三段仍回`ack=1100`
+- 若再收到后续多个乱序段，使发送端累计见到**3个重复`ack=1100`**，可触发快速重传
+- **不是“收到三份总计相同ACK”即3次重复ACK**；要区分第一次正常确认与随后重复确认
+
+## SACK与重复检测
+- SACK选项可报告不连续的已收数据区间，让发送端优先补发缺口
+- SACK只是选择确认机制，不改变TCP累计ACK所表达的“连续收到范围”
+- 重传后的旧数据可能晚到，接收方按序号识别重叠并避免重复交付应用
+- 丢包和乱序都可能造成重复ACK，实际实现可使用更多启发式策略（如RACK）
+
+## 陷阱
+- TCP可靠服务≠每一个报文段都只发送一次，重传时**字节序号保持不变**
+- 某个重复ACK可能由网络重排引起，不必然代表丢包
+- “TCP永远只维护一个重传计时器”是简化模型；算法实现细节与标准模型需区分
+
+## 章节导航
+- [上一节：5.12 序号、累计确认与字节级推导](/docs/408/mind-maps/computer-networks/05-transport-layer/05-12-seq-ack)
+- [下一节：5.14 RTT平滑估计、重传超时与Karn原则](/docs/408/mind-maps/computer-networks/05-transport-layer/05-14-rtt-rto)
+- [计算机网络总览](/docs/408/mind-maps/computer-networks)
+
+````

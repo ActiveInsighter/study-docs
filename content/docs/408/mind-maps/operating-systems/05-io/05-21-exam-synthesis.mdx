@@ -1,0 +1,61 @@
+---
+title: "5.21 高频综合题与易错辨析"
+description: "四种I/O模式、缓冲计算、磁盘调度、SSD与SPOOLing综合复习。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.21 高频综合题与易错辨析
+
+## 一句话区分四种I/O控制
+- PIO查询：CPU忙等，CPU参与数据传输
+- 中断驱动：设备完成通知CPU；传统模式CPU仍负责数据搬移
+- DMA：CPU配置后，设备/内存直接传数据，CPU处理完成事件
+- 通道：按通道程序执行更复杂的I/O命令序列
+
+## 缓冲处理的考题模板
+- 先列 `T` 输入、`M` 复制、`C` 处理及哪些阶段可重叠
+- 单缓冲模型：$\max(T,C)+M$（稳态每块）
+- 双缓冲模型：$\max(T,M+C)$（稳态每块）
+- 问首块完成时间、n块总时间时，必须考虑**填充与排空**
+
+## 磁盘调度题模板
+- 写明初始磁头位置、初始方向、端点磁道和请求到达时刻
+- 先模拟服务序列、标出SCAN类是否走端点，再累加差值
+- SSTF有饥饿风险；SCAN/LOOK与其C变种区别是**方向、端点与回返服务**
+- 题目只给HDD模型时才代入旋转延迟和寻道时延
+
+## 概念高频对比
+- 缓冲区：协调速率与粒度；高速缓存：提高复用命中率
+- SPOOLing：磁盘作业队列使独占设备逻辑共享
+- SDT/DCT/COCT/CHCT：系统/设备/控制器/通道层级
+- MMIO与独立编址：共享/独立I/O端口地址空间
+- 机械硬盘扇区 ≠ 文件系统块 ≠ SSD NAND擦除块
+
+## 自测五问
+- 中断驱动是否必经DMA？**否**
+- DMA是否完全不需CPU参与？**否，仍要配置和完成处理**
+- 双缓冲稳态周期能否直接代表第一块完成时间？**不能**
+- SSTF是否总是全局寻道距离最短？**不能保证**
+- SSD垃圾回收是否每次更新都要即时擦原块？**否**
+
+## 章际链接
+- [第四章 文件系统](/docs/408/mind-maps/operating-systems/04-file-system)
+- [计算机组成原理第七章 I/O系统](/docs/408/mind-maps/computer-organization/07-io-system)
+- [操作系统章节总览](/docs/408/mind-maps/operating-systems)
+
+## 学习导航
+- [上一节：5.20 SSD磨损均衡、TRIM与性能因素](/docs/408/mind-maps/operating-systems/05-io/05-20-ssd-maintenance)
+- [返回：本章总览](/docs/408/mind-maps/operating-systems/05-io)
+````

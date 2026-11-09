@@ -1,0 +1,1928 @@
+{
+  "sourceFolder": "https://drive.google.com/drive/folders/1ZYpJh3nauAHnw8YQt07YRGidpWh9n5RD",
+  "method": "Read XMind content.json (not the compatibility warning content.xml); verify attached topic image resources, map every non-END primary knowledge branch to canonical section pages, and independently recalculate selected numerical examples. Major-branch coverage is not a claim of verbatim equivalence of all leaf notes.",
+  "sources": [
+    {
+      "course": "data-structures",
+      "driveFileId": "1iWwKxrzEtlS_HA4njX133yz-GxVqqZ9B",
+      "sha256": "9445900e2596d615309f64c25699776635aba2ed58181c568b5fec3fff15317f",
+      "sheets": 8,
+      "topics": 1748,
+      "topicImageReferences": 226,
+      "missingImageResources": [],
+      "zipCrcValid": true
+    },
+    {
+      "course": "computer-organization",
+      "driveFileId": "1jfUMIpfKp9AsHhHagJmqpaNpjoT-TxGg",
+      "sha256": "95d4d63a4262b24c75cc6d1dc58fd095d3d3fdaffbcf4b9920a17952e540678c",
+      "sheets": 8,
+      "topics": 2879,
+      "topicImageReferences": 336,
+      "missingImageResources": [],
+      "zipCrcValid": true
+    },
+    {
+      "course": "operating-systems",
+      "driveFileId": "1geEdfzJ5W2GlTcd_Qf305DD7po3QVfG2",
+      "sha256": "1ebe2622005431ce7ee1fdf2b992525d77c8466b504f6b57359a242fb4f802d0",
+      "sheets": 6,
+      "topics": 2731,
+      "topicImageReferences": 175,
+      "missingImageResources": [],
+      "zipCrcValid": true
+    },
+    {
+      "course": "computer-networks",
+      "driveFileId": "1-0OSIvRniMZI1R2LotDbIPEVfv4vB8Mz",
+      "sha256": "68fb7fd742fd388928d9170a381c726c91ef211fbb59522cad4907bd56b68320",
+      "sheets": 7,
+      "topics": 2234,
+      "topicImageReferences": 174,
+      "missingImageResources": [],
+      "zipCrcValid": true
+    }
+  ],
+  "branches": [
+    {
+      "course": "data-structures",
+      "sourceSheet": "第一章：绪论",
+      "sourceTopicId": "53fae278d8caa4881050eae0f6",
+      "sourceTitle": "概念",
+      "targetSections": [
+        "data-structures/01-introduction/01-1-data-and-adt.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第一章：绪论",
+      "sourceTopicId": "680b0eb5448bfac73ecf4912bf",
+      "sourceTitle": "数据结构三要素",
+      "targetSections": [
+        "data-structures/01-introduction/01-2-structures.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第一章：绪论",
+      "sourceTopicId": "ee5b9cf71ff9129fe3e9c8f817",
+      "sourceTitle": "算法",
+      "targetSections": [
+        "data-structures/01-introduction/01-3-algorithms.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第一章：绪论",
+      "sourceTopicId": "cc0adecc289b064bd19079fcab",
+      "sourceTitle": "算法复杂度",
+      "targetSections": [
+        "data-structures/01-introduction/01-4-time-complexity.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第一章：绪论",
+      "sourceTopicId": "148af1d15ddbee555741e8c2aa",
+      "sourceTitle": "存取存储器",
+      "targetSections": [
+        "data-structures/01-introduction/01-5-space-and-access.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第二/三章：线性表/栈/队列",
+      "sourceTopicId": "5c8831735a6820106a71893d07",
+      "sourceTitle": "线性表定义",
+      "targetSections": [
+        "data-structures/02-linear-lists/02-1-linear-list-adt.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第二/三章：线性表/栈/队列",
+      "sourceTopicId": "53ea799e4bfa45b0da42caaae6",
+      "sourceTitle": "顺序表",
+      "targetSections": [
+        "data-structures/02-linear-lists/02-2-sequential-storage.mdx",
+        "data-structures/02-linear-lists/02-3-sequential-operations.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第二/三章：线性表/栈/队列",
+      "sourceTopicId": "7ba836f99089c9394a67c85962",
+      "sourceTitle": "链表",
+      "targetSections": [
+        "data-structures/02-linear-lists/02-4-singly-linked-basics.mdx",
+        "data-structures/02-linear-lists/02-5-singly-linked-operations.mdx",
+        "data-structures/02-linear-lists/02-6-doubly-linked-lists.mdx",
+        "data-structures/02-linear-lists/02-7-circular-static-lists.mdx",
+        "data-structures/02-linear-lists/02-8-comparisons-algorithms.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第二/三章：线性表/栈/队列",
+      "sourceTopicId": "8b7a7762e7aadf049eb86b0c10",
+      "sourceTitle": "堆栈",
+      "targetSections": [
+        "data-structures/03-stacks-queues-arrays/03-1-stack-basics.mdx",
+        "data-structures/03-stacks-queues-arrays/03-2-stack-permutations.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第二/三章：线性表/栈/队列",
+      "sourceTopicId": "87f812170f391a64b9849ad6e4",
+      "sourceTitle": "队列",
+      "targetSections": [
+        "data-structures/03-stacks-queues-arrays/03-3-queue-circular.mdx",
+        "data-structures/03-stacks-queues-arrays/03-4-linked-deque.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第二/三章：线性表/栈/队列",
+      "sourceTopicId": "19e8e9b8196b1fa85fad5acd40",
+      "sourceTitle": "应用",
+      "targetSections": [
+        "data-structures/03-stacks-queues-arrays/03-5-stack-applications.mdx",
+        "data-structures/03-stacks-queues-arrays/03-6-queue-applications.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第二/三章：线性表/栈/队列",
+      "sourceTopicId": "995ad7689709080df91c0b47f3",
+      "sourceTitle": "特殊矩阵的压缩存储",
+      "targetSections": [
+        "data-structures/03-stacks-queues-arrays/03-7-array-addresses.mdx",
+        "data-structures/03-stacks-queues-arrays/03-8-symmetric-triangular.mdx",
+        "data-structures/03-stacks-queues-arrays/03-9-banded-sparse.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第四章 串",
+      "sourceTopicId": "435283d5-6c52-4bd0-8d0f-6b7aed7a0fa8",
+      "sourceTitle": "考频：中",
+      "targetSections": [
+        "data-structures/04-strings/04-8-exercises.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第四章 串",
+      "sourceTopicId": "cc695d94b129d41ebec5da16ba",
+      "sourceTitle": "定义",
+      "targetSections": [
+        "data-structures/04-strings/04-1-concepts.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第四章 串",
+      "sourceTopicId": "534ad1b148d8c2153199a8ea1e",
+      "sourceTitle": "课本要求的基本操作函数",
+      "targetSections": [
+        "data-structures/04-strings/04-2-adt.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第四章 串",
+      "sourceTopicId": "8dbab40dd318b38510d82a6fb4",
+      "sourceTitle": "存储结构",
+      "targetSections": [
+        "data-structures/04-strings/04-3-storage.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第四章 串",
+      "sourceTopicId": "4c0914b6d5d9fa4c7e525aa8a5",
+      "sourceTitle": "字符串的模式匹配算法",
+      "targetSections": [
+        "data-structures/04-strings/04-4-naive.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第四章 串",
+      "sourceTopicId": "738b306dac49344be2503a476d",
+      "sourceTitle": "KMP算法",
+      "targetSections": [
+        "data-structures/04-strings/04-5-prefix-next.mdx",
+        "data-structures/04-strings/04-6-kmp.mdx",
+        "data-structures/04-strings/04-7-nextval.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第四章 串",
+      "sourceTopicId": "a37e93ad-ff4f-43ea-9e9c-3eb75229f05d",
+      "sourceTitle": "KMP 可能的考法",
+      "targetSections": [
+        "data-structures/04-strings/04-8-exercises.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第五章 树",
+      "sourceTopicId": "ecf97e0d6418ab080b0bdb3f79",
+      "sourceTitle": "基本概念",
+      "targetSections": [
+        "data-structures/05-trees/05-1-tree-concepts.mdx",
+        "data-structures/05-trees/05-2-tree-properties.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第五章 树",
+      "sourceTopicId": "cf49d1889a5bc02ac7746aed62",
+      "sourceTitle": "二叉树",
+      "targetSections": [
+        "data-structures/05-trees/05-3-binary-types.mdx",
+        "data-structures/05-trees/05-4-binary-storage.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第五章 树",
+      "sourceTopicId": "bc06a06c-4131-4958-a6b5-f09b50a76fc2",
+      "sourceTitle": "遍历、线索二叉树",
+      "targetSections": [
+        "data-structures/05-trees/05-5-binary-traversals.mdx",
+        "data-structures/05-trees/05-6-reconstruct.mdx",
+        "data-structures/05-trees/05-7-threaded.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第五章 树",
+      "sourceTopicId": "5f599383fd4b0efb04554af2d0",
+      "sourceTitle": "树与森林",
+      "targetSections": [
+        "data-structures/05-trees/05-8-tree-storage.mdx",
+        "data-structures/05-trees/05-9-forest-traversal.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第五章 树",
+      "sourceTopicId": "2f7961da6be82af4965819db7e",
+      "sourceTitle": "二叉数的应用",
+      "targetSections": [
+        "data-structures/05-trees/05-10-bst.mdx",
+        "data-structures/05-trees/05-11-avl.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第五章 树",
+      "sourceTopicId": "865abcc2da2a5eb096f28addd7",
+      "sourceTitle": "哈夫曼树",
+      "targetSections": [
+        "data-structures/05-trees/05-12-huffman.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第五章 树",
+      "sourceTopicId": "5b9b97bfe0ab07674deabaa703",
+      "sourceTitle": "并查集",
+      "targetSections": [
+        "data-structures/05-trees/05-13-union-find.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第六章 图",
+      "sourceTopicId": "ff7aa9a13ee832ccb7c18819c3",
+      "sourceTitle": " 图的定义",
+      "targetSections": [
+        "data-structures/06-graphs/06-1-definitions.mdx",
+        "data-structures/06-graphs/06-2-connectivity.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第六章 图",
+      "sourceTopicId": "0b28090cf1cab0ec111f9bb83c",
+      "sourceTitle": "图的存储结构",
+      "targetSections": [
+        "data-structures/06-graphs/06-3-adjacency-matrix.mdx",
+        "data-structures/06-graphs/06-4-linked-representations.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第六章 图",
+      "sourceTopicId": "c2d8e84ba30998ce437ffaa670",
+      "sourceTitle": "图的遍历",
+      "targetSections": [
+        "data-structures/06-graphs/06-5-bfs.mdx",
+        "data-structures/06-graphs/06-6-dfs.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第六章 图",
+      "sourceTopicId": "f3a8fd288c7aad972e73cac8a5",
+      "sourceTitle": "图的应用",
+      "targetSections": [
+        "data-structures/06-graphs/06-7-spanning-trees.mdx",
+        "data-structures/06-graphs/06-8-prim.mdx",
+        "data-structures/06-graphs/06-9-kruskal.mdx",
+        "data-structures/06-graphs/06-10-dijkstra.mdx",
+        "data-structures/06-graphs/06-11-floyd.mdx",
+        "data-structures/06-graphs/06-12-topological.mdx",
+        "data-structures/06-graphs/06-13-critical-path.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第六章 图",
+      "sourceTopicId": "9527430c-6920-4d52-b2a6-2a44fc758d5a",
+      "sourceTitle": "并查集的应用",
+      "targetSections": [
+        "data-structures/06-graphs/06-2-connectivity.mdx",
+        "data-structures/06-graphs/06-9-kruskal.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第七章 查找",
+      "sourceTopicId": "1fe98c3d2a3a4c49238ccbff04",
+      "sourceTitle": "概念",
+      "targetSections": [
+        "data-structures/07-search/07-1-search-basics.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第七章 查找",
+      "sourceTopicId": "de1883beb818b83933d668c4a0",
+      "sourceTitle": "顺序查找",
+      "targetSections": [
+        "data-structures/07-search/07-2-sequential.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第七章 查找",
+      "sourceTopicId": "909a0ebf2fdae3b0e5a13afe9c",
+      "sourceTitle": "二分查找",
+      "targetSections": [
+        "data-structures/07-search/07-3-binary.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第七章 查找",
+      "sourceTopicId": "2019f3a7473a726fe624cb0c27",
+      "sourceTitle": "分块查找",
+      "targetSections": [
+        "data-structures/07-search/07-4-block.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第七章 查找",
+      "sourceTopicId": "6b85015e-a4b6-4e00-90c6-a4269456b8a1",
+      "sourceTitle": " 树形查找",
+      "targetSections": [
+        "data-structures/07-search/07-5-bst.mdx",
+        "data-structures/07-search/07-6-avl.mdx",
+        "data-structures/07-search/07-7-red-black-properties.mdx",
+        "data-structures/07-search/07-8-red-black-operations.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第七章 查找",
+      "sourceTopicId": "c11af5ab122aff80c4bdf9ad07",
+      "sourceTitle": "B树",
+      "targetSections": [
+        "data-structures/07-search/07-9-btree-properties.mdx",
+        "data-structures/07-search/07-10-btree-insert.mdx",
+        "data-structures/07-search/07-11-btree-delete.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第七章 查找",
+      "sourceTopicId": "720890b661ab7dd3fe9529dfb8",
+      "sourceTitle": "B+树",
+      "targetSections": [
+        "data-structures/07-search/07-12-bplus.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第七章 查找",
+      "sourceTopicId": "482ab3238cb9bcf86f293b502b",
+      "sourceTitle": "哈希/散列表",
+      "targetSections": [
+        "data-structures/07-search/07-13-hash-functions.mdx",
+        "data-structures/07-search/07-14-hash-collisions.mdx",
+        "data-structures/07-search/07-15-hash-asl.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第八章 排序",
+      "sourceTopicId": "acf8979bcc9bc67d353ee96c69",
+      "sourceTitle": "定义",
+      "targetSections": [
+        "data-structures/08-sort/08-1-basics.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第八章 排序",
+      "sourceTopicId": "00b85839bb6b2a730ca9d905fe",
+      "sourceTitle": "插入排序",
+      "targetSections": [
+        "data-structures/08-sort/08-2-direct-insertion.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第八章 排序",
+      "sourceTopicId": "122b8bd4704acd643e3b6b200f",
+      "sourceTitle": "折半插入",
+      "targetSections": [
+        "data-structures/08-sort/08-3-binary-insertion.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第八章 排序",
+      "sourceTopicId": "6a7923e9923b4957b80a4b6326",
+      "sourceTitle": "希尔排序",
+      "targetSections": [
+        "data-structures/08-sort/08-4-shell.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第八章 排序",
+      "sourceTopicId": "0faa2842b81a0f9ed08af91f4a",
+      "sourceTitle": "冒泡排序",
+      "targetSections": [
+        "data-structures/08-sort/08-5-bubble.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第八章 排序",
+      "sourceTopicId": "456845042cd8f9327ada9be407",
+      "sourceTitle": "快速排序",
+      "targetSections": [
+        "data-structures/08-sort/08-6-quick-partition.mdx",
+        "data-structures/08-sort/08-7-quick-analysis.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第八章 排序",
+      "sourceTopicId": "6e680fffc2ba783eab6ffb59c8",
+      "sourceTitle": "简单选择排序",
+      "targetSections": [
+        "data-structures/08-sort/08-8-selection.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第八章 排序",
+      "sourceTopicId": "3fc8339b495a088fabd85ba4a6",
+      "sourceTitle": "堆排序",
+      "targetSections": [
+        "data-structures/08-sort/08-9-heap-building.mdx",
+        "data-structures/08-sort/08-10-heap-sort.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第八章 排序",
+      "sourceTopicId": "d9e87648232be9b31a8b4b6ce2",
+      "sourceTitle": "归并排序",
+      "targetSections": [
+        "data-structures/08-sort/08-11-merge.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第八章 排序",
+      "sourceTopicId": "7098f0012838acce07e84b6087",
+      "sourceTitle": "基数排序",
+      "targetSections": [
+        "data-structures/08-sort/08-12-radix.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第八章 排序",
+      "sourceTopicId": "d74a2979b2fae0ddd334fa9798",
+      "sourceTitle": "各种内部排序的比较",
+      "targetSections": [
+        "data-structures/08-sort/08-13-comparison.mdx"
+      ]
+    },
+    {
+      "course": "data-structures",
+      "sourceSheet": "第八章 排序",
+      "sourceTopicId": "6ae9b6743b6955be9cfe999b1d",
+      "sourceTitle": "外部排序",
+      "targetSections": [
+        "data-structures/08-sort/08-14-external-basics.mdx",
+        "data-structures/08-sort/08-15-loser-tree.mdx",
+        "data-structures/08-sort/08-16-replacement.mdx",
+        "data-structures/08-sort/08-17-optimal-merge.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第一章 计算机系统概论",
+      "sourceTopicId": "c0ef18c1-ac4d-43a8-a058-5094dbd0b0e4",
+      "sourceTitle": "发展历程",
+      "targetSections": [
+        "computer-organization/01-overview/01-1-development.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第一章 计算机系统概论",
+      "sourceTopicId": "486a6646-eb2a-482e-8900-ada962430d18",
+      "sourceTitle": "层次结构",
+      "targetSections": [
+        "computer-organization/01-overview/01-2-von-neumann.mdx",
+        "computer-organization/01-overview/01-3-isa-levels.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第一章 计算机系统概论",
+      "sourceTopicId": "2cb969f8-2221-442c-ac3c-a57d4a6f2087",
+      "sourceTitle": "软件分类",
+      "targetSections": [
+        "computer-organization/01-overview/01-4-system-software.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第一章 计算机系统概论",
+      "sourceTopicId": "d66d6f62-5ff7-4ae2-a768-31a7ece2188a",
+      "sourceTitle": "层次结构、工作原理",
+      "targetSections": [
+        "computer-organization/01-overview/01-5-toolchain.mdx",
+        "computer-organization/01-overview/01-6-instruction-cycle.mdx",
+        "computer-organization/01-overview/01-7-word-address.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第一章 计算机系统概论",
+      "sourceTopicId": "8c38d078-20d0-49fa-a2a6-eb79d66b466a",
+      "sourceTitle": "计算机性能指标",
+      "targetSections": [
+        "computer-organization/01-overview/01-8-clock-cpi.mdx",
+        "computer-organization/01-overview/01-9-benchmarks.mdx",
+        "computer-organization/01-overview/01-10-speedup.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第二章 数据的表示和运算",
+      "sourceTopicId": "db1ec404-7291-4bad-88be-b8642d3320b5",
+      "sourceTitle": "数制和编码",
+      "targetSections": [
+        "computer-organization/02-data-representation/02-1-radix-codes.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第二章 数据的表示和运算",
+      "sourceTopicId": "8dff7caa-747f-407e-9587-b6a42cdb71b6",
+      "sourceTitle": "定点数的表示",
+      "targetSections": [
+        "computer-organization/02-data-representation/02-2-number-representations.mdx",
+        "computer-organization/02-data-representation/02-3-twos-complement.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第二章 数据的表示和运算",
+      "sourceTopicId": "a24ff2d3-5303-4a9e-9b81-935b2266bf30",
+      "sourceTitle": "数值表示和差错检测",
+      "targetSections": [
+        "computer-organization/02-data-representation/02-1-radix-codes.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第二章 数据的表示和运算",
+      "sourceTopicId": "8fb0bd7c-9757-4f4b-aaf7-5ba039d02579",
+      "sourceTitle": "运算电路和方法",
+      "targetSections": [
+        "computer-organization/02-data-representation/02-4-alu-carry.mdx",
+        "computer-organization/02-data-representation/02-5-arithmetic-flags.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第二章 数据的表示和运算",
+      "sourceTopicId": "38d338e0-9183-4a5c-9b44-7b9fde15c1fb",
+      "sourceTitle": "定点数的移位运算",
+      "targetSections": [
+        "computer-organization/02-data-representation/02-6-shifts-rotates.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第二章 数据的表示和运算",
+      "sourceTopicId": "c0910a43-e26f-4661-86bf-72fae30e958a",
+      "sourceTitle": "定点数的加减法",
+      "targetSections": [
+        "computer-organization/02-data-representation/02-5-arithmetic-flags.mdx",
+        "computer-organization/02-data-representation/02-7-multiplication.mdx",
+        "computer-organization/02-data-representation/02-8-division.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第二章 数据的表示和运算",
+      "sourceTopicId": "7fce4b05-b3cc-4180-834b-2f3859c478b6",
+      "sourceTitle": "定点数的转换",
+      "targetSections": [
+        "computer-organization/02-data-representation/02-9-endian-conversion.mdx",
+        "computer-organization/02-data-representation/02-13-c-conversions.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第二章 数据的表示和运算",
+      "sourceTopicId": "1496d7df-2cbd-4080-a891-d1f248a693db",
+      "sourceTitle": "浮点数",
+      "targetSections": [
+        "computer-organization/02-data-representation/02-10-float-principles.mdx",
+        "computer-organization/02-data-representation/02-11-ieee754.mdx",
+        "computer-organization/02-data-representation/02-12-floating-arithmetic.mdx",
+        "computer-organization/02-data-representation/02-13-c-conversions.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第三章 存储系统",
+      "sourceTopicId": "15f9ae40b8c988f8c74cc9383c",
+      "sourceTitle": "存储器特点",
+      "targetSections": [
+        "computer-organization/03-memory-system/03-1-hierarchy.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第三章 存储系统",
+      "sourceTopicId": "64b9e926b2ba17aaa5f9292cb2",
+      "sourceTitle": "SRAM、DRAM",
+      "targetSections": [
+        "computer-organization/03-memory-system/03-2-sram-dram.mdx",
+        "computer-organization/03-memory-system/03-3-refresh.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第三章 存储系统",
+      "sourceTopicId": "59fa51447e38352f140709a15e",
+      "sourceTitle": "只读存储器ROM",
+      "targetSections": [
+        "computer-organization/03-memory-system/03-4-rom-flash.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第三章 存储系统",
+      "sourceTopicId": "9fa9f9c833590362e4d35baaa7",
+      "sourceTitle": "双端口RAM和多模块存储器",
+      "targetSections": [
+        "computer-organization/03-memory-system/03-7-multi-bank.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第三章 存储系统",
+      "sourceTopicId": "cc8b83fcc84a5daaae30da8816",
+      "sourceTitle": "主存储器和CPU的连接",
+      "targetSections": [
+        "computer-organization/03-memory-system/03-5-chip-organization.mdx",
+        "computer-organization/03-memory-system/03-6-expansion.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第三章 存储系统",
+      "sourceTopicId": "c0c0a191-606f-463f-adee-6a0f1d60c67c",
+      "sourceTitle": "外部存储器",
+      "targetSections": [
+        "computer-organization/03-memory-system/03-8-hdd-raid.mdx",
+        "computer-organization/03-memory-system/03-9-ssd.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第三章 存储系统",
+      "sourceTopicId": "30d9c9760e094de4f7d87b7985",
+      "sourceTitle": "高速缓冲存储器Cache",
+      "targetSections": [
+        "computer-organization/03-memory-system/03-10-cache-locality.mdx",
+        "computer-organization/03-memory-system/03-11-cache-mapping.mdx",
+        "computer-organization/03-memory-system/03-12-cache-replacement.mdx",
+        "computer-organization/03-memory-system/03-13-cache-write-amat.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第三章 存储系统",
+      "sourceTopicId": "955e10cb-da76-414f-aba2-1c89a0adae8c",
+      "sourceTitle": "虚拟存储器",
+      "targetSections": [
+        "computer-organization/03-memory-system/03-14-virtual-memory.mdx",
+        "computer-organization/03-memory-system/03-15-tlb-cache.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第四章 指令系统",
+      "sourceTopicId": "17da2d8c-f647-4aed-9685-ad64ba6b88fd",
+      "sourceTitle": "指令格式",
+      "targetSections": [
+        "computer-organization/04-instruction-set/04-1-isa-scope.mdx",
+        "computer-organization/04-instruction-set/04-2-instruction-formats.mdx",
+        "computer-organization/04-instruction-set/04-3-extended-opcodes.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第四章 指令系统",
+      "sourceTopicId": "93d4ab03-38c1-4993-9087-a21ad2602c97",
+      "sourceTitle": "指令寻址和数据寻址",
+      "targetSections": [
+        "computer-organization/04-instruction-set/04-4-instruction-addressing.mdx",
+        "computer-organization/04-instruction-set/04-5-immediate-memory.mdx",
+        "computer-organization/04-instruction-set/04-6-register-addressing.mdx",
+        "computer-organization/04-instruction-set/04-7-relative-base-index.mdx",
+        "computer-organization/04-instruction-set/04-8-stack-memory-counts.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第四章 指令系统",
+      "sourceTopicId": "8b9f7546-431b-4d45-972c-ac4621f0f993",
+      "sourceTitle": "X86汇编指令",
+      "targetSections": [
+        "computer-organization/04-instruction-set/04-9-x86-registers.mdx",
+        "computer-organization/04-instruction-set/04-10-x86-data-arithmetic.mdx",
+        "computer-organization/04-instruction-set/04-11-flags-branches.mdx",
+        "computer-organization/04-instruction-set/04-12-call-stack.mdx",
+        "computer-organization/04-instruction-set/04-13-assembly-syntax.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第四章 指令系统",
+      "sourceTopicId": "60b5d955-e0b8-4f60-ae1f-a45e5659f246",
+      "sourceTitle": "CISC、RISC",
+      "targetSections": [
+        "computer-organization/04-instruction-set/04-14-risc-cisc.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第五章 中央处理器",
+      "sourceTopicId": "132215d2-fdb7-43b8-9bb2-01ead8823d3b",
+      "sourceTitle": "CPU的功能、基本结构",
+      "targetSections": [
+        "computer-organization/05-cpu/05-1-cpu-registers.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第五章 中央处理器",
+      "sourceTopicId": "ee98e053-89a6-4904-934a-19ad18297fe1",
+      "sourceTitle": "指令执行过程",
+      "targetSections": [
+        "computer-organization/05-cpu/05-2-cycles.mdx",
+        "computer-organization/05-cpu/05-3-fetch-interrupt.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第五章 中央处理器",
+      "sourceTopicId": "087f1c64-cf9b-443d-99e8-69cf93eed650",
+      "sourceTitle": "【数据通路】的功能、基本结构",
+      "targetSections": [
+        "computer-organization/05-cpu/05-4-datapath.mdx",
+        "computer-organization/05-cpu/05-5-bus-operations.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第五章 中央处理器",
+      "sourceTopicId": "7c19bb81-2810-462b-9f7f-9e315d6f8e7a",
+      "sourceTitle": "控制器各部件之间的连接",
+      "targetSections": [
+        "computer-organization/05-cpu/05-4-datapath.mdx",
+        "computer-organization/05-cpu/05-6-hardwired.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第五章 中央处理器",
+      "sourceTopicId": "46530f28-be14-42e7-abc1-cd960def4b18",
+      "sourceTitle": "硬布线",
+      "targetSections": [
+        "computer-organization/05-cpu/05-6-hardwired.mdx",
+        "computer-organization/05-cpu/05-7-control-timing.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第五章 中央处理器",
+      "sourceTopicId": "fa6e3d3c-6c63-4c91-b614-d0c1b2f44bef",
+      "sourceTitle": "微程序",
+      "targetSections": [
+        "computer-organization/05-cpu/05-8-microprogram-controller.mdx",
+        "computer-organization/05-cpu/05-9-microinstruction-encoding.mdx",
+        "computer-organization/05-cpu/05-10-microaddress-design.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第五章 中央处理器",
+      "sourceTopicId": "442af0f3-9b8a-48d6-985e-f1c93bb0ca2c",
+      "sourceTitle": "指令流水线",
+      "targetSections": [
+        "computer-organization/05-cpu/05-11-pipeline-performance.mdx",
+        "computer-organization/05-cpu/05-12-five-stage.mdx",
+        "computer-organization/05-cpu/05-13-data-hazards.mdx",
+        "computer-organization/05-cpu/05-14-control-hazards.mdx",
+        "computer-organization/05-cpu/05-15-issue-techniques.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第五章 中央处理器",
+      "sourceTopicId": "131a8764-772a-4170-ba43-fbb4787ec2e0",
+      "sourceTitle": "多处理器",
+      "targetSections": [
+        "computer-organization/05-cpu/05-16-flynn.mdx",
+        "computer-organization/05-cpu/05-17-multicore.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第六章 总线",
+      "sourceTopicId": "9c7c45f9-a351-4702-9b92-a3c123ed2b32",
+      "sourceTitle": "总线定义",
+      "targetSections": [
+        "computer-organization/06-bus/06-1-core-concepts.mdx",
+        "computer-organization/06-bus/06-2-signal-lines.mdx",
+        "computer-organization/06-bus/06-3-bus-topologies.mdx",
+        "computer-organization/06-bus/06-4-performance-metrics.mdx",
+        "computer-organization/06-bus/06-5-bandwidth-cases.mdx",
+        "computer-organization/06-bus/06-7-bus-arbitration.mdx",
+        "computer-organization/06-bus/06-11-standards-extensions.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "第六章 总线",
+      "sourceTopicId": "50ebf0b3-832c-467b-875d-1b9543021bca",
+      "sourceTitle": "总线事务和定时",
+      "targetSections": [
+        "computer-organization/06-bus/06-6-transactions-bursts.mdx",
+        "computer-organization/06-bus/06-8-synchronous-timing.mdx",
+        "computer-organization/06-bus/06-9-async-handshakes.mdx",
+        "computer-organization/06-bus/06-10-semisync-split.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第七章 输入输出系统",
+      "sourceTopicId": "380e3843-a9c4-45fb-9152-5f4c38e12414",
+      "sourceTitle": "I/O设备",
+      "targetSections": [
+        "computer-organization/07-io-system/07-1-io-overview.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第七章 输入输出系统",
+      "sourceTopicId": "81e50542-794f-4763-ada6-226fc0078e93",
+      "sourceTitle": "I/O接口",
+      "targetSections": [
+        "computer-organization/07-io-system/07-2-controller-ports.mdx",
+        "computer-organization/07-io-system/07-3-port-addressing.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第七章 输入输出系统",
+      "sourceTopicId": "475793ed-2364-47cc-835f-a5a8b4f071d1",
+      "sourceTitle": "IO方式",
+      "targetSections": [
+        "computer-organization/07-io-system/07-4-programmed-io.mdx",
+        "computer-organization/07-io-system/07-5-interrupt-exception.mdx",
+        "computer-organization/07-io-system/07-6-interrupt-vector.mdx",
+        "computer-organization/07-io-system/07-7-isr-context.mdx",
+        "computer-organization/07-io-system/07-8-priority-mask.mdx",
+        "computer-organization/07-io-system/07-12-methods-comparison.mdx",
+        "computer-organization/07-io-system/07-13-serial-channel.mdx"
+      ]
+    },
+    {
+      "course": "computer-organization",
+      "sourceSheet": "⭐️第七章 输入输出系统",
+      "sourceTopicId": "fd8cb741-894c-4c1a-985e-f647bd7dabda",
+      "sourceTitle": "DMA方式",
+      "targetSections": [
+        "computer-organization/07-io-system/07-9-dma-controller.mdx",
+        "computer-organization/07-io-system/07-10-dma-process.mdx",
+        "computer-organization/07-io-system/07-11-dma-memory-arbitration.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "基本概念",
+      "sourceTopicId": "3fd807a1163af0db631eca7253",
+      "sourceTitle": "操作系统基本概念",
+      "targetSections": [
+        "operating-systems/01-overview/01-1-os-roles.mdx",
+        "operating-systems/01-overview/01-2-four-properties.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "基本概念",
+      "sourceTopicId": "bf89ec3435481989f6a278bd3c",
+      "sourceTitle": "操作系统的发展和分类",
+      "targetSections": [
+        "operating-systems/01-overview/01-3-evolution.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "基本概念",
+      "sourceTopicId": "7cf9644aaebbdea584badbf14c",
+      "sourceTitle": "操作系统运行环境",
+      "targetSections": [
+        "operating-systems/01-overview/01-4-modes-privileges.mdx",
+        "operating-systems/01-overview/01-5-kernel-support.mdx",
+        "operating-systems/01-overview/01-6-interrupt-exception.mdx",
+        "operating-systems/01-overview/01-7-interrupt-lifecycle.mdx",
+        "operating-systems/01-overview/01-8-system-call.mdx",
+        "operating-systems/01-overview/01-9-switches.mdx",
+        "operating-systems/01-overview/01-10-program-lifecycle.mdx",
+        "operating-systems/01-overview/01-11-process-memory.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "基本概念",
+      "sourceTopicId": "514d0154-c614-46a6-993f-b984b0e5189b",
+      "sourceTitle": "操作系统结构",
+      "targetSections": [
+        "operating-systems/01-overview/01-12-kernel-architectures.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "基本概念",
+      "sourceTopicId": "c0e0feba-9bc6-456d-be61-61e4ae5557cd",
+      "sourceTitle": "OS引导",
+      "targetSections": [
+        "operating-systems/01-overview/01-13-boot-bios-mbr.mdx",
+        "operating-systems/01-overview/01-14-uefi-gpt.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "基本概念",
+      "sourceTopicId": "bebfefe0-a411-4265-807c-26dcdcce9284",
+      "sourceTitle": "虚拟机",
+      "targetSections": [
+        "operating-systems/01-overview/01-15-virtualization.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "基本概念",
+      "sourceTopicId": "282a1a55edf9db3e208ecacfbe",
+      "sourceTitle": "做题遇到的概念",
+      "targetSections": [
+        "operating-systems/01-overview/01-16-exam-synthesis.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "进程管理",
+      "sourceTopicId": "7c5b0d7d98dbead4990e2890f3",
+      "sourceTitle": "进程的概念",
+      "targetSections": [
+        "operating-systems/02-processes/02-1-process-pcb.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "进程管理",
+      "sourceTopicId": "40bc6e71-6875-4924-b8c9-c4766d956698",
+      "sourceTitle": "进程操作：",
+      "targetSections": [
+        "operating-systems/02-processes/02-2-process-states.mdx",
+        "operating-systems/02-processes/02-3-process-operations.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "进程管理",
+      "sourceTopicId": "6cbaef13-ee9a-4d01-aca3-d1b58515ccb1",
+      "sourceTitle": "进程组织",
+      "targetSections": [
+        "operating-systems/02-processes/02-1-process-pcb.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "进程管理",
+      "sourceTopicId": "2bbfb675-d430-4d7f-be98-585d0a6c4d75",
+      "sourceTitle": "进程通信：",
+      "targetSections": [
+        "operating-systems/02-processes/02-4-ipc.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "进程管理",
+      "sourceTopicId": "b5d8bb04-bdd4-48d3-91e4-e516e76f87e3",
+      "sourceTitle": "线程：",
+      "targetSections": [
+        "operating-systems/02-processes/02-5-thread-models.mdx",
+        "operating-systems/02-processes/02-6-thread-context.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "进程管理",
+      "sourceTopicId": "13764fd6-31e0-4db9-938c-dde2c674a8ef",
+      "sourceTitle": "进程与线程",
+      "targetSections": [
+        "operating-systems/02-processes/02-5-thread-models.mdx",
+        "operating-systems/02-processes/02-6-thread-context.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "进程管理",
+      "sourceTopicId": "d940db56-284c-4ef3-a2f8-7615b909d114",
+      "sourceTitle": "处理机调度",
+      "targetSections": [
+        "operating-systems/02-processes/02-7-scheduling-levels.mdx",
+        "operating-systems/02-processes/02-8-scheduling-metrics.mdx",
+        "operating-systems/02-processes/02-9-scheduling-algorithms.mdx",
+        "operating-systems/02-processes/02-10-mlfq.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "进程管理",
+      "sourceTopicId": "fd1b86ae-8ccd-4c11-9bfe-e3e47cea9967",
+      "sourceTitle": "同步与互斥",
+      "targetSections": [
+        "operating-systems/02-processes/02-11-concurrency-basics.mdx",
+        "operating-systems/02-processes/02-12-mutual-exclusion.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "进程管理",
+      "sourceTopicId": "a17c876e-3823-457f-83f8-27a07965a1be",
+      "sourceTitle": "信号量：",
+      "targetSections": [
+        "operating-systems/02-processes/02-13-semaphores.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "进程管理",
+      "sourceTopicId": "337eeabd-98f2-4a76-9050-da321b7da0c3",
+      "sourceTitle": "管程：",
+      "targetSections": [
+        "operating-systems/02-processes/02-14-monitors.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "进程管理",
+      "sourceTopicId": "1102846e-ce1d-47df-b988-04b7968f4d80",
+      "sourceTitle": "经典同步问题：",
+      "targetSections": [
+        "operating-systems/02-processes/02-15-producer-consumer.mdx",
+        "operating-systems/02-processes/02-16-readers-writers.mdx",
+        "operating-systems/02-processes/02-17-classical-problems.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "进程管理",
+      "sourceTopicId": "6e6c297a-03be-4092-bbc4-c13f9752a8e3",
+      "sourceTitle": "死锁",
+      "targetSections": [
+        "operating-systems/02-processes/02-18-deadlock-conditions.mdx",
+        "operating-systems/02-processes/02-19-deadlock-strategies.mdx",
+        "operating-systems/02-processes/02-20-bankers-algorithm.mdx",
+        "operating-systems/02-processes/02-21-deadlock-detection.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "内存管理",
+      "sourceTopicId": "a52a50e9a01ab3260e552a7fd9",
+      "sourceTitle": "作用：",
+      "targetSections": [
+        "operating-systems/03-memory/03-1-tasks-address-space.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "内存管理",
+      "sourceTopicId": "771a25eee418e45106c69b31de",
+      "sourceTitle": "内存管理的基本原理和要求",
+      "targetSections": [
+        "operating-systems/03-memory/03-2-build-link-load.mdx",
+        "operating-systems/03-memory/03-3-relocation-protection.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "内存管理",
+      "sourceTopicId": "31fade1a616a400a7d78285595",
+      "sourceTitle": "覆盖和交换",
+      "targetSections": [
+        "operating-systems/03-memory/03-4-overlay-swapping.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "内存管理",
+      "sourceTopicId": "015a8a71e7e84320ef5d49e0c9",
+      "sourceTitle": "连续分配",
+      "targetSections": [
+        "operating-systems/03-memory/03-5-contiguous-fragmentation.mdx",
+        "operating-systems/03-memory/03-6-fit-algorithms.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "内存管理",
+      "sourceTopicId": "3e0934092d99ff80b3a90a94b0",
+      "sourceTitle": "非连续分配",
+      "targetSections": [
+        "operating-systems/03-memory/03-7-paging-basics.mdx",
+        "operating-systems/03-memory/03-8-page-translation.mdx",
+        "operating-systems/03-memory/03-9-tlb-eat.mdx",
+        "operating-systems/03-memory/03-10-multilevel-pages.mdx",
+        "operating-systems/03-memory/03-11-segmentation.mdx",
+        "operating-systems/03-memory/03-12-segmented-paging.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "内存管理",
+      "sourceTopicId": "f288d13b513a0a584297c9bc19",
+      "sourceTitle": "虚拟内存",
+      "targetSections": [
+        "operating-systems/03-memory/03-13-virtual-memory.mdx",
+        "operating-systems/03-memory/03-14-demand-paging.mdx",
+        "operating-systems/03-memory/03-15-page-allocation.mdx",
+        "operating-systems/03-memory/03-16-opt-fifo.mdx",
+        "operating-systems/03-memory/03-17-lru.mdx",
+        "operating-systems/03-memory/03-18-clock.mdx",
+        "operating-systems/03-memory/03-19-working-set.mdx",
+        "operating-systems/03-memory/03-20-sharing-mmap.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "文件管理",
+      "sourceTopicId": "83faca6ea8cb77c218789a694a",
+      "sourceTitle": "文件",
+      "targetSections": [
+        "operating-systems/04-file-system/04-1-file-concepts.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "文件管理",
+      "sourceTopicId": "1a0bed88-ae3c-471c-a546-0e675f842d65",
+      "sourceTitle": "文件操作",
+      "targetSections": [
+        "operating-systems/04-file-system/04-2-file-operations.mdx",
+        "operating-systems/04-file-system/04-3-open-file-tables.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "文件管理",
+      "sourceTopicId": "308b616967d845df1df68b474a",
+      "sourceTitle": "文件的逻辑结构",
+      "targetSections": [
+        "operating-systems/04-file-system/04-4-logical-files.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "文件管理",
+      "sourceTopicId": "446b8962d4cb45eb13d70bdcd5",
+      "sourceTitle": "文件分配方式（物理结构）",
+      "targetSections": [
+        "operating-systems/04-file-system/04-5-contiguous-allocation.mdx",
+        "operating-systems/04-file-system/04-6-linked-fat.mdx",
+        "operating-systems/04-file-system/04-7-index-allocation.mdx",
+        "operating-systems/04-file-system/04-8-mixed-index.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "文件管理",
+      "sourceTopicId": "2168e6428a88cbd579585a5a12",
+      "sourceTitle": "文件的目录结构",
+      "targetSections": [
+        "operating-systems/04-file-system/04-9-directory-fcb-inode.mdx",
+        "operating-systems/04-file-system/04-10-directory-hierarchy.mdx",
+        "operating-systems/04-file-system/04-11-links.mdx",
+        "operating-systems/04-file-system/04-12-protection.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "文件管理",
+      "sourceTopicId": "48f81ec8b129956e67a049ab7f",
+      "sourceTitle": "文件系统",
+      "targetSections": [
+        "operating-systems/04-file-system/04-13-fs-architecture.mdx",
+        "operating-systems/04-file-system/04-14-free-table-chain.mdx",
+        "operating-systems/04-file-system/04-15-bitmap.mdx",
+        "operating-systems/04-file-system/04-16-group-link.mdx",
+        "operating-systems/04-file-system/04-17-vfs.mdx",
+        "operating-systems/04-file-system/04-18-mount-cache.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "文件管理",
+      "sourceTopicId": "49812553-7ff1-4cd8-b5eb-3380e4a52cf4",
+      "sourceTitle": "两个补充",
+      "targetSections": [
+        "operating-systems/04-file-system/04-3-open-file-tables.mdx",
+        "operating-systems/04-file-system/04-9-directory-fcb-inode.mdx",
+        "operating-systems/04-file-system/04-17-vfs.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "I/O管理",
+      "sourceTopicId": "0d6a42a9b16ae27302131a70eb",
+      "sourceTitle": "I/O设备分类",
+      "targetSections": [
+        "operating-systems/05-io/05-1-device-classes.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "I/O管理",
+      "sourceTopicId": "0b69a88cea299ca6e0384bc6fb",
+      "sourceTitle": "I/O控制器",
+      "targetSections": [
+        "operating-systems/05-io/05-2-controller-ports.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "I/O管理",
+      "sourceTopicId": "d869db0e88d99c188315ebb4b7",
+      "sourceTitle": "I/O控制方式",
+      "targetSections": [
+        "operating-systems/05-io/05-3-programmed-interrupt.mdx",
+        "operating-systems/05-io/05-4-dma.mdx",
+        "operating-systems/05-io/05-5-channels.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "I/O管理",
+      "sourceTopicId": "40fa0fc48949c07e0324d97904",
+      "sourceTitle": "I/O软件层级结构",
+      "targetSections": [
+        "operating-systems/05-io/05-6-io-software.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "I/O管理",
+      "sourceTopicId": "5989ad1ce1b8cd9ce3de0a5c08",
+      "sourceTitle": "高速缓存和缓冲区",
+      "targetSections": [
+        "operating-systems/05-io/05-7-cache-buffer.mdx",
+        "operating-systems/05-io/05-8-single-buffer.mdx",
+        "operating-systems/05-io/05-9-double-buffer.mdx",
+        "operating-systems/05-io/05-10-ring-buffer-pool.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "I/O管理",
+      "sourceTopicId": "69aa754371398475972fdbd2ab",
+      "sourceTitle": "设备的分配和回收",
+      "targetSections": [
+        "operating-systems/05-io/05-11-device-tables.mdx",
+        "operating-systems/05-io/05-12-device-policy.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "I/O管理",
+      "sourceTopicId": "1b2a4e89fe3bdc1047adfb3882",
+      "sourceTitle": "SPOOLing技术",
+      "targetSections": [
+        "operating-systems/05-io/05-13-spooling.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "I/O管理",
+      "sourceTopicId": "8e240f08-94b7-4c98-a2c1-b6c25dd48ca4",
+      "sourceTitle": "磁盘的结构",
+      "targetSections": [
+        "operating-systems/05-io/05-14-disk-geometry.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "I/O管理",
+      "sourceTopicId": "179a4141-ba4e-4c88-b655-77acb4ddf5ca",
+      "sourceTitle": "磁盘的管理",
+      "targetSections": [
+        "operating-systems/05-io/05-15-disk-management.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "I/O管理",
+      "sourceTopicId": "110279f6-19b4-4a9e-b203-bf6ad62c2560",
+      "sourceTitle": "磁盘调度算法",
+      "targetSections": [
+        "operating-systems/05-io/05-16-fcfs-sstf.mdx",
+        "operating-systems/05-io/05-17-scan-look.mdx",
+        "operating-systems/05-io/05-18-disk-optimization.mdx"
+      ]
+    },
+    {
+      "course": "operating-systems",
+      "sourceSheet": "I/O管理",
+      "sourceTopicId": "9dfc5982-ed71-4adb-8057-ec8f88025243",
+      "sourceTitle": "固态硬盘SSD",
+      "targetSections": [
+        "operating-systems/05-io/05-19-ssd-structure.mdx",
+        "operating-systems/05-io/05-20-ssd-maintenance.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "序章 网络体系结构",
+      "sourceTopicId": "8938fbd8815b4d67661af9841d",
+      "sourceTitle": "计网的概念",
+      "targetSections": [
+        "computer-networks/01-architecture/01-1-definition.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "序章 网络体系结构",
+      "sourceTopicId": "f63b99d7763a607d390f6894d5",
+      "sourceTitle": "计网的组成",
+      "targetSections": [
+        "computer-networks/01-architecture/01-1-definition.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "序章 网络体系结构",
+      "sourceTopicId": "4aab815e2e3b534cc754f8d9e3",
+      "sourceTitle": "计网的功能",
+      "targetSections": [
+        "computer-networks/01-architecture/01-1-definition.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "序章 网络体系结构",
+      "sourceTopicId": "c2193882ce6986965daf1bf8ae",
+      "sourceTitle": "计网的分类",
+      "targetSections": [
+        "computer-networks/01-architecture/01-2-classification.mdx",
+        "computer-networks/01-architecture/01-3-switching.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "序章 网络体系结构",
+      "sourceTopicId": "78ca0808f1aa517b4b47a94233",
+      "sourceTitle": "性能指标",
+      "targetSections": [
+        "computer-networks/01-architecture/01-4-performance.mdx",
+        "computer-networks/01-architecture/01-5-delay.mdx",
+        "computer-networks/01-architecture/01-6-rtt-bdp.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "序章 网络体系结构",
+      "sourceTopicId": "fa093f89cf189c8369ddda2baf",
+      "sourceTitle": "计网分层",
+      "targetSections": [
+        "computer-networks/01-architecture/01-7-services.mdx",
+        "computer-networks/01-architecture/01-8-encapsulation.mdx",
+        "computer-networks/01-architecture/01-9-osi-lower.mdx",
+        "computer-networks/01-architecture/01-10-osi-upper.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "序章 网络体系结构",
+      "sourceTopicId": "627a2617e6bb4fd687f33bb8d1",
+      "sourceTitle": "多种参考模型对比",
+      "targetSections": [
+        "computer-networks/01-architecture/01-11-models.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第一层 物理层",
+      "sourceTopicId": "0858289ca8cbf2bbc6fe0b3755",
+      "sourceTitle": "概念",
+      "targetSections": [
+        "computer-networks/02-physical-layer/02-1-role-interface.mdx",
+        "computer-networks/02-physical-layer/02-2-communication-modes.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第一层 物理层",
+      "sourceTopicId": "a6ab87e8af2848daad059ac010",
+      "sourceTitle": "数据传输方式",
+      "targetSections": [
+        "computer-networks/02-physical-layer/02-2-communication-modes.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第一层 物理层",
+      "sourceTopicId": "376b6f15a84a341b5b87e9db3f",
+      "sourceTitle": "四种概念",
+      "targetSections": [
+        "computer-networks/02-physical-layer/02-3-symbol-rate.mdx",
+        "computer-networks/02-physical-layer/02-4-bandwidth-impairments.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第一层 物理层",
+      "sourceTopicId": "0da993d7d4289ce9af6668db61",
+      "sourceTitle": "奈氏准则 & 香农定理",
+      "targetSections": [
+        "computer-networks/02-physical-layer/02-5-nyquist.mdx",
+        "computer-networks/02-physical-layer/02-6-shannon.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第一层 物理层",
+      "sourceTopicId": "5efa327cfb9a52013fcfa89598",
+      "sourceTitle": "编码 & 调制",
+      "targetSections": [
+        "computer-networks/02-physical-layer/02-7-line-coding.mdx",
+        "computer-networks/02-physical-layer/02-8-digital-modulation.mdx",
+        "computer-networks/02-physical-layer/02-9-pcm-sampling.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第一层 物理层",
+      "sourceTopicId": "7b19ce1953d9e9d5f53cda3f36",
+      "sourceTitle": "数据的交换方式",
+      "targetSections": [
+        "computer-networks/02-physical-layer/02-10-switching.mdx",
+        "computer-networks/02-physical-layer/02-11-datagram-vc.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第一层 物理层",
+      "sourceTopicId": "4b0a67e644f8ce4588ba7ae2a1",
+      "sourceTitle": "传输介质/传输媒体",
+      "targetSections": [
+        "computer-networks/02-physical-layer/02-12-copper-media.mdx",
+        "computer-networks/02-physical-layer/02-13-fiber.mdx",
+        "computer-networks/02-physical-layer/02-14-wireless.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第一层 物理层",
+      "sourceTopicId": "c9bb12885539b62c5bce2b94e3",
+      "sourceTitle": "物理层设备",
+      "targetSections": [
+        "computer-networks/02-physical-layer/02-15-repeaters-hubs.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第二层 数据链路层",
+      "sourceTopicId": "f7dbcbc42d0878643a82e8eb6a",
+      "sourceTitle": "功能",
+      "targetSections": [
+        "computer-networks/03-data-link-layer/03-1-role-services.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第二层 数据链路层",
+      "sourceTopicId": "0398819fc5782cc7764b4a96b1",
+      "sourceTitle": "组帧",
+      "targetSections": [
+        "computer-networks/03-data-link-layer/03-2-framing.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第二层 数据链路层",
+      "sourceTopicId": "f4a84eaefffa6f0c66168b7f59",
+      "sourceTitle": "差错控制（算）",
+      "targetSections": [
+        "computer-networks/03-data-link-layer/03-3-error-crc.mdx",
+        "computer-networks/03-data-link-layer/03-4-hamming.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第二层 数据链路层",
+      "sourceTopicId": "6659ae8b96fb2ffeacc7e8f388",
+      "sourceTitle": "流量控制（算）",
+      "targetSections": [
+        "computer-networks/03-data-link-layer/03-5-arq-principles.mdx",
+        "computer-networks/03-data-link-layer/03-6-stop-wait.mdx",
+        "computer-networks/03-data-link-layer/03-7-gbn.mdx",
+        "computer-networks/03-data-link-layer/03-8-sr.mdx",
+        "computer-networks/03-data-link-layer/03-9-utilization.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第二层 数据链路层",
+      "sourceTopicId": "f1995b602c7bc8ee81e7e8d9d7",
+      "sourceTitle": "介质访问（算）",
+      "targetSections": [
+        "computer-networks/03-data-link-layer/03-10-multiplex.mdx",
+        "computer-networks/03-data-link-layer/03-11-aloha-csma.mdx",
+        "computer-networks/03-data-link-layer/03-12-csmacd.mdx",
+        "computer-networks/03-data-link-layer/03-13-csmaca.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第二层 数据链路层",
+      "sourceTopicId": "d2d914ede23ae91bdc6bab1d74",
+      "sourceTitle": "局域网（记）",
+      "targetSections": [
+        "computer-networks/03-data-link-layer/03-14-lan.mdx",
+        "computer-networks/03-data-link-layer/03-15-ethernet.mdx",
+        "computer-networks/03-data-link-layer/03-16-wlan.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第二层 数据链路层",
+      "sourceTopicId": "54e3a57c-5f16-4fce-9397-6024f86645c3",
+      "sourceTitle": "广域网",
+      "targetSections": [
+        "computer-networks/03-data-link-layer/03-17-ppp.mdx",
+        "computer-networks/03-data-link-layer/03-18-hdlc.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第二层 数据链路层",
+      "sourceTopicId": "78f20886-5185-4dac-8728-9c594cf1b37a",
+      "sourceTitle": "设备",
+      "targetSections": [
+        "computer-networks/03-data-link-layer/03-19-bridges-switches.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第二层 数据链路层",
+      "sourceTopicId": "fd0f9335-deda-40d9-a4fc-00b701c26c54",
+      "sourceTitle": "VLAN",
+      "targetSections": [
+        "computer-networks/03-data-link-layer/03-20-vlan.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第三层 网络层",
+      "sourceTopicId": "e73a2c9723da65cfb957ab6465",
+      "sourceTitle": "总结！",
+      "targetSections": [
+        "computer-networks/04-network-layer/04-22-review.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第三层 网络层",
+      "sourceTopicId": "74b8cc16-81a9-450a-b800-9ca0d66c0b2c",
+      "sourceTitle": "功能",
+      "targetSections": [
+        "computer-networks/04-network-layer/04-1-role-planes.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第三层 网络层",
+      "sourceTopicId": "cfaaeb037919b03c2570895b05",
+      "sourceTitle": "IPv4、子网划分",
+      "targetSections": [
+        "computer-networks/04-network-layer/04-2-ipv4-header.mdx",
+        "computer-networks/04-network-layer/04-3-fragmentation.mdx",
+        "computer-networks/04-network-layer/04-4-addressing.mdx",
+        "computer-networks/04-network-layer/04-5-subnetting.mdx",
+        "computer-networks/04-network-layer/04-6-cidr-aggregation.mdx",
+        "computer-networks/04-network-layer/04-8-arp.mdx",
+        "computer-networks/04-network-layer/04-9-dhcp.mdx",
+        "computer-networks/04-network-layer/04-10-icmp.mdx",
+        "computer-networks/04-network-layer/04-11-nat.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第三层 网络层",
+      "sourceTopicId": "299aa90f6e3a1659310d69b569",
+      "sourceTitle": "路由转发",
+      "targetSections": [
+        "computer-networks/04-network-layer/04-7-lpm-forwarding.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第三层 网络层",
+      "sourceTopicId": "8ddab1515c29ce6cbbf47aa554",
+      "sourceTitle": "IPv6",
+      "targetSections": [
+        "computer-networks/04-network-layer/04-12-ipv6.mdx",
+        "computer-networks/04-network-layer/04-13-ipv6-transition.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第三层 网络层",
+      "sourceTopicId": "c40849ff751b992bff5298cc67",
+      "sourceTitle": "路由协议",
+      "targetSections": [
+        "computer-networks/04-network-layer/04-14-routing-overview.mdx",
+        "computer-networks/04-network-layer/04-15-rip.mdx",
+        "computer-networks/04-network-layer/04-16-ospf.mdx",
+        "computer-networks/04-network-layer/04-17-bgp.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第三层 网络层",
+      "sourceTopicId": "d4f9d2543a9bdaaa6758e8aebf",
+      "sourceTitle": "IP组播",
+      "targetSections": [
+        "computer-networks/04-network-layer/04-18-multicast.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第三层 网络层",
+      "sourceTopicId": "375a8b4d58a8b31250702bfee1",
+      "sourceTitle": "移动IP",
+      "targetSections": [
+        "computer-networks/04-network-layer/04-19-mobile-ip.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第三层 网络层",
+      "sourceTopicId": "6bc919e76fbb16312ce3c9ad49",
+      "sourceTitle": "网络层设备",
+      "targetSections": [
+        "computer-networks/04-network-layer/04-20-router-architecture.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第三层 网络层",
+      "sourceTopicId": "1b1992fd-f197-45a3-8862-c45bd2dc356d",
+      "sourceTitle": "SDN",
+      "targetSections": [
+        "computer-networks/04-network-layer/04-21-sdn.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第四层 传输层",
+      "sourceTopicId": "ea3a9408472803da13ae98e06f",
+      "sourceTitle": "功能",
+      "targetSections": [
+        "computer-networks/05-transport-layer/05-1-role.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第四层 传输层",
+      "sourceTopicId": "d54c153b-bc36-4789-bd44-0202695d3f6a",
+      "sourceTitle": "寻址和端口",
+      "targetSections": [
+        "computer-networks/05-transport-layer/05-2-ports.mdx",
+        "computer-networks/05-transport-layer/05-3-demultiplex.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第四层 传输层",
+      "sourceTopicId": "2bfb7094794be79c8b32e810af",
+      "sourceTitle": "UDP",
+      "targetSections": [
+        "computer-networks/05-transport-layer/05-4-udp-features.mdx",
+        "computer-networks/05-transport-layer/05-5-udp-header.mdx",
+        "computer-networks/05-transport-layer/05-6-udp-checksum.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第四层 传输层",
+      "sourceTopicId": "160a0861233b1572719fcb5070",
+      "sourceTitle": "TCP",
+      "targetSections": [
+        "computer-networks/05-transport-layer/05-7-tcp-stream.mdx",
+        "computer-networks/05-transport-layer/05-8-tcp-header.mdx",
+        "computer-networks/05-transport-layer/05-9-handshake.mdx",
+        "computer-networks/05-transport-layer/05-10-teardown.mdx",
+        "computer-networks/05-transport-layer/05-11-state-security.mdx",
+        "computer-networks/05-transport-layer/05-12-seq-ack.mdx",
+        "computer-networks/05-transport-layer/05-13-retransmit.mdx",
+        "computer-networks/05-transport-layer/05-14-rtt-rto.mdx",
+        "computer-networks/05-transport-layer/05-15-flow-control.mdx",
+        "computer-networks/05-transport-layer/05-16-sliding-window.mdx",
+        "computer-networks/05-transport-layer/05-17-congestion-basics.mdx",
+        "computer-networks/05-transport-layer/05-18-slow-start.mdx",
+        "computer-networks/05-transport-layer/05-19-fast-recovery.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第五层 应用层",
+      "sourceTopicId": "cf6b7b8a39ba2040a02f08830b",
+      "sourceTitle": "网络模型",
+      "targetSections": [
+        "computer-networks/06-application-layer/06-1-role.mdx",
+        "computer-networks/06-application-layer/06-2-models.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第五层 应用层",
+      "sourceTopicId": "cd5848e0d6b94d7ebc6f4a7659",
+      "sourceTitle": "域名系统(DNS)",
+      "targetSections": [
+        "computer-networks/06-application-layer/06-3-dns-names.mdx",
+        "computer-networks/06-application-layer/06-4-dns-servers.mdx",
+        "computer-networks/06-application-layer/06-5-dns-query.mdx",
+        "computer-networks/06-application-layer/06-6-dns-transport.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第五层 应用层",
+      "sourceTopicId": "4568ef8e05c999a480f0d97f6b",
+      "sourceTitle": "FTP传输",
+      "targetSections": [
+        "computer-networks/06-application-layer/06-7-ftp-basics.mdx",
+        "computer-networks/06-application-layer/06-8-ftp-modes.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第五层 应用层",
+      "sourceTopicId": "ebdb35e4e16b0a5dd05038ca07",
+      "sourceTitle": "SMTP传输",
+      "targetSections": [
+        "computer-networks/06-application-layer/06-9-mail-system.mdx",
+        "computer-networks/06-application-layer/06-10-smtp.mdx",
+        "computer-networks/06-application-layer/06-11-mail-format.mdx",
+        "computer-networks/06-application-layer/06-12-pop-imap.mdx"
+      ]
+    },
+    {
+      "course": "computer-networks",
+      "sourceSheet": "第五层 应用层",
+      "sourceTopicId": "03690f3d1d1a9ccd0aa0882974",
+      "sourceTitle": "万维网和HTTP",
+      "targetSections": [
+        "computer-networks/06-application-layer/06-13-www-url.mdx",
+        "computer-networks/06-application-layer/06-14-http-request.mdx",
+        "computer-networks/06-application-layer/06-15-http-response.mdx",
+        "computer-networks/06-application-layer/06-16-http-rtt.mdx",
+        "computer-networks/06-application-layer/06-17-http-state.mdx",
+        "computer-networks/06-application-layer/06-18-https-versions.mdx"
+      ]
+    }
+  ],
+  "sourceBrokenTopicLinks": [
+    {
+      "course": "operating-systems",
+      "topicId": "bf58d12bd5489ee4093d39481d",
+      "path": [
+        "内存管理"
+      ],
+      "sourceHref": "xmind:#67ddbcb1-85c9-4478-a0aa-580e9fdcd971",
+      "websiteTarget": "operating-systems/03-memory/index.mdx"
+    },
+    {
+      "course": "operating-systems",
+      "topicId": "83e915272e09e7c3d8df8acd1e",
+      "path": [
+        "I/O管理",
+        "I/O软件层级结构",
+        "I/O子系统概述",
+        "功能：",
+        "I/O调度：",
+        "磁盘调度算法（打印机也可以用"
+      ],
+      "sourceHref": "xmind:#c398212844a9a94ac04f5b132e",
+      "websiteTarget": "operating-systems/05-io/05-16-fcfs-sstf.mdx"
+    },
+    {
+      "course": "computer-networks",
+      "topicId": "36789e66eaeb22bedd04db1648",
+      "path": [
+        "第三层 网络层",
+        "路由转发",
+        "路由器的分组转发算法",
+        "NAT的路由分组转发步骤",
+        "如果接受到WAN的，NAT就把WAN的转为LAN的，然后放到LAN中传输",
+        "如何传输，请看ARP"
+      ],
+      "sourceHref": "xmind:#b3b4e1fb-b3fc-4dd5-96b9-ce72e4452bd5",
+      "websiteTarget": "computer-networks/04-network-layer/04-8-arp.mdx"
+    },
+    {
+      "course": "computer-networks",
+      "topicId": "637a6f8c0e787c480ae45b0733",
+      "path": [
+        "第三层 网络层",
+        "路由转发",
+        "ARP"
+      ],
+      "sourceHref": "xmind:#980af23a-a8e3-48da-92b8-04d2ed7f38fc",
+      "websiteTarget": "computer-networks/04-network-layer/04-8-arp.mdx"
+    },
+    {
+      "course": "computer-networks",
+      "topicId": "f57b34d8e9c96657d4e6aaac80",
+      "path": [
+        "第三层 网络层",
+        "路由协议",
+        "动态路由：\n\n域内路由（内部网关协议IGP）",
+        "开放最短路径优先OSPF",
+        "性质",
+        "交换信息为【本路由相邻的所有路由器的链路状态】",
+        "与RIP相比不一样的：RIP是发自己知道的全部东西"
+      ],
+      "sourceHref": "xmind:#fbf903b1-8017-4bb2-84ee-28fbf61d8250",
+      "websiteTarget": "computer-networks/04-network-layer/04-15-rip.mdx"
+    }
+  ],
+  "summary": {
+    "xmindFiles": 4,
+    "topics": 9592,
+    "sourceImageReferences": 911,
+    "mappedKnowledgeBranches": 176,
+    "chapters": 26,
+    "sections": 402,
+    "sourceStaleTopicLinks": 5
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "title": "第五章 输入输出管理",
+  "pages": [
+    "index",
+    "05-1-device-classes",
+    "05-2-controller-ports",
+    "05-3-programmed-interrupt",
+    "05-4-dma",
+    "05-5-channels",
+    "05-6-io-software",
+    "05-7-cache-buffer",
+    "05-8-single-buffer",
+    "05-9-double-buffer",
+    "05-10-ring-buffer-pool",
+    "05-11-device-tables",
+    "05-12-device-policy",
+    "05-13-spooling",
+    "05-14-disk-geometry",
+    "05-15-disk-management",
+    "05-16-fcfs-sstf",
+    "05-17-scan-look",
+    "05-18-disk-optimization",
+    "05-19-ssd-structure",
+    "05-20-ssd-maintenance",
+    "05-21-exam-synthesis"
+  ],
+  "defaultOpen": false
+}

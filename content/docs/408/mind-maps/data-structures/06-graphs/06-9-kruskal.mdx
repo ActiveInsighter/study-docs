@@ -1,0 +1,51 @@
+---
+title: "6.9 Kruskal 与并查集"
+description: "按边权排序、Find/Union 判环、最小生成森林、时间复杂度、路径压缩与按秩合并。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.9 Kruskal：边排序 + 并查集
+
+## Kruskal 主流程
+- 适用于**无向带权图**；先按非降权值排列全部边
+- 初始每个顶点各自为一个不相交集合（DSU/并查集）
+- 按权从小到大取边 (u,v)
+  - 若 `Find(u) != Find(v)`：保留该边，`Union(u,v)`
+  - 否则：加入将形成环，**丢弃**该边
+- 连通图选满 $V-1$ 条边即得到 MST；非连通图得到各分量的**最小生成森林**
+- <img src="/images/408-mind-maps/ds-0045.svg" alt="Kruskal 从轻到重按边构造最小生成树" width="650" height="392">
+
+## 并查集的正确使用
+- `Find(x)` 返回所在集合**代表根**；根相同代表 u、v 已经通过已选边连通
+- `Union` 只连接**不同根**，对同根操作不能增加边
+- 路径压缩降低后续查找的成本；按大小/按秩合并限制树高
+- 负规模根存储法：根记录 `-size`，非根记录父结点编号；不能混用“父指向自己”的另一套约定
+- 两优化同时使用时，每次操作的**均摊**时间接近常数，严格为 $O(\alpha(V))$
+- <img src="/images/408-mind-maps/ds-06-dsu-cycle-redrawn.svg" alt="并查集依次加入边并检测形成环的步骤" width="700" height="233">
+
+## 时间复杂度
+- 边排序：$O(E\log E)$
+- 最多扫描 E 条边，每条至多常数次 `Find/Union`
+- 总体：$O(E\log E + E\alpha(V))$，常写作 **$O(E\log E)$**
+- 不要写“并查集单次最坏 $O(\log E)$”作为此公式依据：主要复杂度来自**边排序**
+- 对连通简单图，$E\le V(V-1)/2$，所以 $\log E=O(\log V)$
+
+## 适用范围与陷阱
+- Prim 维护**一棵成长中的树**；Kruskal 维护**许多逐渐合并的树**
+- Kruskal 的输入可有等权、负权、零权；权值可重复导致选边顺序不同
+- “并查集求有向强连通分量”：错误，普通 DSU 合并的是**无向连通关系**
+- DSU 可用来判**无向图**的冗余边/环；有向图环检测通常用 DFS/入度/拓扑法
+- [复习：5.13 并查集基础](/docs/408/mind-maps/data-structures/05-trees/05-13-union-find) · [继续：6.10 Dijkstra](/docs/408/mind-maps/data-structures/06-graphs/06-10-dijkstra)
+````

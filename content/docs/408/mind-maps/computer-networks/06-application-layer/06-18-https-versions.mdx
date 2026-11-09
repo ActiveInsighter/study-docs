@@ -1,0 +1,48 @@
+---
+title: "6.18 HTTPS、HTTP/2/3与加密边界"
+description: "408计算机网络·应用层第六章·HTTPS、HTTP/2/3与加密边界；高质量双侧Markmap分节导图。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 6.18 HTTPS、HTTP/2/3与加密边界
+
+## HTTP与TLS
+- 传统明文HTTP通常TCP 80；**HTTPS**通常TCP 443，HTTP消息受TLS保护
+- TLS提供传输加密、完整性及服务端身份验证（正确验证证书时）
+- 因此原章“整章都没有密码加密”错误：现代HTTPS、SMTP STARTTLS/SMTPS、IMAPS均涉及加密
+- DNS传统UDP 53不自动通过TLS加密；DoT/DoH是特定安全DNS方案
+
+## HTTP各版本
+- HTTP/1.0通常用非持久连接；HTTP/1.1默认支持持久连接
+- HTTP/1.1流水线**允许但不是默认总会启动**；受队头阻塞等限制
+- HTTP/2：二进制分帧与多个流的多路复用，通常运行在TLS/TCP上
+- HTTP/3：运行在**QUIC/UDP**上，由QUIC提供加密、拥塞控制和可靠流
+- HTTP/3不是“UDP天然可靠”；可靠机制由QUIC实现
+
+## 同一Web访问的协议层
+- HTTPS over TCP：DNS → TCP建连 → TLS握手 → HTTP消息（连接可复用）
+- HTTP/3：DNS → QUIC/UDP建连与加密握手 → HTTP/3流
+- TLS握手耗时与版本/会话恢复有关，不能不看题设固定加N个RTT
+
+## 考试边界
+- 传统408图题通常是HTTP/1.0/1.1的简化RTT模型；记住其特定前提
+- 实际互联网新版本用于修正绝对化表述，不替代题目给出的限定模型
+
+## 分节导航
+- [上一节：6.17 HTTP无状态、Cookie、Session与缓存](/docs/408/mind-maps/computer-networks/06-application-layer/06-17-http-state)
+- [下一节：6.19 应用层端口、封装字节数与跨层辨错](/docs/408/mind-maps/computer-networks/06-application-layer/06-19-port-encapsulation)
+- [应用层总览](/docs/408/mind-maps/computer-networks/06-application-layer)
+
+````

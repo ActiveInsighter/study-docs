@@ -1,0 +1,52 @@
+---
+title: "4.11 NAT、NAPT端口映射与端到端封装"
+description: "408 计算机网络 第四章·NAT、NAPT端口映射与端到端封装：独立双侧Markmap，含考研核心概念、步骤、易错点与计算。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 4.11 NAT、NAPT端口映射与端到端封装
+
+## NAT的基本目的
+- 改写IPv4地址，使不同地址域之间通信；常见于RFC1918私网对公网
+- **基本NAT**主要改IP地址；**NAPT/PAT**同时复用外网IP和传输层端口
+- 不是“网络层路由器必有NAT”；也不是“一条私网连接必独占一个公网IP”
+
+## 端口映射示例
+- 内网A：`192.168.1.10:50000`映到公网出口`203.0.113.5:40001`
+- 内网B：`192.168.1.11:50000`映到**同一出口IP**的`203.0.113.5:40002`
+- 两条连接可去`198.51.100.20:443`，通过地址+端口+协议等状态区分
+- **示例公网IP为文档保留网段，不代表真实可上网地址**
+- <img src="/images/408-mind-maps/cn-04-nat-pat-clean.svg" alt="两条内网会话复用一个外网IP与不同PAT端口" width="960" height="454">
+
+## 发送与返回
+- 出站：改源公网IP/源端口，必要时更新IP和TCP/UDP校验和，转发至目的服务器
+- 入站应答：根据转换/连接状态，找到相应内网IP/端口，并转发给原主机
+- 未建立映射的外部新连接通常不能凭空访问内部主机；需端口映射或策略
+
+## 常见误区
+- NAT涉及IP与传输层端口，但不能简单把整个NAT定义为“传输层协议”
+- 经过**普通路由器**，IP地址通常不变；经过NAT时有关源/目的地址和端口可能变
+- 路由器出口MAC每跳重写，**不等同NAT改变IP地址**
+- NAT可破坏某些端到端透明性；IPv6提供丰富地址空间，但也可配置防火墙
+
+## 综合答题顺序
+- 判断目的是否在本地→选网关→解析网关MAC→经NAT改源IP/端口→路由转发→应答查映射返回
+- [关联：ARP如何解析本链路下一跳MAC](/docs/408/mind-maps/computer-networks/04-network-layer/04-8-arp)
+## 章节导航
+- [返回第四章导览](/docs/408/mind-maps/computer-networks/04-network-layer)
+- [上一节：4.10 ICMP差错报告、Ping与Traceroute](/docs/408/mind-maps/computer-networks/04-network-layer/04-10-icmp)
+- [下一节：4.12 IPv6格式、寻址与邻居发现](/docs/408/mind-maps/computer-networks/04-network-layer/04-12-ipv6)
+
+````

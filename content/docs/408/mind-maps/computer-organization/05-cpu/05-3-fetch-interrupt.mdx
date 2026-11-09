@@ -1,0 +1,63 @@
+---
+title: "5.3 取指、间址、执行与中断数据流"
+description: "完整列出典型微操作序列，纠正SP方向、PC步长、异常现场和中断响应的绝对化。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.3 经典CPU的四类周期
+
+## 取指周期FE：从PC到IR
+- ① `MAR ← PC`：将指令地址送主存地址寄存器
+- ② `Read ← 1`：控制器向存储器发读控制
+- ③ `MDR ← M[MAR]`：取出指令字（可能需多个读操作）
+- ④ `IR ← MDR`：保存当前指令；由操作码译码器解析
+- ⑤ `PC ← PC + 指令长度`：形成下一顺序指令地址
+  - ⑤可与某些步骤并行；但**指令长度已知**或由取指逻辑确定才可正确递增
+- <img src="/images/408-mind-maps/co-05-readable-0209.svg" alt="经典取指周期PC、MAR、主存、MDR、IR的连接与控制信号" width="830" height="391">
+
+## 间址周期IND：多一次“取指针”
+- 给定指令地址码A，采用单级主存间接寻址
+  - `MAR ← A`（形式地址来源可从IR或MDR的地址字段取）
+  - `Read ← 1`；`MDR ← M[MAR]`，取得**有效地址EA**
+  - `EA ← MDR[地址字段]`，随后EX用EA访问实际操作数
+- 若题设让IR地址字段更新，可写`IR[Ad] ← MDR[Ad]`
+  - **只改地址字段，不改变操作码**；也可使用独立EA暂存器，不强制改IR
+- <img src="/images/408-mind-maps/co-05-readable-0291.svg" alt="单级主存间接寻址间址周期传送路径" width="830" height="391">
+
+- <img src="/images/408-mind-maps/co-0102.svg" alt="间址周期的数据流（形式地址取自 MDR：Ad(MDR)→MAR）" width="700" height="330">
+
+## 执行周期EX：随指令类型改变
+- `ADD R1,R2`：读寄存器、ALU相加、更新R1/状态；一般无主存数据读
+- `LOAD R1,[EA]`：访问内存取得数据并写寄存器
+- `STORE R1,[EA]`：将寄存器数据送存储器
+- `BRANCH`：计算条件与目标地址，按结果更新PC
+
+## 中断响应：先保护能恢复执行的状态
+- 典型**示意**：保存返回PC及必要PSW → 确定入口 → `PC ← ISR入口`
+  - ISR为中断服务程序；向量表中可存入口地址，也可能使用向量索引查表
+- 某些教学机采用向低地址增长的栈：`SP ← SP−1`后写回`M[SP] ← PC`
+  - 实际栈增长方向、调整的字节数、保存寄存器和次序**取决于ISA/ABI**
+- 中断“隐指令”指硬件的入口工作，**不是程序中一条普通可见指令**
+- 中断处理例程还需要软件保存/恢复其他寄存器，并最终用规定的中断返回指令
+- <img src="/images/408-mind-maps/co-05-interrupt-clean.svg" alt="中断请求、硬件保存现场、转向ISR、软件处理、恢复与返回流程" width="1040" height="450">
+
+- <img src="/images/408-mind-maps/co-0184.svg" alt="中断周期的数据流：保存断点并转入中断服务程序" width="700" height="330">
+
+## 考题检查单
+- 存储器操作是**读**还是**写**？MDR在何时得到有效数据？
+- 寄存器传送能否在同一节拍进行？是否争用总线？
+- 中断保存的是哪种PC（返回地址）？题目定义的SP按字还是按字节调整？
+- [继续：数据通路组织](/docs/408/mind-maps/computer-organization/05-cpu/05-4-datapath)
+````

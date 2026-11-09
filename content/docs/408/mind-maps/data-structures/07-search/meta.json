@@ -1,0 +1,23 @@
+{
+  "title": "第七章 查找",
+  "pages": [
+    "index",
+    "07-1-search-basics",
+    "07-2-sequential",
+    "07-3-binary",
+    "07-4-block",
+    "07-5-bst",
+    "07-6-avl",
+    "07-7-red-black-properties",
+    "07-8-red-black-operations",
+    "07-9-btree-properties",
+    "07-10-btree-insert",
+    "07-11-btree-delete",
+    "07-12-bplus",
+    "07-13-hash-functions",
+    "07-14-hash-collisions",
+    "07-15-hash-asl",
+    "07-16-exam"
+  ],
+  "defaultOpen": false
+}

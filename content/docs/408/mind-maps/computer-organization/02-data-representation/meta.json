@@ -1,0 +1,21 @@
+{
+  "title": "第二章 数据的表示和运算",
+  "pages": [
+    "index",
+    "02-1-radix-codes",
+    "02-2-number-representations",
+    "02-3-twos-complement",
+    "02-4-alu-carry",
+    "02-5-arithmetic-flags",
+    "02-6-shifts-rotates",
+    "02-7-multiplication",
+    "02-8-division",
+    "02-9-endian-conversion",
+    "02-10-float-principles",
+    "02-11-ieee754",
+    "02-12-floating-arithmetic",
+    "02-13-c-conversions",
+    "02-14-exam-review"
+  ],
+  "defaultOpen": false
+}

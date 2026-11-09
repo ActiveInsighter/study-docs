@@ -1,0 +1,25 @@
+{
+  "title": "第八章 排序",
+  "pages": [
+    "index",
+    "08-1-basics",
+    "08-2-direct-insertion",
+    "08-3-binary-insertion",
+    "08-4-shell",
+    "08-5-bubble",
+    "08-6-quick-partition",
+    "08-7-quick-analysis",
+    "08-8-selection",
+    "08-9-heap-building",
+    "08-10-heap-sort",
+    "08-11-merge",
+    "08-12-radix",
+    "08-13-comparison",
+    "08-14-external-basics",
+    "08-15-loser-tree",
+    "08-16-replacement",
+    "08-17-optimal-merge",
+    "08-18-exam"
+  ],
+  "defaultOpen": false
+}

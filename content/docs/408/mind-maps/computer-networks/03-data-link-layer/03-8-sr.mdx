@@ -1,0 +1,55 @@
+---
+title: "3.8 选择重传SR"
+description: "独立确认、乱序缓存、窗口和序号空间、重传策略"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 3.8 选择重传SR
+
+## SR核心思想
+- 发送端可以连续发送多个帧，接收端允许**接收窗口内失序帧并缓存**
+- 收到正确帧即**单独ACK**；丢失/损坏的帧由发送端**选择性重发**
+- 已缓存的后续帧不需要因前一帧丢失而全部重传
+- 当左边界缺失帧补齐时，接收端可一次按序向上交付缓存的连续帧
+
+## 计时器与确认
+- 通常为每个**未确认帧**跟踪超时；超时单独重发该帧
+- `ACK n`只确认具体编号`n`，不天然累计确认`0..n`
+- 可选NAK通知缺失帧，但**SR不要求必须收到NAK才能重传**
+
+## 序号空间约束（必考）
+- k位序号，模空间$M=2^k$；防止旧帧与新帧窗口混淆，要求 **$W_s+W_r\le M$**
+- **对称窗口**$W_s=W_r=W$ → $W\le2^{k-1}$
+- 例：3bit序号，若$W_s=W_r=4$合法；各5则不合法
+- 不应把$W\le2^{k-1}$不加前提推广为**所有非对称窗口的唯一公式**
+
+- <img src="/images/408-mind-maps/cn-0073.svg" alt="选择重传中 WT + WR ≤ 2^n 的原因：n = 3、WT = 6、WR = 3 时会出现误解" width="560" height="270">
+
+## 对比GBN
+- GBN：收端不缓存乱序，$W_r=1$，ACK累计，可能批量重发
+- SR：收端缓存窗口内乱序，`Wr>1`可行，ACK独立，选择性重发
+- 交换代价：SR额外维护缓存、多个定时器和更复杂状态
+
+## 边界练习
+- k=4，$W_s=10, W_r=6$ → $10+6=16$，满足必要窗口边界
+- k=4，$W_s=10, W_r=7$ → `17>16`，可能旧新帧歧义
+- 注意本章SR课本模型默认**序号模空间循环使用，可能存在重排和延迟重传**
+
+## 章节导航
+- [上一节：3.7 后退N帧GBN](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-7-gbn)
+- [第三章总览](/docs/408/mind-maps/computer-networks/03-data-link-layer)
+- [下一节：3.9 滑动窗口利用率与吞吐量计算](/docs/408/mind-maps/computer-networks/03-data-link-layer/03-9-utilization)
+
+````

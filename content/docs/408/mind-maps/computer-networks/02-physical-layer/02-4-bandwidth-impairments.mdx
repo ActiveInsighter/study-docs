@@ -1,0 +1,48 @@
+---
+title: "2.4 频带宽度、失真与码间串扰"
+description: "Hz与bit/s区分、信道频率响应、噪声与ISI"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 2.4 频带宽度、失真与码间串扰
+
+## 带宽的两种语境
+- **模拟信道频带宽度**：$W=f_{\rm high}-f_{\rm low}$，单位 Hz
+- **数字链路标称带宽**：常指最大数据率，单位 bit/s
+- 它们量纲不同：不能直接把`3kHz`与`3kbit/s`视作相同能力
+- 截止频率可能按某一功率/幅度阈值定义（常见−3dB），取决于具体系统
+
+- <img src="/images/408-mind-maps/cn-0022.svg" alt="数字信道传输能力的类比示意（bit/s与Hz的区别见本节）" width="640" height="260">
+
+## 信号受损的原因
+- **衰减**：能量随距离减弱，且可随频率变化
+- **噪声**：热噪声、外来电磁干扰等降低判决质量
+- **失真**：幅度/相位响应不理想，波形发生变化
+- **码间串扰ISI**：相邻码元经信道展宽后在接收端互相影响
+  - 不是“所有高频信号都振得太快所以无法识别”
+  - 受带宽、色散、滤波与脉冲整形影响
+- <img src="/images/408-mind-maps/cn-02-bandwidth-clean.svg" alt="带通信道频率响应、可通过和被衰减频率的示意" width="760" height="342">
+
+## 考试如何判断
+- 频宽`W`决定可通过的信号频率范围；**码元速率还取决于波形成形**
+- 传输距离↑ → 衰减可能增大；并非自动意味着必须降低所有信道速率
+- 增大发送功率可能改善SNR，但不能消除受限频带造成的ISI
+- 混淆点：**传播时延**取决于链路长度/波速，不由频带宽度单独决定
+## 章节导航
+- [上一节：2.3 码元、波特率与比特率](/docs/408/mind-maps/computer-networks/02-physical-layer/02-3-symbol-rate)
+- [第二章总览](/docs/408/mind-maps/computer-networks/02-physical-layer)
+- [下一节：2.5 奈奎斯特准则：无噪声码元极限](/docs/408/mind-maps/computer-networks/02-physical-layer/02-5-nyquist)
+
+````

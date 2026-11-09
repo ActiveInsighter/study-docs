@@ -1,0 +1,48 @@
+---
+title: "5.16 TCP滑动窗口、MSS与吞吐上限"
+description: "408 计算机网络第五章·TCP滑动窗口、MSS与吞吐上限；分节双侧Markmap，含核心概念、考点计算与常见误区。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.16 TCP滑动窗口、MSS与吞吐上限
+
+## 发送窗口划分
+- 已发已确认：序号位于窗口左边界之前，发送缓存可释放
+- 已发未确认：**在途数据**，占用发送窗口，可能需要重传
+- 窗口内尚未发送：等待发送；窗口右边界之外：当前不能发送
+- 累计ACK推进窗口左边界；新`rwnd`、`cwnd`和ACK共同决定后续发送能力
+
+## 动态计算（简化版）
+- <img src="/images/408-mind-maps/cn-05-send-window-clean.svg" alt="TCP滑动窗口已确认在途与可发送区域" width="1000" height="407">
+- 若`min(rwnd,cwnd)=8 MSS`、`FlightSize=5 MSS`，可再发送`3 MSS`（假定无应用/缓冲限制）
+- 若单向链路无排队丢包，近似最大持续吞吐由$\mathrm{Window}/\mathrm{RTT}$约束
+- 示例：发送窗口64 KiB，RTT=100ms → 上限约**640 KiB/s≈5.24 Mbit/s**（不计协议开销）
+
+## 带宽时延积BDP
+- $\mathrm{BDP}=\text{带宽}\times\mathrm{RTT}$，单位须统一；通常表示管道可同时容纳的比特数
+- 20 Mbit/s链路、RTT=50ms，BDP≈1 Mbit≈125 kB；窗口若显著小于BDP，难以填满链路
+- MSS越大并不意味着窗口越大；窗口、RTT和路径能力共同决定吞吐
+
+## 滑动窗口与链路层SR/GBN
+- TCP累计ACK与GBN有相似性，但TCP可缓存乱序、采用SACK和灵活重传
+- **TCP不等同于课本中的纯GBN或纯SR实现**；不能把二者序号空间公式直接套给TCP
+- TCP按字节数计算确认号；链路层SR/GBN常按帧编号
+
+## 章节导航
+- [上一节：5.15 接收窗口rwnd与流量控制](/docs/408/mind-maps/computer-networks/05-transport-layer/05-15-flow-control)
+- [下一节：5.17 拥塞窗口、阈值与四种经典算法](/docs/408/mind-maps/computer-networks/05-transport-layer/05-17-congestion-basics)
+- [计算机网络总览](/docs/408/mind-maps/computer-networks)
+
+````

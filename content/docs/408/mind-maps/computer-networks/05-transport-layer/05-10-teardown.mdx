@@ -1,0 +1,47 @@
+---
+title: "5.10 四次挥手、半关闭与TIME_WAIT"
+description: "408 计算机网络第五章·四次挥手、半关闭与TIME_WAIT；分节双侧Markmap，含核心概念、考点计算与常见误区。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.10 四次挥手、半关闭与TIME_WAIT
+
+## 以主动关闭方A、被动方B为例
+- <img src="/images/408-mind-maps/cn-05-close-clean.svg" alt="TCP关闭：FIN ACK与TIME_WAIT" width="1000" height="555">
+- ① A发`FIN(seq=u)`：`ESTABLISHED→FIN-WAIT-1`；FIN占一个序号
+- ② B回`ACK(ack=u+1)`：B进`CLOSE-WAIT`，A进`FIN-WAIT-2`；A的发送方向关闭，仍能收B的数据
+- ③ B发送剩余数据后发`FIN(seq=v)`：B进`LAST-ACK`
+- ④ A回`ACK(ack=v+1)`：A进`TIME-WAIT`，B收到ACK后进`CLOSED`
+
+## TIME_WAIT与2MSL
+- 主动关闭方通常等待**2MSL**再关闭；保障最后ACK丢失时能重发，并让旧报文在网络中消失
+- MSL = Maximum Segment Lifetime，即**最大报文段生存时间**，不是RTT
+- 第②次ACK和第③次FIN在特殊情况下可合并，故**四次是典型流程，不是每次都一定四个独立报文段**
+- RST是异常复位，不能按正常FIN确认的四段过程推演
+
+## 状态表秒记
+- A：`ESTABLISHED→FIN-WAIT-1→FIN-WAIT-2→TIME-WAIT→CLOSED`
+- B：`ESTABLISHED→CLOSE-WAIT→LAST-ACK→CLOSED`
+- **CLOSE-WAIT**是被动关闭方等待本地应用关闭发送方向；**TIME-WAIT**通常属于主动关闭方
+
+## 原图参照
+- <img src="/images/408-mind-maps/cn-0098.svg" alt="原四次挥手状态转换图" width="760" height="478">
+
+## 章节导航
+- [上一节：5.9 三次握手、SYN序号与连接建立](/docs/408/mind-maps/computer-networks/05-transport-layer/05-9-handshake)
+- [下一节：5.11 TCP状态、异常连接与SYN洪泛](/docs/408/mind-maps/computer-networks/05-transport-layer/05-11-state-security)
+- [计算机网络总览](/docs/408/mind-maps/computer-networks)
+
+````

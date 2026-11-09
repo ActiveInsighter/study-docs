@@ -1,0 +1,53 @@
+---
+title: "5.6 硬布线控制器：输入、译码与控制逻辑"
+description: "构建OP、机器周期状态、节拍、标志条件到微操作信号的组合逻辑关系。"
+layout: mind-map
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+````mindmap
+---
+markmap:
+  layout: two-sided
+  theme: cards
+  foldLevel: 3
+---
+
+# 5.6 硬布线控制器CU
+
+## 根本原理
+- 控制信号直接由**组合逻辑与时序状态**产生，而不是从控制存储器读微指令
+- 典型输入有：`OP(IR)`操作码、当前机器周期状态、节拍T、条件标志PSW
+  - 还可受访存完成、外部中断、流水状态、忙闲/握手等信号影响
+- 输出是`PCout`、`MARin`、`MemRead`、`ALUadd`、`IRin`等微命令
+- <img src="/images/408-mind-maps/co-05-hardwired-clean.svg" alt="操作码译码、节拍、周期状态、标志输入到硬布线CU并产生控制信号" width="1050" height="485">
+
+## 四组控制条件
+- **操作码译码**：确定当前是LOAD/ADD/JMP等机器指令
+- **阶段状态**：例如FE/IND/EX/INT，指明当前阶段
+- **时间条件**：`T0,T1,T2...`限定某个时刻激活哪些微操作
+- **条件状态**：ZF/CF、间址标志、访存完成、中断许可等用于选择分支
+
+- <img src="/images/408-mind-maps/co-0151.svg" alt="微操作的确定：由指令 OP、所处机器周期、节拍号与 PSW 状态共同决定" width="820" height="380">
+
+## 从操作时间表写布尔表达式
+- 例如所有指令在FE的T0都需要`PC → MAR`
+  - `PCout = FE ∧ T0 ∨ 其他使用PCout的状态项`
+  - `MARin = FE ∧ T0 ∨ EX∧LOAD∧T0 ∨ EX∧STORE∧T0 ∨ ...`
+- `MemRead`也可由多个“阶段-节拍-指令”项做逻辑或
+- **相同微操作只需一套控制信号**，不会为每条指令重复布设一整套电路
+
+## 优缺点和RISC关系
+- 优点：控制路径可做得短、效率高，不需要逐条读取控制存储器
+- 难点：复杂ISA或多模式下逻辑表达式庞大，扩展/修复困难
+- 典型传统RISC较适合硬布线，但**“硬布线只能用于RISC”错误**
+  - 复杂ISA中也存在硬布线高速路径；现代CPU经常混合硬布线与微码
+
+## 考查抓手
+- 四要素决定某个微操作“何时发出”，但不必给每个微操作构造独立机器指令
+- 控制信号逻辑式要顾及外设响应、等待周期，不能无条件假定同步主存一拍完成
+- [继续：时间表与微操作兼容](/docs/408/mind-maps/computer-organization/05-cpu/05-7-control-timing)
+````
