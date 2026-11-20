@@ -6,6 +6,7 @@ import { spawn } from 'node:child_process';
 import { computeStaticBuildId } from './static-build-id.mjs';
 import { shouldIncludeInStaticDocsProject } from './static-docs-config.mjs';
 import {
+  buildStaticAndroidMarkdownDocument,
   buildStaticMarkdownDocument,
   isStaticDocSourceFile,
 } from './static-docs-markdown.mjs';
@@ -290,6 +291,12 @@ async function generateStaticMarkdownRoutes(outputRoot) {
 
     await mkdir(path.dirname(destinationPath), { recursive: true });
     await writeFile(destinationPath, markdown);
+
+    const androidDoc = await buildStaticAndroidMarkdownDocument(sourcePath, relativePath);
+    const androidDestinationPath = path.join(outputRoot, androidDoc.outputPath);
+    await mkdir(path.dirname(androidDestinationPath), { recursive: true });
+    await writeFile(androidDestinationPath, androidDoc.markdown);
+
     writtenCount += 1;
   }
 
