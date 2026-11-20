@@ -40,6 +40,21 @@ describe('Android Markdown export', () => {
     expect(result).toContain('  ~~~md\n<Callout>保留代码示例</Callout>\n  ~~~');
   });
 
+  it('keeps Fumadocs callout variants distinct, including titleless callouts', () => {
+    const result = renderAndroidMarkdown([
+      '<Callout>默认说明</Callout>',
+      '<Callout type="tip">提示别名</Callout>',
+      '<Callout type="idea">灵感</Callout>',
+      '<Callout type="success" title="核对完成">通过</Callout>',
+      '<Callout type="error">错误</Callout>',
+    ].join('\n\n'), { title: '提示块' });
+    expect(result).toContain(':::info\n\n默认说明\n\n:::');
+    expect(result).toContain(':::info\n\n提示别名\n\n:::');
+    expect(result).toContain(':::idea\n\n灵感\n\n:::');
+    expect(result).toContain(':::success 核对完成\n\n通过\n\n:::');
+    expect(result).toContain(':::danger\n\n错误\n\n:::');
+  });
+
   it('exports Steps, Tabs, Cards and WordCards for Android', () => {
     const source = [
       '<Steps><Step title="一">内容</Step></Steps>',
@@ -90,15 +105,17 @@ describe('Android Markdown export', () => {
       '<Question type="blank">',
       '若 $ f(x)$ 满足 $ 0<x<2 $，求 <Blank answer="\\frac{1}{2}" aliases={[\'0.5\', \'1/2\']} kind="math" />。',
       '<Solution><img src="/img/示意图 (1).svg" alt="图 &amp; 例" />',
+      '<Image src="../figures/example.svg" alt="组件图" />',
       '![网页附图](https://cdn.example.test/figure.webp)',
       '<a href="/details"><img src="/images/chart.jpg" alt="缩略图" /></a></Solution>',
       '</Question>',
       '代码：`$ x $`',
       '~~~html', '<img src="/sample.png">', '~~~',
     ].join('\n');
-    const result = renderAndroidMarkdown(source, { title: '图片和公式' });
+    const result = renderAndroidMarkdown(source, { title: '图片和公式', sourcePath: 'course/chapter/lesson.mdx' });
     expect(result).toContain('若 $f(x)$ 满足 $0<x<2$');
     expect(result).toContain('![图 & 例](</img/示意图 (1).svg>)');
+    expect(result).toContain('![组件图](</docs/course/figures/example.svg>)');
     expect(result).toContain('![网页附图](https://cdn.example.test/figure.webp)');
     expect(result).toContain('[![缩略图](</images/chart.jpg>)](</details>)');
     expect(result).toContain('`$ x $`');
