@@ -318,7 +318,7 @@ jobs:
         run: |
           set -euo pipefail
           routes="$(find .static-docs/docs -type f -name index.html | wc -l | tr -d ' ')"
-          markdown="$(find .static-docs/docs -type f -name '*.md' | wc -l | tr -d ' ')"
+          markdown="$(find .static-docs/docs -type f -name '*.md' ! -name '*.android.md' | wc -l | tr -d ' ')"
           files="$(find .static-docs -type f | wc -l | tr -d ' ')"
           bytes="$(du -sb .static-docs | awk '{print $1}')"
           echo "weighted_shard=${STATIC_DOCS_SHARD_INDEX}/${STATIC_DOCS_SHARD_COUNT} routes=${routes} files=${files} markdown=${markdown} bytes=${bytes}"
@@ -542,7 +542,7 @@ jobs:
         run: |
           set -euo pipefail
           doc_routes="$(find .static-docs/docs -type f -name index.html | wc -l | tr -d ' ')"
-          markdown="$(find .static-docs/docs -type f -name '*.md' | wc -l | tr -d ' ')"
+          markdown="$(find .static-docs/docs -type f -name '*.md' ! -name '*.android.md' | wc -l | tr -d ' ')"
           expected_pages="$(find content/docs -type f \( -name '*.md' -o -name '*.mdx' \) | wc -l | tr -d ' ')"
           expected_routes="${expected_pages}"
           if [[ ! -f content/docs/index.md && ! -f content/docs/index.mdx ]]; then
