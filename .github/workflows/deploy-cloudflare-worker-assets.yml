@@ -332,6 +332,7 @@ jobs:
           if [[ "${STATIC_DOCS_SHARD_INDEX}" == '0' ]]; then
             expected_pages="$(find content/docs -type f \( -name '*.md' -o -name '*.mdx' \) | wc -l | tr -d ' ')"
             test "${markdown}" = "${expected_pages}"
+          node scripts/verify-android-markdown.mjs .static-docs "${expected_pages}"
           else
             test "${markdown}" = '0'
           fi
@@ -763,6 +764,11 @@ jobs:
             exit 1
           fi
           echo "Markdown Content-Type verified as UTF-8: ${markdown_content_type}"
+          curl --fail --silent --show-error --max-time 60 "${base_url}/doc-sources.json" \
+            | node -e 'if (JSON.parse(require("fs").readFileSync(0, "utf8")).androidMarkdownVersion !== 1) process.exit(1)'
+          curl --fail --silent --show-error --max-time 60 \
+            "${base_url}/android/docs/math/formulas/advanced-mathematics.md" -o /tmp/android-doc.md
+          grep -m 1 '^# ' /tmp/android-doc.md
           echo "- Cloudflare deployment: ${DEPLOYMENT_URL}" >> "${GITHUB_STEP_SUMMARY}"
 
       - name: Ensure Git history for update-date verification
