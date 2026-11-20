@@ -24,6 +24,22 @@ describe('Android Markdown export', () => {
     expect(ai).not.toContain(':::solution');
   });
 
+  it('keeps comparisons and indented fences from swallowing component boundaries', () => {
+    const source = [
+      '若 $0<x<n$，则继续。',
+      '',
+      '<Callout type="info">保留说明</Callout>',
+      '',
+      '  ~~~md',
+      '<Callout>保留代码示例</Callout>',
+      '  ~~~',
+    ].join('\n');
+    const result = renderAndroidMarkdown(source, { title: '比较' });
+    expect(result).toContain('若 $0<x<n$，则继续。');
+    expect(result).toContain(':::info\n\n保留说明\n\n:::');
+    expect(result).toContain('  ~~~md\n<Callout>保留代码示例</Callout>\n  ~~~');
+  });
+
   it('exports Steps, Tabs, Cards and WordCards for Android', () => {
     const source = [
       '<Steps><Step title="一">内容</Step></Steps>',
@@ -38,5 +54,22 @@ describe('Android Markdown export', () => {
     expect(result).toContain(':::tab JS');
     expect(result).toContain(':::wordcards');
     expect(result).not.toContain('WordCardModeToggle');
+  });
+  it('exports imported and inline vocabularies, SVG diagrams, and text outlines', () => {
+    const result = renderAndroidMarkdown([
+      '<WordCards words={phraseWords.slice(0, 2)} />',
+      '<WordCards words={supplementalWords.slice(0, 3)} />',
+      "<WordCards words={[{word: 'test', meanings: [{text: '测试'}]}]} />",
+      '<InlineSvg src="/images/示意图.svg" alt={"示意图"} />',
+      '<MindMap markdown={String.raw`# 知识树\n- 要点`} />',
+      '~~~mdx', '<WordCards words={inlineExample} />', '~~~',
+    ].join('\n\n'), { title: '内容' });
+    const groups = [...result.matchAll(/^:::wordcards\n```json\n(.*)$/gm)]
+      .map((match) => JSON.parse(match[1]));
+    expect(groups.map((group) => group.length)).toEqual([2, 3, 1]);
+    expect(groups[2][0]).toEqual({ word: 'test', meanings: [{ text: '测试' }] });
+    expect(result).toContain('![示意图](</images/示意图.svg>)');
+    expect(result).toContain('> # 知识树\n> - 要点');
+    expect(result).toContain('<WordCards words={inlineExample} />');
   });
 });
