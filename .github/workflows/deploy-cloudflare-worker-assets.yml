@@ -318,10 +318,11 @@ jobs:
         run: |
           set -euo pipefail
           routes="$(find .static-docs/docs -type f -name index.html | wc -l | tr -d ' ')"
-          markdown="$(find .static-docs/docs -type f -name '*.md' | wc -l | tr -d ' ')"
+          markdown="$(find .static-docs/docs -type f -name '*.md' ! -name '*.android.md' | wc -l | tr -d ' ')"
+          android_markdown="$(find .static-docs/docs -type f -name '*.android.md' | wc -l | tr -d ' ')"
           files="$(find .static-docs -type f | wc -l | tr -d ' ')"
           bytes="$(du -sb .static-docs | awk '{print $1}')"
-          echo "weighted_shard=${STATIC_DOCS_SHARD_INDEX}/${STATIC_DOCS_SHARD_COUNT} routes=${routes} files=${files} markdown=${markdown} bytes=${bytes}"
+          echo "weighted_shard=${STATIC_DOCS_SHARD_INDEX}/${STATIC_DOCS_SHARD_COUNT} routes=${routes} files=${files} markdown=${markdown} android_markdown=${android_markdown} bytes=${bytes}"
           if (( routes < 1 )); then
             echo "::error::Unexpected route count ${routes} for shard ${STATIC_DOCS_SHARD_INDEX}."
             exit 1
@@ -332,8 +333,10 @@ jobs:
           if [[ "${STATIC_DOCS_SHARD_INDEX}" == '0' ]]; then
             expected_pages="$(find content/docs -type f \( -name '*.md' -o -name '*.mdx' \) | wc -l | tr -d ' ')"
             test "${markdown}" = "${expected_pages}"
+            test "${android_markdown}" = "${expected_pages}"
           else
             test "${markdown}" = '0'
+            test "${android_markdown}" = '0'
           fi
       - name: Prepare merge payload
         shell: bash
@@ -542,7 +545,8 @@ jobs:
         run: |
           set -euo pipefail
           doc_routes="$(find .static-docs/docs -type f -name index.html | wc -l | tr -d ' ')"
-          markdown="$(find .static-docs/docs -type f -name '*.md' | wc -l | tr -d ' ')"
+          markdown="$(find .static-docs/docs -type f -name '*.md' ! -name '*.android.md' | wc -l | tr -d ' ')"
+          android_markdown="$(find .static-docs/docs -type f -name '*.android.md' | wc -l | tr -d ' ')"
           expected_pages="$(find content/docs -type f \( -name '*.md' -o -name '*.mdx' \) | wc -l | tr -d ' ')"
           expected_routes="${expected_pages}"
           if [[ ! -f content/docs/index.md && ! -f content/docs/index.mdx ]]; then
@@ -550,6 +554,7 @@ jobs:
           fi
           test "${doc_routes}" = "${expected_routes}"
           test "${markdown}" = "${expected_pages}"
+          test "${android_markdown}" = "${expected_pages}"
           test -s .static-docs/search-index.json
           test -s .static-docs/docs/__next.docs.txt
           node scripts/verify-static-asset-references.mjs .static-docs
