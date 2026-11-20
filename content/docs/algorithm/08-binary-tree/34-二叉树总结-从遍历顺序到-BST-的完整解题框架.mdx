@@ -816,59 +816,59 @@ node->left = operation(node->left);
 ### 基础与遍历
 
 <Cards>
-  <Card title="01 · 二叉树基础" href="./01-二叉树基础">树的种类、存储方式、节点定义与遍历体系。</Card>
-  <Card title="02 · 递归遍历" href="./02-二叉树递归遍历">递归三部曲与前中后序的本质。</Card>
-  <Card title="03 · 迭代遍历" href="./03-二叉树迭代遍历">显式栈模拟递归。</Card>
-  <Card title="04 · 统一迭代遍历" href="./04-二叉树统一迭代遍历">把访问与处理阶段显式区分。</Card>
-  <Card title="05 · 层序遍历" href="./05-二叉树层序遍历">队列、层边界与 BFS。</Card>
+  <Card title="01 · 二叉树基础" href="/docs/algorithm/08-binary-tree/01-%E4%BA%8C%E5%8F%89%E6%A0%91%E5%9F%BA%E7%A1%80-%E7%BB%93%E6%9E%84%E3%80%81%E6%80%A7%E8%B4%A8%E4%B8%8E%E9%81%8D%E5%8E%86%E6%A1%86%E6%9E%B6/">树的种类、存储方式、节点定义与遍历体系。</Card>
+  <Card title="02 · 递归遍历" href="/docs/algorithm/08-binary-tree/02-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%80%92%E5%BD%92%E9%81%8D%E5%8E%86-%E7%9C%9F%E6%AD%A3%E7%90%86%E8%A7%A3%E5%89%8D%E5%BA%8F%E3%80%81%E4%B8%AD%E5%BA%8F%E4%B8%8E%E5%90%8E%E5%BA%8F/">递归三部曲与前中后序的本质。</Card>
+  <Card title="03 · 迭代遍历" href="/docs/algorithm/08-binary-tree/03-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86-%E7%94%A8%E6%A0%88%E6%89%8B%E5%8A%A8%E6%A8%A1%E6%8B%9F%E9%80%92%E5%BD%92/">显式栈模拟递归。</Card>
+  <Card title="04 · 统一迭代遍历" href="/docs/algorithm/08-binary-tree/04-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%BB%9F%E4%B8%80%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86-%E7%94%A8%E2%80%9C%E8%AE%BF%E9%97%AE---%E5%A4%84%E7%90%86%E2%80%9D%E7%8A%B6%E6%80%81%E7%BB%9F%E4%B8%80%E4%B8%89%E7%A7%8D-DFS/">把访问与处理阶段显式区分。</Card>
+  <Card title="05 · 层序遍历" href="/docs/algorithm/08-binary-tree/05-%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86-%E4%BB%8E-BFS-%E6%A8%A1%E6%9D%BF%E5%88%B0%E4%B8%80%E6%95%B4%E7%B1%BB%E6%8C%89%E5%B1%82%E9%97%AE%E9%A2%98/">队列、层边界与 BFS。</Card>
 </Cards>
 
 ### 普通二叉树属性与路径
 
 <Cards>
-  <Card title="08 · 对称二叉树" href="./08-对称二叉树">成对节点的镜像递归。</Card>
-  <Card title="09 · 最大深度" href="./09-二叉树的最大深度">深度与高度的两种模型。</Card>
-  <Card title="10 · 最小深度" href="./10-二叉树的最小深度">合法路径边界处理。</Card>
-  <Card title="11 · 完全二叉树节点个数" href="./11-完全二叉树的节点个数">利用完全树与满树性质。</Card>
-  <Card title="12 · 平衡二叉树" href="./12-平衡二叉树">后序返回高度并传播失败状态。</Card>
-  <Card title="13 · 二叉树所有路径" href="./13-二叉树的所有路径">DFS、路径状态与回溯。</Card>
-  <Card title="15 · 左叶子之和" href="./15-左叶子之和">如何准确识别“左叶子”。</Card>
-  <Card title="16 · 找树左下角的值" href="./16-找树左下角的值">最大深度 + 左优先，或层序。</Card>
-  <Card title="17 · 路径总和" href="./17-路径总和">存在性搜索与短路返回。</Card>
+  <Card title="08 · 对称二叉树" href="/docs/algorithm/08-binary-tree/08-%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91-%E6%8A%8A%E2%80%9C%E4%B8%80%E6%A3%B5%E6%A0%91%E2%80%9D%E8%BD%AC%E5%8C%96%E4%B8%BA%E2%80%9C%E4%B8%A4%E6%A3%B5%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F%E6%AF%94%E8%BE%83%E2%80%9D/">成对节点的镜像递归。</Card>
+  <Card title="09 · 最大深度" href="/docs/algorithm/08-binary-tree/09-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6-%E5%BD%BB%E5%BA%95%E5%88%86%E6%B8%85%E2%80%9C%E6%B7%B1%E5%BA%A6%E2%80%9D%E5%92%8C%E2%80%9C%E9%AB%98%E5%BA%A6%E2%80%9D/">深度与高度的两种模型。</Card>
+  <Card title="10 · 最小深度" href="/docs/algorithm/08-binary-tree/10-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%B0%8F%E6%B7%B1%E5%BA%A6-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E7%9B%B4%E6%8E%A5%E6%8A%8A-max-%E6%94%B9%E6%88%90-min/">合法路径边界处理。</Card>
+  <Card title="11 · 完全二叉树节点个数" href="/docs/algorithm/08-binary-tree/11-%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%AA%E6%95%B0-%E4%BB%8E-O%28n%29-%E5%88%B0-O%28log%C2%B2-n%29/">利用完全树与满树性质。</Card>
+  <Card title="12 · 平衡二叉树" href="/docs/algorithm/08-binary-tree/12-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91-%E4%B8%80%E6%AC%A1%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%90%8C%E6%97%B6%E6%B1%82%E9%AB%98%E5%BA%A6%E4%B8%8E%E5%88%A4%E5%B9%B3%E8%A1%A1/">后序返回高度并传播失败状态。</Card>
+  <Card title="13 · 二叉树所有路径" href="/docs/algorithm/08-binary-tree/13-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%89%80%E6%9C%89%E8%B7%AF%E5%BE%84-%E4%BB%8E%E9%80%92%E5%BD%92%E9%81%8D%E5%8E%86%E7%9C%9F%E6%AD%A3%E7%90%86%E8%A7%A3%E5%9B%9E%E6%BA%AF/">DFS、路径状态与回溯。</Card>
+  <Card title="15 · 左叶子之和" href="/docs/algorithm/08-binary-tree/15-%E5%B7%A6%E5%8F%B6%E5%AD%90%E4%B9%8B%E5%92%8C-%E5%AD%A6%E4%BC%9A%E4%BB%8E%E7%88%B6%E8%8A%82%E7%82%B9%E8%AF%86%E5%88%AB%E5%AD%90%E8%8A%82%E7%82%B9%E8%BA%AB%E4%BB%BD/">如何准确识别“左叶子”。</Card>
+  <Card title="16 · 找树左下角的值" href="/docs/algorithm/08-binary-tree/16-%E6%89%BE%E6%A0%91%E5%B7%A6%E4%B8%8B%E8%A7%92%E7%9A%84%E5%80%BC-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E4%B8%AD%E7%9A%84%E2%80%9C%E5%B7%A6%E4%BC%98%E5%85%88-%2B-%E9%A6%96%E6%AC%A1%E6%9B%B4%E6%96%B0%E2%80%9D/">最大深度 + 左优先，或层序。</Card>
+  <Card title="17 · 路径总和" href="/docs/algorithm/08-binary-tree/17-%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C-%E5%AD%98%E5%9C%A8%E6%80%A7%E6%90%9C%E7%B4%A2%E3%80%81%E5%89%A9%E4%BD%99%E7%9B%AE%E6%A0%87%E4%B8%8E%E9%80%92%E5%BD%92%E7%9F%AD%E8%B7%AF/">存在性搜索与短路返回。</Card>
 </Cards>
 
 ### 修改与构造
 
 <Cards>
-  <Card title="06 · 翻转二叉树" href="./06-翻转二叉树">节点级局部修改。</Card>
-  <Card title="18 · 从遍历序列构造二叉树" href="./18-从遍历序列构造二叉树">根节点定位与区间切分。</Card>
-  <Card title="19 · 最大二叉树" href="./19-最大二叉树">最大值作为分割点的递归构造。</Card>
-  <Card title="21 · 合并二叉树" href="./21-合并二叉树">同时递归两棵树。</Card>
+  <Card title="06 · 翻转二叉树" href="/docs/algorithm/08-binary-tree/06-%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91-%E6%8A%8A%E2%80%9C%E9%81%8D%E5%8E%86-%2B-%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C%E2%80%9D%E7%9C%9F%E6%AD%A3%E8%BF%9E%E8%B5%B7%E6%9D%A5/">节点级局部修改。</Card>
+  <Card title="18 · 从遍历序列构造二叉树" href="/docs/algorithm/08-binary-tree/18-%E4%BB%8E%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91-%E5%8C%BA%E9%97%B4%E5%88%87%E5%88%86%E4%B8%8E%E5%94%AF%E4%B8%80%E6%80%A7/">根节点定位与区间切分。</Card>
+  <Card title="19 · 最大二叉树" href="/docs/algorithm/08-binary-tree/19-%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91-%E4%BB%8E%E5%8C%BA%E9%97%B4%E6%9E%84%E9%80%A0%E5%88%B0%E7%AC%9B%E5%8D%A1%E5%B0%94%E6%A0%91/">最大值作为分割点的递归构造。</Card>
+  <Card title="21 · 合并二叉树" href="/docs/algorithm/08-binary-tree/21-%E5%90%88%E5%B9%B6%E4%BA%8C%E5%8F%89%E6%A0%91-%E5%90%8C%E6%AD%A5%E9%81%8D%E5%8E%86%E4%B8%A4%E6%A3%B5%E6%A0%91/">同时递归两棵树。</Card>
 </Cards>
 
 ### BST 核心题型
 
 <Cards>
-  <Card title="22 · BST 搜索" href="./22-二叉搜索树中的搜索">利用方向性剪枝。</Card>
-  <Card title="23 · 验证 BST" href="./23-验证二叉搜索树">中序递增与上下界约束。</Card>
-  <Card title="24 · 最小绝对差" href="./24-二叉搜索树的最小绝对差">有序序列只需比较相邻元素。</Card>
-  <Card title="25 · 众数" href="./25-二叉搜索树中的众数">中序连续段计数。</Card>
-  <Card title="28 · BST 最近公共祖先" href="./28-bst-lca">目标区间与分叉点。</Card>
-  <Card title="29 · BST 插入" href="./29-二叉搜索树中的插入操作">搜索路径终点就是插入位置。</Card>
-  <Card title="30 · BST 删除" href="./30-删除二叉搜索树中的节点">分类讨论与子树重新连接。</Card>
-  <Card title="31 · 修剪 BST" href="./31-修剪二叉搜索树">利用有序性整棵剪枝。</Card>
-  <Card title="32 · 有序数组转 BST" href="./32-将有序数组转换为二叉搜索树">中点分治自然产生平衡树。</Card>
-  <Card title="33 · BST 转累加树" href="./33-把二叉搜索树转换为累加树">反向中序与后缀累加。</Card>
+  <Card title="22 · BST 搜索" href="/docs/algorithm/08-binary-tree/22-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E6%90%9C%E7%B4%A2-%E5%88%A9%E7%94%A8%E6%9C%89%E5%BA%8F%E6%80%A7%E5%89%AA%E6%9E%9D/">利用方向性剪枝。</Card>
+  <Card title="23 · 验证 BST" href="/docs/algorithm/08-binary-tree/23-%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91-%E4%B8%AD%E5%BA%8F%E6%9C%89%E5%BA%8F%E4%B8%8E%E4%B8%8A%E4%B8%8B%E7%95%8C%E7%BA%A6%E6%9D%9F/">中序递增与上下界约束。</Card>
+  <Card title="24 · 最小绝对差" href="/docs/algorithm/08-binary-tree/24-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E5%B0%8F%E7%BB%9D%E5%AF%B9%E5%B7%AE-%E6%8A%8A%E6%A0%91%E7%9C%8B%E6%88%90%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/">有序序列只需比较相邻元素。</Card>
+  <Card title="25 · 众数" href="/docs/algorithm/08-binary-tree/25-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E4%BC%97%E6%95%B0-%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97%E4%B8%8A%E7%9A%84%E8%BF%9E%E7%BB%AD%E8%AE%A1%E6%95%B0/">中序连续段计数。</Card>
+  <Card title="28 · BST 最近公共祖先" href="/docs/algorithm/08-binary-tree/28-bst-lca/">目标区间与分叉点。</Card>
+  <Card title="29 · BST 插入" href="/docs/algorithm/08-binary-tree/29-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E6%8F%92%E5%85%A5-%E6%8A%8A%E6%96%B0%E8%8A%82%E7%82%B9%E6%8E%A5%E5%88%B0%E6%90%9C%E7%B4%A2%E8%B7%AF%E5%BE%84%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%A9%BA%E4%BD%8D%E7%BD%AE/">搜索路径终点就是插入位置。</Card>
+  <Card title="30 · BST 删除" href="/docs/algorithm/08-binary-tree/30-%E5%88%A0%E9%99%A4%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9-%E9%80%92%E5%BD%92%E8%BF%94%E5%9B%9E%E5%80%BC%E5%A6%82%E4%BD%95%E5%AE%8C%E6%88%90%E7%BB%93%E6%9E%84%E9%87%8D%E6%8E%A5/">分类讨论与子树重新连接。</Card>
+  <Card title="31 · 修剪 BST" href="/docs/algorithm/08-binary-tree/31-%E4%BF%AE%E5%89%AA%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91-%E5%88%A9%E7%94%A8%E6%9C%89%E5%BA%8F%E6%80%A7%E6%95%B4%E6%AE%B5%E4%B8%A2%E5%BC%83%E4%B8%8D%E5%8F%AF%E8%83%BD%E5%90%88%E6%B3%95%E7%9A%84%E5%AD%90%E6%A0%91/">利用有序性整棵剪枝。</Card>
+  <Card title="32 · 有序数组转 BST" href="/docs/algorithm/08-binary-tree/32-%E5%B0%86%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91-%E4%B8%AD%E7%82%B9%E5%88%86%E6%B2%BB%E4%B8%8E%E5%B9%B3%E8%A1%A1%E6%80%A7%E7%9A%84%E8%87%AA%E7%84%B6%E4%BF%9D%E8%AF%81/">中点分治自然产生平衡树。</Card>
+  <Card title="33 · BST 转累加树" href="/docs/algorithm/08-binary-tree/33-%E6%8A%8A%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BD%AC%E6%8D%A2%E4%B8%BA%E7%B4%AF%E5%8A%A0%E6%A0%91-%E5%8F%8D%E5%90%91%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E4%B8%8E%E5%90%8E%E7%BC%80%E7%B4%AF%E5%8A%A0/">反向中序与后缀累加。</Card>
 </Cards>
 
 ### 公共祖先与阶段复盘
 
 <Cards>
-  <Card title="26 · 普通二叉树最近公共祖先" href="./26-二叉树的最近公共祖先">左右子树信息在当前节点汇合。</Card>
-  <Card title="07 · 第一阶段复盘" href="./07-二叉树第一阶段复盘">遍历体系与基础操作。</Card>
-  <Card title="14 · 第二阶段复盘" href="./14-二叉树第二阶段复盘">属性、路径、深度与回溯。</Card>
-  <Card title="20 · 第三阶段复盘" href="./20-二叉树第三阶段复盘">构造与修改模型。</Card>
-  <Card title="27 · 第四阶段复盘" href="./27-二叉树第四阶段复盘">BST 有序性与 LCA。</Card>
+  <Card title="26 · 普通二叉树最近公共祖先" href="/docs/algorithm/08-binary-tree/26-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88-%E5%90%8E%E5%BA%8F%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%87%AA%E5%BA%95%E5%90%91%E4%B8%8A%E6%B1%87%E5%90%88/">左右子树信息在当前节点汇合。</Card>
+  <Card title="07 · 第一阶段复盘" href="/docs/algorithm/08-binary-tree/07-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E5%A4%8D%E7%9B%98-%E4%BB%8E%E6%A0%91%E7%9A%84%E7%BB%93%E6%9E%84%E5%88%B0%E9%81%8D%E5%8E%86%E6%96%B9%E6%B3%95%E8%AE%BA/">遍历体系与基础操作。</Card>
+  <Card title="14 · 第二阶段复盘" href="/docs/algorithm/08-binary-tree/14-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E5%A4%8D%E7%9B%98-%E4%BB%8E%E2%80%9C%E9%81%8D%E5%8E%86%E2%80%9D%E8%B5%B0%E5%90%91%E2%80%9C%E9%80%92%E5%BD%92%E7%8A%B6%E6%80%81%E8%AE%BE%E8%AE%A1%E2%80%9D/">属性、路径、深度与回溯。</Card>
+  <Card title="20 · 第三阶段复盘" href="/docs/algorithm/08-binary-tree/20-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E5%A4%8D%E7%9B%98-%E5%9B%9E%E6%BA%AF%E3%80%81%E8%B7%AF%E5%BE%84%E4%B8%8E%E6%9E%84%E9%80%A0%E6%A8%A1%E5%9E%8B/">构造与修改模型。</Card>
+  <Card title="27 · 第四阶段复盘" href="/docs/algorithm/08-binary-tree/27-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%AC%AC%E5%9B%9B%E9%98%B6%E6%AE%B5%E5%A4%8D%E7%9B%98-BST-%E6%9C%89%E5%BA%8F%E6%80%A7%E4%B8%8E%E6%A0%91%E4%B8%8A%E4%BF%A1%E6%81%AF%E6%B1%87%E5%90%88/">BST 有序性与 LCA。</Card>
 </Cards>
 
 ## 18. 面试前 10 分钟应该复习什么

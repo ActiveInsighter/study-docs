@@ -72,4 +72,17 @@ describe('Android Markdown export', () => {
     expect(result).toContain('> # 知识树\n> - 要点');
     expect(result).toContain('<WordCards words={inlineExample} />');
   });
+  it('resolves relative document and card links using the published source path', () => {
+    const result = renderAndroidMarkdown([
+      '[导论](./导论/#例题)',
+      '<Card title="导论" href="./导论/" />',
+      '示例：`[导论](./导论/)`',
+    ].join('\n\n'), {
+      title: '目录',
+      sourcePath: 'politics/classified-questions/marxism-principles/index.mdx',
+    });
+    expect(result).toContain('[导论](/docs/politics/classified-questions/marxism-principles/%E5%AF%BC%E8%AE%BA#例题)');
+    expect(result).toContain('href="/docs/politics/classified-questions/marxism-principles/%E5%AF%BC%E8%AE%BA"');
+    expect(result).toContain('`[导论](./导论/)`');
+  });
 });
