@@ -1425,10 +1425,11 @@ $$
 将单位矩阵放在 $A$ 的下方：
 
 $$
-\begin{pmatrix}
-A\ \hline
+\left(\begin{array}{c}
+A \\
+\hline
 E
-\end{pmatrix}.
+\end{array}\right).
 $$
 
 上方对 $A$ 进行成对的行列合同变换；每次列变换也同步作用于下方的单位矩阵，而行变换只作用于上方矩阵。
@@ -1436,10 +1437,11 @@ $$
 最终得到
 
 $$
-\begin{pmatrix}
-D\ \hline
+\left(\begin{array}{c}
+D \\
+\hline
 P
-\end{pmatrix},
+\end{array}\right),
 $$
 
 则
@@ -2874,7 +2876,7 @@ $$
 令
 
 $$
-X=\begin{pmatrix}u\t\end{pmatrix},
+X=\begin{pmatrix}u\\t\end{pmatrix},
 \qquad
 u=\begin{pmatrix}x_1\\x_2\end{pmatrix},
 \quad t=x_3.
@@ -3629,7 +3631,7 @@ $$
 
 $$
 (x,y,z)A
-\begin{pmatrix}x\y\z\end{pmatrix}=1
+\begin{pmatrix}x\\y\\z\end{pmatrix}=1
 $$
 
 在正交变换下表示双叶双曲面，求 $A$ 的正特征值个数。

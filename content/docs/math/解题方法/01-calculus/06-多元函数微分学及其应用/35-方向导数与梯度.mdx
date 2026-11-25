@@ -281,11 +281,11 @@ $$
 
 | 方向与梯度的夹角             | 方向导数                           | 几何意义        |
 | -------------------- | ------------------------------ | ----------- |
-| $0$              | $\\|\nabla f\\|$         | 最陡上升        |
-| $\frac{\pi}{3}$  | $\frac12\\|\nabla f\\|$  | 上升速率为最大值的一半 |
+| $0$              | $\Vert\nabla f\Vert$         | 最陡上升        |
+| $\frac{\pi}{3}$  | $\frac12\Vert\nabla f\Vert$  | 上升速率为最大值的一半 |
 | $\frac{\pi}{2}$  | $0$                        | 一阶变化率为零     |
-| $\frac{2\pi}{3}$ | $-\frac12\\|\nabla f\\|$ | 沿该方向下降      |
-| $\pi$            | $-\\|\nabla f\\|$        | 最陡下降        |
+| $\frac{2\pi}{3}$ | $-\frac12\Vert\nabla f\Vert$ | 沿该方向下降      |
+| $\pi$            | $-\Vert\nabla f\Vert$        | 最陡下降        |
 
 于是得到四个必须熟记的结论：
 
@@ -2975,8 +2975,8 @@ $$
 | 模型          | 计算对象                                                             |
 | ----------- | ---------------------------------------------------------------- |
 | 点变化，方向固定    | $\displaystyle\max_{P\in S}\nabla f(P)\cdot\boldsymbol e_0$ |
-| 点变化，方向任意    | $\displaystyle\max_{P\in S}\\|\nabla f(P)\\|$             |
-| 点变化，方向限定为切向 | $\displaystyle\max_{P\in S}\\|\boldsymbol g_T(P)\\|$      |
+| 点变化，方向任意    | $\displaystyle\max_{P\in S}\Vert\nabla f(P)\Vert$             |
+| 点变化，方向限定为切向 | $\displaystyle\max_{P\in S}\Vert\boldsymbol g_T(P)\Vert$      |
 
 如果方向是动点处的单位法向，则还会产生第四种模型：
 
@@ -3190,20 +3190,20 @@ E -->|"已知最大方向及最大值"| L["直接恢复完整梯度向量"]
 
 | 考点          | 核心公式                                                                                                              |
 | ----------- | ----------------------------------------------------------------------------------------------------------------- |
-| 方向单位化       | $\boldsymbol e=\dfrac{\boldsymbol v}{\\|\boldsymbol v\\|}$                                                  |
+| 方向单位化       | $\boldsymbol e=\dfrac{\boldsymbol v}{\Vert\boldsymbol v\Vert}$                                                  |
 | 二元函数梯度      | $\nabla f=(f_x,f_y)$                                                                                          |
 | 三元函数梯度      | $\nabla f=(f_x,f_y,f_z)$                                                                                      |
 | 方向导数        | $D_{\boldsymbol e}f=\nabla f\cdot\boldsymbol e$                                                              |
-| 夹角关系        | $D_{\boldsymbol e}f=\\|\nabla f\\|\cos\theta$                                                              |
-| 最大方向导数      | $D_{\max}=\\|\nabla f\\|$                                                                                  |
-| 最小方向导数      | $D_{\min}=-\\|\nabla f\\|$                                                                                 |
-| 最大单位方向      | $\boldsymbol e_{\max}=\dfrac{\nabla f}{\\|\nabla f\\|}$                                                    |
-| 最小单位方向      | $\boldsymbol e_{\min}=-\dfrac{\nabla f}{\\|\nabla f\\|}$                                                   |
+| 夹角关系        | $D_{\boldsymbol e}f=\Vert\nabla f\Vert\cos\theta$                                                              |
+| 最大方向导数      | $D_{\max}=\Vert\nabla f\Vert$                                                                                  |
+| 最小方向导数      | $D_{\min}=-\Vert\nabla f\Vert$                                                                                 |
+| 最大单位方向      | $\boldsymbol e_{\max}=\dfrac{\nabla f}{\Vert\nabla f\Vert}$                                                    |
+| 最小单位方向      | $\boldsymbol e_{\min}=-\dfrac{\nabla f}{\Vert\nabla f\Vert}$                                                   |
 | 由最大值及方向恢复梯度 | $\nabla f=M\boldsymbol e_{\max}$                                                                             |
 | 曲面法向量       | $\boldsymbol n=\nabla F$                                                                                      |
-| 法向方向导数      | $D_n f=\dfrac{\nabla f\cdot\boldsymbol n}{\\|\boldsymbol n\\|}$                                             |
-| 切向梯度        | $\boldsymbol g_T=\boldsymbol g-\dfrac{\boldsymbol g\cdot\boldsymbol n}{\\|\boldsymbol n\\|^2}\boldsymbol n$ |
-| 切向最大方向导数    | $D_{T,\max}=\\|\boldsymbol g_T\\|$                                                                         |
+| 法向方向导数      | $D_n f=\dfrac{\nabla f\cdot\boldsymbol n}{\Vert\boldsymbol n\Vert}$                                             |
+| 切向梯度        | $\boldsymbol g_T=\boldsymbol g-\dfrac{\boldsymbol g\cdot\boldsymbol n}{\Vert\boldsymbol n\Vert^2}\boldsymbol n$ |
+| 切向最大方向导数    | $D_{T,\max}=\Vert\boldsymbol g_T\Vert$                                                                         |
 | 曲线沿梯度方向的方程  | $\dfrac{dy}{dx}=\dfrac{f_y}{f_x}$                                                                             |
 
 以上方向导数的梯度公式以函数在相应点可微为前提；含有梯度模或法向量模作为分母的公式还要求相应向量非零。
