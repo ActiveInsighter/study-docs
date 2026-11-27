@@ -125,4 +125,34 @@ describe('Android Markdown export', () => {
     expect(JSON.parse(blanks!.replace(/\\(["\\])/g, '$1')))
       .toEqual([{ answer: '\\frac{1}{2}', aliases: ['0.5', '1/2'], kind: 'math' }]);
   });
+
+  it('strips Fumadocs [!toc] heading directives while keeping code examples intact', async () => {
+    const source = [
+      '<Steps>',
+      '<Step>',
+      '',
+      '### 第一步：识别几何条件 [!toc]',
+      '',
+      '点 $P(x,y)$ 到 $y$ 轴的距离为 $x$。',
+      '',
+      '</Step>',
+      '</Steps>',
+      '',
+      '### Keep `[!toc]` inside inline code',
+      '',
+      '~~~md',
+      '### Example [!toc]',
+      '~~~',
+    ].join('\n');
+
+    const androidResult = renderAndroidMarkdown(source, { title: '微分方程的应用' });
+    expect(androidResult).toContain('### 第一步：识别几何条件\n');
+    expect(androidResult).not.toContain('### 第一步：识别几何条件 [!toc]');
+    expect(androidResult).toContain('### Keep `[!toc]` inside inline code');
+    expect(androidResult).toContain('~~~md\n### Example [!toc]\n~~~');
+
+    const staticResult = await renderStaticMarkdown(source, { title: '微分方程的应用', url: '/docs/math/28' });
+    expect(staticResult).toContain('### 第一步：识别几何条件\n');
+    expect(staticResult).not.toContain('### 第一步：识别几何条件 [!toc]');
+  });
 });
