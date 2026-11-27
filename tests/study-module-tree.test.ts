@@ -66,7 +66,8 @@ describe('study module metadata structure', () => {
       'index',
       'knowledge2',
       'mind-maps',
-      'question-summary',
+      '选择题解题方法',
+      '大题解题方法',
       'exam',
     ]);
     expect(coursesSummaryMeta.pages).toEqual([

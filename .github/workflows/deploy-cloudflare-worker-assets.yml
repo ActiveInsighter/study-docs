@@ -725,7 +725,7 @@ jobs:
             '/docs/math/formulas/advanced-mathematics/__next.docs.txt' \
             '/blog/' \
             '/blog/chart-gallery/' \
-            '/docs/408/question-summary/' \
+            '/docs/408/' \
             '/docs/algorithm/' \
             '/docs/algorithm/08-binary-tree/28-bst-lca/'; do
             wait_for_route "${path}"
@@ -748,7 +748,8 @@ jobs:
             '/docs/math/problem-solving/' \
             '/docs/math/exam/' \
             '/docs/408/knowledge/' \
-            '/docs/408/problem-solving/'; do
+            '/docs/408/problem-solving/' \
+            '/docs/408/question-summary/'; do
             status="$(curl --silent --show-error --max-time 60 -L -o /dev/null -w '%{http_code}' "${base_url}${path}")"
             echo "Retired route ${path} -> ${status}"
             if [[ "${status}" != '404' ]]; then
